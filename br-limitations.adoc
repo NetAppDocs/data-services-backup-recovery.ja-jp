@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: br-limitations.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery では、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+---
+= Microsoft SQL Server ワークロードに対するNetApp Backup and Recovery の既知の制限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。
+
+
+
+== クローンライフサイクルのサポート
+
+* オブジェクト ストレージからのクローン作成はサポートされていません。
+* オンデマンドクローンでは一括クローン操作はサポートされていません。
+* I グループの選択はサポートされていません。
+* QOS (最大スループット) オプションの選択はサポートされていません。
+
+
+
+
+== 標準展開モードのみ
+
+このNetApp Backup and Recovery バージョンは、制限モードやプライベート モードではなく、標準展開モードでのみ動作します。
+
+
+
+== Windows クラスター名の制限
+
+Windows クラスター名にはアンダースコア (_) 文字を含めることはできません。
+
+
+
+== SnapCenterの移行に関する問題
+
+SnapCenterからNetApp Backup and Recovery へのリソースの移行には、次の制限があります。
+
+SnapCenterポリシーをNetAppバックアップおよびリカバリポリシーに移行する方法の詳細については、以下を参照してください。link:reference-policy-differences-snapcenter.html["SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較"] 。
+
+
+
+=== リソース グループの制限
+
+リソース グループ内のすべてのリソースが保護されており、そのうちの 1 つのリソースがリソース グループ外でも保護されている場合、 SnapCenterからの移行はブロックされます。
+
+*回避策*: リソースをリソース グループ内またはそれ自体で保護し、両方で保護しないでください。
+
+
+
+=== 同じスケジュール層を使用する複数のポリシーを持つリソースはサポートされていません
+
+同じスケジュール層 (たとえば、時間別、日別、週別など) を使用する複数のポリシーをリソースに割り当てることはできません。  NetApp Backup and Recovery は、 SnapCenterからこれらのリソースをインポートしません。
+
+*回避策*: 同じスケジュール層を使用するポリシーを 1 つだけリソースにアタッチします。
+
+
+
+=== 時間単位のポリシーは時間の開始時に開始する必要があります
+
+1 時間ごとに繰り返すSnapCenterポリシーがあり、時間の開始時に間隔を使用しない場合、 NetApp Backup and Recovery はリソースをインポートしません。たとえば、1:30、2:30、3:30 などのスケジュールを持つポリシーはサポートされていませんが、1:00、2:00、3:00 などのスケジュールを持つポリシーはサポートされています。
+
+*回避策*: 毎時 0 分から 1 時間間隔で繰り返すポリシーを使用します。
+
+
+
+=== 1 つのリソースに日次ポリシーと月次ポリシーの両方を適用することはサポートされていません
+
+SnapCenterポリシーが日間隔と月間隔の両方で繰り返される場合、 NetApp Backup and Recovery はポリシーをインポートしません。
+
+たとえば、日次ポリシー (7 日以下または 7 日以上) をリソースにアタッチし、同じリソースに月次ポリシーもアタッチすることはできません。
+
+*回避策*: 毎日または毎月の間隔を使用するポリシーを使用しますが、両方を使用するポリシーは使用しません。
+
+
+
+=== オンデマンド バックアップ ポリシーは移行されません
+
+NetApp Backup and Recovery は、 SnapCenterからオンデマンド バックアップ ポリシーをインポートしません。
+
+
+
+=== ログのみのバックアップ ポリシーは移行されません
+
+NetApp Backup and Recovery は、 SnapCenterからログのみのバックアップ ポリシーをインポートしません。  SnapCenterポリシーにログのみのバックアップが含まれている場合、 NetApp Backup and Recovery はリソースをインポートしません。
+
+*回避策*: ログのみのバックアップ以外のバックアップを使用するSnapCenterのポリシーを使用します。
+
+
+
+=== ホストマッピング
+
+SnapCenter には、リソースをホストにマップするストレージ クラスターや SVM がありませんが、 NetApp Backup and Recovery にはあります。オンプレミスのONTAPクラスターまたは SVM は、 NetApp Backup and Recovery プレビュー バージョンではホストにマッピングされません。さらに、 NetAppコンソールは SVM をサポートしていません。
+
+*回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recovery で作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recovery にインポートします。
+
+
+
+=== 15分間隔ではないスケジュール
+
+特定の時間に開始され、15 分間隔以外の間隔で繰り返されるSnapCenterポリシー スケジュールがある場合、 NetApp Backup and Recovery ではそのスケジュールはインポートされません。
+
+*回避策*: SnapCenterを使用して、ポリシーが 15 分間隔で繰り返されるように調整します。
+
+
+
+== 仮想化管理ソフトウェアのサポートが限定的
+
+KVM ワークロードを保護する場合、Apache CloudStack や Red Hat OpenShift Virtualization などの仮想化管理ソフトウェアが使用されている場合、 NetApp Backup and Recovery は KVM ワークロードの検出をサポートしません。

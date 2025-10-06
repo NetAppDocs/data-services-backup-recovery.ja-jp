@@ -1,0 +1,236 @@
+---
+settings:
+  name: NetApp Backup and Recovery
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  filter:
+    label: クラウド プロバイダ
+    default: すべてのクラウドプロバイダー
+    options:
+    - name: Amazon Web Services
+      alias: AWS
+      id: aws
+    - name: Google Cloud
+      alias: Google Cloud
+      id: gcp
+    - name: Microsoft Azure
+      alias: Azure
+      id: azure
+  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: NetAppバックアップおよびリカバリのドキュメント
+    url: "/index.html"
+  - title: リリース ノート
+    entries:
+    - title: 新機能
+      url: "/whats-new.html"
+    - title: ONTAPボリュームワークロードの既知の制限
+      url: "/br-reference-limitations.html"
+    - title: Microsoft SQL Server ワークロードの既知の制限
+      url: "/br-limitations.html"
+    - title: VMware ワークロードの既知の制限
+      url: "/br-limitations-vmware.html"
+    - title: Hyper-V ワークロードの既知の制限
+      url: "/br-limitations-hyperv.html"
+    - title: KVMワークロードの既知の制限
+      url: "/br-limitations-kvm.html"
+    - title: Oracle ワークロードの既知の制限
+      url: "/br-limitations-oracle.html"
+  - title: 始めましょう
+    entries:
+    - title: NetAppのバックアップとリカバリについて学ぶ
+      url: "/concept-backup-to-cloud.html"
+    - title: NetAppバックアップおよびリカバリの前提条件
+      url: "/concept-start-prereq.html"
+    - title: NetAppバックアップおよびリカバリのライセンスを設定する
+      url: "/br-start-licensing.html"
+    - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
+      url: "/br-start-setup.html"
+    - title: NetAppバックアップおよびリカバリにログイン
+      url: "/br-start-login.html"
+    - title: バックアップターゲットの検出
+      url: "/br-start-discover-backup-targets.html"
+    - title: さまざまなNetAppバックアップおよびリカバリワークロードに切り替える
+      url: "/br-start-switch-ui.html"
+    - title: NetAppバックアップおよびリカバリの一般設定を構成する
+      url: "/br-start-configure.html"
+  - title: NetAppバックアップとリカバリを使用する
+    entries:
+    - title: ダッシュボードで保護の状態を確認する
+      url: "/br-use-dashboard.html"
+    - title: バックアップと復元を管理するポリシーを作成する
+      url: "/br-use-policies-create.html"
+    - title: ONTAPボリュームのワークロードを保護する
+      entries:
+      - title: ONTAPボリュームワークロードの保護の概要
+        url: "/prev-ontap-protect-overview.html"
+      - title: ONTAPボリュームの保護を計画する
+        url: "/prev-ontap-protect-journey.html"
+      - title: ONTAPボリュームのポリシーを管理する
+        url: "/prev-ontap-policy-manage.html"
+      - title: ONTAPボリュームのオブジェクトへのバックアップポリシーオプション
+        url: "/prev-ontap-policy-object-options.html"
+      - title: オブジェクトへのバックアップポリシーの詳細設定オプションを管理する
+        url: "/prev-ontap-policy-object-advanced-settings.html"
+      - title: Cloud Volumes ONTAP をAmazon S3 にバックアップする
+        url: "/prev-ontap-backup-cvo-aws.html"
+      - title: Cloud Volumes ONTAPを Azure Blob にバックアップする
+        url: "/prev-ontap-backup-cvo-azure.html"
+      - title: Cloud Volumes ONTAPをGoogle Cloudにバックアップする
+        url: "/prev-ontap-backup-cvo-gcp.html"
+      - title: オンプレミスのONTAPを Amazon S3 にバックアップする
+        url: "/prev-ontap-backup-onprem-aws.html"
+      - title: オンプレミスのONTAPを Azure Blob にバックアップする
+        url: "/prev-ontap-backup-onprem-azure.html"
+      - title: オンプレミスのONTAPを Google Cloud にバックアップする
+        url: "/prev-ontap-backup-onprem-gcp.html"
+      - title: オンプレミスのONTAPをONTAP S3 にバックアップする
+        url: "/prev-ontap-backup-onprem-ontaps3.html"
+      - title: オンプレミスのONTAPをStorageGRIDにバックアップ
+        url: "/prev-ontap-backup-onprem-storagegrid.html"
+      - title: SnapMirrorを使用してボリュームをCloud Resyncに移行する
+        url: "/prev-ontap-migrate-resync.html"
+      - title: ダークサイトで構成データを復元する
+        url: "/reference-backup-cbs-db-in-dark-site.html"
+      - title: ONTAPバックアップの管理
+        url: "/prev-ontap-backup-manage.html"
+      - title: ONTAPバックアップからの復元
+        url: "/prev-ontap-restore.html"
+    - title: Microsoft SQL Server ワークロードを保護する
+      entries:
+      - title: Microsoft SQL Server ワークロードの保護の概要
+        url: "/br-use-mssql-protect-overview.html"
+      - title: SnapCenterからインポートする場合の追加項目を構成する
+        url: "/concept-start-prereq-snapcenter-import.html"
+      - title: Microsoft SQL Server ワークロードの検出
+        url: "/br-start-discover.html"
+      - title: Microsoft SQL Server ワークロードのバックアップ
+        url: "/br-use-mssql-backup.html"
+      - title: Microsoft SQL Server ワークロードを復元する
+        url: "/br-use-mssql-restore.html"
+      - title: Microsoft SQL Server ワークロードのクローン作成
+        url: "/br-use-mssql-clone.html"
+      - title: Microsoft SQL Server のインベントリを管理する
+        url: "/br-use-manage-inventory.html"
+      - title: Microsoft SQL Server スナップショットを管理する
+        url: "/br-use-manage-snapshots.html"
+      - title: Microsoft SQL Server レポートを作成する
+        url: "/br-use-reports.html"
+    - title: VMware ワークロードの保護 (VMware 向けSnapCenterプラグインなしのプレビュー)
+      entries:
+      - title: VMware ワークロードの保護の概要
+        url: "/br-use-vmware-protect-overview.html"
+      - title: VMware ワークロードを発見
+        url: "/br-use-vmware-discovery.html"
+      - title: VMware ワークロードの保護グループの作成と管理
+        url: "/br-use-vmware-protection-groups.html"
+      - title: VMwareワークロードのバックアップ
+        url: "/br-use-vmware-backup.html"
+      - title: VMwareワークロードを復元する
+        url: "/br-use-vmware-restore.html"
+    - title: VMware ワークロードの保護 ( SnapCenter Plug-in for VMware を使用)
+      entries:
+      - title: 仮想マシンのワークロードの保護の概要
+        url: "/prev-vmware-protect-overview.html"
+      - title: 仮想マシンのワークロードを保護するための前提条件
+        url: "/prev-vmware-prereqs.html"
+      - title: SnapCenter Plug-in for VMware vSphereを登録する
+        url: "/prev-vmware-register-snapcenter.html"
+      - title: 仮想マシンのデータをバックアップするポリシーを作成する
+        url: "/prev-vmware-policy-create.html"
+      - title: データストアを Amazon Web Services にバックアップする
+        url: "/prev-vmware-backup-aws.html"
+      - title: データストアを Microsoft Azure にバックアップする
+        url: "/prev-vmware-backup-azure.html"
+      - title: データストアを Google Cloud Platform にバックアップする
+        url: "/prev-vmware-backup-gcp.html"
+      - title: データストアをStorageGRIDにバックアップする
+        url: "/prev-vmware-backup-storagegrid.html"
+      - title: データストアと仮想マシンのデータの保護を管理する
+        url: "/prev-vmware-manage.html"
+      - title: 仮想マシンのデータとデータストアを復元する
+        url: "/prev-vmware-restore.html"
+    - title: KVM ワークロードを保護する（プレビュー）
+      entries:
+      - title: KVM ワークロードの保護の概要
+        url: "/br-use-kvm-protect-overview.html"
+      - title: KVMワークロードを発見
+        url: "/br-start-discover-kvm.html"
+      - title: KVM ワークロードの保護グループの作成と管理
+        url: "/br-use-kvm-protection-groups.html"
+      - title: KVMワークロードのバックアップ
+        url: "/br-use-kvm-backup.html"
+      - title: KVMワークロードを復元する
+        url: "/br-use-kvm-restore.html"
+    - title: Hyper-V ワークロードを保護する (プレビュー)
+      entries:
+      - title: Hyper-V ワークロードの保護の概要
+        url: "/br-use-hyperv-protect-overview.html"
+      - title: Hyper-V ワークロードの検出
+        url: "/br-start-discover-hyperv.html"
+      - title: Hyper-V ワークロードの保護グループの作成と管理
+        url: "/br-use-hyperv-protection-groups.html"
+      - title: Hyper-V ワークロードのバックアップ
+        url: "/br-use-hyperv-backup.html"
+      - title: Hyper-V ワークロードを復元する
+        url: "/br-use-hyperv-restore.html"
+    - title: Oracle ワークロードの保護（プレビュー）
+      entries:
+      - title: Oracle ワークロードの保護の概要
+        url: "/br-use-oracle-protect-overview.html"
+      - title: Oracleワークロードを発見
+        url: "/br-start-discover-oracle.html"
+      - title: Oracle ワークロードの保護グループの作成と管理
+        url: "/br-use-oracle-protection-groups.html"
+      - title: Oracleワークロードのバックアップ
+        url: "/br-use-oracle-backup.html"
+      - title: Oracleワークロードの復元
+        url: "/br-use-oracle-restore.html"
+      - title: リカバリポイントのマウントとアンマウント
+        url: "/br-use-oracle-mount-unmount.html"
+    - title: Kubernetes ワークロードを保護する（プレビュー）
+      entries:
+      - title: Kubernetes ワークロードの保護の概要
+        url: "/br-use-kubernetes-protect-overview.html"
+      - title: Kubernetes ワークロードを発見する
+        url: "/br-start-discover-kubernetes.html"
+      - title: Kubernetes アプリケーションの追加と保護
+        url: "/br-use-protect-kubernetes-applications.html"
+      - title: Kubernetesアプリケーションを復元する
+        url: "/br-use-restore-kubernetes-applications.html"
+      - title: Kubernetes クラスターを管理する
+        url: "/br-use-manage-kubernetes-clusters.html"
+      - title: Kubernetes アプリケーションを管理する
+        url: "/br-use-manage-kubernetes-applications.html"
+      - title: Kubernetes ワークロードの実行フック テンプレートを管理する
+        url: "/br-use-manage-execution-hook-templates.html"
+    - title: ジョブの監視
+      url: "/br-use-monitor-tasks.html"
+    - title: NetAppバックアップとリカバリを再起動します
+      url: "/reference-restart-backup.html"
+  - title: REST APIによる自動化
+    url: "/br-api-backup-restore.html"
+  - title: 参照
+    entries:
+    - title: SnapCenterのポリシーとNetApp のバックアップおよびリカバリの比較
+      url: "/reference-policy-differences-snapcenter.html"
+    - title: NetAppバックアップおよびリカバリの役割と権限
+      url: "/reference-roles.html"
+    - title: ダークサイトでのNetAppバックアップおよびリカバリデータの復元
+      url: "/reference-backup-cbs-db-in-dark-site.html"
+    - title: サポートされているAWSアーカイブストレージ層
+      url: "/prev-reference-aws-archive-storage-tiers.html"
+    - title: サポートされている Azure アーカイブ ストレージ層
+      url: "/prev-reference-azure-archive-storage-tiers.html"
+    - title: サポートされている Google Cloud アーカイブ ストレージ層
+      url: "/prev-reference-gcp-archive-storage-tiers.html"
+  - title: 法律上の表示
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

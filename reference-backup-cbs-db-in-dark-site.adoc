@@ -1,0 +1,213 @@
+---
+sidebar: sidebar 
+permalink: reference-backup-cbs-db-in-dark-site.html 
+keywords: backup database, recover database, dark site, private mode, restore database, backup and recovery, Console agent 
+summary: 「プライベート モード」と呼ばれる、インターネットにアクセスできないサイトでNetApp Backup and Recovery を使用する場合、 NetApp Backup and Recovery の構成データは、バックアップが保存されているStorageGRIDまたはONTAP S3 バケットにバックアップされます。将来、コンソール エージェント ホスト システムに問題が発生した場合、新しいコンソール エージェントを展開して、重要なNetAppバックアップおよびリカバリ データを復元できます。 
+---
+= ダークサイトでのNetAppバックアップおよびリカバリ構成データの復元
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+インターネットにアクセスできないサイトでNetApp Backup and Recovery を使用する場合 (_プライベート モード_ と呼ばれます)、 NetApp Backup and Recovery の構成データは、バックアップが保存されているStorageGRIDまたはONTAP S3 バケットにバックアップされます。コンソール エージェント ホスト システムに問題がある場合は、新しいコンソール エージェントを展開して、重要なNetAppバックアップおよびリカバリ データを復元できます。
+
+
+NOTE: この手順はONTAPボリューム データにのみ適用されます。
+
+コンソール エージェントがクラウド プロバイダーに導入されている SaaS 環境、またはインターネットにアクセスできる独自のホスト システムにNetApp Backup and Recovery を使用すると、重要なNetApp Backup and Recovery 構成データはすべてクラウドにバックアップされ、保護されます。コンソール エージェントに問題がある場合は、新しいコンソール エージェントを作成してシステムを追加するだけで、バックアップの詳細が自動的に復元されます。
+
+バックアップされるデータには 2 種類あります。
+
+* NetAppバックアップおよびリカバリ データベース - すべてのボリューム、バックアップ ファイル、バックアップ ポリシー、および構成情報のリストが含まれています。
+* インデックス カタログ ファイル - 検索と復元機能に使用される詳細なインデックスが含まれており、復元するボリューム データを探すときに、検索を非常に迅速かつ効率的に行うことができます。
+
+
+このデータは 1 日に 1 回深夜にバックアップされ、各ファイルの最大 7 つのコピーが保持されます。コンソール エージェントが複数のオンプレミスのONTAPシステムを管理している場合、 NetAppバックアップおよびリカバリ ファイルは、最初にアクティブ化されたシステムのバケットに配置されます。
+
+
+TIP: NetAppバックアップおよびリカバリ データベースまたはインデックス カタログ ファイルにはボリューム データは含まれません。
+
+
+
+== NetAppバックアップおよびリカバリデータを新しいコンソール エージェントに復元します
+
+オンプレミスのコンソール エージェントに重大な障害が発生した場合は、新しいコンソール エージェントをインストールし、 NetApp Backup and Recovery データを新しいコンソール エージェントに復元する必要があります。
+
+NetAppバックアップおよびリカバリ システムを動作状態に戻すには、次のタスクを実行する必要があります。
+
+* 新しいコンソールエージェントをインストールする
+* NetAppバックアップおよびリカバリ データベースを復元する
+* インデックスカタログファイルを復元する
+* オンプレミスのONTAPシステムとStorageGRIDシステムをすべてNetAppコンソールUIに再検出します。
+
+
+システムが正常に動作する状態に戻ったことを確認したら、新しいバックアップ ファイルを作成することをお勧めします。
+
+.要件
+バックアップ ファイルが保存されているStorageGRIDまたはONTAP S3 バケットから最新のデータベースとインデックスのバックアップにアクセスする必要があります。
+
+* NetAppバックアップおよびリカバリ MySQL データベース ファイル
++
+このファイルはバケット内の次の場所にあります `netapp-backup-<GUID>/mysql_backup/`と名付けられています `CBS_DB_Backup_<day>_<month>_<year>.sql`。
+
+* インデックスカタログのバックアップ zip ファイル
++
+このファイルはバケット内の次の場所にあります `netapp-backup-<GUID>/catalog_backup/`と名付けられています `Indexed_Catalog_DB_Backup_<db_name>_<day>_<month>_<year>.zip`。
+
+
+
+
+
+=== 新しいオンプレミス Linux ホストに新しいコンソール エージェントをインストールする
+
+新しいコンソール エージェントをインストールするときは、元のコンソール エージェントにインストールしたものと同じリリースのソフトウェアをダウンロードするようにしてください。 NetApp Backup and Recovery データベース構造が定期的に変更されると、新しいソフトウェア リリースが元のデータベース バックアップと互換性がなくなる可能性があります。あなたはできる https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["バックアップデータベースを復元した後、コンソールエージェントソフトウェアを最新バージョンにアップグレードします。"^]。
+
+. https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["新しいオンプレミス Linux ホストにコンソール エージェントをインストールする"^]
+. 先ほど作成した管理者ユーザーの資格情報を使用してコンソールにログインします。
+
+
+
+
+=== NetAppバックアップおよびリカバリ データベースを復元する
+
+. バックアップ場所から新しいコンソール エージェント ホストに MySQL バックアップをコピーします。以下では、サンプルファイル名「CBS_DB_Backup_23_05_2023.sql」を使用します。
+. Docker コンテナまたは Podman コンテナのどちらを使用しているかに応じて、次のいずれかのコマンドを使用して、バックアップを MySQL Docker コンテナにコピーします。
++
+[source, cli]
+----
+docker cp CBS_DB_Backup_23_05_2023.sql ds_mysql_1:/.
+----
++
+[source, cli]
+----
+podman cp CBS_DB_Backup_23_05_2023.sql ds_mysql_1:/.
+----
+. Docker コンテナまたは Podman コンテナのどちらを使用しているかに応じて、次のいずれかのコマンドを使用して MySQL コンテナ シェルに入ります。
++
+[source, cli]
+----
+docker exec -it ds_mysql_1 sh
+----
++
+[source, cli]
+----
+podman exec -it ds_mysql_1 sh
+----
+. コンテナ シェルで、「env」をデプロイします。
+. MySQL DB パスワードが必要になるので、キー「MYSQL_ROOT_PASSWORD」の値をコピーします。
+. 次のコマンドを使用して、 NetApp Backup and Recovery MySQL DB を復元します。
++
+[source, cli]
+----
+mysql -u root -p cloud_backup < CBS_DB_Backup_23_05_2023.sql
+----
+. 次の SQL コマンドを使用して、 NetApp Backup and Recovery MySQL DB が正しく復元されたことを確認します。
++
+[source, cli]
+----
+mysql -u root -p cloud_backup
+----
++
+パスワードを入力してください。
+
++
+[source, cli]
+----
+mysql> show tables;
+mysql> select * from volume;
+----
++
+表示されるボリュームが元の環境に存在していたボリュームと同じかどうかを確認します。
+
+
+
+
+
+=== インデックスカタログファイルを復元する
+
+. インデックス付きカタログのバックアップ zip ファイル (サンプル ファイル名は「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」を使用します) を、バックアップ場所から「/opt/application/netapp/cbs」フォルダー内の新しいコンソール エージェント ホストにコピーします。
+. 次のコマンドを使用して、「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」ファイルを解凍します。
++
+[source, cli]
+----
+unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
+----
+. *ls* コマンドを実行して、フォルダー「catalogdb1」が作成され、その下にサブフォルダー「changes」と「snapshots」が作成されていることを確認します。
+
+
+
+
+=== ONTAPクラスタとStorageGRIDシステムを発見
+
+. https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#discover-clusters-using-a-connector["オンプレミスのONTAPシステムをすべて見る"^]以前の環境で利用可能でした。これには、S3 サーバーとして使用したONTAPシステムが含まれます。
+. https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDシステムを発見"^] 。
+
+
+
+
+=== StorageGRID環境の詳細を設定する
+
+元のコンソールエージェントセットアップで設定されたとおりに、 ONTAPシステムに関連付けられたStorageGRIDシステムの詳細を追加します。 https://docs.netapp.com/us-en/console-automation/index.html["NetAppコンソール API"^] 。
+
+次の情報は、 NetAppコンソール 3.9.xx 以降のプライベート モード インストールに適用されます。古いバージョンの場合は、次の手順に従います。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/DarkSite-Cloud-Backup-MySQL-and-Indexed-Catalog-Backup-and-Restore/ba-p/440800["DarkSite クラウドバックアップ: MySQL とインデックスカタログのバックアップと復元"^] 。
+
+StorageGRIDにデータをバックアップするシステムごとにこれらの手順を実行する必要があります。
+
+. 次の oauth/token API を使用して認証トークンを抽出します。
++
+[source, http]
+----
+curl 'http://10.193.192.202/oauth/token' -X POST -H 'Accept: application/json' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Content-Type: application/json' -d '{"username":"admin@netapp.com","password":"Netapp@123","grant_type":"password"}
+> '
+----
++
+IP アドレス、ユーザー名、パスワードはカスタム値ですが、アカウント名はカスタム値ではありません。アカウント名は常に「account-DARKSITE1」になります。また、ユーザー名には電子メール形式の名前を使用する必要があります。
+
++
+この API は次のような応答を返します。認証トークンは以下のように取得できます。
+
++
+[source, text]
+----
+{"expires_in":21600,"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJlMGFiZjRiIn0eyJzdWIiOiJvY2NtYXV0aHwxIiwiYXVkIjpbImh0dHBzOi8vYXBpLmNsb3VkLm5ldGFwcC5jb20iXSwiaHR0cDovL2Nsb3VkLm5ldGFwcC5jb20vZnVsbF9uYW1lIjoiYWRtaW4iLCJodHRwOi8vY2xvdWQubmV0YXBwLmNvbS9lbWFpbCI6ImFkbWluQG5ldGFwcC5jb20iLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwiaWF0IjoxNjcyNzM2MDIzLCJleHAiOjE2NzI3NTc2MjMsImlzcyI6Imh0dHA6Ly9vY2NtYXV0aDo4NDIwLyJ9CJtRpRDY23PokyLg1if67bmgnMcYxdCvBOY-ZUYWzhrWbbY_hqUH4T-114v_pNDsPyNDyWqHaKizThdjjHYHxm56vTz_Vdn4NqjaBDPwN9KAnC6Z88WA1cJ4WRQqj5ykODNDmrv5At_f9HHp0-xVMyHqywZ4nNFalMvAh4xESc5jfoKOZc-IOQdWm4F4LHpMzs4qFzCYthTuSKLYtqSTUrZB81-o-ipvrOqSo1iwIeHXZJJV-UsWun9daNgiYd_wX-4WWJViGEnDzzwOKfUoUoe1Fg3ch--7JFkFl-rrXDOjk1sUMumN3WHV9usp1PgBE5HAcJPrEBm0ValSZcUbiA"}
+----
+. tenancy/external/resource API を使用して、システム ID と X-Agent-Id を抽出します。
++
+[source, http]
+----
+curl -X GET http://10.193.192.202/tenancy/external/resource?account=account-DARKSITE1 -H 'accept: application/json' -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJlMGFiZjRiIn0eyJzdWIiOiJvY2NtYXV0aHwxIiwiYXVkIjpbImh0dHBzOi8vYXBpLmNsb3VkLm5ldGFwcC5jb20iXSwiaHR0cDovL2Nsb3VkLm5ldGFwcC5jb20vZnVsbF9uYW1lIjoiYWRtaW4iLCJodHRwOi8vY2xvdWQubmV0YXBwLmNvbS9lbWFpbCI6ImFkbWluQG5ldGFwcC5jb20iLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwiaWF0IjoxNjcyNzIyNzEzLCJleHAiOjE2NzI3NDQzMTMsImlzcyI6Imh0dHA6Ly9vY2NtYXV0aDo4NDIwLyJ9X_cQF8xttD0-S7sU2uph2cdu_kN-fLWpdJJX98HODwPpVUitLcxV28_sQhuopjWobozPelNISf7KvMqcoXc5kLDyX-yE0fH9gr4XgkdswjWcNvw2rRkFzjHpWrETgfqAMkZcAukV4DHuxogHWh6-DggB1NgPZT8A_szHinud5W0HJ9c4AaT0zC-sp81GaqMahPf0KcFVyjbBL4krOewgKHGFo_7ma_4mF39B1LCj7Vc2XvUd0wCaJvDMjwp19-KbZqmmBX9vDnYp7SSxC1hHJRDStcFgJLdJHtowweNH2829KsjEGBTTcBdO8SvIDtctNH_GAxwSgMT3zUfwaOimPw'
+----
++
+この API は次のような応答を返します。「resourceIdentifier」の下の値は _WorkingEnvironment Id_ を示し、「agentId」の下の値は _x-agent-id_ を示します。
+
+. システムに関連付けられているStorageGRIDシステムの詳細を使用して、 NetApp Backup and Recovery データベースを更新します。以下に示すように、 StorageGRIDの完全修飾ドメイン名と、アクセス キーおよびストレージ キーを必ず入力してください。
++
+[source, http]
+----
+curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudmanager_cbs/api/v1/sg/credentials/working-environment/OnPremWorkingEnvironment-pMtZND0M' \
+> --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJlMGFiZjRiIn0eyJzdWIiOiJvY2NtYXV0aHwxIiwiYXVkIjpbImh0dHBzOi8vYXBpLmNsb3VkLm5ldGFwcC5jb20iXSwiaHR0cDovL2Nsb3VkLm5ldGFwcC5jb20vZnVsbF9uYW1lIjoiYWRtaW4iLCJodHRwOi8vY2xvdWQubmV0YXBwLmNvbS9lbWFpbCI6ImFkbWluQG5ldGFwcC5jb20iLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwiaWF0IjoxNjcyNzIyNzEzLCJleHAiOjE2NzI3NDQzMTMsImlzcyI6Imh0dHA6Ly9vY2NtYXV0aDo4NDIwLyJ9X_cQF8xttD0-S7sU2uph2cdu_kN-fLWpdJJX98HODwPpVUitLcxV28_sQhuopjWobozPelNISf7KvMqcoXc5kLDyX-yE0fH9gr4XgkdswjWcNvw2rRkFzjHpWrETgfqAMkZcAukV4DHuxogHWh6-DggB1NgPZT8A_szHinud5W0HJ9c4AaT0zC-sp81GaqMahPf0KcFVyjbBL4krOewgKHGFo_7ma_4mF39B1LCj7Vc2XvUd0wCaJvDMjwp19-KbZqmmBX9vDnYp7SSxC1hHJRDStcFgJLdJHtowweNH2829KsjEGBTTcBdO8SvIDtctNH_GAxwSgMT3zUfwaOimPw' \
+> --header 'x-agent-id: vB_1xShPpBtUosjD7wfBlLIhqDgIPA0wclients' \
+> -d '
+> { "storage-server" : "sr630ip15.rtp.eng.netapp.com:10443", "access-key": "2ZMYOAVAS5E70MCNH9", "secret-password": "uk/6ikd4LjlXQOFnzSzP/T0zR4ZQlG0w1xgWsB" }'
+----
+
+
+
+
+=== NetAppバックアップおよびリカバリ設定を確認する
+
+. 各ONTAPシステムを選択し、右側のパネルのバックアップおよびリカバリ サービスの横にある [*バックアップの表示*] をクリックします。
++
+ボリュームに対して作成されたすべてのバックアップを表示できるはずです。
+
+. 復元ダッシュボードの「検索と復元」セクションで、「*インデックス設定*」をクリックします。
++
+以前にインデックスカタログが有効になっていたシステムが有効なままであることを確認します。
+
+. 「検索と復元」ページから、いくつかのカタログ検索を実行して、インデックス付きカタログの復元が正常に完了したことを確認します。
+

@@ -1,0 +1,90 @@
+= NetAppバックアップおよびリカバリはNetAppバックアップおよびリカバリになりました
+:allow-uri-read: 
+
+
+
+
+=== NetAppバックアップおよびリカバリはNetAppバックアップおよびリカバリになりました
+
+NetApp Backup and Recovery はNetApp Backup and Recovery に名前が変更されました。
+
+
+
+=== BlueXPはNetAppコンソールになりました
+
+NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、ワークフローの高速化、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。
+
+変更内容の詳細については、link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetAppコンソールのリリース ノート。"]
+
+
+
+=== プライベートプレビューとしての Hyper-V ワークロード サポート
+
+NetApp Backup and Recovery のこのリリースでは、Hyper-V ワークロードの検出と管理のサポートが導入されています。
+
+* スタンドアロン インスタンスとフェールオーバー クラスター インスタンス (FCI) 上の VM のバックアップと復元
+* SMB3共有に保存されたVMを保護する
+* 仮想マシンレベルでの一括保護
+* VMとクラッシュ整合性バックアップ
+* プライマリ、セカンダリ、オブジェクト ストレージから VM を復元する
+* VMバックアップの検索と復元
+
+
+Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+
+
+
+=== プライベートプレビューとしての KVM ワークロードサポート
+
+NetApp Backup and Recovery のこのリリースでは、KVM ワークロードの検出と管理のサポートが導入されています。
+
+* NFS共有に保存されたqcow2 VMイメージのバックアップと復元
+* ストレージプールのバックアップ
+* 保護グループを使用した VM およびストレージ プールの一括保護
+* VM整合性とクラッシュ整合性のVMバックアップ
+* VMバックアップの検索と復元
+* KVM ベースの VM と VM データをバックアップおよび復元するためのガイド付きプロセス
+
+
+KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+
+
+
+=== Kubernetes プレビューの改善
+
+Kubernetes ワークロードのプレビュー リリースでは、次の機能強化が導入されています。
+
+* 3-2-1 ファンアウトバックアップアーキテクチャのサポート
+* バックアップターゲットとしてのONTAP S3 のサポート
+* 管理を容易にする新しいKubernetesダッシュボード
+* 拡張されたロールベースのアクセス制御 (RBAC) 構成には、次のロールのサポートが含まれます。
++
+** バックアップとリカバリのスーパー管理者
+** バックアップとリカバリのバックアップ管理者
+** バックアップとリカバリの復元管理者
+** バックアップとリカバリビューア
+
+
+* SUSE Rancher Kubernetesディストリビューションのサポート
+* マルチバケットのサポート: 異なるクラウドプロバイダー間でシステムごとに複数のバケットを使用して、システム内のボリュームを保護できるようになりました。
+
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。  https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+
+
+
+=== Oracle Database ワークロード サポートのプライベート プレビュー
+
+NetApp Backup and Recovery のこのリリースでは、Oracle Database ワークロードの検出と管理のサポートが導入されています。
+
+* スタンドアロンのOracleデータベースを発見
+* データのみ、またはデータとログのバックアップの保護ポリシーを作成する
+* 3-2-1バックアップスキームでOracleデータベースを保護する
+* バックアップ保持を構成する
+* ARCHIVELOGバックアップのマウントとアンマウント
+* 仮想化データベース
+* データベースのバックアップの検索と復元
+* Oracleダッシュボードのサポート
+
+
+Oracle Databaseワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle ワークロードの保護の概要"] 。

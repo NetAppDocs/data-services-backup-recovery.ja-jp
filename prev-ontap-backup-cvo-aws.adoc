@@ -1,0 +1,452 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-backup-cvo-aws.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetApp Backup and Recovery を使用してCloud Volumes ONTAPデータを Amazon S3 にバックアップする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAPシステムから Amazon S3 へのボリューム データのバックアップを開始するには、 NetApp Backup and Recovery でいくつかの手順を完了します。
+
+[]
+====
+*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+
+====
+
+
+== 構成のサポートを確認する
+
+ボリュームを S3 にバックアップする前に、次の要件を読んで、サポートされている構成であることを確認してください。
+
+次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。
+
+オプションとして、パブリック接続またはプライベート接続を使用して、複製されたボリュームのセカンダリONTAPシステムに接続することもできます。
+
+image:diagram_cloud_backup_cvo_aws.png["NetApp Backup and Recovery が、ソース システムのボリュームおよびバックアップ ファイルが保存されている宛先ストレージと通信する方法を示す図。"]
+
+VPC ゲートウェイ エンドポイントがすでに VPC 内に存在している必要があります。 https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html["ゲートウェイエンドポイントの詳細"^] 。
+
+サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
+データ暗号化に顧客管理キーを使用するために必要な情報:: アクティベーションウィザードでは、デフォルトの Amazon S3 暗号化キーを使用する代わりに、データ暗号化用に独自のカスタマー管理キーを選択できます。この場合、暗号化管理キーがすでに設定されている必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自のキーの使用方法を確認する"^] 。
+
+
+
+
+== ライセンス要件を確認する
+
+NetApp Backup and Recovery PAYGO ライセンスの場合、 Cloud Volumes ONTAPとNetApp Backup and Recovery の導入を可能にするコンソールサブスクリプションが AWS Marketplace で利用できます。必要がある https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["このNetAppコンソールサブスクリプションに加入する"^]NetApp Backup and Recovery を有効にする前に。  NetApp Backup and Recovery の課金は、このサブスクリプションを通じて行われます。
+
+Cloud Volumes ONTAPデータとオンプレミスONTAPデータの両方をバックアップできる年間契約の場合は、 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWSマーケットプレイスページ"^]その後 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["サブスクリプションをAWS認証情報に関連付ける"^]。
+
+Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる年間契約の場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。
+
+NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"] 。コンソール エージェントとCloud Volumes ONTAPシステムをダーク サイトに展開する場合は、BYOL ライセンスを使用する必要があります。
+
+また、バックアップを保存するストレージスペース用の AWS アカウントも必要です。
+
+
+
+== コンソールエージェントを準備する
+
+コンソールエージェントは、完全なインターネットアクセスまたは制限されたインターネットアクセス (「標準」または「制限」モード) を備えた AWS リージョンにインストールする必要があります。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["詳細については、 NetAppコンソールの導入モードを参照してください。"^] 。
+
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["AWS にコンソールエージェントを標準モード（フルインターネットアクセス）でデプロイする"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-restricted-mode.html["制限モード（送信アクセスが制限される）でコンソール エージェントをインストールする"^]
+
+
+
+
+=== コンソールエージェントへの権限を確認または追加する
+
+コンソールに権限を与えるIAMロールには、最新のS3権限が含まれている必要があります。 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["コンソールポリシー"^] 。ポリシーにこれらの権限がすべて含まれていない場合は、 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWSドキュメント: IAMポリシーの編集"^] 。
+
+ポリシーからの具体的な権限は次のとおりです。
+
+[%collapsible]
+====
+[source, json]
+----
+{
+            "Sid": "backupPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteBucket",
+                "s3:GetLifecycleConfiguration",
+                "s3:PutLifecycleConfiguration",
+                "s3:PutBucketTagging",
+                "s3:ListBucketVersions",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketTagging",
+                "s3:GetBucketLocation",
+                "s3:GetBucketPolicyStatus",
+                "s3:GetBucketPublicAccessBlock",
+                "s3:GetBucketAcl",
+                "s3:GetBucketPolicy",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketOwnershipControls"
+                "s3:PutBucketPublicAccessBlock",
+                "s3:PutEncryptionConfiguration",
+                "s3:GetObjectVersionTagging",
+                "s3:GetBucketObjectLockConfiguration",
+                "s3:GetObjectVersionAcl",
+                "s3:PutObjectTagging",
+                "s3:DeleteObjectTagging",
+                "s3:GetObjectRetention",
+                "s3:DeleteObjectVersionTagging",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:DeleteObjectVersion",
+                "s3:GetObjectTagging",
+                "s3:PutBucketVersioning",
+                "s3:PutObjectVersionTagging",
+                "s3:GetBucketVersioning",
+                "s3:BypassGovernanceRetention",
+                "s3:PutObjectRetention",
+                "s3:GetObjectVersion",
+                "athena:StartQueryExecution",
+                "athena:GetQueryResults",
+                "athena:GetQueryExecution",
+                "glue:GetDatabase",
+                "glue:GetTable",
+                "glue:CreateTable",
+                "glue:CreateDatabase",
+                "glue:GetPartitions",
+                "glue:BatchCreatePartition",
+                "glue:BatchDeletePartition"
+            ],
+            "Resource": [
+                "arn:aws:s3:::netapp-backup-*"
+            ]
+        },
+----
+====
+
+NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。
+
+必要なAWS Cloud Volumes ONTAP権限:: Cloud Volumes ONTAPシステムがONTAP 9.12.1以降のソフトウェアを実行している場合、そのシステムに権限を提供するIAMロールには、最新のNetAppバックアップおよびリカバリ専用の新しいS3権限セットが含まれている必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAPポリシー"^] 。
++
+--
+コンソール バージョン 3.9.23 以降を使用してCloud Volumes ONTAPシステムを作成した場合、これらの権限はすでに IAM ロールの一部になっているはずです。それ以外の場合は、不足している権限を追加する必要があります。
+
+--
+サポートされているAWSリージョン:: NetApp Backup and Recovery は、AWS GovCloud リージョンを含むすべての AWS リージョンでサポートされています。
+別の AWS アカウントでバックアップを作成するために必要な設定:: デフォルトでは、バックアップはCloud Volumes ONTAPシステムに使用されているアカウントと同じアカウントを使用して作成されます。バックアップに別の AWS アカウントを使用する場合は、次の手順を実行する必要があります。
++
+--
+* 権限「s3:PutBucketPolicy」と「s3:PutBucketOwnershipControls」が、コンソールエージェントに権限を提供する IAM ロールの一部であることを確認します。
+* コンソールで宛先 AWS アカウントの認証情報を追加します。 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#add-additional-credentials-to-a-connector["やり方を見る"^] 。
+* 2 番目のアカウントのユーザー資格情報に次の権限を追加します。
++
+....
+"athena:StartQueryExecution",
+"athena:GetQueryResults",
+"athena:GetQueryExecution",
+"glue:GetDatabase",
+"glue:GetTable",
+"glue:CreateTable",
+"glue:CreateDatabase",
+"glue:GetPartitions",
+"glue:BatchCreatePartition",
+"glue:BatchDeletePartition"
+....
+
+
+--
+独自のバケットを作成する:: デフォルトでは、サービスによってバケットが作成されます。独自のバケットを使用する場合は、バックアップ アクティベーション ウィザードを開始する前にバケットを作成し、ウィザードでそれらのバケットを選択できます。
++
+--
+link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"^] 。
+
+--
+
+
+
+
+== ボリュームを複製するためのONTAPネットワーク要件を確認する
+
+NetApp Backup and Recovery を使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
+
+
+
+==== オンプレミスのONTAPネットワーク要件
+
+* クラスターが社内にある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
+* ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
++
+Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+
+
+
+
+
+==== Cloud Volumes ONTAPのネットワーク要件
+
+* インスタンスのセキュリティ グループには、必要な受信ルールと送信ルール (具体的には、ICMP とポート 11104 および 11105 のルール) が含まれている必要があります。これらのルールは、事前定義されたセキュリティ グループに含まれています。
+
+
+* 異なるサブネットにある 2 つのCloud Volumes ONTAPシステム間でデータを複製するには、サブネットを一緒にルーティングする必要があります (これがデフォルト設定です)。
+
+
+
+
+== Cloud Volumes ONTAPでNetApp のバックアップとリカバリを有効にする
+
+NetApp のバックアップとリカバリを有効にするのは簡単です。既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって、手順が若干異なります。
+
+*新しいシステムでNetAppバックアップとリカバリを有効にする*
+
+NetApp Backup and Recovery は、システム ウィザードでデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
+
+見る https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS でCloud Volumes ONTAP を起動"^]Cloud Volumes ONTAPシステムを作成するための要件と詳細については、こちらをご覧ください。
+
+.手順
+. コンソールの *システム* ページで、*システムの追加* を選択し、クラウド プロバイダーを選択して、*新規追加* を選択します。  * Cloud Volumes ONTAPの作成*を選択します。
+. クラウド プロバイダーとして *Amazon Web Services* を選択し、単一ノードまたは HA システムを選択します。
+. 「詳細と資格情報」ページに入力します。
+. [サービス] ページで、サービスを有効のままにして、[続行] を選択します。
+. ウィザードのページを完了してシステムを展開します。
+
+
+.結果
+システムでNetApp Backup and Recovery が有効になっています。これらのCloud Volumes ONTAPシステムでボリュームを作成したら、 NetApp Backup and Recoveryを起動し、link:prev-ontap-backup-manage.html["保護したいボリュームごとにバックアップを有効化します"] 。
+
+*既存のシステムでNetAppバックアップとリカバリを有効にする*
+
+コンソールからいつでも既存のシステムでNetAppバックアップおよびリカバリを有効にできます。
+
+.手順
+. コンソールの *システム* ページでクラスターを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化* を選択します。
++
+バックアップの Amazon S3 保存先が *システム* ページにクラスターとして存在する場合は、クラスターを Amazon S3 システムにドラッグしてセットアップ ウィザードを開始できます。
+
+
+
+
+
+== ONTAPボリューム上のバックアップをアクティブ化する
+
+オンプレミスのシステムからいつでも直接バックアップをアクティブ化できます。
+
+ウィザードに従って、次の主要な手順を実行します。
+
+* <<バックアップしたいボリュームを選択します>>
+* <<バックアップ戦略を定義する>>
+* <<選択内容を確認する>>
+
+
+また、<<APIコマンドを表示する>>レビュー ステップでコードをコピーして、将来のシステムのバックアップ アクティベーションを自動化できます。
+
+
+
+=== ウィザードを起動する
+
+.手順
+. 次のいずれかの方法で、バックアップと回復のアクティブ化ウィザードにアクセスします。
++
+** コンソールの *システム* ページで、システムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化 > バックアップ ボリューム* を選択します。
++
+バックアップの AWS 保存先がコンソールの *システム* ページにシステムとして存在する場合は、 ONTAPクラスターを AWS オブジェクト ストレージにドラッグできます。
+
+** バックアップとリカバリ バーで *ボリューム* を選択します。ボリュームタブから*アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコン オプションをクリックし、単一ボリューム (オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていないボリューム) に対して [バックアップのアクティブ化] を選択します。
+
+
++
+ウィザードの「概要」ページには、ローカル スナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で 2 番目のオプションを実行した場合、ボリュームが 1 つ選択された状態で「バックアップ戦略の定義」ページが表示されます。
+
+. 次のオプションを続行します。
++
+** コンソール エージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。。 <<コンソールエージェントを準備する>> 。
+
+
+
+
+
+
+=== バックアップしたいボリュームを選択します
+
+保護するボリュームを選択します。保護されたボリュームとは、スナップショット ポリシー、レプリケーション ポリシー、オブジェクトへのバックアップ ポリシーの 1 つ以上を持つボリュームです。
+
+FlexVolまたはFlexGroupボリュームを保護することを選択できますが、システムのバックアップをアクティブ化するときにこれらのボリュームを混在して選択することはできません。方法を見るlink:prev-ontap-backup-manage.html["システム内の追加ボリュームのバックアップを有効にする"](FlexVolまたはFlexGroup) 初期ボリュームのバックアップを構成した後。
+
+[NOTE]
+====
+* 一度に 1 つのFlexGroupボリューム上でのみバックアップをアクティブ化できます。
+* 選択するボリュームには同じSnapLock設定が必要です。すべてのボリュームでSnapLock Enterpriseを有効にするか、 SnapLock を無効にする必要があります。
+
+
+====
+.手順
+選択したボリュームにスナップショットまたはレプリケーション ポリシーがすでに適用されている場合は、後で選択したポリシーによって既存のポリシーが上書きされます。
+
+. 「ボリュームの選択」ページで、保護するボリュームを選択します。
++
+** 必要に応じて、行をフィルタリングして、特定のボリューム タイプ、スタイルなどを持つボリュームのみを表示し、選択を容易にします。
+** 最初のボリュームを選択したら、すべてのFlexVolボリュームを選択できます (FlexGroupボリュームは一度に 1 つだけ選択できます)。既存のFlexVolボリュームをすべてバックアップするには、まず 1 つのボリュームをチェックし、次にタイトル行のボックスをチェックします。
+** 個々のボリュームをバックアップするには、各ボリュームのボックスをオンにします。
+
+
+. *次へ*を選択します。
+
+
+
+
+=== バックアップ戦略を定義する
+
+バックアップ戦略を定義するには、次のオプションを設定する必要があります。
+
+* ローカルスナップショット、レプリケーション、オブジェクトストレージへのバックアップなど、バックアップオプションのいずれかまたはすべてを使用するかどうか
+* アーキテクチャ
+* ローカルスナップショットポリシー
+* レプリケーションターゲットとポリシー
++
+
+NOTE: 選択したボリュームのスナップショットおよびレプリケーション ポリシーがこの手順で選択したポリシーと異なる場合、既存のポリシーが上書きされます。
+
+* オブジェクト ストレージ情報へのバックアップ (プロバイダー、暗号化、ネットワーク、バックアップ ポリシー、エクスポート オプション)。
+
+
+.手順
+. 「バックアップ戦略の定義」ページで、次のいずれかまたはすべてを選択します。デフォルトでは 3 つすべてが選択されています。
++
+** *ローカル スナップショット*: オブジェクト ストレージへのレプリケーションまたはバックアップを実行する場合は、ローカル スナップショットを作成する必要があります。
+** *レプリケーション*: 別のONTAPストレージ システムに複製されたボリュームを作成します。
+** *バックアップ*: ボリュームをオブジェクト ストレージにバックアップします。
+
+
+. *アーキテクチャ*: レプリケーションとバックアップを選択した場合は、次のいずれかの情報フローを選択します。
++
+** *カスケード*: 情報はプライマリ ストレージ システムからセカンダリ ストレージ システムへ、そしてセカンダリ ストレージ システムからオブジェクト ストレージへ流れます。
+** *ファンアウト*: 情報はプライマリ ストレージ システムからセカンダリ ストレージ システムへ、そしてプライマリ ストレージ システムからオブジェクト ストレージへ流れます。
++
+これらのアーキテクチャの詳細については、link:prev-ontap-protect-journey.html["保護の旅を計画する"] 。
+
+
+
+. *ローカル スナップショット*: 既存のスナップショット ポリシーを選択するか、新しいポリシーを作成します。
++
+
+TIP: スナップショットをアクティブ化する前にカスタムポリシーを作成するには、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+
++
+ポリシーを作成するには、[*新しいポリシーの作成*] を選択し、次の操作を行います。
+
++
+** ポリシーの名前を入力します。
+** 通常は異なる頻度のスケジュールを最大 5 つ選択します。
+** *作成*を選択します。
+
+
+. *レプリケーション*: 次のオプションを設定します。
++
+** *レプリケーション ターゲット*: 宛先システムと SVM を選択します。必要に応じて、複製先のアグリゲート (複数可) と、複製されたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。
+** *レプリケーション ポリシー*: 既存のレプリケーション ポリシーを選択するか、新しいレプリケーション ポリシーを作成します。
++
+
+TIP: カスタムポリシーを作成するには、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+
++
+ポリシーを作成するには、[*新しいポリシーの作成*] を選択し、次の操作を行います。
+
++
+*** ポリシーの名前を入力します。
+*** 通常は異なる頻度のスケジュールを最大 5 つ選択します。
+*** *作成*を選択します。
+
+
+
+
+. *オブジェクトにバックアップ*: *バックアップ*を選択した場合は、次のオプションを設定します。
++
+** *プロバイダー*: *Amazon Web Services* を選択します。
+** *プロバイダー設定*: プロバイダーの詳細とバックアップを保存するリージョンを入力します。
++
+バックアップを保存するために使用する AWS アカウントを入力します。これは、Cloud Volumes ONTAPシステムが存在するアカウントとは異なるアカウントにすることができます。
+
++
+バックアップに別の AWS アカウントを使用する場合は、コンソールでバックアップ先の AWS アカウントの認証情報を追加し、コンソールに権限を付与する IAM ロールに「s3:PutBucketPolicy」および「s3:PutBucketOwnershipControls」権限を追加する必要があります。
+
++
+バックアップを保存するリージョンを選択します。これは、Cloud Volumes ONTAPシステムが存在するリージョンとは異なるリージョンにすることができます。
+
++
+新しいバケットを作成するか、既存のバケットを選択します。
+
+** *暗号化キー*: 新しいバケットを作成した場合は、プロバイダーから提供された暗号化キー情報を入力します。データの暗号化を管理するために、デフォルトの AWS 暗号化キーを使用するか、AWS アカウントから独自のカスタマー管理キーを選択するかを選択します。(https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自の暗号化キーの使用方法を確認する"^] ）。
++
+独自のカスタマー管理キーを使用する場合は、キー コンテナーとキー情報を入力します。
+
+
+
++
+
+NOTE: 既存のバケットを選択した場合は、暗号化情報がすでに利用可能であるため、ここで入力する必要はありません。
+
++
+** *バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択するか、新しいポリシーを作成します。
++
+
+TIP: バックアップをアクティブ化する前にカスタムポリシーを作成するには、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+
++
+ポリシーを作成するには、[*新しいポリシーの作成*] を選択し、次の操作を行います。
+
++
+*** ポリシーの名前を入力します。
+*** 通常は異なる頻度のスケジュールを最大 5 つ選択します。
+*** オブジェクトへのバックアップ ポリシーの場合は、DataLock とランサムウェア保護の設定を行います。  DataLockとランサムウェア保護の詳細については、以下を参照してください。link:prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシー設定"] 。
+*** *作成*を選択します。
+
+
+** *既存のスナップショット コピーをバックアップ コピーとしてオブジェクト ストレージにエクスポートします*: このシステム内のボリュームのローカル スナップショット コピーが、このシステムに対して選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) と一致する場合、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。
+
+
+. *次へ*を選択します。
+
+
+
+
+=== 選択内容を確認する
+
+ここで選択内容を確認し、必要に応じて調整を行うことができます。
+
+.手順
+. 「レビュー」ページで選択内容を確認します。
+. オプションで、*スナップショット ポリシー ラベルをレプリケーション ポリシー ラベルおよびバックアップ ポリシー ラベルと自動的に同期する* チェックボックスをオンにします。これにより、レプリケーションおよびバックアップ ポリシーのラベルと一致するラベルを持つスナップショットが作成されます。
+. *バックアップの有効化*を選択します。
+
+
+.結果
+NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ システム データの差分コピーが含まれます。
+
+複製されたボリュームが宛先クラスターに作成され、プライマリ ストレージ ボリュームと同期されます。
+
+入力した S3 アクセスキーとシークレットキーで示されるサービスアカウントに S3 バケットが作成され、そこにバックアップファイルが保存されます。
+
+ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。
+
+バックアップと復元ジョブのステータスを監視することもできます。link:br-use-monitor-tasks.html["ジョブ監視ページ"] 。
+
+
+
+=== APIコマンドを表示する
+
+バックアップとリカバリのアクティブ化ウィザードで使用される API コマンドを表示し、必要に応じてコピーすることもできます。将来のシステムでバックアップのアクティベーションを自動化するには、これを実行する必要がある場合があります。
+
+.手順
+. バックアップとリカバリのアクティブ化ウィザードから、*API リクエストの表示*を選択します。
+. コマンドをクリップボードにコピーするには、[コピー] アイコンを選択します。
+

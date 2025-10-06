@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: br-use-vmware-backup.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetApp Backup and Recovery で VMware ワークロードをバックアップする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+データが確実に保護されるように、オンプレミスのONTAPシステムから VMware VM とデータストアを Amazon Web Services、 Azure NetApp Files、またはStorageGRIDにバックアップします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。
+
+* スケジュールに従ってワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
+* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-vmware-protection-groups.html["NetApp Backup and Recovery を使用して VMware ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
+* 今すぐワークロードをバックアップします (今すぐオンデマンド バックアップを作成します)。
+
+
+
+
+== オンデマンドバックアップでワークロードを今すぐバックアップ
+
+オンデマンド バックアップをすぐに作成します。システムに変更を加える予定があり、開始する前にバックアップがあることを確認したい場合は、オンデマンド バックアップを実行することをお勧めします。
+
+*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. [バックアップとリカバリ] メニューから、[*インベントリ*] を選択します。
+. 保護の詳細を表示するには、ワークロードを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
+. *保護グループ*、*データストア*、または*仮想マシン*タブを選択します。
+. バックアップする保護グループ、データストア、または仮想マシンを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
++
+
+NOTE: バックアップに適用されるポリシーは、保護グループ、データストア、または仮想マシンに割り当てられているポリシーと同じです。
+
+. スケジュール層を選択します。
+. *今すぐバックアップ*を選択します。
+

@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: concept-start-prereq-snapcenter-import.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
+summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、 NetApp Backup and Recovery を開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。 
+---
+= プラグイン サービスからNetApp Backup and Recovery にインポートするための前提条件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft SQL Server 用のSnapCenterプラグイン サービスからNetApp Backup and Recovery にリソースをインポートする場合は、さらにいくつかの項目を構成する必要があります。
+
+
+
+== まずNetAppコンソールでシステムを作成する
+
+SnapCenterからリソースをインポートする場合は、 SnapCenterからインポートする前に、オンプレミスのすべてのSnapCenterクラスター ストレージをコンソールの [システム] ページに追加する必要があります。これにより、ホスト リソースが正しく検出され、インポートされるようになります。
+
+
+
+== SnapCenterプラグインをインストールするためのホスト要件を確認する
+
+SnapCenter Plug-in for Microsoft SQL Server からリソースをインポートするには、 SnapCenter Plug-in for Microsoft SQL Server をインストールするためのホスト要件が満たされていることを確認します。
+
+SnapCenterの要件については、link:concept-start-prereq.html["NetAppバックアップおよびリカバリの前提条件"] 。
+
+
+
+== ユーザーアカウント制御のリモート制限を無効にする
+
+SnapCenterからリソースをインポートする前に、 SnapCenter Windows ホストのユーザー アカウント制御 (UAC) リモート制限を無効にします。ローカル管理者アカウントを使用してSnapCenter Server ホストまたは SQL ホストにリモートで接続する場合は、UAC を無効にします。
+
+*セキュリティに関する考慮事項*
+
+UAC リモート制限を無効にする前に、次の問題を考慮してください。
+
+* セキュリティ リスク: トークン フィルタリングを無効にすると、特にローカル管理者アカウントが悪意のある人物によって侵害された場合に、システムがセキュリティ上の脆弱性にさらされる可能性があります。
+* 注意して使用してください:
++
+** 管理タスクに不可欠な場合にのみ、この設定を変更してください。
+** 管理者アカウントを保護するために、強力なパスワードやその他のセキュリティ対策が実施されていることを確認します。
+
+
+
+
+*代替解決策*
+
+* リモート管理アクセスが必要な場合は、適切な権限を持つドメイン アカウントの使用を検討してください。
+* リスクを最小限に抑えるために、セキュリティのベストプラクティスに準拠した安全なリモート管理ツールを使用します。
+
+
+.ユーザーアカウント制御のリモート制限を無効にする手順
+. 変更する `LocalAccountTokenFilterPolicy`SnapCenter Windows ホスト上のレジストリ キー。
++
+次のいずれかを使用してこれを実行してください。手順は次のとおりです。
+
++
+** 方法1: レジストリエディター
+** 方法2: PowerShellスクリプト
+
+
+
+
+
+
+=== 方法1: レジストリエディターを使用してユーザーアカウント制御を無効にする
+
+これは、ユーザー アカウント制御を無効にするために使用できる方法の 1 つです。
+
+.手順
+. 次の手順に従って、 SnapCenter Windows ホストでレジストリ エディターを開きます。
++
+.. プレス `Windows+R`[実行]ダイアログ ボックスを開きます。
+.. タイプ `regedit`そして押す `Enter`。
+
+
+. ポリシーキーに移動します。
++
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
+
+. 作成または変更 `DWORD`価値：
++
+.. 場所: `LocalAccountTokenFilterPolicy`
+.. 存在しない場合は、新しいものを作成してください `DWORD`（32ビット）値の名前 `LocalAccountTokenFilterPolicy`。
+
+
+. 以下の値がサポートされています。このシナリオでは、値を `1`:
++
+** `0`(デフォルト): UAC リモート制限が有効になります。ローカル アカウントには、リモート アクセス時にフィルターされたトークンがあります。
+** `1`: UAC リモート制限は無効です。ローカル アカウントはトークン フィルタリングをバイパスし、リモート アクセス時に完全な管理者権限を持ちます。
+
+
+. [OK]をクリックします。
+. レジストリ エディターを閉じます。
+. SnapCenter Windows ホストを再起動します。
+
+
+.レジストリの変更例
+この例では、LocalAccountTokenFilterPolicy を「1」に設定し、UAC リモート制限を無効にします。
+
+[listing]
+----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+
+"LocalAccountTokenFilterPolicy"=dword:00000001
+----
+
+
+=== 方法2: PowerShellスクリプトを使用してユーザーアカウント制御を無効にする
+
+これは、ユーザー アカウント制御を無効にするために使用できる別の方法です。
+
+
+CAUTION: 昇格された権限で PowerShell コマンドを実行すると、システム設定に影響する可能性があります。コマンドを実行する前に、コマンドとその意味を理解していることを確認してください。
+
+.手順
+. SnapCenter Windows ホストで管理者権限を使用して PowerShell ウィンドウを開きます。
++
+.. *スタート* メニューをクリックします。
+.. *PowerShell 7* または *Windows Powershell* を検索します。
+.. そのオプションを右クリックし、[管理者として実行] を選択します。
+
+
+. PowerShell がシステムにインストールされていることを確認してください。インストール後、*スタート* メニューに表示されます。
++
+
+TIP: PowerShell は、Windows 7 以降のバージョンにデフォルトで含まれています。
+
+. UAC リモート制限を無効にするには、次のコマンドを実行して LocalAccountTokenFilterPolicy を「1」に設定します。
++
+[listing]
+----
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord
+----
+. 現在の値が「1」に設定されていることを確認します。 `LocalAccountTokenFilterPolicy``実行して:
++
+[listing]
+----
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy"
+----
++
+** 値が 1 の場合、UAC リモート制限は無効になります。
+** 値が 0 の場合、UAC リモート制限が有効になります。
+
+
+. 変更を適用するには、コンピューターを再起動してください。
+
+
+.UAC リモート制限を無効にする PowerShell 7 コマンドの例:
+値が「1」に設定されているこの例は、UAC リモート制限が無効になっていることを示します。
+
+[listing]
+----
+# Disable UAC remote restrictions
+
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord
+
+# Verify the change
+
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy"
+
+# Output
+
+LocalAccountTokenFilterPolicy : 1
+----

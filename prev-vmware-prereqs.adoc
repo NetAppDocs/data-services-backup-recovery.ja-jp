@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-prereqs.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetApp Backup and Recoveryにおける仮想マシンワークロードの前提条件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用して仮想マシンのワークロードを保護する前に、次の前提条件を満たしていることを確認してください。
+
+* SnapCenter Plug-in for VMware vSphere
++
+** オンプレミスのセカンダリ ストレージからデータストアをバックアップするには、SnapCenter Plug-in for VMware vSphereを使用する必要があります。
+
+
+* ONTAP 9.8 以降
+* NetAppコンソール
+* NFS および VMFS データストアがサポートされています。vVolsはサポートされていません。
+* VMFS をサポートするには、 SnapCenter Plug-in for VMware vSphereが4.9 以降で実行されている必要があります。  SnapCenter Plug-in for VMware vSphereホストが以前のバージョンから 4.9 リリースにアップグレードされた場合は、必ず VMFS データストアのバックアップを作成してください。
+* SnapCenter Plug-in for VMware vSphere 4.6P1 で少なくとも 1 つのバックアップが作成されている必要があります。
+* コンソールの仮想マシン ポリシーと同じラベルまたはラベルのない、SnapCenter Plug-in for VMware vSphereの日次、週次、月次ポリシーが少なくとも 1 つ。
+* 事前に設定されたポリシーの場合、スケジュール層は、 SnapCenter Plug-in for VMware vSphereとクラウドのデータストアで同じである必要があります。
+* FlexGroupボリュームのバックアップと復元はサポートされていないため、データストアにFlexGroupボリュームがないことを確認してください。
+* 必要なリソース グループで「*_recent*」を無効にします。リソース グループに対して「*_recent*」が有効になっている場合、それらのリソース グループのバックアップはクラウドへのデータ保護に使用できず、その後の復元操作にも使用できません。
+* 仮想マシンを復元する宛先データストアに、VMDK、VMX、VMSD などのすべての仮想マシン ファイルのコピーを格納できる十分なスペースがあることを確認します。
+* 以前の復元操作の失敗により、復元先のデータストアに restore_xxx_xxxxxx_filename 形式の古い仮想マシン ファイルがないことを確認します。復元操作を開始する前に、古いファイルを削除する必要があります。
+* プロキシが構成されたコネクタを展開するには、すべての送信コネクタ呼び出しがプロキシ サーバー経由でルーティングされることを確認します。
+* データストアをバックアップするボリュームがボリューム タブ (NetApp Backup and Recovery -> ボリューム) からすでに保護されている場合、同じデータストアを仮想マシン タブ (NetApp Backup and Recovery -> 仮想マシン) から再度保護することはできません。
+
+
+次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。
+
+image:cloud_backup_vm.png["アーキテクチャ図"]

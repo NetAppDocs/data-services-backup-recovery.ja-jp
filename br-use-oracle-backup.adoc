@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: br-use-oracle-backup.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
+summary: NetApp のバックアップとリカバリを使用して Oracle ワークロードを保護します。 
+---
+= NetApp Backup and RecoveryでOracleワークロードをバックアップ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+データが確実に保護されるように、オンプレミスのONTAPシステムから Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、またはONTAP S3 に Oracle Database 保護グループまたはデータベースをバックアップします。保護グループをバックアップすると、 NetAppコンソールは保護グループに含まれるデータベースとログ データをバックアップします。
+
+
+NOTE: 保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を制御するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
+
+* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-kvm-protection-groups.html["NetApp Backup and Recovery を使用して Oracle ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
+* 保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。
+* 今すぐデータベースをバックアップします。
+
+
+
+
+== オンデマンド バックアップで保護グループを今すぐバックアップ
+
+オンデマンド バックアップをすぐに実行できます。これは、システムに変更を加える前にバックアップがあることを確認したい場合に役立ちます。
+
+*必要なコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. Oracle タイルで、*検出と管理*を選択します。
+. *在庫*を選択します。
+. 保護の詳細を表示するには、ワークロードを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
+. *保護グループ*、*データストア*、または*仮想マシン*タブを選択します。
+. バックアップする保護グループを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
++
+
+NOTE: バックアップに適用されるポリシーは、保護グループに割り当てられているポリシーと同じです。
+
+. スケジュール層を選択します。
+. *バックアップ*を選択します。
+
+
+
+
+== オンデマンドバックアップで今すぐデータベースをバックアップ
+
+単一のデータベースのオンデマンド バックアップを実行できます。
+
+*必要なコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. Oracle タイルで、*検出と管理*を選択します。
+. *在庫*を選択します。
+. 保護の詳細を表示するには、ワークロードを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
+. *データベース*タブを選択します。
+. バックアップするデータベースを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
+. スケジュール層を選択します。
+. *バックアップ*を選択します。
+

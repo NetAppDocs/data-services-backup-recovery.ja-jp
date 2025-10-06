@@ -1,0 +1,116 @@
+---
+indexpage:
+  title: NetAppバックアップおよびリカバリのドキュメント
+  summary: NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ
+    サービスです。
+  keywords: netapp console, netapp backup recovery, ontap, on-premises, data protection,
+    sql, workloads, backup,
+  lead: NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ
+    サービスです。
+  tiles:
+  - title: 始めましょう
+    links:
+    - title: NetAppのバックアップとリカバリについて学ぶ
+      url: concept-backup-to-cloud.html
+    - title: 新機能
+      url: whats-new.html
+    - title: 前提条件
+      url: concept-start-prereq.html
+    - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
+      url: br-start-setup.html
+    - title: NetAppバックアップおよびリカバリ設定を構成する
+      url: br-start-configure.html
+  - title: ONTAPボリュームのワークロードを保護する
+    links:
+    - title: ONTAPボリュームの保護ワークロードの概要
+      url: prev-ontap-protect-overview.html
+    - title: ONTAPボリュームのワークロードの保護を計画する
+      url: prev-ontap-protect-journey.html
+    - title: ONTAPボリュームのワークロードのポリシーを管理する
+      url: prev-ontap-policy-manage.html
+    - title: ONTAPボリュームのオブジェクトへのバックアップポリシーオプション
+      url: prev-ontap-policy-object-options.html
+    - title: ONTAPボリュームのワークロードを復元する
+      url: prev-ontap-restore.html
+  - title: Microsoft SQL Server ワークロードを保護する
+    links:
+    - title: Microsoft SQL Server ワークロードの保護の概要
+      url: br-use-mssql-protect-overview.html
+    - title: Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします
+      url: br-start-discover.html
+    - title: Microsoft SQL Server ワークロードのバックアップ
+      url: br-use-mssql-backup.html
+    - title: Microsoft SQL Server ワークロードを復元する
+      url: br-use-mssql-restore.html
+    - title: Microsoft SQL Server ワークロードのクローン作成
+      url: br-use-mssql-clone.html
+  - title: VMware ワークロードの保護（プライベート プレビュー）
+    links:
+    - title: VMware ワークロードの保護の概要
+      url: br-use-vmware-protect-overview.html
+    - title: VMware ワークロードを発見
+      url: br-use-vmware-discovery.html
+    - title: VMware ワークロードの保護グループの作成と管理
+      url: br-use-vmware-protection-groups.html
+    - title: VMwareワークロードのバックアップ
+      url: br-use-vmware-backup.html
+    - title: VMwareワークロードを復元する
+      url: br-use-vmware-restore.html
+  - title: KVM ワークロードの保護（プライベート プレビュー）
+    links:
+    - title: KVM ワークロードの保護の概要
+      url: "/br-use-kvm-protect-overview.html"
+    - title: KVMワークロードを発見
+      url: "/br-start-discover-kvm.html"
+    - title: KVM ワークロードの保護グループの作成と管理
+      url: "/br-use-kvm-protection-groups.html"
+    - title: KVMワークロードのバックアップ
+      url: "/br-use-kvm-backup.html"
+    - title: KVMワークロードを復元する
+      url: "/br-use-kvm-restore.html"
+  - title: Hyper-V ワークロードの保護 (プライベート プレビュー)
+    links:
+    - title: Hyper-V ワークロードの保護の概要
+      url: "/br-use-hyperv-protect-overview.html"
+    - title: Hyper-V ワークロードの検出
+      url: "/br-start-discover-hyperv.html"
+    - title: Hyper-V ワークロードの保護グループの作成と管理
+      url: "/br-use-hyperv-protection-groups.html"
+    - title: Hyper-V ワークロードのバックアップ
+      url: "/br-use-hyperv-backup.html"
+    - title: Hyper-V ワークロードを復元する
+      url: "/br-use-hyperv-restore.html"
+  - title: Oracle ワークロードの保護（プライベート プレビュー）
+    links:
+    - title: Oracle ワークロードの保護の概要
+      url: "/br-use-oracle-protect-overview.html"
+    - title: Oracleワークロードを発見
+      url: "/br-start-discover-oracle.html"
+    - title: Oracle ワークロードの保護グループの作成と管理
+      url: "/br-use-oracle-protection-groups.html"
+    - title: Oracleワークロードのバックアップ
+      url: "/br-use-oracle-backup.html"
+    - title: Oracleワークロードの復元
+      url: "/br-use-oracle-restore.html"
+  - title: Kubernetes ワークロードを保護する（プレビュー）
+    links:
+    - title: Kubernetes ワークロードの保護の概要
+      url: br-use-kubernetes-protect-overview.html
+    - title: Kubernetes ワークロードを発見する
+      url: br-start-discover-kubernetes.html
+    - title: Kubernetes アプリケーションの追加と保護
+      url: br-use-protect-kubernetes-applications.html
+    - title: Kubernetes クラスターを管理する
+      url: br-use-manage-kubernetes-clusters.html
+    - title: Kubernetes アプリケーションを管理する
+      url: br-use-manage-kubernetes-applications.html
+    - title: Kubernetesアプリケーションを復元する
+      url: br-use-restore-kubernetes-applications.html
+  - title: ブログとコミュニティ
+    links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
+    - title: NetAppコミュニティ
+      url: https://community.netapp.com/

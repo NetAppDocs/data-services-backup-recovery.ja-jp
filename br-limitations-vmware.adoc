@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: br-limitations-vmware.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vcenter 
+summary: NetApp Backup and Recovery サービスを使用するには、まずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+---
+= VMware ワークロード向けNetApp Backup and Recovery の既知の制限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。
+
+NetApp Backup and Recovery の VMware ワークロードのプレビュー バージョンでは、次のアクションはサポートされていません。
+
+* マウント
+* アンマウント
+* 別の場所へのリストア
+* VMDKを復元する
+* VMDKをアタッチする
+* VMDKのデタッチ
+* vVol サポート
+* NVMeサポート
+* メール統合
+* 編集ポリシー
+* 保護グループを編集する
+* ロールベースアクセス制御（RBAC）のサポート
+

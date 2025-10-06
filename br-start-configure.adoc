@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: br-start-configure.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetAppバックアップとリカバリを構成するには、いくつかの手順を実行します。 
+---
+= NetAppバックアップおよびリカバリ設定を構成する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールをセットアップした後、ホスト リソースの資格情報の追加、 SnapCenterリソースのインポート、ログ ディレクトリの構成、VMware vCenter 設定の構成など、バックアップとリカバリの設定を構成します。データのバックアップと復元を積極的に開始する前に、これを実行する必要があります。
+
+* <<ホストリソースの資格情報を追加する>>SnapCenterからインポートした Windows および SQL Server ホストに対して、資格情報を追加します。  (Microsoft SQL Server ワークロードのみ)
+* <<VMware vCenter 設定を維持する>> 。
+* <<SnapCenterホストリソースのインポートと管理>> 。(Microsoft SQL Server ワークロードのみ)
+* <<Windowsホストのスナップショットのログディレクトリを構成する>> 。
+
+
+*必要なNetAppコンソール ロール* バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+
+
+== ホストリソースの資格情報を追加する
+
+SnapCenterからインポートするホスト リソースの資格情報を追加します。ホスト資格情報は、新しいワークロードを検出し、バックアップ ポリシーを適用するために使用されます。
+
+資格情報をまだお持ちでない場合は、作成することができます。これらの資格情報には、ホスト ワークロードにアクセスして管理するために必要な権限が必要です。
+
+次の種類の資格情報を設定する必要があります。
+
+* Microsoft SQL Server の資格情報
+* SnapCenter Windowsホストの資格情報
+
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. *資格情報*の下矢印を選択します。
+. *新しい資格情報の追加*を選択します。
+. 資格情報の情報を入力します。選択した認証モードに応じて、異なるフィールドが表示されます。フィールドの詳細については、[情報] *i* を選択してください。
++
+** *資格情報名*: 資格情報の名前を入力します。
+** *認証モード*: *Windows* または *Microsoft SQL* を選択します。
++
+
+TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必要があるため、2 セットの資格情報を追加する必要があります。
+
+
+
+. *Windows* を選択した場合:
++
+** *コンソール エージェント*: コンソール エージェントの IP アドレスを入力します。
+** *ドメインとユーザー名*: 資格情報の NetBIOS またはドメイン FQDN とユーザー名を入力します。
+** *パスワード*: 資格情報のパスワードを入力します。
+
+
+. *Microsoft SQL* を選択した場合:
++
+** *ホスト*: 検出された SQL Server ホスト アドレスを選択します。
+** *SQL Server インスタンス*: 検出された SQL Server インスタンスを選択します。
+
+
+. *追加*を選択します。
+
+
+
+
+=== ホストリソースの資格情報を編集する
+
+後で、 SnapCenterからインポートしたホスト リソースのパスワードを編集できます。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. 下矢印を選択して、*資格情報*セクションを展開します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *資格情報を編集*。
++
+** *パスワード*: 資格情報のパスワードを入力します。
+
+
+. *保存*を選択します。
+
+
+
+
+== VMware vCenter 設定を維持する
+
+バックアップする VMware vCenter Server ワークロードを検出するには、VMware vCenter の資格情報を指定します。既存の資格情報がない場合は、VMware vCenter Server ワークロードにアクセスして管理するために必要な権限を持つ資格情報を作成できます。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. 下矢印を選択して、*VMware vCenter* セクションを展開します。
+. *vCenter の追加*を選択します。
+. VMware vCenter Server 情報を入力します。
++
+** *vCenter FQDN または IP アドレス*: VMware vCenter Server の FQDN 名または IP アドレスを入力します。
+** *ユーザー名* と *パスワード*: VMware vCenter Server のユーザー名とパスワードを入力します。
+** *ポート*: VMware vCenter Server のポート番号を入力します。
+** *プロトコル*: *HTTP* または *HTTPS* を選択します。
+
+
+. *追加*を選択します。
+
+
+
+
+== SnapCenterホストリソースのインポートと管理
+
+以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recovery でそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenter Server 情報をインポートして複数の Snapcenter サーバーを登録し、データベース ワークロードを検出できます。
+
+これは 2 つの部分から成るプロセスです。
+
+* SnapCenter Server アプリケーションとホスト リソースをインポートする
+* 選択したSnapCenterホストリソースを管理する
+
+
+
+
+=== SnapCenter Server アプリケーションとホスト リソースをインポートする
+
+この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp のバックアップおよびリカバリ インベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recovery によって管理されていません。
+
+
+TIP: SnapCenterホスト リソースをインポートした後、 NetApp Backup and Recovery は保護管理を引き継ぎません。そのためには、 NetApp Backup and Recovery でこれらのリソースを管理することを明示的に選択する必要があります。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. 下矢印を選択して、* SnapCenterからのインポート *セクションを展開します。
+. SnapCenterリソースをインポートするには、[* SnapCenterからのインポート*] を選択します。
+. * SnapCenterアプリケーションの資格情報*を入力してください:
++
+.. * SnapCenter FQDN または IP アドレス*: SnapCenterアプリケーション自体の FQDN または IP アドレスを入力します。
+.. *ポート*: SnapCenterサーバーのポート番号を入力します。
+.. *ユーザー名* と *パスワード*: SnapCenterサーバーのユーザー名とパスワードを入力します。
+.. *コンソール エージェント*: SnapCenterのコンソール エージェントを選択します。
+
+
+. * SnapCenterサーバー ホストの資格情報* を入力してください:
++
+.. *既存の資格情報*: このオプションを選択すると、すでに追加されている既存の資格情報を使用できます。資格情報の名前を入力します。
+.. *新しい資格情報の追加*: 既存のSnapCenterホスト資格情報がない場合は、新しい資格情報を追加できます。資格情報名、認証モード、ユーザー名、およびパスワードを入力します。
+
+
+. *インポート* を選択してエントリを検証し、 SnapCenterサーバーを登録します。
++
+
+NOTE: SnapCenterサーバーがすでに登録されている場合は、既存の登録詳細を更新できます。
+
+
+
+.結果
+インベントリ ページには、インポートされたSnapCenterリソースが表示されます。
+
+
+
+=== SnapCenterホストリソースの管理
+
+SnapCenterリソースをインポートした後、 NetApp Backup and Recovery でそれらのホスト リソースを管理します。インポートしたリソースを管理することを選択すると、 NetApp Backup and Recovery はSnapCenterからインポートしたリソースをバックアップおよびリカバリできるようになります。  SnapCenter Server でこれらのリソースを管理する必要がなくなります。
+
+.手順
+. SnapCenterリソースをインポートした後、表示される [インベントリ] ページで、今後NetApp Backup and Recovery で管理するインポートしたSnapCenterリソースを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理* をクリックしてリソースを管理します。
+. * NetAppコンソールで管理* を選択します。
++
+インベントリ ページのホスト名の下に「*管理対象*」と表示され、選択したホスト リソースがNetApp Backup and Recovery によって管理されていることを示します。
+
+
+
+
+
+=== インポートしたSnapCenterリソースを編集する
+
+後でSnapCenterリソースを再インポートしたり、インポートしたSnapCenterリソースを編集して登録の詳細を更新したりできます。
+
+SnapCenter Server のポートとパスワードの詳細のみを変更できます。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. * SnapCenterからのインポート *の下矢印を選択します。
++
+SnapCenterからのインポート ページには、以前のすべてのインポートが表示されます。
+
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *編集* をクリックしてリソースを更新します。
+. 必要に応じて、 SnapCenter のパスワードとポートの詳細を更新します。
+. *インポート*を選択します。
+
+
+
+
+== Windowsホストのスナップショットのログディレクトリを構成する
+
+Windows ホストのポリシーを作成する前に、Windows ホストのスナップショット内のログ ディレクトリを構成する必要があります。ログ ディレクトリは、バックアップ プロセス中に生成されるログを保存するために使用されます。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. インベントリページでワークロードを選択し、アクションアイコンを選択します。image:../media/icon-action.png["アクションオプション"] > *詳細を表示* をクリックして、ワークロードの詳細を表示します。
+. Microsoft SQL Server が表示されているインベントリの詳細ページで、[ホスト] タブを選択します。
+. インベントリの詳細ページでホストを選択し、アクションアイコンを選択します。image:../media/icon-action.png["アクションオプション"] > *ログディレクトリを設定します*。
+. ログ ディレクトリのパスを参照するか入力します。
+. *保存*を選択します。
+

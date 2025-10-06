@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-register-snapcenter.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetApp Backup and Recoveryで使用するために、 SnapCenter Plug-in for VMware vSphereを登録します。
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+データストアと仮想マシンを表示するには、 NetApp Backup and Recovery にSnapCenter Plug-in for VMware vSphereホストを登録する必要があります。管理アクセス権を持つユーザーのみが、SnapCenter Plug-in for VMware vSphereを登録できます。
+
+[]
+====
+*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+
+====
+.手順
+. NetAppコンソール UI で、*保護* > *バックアップとリカバリ* > *仮想マシン* を選択します。
+. *設定* ドロップダウンから、* SnapCenter Plug-in for VMware vSphere* を選択します。
+. * SnapCenter Plug-in for VMware vSphereの登録*を選択します。
+. 次の詳細を指定します。
++
+.. SnapCenter Plug-in for VMware vSphereフィールドで、 SnapCenter Plug-in for VMware vSphereホストの FQDN または IP アドレスを指定します。
+.. [ポート] フィールドで、 SnapCenter Plug-in for VMware vSphereホストが実行されているポート番号を指定します。
++
+デフォルトの 8144 ポートで実行されているオンプレミスの SnapCenter Plug-in for VMware vSphereと、任意のクラウド プロバイダー (Amazon Web Services、Microsoft Azure、Google Cloud Platform) またはオンプレミスで実行されている可能性のあるコンソール エージェント インスタンス間の通信が開いていることを確認する必要があります。
+
+.. 「ユーザー名」と「パスワード」フィールドに、管理者ロールを持つ vCenter ユーザーの資格情報を指定します。
+
+
+. *登録*を選択します。
+
+
+*終わったら*
+
+*バックアップとリカバリ* > *仮想マシン* を選択して、登録済みのSnapCenter Plug-in for VMware vSphereを使用して保護されているすべてのデータストアと仮想マシンを表示します。

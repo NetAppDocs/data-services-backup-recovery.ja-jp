@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-protect-overview.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetAppバックアップおよびリカバリの概要における仮想マシンのワークロードの保護
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用して仮想マシンのワークロードを保護します。  NetApp Backup and Recovery は、VM、データストア、VMDK に対して、高速でスペース効率が高く、クラッシュ整合性と VM 整合性のあるバックアップおよびリストア操作を提供します。
+
+データストアを Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform、 StorageGRIDにバックアップし、仮想マシンをオンプレミスのSnapCenter Plug-in for VMware vSphereに復元できます。
+
+[]
+====
+*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+
+====
+仮想マシンのワークロードを保護する手順については、次のトピックを参照してください。
+
+* link:prev-vmware-policy-create.html["VMwareワークロードのポリシーを作成する"]
+* link:prev-vmware-backup-aws.html["VMware データストアを Amazon Web Services にバックアップする"]
+* link:prev-vmware-backup-azure.html["VMware データストアを Microsoft Azure にバックアップする"]
+* link:prev-vmware-backup-gcp.html["VMware データストアを Google Cloud Platform にバックアップする"]
+* link:prev-vmware-backup-storagegrid.html["VMwareデータストアをStorageGRIDにバックアップする"]
+* link:prev-vmware-restore.html["VMwareワークロードを復元する"]
+* link:prev-vmware-manage.html["VMware ワークロードの保護を管理する"]
+

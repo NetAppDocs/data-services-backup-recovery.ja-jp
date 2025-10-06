@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-backup-storagegrid.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+---
+= NetApp Backup and Recoveryを使用してデータストアをStorageGRIDにバックアップする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphereホストをNetApp Backup and Recovery と統合することで、1 つ以上のデータストアをStorageGRIDにバックアップできます。これにより、VM 管理者は、ストレージ効率を高め、クラウド移行を加速するために、データを簡単にすばやくバックアップおよびアーカイブできるようになります。
+
+[]
+====
+*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+
+====
+.開始する前に
+すべての要件を満たしていることを確認してくださいlink:prev-vmware-prereqs.html["仮想マシンの保護要件"]データストアをクラウドにバックアップする前に。
+
+.手順
+. NetAppコンソール UI で、*保護* > *バックアップとリカバリ* > *仮想マシン* を選択します。
+. 選択image:icon-action.png["アクション"]バックアップするデータストアに対応する*バックアップのアクティブ化*をクリックします。
+. [ポリシーの割り当て] ページでポリシーを選択し、[次へ] を選択します。
+. システムを追加します。
++
+コンソールで検出するクラスタ管理 LIF を設定します。いずれかのデータストアにシステムを追加した後、同じONTAPクラスタ上に存在する他のすべてのデータストアにそのシステムを再利用できます。
+
++
+.. SVM に対応する *システムの追加* を選択します。
+.. システムの追加ウィザードで次の操作を実行します。
++
+... クラスタ管理 LIF の IP アドレスを指定します。
+... ONTAPクラスタ ユーザーの資格情報を指定します。
+
+
+.. *システムの追加*を選択します。
+
+
+. * StorageGRID*を選択します。
++
+.. ストレージ サーバーの IP を指定します。
+.. アクセスキーとシークレットキーを選択します。
+
+
+. 詳細を確認し、「バックアップをアクティブ化」を選択します。
+

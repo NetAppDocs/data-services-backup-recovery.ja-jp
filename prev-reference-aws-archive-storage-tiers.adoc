@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: prev-reference-aws-archive-storage-tiers.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
+---
+= NetApp Backup and Recovery でサポートされている AWS アーカイブ ストレージ層
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
+
+[]
+====
+*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+
+====
+
+
+== NetAppバックアップおよびリカバリでサポートされている S3 アーカイブ ストレージ クラス
+
+バックアップ ファイルは最初に作成されると、S3 _Standard_ ストレージに保存されます。この層は、アクセス頻度の低いデータを保存するように最適化されていますが、すぐにアクセスすることもできます。  30 日後、コストを節約するために、バックアップは S3 _Standard-Infrequent Access_ ストレージ クラスに移行します。
+
+ソース クラスターがONTAP 9.10.1 以降を実行している場合は、コストをさらに最適化するために、一定の日数 (通常は 30 日以上) 後にバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。これを「0」または1～999日に設定できます。  「0」日に設定した場合、後で 1 ～ 999 日に変更することはできません。
+
+これらの層のデータは必要なときにすぐにアクセスできず、取得コストも高くなります。そのため、アーカイブされたバックアップ ファイルからデータを復元する必要がある頻度を考慮する必要があります。アーカイブ ストレージからのデータの復元については、このページのセクションを参照してください。
+
+* NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
+* 最初のバックアップ ポリシーで _S3 Glacier_ を選択した場合は、そのクラスターの将来のバックアップ ポリシーを _S3 Glacier Deep Archive_ 層に変更できます。
+* 最初のバックアップ ポリシーで _S3 Glacier Deep Archive_ を選択した場合、その層はそのクラスターの将来のバックアップ ポリシーで使用できる唯一のアーカイブ層になります。
+
+
+このタイプのライフサイクル ルールを使用してNetApp Backup and Recovery を設定する場合は、AWS アカウントでバケットを設定するときにライフサイクル ルールを設定してはならないことに注意してください。
+
+https://aws.amazon.com/s3/storage-classes/["S3 ストレージクラスについて学ぶ"^] 。
+
+
+
+== アーカイブストレージからデータを復元する
+
+古いバックアップ ファイルをアーカイブ ストレージに保存すると、標準または標準 IA ストレージよりもはるかに安価になりますが、復元操作のためにアーカイブ ストレージ内のバックアップ ファイルのデータにアクセスすると、時間がかかり、コストも高くなります。
+
+Amazon S3 Glacier および Amazon S3 Glacier Deep Archive からデータを復元するにはどれくらいの費用がかかりますか?:: Amazon S3 Glacier からデータを取得するときに選択できる復元優先順位は 3 つあり、Amazon S3 Glacier Deep Archive からデータを取得するときに選択できる復元優先順位は 2 つあります。  S3 Glacier Deep Archive は S3 Glacier よりもコストがかかりません。
++
+--
+[cols="25,25,25,25"]
+|===
+| アーカイブ層 3+| 優先順位とコストを復元する 
+
+
+|  | *高い* | *標準* | *低い* 
+
+
+| *S3 氷河* | 最速の検索、最高コスト | 検索速度は遅いがコストは低い | 最も遅い検索、最も低いコスト 
+
+
+| *S3 グレイシャー ディープ アーカイブ* |  | 検索速度が速いほどコストが高くなる | 検索速度は遅いがコストは最低 
+|===
+それぞれの方法では、GB あたりの取得料金とリクエストあたりの料金が異なります。  AWSリージョン別のS3 Glacierの料金の詳細については、 https://aws.amazon.com/s3/pricing/["Amazon S3 料金ページ"^] 。
+
+--
+Amazon S3 Glacier にアーカイブされたオブジェクトの復元にはどれくらいの時間がかかりますか?:: 復元時間全体は 2 つの部分で構成されます。
++
+--
+* *取得時間*: アーカイブからバックアップ ファイルを取得して標準ストレージに配置する時間。これは「再水和」時間と呼ばれることもあります。取得時間は、選択した復元優先度によって異なります。
++
+[cols="25,20,20,20"]
+|===
+| アーカイブ層 3+| 復元の優先度と取得時間 
+
+
+|  | *高い* | *標準* | *低い* 
+
+
+| *S3 氷河* | 3～5分 | 3～5時間 | 5～12時間 
+
+
+| *S3 グレイシャー ディープ アーカイブ* |  | 12 時間 | 48 時間 
+|===
+* *復元時間*: 標準ストレージ内のバックアップ ファイルからデータを復元する時間。この時間は、アーカイブ層を使用しない場合に、標準ストレージから直接実行する一般的な復元操作と変わりません。
+
+
+Amazon S3 GlacierおよびS3 Glacier Deep Archiveの取得オプションの詳細については、以下を参照してください。 https://aws.amazon.com/s3/faqs/#Amazon_S3_Glacier["これらのストレージクラスに関するAmazonのFAQ"^] 。
+
+--
+

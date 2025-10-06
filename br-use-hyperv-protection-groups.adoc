@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: br-use-hyperv-protection-groups.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, vm, virtual machines, workloads, volumes, snapshots 
+summary: NetApp Backup and Recovery で Hyper-V ワークロードの保護グループを作成および管理します。 
+---
+= NetApp Backup and Recovery を使用して Hyper-V ワークロードの保護グループを作成および管理します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+一連の仮想マシンのバックアップ操作を管理するための保護グループを作成します。保護グループとは、一緒に保護する VM などのリソースの論理的なグループです。
+
+保護グループに関連する次のタスクを実行できます。
+
+* 保護グループを作成します。
+* 保護の詳細を表示します。
+* 今すぐ保護グループをバックアップします。見るlink:br-use-hyperv-backup.html["Hyper-Vワークロードを今すぐバックアップ"] 。
+* 保護グループを削除します。
+
+
+
+
+== 保護グループを作成する
+
+保護するワークロードを保護グループにグループ化します。まとめてバックアップおよび復元するワークロードのセットの保護グループを作成できます。
+
+*必要なコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. 保護の詳細を表示するには、ワークロードを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
+. *保護グループ*タブを選択します。
+. *保護グループの作成*を選択します。
+. 保護グループの名前を指定します。
+. 保護グループに含める VM を選択します。
+. *次へ*を選択します。
+. 保護グループに適用する*バックアップ ポリシー*を選択します。
+. *次へ*を選択します。
+. 構成を確認します。
+. 保護グループを作成するには、[*作成*] を選択します。
+
+
+
+
+== 保護グループを削除する
+
+保護グループを削除すると、保護グループとそれに関連付けられているすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除することができます。
+
+.手順
+. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. 保護の詳細を表示するには、ワークロードを選択します。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
+. *保護グループ*タブを選択します。
+. 削除する保護グループを選択します。
+. アクションアイコンを選択image:../media/icon-action.png["アクションオプション"]> *削除*。
+. 関連するバックアップの削除に関する確認メッセージを確認し、削除を確定します。
+

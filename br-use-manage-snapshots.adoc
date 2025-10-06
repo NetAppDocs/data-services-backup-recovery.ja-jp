@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: br-use-manage-snapshots.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
+summary: Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDにバックアップして、データを保護することができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。 
+---
+= NetApp Backup and Recovery で Microsoft SQL Server スナップショットを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft SQL Server スナップショットは、 NetApp Backup and Recovery から削除することで管理できます。
+
+
+
+== スナップショットを削除する
+
+削除できるのはローカル スナップショットのみです。
+
+*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. NetApp Backup and Recovery で、*Inventory* を選択します。
+. ワークロードを選択し、[表示] を選択します。
+. *データベース*タブを選択します。
+. スナップショットを削除するデータベースを選択します。
+. [アクション] メニューから、[保護の詳細を表示] を選択します。
+. 削除するローカル スナップショットを選択します。
++
+
+TIP: その行の *場所* 列のローカル スナップショット アイコンは青色で表示される必要があります。
+
+. *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[ローカル スナップショットの削除] を選択します。
+. 確認ダイアログボックスで、[削除] を選択します。
+

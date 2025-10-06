@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: br-use-oracle-protect-overview.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
+summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Oracle 仮想マシンを保護して、データを確実に保護できます。 
+---
+= Oracle Databaseワークロードの保護の概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用して Oracle データベースとログを保護します。  NetApp Backup and Recovery は、高速でスペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップおよび復元操作を提供します。  Oracle ワークロードを Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、またはONTAP S3 にバックアップし、オンプレミスの Oracle ホストに復元できます。
+
+image:../media/diagram-backup-recovery-general.png["一般的なバックアップとリカバリのアーキテクチャ図"]
+
+NetApp Backup and Recovery を使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
+
+* 複数のデータ コピーにより、内部 (インサイダー) と外部の両方のサイバー セキュリティの脅威に対する多層的な保護が提供されます。
+* 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
+* オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーも利用できます。
+
+
+
+NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+
+NetApp Backup and Recovery を使用すると、Oracle ワークロードに関連する次のタスクを実行できます。
+
+* link:br-start-discover-oracle.html["Oracleワークロードを発見"]
+* link:br-use-oracle-protection-groups.html["Oracle ワークロードの保護グループの作成と管理"]
+* link:br-use-oracle-backup.html["Oracleワークロードのバックアップ"]
+* link:br-use-oracle-restore.html["Oracleワークロードの復元"]
+

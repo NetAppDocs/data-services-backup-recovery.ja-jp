@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: concept-start-prereq.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery 
+summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、 NetApp Backup and Recovery を開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。 
+---
+= NetAppバックアップおよびリカバリの前提条件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+運用環境、 NetAppコンソール エージェント、およびNetAppコンソール アカウントの準備状況を確認して、 NetAppバックアップおよびリカバリを開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。
+
+
+
+== ONTAP 9.8以降の前提条件
+
+オンプレミスのONTAPインスタンスでONTAP One ライセンスを有効にする必要があります。
+
+
+
+== オブジェクトストレージへのバックアップの前提条件
+
+オブジェクト ストレージをバックアップ ターゲットとして使用するには、AWS S3、Microsoft Azure Blob、 StorageGRID、またはONTAPのアカウントと、適切なアクセス権限が設定されている必要があります。
+
+* link:prev-ontap-protect-overview.html["ONTAPボリュームデータを保護する"]
+
+
+
+
+== Microsoft SQL Server ワークロードを保護するための要件
+
+NetApp Backup and Recovery for Microsoft SQL Server ワークロードを使用するには、次のホスト システム、スペース、およびサイズの前提条件が必要です。
+
+[cols="33,66a"]
+|===
+| 項目 | 要件 
+
+
+| オペレーティング システム  a| 
+Microsoft Windows サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT#welcome["NetApp Interoperability Matrix Tool"^] 。
+
+
+
+| Microsoft SQL Serverのバージョン  a| 
+バージョン 2012 以降は、VMware 仮想マシン ファイル システム (VMFS) および VMware 仮想マシン ディスク (VMDK) NFS でサポートされています。
+
+
+
+| SnapCenter Serverのバージョン  a| 
+SnapCenterからNetApp Backup and Recovery に既存のデータをインポートする場合は、 SnapCenter Server バージョン 5.0 以上が必要です。
+
+
+NOTE: SnapCenterがすでにある場合は、まずSnapCenterからインポートする前に前提条件を満たしていることを確認してください。見るlink:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"] 。
+
+
+
+| SQL Server ホスト上のプラグインの最小 RAM  a| 
+1 GB
+
+
+
+| SQL Server ホスト上のプラグインの最小インストールおよびログ領域  a| 
+5 GB
+
+十分なディスク領域を割り当て、ログ フォルダーによるストレージ消費を監視します。必要なログ領域は、実行されるバックアップの数とデータ保護操作の頻度によって異なります。十分なスペースがない場合、操作のログは作成されません。
+
+
+
+| 必要なソフトウェア パッケージ  a| 
+* ASP.NET Core ランタイム 8.0.12 ホスティング バンドル (およびそれ以降のすべての 8.0.x パッチ)
+* PowerShell 7.4.2
+
+
+サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT#welcome["NetApp Interoperability Matrix Tool"^] 。
+
+|===
+
+
+== VMware ワークロードを保護するための要件
+
+VMware ワークロードを検出して保護するには、特定の要件が必要です。
+
+*ソフトウェアサポート*
+
+* NFS および VMFS データストアがサポートされています。vVolsはサポートされていません。
+* サポートされている NFS バージョン: NFS 3 および NFS 4.1
+* サポートされている VMware ESXi Server バージョン: 7.0U1 以上
+* サポートされている VMware vCenter vSphere バージョン: 7.0U1 以上
+* IPアドレス: IPv4およびIPv6
+* VMware TLS: 1.2、1.3
+
+
+*VMware ワークロードを保護するための接続とポートの要件*
+
+[cols="33,66a"]
+|===
+| ポートのタイプ | 事前設定されたポート 
+
+
+| VMware ESXi Serverのポート  a| 
+443 (HTTPS)、双方向。ゲスト ファイルのリストア機能では、このポートが使用されます。
+
+
+
+| VMware vSphere vCenter Serverのポート  a| 
+vVol VM を保護する場合は、ポート 443 を使用する必要があります。
+
+
+
+| ストレージ クラスタまたはStorage VMのポート  a| 
+443 (HTTPS)、双方向。80 (HTTP)、双方向。このポートは、仮想アプライアンスとストレージ VM またはストレージ VM を含むクラスター間の通信に使用されます。
+
+|===
+*VMware ワークロードを保護するためのロールベース アクセス制御 (RBAC) の要件*
+
+vCenter 管理者アカウントには、必要な vCenter 権限が必要です。
+
+必要なvCenter権限のリストについては、 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deployment_planning_and_requirements.html#rbac-privileges-required["SnapCenter Plug-in for VMware vSphere"^] 。
+
+
+
+== KVMワークロードを保護するための要件
+
+KVM 仮想マシンを検出して保護するには、特定の要件が必要です。
+
+* カーネルバージョン 5.14.0-503.22.1.el9_5.x86_64 (長期) 以降を実行している最新の Linux ディストリビューション
+* コンソールエージェントからKVMホストへのポート22への受信トラフィックが許可されていることを確認します。
+* QEMU ゲストエージェント バージョン 9.0.0 以降
+* libvirt バージョン 10.5.0 以降
+
+
+
+
+== Oracleワークロードを保護するための要件
+
+Oracle リソースを検出して保護するための特定の要件を環境が満たしていることを確認します。
+
+* Oracle データベース:
++
+** Oracle 19C および 21C はスタンドアロン展開でサポートされています。
+** Oracle Database は、プライマリまたはセカンダリNetApp ONTAPストレージに導入する必要があります。
+
+
+* オブジェクトストレージのサポート:
++
+** Azure オブジェクト ストレージ
+** アマゾンAWS
+** NetAppStorageGRID
+** ONTAP S3
+
+
+
+
+
+
+== Kubernetes アプリケーションを保護するための要件
+
+Kubernetes リソースを検出し、Kubernetes アプリケーションを保護するには、特定の要件が必要です。
+
+NetAppコンソールの要件については、<<NetAppコンソール>> 。
+
+* プライマリONTAPシステム（ONTAP 9.16.1 以降）
+* Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンは次のとおりです。
++
+** Anthos On-Prem (VMware) とベアメタル版 Anthos 1.16
+** Kubernetes 1.27 - 1.33
+** オープンシフト 4.10 - 4.18
+** Rancher Kubernetes Engine 2 (RKE2) v1.26.7+rke2r1、v1.28.5+rke2r1
+** Suseランチャー
+
+
+* NetApp Trident 24.10 以降
+* NetApp Trident Protect 25.07 以降 (Kubernetes ワークロード検出時にインストール)
+* NetApp Trident Protect Connector 25.07 以降 (Kubernetes ワークロード検出時にインストール)
++
+** Kubernetes クラスター、 Trident保護コネクタ、およびTrident保護プロキシ間の送信方向で TCP ポート 443 がフィルタリングされていないことを確認します。
+
+
+
+
+
+
+== Hyper-V ワークロードを保護するための要件
+
+Hyper-V インスタンスが仮想マシンを検出して保護するための特定の要件を満たしていることを確認します。
+
+* Hyper-V ホストのソフトウェア要件:
++
+** Microsoft Hyper-V 2019、2022、2025 エディション
+** ASP.NET Core ランタイム 8.0.12 ホスティング バンドル (およびそれ以降のすべての 8.0.x パッチ)
+** PowerShell 7.4.2
+
+
+* Hyper-V ホストのハードウェア要件:
++
+** スタンドアロンおよびFCIクラスタホストがサポートされています
+** Hyper-V ホスト上のNetApp Hyper-V プラグインには最低 1 GB の RAM が必要です
+** Hyper-Vホスト上のプラグイン用に最低5GBのインストールおよびログ領域が必要
++
+
+NOTE: Hyper-V ホストにログ フォルダー用の十分なディスク領域を割り当て、その使用状況を定期的に監視するようにしてください。必要なスペースは、バックアップとデータ保護操作の実行頻度によって異なります。十分なスペースがない場合、ログは生成されません。
+
+
+
+* NetApp ONTAP の構成要件:
++
+** プライマリONTAPシステム（ONTAP 9.15.1 以降）
+** CIFS 共有を使用して仮想マシン データを保存する Hyper-V 展開の場合、 ONTAPシステムで継続的な可用性の共有プロパティが有効になっていることを確認します。参照 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAPのドキュメント"^]手順についてはこちらをご覧ください。
+
+
+
+
+
+
+== NetAppコンソール
+
+NetAppコンソールが次の要件を満たしていることを確認します。
+
+* コンソール ユーザーには、Microsoft SQL Server および Kubernetes ワークロードで操作を実行するために必要なロールと権限が必要です。リソースを検出するには、 NetAppバックアップおよびリカバリのスーパー管理者のロールが必要です。見るlink:reference-roles.html["NetAppバックアップおよびリカバリ機能へのロールベースのアクセス"]NetApp Backup and Recovery で操作を実行するために必要なロールと権限の詳細については、こちらをご覧ください。
+* オンプレミスのONTAPクラスターまたはCloud Volumes ONTAPに接続するアクティブなコンソール エージェントが少なくとも 1 つあるコンソール組織。
+* NetAppオンプレミスONTAPまたはCloud Volumes ONTAPクラスターを備えた少なくとも 1 つのコンソール システム。
+* コンソールエージェント
++
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントの設定方法を学ぶ"]そして https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetAppコンソールの要件"^]。
+
++
+** プレビュー バージョンでは、コンソール エージェントに Ubuntu 22.04 LTS オペレーティング システムが必要です。
+
+
+
+
+
+
+=== NetAppコンソールのセットアップ
+
+次のステップは、コンソールとNetAppバックアップおよびリカバリをセットアップすることです。
+
+レビュー https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetAppコンソールの要件"^]。
+
+
+
+=== コンソールエージェントを作成する
+
+このサービスを試すには、 NetApp製品チームにお問い合わせください。その後、コンソール エージェントを使用すると、サービスに適切な機能が含まれるようになります。
+
+サービスを使用する前にNetAppコンソールでコンソールエージェントを作成するには、コンソールのドキュメントを参照してください。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コンソールエージェントを作成する方法"^] 。
+
+.コンソールエージェントをインストールする場所
+復元操作を完了するには、コンソール エージェントを次の場所にインストールできます。
+
+ifdef::aws[]
+
+* Amazon S3 の場合、コンソールエージェントをオンプレミスにデプロイできます。
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Azure Blob の場合、コンソール エージェントをオンプレミスでデプロイできます。
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+endif::gcp[]
+
+* StorageGRIDの場合、インターネット アクセスの有無にかかわらず、コンソール エージェントを社内に展開する必要があります。
+* ONTAP S3の場合、コンソールエージェントは、オンプレミス（インターネットアクセスの有無にかかわらず）またはクラウドプロバイダー環境に導入できます。
+
+
+
+NOTE: 「オンプレミスのONTAPシステム」への参照には、 FASとAFFシステムが含まれます。

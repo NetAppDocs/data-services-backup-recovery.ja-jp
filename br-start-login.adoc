@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: br-start-login.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetAppコンソールを使用して、 NetApp Backup and Recovery サービスにログインします。 
+---
+= NetAppバックアップおよびリカバリにログイン
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールを使用してNetApp Backup and Recovery にログインします。
+
+NetApp Backup and Recovery は、アイデンティティおよびアクセス管理を使用して、各ユーザーの特定のアクションへのアクセスを制御します。
+
+各ロールが実行できるアクションの詳細については、link:reference-roles.html["NetAppバックアップおよびリカバリのユーザー ロール"] 。
+
+NetAppコンソールにログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetAppコンソール ログインにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
+
+*必要なNetAppコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップおよびリカバリのスーパー管理者、バックアップおよびリカバリの復元管理者のロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+コンソール エージェントを追加するには、組織管理者またはバックアップとリカバリのスーパー管理者のロールが必要です。
+
+.手順
+. ウェブブラウザを開いて、 https://console.netapp.com/["NetAppコンソール"^] 。
++
+NetAppコンソールのログイン ページが表示されます。
+
+. コンソールにログインします。
+. コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
++
+** このサービスに初めてログインし、*システム* ページにまだシステムを追加していない場合は、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、システムを追加するオプションが表示されます。  *システム*ページにシステムを追加する方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetAppコンソール標準モードの使用開始"^] 。
+** このサービスに初めてログインし、*システム* ページにシステムをすでに追加しているが、リソースがまだ検出されていない場合は、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、*リソースの検出* オプションが表示されます。
+
+
+. まだ行っていない場合は、[*検出と管理*] オプションを選択します。  <<<<<<< ヘッド
++
+** Microsoft SQL Serverのワークロードについては、以下を参照してください。link:br-start-discover.html["Microsoft SQL Server ワークロードの検出"] 。
+** VMwareワークロードについては、link:br-use-vmware-discovery.html["VMware ワークロードを発見"] 。
+** KVMワークロードについては、link:br-start-discover-kvm.html["KVMワークロードを発見"] 。
+** Hyper-Vワークロードについては、以下を参照してください。link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"] 。
+** Kubernetesワークロードについては、以下を参照してください。link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"] 。
+
+
+
+
+[]
+====
++ * Microsoft SQL Serverのワークロードについては、link:br-start-discover.html["Microsoft SQL Server ワークロードの検出"] 。  * VMwareワークロードについては、link:br-use-vmware-discovery.html["VMware ワークロードを発見"] 。  * KVMワークロードについては、link:br-start-discover-kvm.html["KVMワークロードを発見"] 。  * Oracleワークロードについては、link:br-start-discover-oracle.html["Oracleワークロードを発見"] 。  * Kubernetesワークロードについては、以下を参照してください。link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"] 。
+
+>>>>>>> 6b2aaa82d1d2ec0ac72303b380f289e4a01ba4c6
+
+====

@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: br-start-discover-kubernetes.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Kubernetes 
+summary: NetApp Backup and Recovery では、サービスを使用するために、まずワークロードを検出する必要があります。 
+---
+= NetAppバックアップおよびリカバリで Kubernetes ワークロードを発見
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery のサービスを利用するには、まず Kubernetes ワークロードを検出する必要があります。
+
+*必要なNetAppコンソール ロール* バックアップおよびリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+
+
+== Kubernetes ワークロードを発見する
+
+バックアップおよびリカバリのインベントリでは、環境内で実行されているKubernetesワークロードを検出できます。ワークロードを検出すると、 NetApp Backup and Recovery に Kubernetes クラスターが追加され、クラスターにアプリケーションを追加して、クラスターによってホストされているリソースを保護できるようになります。
+
+.手順
+. 次のいずれかを実行します。
++
+** Kubernetes ワークロードを初めて検出する場合は、 NetApp Backup and Recovery で、Kubernetes ワークロード タイプの下にある *Discover and Manage* を選択します。
+** Kubernetes ワークロードをすでに検出している場合は、 NetApp Backup and Recovery で *インベントリ* > *ワークロード* を選択し、*リソースの検出* を選択します。
+
+
+. *Kubernetes* ワークロード タイプを選択します。
+. クラスター名を入力し、クラスターで使用するコネクタを選択します。
+. 表示されるコマンド ラインの指示に従います。
++
+** Trident保護名前空間を作成する
+** Kubernetesシークレットを作成する
+** Helmリポジトリを追加する
+** TridentプロテクトとTridentプロテクトコネクタを取り付ける
++
+これらの手順により、 NetApp Backup and Recovery がクラスターと対話できるようになります。
+
+
+
+. 手順を完了したら、[*検出*] を選択します。
++
+クラスターがインベントリに追加されます。
+
+. 関連付けられている Kubernetes ワークロードで [*表示*] を選択すると、そのワークロードのアプリケーション、クラスター、および名前空間のリストが表示されます。
+
+
+
+
+== NetAppバックアップおよびリカバリダッシュボードに進みます
+
+NetAppバックアップおよびリカバリ ダッシュボードを表示するには、次の手順に従います。
+
+. 上部のメニューから*ダッシュボード*を選択します。
+. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
++
+link:br-use-dashboard.html["ダッシュボードに表示される内容を学ぶ"] 。
+
+

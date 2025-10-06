@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: br-use-oracle-mount-unmount.html 
+keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery を使用して Oracle ワークロードを保護します。 
+---
+= NetApp Backup and Recovery を使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+リカバリ操作を実行するために制御された状態でデータベースにアクセスする必要がある場合は、Oracle データベースのリカバリ ポイントをマウントすることをお勧めします。
+
+
+
+== Oracle データベースの復元ポイントをマウントする
+
+データベースの保護ポリシーを構成してアーカイブ ログを保持すると、データベースの回復ポイントをマウントして、データベースに加えられたすべての変更の履歴を表示できます。
+
+.手順
+. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. Oracle タイルを選択します。
+. [バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。
+. リスト内の Oracle Database ワークロードについては、「*表示*」を選択します。
+. *データベース*メニューを選択します。
+. リストからデータベースを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護の詳細を表示*。
++
+そのデータベースの回復ポイントのリストが表示されます。
+
+. リストから回復ポイントを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *マウント*。
+. 表示されるダイアログで、次の操作を行います。
++
+.. リストからリカバリポイントをマウントするホストを選択します。
+.. バックアップとリカバリがリカバリポイントをマウントするために使用する場所を選択します。プレビュー リリースでは、オブジェクト ストアからのマウントはサポートされていません。
++
+バックアップとリカバリで使用するマウント パスが表示されます。
+
+
+
+. *マウント*を選択します。
++
+リカバリ ポイントは Oracle ホストにマウントされます。
+
+
+
+
+
+== Oracleデータベースの復元ポイントをアンマウントする
+
+データベースに加えられた変更を表示する必要がなくなった場合は、回復ポイントをマウント解除します。
+
+.手順
+. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. Oracle タイルを選択します。
+. [バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。
+. リスト内の Oracle ワークロードについては、「*表示*」を選択します。
+. *データベース*メニューを選択します。
+. リストからデータベースを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護の詳細を表示*。
++
+そのデータベースの回復ポイントのリストが表示されます。
+
+. リストから回復ポイントを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *アンマウント*。
+. *アンマウント*を選択してアクションを確認します。
+

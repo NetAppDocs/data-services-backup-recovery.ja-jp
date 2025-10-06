@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: br-start-trial.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery の無料トライアルを開始または終了します。無料トライアルは、クラウド プロバイダーのマーケットプレイスでNetApp Intelligent Services の従量課金制サブスクリプションにサインアップしてから 30 日間ご利用いただけます。 
+---
+= NetAppバックアップとリカバリの無料トライアルを開始する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+クラウド プロバイダーのマーケットプレイスで * NetApp Intelligent Services* の従量課金制サブスクリプションにサインアップすると、 NetApp Backup and Recovery の 30 日間無料トライアルを利用できます。無料トライアルは、マーケットプレイスのリストに登録した時点で開始されます。  Cloud Volumes ONTAPシステムの導入時にマーケットプレイスのサブスクリプション料金を支払い、その 10 日後にNetApp Backup and Recovery の無料トライアルを開始すると、無料トライアルを使用できる残り期間は 20 日間になることに注意してください。
+
+無料トライアルが終了すると、中断することなく自動的に PAYGO サブスクリプションに切り替わります。  NetApp Backup and Recovery の使用を継続しない場合は、無料トライアルを終了してください。
+
+コンソールにログインすると、 NetApp Backup and Recovery の無料トライアルを開始できます。
+
+.手順
+. コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
+. このサービスに初めてログインする場合、 NetAppコンソールにすでにシステムがあるものの、無料トライアルをまだ開始していない場合は、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、*無料トライアルを開始する*オプションが表示されます。
++
+image:screen-br-landing-unified-start-trial.png["無料トライアルなしのNetApp Backup and Recovery のランディング ページのスクリーンショット"]
+
+
+
+
+
+== 次の手順
+
+無料トライアルを開始すると、ワークロードを検出し、ワークロードをバックアップするためのポリシーを作成できます。
+
+このサービスに初めてログインする場合、 NetAppコンソールにすでにシステムがあり、無料トライアルを開始したがリソースがまだ見つからない場合は、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、*リソースの検出* オプションが表示されます。
+
+ワークロードの検出の詳細については、以下を参照してください。link:br-start-discover.html["ワークロードを発見する"] 。
+
+image:screen-br-landing-unified.png["NetApp Backup and Recoveryのランディングページのスクリーンショット"]
+
+
+
+== 無料トライアルを終了する
+
+無料トライアルはいつでも終了できます。無料トライアルを終了した場合、サービス料金は請求されません。
+
+.手順
+. コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
++
+image:screen-br-landing-unified.png["NetApp Backup and Recoveryのランディングページのスクリーンショット"]
+
+. 「新しいNetApp Backup and Recovery へようこそ」ランディング ページから、*詳細の表示 - 無料トライアル* を選択するか、ページの右上隅から *無料トライアル* を選択します。
++
+image:screen-br-landing-unified-end-trial.png["NetApp Backup and Recoveryの無料トライアルのランディングページのスクリーンショット"]
+
+. *無料トライアルを終了*を選択します。
+. 無料トライアルの終了の確認ダイアログボックスに「*トライアルの終了*」と入力します。
+. *終了*を選択します。
+

@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: br-reference-limitations.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 既知の制限事項では、このリリースの製品ではサポートされていない機能、またはこのリリースの製品と正しく相互運用されない機能が特定されます。これらの制限事項をよく確認してください。 
+---
+= ONTAPボリュームのNetApp Backup and Recoveryの既知の制限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+既知の制限事項では、 NetApp Backup and Recovery のこのリリースでサポートされていない機能、またはこのリリースと正しく相互運用されない機能が特定されます。これらの制限事項をよく確認してください。
+
+* NetApp Backup and Recovery では、 Cloud Volumes ONTAP をAWS 中国リージョン (北京と寧夏を含む) のオブジェクト ストアにバックアップできますが、最初に ID およびアクセス ポリシーを手動で変更する必要がある場合があります。
++
+AWSでコンソールエージェントを作成する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html["AWS にコンソールエージェントをインストールする"^] 。
+
++
+詳細については、ブログ投稿をご覧ください。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetAppバックアップおよびリカバリ機能ブログ 2023 年 5 月"^] 。
+
+* NetApp Backup and Recovery は、Microsoft Azure China リージョンをサポートしていません。
++
+Azureでコンソールエージェントを作成する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-bluexp.html["Azure にコンソール エージェントをインストールする"^] 。
+
+* NetApp Backup and Recovery は、 FlexCacheボリュームのバックアップをサポートしていません。
+
+
+
+
+== ONTAPボリュームのレプリケーションの制限
+
+* レプリケーション対象として一度に選択できるFlexGroupボリュームは 1 つだけです。各FlexGroupボリュームごとに個別にバックアップをアクティブ化する必要があります。
++
+FlexVolボリュームには制限はありません。システム内のすべてのFlexVolボリュームを選択し、同じバックアップ ポリシーを割り当てることができます。
+
+* 以下の機能は以下でサポートされています https://docs.netapp.com/us-en/data-services-replication/index.html["NetAppレプリケーション"]ただし、 NetApp Backup and Recovery のレプリケーション機能を使用する場合は除きます。
++
+** ボリューム A からボリューム B へ、またボリューム B からボリューム C へレプリケーションが行われるカスケード構成はサポートされていません。ボリューム A からボリューム B へのレプリケーションはサポートされています。
+** FSx for ONTAPシステムとの間でのデータの複製はサポートされていません。
+** ボリュームの 1 回限りのレプリケーションの作成はサポートされていません。
+
+
+* オンプレミスのONTAPシステムからレプリケーションを作成する場合、ターゲットのCloud Volumes ONTAPシステムのONTAPバージョンが 9.8、9.9、または 9.11 の場合は、ミラー ボールト ポリシーのみが許可されます。
+
+
+
+
+== ONTAPボリュームのオブジェクトへのバックアップの制限
+
+* データをバックアップする場合、 NetApp Backup and Recovery はNetApp Volume Encryption (NVE) を維持しません。つまり、NVE ボリューム上の暗号化されたデータは、データが宛先に転送されている間に復号化され、暗号化は維持されません。
++
+これらの暗号化の種類についての説明については、https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryptionの設定 - 概要"^] 。
+
+
+
+* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recovery を使用してこれらのボリュームをバックアップしないでください。
+* データをバックアップする場合、 NetApp Backup and Recovery はNetApp Volume Encryption (NVE) を維持しません。つまり、NVE ボリューム上の暗号化されたデータは、データが宛先に転送されている間に復号化され、暗号化は維持されません。
++
+これらの暗号化の種類についての説明については、https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryptionの設定 - 概要"^] 。
+
+
+
+* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recovery を使用してこれらのボリュームをバックアップしないでください。
+* ボリュームがポリシーに割り当てられていない状態でバックアップ ポリシーを作成または編集すると、保持されるバックアップの数は最大 1018 になります。ボリュームをポリシーに割り当てた後、ポリシーを編集して最大 4000 個のバックアップを作成できます。
+* データ保護 (DP) ボリュームをバックアップする場合:
++
+** SnapMirrorラベルとの関係 `app_consistent`そして `all_source_snapshot`クラウドにバックアップされません。
+** SnapMirror の宛先ボリュームにスナップショットのローカル コピーを作成した場合 (使用されているSnapMirrorラベルに関係なく)、これらのスナップショットはバックアップとしてクラウドに移動されません。この時点で、 NetApp Backup and Recovery でバックアップできるように、ソース DP ボリュームに必要なラベルが付いたスナップショット ポリシーを作成する必要があります。
+
+
+* FlexGroupボリュームのバックアップはアーカイブ ストレージに移動できません。
+* クラスタがONTAP 9.13.1 以降を実行している場合、 FlexGroupボリュームのバックアップでは DataLock とランサムウェア保護を使用できます。
+* SVM-DR ボリュームのバックアップは、次の制限付きでサポートされます。
++
+** バックアップはONTAPセカンダリからのみサポートされます。
+** ボリュームに適用されるスナップショット ポリシーは、毎日、毎週、毎月など、 NetApp Backup and Recovery で認識されるポリシーのいずれかである必要があります。デフォルトの「sm_created」ポリシー (すべてのスナップショットのミラーリングに使用) は認識されず、DP ボリュームはバックアップ可能なボリュームのリストに表示されません。
+** SVM-DR とボリュームのバックアップおよびリカバリは、バックアップがソースまたは宛先のいずれかから取得される場合、完全に独立して動作します。唯一の制限は、SVM-DR がSnapMirrorクラウド関係を複製しないことです。  DR シナリオでは、SVM がセカンダリ ロケーションでオンラインになったときに、 SnapMirrorクラウド関係を手動で更新する必要があります。
+
+
+
+
+* MetroClusterサポート:
++
+** ONTAP 9.12.1 GA 以上を使用する場合、プライマリ システムに接続しているときにバックアップがサポートされます。バックアップ構成全体がセカンダリ システムに転送されるため、切り替え後もクラウドへのバックアップが自動的に継続されます。セカンダリ システムにバックアップを設定する必要はありません (実際、設定することは制限されています)。
+** ONTAP 9.12.0 以前を使用する場合、バックアップはONTAPセカンダリ システムからのみサポートされます。
+** 現時点では、 FlexGroupボリュームのバックアップはサポートされていません。
+
+
+* *今すぐバックアップ* ボタンを使用したアドホック ボリューム バックアップは、データ保護ボリュームではサポートされていません。
+* SM-BC 構成はサポートされていません。
+* ONTAP は、単一のボリュームから複数のオブジェクト ストアへのSnapMirror関係のファンアウトをサポートしていないため、この構成はNetApp Backup and Recovery ではサポートされていません。
+* 現在、オブジェクト ストアの WORM/コンプライアンス モードは、Amazon S3、Azure、 StorageGRIDでサポートされています。これは DataLock 機能と呼ばれ、クラウド プロバイダー インターフェイスではなく、 NetApp のバックアップおよびリカバリ設定を使用して管理する必要があります。
+
+
+
+
+== ONTAPボリュームのリストア制限
+
+これらの制限は、特に明記されていない限り、ファイルとフォルダーを復元する検索と復元、および参照と復元の両方の方法に適用されます。
+
+* 参照と復元では、一度に最大 100 個の個別のファイルを復元できます。
+* 検索と復元では一度に 1 つのファイルを復元できます。
+* ONTAP 9.13.0 以降を使用している場合、Browse & Restore および Search & Restore では、フォルダーとその中のすべてのファイルおよびサブフォルダーを復元できます。
++
+9.11.1 より大きく 9.13.0 より前のバージョンのONTAPを使用している場合、復元操作では選択したフォルダとそのフォルダ内のファイルのみを復元できます。サブフォルダやサブフォルダ内のファイルは復元されません。
+
++
+ONTAP 9.11.1 より前のバージョンを使用する場合、フォルダの復元はサポートされません。
+
+* ディレクトリ/フォルダの復元は、クラスタがONTAP 9.13.1 以降を実行している場合にのみ、アーカイブ ストレージに存在するデータに対してサポートされます。
+* ディレクトリ/フォルダの復元は、クラスタがONTAP 9.13.1 以降を実行している場合にのみ、DataLock を使用して保護されているデータに対してサポートされます。
+* ディレクトリ/フォルダーの復元は、現在、レプリケーションやローカル スナップショットからはサポートされていません。
+* FlexGroupボリュームからFlexVolボリュームへのリストア、またはFlexVolボリュームからFlexGroupボリュームへのリストアはサポートされていません。
+* 復元するファイルは、宛先ボリュームの言語と同じ言語を使用する必要があります。言語が同じでない場合はエラー メッセージが表示されます。
+* Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、_高_ 復元優先度はサポートされません。
+* DP ボリュームをバックアップした後で、そのボリュームとのSnapMirror関係を解除することにした場合、 SnapMirror関係も削除するか、 SnapMirror の方向を逆にしない限り、そのボリュームにファイルを復元することはできません。
+* クイック復元の制限:
++
+** 宛先の場所は、 ONTAP 9.13.0 以降を使用するCloud Volumes ONTAPシステムである必要があります。
+** アーカイブされたストレージに保存されているバックアップではサポートされません。
+** FlexGroupボリュームは、クラウド バックアップが作成されたソース システムでONTAP 9.12.1 以降が実行されている場合にのみサポートされます。
+** SnapLockボリュームは、クラウド バックアップが作成されたソース システムでONTAP 9.11.0 以降が実行されている場合にのみサポートされます。
+
+
+

@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: br-api-backup-restore.html 
+keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
+summary: Web UI を通じて利用できるNetApp のバックアップおよびリカバリ機能は、RESTful API を通じても利用できます。 
+---
+= NetAppバックアップおよびリカバリ REST API による自動化
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Web UI を通じて利用できるNetApp のバックアップおよびリカバリ機能は、RESTful API を通じても利用できます。
+
+NetAppバックアップおよびリカバリでは、エンドポイントには 10 のカテゴリが定義されています。
+
+* バックアップ - クラウドおよびオンプレミスのリソースのバックアップ操作を管理し、バックアップ データの詳細を取得します。
+* カタログ - クエリに基づいてファイルのインデックス付きカタログ検索を管理します (検索と復元)
+* cloud - NetAppコンソールからさまざまなクラウドプロバイダーリソースに関する情報を取得します
+* ジョブ - NetAppコンソールデータベース上のジョブ詳細エントリを管理します
+* ライセンス - NetAppコンソールからシステムのライセンスの有効性を取得します
+* ランサムウェアスキャン - 特定のバックアップファイルに対してランサムウェアスキャンを開始します
+* 復元 - ボリューム、ファイル、フォルダレベルの復元操作を実行できます
+* sfr - 単一ファイルレベルの復元操作のためにバックアップ ファイルからファイルを取得します (参照と復元)
+* storagegrid - StorageGRIDサーバーの詳細を取得し、 StorageGRIDサーバーを検出できるようにします
+* システム - バックアップポリシーを管理し、システムに関連付けられた宛先オブジェクトストアを構成します
+
+
+
+
+== APIリファレンス
+
+NetAppの各バックアップおよびリカバリAPIのドキュメントは、以下から入手できます。 https://docs.netapp.com/us-en/console-automation/cbs/overview.html["NetAppバックアップおよびリカバリのためのNetAppコンソール自動化"^] 。
+
+
+
+== はじめる
+
+NetAppバックアップおよびリカバリ API の使用を開始するには、ユーザー トークン、 NetAppコンソール アカウント ID、およびコンソール エージェント ID を取得する必要があります。
+
+API 呼び出しを行うときは、Authorization ヘッダーにユーザー トークンを追加し、x-agent-id ヘッダーにコンソール エージェント ID を追加します。  API ではNetAppコンソール アカウント ID を使用する必要があります。
+
+
+NOTE: サービス アカウントを使用している場合は、ユーザー トークンの代わりにサービス アクセス トークンを使用する必要があります。「client_id」の値 (「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」) は固定値であり、変更できません。この場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-automation/platform/create_service_token.html["サービスアクセストークンを作成する"^] 。
+
+.手順
+. NetApp NetAppコンソール Web サイトからユーザー トークンを取得します。
++
+次のリンクからリフレッシュトークンを生成してください: https://services.cloud.netapp.com/refresh-token/.リフレッシュ トークンは、ユーザー トークンを生成するために使用する英数字の文字列です。
+
++
+[source, http]
+----
+curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/token?=' \
+--header 'Content-Type: application/json' \
+-d '{
+    "grant_type": "refresh_token",
+    "refresh_token": "JxaVHn9cGkX92aPVCkhat3zxxxxxwsC9qMl_pLHkZtsVA",
+    "client_id": "Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC"
+}'
+----
++
+
+NOTE: NetAppコンソール Web サイトのユーザー トークンには有効期限があります。 API レスポンスには、トークンの有効期限を示す「expires_in」フィールドが含まれています。トークンを更新するには、この API を再度呼び出す必要があります。
+
+. NetAppコンソール アカウント ID を取得します。
++
+[source, http]
+----
+GET 'https://api.bluexp.netapp.com/tenancy/account' -H 'authority: api.bluexp.netapp.com'
+Header:
+-H 'accept: application/json'
+-H 'accept-language: en-GB,en;q=0.9'
+-H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR………
+----
++
+この API は次のような応答を返します。*[0].[ accountPublicId]* からの出力を解析することでアカウント ID を取得できます。
+
++
+ [{"accountPublicId":"account-i6vJXvZW","accountName":"rashidn","isSaas":true,"isGov":false,"isPrivatePreviewEnabled":false,"is3rdPartyServicesEnabled":false,"accountSerial":"96064469711530003565","userRole":"Role-1"}………
+. コンソール エージェント ID を含む x-agent-id を取得します。
++
+[source, http]
+----
+GET curl 'https://api.services.cloud.netapp.com/occm/list-occms/account-OOnAR4ZS?excludeStandalone=true&source=saas' \
+Header:
+  -H 'authority: api.services.cloud.netapp.com' \
+  -H 'accept: application/json' \
+  -H 'accept-language: en-GB,en;q=0.9' \
+  -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5…………
+----
++
+この API は次のような応答を返します。*occm.[0].[agent].[agentId]* からの出力を解析することでエージェント ID を取得できます。
+
++
+ {"occms":[{"account":"account-OOnAR4ZS","accountName":"cbs","occm":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Z","agentId":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Z","status":"ready","occmName":"cbsgcpdevcntsg-asia","primaryCallbackUri":"http://34.93.197.21","manualOverrideUris":[],"automaticCallbackUris":["http://34.93.197.21","http://34.93.197.21/occmui","https://34.93.197.21","https://34.93.197.21/occmui","http://10.138.0.16","http://10.138.0.16/occmui","https://10.138.0.16","https://10.138.0.16/occmui","http://localhost","http://localhost/occmui","http://localhost:1337","http://localhost:1337/occmui","https://localhost","https://localhost/occmui","https://localhost:1337","https://localhost:1337/occmui"],"createDate":"1652120369286","agent":{"useDockerInfra":true,"network":"default","name":"cbsgcpdevcntsg-asia","agentId":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Zclients","provider":"gcp","systemId":"a3aa3578-bfee-4d16-9e10-
+
+
+
+
+== APIの使用例
+
+次の例は、Azure クラウドの East-US-2 リージョンで、毎日、毎時、毎週のラベルが設定され、アーカイブ日数が 180 日に設定された新しいポリシーを持つシステムでNetApp Backup and Recovery をアクティブ化する API 呼び出しを示しています。これにより、システム上のバックアップのみが有効になり、ボリュームはバックアップされないことに注意してください。
+
+.API 要求
+NetAppコンソールのアカウントIDを使用していることがわかります `account-DpTFcxN3`、コンソールエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`このコマンドでは。
+
+[source, http]
+----
+curl --location --request POST 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v3/backup/working-environment/VsaWorkingEnvironment-99hPYEgk' \
+--header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g' \
+--data-raw '{
+    "provider":"AZURE",
+    "backup-policy": {
+      "archive-after-days": 180,
+      "rule": [
+        {
+          "label": "hourly",
+          "retention": "2"
+        },
+        {
+          "label": "daily",
+          "retention": "30"
+        },
+        {
+          "label": "weekly",
+          "retention": "52"
+        }
+      ]
+    },
+    "ip-space": "Default",
+    "region": "eastus2",
+    "azure": {
+      "resource-group": "rn-test-backup-rg",
+      "subscription": "3beb4dd0-25d4-464f-9bb0-303d7cf5c0c2"
+    }
+  }'
+----
+.レスポンスは、その後監視できるジョブ ID です。
+[source, text]
+----
+{
+ "job-id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a"
+}
+----
+.応答を監視します。
+[source, http]
+----
+curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v1/job/1b34b6f6-8f43-40fb-9a52-485b0dfe893a' \
+--header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…hE9ss2NubK6wZRHUdSaORI7JvcOorUhJ8srqdiUiW6MvuGIFAQIh668of2M3dLbhVDBe8BBMtsa939UGnJx7Qz6Eg'
+----
+.応答。
+[source, text]
+----
+{
+    "job": [
+        {
+            "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
+            "type": "backup-working-environment",
+            "status": "PENDING",
+            "error": "",
+            "time": 1651852160000
+        }
+    ]
+}
+----
+.「ステータス」が「完了」になるまで監視します。
+[source, text]
+----
+{
+    "job": [
+        {
+            "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
+            "type": "backup-working-environment",
+            "status": "COMPLETED",
+            "error": "",
+            "time": 1651852160000
+        }
+    ]
+}
+----

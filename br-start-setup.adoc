@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: br-start-setup.html 
+keywords: backup, back up, restore, recovery, aws, azure 
+summary: NetApp Backup and Recovery を使用する前に、いくつかの手順を実行してバックアップ先を設定します。 
+---
+= NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用する前に、いくつかの手順を実行してバックアップ先を設定します。
+
+始める前に、link:concept-start-prereq.html["前提条件"]環境の準備ができていることを確認します。
+
+
+
+== バックアップ先を準備する
+
+次のバックアップ先を 1 つ以上準備します。
+
+* NetAppStorageGRID。
++
+参照 https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDについて知る"^]。
+
++
+参照 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRIDドキュメント"^]StorageGRIDの詳細については、こちらをご覧ください。
+
+* Amazon Web サービス。参照 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Amazon S3 ドキュメント"^]。
++
+AWS をバックアップ先として準備するには、次の手順を実行します。
+
++
+** AWS にアカウントを設定します。
+** 次のセクションにリストされている AWS で S3 権限を設定します。
+** コンソールでAWSストレージを管理する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Amazon S3バケットを管理する"^] 。
+
+
+
+
+* マイクロソフト アジュール。
++
+** 参照 https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Files のドキュメント"^]。
+** Azure でアカウントを設定します。
+** 設定 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["Azure のアクセス許可"^]Azure で。
+** コンソールでAzureストレージを管理する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["Azure ストレージ アカウントを管理する"^] 。
+
+
+
+
+バックアップ先自体でオプションを設定した後、後でNetApp Backup and Recovery でバックアップ先として設定します。  NetApp Backup and Recoveryでバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"] 。
+
+
+
+== S3の権限を設定する
+
+AWS S3 権限を 2 セット設定する必要があります。
+
+* コンソール エージェントが S3 バケットを作成および管理するための権限。
+* オンプレミスのONTAPクラスターが S3 バケットのデータの読み取りと書き込みを行えるようにするための権限。
+
+
+.手順
+. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetAppコンソールポリシー権限"] 。
++
+
+NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。
+
+. サービスをアクティブ化すると、バックアップ ウィザードによってアクセス キーとシークレット キーの入力が求められます。これらの認証情報はONTAPクラスターに渡され、 ONTAP はS3 バケットにデータをバックアップおよび復元できるようになります。そのためには、次の権限を持つ IAM ユーザーを作成する必要があります。
++
+参照 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS ドキュメント: IAM ユーザーに権限を委任するロールの作成"^]。
+
++
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+     "Statement": [
+        {
+           "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket",
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketLocation",
+                "s3:PutEncryptionConfiguration"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup-*",
+            "Effect": "Allow",
+            "Sid": "backupPolicy"
+        },
+        {
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListAllMyBuckets",
+                "s3:PutObjectTagging",
+                "s3:GetObjectTagging",
+                "s3:RestoreObject",
+                "s3:GetBucketObjectLockConfiguration",
+                "s3:GetObjectRetention",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:PutObjectRetention"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup*/*",
+            "Effect": "Allow"
+        }
+    ]
+}
+----
+====
+

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: br-start-switch-ui.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: さまざまなNetAppバックアップおよびリカバリ ワークロードを切り替えることができます。一部のワークロードでは異なる UI が使用されます。 
+---
+= さまざまなNetAppバックアップおよびリカバリワークロードに切り替える
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+さまざまなNetAppバックアップおよびリカバリ ワークロードを切り替えることができます。
+
+
+
+== 別のワークロードに切り替える
+
+NetApp Backup and Recovery UI で別のワークロードに切り替えることができます。
+
+.手順
+. コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
+. ページの右上隅から、[*ワークロードの切り替え*] ドロップダウン リストを選択します。
+. 切り替えるワークロードを選択します。
++
+ページが更新され、選択したワークロードが表示されます。
+
+

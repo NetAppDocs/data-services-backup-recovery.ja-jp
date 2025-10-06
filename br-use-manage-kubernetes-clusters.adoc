@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: br-use-manage-kubernetes-clusters.html 
+keywords: discover, backup and recovery, snapcenter, kubernetes, k8s, clusters, applications, inventory 
+summary: NetApp Backup and Recovery を使用すると、Kubernetes クラスターを検出して管理できるため、クラスターによってホストされるリソースを保護できます。 
+---
+= Kubernetes クラスターを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用すると、Kubernetes クラスターを検出して管理できるため、クラスターによってホストされるリソースを保護できます。
+
+.必要なNetAppコンソールロール
+組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp のバックアップとリカバリのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+
+NOTE: Kubernetesクラスターを発見するには、以下を参照してください。 link:br-start-discover.html["Kubernetes ワークロードを発見する"] 。
+
+
+
+== Kubernetes クラスターの情報を編集する
+
+名前を変更する必要がある場合は、クラスターを編集できます。
+
+.手順
+. NetApp Backup and Recovery で、*Inventory* > *Clusters* を選択します。
+. クラスターのリストで、編集するクラスターを選択し、関連する [アクション] メニューを選択します。
+. *クラスターの編集*を選択します。
+. クラスター名に必要な変更を加えます。クラスター名は、検出プロセス中にHelmコマンドで使用した名前と一致する必要があります。
+. *完了*を選択します。
+
+
+
+
+== Kubernetes クラスターを削除する
+
+Kubernetes クラスターによってホストされているリソースを保護する必要がなくなった場合は、 NetApp Backup and Recovery から削除できます。クラスタを削除しても、クラスタまたはそのリソースは削除されません。NetAppNetAppインベントリからクラスタが削除されるだけです。クラスターを削除する前に、保護を無効にし、 NetApp Backup and Recovery から関連するアプリケーションを削除する必要があります。
+
+.手順
+. NetApp Backup and Recovery で、*Inventory* > *Clusters* を選択します。
+. クラスターのリストで、編集するクラスターを選択し、関連する [アクション] メニューを選択します。
+. *クラスターの削除*を選択します。
+. 確認ダイアログボックスの情報を確認し、「削除」を選択します。
+

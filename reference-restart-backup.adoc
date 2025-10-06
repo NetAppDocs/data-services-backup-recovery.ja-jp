@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: reference-restart-backup.html 
+keywords: backup restart, restart backup 
+summary: NetApp Backup and Recovery を再起動しなければならない場合があります。 
+---
+= NetAppバックアップとリカバリを再起動します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を再起動しなければならない場合があります。
+
+NetAppバックアップおよびリカバリ機能は、コンソール エージェントに組み込まれています。
+
+.手順
+. コンソール エージェントが実行されている Linux システムに接続します。
++
+[cols="25,50"]
+|===
+| コンソールエージェントの場所 | 手順 
+
+
+| クラウド展開 | 指示に従ってください https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["コンソールエージェントLinux仮想マシンへの接続"^]使用しているクラウド プロバイダーによって異なります。 
+
+
+| 手動インストール | Linux システムにログインします。 
+|===
+. サービスを再起動するコマンドを入力します。
++
+[cols="40,30,30"]
+|===
+| コンソールエージェントの場所 | Dockerコマンド | ポッドマンコマンド 
+
+
+| クラウド展開 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
+
+
+| インターネットアクセスによる手動インストール | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
+
+
+| インターネットアクセスなしでの手動インストール | `docker restart ds_cloudmanager_cbs_1` | `podman restart ds_cloudmanager_cbs_1` 
+|===
+

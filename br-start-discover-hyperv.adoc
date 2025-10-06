@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: br-start-discover-hyperv.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
+summary: NetApp Backup and Recovery では、ワークロードを保護するために、まずワークロードを検出する必要があります。 
+---
+= NetAppバックアップおよびリカバリで Hyper-V ワークロードを発見
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery では、まず Hyper-V 仮想マシンを検出して保護する必要があります。
+
+*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+
+
+== Hyper-Vホストを追加してリソースを検出する
+
+Hyper-V ホスト情報を追加し、 NetApp Backup and Recovery で仮想マシンを検出できるようにします。各コンソール エージェント内で、リソースを検出するシステムを選択します。
+
+
+NOTE: Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recovery によって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
+
+.手順
+. NetAppコンソール メニューから、*保護* > *バックアップとリカバリ* を選択します。
++
+NetApp Backup and Recovery に初めてログインする場合、コンソールにはすでにシステムがあるがリソースがまだ検出されていないと、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、*リソースの検出* オプションが表示されます。
+
+. *リソースの検出*を選択します。
+. 次の情報を入力してください。
++
+.. *ワークロードの種類*: *Hyper-V* を選択します。
+.. この Hyper-V ホストの資格情報をまだ保存していない場合は、[資格情報の追加] を選択します。
++
+... このホストで使用するコンソール エージェントを選択します。
+... この資格情報の名前を入力します。
+... アカウントのユーザー名とパスワードを入力します。
+... *完了*を選択します。
+
+
+.. *ホスト登録*: 新しい Hyper-V ホストを追加します。ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力します。
+
+
+. *Discover*を選択します。
++
+
+TIP: このプロセスには数分かかる場合があります。
+
+
+
+.結果
+NetApp Backup and Recovery がリソースを検出すると、Hyper-V ワークロードが [インベントリ] ページのワークロード リストに表示されます。
+
+
+
+== NetAppバックアップおよびリカバリダッシュボードに進みます
+
+. NetAppバックアップおよびリカバリ ダッシュボードを表示するには、 NetAppコンソール メニューから *ダッシュボード* を選択します。
+. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
+

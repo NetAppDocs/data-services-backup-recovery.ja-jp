@@ -1,0 +1,45 @@
+= 1 GB未満のボリュームを復元する
+:allow-uri-read: 
+
+
+
+
+=== 1 GB未満のボリュームを復元する
+
+このリリースでは、 ONTAPで作成した 1 GB 未満のボリュームを復元できるようになりました。  ONTAPを使用して作成できる最小ボリューム サイズは 20 MB です。
+
+
+
+=== DataLockのコストを軽減するヒント
+
+DataLock 機能は、指定された期間、バックアップ ファイルが変更されたり削除されたりするのを防ぎます。これは、ランサムウェア攻撃からファイルを保護するのに役立ちます。
+
+DataLockの詳細と関連コストを軽減するヒントについては、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシー設定"] 。
+
+
+
+=== AWS IAM Roles Anywhere統合
+
+Amazon Web Services (AWS) Identity and Access Roles Anywhere サービスを使用すると、AWS 上のワークロードに IAM ロールを使用するのと同じように、AWS 外部のワークロードに IAM ロールと短期認証情報を使用して、AWS API に安全にアクセスできるようになります。 IAM Roles Anywhere の秘密鍵インフラストラクチャと AWS トークンを使用する場合、長期的な AWS アクセスキーと秘密鍵は必要ありません。これにより、資格情報をより頻繁にローテーションできるようになり、セキュリティが向上します。
+
+このリリースでは、AWS IAM Roles Anywhere サービスのサポートがテクノロジープレビューになっています。
+
+ifdef::aws[]
+
+これは、link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAPをAWSにバックアップする"] 。
+
+endif::aws[]
+
+参照 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["NetAppバックアップおよびリカバリ 2024 年 7 月リリース ブログ"]。
+
+
+
+=== FlexGroupフォルダまたはディレクトリの復元が利用可能になりました
+
+以前は、 FlexVolボリュームは復元できましたが、 FlexGroupフォルダまたはディレクトリを復元することはできませんでした。  ONTAP 9.15.1 p2 では、参照と復元オプションを使用してFlexGroupフォルダを復元できます。
+
+このリリースでは、 FlexGroupフォルダーの復元のサポートはテクノロジー プレビューです。
+
+詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["参照と復元を使用してフォルダとファイルを復元する"] 。
+
+手動で有効にする方法の詳細については、 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["NetAppバックアップおよびリカバリ 2024 年 7 月リリース ブログ"] 。

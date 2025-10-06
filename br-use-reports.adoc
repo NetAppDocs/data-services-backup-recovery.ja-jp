@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: br-use-reports.html 
+keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
+summary: NetApp Backup and Recovery では、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。 
+---
+= NetApp Backup and Recovery で Microsoft SQL Server ワークロードのレポートを作成する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery では、Microsoft SQL Server ワークロードのレポートを作成して、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。
+
+
+
+== レポートを作成する
+
+*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+. NetAppバックアップおよびリカバリ メニューから、*レポート* オプションを選択します。
+. *レポートの作成*を選択します。
+. レポート範囲の詳細を入力します:
++
+** *レポート名*: レポートの一意の名前を入力します。
+** *レポート タイプ*: アカウント別またはワークロード (Microsoft SQL Server) 別にレポートを作成するかどうかを選択します。
+** *ホストを選択*: ワークロードで選択した場合は、レポートを生成するホストを選択します。
+** *コンテンツの選択*: レポートにすべてのバックアップの概要を含めるか、各バックアップの詳細を含めるかを選択します。  （「アカウント別」を選択した場合）
+
+
+. レポート範囲を入力: レポートに過去 1 日、過去 7 日間、過去 30 日間、前四半期、または前年度のデータを含めるかどうかを選択します。
+. レポート配信の詳細を入力します。レポートを電子メールで配信する場合は、[*電子メールを使用してレポートを送信*] をオンにします。レポートを送信するメール アドレスを入力します。
++
+設定ページで電子メール通知を構成します。電子メール通知の設定の詳細については、link:br-use-settings-advanced.html["設定を構成する"] 。
+
+
