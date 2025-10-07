@@ -27,7 +27,7 @@ summary: NetApp のバックアップとリカバリを使用して Hyper-V ワ�
 
 オンデマンド バックアップをすぐに実行できます。これは、システムに変更を加える前にバックアップがあることを確認したい場合に役立ちます。
 
-*必要なコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
 .手順
 . メニューから*インベントリ*を選択します。

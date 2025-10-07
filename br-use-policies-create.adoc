@@ -281,7 +281,7 @@ NOTE: この機能は、VMware Preview ワークロードでは使用できま�
 SnapCenterからリソースをインポートした場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recovery で使用されるポリシーにいくつかの違いが発生する可能性があります。見るlink:reference-policy-differences-snapcenter.html["SnapCenterとNetAppのバックアップとリカバリのポリシーの違い"] 。
 
 .必要なNetAppコンソールロール
-組織管理者またはフォルダーまたはプロジェクト管理者。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+バックアップとリカバリのスーパー管理者。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
 .手順
 . NetAppコンソールで、*保護* > *バックアップとリカバリ* に移動します。

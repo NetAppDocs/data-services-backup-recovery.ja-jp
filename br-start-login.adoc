@@ -22,7 +22,7 @@ NetApp Backup and Recovery は、アイデンティティおよびアクセス�
 
 NetAppコンソールにログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetAppコンソール ログインにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
 
-*必要なNetAppコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップおよびリカバリのスーパー管理者、バックアップおよびリカバリの復元管理者のロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetAppコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
 コンソール エージェントを追加するには、組織管理者またはバックアップとリカバリのスーパー管理者のロールが必要です。
 

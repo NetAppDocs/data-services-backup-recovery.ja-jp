@@ -30,7 +30,7 @@ KVM リソース セットのバックアップ操作を管理するための保
 
 保護する VM とストレージ プールを保護グループにグループ化します。
 
-*必要なコンソール ロール* 組織管理者、フォルダーまたはプロジェクト管理者、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
 .手順
 . NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。

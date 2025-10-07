@@ -194,7 +194,13 @@ Hyper-V インスタンスが仮想マシンを検出して保護するための
 +
 ** Microsoft Hyper-V 2019、2022、2025 エディション
 ** ASP.NET Core ランタイム 8.0.12 ホスティング バンドル (およびそれ以降のすべての 8.0.x パッチ)
-** PowerShell 7.4.2
+** PowerShell 7.4.2以降
+** Windows ファイアウォールの設定で、次のポートに対して双方向 HTTPS トラフィックが許可されていることを確認します。
++
+*** 8144 (Hyper-V 用NetAppプラグイン)
+*** 8145 (Windows用NetAppプラグイン)
+
+
 
 
 * Hyper-V ホストのハードウェア要件:
@@ -210,7 +216,7 @@ NOTE: Hyper-V ホストにログ フォルダー用の十分なディスク領�
 
 * NetApp ONTAP の構成要件:
 +
-** プライマリONTAPシステム（ONTAP 9.15.1 以降）
+** プライマリONTAPシステム（ONTAP 9.14.1 以降）
 ** CIFS 共有を使用して仮想マシン データを保存する Hyper-V 展開の場合、 ONTAPシステムで継続的な可用性の共有プロパティが有効になっていることを確認します。参照 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAPのドキュメント"^]手順についてはこちらをご覧ください。
 
 
