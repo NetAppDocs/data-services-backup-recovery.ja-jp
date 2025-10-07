@@ -59,7 +59,7 @@ NetApp Backup and Recovery を使用すると、システム (クラスタ) ご�
 
 NetApp Backup and Recovery は、ボリューム バックアップに対する DataLock およびランサムウェア保護のサポートを提供します。これらの機能を使用すると、バックアップ ファイルをロックしてスキャンし、バックアップ ファイル上のランサムウェアの可能性を検出できます。これは、クラスターのボリューム バックアップをさらに保護したい場合に、バックアップ ポリシーで定義できるオプションの設定です。
 
-これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。  DataLock および Ransomware Protection オプションを有効にすると、 NetApp Backup and Recovery アクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。
+これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。DataLock および Ransomware Resilience オプションを有効にすると、 NetApp Backup and Recovery アクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。
 
 https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["詳細については、DataLockとランサムウェア保護のブログをご覧ください。"^] 。
 
@@ -124,7 +124,7 @@ DataLock の保持設定は、バックアップ ポリシーのポリシー保�
 
 ポリシーを作成するときに、DataLock とランサムウェア保護を有効にできます。ポリシーの作成後は、これを有効化、変更、無効化することはできません。
 
-. ポリシーを作成するときは、*DataLock およびランサムウェア保護*セクションを展開します。
+. ポリシーを作成するときは、*DataLock および Ransomware Resilience* セクションを展開します。
 . 次のいずれかを選択します。
 +
 ** *なし*: DataLock 保護とランサムウェア耐性は無効になっています。
@@ -165,7 +165,7 @@ DataLock の保持設定は、バックアップ ポリシーのポリシー保�
 
 === サポートされているシステムとオブジェクトストレージプロバイダー
 
-次のパブリックおよびプライベート クラウド プロバイダーのオブジェクト ストレージを使用する場合、次のシステムのONTAPボリュームで DataLock およびランサムウェア保護を有効にできます。今後のリリースでは追加のクラウド プロバイダーが追加される予定です。
+次のパブリックおよびプライベート クラウド プロバイダーのオブジェクト ストレージを使用する場合、次のシステムのONTAPボリュームで DataLock およびランサムウェア保護を有効にできます。
 
 [cols="55,45"]
 |===
@@ -175,10 +175,13 @@ DataLock の保持設定は、バックアップ ポリシーのポリシー保�
 | AWS のCloud Volumes ONTAP | Amazon S3 endif::aws[] ifdef::azure[] 
 
 
-| Azure のCloud Volumes ONTAP | Azure BLOB endif::azure[] ifdef::gcp[] endif::gcp[] 
+| Azure のCloud Volumes ONTAP | Azure BLOB endif::azure[] ifdef::gcp[] 
 
 
-| オンプレミスのONTAPシステム | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] endif::gcp[] NetApp StorageGRID 
+| Google Cloud のCloud Volumes ONTAP | Google Cloud endif::gcp[] 
+
+
+| オンプレミスのONTAPシステム | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID 
 |===
 
 
@@ -244,6 +247,18 @@ ifdef::azure[]
 
 
 endif::azure[]
+
+ifdef::gcp[]
+
+* Google Cloud の場合:
++
+** クラスタはONTAP 9.17.1以降を実行している必要があります
+** コンソールエージェントはクラウドまたはオンプレミスに導入できます
+
+
+
+
+endif::gcp[]
 
 * StorageGRIDの場合:
 +

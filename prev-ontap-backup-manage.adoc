@@ -69,7 +69,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 . *ボリューム*タブから、ポリシーを変更するボリュームを特定し、アクションメニューを選択します。image:icon-action.png["アクションアイコン"]行の末尾にある [*バックアップ戦略の編集*] を選択します。
 . [バックアップ戦略の編集] ページで、ローカル スナップショット コピー、複製されたボリューム、およびバックアップ ファイルの既存のバックアップ ポリシーを変更し、[次へ] を選択します。
 +
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Protection_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Protection_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
 
 . このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。
 
@@ -112,7 +112,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 |===
 . 表示されるバックアップ ページで、ローカル スナップショット コピー、複製されたボリューム、またはバックアップ ファイルの既存のバックアップ ポリシーを変更し、[保存] を選択します。
 +
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Protection_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Protection_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
 
 
 
@@ -126,7 +126,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 
 バックアップ名にはタイムスタンプが含まれるため、オンデマンド バックアップを他のスケジュールされたバックアップと区別できます。
 
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Protection_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策について詳しくはこちら"^] 。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策について詳しくはこちら"^] 。
 
 アドホック バックアップを作成すると、ソース ボリュームにスナップショットが作成されます。このスナップショットは通常のスナップショット スケジュールの一部ではないため、オフにはなりません。バックアップが完了したら、ソース ボリュームからこのスナップショットを手動で削除することをお勧めします。これにより、このスナップショットに関連するブロックが解放されます。スナップショットの名前は `cbs-snapshot-adhoc-`。 https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["ONTAP CLIを使用してスナップショットを削除する方法をご覧ください"^] 。
 
@@ -159,7 +159,7 @@ NOTE: オンデマンド ボリューム バックアップは、データ保護
 
 NetApp Backup and Recovery は、オブジェクト ファイルへのバックアップが作成される際、およびバックアップ ファイルからデータが復元される際に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。また、いつでもオンデマンド スキャンを実行して、オブジェクト ストレージ内の特定のバックアップ ファイルの使用可能かどうかを確認することもできます。これは、特定のボリュームでランサムウェアの問題が発生し、そのボリュームのバックアップが影響を受けていないことを確認したい場合に役立ちます。
 
-この機能は、ボリューム バックアップがONTAP 9.11.1 以降のシステムから作成され、オブジェクトへのバックアップ ポリシーで _DataLock および Ransomware Protection_ が有効になっている場合にのみ使用できます。
+この機能は、ボリューム バックアップがONTAP 9.11.1 以降のシステムから作成され、オブジェクトへのバックアップ ポリシーで _DataLock および Ransomware Resilience_ が有効になっている場合にのみ使用できます。
 
 .手順
 . *ボリューム*タブから、image:icon-actions-horizontal.gif["アクションアイコン"]ソースボリュームの[ボリュームの詳細を表示]を選択します。
@@ -169,7 +169,7 @@ NetApp Backup and Recovery は、オブジェクト ファイルへのバック�
 . *バックアップ* を選択すると、オブジェクト ストレージ内のバックアップ ファイルのリストが表示されます。
 . 選択image:icon-actions-horizontal.gif["アクションアイコン"]ランサムウェアをスキャンするボリューム バックアップ ファイルを選択し、[*ランサムウェアのスキャン*] をクリックします。
 +
-ランサムウェア保護列には、スキャンが進行中であることが示されます。
+ランサムウェア耐性列には、スキャンが進行中であることが示されます。
 
 
 
@@ -224,7 +224,7 @@ NetApp Backup and Recovery は、オブジェクト ファイルへのバック�
 
 [NOTE]
 ====
-* このクラスターのNetApp Backup and Recovery をアクティブ化するときに初期ポリシーで _DataLock and Ransomware Protection_ を有効にした場合、編集するポリシーはすべて同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock and Ransomware Protection_ を有効にしなかった場合は、現在 DataLock を有効にすることはできません。
+* このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、編集するポリシーはすべて同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、現在 DataLock を有効にすることはできません。
 * AWS でバックアップを作成するときに、 NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、バックアップ ポリシーを編集するときに使用できるアーカイブ層はその層のみになります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、ポリシーを編集するときに、_S3 Glacier_ が唯一のアーカイブ オプションになります。
 
 
@@ -270,7 +270,7 @@ endif::gcp[]
 
 [NOTE]
 ====
-* このクラスターのNetApp Backup and Recovery をアクティブ化するときに初期ポリシーで _DataLock and Ransomware Protection_ を有効にした場合、作成する追加ポリシーは同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Protection_ を有効にしなかった場合、DataLock を使用する新しいポリシーを作成することはできません。
+* このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、作成する追加のポリシーは同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合、DataLock を使用する新しいポリシーを作成することはできません。
 * AWS でバックアップを作成するときに、 NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、その層がそのクラスターの将来のバックアップ ポリシーで使用できる唯一のアーカイブ層になります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
 
 
