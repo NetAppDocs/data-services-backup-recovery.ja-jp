@@ -251,10 +251,7 @@
   <block id="5ced283cbe92781b3a48240fd1fde5cd" category="paragraph">デフォルトで有効:</block>
   <block id="234f6b906c6e6adf3ab5f1a4906d5366" category="list-text">新規のお客様の場合、高パフォーマンスのインデックス作成がデフォルトで有効になっています。</block>
   <block id="3b98c4910d4638f409d4421b51847611" category="list-text">既存のお客様の場合は、UI の [復元] セクションに移動して再インデックスを有効にすることができます。</block>
-  <block id="fc93653f0e9d2392483e6d5d49522050" category="doc">NetAppバックアップおよびリカバリはNetAppバックアップおよびリカバリになりました</block>
-  <block id="380fa8333654730810eec55ed85c680c" category="paragraph">NetApp Backup and Recovery はNetApp Backup and Recovery に名前が変更されました。</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="section-title">BlueXPはNetAppコンソールになりました</block>
-  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、ワークフローの高速化、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。</block>
   <block id="387c71fcb2fb7fdf9038db9d12137530" category="inline-link-macro">NetAppコンソールのリリース ノート。</block>
   <block id="3a1e37eecca95e81d9e509646022ffda" category="paragraph">変更内容の詳細については、<block ref="019a5c722618673de9fa5ca0cf2abddb" category="inline-link-macro-rx"></block></block>
   <block id="86df852f08da7feceb910d31327e83d7" category="section-title">プライベートプレビューとしての Hyper-V ワークロード サポート</block>
@@ -5059,4 +5056,7 @@
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
+  <block id="83b5525699223779088aa2e2c9ca5b1a" category="doc">BlueXP backup and recoveryはNetAppバックアップおよびリカバリになりました</block>
+  <block id="6a119fc880b70d0e27bca4b7243a7a55" category="paragraph">BlueXP backup and recoveryは、 NetAppバックアップおよびリカバリに名前が変更されました。</block>
+  <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、安全性とコンプライアンスが確保された簡素化された管理を実現します。</block>
 </blocks>
