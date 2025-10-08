@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-hyperv.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
-summary: NetApp Backup and Recovery では、ワークロードを保護するために、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。 
 ---
 = NetAppバックアップおよびリカバリで Hyper-V ワークロードを発見
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery では、ワークロードを保護する�
 
 
 [role="lead"]
-NetApp Backup and Recovery では、まず Hyper-V 仮想マシンを検出して保護する必要があります。
+NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。
 
 *必要なコンソール ロール* バックアップとリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
@@ -55,12 +55,13 @@ TIP: このプロセスには数分かかる場合があります。
 
 
 .結果
-NetApp Backup and Recovery がリソースを検出すると、Hyper-V ワークロードが [インベントリ] ページのワークロード リストに表示されます。
+NetApp Backup and Recovery がリソースを検出すると、インベントリ ページのワークロード リストに Hyper-V ワークロードが表示されます。
 
 
 
 == NetAppバックアップおよびリカバリダッシュボードに進みます
 
+.手順
 . NetAppバックアップおよびリカバリ ダッシュボードを表示するには、 NetAppコンソール メニューから *ダッシュボード* を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 

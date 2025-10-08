@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery では、サービスを使用するため�
 
 
 [role="lead"]
-NetApp Backup and Recovery のサービスを利用するには、まず Kubernetes ワークロードを検出する必要があります。
+NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に検出する必要があります。
 
 *必要なNetAppコンソール ロール* バックアップおよびリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
 
@@ -22,7 +22,7 @@ NetApp Backup and Recovery のサービスを利用するには、まず Kuberne
 
 == Kubernetes ワークロードを発見する
 
-バックアップおよびリカバリのインベントリでは、環境内で実行されているKubernetesワークロードを検出できます。ワークロードを検出すると、 NetApp Backup and Recovery に Kubernetes クラスターが追加され、クラスターにアプリケーションを追加して、クラスターによってホストされているリソースを保護できるようになります。
+バックアップとリカバリのインベントリで、環境内の Kubernetes ワークロードを検出します。ワークロードを追加すると、NetApp Backup and Recoveryに Kubernetes クラスターが追加されます。その後、アプリケーションを追加し、クラスター リソースを保護できます。
 
 .手順
 . 次のいずれかを実行します。
@@ -55,7 +55,7 @@ NetApp Backup and Recovery のサービスを利用するには、まず Kuberne
 
 == NetAppバックアップおよびリカバリダッシュボードに進みます
 
-NetAppバックアップおよびリカバリ ダッシュボードを表示するには、次の手順に従います。
+NetApp Backup and Recoveryダッシュボードを表示するには、次の手順に従います。
 
 . 上部のメニューから*ダッシュボード*を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。

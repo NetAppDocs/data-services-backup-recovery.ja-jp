@@ -20,14 +20,14 @@ NetApp Backup and Recovery でオフサイト バックアップ ターゲット
 
 == バックアップターゲットを発見
 
-NetApp Backup and Recovery を使用する前に、Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage、またはStorageGRIDのバックアップ ターゲットを構成する必要があります。
+NetApp Backup and Recoveryを使用する前に、バックアップ ターゲット (Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage、またはStorageGRID ) を構成します。
 
 これらのターゲットを自動的に検出することも、手動で追加することもできます。
 
-ストレージ アカウント システムにアクセスするために必要な資格情報を提供します。これらの資格情報は、バックアップするワークロードを検出するために使用されます。
+ストレージ アカウントにアクセスするための資格情報を提供します。  NetApp Backup and Recovery はこれらの資格情報を使用して、バックアップするワークロードを検出します。
 
 .開始する前に
-オフサイト バックアップ ターゲットを追加するには、少なくとも 1 つのワークロードを検出する必要があります。
+オフサイト バックアップ ターゲットを追加する前に、少なくとも 1 つのワークロードを検出する必要があります。
 
 .手順
 . NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
