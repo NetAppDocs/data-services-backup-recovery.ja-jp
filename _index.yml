@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: NetAppバックアップおよびリカバリのドキュメント
+  title: NetApp Backup and Recoveryのドキュメント
   summary: NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ
     サービスです。
   keywords: netapp console, netapp backup recovery, ontap, on-premises, data protection,
@@ -10,7 +10,7 @@ indexpage:
   tiles:
   - title: 始めましょう
     links:
-    - title: NetAppのバックアップとリカバリについて学ぶ
+    - title: NetApp Backup and Recoveryについて学ぶ
       url: concept-backup-to-cloud.html
     - title: 新機能
       url: whats-new.html
@@ -18,7 +18,7 @@ indexpage:
       url: concept-start-prereq.html
     - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
       url: br-start-setup.html
-    - title: NetAppバックアップおよびリカバリ設定を構成する
+    - title: NetApp Backup and Recovery設定を構成する
       url: br-start-configure.html
   - title: ONTAPボリュームのワークロードを保護する
     links:
@@ -108,9 +108,9 @@ indexpage:
       url: br-use-restore-kubernetes-applications.html
   - title: ブログとコミュニティ
     links:
-    - title: NetAppコンソール
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetAppデータサービス
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetAppコミュニティ
       url: https://community.netapp.com/

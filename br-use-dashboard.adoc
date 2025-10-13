@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-dashboard.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, backup, recovery, dashboard, view, health, status, alerts, notifications 
-summary: ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。バックアップとリストアのステータスを表示し、 NetAppバックアップおよびリカバリ ダッシュボードに表示されるアラートに応答します。保護の概要、復元の概要、システムの概要などを確認できます。 
+summary: ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。バックアップとリストアのステータスを表示し、 NetApp Backup and Recoveryダッシュボードに表示されるアラートに応答します。保護の概要、復元の概要、システムの概要などを確認できます。 
 ---
-= NetAppバックアップおよびリカバリダッシュボードで保護の健全性を確認する
+= NetApp Backup and Recoveryダッシュボードで保護の健全性を確認する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,12 @@ summary: ワークロードの健全性を監視することで、ワークロ�
 
 
 [role="lead"]
-ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetAppバックアップおよびリカバリ ダッシュボードでバックアップと復元のステータスを表示します。システムの概要、保護の概要、ジョブの概要、復元の概要などを確認できます。
+ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetApp Backup and Recoveryダッシュボードでバックアップと復元のステータスを表示します。システムの概要、保護の概要、ジョブの概要、復元の概要などを確認できます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者、またはバックアップおよびリカバリ ビューアー ロール。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者、またはバックアップおよびリカバリ ビューアー ロール。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*ダッシュボード* を選択します。
+. NetApp Backup and Recoveryメニューから、*ダッシュボード* を選択します。
 +
 ** 検出されたホストまたはVMの数
 ** 検出されたKubernetesクラスターの数

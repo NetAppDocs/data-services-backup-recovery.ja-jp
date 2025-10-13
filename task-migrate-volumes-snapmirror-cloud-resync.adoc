@@ -4,12 +4,12 @@ permalink: task-migrate-volumes-snapmirror-cloud-resync.html
 keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, cloud, snapmirror, migrate, volume migration, resync, 
 summary: オンプレミスのONTAPシステムからセカンダリ ストレージ システムと Google Cloud Storage へのボリューム データのバックアップを開始するには、いくつかの手順を実行します。 
 ---
-= SnapMirrorを使用してボリュームを移行し、 NetApp Backup and Recovery でクラウド再同期を実行する
+= SnapMirrorを使用してボリュームを移行し、 NetApp Backup and Recoveryでクラウド再同期を実行する
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Backup and Recovery のSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。  SnapMirror Logical Replication (LRSE) を使用してボリュームをオンプレミスのNetApp展開から別の展開へ、またはCloud Volumes ONTAPやCloud Volumes Serviceなどのクラウドベースのソリューションに移行した場合、 SnapMirror to Cloud Resync により、既存のクラウド バックアップがそのまま維持され、動作可能な状態が維持されます。
+NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。  SnapMirror Logical Replication (LRSE) を使用してボリュームをオンプレミスのNetApp展開から別の展開へ、またはCloud Volumes ONTAPやCloud Volumes Serviceなどのクラウドベースのソリューションに移行した場合、 SnapMirror to Cloud Resync により、既存のクラウド バックアップがそのままの状態で動作し続けることが保証されます。
 
 この機能により、時間とリソースを大量に消費する再ベースライン操作が不要になり、移行後もバックアップ操作を続行できるようになります。この機能は、FlexVol と FlexGroup の両方をサポートし、ワークロード移行シナリオで役立ち、 ONTAPバージョン 9.16.1 以降で利用できます。
 
@@ -17,9 +17,9 @@ SnapMirror to Cloud Resync は、環境間でバックアップの継続性を�
 
 
 
-== NetApp のバックアップおよびリカバリSnapMirrorとクラウドの再同期の仕組み
+== NetApp Backup and RecoverySnapMirrorとクラウドの再同期の仕組み
 
-技術的な更新を完了したり、ボリュームを 1 つのONTAPクラスターから別の ONTAP クラスターに移行したりする場合には、バックアップが中断されることなく継続して機能することが重要です。  NetApp Backup and Recovery SnapMirror to Cloud Resync は、ボリュームの移行後もクラウド バックアップの一貫性が維持されるようにすることで、この問題を解決します。
+技術的な更新を完了したり、ボリュームを 1 つのONTAPクラスターから別のクラスターに移行したりする場合には、バックアップが中断されることなく継続して機能することが重要です。  NetApp Backup and Recovery SnapMirror to Cloud Resync は、ボリュームの移行後もクラウド バックアップの一貫性が維持されるようにすることで、この問題を解決します。
 
 次に例を示します。
 
@@ -46,15 +46,15 @@ Vol1a というオンプレミスのボリュームがあるとします。こ�
 
 このプロセスにより、すでにバックアップされているデータの再送信が回避され、帯域幅が節約され、移行後もバックアップ チェーンがスムーズに継続されます。
 
-image:diagram-snapmirror-cloud-resync-migration.png["NetAppバックアップおよびリカバリSnapMirrorからクラウドへの再同期"]
+image:diagram-snapmirror-cloud-resync-migration.png["NetApp Backup and RecoverySnapMirrorからクラウドへの再同期"]
 
 
 
 == 手順に関する注意事項
 
 * 宛先ONTAPクラスタでは、 ONTAPバージョン 9.16.1 以降が実行されている必要があります。
-* 古いソースONTAPクラスターは、 NetApp Backup and Recovery を使用して保護する必要があります。
-* 移行と技術更新は、 NetApp Backup and Recovery を使用して実行されません。これらは、専門のサービス チームまたは資格のあるストレージ管理者が実行する必要があります。
+* 古いソースONTAPクラスターは、NetApp Backup and Recoveryを使用して保護する必要があります。
+* 移行と技術更新は、NetApp Backup and Recoveryを使用して実行されません。これらは、専門のサービス チームまたは資格のあるストレージ管理者が実行する必要があります。
 * NetApp移行チームは、ボリュームの移行を容易にするために、ソース ONTAP クラスターと宛先ONTAPクラスター間のSnapMirror関係を作成する責任があります。
 * 技術更新中の移行がSnapMirrorベースの移行に基づいていることを確認します。
 * SVM-Migrate、SVM-DR、またはヘッドスワップ方式を使用した移行後のSnapMirrorから Cloud Resync への転送は現在サポートされていません。
@@ -79,7 +79,7 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["SnapMirrorを使用�
 
 移行を開始する前に、 NetApp Tech Refresh チームは、データ損失を回避し、スムーズな移行プロセスを確実に実行するために、次の前提条件が満たされていることを確認します。
 
-. 移行するすべてのボリュームがNetApp Backup and Recovery を使用して保護されていることを確認します。
+. 移行するすべてのボリュームがNetApp Backup and Recoveryを使用して保護されていることを確認します。
 . ボリュームインスタンスの UUID を記録します。移行を開始する前に、すべてのボリュームのインスタンス UUID を書き留めておきます。これらの識別子は、後のマッピングおよび再同期操作にとって重要です。
 . SnapMirror関係を削除する前に、各ボリュームの最終スナップショットを取得して最新の状態を保存します。
 . SnapMirrorポリシーを文書化します。各ボリュームの関係に現在添付されているSnapMirrorポリシーを記録します。これは、後でSnapMirrorからクラウドへの再同期プロセス中に必要になります。
@@ -105,8 +105,8 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["SnapMirrorを使用�
 移行後、 NetApp Tech Refresh チームはSnapMirror to Cloud Resync 操作を実行し、新しく移行されたボリュームからクラウド バックアップを再開します。
 
 . コンソールの *システム* ページで、新しいONTAPクラスタをシステムとして追加します。
-. NetApp のバックアップおよびリカバリ ボリューム ページを参照して、古いソース システムの詳細が利用可能であることを確認します。
-. NetAppバックアップおよびリカバリ ボリューム ページから、*バックアップ設定* を選択します。
+. NetApp Backup and Recoveryボリューム ページを参照して、古いソース システムの詳細が利用可能であることを確認します。
+. NetApp Backup and Recoveryボリューム ページから、*バックアップ設定* を選択します。
 . メニューから*バックアップの再同期*を選択します。
 . 「システムの再同期」ページで、次の操作を行います。
 +

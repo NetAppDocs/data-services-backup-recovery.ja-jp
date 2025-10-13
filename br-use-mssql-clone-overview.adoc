@@ -4,7 +4,7 @@ permalink: br-use-mssql-clone-overview.html
 keywords: backing up, restoring, back up, backup, clone, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 開発、テスト、または保護の目的で Microsoft SQL Server アプリケーションを複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。 
 ---
-= NetApp Backup and Recovery を使用した Microsoft SQL Server ワークロードのクローン作成の概要
+= NetApp Backup and Recoveryを使用した Microsoft SQL Server ワークロードのクローン作成の概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 開発、テスト、または保護の目的で Microsoft SQL Server �
 
 
 [role="lead"]
-開発、テスト、または保護の目的で、 NetApp Backup and Recovery を使用して Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。
+開発、テスト、または保護の目的で、 NetApp Backup and Recoveryを使用して Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。
 
 * クローンを作成する
 * クローンの更新

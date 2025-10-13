@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery を使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化、バックアップの一時停止、バックアップの削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。  NetApp Backup and Recovery の登録を解除することもできます。 
+summary: NetApp Backup and Recoveryを使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化、バックアップの一時停止、バックアップの削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。  NetApp Backup and Recovery の登録を解除することもできます。 
 ---
 = NetApp Backup and Recoveryを使用してONTAPシステムのバックアップを管理します
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: NetApp Backup and Recovery を使用すると、バックアップ ス�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化/無効化、バックアップの一時停止、バックアップの削除、バックアップの強制削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。これには、スナップショット コピー、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。  NetApp Backup and Recovery の登録を解除することもできます。
+NetApp Backup and Recoveryを使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化/無効化、バックアップの一時停止、バックアップの削除、バックアップの強制削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。これには、スナップショット コピー、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。  NetApp Backup and Recovery の登録を解除することもできます。
 
 
 CAUTION: ストレージ システム上またはクラウド プロバイダー環境からバックアップ ファイルを直接管理または変更しないでください。これによりファイルが破損し、サポートされない構成になる可能性があります。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -47,7 +47,7 @@ CAUTION: ストレージ システム上またはクラウド プロバイダー
 
 == システム内の追加ボリュームでバックアップを有効にする
 
-NetApp Backup and Recovery を初めて有効にしたときに、システム内の一部のボリュームでのみバックアップをアクティブ化した場合は、後で追加のボリュームでバックアップをアクティブ化できます。
+NetApp Backup and Recovery を最初に有効にしたときに、システム内の一部のボリュームでのみバックアップをアクティブ化した場合は、後で追加のボリュームでバックアップをアクティブ化できます。
 
 .手順
 . *ボリューム*タブから、バックアップをアクティブ化するボリュームを特定し、アクションメニューを選択します。image:icon-action.png["アクションアイコン"]行の末尾にある [*バックアップをアクティブ化*] を選択します。
@@ -69,7 +69,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 . *ボリューム*タブから、ポリシーを変更するボリュームを特定し、アクションメニューを選択します。image:icon-action.png["アクションアイコン"]行の末尾にある [*バックアップ戦略の編集*] を選択します。
 . [バックアップ戦略の編集] ページで、ローカル スナップショット コピー、複製されたボリューム、およびバックアップ ファイルの既存のバックアップ ポリシーを変更し、[次へ] を選択します。
 +
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合は、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
 
 . このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。
 
@@ -112,7 +112,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 |===
 . 表示されるバックアップ ページで、ローカル スナップショット コピー、複製されたボリューム、またはバックアップ ファイルの既存のバックアップ ポリシーを変更し、[保存] を選択します。
 +
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合は、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。
 
 
 
@@ -126,7 +126,7 @@ NetApp Backup and Recovery を初めて有効にしたときに、システム�
 
 バックアップ名にはタイムスタンプが含まれるため、オンデマンド バックアップを他のスケジュールされたバックアップと区別できます。
 
-このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策について詳しくはこちら"^] 。
+このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策について詳しくはこちら"^]。
 
 アドホック バックアップを作成すると、ソース ボリュームにスナップショットが作成されます。このスナップショットは通常のスナップショット スケジュールの一部ではないため、オフにはなりません。バックアップが完了したら、ソース ボリュームからこのスナップショットを手動で削除することをお勧めします。これにより、このスナップショットに関連するブロックが解放されます。スナップショットの名前は `cbs-snapshot-adhoc-`。 https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["ONTAP CLIを使用してスナップショットを削除する方法をご覧ください"^] 。
 
@@ -224,8 +224,8 @@ NetApp Backup and Recovery は、オブジェクト ファイルへのバック�
 
 [NOTE]
 ====
-* このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、編集するポリシーはすべて同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、現在 DataLock を有効にすることはできません。
-* AWS でバックアップを作成するときに、 NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、バックアップ ポリシーを編集するときに使用できるアーカイブ層はその層のみになります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、ポリシーを編集するときに、_S3 Glacier_ が唯一のアーカイブ オプションになります。
+* このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、編集するポリシーはすべて同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、現在 DataLock を有効にすることはできません。
+* AWS でバックアップを作成するときに、 NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、バックアップポリシーを編集するときに使用できるアーカイブ層はその層のみになります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、ポリシーを編集するときに、_S3 Glacier_ が唯一のアーカイブ オプションになります。
 
 
 ====
@@ -242,19 +242,19 @@ ifdef::aws[]
 
 
 
-link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"] 。
+link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"] 。
+link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"] 。（ ONTAP 9.12.1 が必要です。）
+link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
 
 endif::gcp[]
 
@@ -270,8 +270,8 @@ endif::gcp[]
 
 [NOTE]
 ====
-* このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、作成する追加のポリシーは同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recovery をアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合、DataLock を使用する新しいポリシーを作成することはできません。
-* AWS でバックアップを作成するときに、 NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、その層がそのクラスターの将来のバックアップ ポリシーで使用できる唯一のアーカイブ層になります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
+* このクラスターのNetApp Backup and Recovery をアクティブ化するときに初期ポリシーで _DataLock and Ransomware Resilience_ を有効にした場合、作成する追加ポリシーは同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock を使用する新しいポリシーを作成することはできません。
+* AWS でバックアップを作成するときに、 NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、その層がそのクラスターの将来のバックアップポリシーで使用できる唯一のアーカイブ層になります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
 
 
 ====
@@ -288,19 +288,19 @@ ifdef::aws[]
 
 
 
-link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"] 。
+link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"] 。
+link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"] 。（ ONTAP 9.12.1 が必要です。）
+link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
 
 endif::gcp[]
 
@@ -313,13 +313,13 @@ NetApp Backup and Recovery を使用すると、単一のバックアップ フ�
 DataLock とランサムウェア保護を使用してロックしたバックアップ ファイルは削除できません。ロックされたバックアップ ファイルを 1 つ以上選択した場合、UI から「削除」オプションは使用できません。
 
 
-CAUTION: バックアップがあるシステムまたはクラスターを削除する予定の場合は、システムを削除する前にバックアップを削除する必要があります。 NetApp Backup and Recovery では、システムを削除してもバックアップは自動的に削除されません。また、システムの削除後にバックアップを削除するための UI は現在サポートされていません。残りのバックアップについては、オブジェクト ストレージ コストが引き続き請求されます。
+CAUTION: バックアップがあるシステムまたはクラスターを削除する予定の場合は、システムを削除する前にバックアップを削除する必要があります。 NetApp Backup and Recoveryでは、システムを削除してもバックアップは自動的に削除されません。また、システムの削除後にバックアップを削除するための UI は現在サポートされていません。残りのバックアップについては、オブジェクト ストレージ コストが引き続き請求されます。
 
 
 
 === システムのすべてのバックアップファイルを削除する
 
-システムのオブジェクト ストレージ上のすべてのバックアップを削除しても、このシステム内のボリュームの将来のバックアップは無効になりません。システム内のすべてのボリュームのバックアップの作成を停止したい場合は、バックアップを非アクティブ化できます。<<システムのNetAppバックアップとリカバリを非アクティブ化する,ここで説明されているように>> 。
+システムのオブジェクト ストレージ上のすべてのバックアップを削除しても、このシステム内のボリュームの将来のバックアップは無効になりません。システム内のすべてのボリュームのバックアップの作成を停止したい場合は、バックアップを非アクティブ化できます。<<システムのNetApp Backup and Recoveryを非アクティブ化する,ここで説明されているように>> 。
 
 このアクションはスナップショット コピーや複製されたボリュームには影響しないことに注意してください。これらの種類のバックアップ ファイルは削除されません。
 
@@ -386,16 +386,16 @@ CAUTION: このオプションは慎重に使用し、極端なクリーンア�
 
 == ボリュームバックアップ関係を削除する
 
-ボリュームのバックアップ関係を削除すると、新しいバックアップ ファイルの作成を停止し、ソース ボリュームを削除しながら、既存のバックアップ ファイルはすべて保持する場合に、アーカイブ メカニズムが提供されます。これにより、ソース ストレージ システムのスペースをクリアしながら、必要に応じて将来的にバックアップ ファイルからボリュームを復元できるようになります。
+ボリュームのバックアップ関係を削除すると、新しいバックアップ ファイルの作成を停止し、ソース ボリュームを削除しながら、既存のバックアップ ファイルはすべて保持する場合に、アーカイブ メカニズムが提供されます。これにより、ソース ストレージ システムのスペースをクリアしながら、必要に応じて将来バックアップ ファイルからボリュームを復元できるようになります。
 
 必ずしもソースボリュームを削除する必要はありません。ボリュームのバックアップ関係を削除し、ソース ボリュームを保持することができます。この場合、後でボリューム上のバックアップを「アクティブ化」することができます。この場合、元のベースライン バックアップ コピーが引き続き使用されます。新しいベースライン バックアップ コピーは作成されず、クラウドにエクスポートされません。バックアップ関係を再アクティブ化すると、ボリュームにはデフォルトのバックアップ ポリシーが割り当てられることに注意してください。
 
 この機能は、システムでONTAP 9.12.1 以降を実行している場合にのみ使用できます。
 
-NetApp Backup and Recovery ユーザー インターフェイスからソース ボリュームを削除することはできません。ただし、コンソールの*システム*ページでボリュームの詳細ページを開いて、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["そこからボリュームを削除します"] 。
+NetApp Backup and Recoveryユーザー インターフェイスからソース ボリュームを削除することはできません。ただし、コンソールの*システム*ページでボリュームの詳細ページを開いて、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["そこからボリュームを削除します"] 。
 
 
-NOTE: 関係が削除されると、個々のボリューム バックアップ ファイルを削除することはできません。ただし、ボリュームのすべてのバックアップを削除することは可能です。
+NOTE: 関係が削除されると、個々のボリュームのバックアップ ファイルを削除することはできません。ただし、ボリュームのすべてのバックアップを削除することは可能です。
 
 .手順
 . *ボリューム*タブから、image:icon-actions-horizontal.gif["アクションアイコン"]ソースボリュームの*バックアップ* > *関係の削除*を選択します。
@@ -403,9 +403,9 @@ NOTE: 関係が削除されると、個々のボリューム バックアップ 
 
 
 
-== システムのNetAppバックアップとリカバリを非アクティブ化する
+== システムのNetApp Backup and Recoveryを非アクティブ化する
 
-システムに対してNetApp Backup and Recovery を非アクティブ化すると、システム上の各ボリュームのバックアップが無効になり、ボリュームを復元する機能も無効になります。既存のバックアップは削除されません。これにより、このシステムからバックアップ サービスの登録が解除されるわけではありません。基本的には、すべてのバックアップおよび復元アクティビティを一定期間一時停止できるようになります。
+システムに対してNetApp Backup and Recoveryを非アクティブ化すると、システム上の各ボリュームのバックアップが無効になり、ボリュームを復元する機能も無効になります。既存のバックアップは削除されません。これにより、このシステムからバックアップ サービスの登録が解除されるわけではありません。基本的には、すべてのバックアップおよび復元アクティビティを一定期間一時停止できるようになります。
 
 バックアップに使用する容量については、クラウドプロバイダーからオブジェクトストレージの料金が引き続き請求されます。<<バックアップの削除,バックアップを削除する>> 。
 
@@ -424,11 +424,11 @@ NOTE: バックアップが無効になっている間、そのシステムに�
 
 バックアップ機能を使用する必要がなくなり、そのシステムでのバックアップに対する課金を停止したい場合は、システムのNetApp Backup and Recovery の登録を解除できます。通常、この機能は、システムを削除する予定があり、バックアップ サービスをキャンセルする場合に使用されます。
 
-クラスターのバックアップが保存される宛先オブジェクト ストアを変更する場合にも、この機能を使用できます。システムのNetApp Backup and Recovery を登録解除した後、新しいクラウド プロバイダー情報を使用してそのクラスターに対してNetApp Backup and Recovery を有効にすることができます。
+クラスターのバックアップが保存される宛先オブジェクト ストアを変更する場合にも、この機能を使用できます。システムからNetApp Backup and Recoveryを登録解除した後、新しいクラウド プロバイダー情報を使用してそのクラスターに対してNetApp Backup and Recovery を有効にすることができます。
 
-NetApp Backup and Recovery を登録解除する前に、次の手順をこの順序で実行する必要があります。
+NetApp Backup and Recoveryを登録解除する前に、次の手順をこの順序で実行する必要があります。
 
-* システムのNetAppバックアップとリカバリを無効にします
+* システムのNetApp Backup and Recoveryを無効にします
 * そのシステムのすべてのバックアップを削除します
 
 

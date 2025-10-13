@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-discover-kvm.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, KVM, workloads, protect 
-summary: NetApp Backup and Recovery では、ワークロードを保護するために、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and Recovery、ワークロードを保護するために、まずワークロードを検出する必要があります。 
 ---
-= NetAppバックアップおよびリカバリで KVM ワークロードを発見
+= NetApp Backup and Recoveryで KVM ワークロードを発見
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery では、ワークロードを保護する�
 [role="lead"]
 NetApp Backup and Recovery、 KVM ホストと仮想マシンを保護する前に検出する必要があります。
 
-*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -25,7 +25,7 @@ NetApp Backup and Recovery、 KVM ホストと仮想マシンを保護する前�
 KVM ホスト情報を追加し、 NetApp Backup and Recovery でワークロードを検出できるようにします。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。
 
 .手順
-. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
 . KVM タイルで、[検出と管理] を選択します。
 +
 バックアップおよびリカバリに初めてログインする場合、コンソールにはすでにシステムがあるが、リソースがまだ検出されていない場合は、「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、*リソースの検出*オプションが表示されます。
@@ -58,9 +58,9 @@ KVM ワークロードは、インベントリ ページのワークロード �
 
 
 
-== NetAppバックアップおよびリカバリダッシュボードに進みます
+== NetApp Backup and Recoveryダッシュボードに進みます
 
 .手順
-. NetAppバックアップおよびリカバリ ダッシュボードを表示するには、上部のメニューから *ダッシュボード* を選択します。
+. NetApp Backup and Recoveryダッシュボードを表示するには、上部のメニューから *ダッシュボード* を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 

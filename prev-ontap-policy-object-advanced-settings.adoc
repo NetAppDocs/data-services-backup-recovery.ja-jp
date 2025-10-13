@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-advanced-settings.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetAppバックアップおよびリカバリの詳細設定でオブジェクト ストレージへのバックアップ オプションを管理する
+= NetApp Backup and Recoveryの詳細設定でオブジェクト ストレージへのバックアップ オプションを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -21,7 +21,7 @@ NOTE: これらの設定は、オブジェクト ストレージへのバック�
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 詳細設定ページで次のオプションを変更できます。
@@ -60,7 +60,7 @@ _詳細設定_ ページには、そのシステムの現在の設定が表示�
 
 == オブジェクトストレージにバックアップをアップロードするために利用できるネットワーク帯域幅を変更する
 
-システムに対してNetApp Backup and Recovery を有効にすると、デフォルトでは、 ONTAP は無制限の帯域幅を使用して、システム内のボリュームからオブジェクト ストレージにバックアップ データを転送できます。バックアップ トラフィックが通常のユーザー ワークロードに影響を与えていることに気付いた場合は、[詳細設定] ページの [最大転送速度] オプションを使用して、転送中に使用されるネットワーク帯域幅の量を調整できます。
+システムに対してNetApp Backup and Recoveryを有効にすると、デフォルトでは、 ONTAP は無制限の帯域幅を使用して、システム内のボリュームからオブジェクト ストレージにバックアップ データを転送できます。バックアップ トラフィックが通常のユーザー ワークロードに影響を与えていることに気付いた場合は、[詳細設定] ページの [最大転送速度] オプションを使用して、転送中に使用されるネットワーク帯域幅の量を調整できます。
 
 .手順
 . *ボリューム*タブから*バックアップ設定*を選択します。
@@ -118,7 +118,7 @@ image:screenshot_backup_edit_yearly_snap_delete.png["詳細設定ページの年
 
 DataLockとランサムウェア耐性オプションの詳細については、以下を参照してください。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア耐性オプション"] 。
 
-スケジュールを日単位または週単位に変更したり、無効にしたりしてコストを節約できます。
+スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。
 
 
 TIP: ランサムウェアスキャンを有効にすると、クラウドプロバイダーに応じて追加料金が発生します。

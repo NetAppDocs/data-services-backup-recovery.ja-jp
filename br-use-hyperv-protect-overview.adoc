@@ -14,25 +14,25 @@ summary: オンプレミスのONTAPシステムからプライマリ ストレ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して Hyper-V VM を保護します。  NetApp Backup and Recovery は、スタンドアロン インスタンスと FCI クラスタ インスタンスの両方に対して、高速でスペース効率が高く、クラッシュ整合性があり、VM 整合性のあるバックアップおよび復元操作を提供します。
+NetApp Backup and Recoveryを使用して Hyper-V VM を保護します。  NetApp Backup and Recovery は、スタンドアロン インスタンスと FCI クラスタ インスタンスの両方に対して、高速でスペース効率が高く、クラッシュ整合性があり、VM 整合性のあるバックアップおよび復元操作を提供します。
 
 Hyper-V ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、Hyper-V ワークロードをオンプレミスの Hyper-V ホストに復元できます。
 
 image:../media/diagram-backup-recovery-general.png["一般的なバックアップとリカバリのアーキテクチャ図"]
 
-NetApp Backup and Recovery を使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
+NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
 * 複数のデータ コピーにより、内部 (インサイダー) と外部の両方のサイバー セキュリティの脅威に対する多層的な保護が提供されます。
 * 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
 * オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーも利用できます。
 
 
-Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recovery によって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
+Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
 
 
-NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
-NetApp Backup and Recovery を使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。
+NetApp Backup and Recoveryを使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。
 
 * link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"]
 * link:br-use-hyperv-protection-groups.html["Hyper-V ワークロードの保護グループの作成と管理"]

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-ontaps3.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery を使用してオンプレミスのONTAPデータをONTAP S3 にバックアップする
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをONTAP S3 にバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery でいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからボリューム データのバックアップを開始します。バックアップは、セカンダリONTAPストレージ システム (複製されたボリューム)、S3 サーバーとして設定されたONTAPシステム上のバケット (バックアップ ファイル)、またはその両方に送信できます。
+NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからボリューム データのバックアップを開始します。バックアップは、セカンダリONTAPストレージ システム (複製されたボリューム)、S3 サーバーとして設定されたONTAPシステム上のバケット (バックアップ ファイル)、またはその両方に送信できます。
 
 プライマリオンプレミスONTAPシステムには、 FAS、 AFF、またはONTAP Selectシステムを使用できます。セカンダリONTAPシステムは、オンプレミスのONTAPまたはCloud Volumes ONTAPシステムになります。オブジェクト ストレージは、オンプレミスのONTAPシステム、または Simple Storage Service (S3) オブジェクト ストレージ サーバーを有効にしたCloud Volumes ONTAPシステム上に配置できます。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -67,25 +67,25 @@ ONTAP S3 にデータをバックアップする場合、オンプレミスま�
 コンソール エージェントがインストールされているネットワークで次の接続が有効になっていることを確認します。
 
 * ポート443経由のONTAP S3サーバへのHTTPS接続
-* ポート443経由のソースONTAPクラスタ管理LIFへのHTTPS接続
-* NetApp Backup and Recovery へのポート 443 経由のアウトバウンド インターネット接続 (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)
+* ソースONTAPクラスタ管理 LIF へのポート 443 経由の HTTPS 接続
+* NetApp Backup and Recoveryへのポート 443 経由のアウトバウンド インターネット接続 (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)
 
 
 
 
 ==== プライベートモード（ダークサイト）の考慮事項
 
-NetAppバックアップおよびリカバリ機能は、コンソール エージェントに組み込まれています。プライベート モードでインストールされている場合、新しい機能にアクセスするには、コンソール エージェント ソフトウェアを定期的に更新する必要があります。チェックしてくださいlink:whats-new.html["NetAppバックアップおよびリカバリの新機能"]NetApp Backup and Recovery の各リリースの新機能を確認してください。新しい機能を使用する場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["コンソールエージェントソフトウェアをアップグレードする"^] 。
+NetApp Backup and Recovery機能は、コンソール エージェントに組み込まれています。プライベート モードでインストールされている場合、新しい機能にアクセスするには、コンソール エージェント ソフトウェアを定期的に更新する必要があります。チェックしてくださいlink:whats-new.html["NetApp Backup and Recoveryの新機能"]NetApp Backup and Recovery の各リリースの新機能を確認してください。新しい機能を使用する場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["コンソールエージェントソフトウェアをアップグレードする"^] 。
 
-標準の SaaS 環境でNetApp Backup and Recovery を使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recovery を使用する場合、 NetApp Backup and Recovery の構成データは、バックアップが保存されているONTAP S3 バケットにバックアップされます。
+標準の SaaS 環境でNetApp Backup and Recoveryを使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、 NetApp Backup and Recovery の構成データは、バックアップが保存されているONTAP S3 バケットにバックアップされます。
 
 
 
 == ライセンス要件を確認する
 
-クラスターに対してNetApp Backup and Recovery をアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはオブジェクト ストレージへのバックアップと復元用です。スナップショット コピーや複製されたボリュームを作成するのにライセンスは必要ありません。このライセンスはアカウント用であり、複数のシステムで使用できます。
+クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはオブジェクト ストレージへのバックアップと復元用です。スナップショット コピーや複製されたボリュームを作成するのにライセンスは必要ありません。このライセンスはアカウント用であり、複数のシステムで使用できます。
 
-ライセンスの有効期間と容量にわたってサービスを使用するには、 NetAppからのシリアル番号が必要になります。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"] 。
+ライセンスの有効期間と容量にわたってサービスを使用するには、 NetAppからのシリアル番号が必要になります。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
 
 TIP: ONTAP S3 にファイルをバックアップする場合、PAYGO ライセンスはサポートされません。
@@ -98,7 +98,7 @@ TIP: ONTAP S3 にファイルをバックアップする場合、PAYGO ライセ
 
 ONTAPクラスタを準備するには、次の手順を実行します。
 
-* NetAppコンソールでONTAPシステムを検出する
+* NetApp ConsoleでONTAPシステムを検出する
 * ONTAPのシステム要件を確認する
 * オブジェクトストレージにデータをバックアップするためのONTAPネットワーク要件を確認する
 * ボリュームを複製するためのONTAPネットワーク要件を確認する
@@ -106,11 +106,11 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
-=== NetAppコンソールでONTAPシステムを検出する
+=== NetApp ConsoleでONTAPシステムを検出する
 
-ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetAppコンソールの *システム* ページで利用できる必要があります。
+ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetApp Consoleの*システム* ページで利用できる必要があります。
 
-クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^] 。
+クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^]。
 
 
 
@@ -121,7 +121,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 * SnapMirrorライセンス (プレミアム バンドルまたはデータ保護バンドルの一部として含まれています)。
 +
-*注:* NetApp Backup and Recovery を使用する場合、「Hybrid Cloud Bundle」は必要ありません。
+*注:* NetApp Backup and Recoveryを使用する場合、「Hybrid Cloud Bundle」は必要ありません。
 
 +
 方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["クラスターライセンスを管理する"^]。
@@ -129,7 +129,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 時間とタイムゾーンは正しく設定されています。方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["クラスター時間を設定する"^]。
 * データをレプリケートする場合は、データをレプリケートする前に、ソース システムとデスティネーション システムで互換性のあるONTAPバージョンが実行されていることを確認する必要があります。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^]。
 
 
 
@@ -144,7 +144,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 * ファンアウト バックアップ アーキテクチャを使用する場合は、プライマリ ストレージ システムで設定を構成する必要があります。
 * カスケード バックアップ アーキテクチャを使用する場合は、セカンダリ ストレージ システムで設定を構成する必要があります。
 +
-link:prev-ontap-protect-journey.html["バックアップアーキテクチャの種類について詳しく学ぶ"] 。
+link:prev-ontap-protect-journey.html["バックアップアーキテクチャの種類について詳しく学ぶ"]。
 
 
 
@@ -158,19 +158,19 @@ ONTAP はオブジェクト ストレージとの間でデータの読み取り�
 * ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。
 * バックアップするボリュームをホストする各ONTAPノードには、クラスタ間 LIF が必要です。  LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
 +
-NetApp Backup and Recovery をセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
+NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
 
 * ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
 * デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。
-* 必要に応じてファイアウォール ルールを更新し、指定したポート (通常はポート 443) を介してONTAPからオブジェクト ストレージへのNetApp Backup and Recovery サービス接続と、ポート 53 (TCP/UDP) を介してストレージ VM から DNS サーバーへの名前解決トラフィックを許可します。
+* 必要に応じてファイアウォール ルールを更新し、指定したポート (通常はポート 443) を介してONTAPからオブジェクト ストレージへのNetApp Backup and Recoveryサービス接続と、ポート 53 (TCP/UDP) を介してストレージ VM から DNS サーバーへの名前解決トラフィックを許可します。
 
 
 
 
 === ボリュームを複製するためのONTAPネットワーク要件を確認する
 
-NetApp Backup and Recovery を使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
+NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
 
 
 
@@ -243,7 +243,7 @@ ONTAP S3 へのバックアップを設定すると、バックアップ ウィ�
 . 次のいずれかの方法で、バックアップと回復のアクティブ化ウィザードにアクセスします。
 +
 ** コンソールの *システム* ページで、システムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化 > バックアップ ボリューム* を選択します。
-** バックアップとリカバリバーで*ボリューム*を選択します。  [ボリューム] タブから、*アクション (...)* オプションを選択し、単一のボリューム (オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていない) に対して *バックアップのアクティブ化* を選択します。
+** バックアップとリカバリバーで*ボリューム*を選択します。  [ボリューム] タブで、*アクション (...)* オプションを選択し、単一のボリューム (オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていない) に対して *バックアップのアクティブ化* を選択します。
 
 
 +
@@ -251,8 +251,8 @@ ONTAP S3 へのバックアップを設定すると、バックアップ ウィ�
 
 . 次のオプションを続行します。
 +
-** コンソール エージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
-** コンソール エージェントがない場合は、[*コンソール エージェントの追加*] オプションが表示されます。。 <<コンソールエージェントを準備する>> 。
+** コンソールエージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** コンソール エージェントがない場合は、[*コンソール エージェントの追加*] オプションが表示されます。参照<<コンソールエージェントを準備する>>。
 
 
 
@@ -401,7 +401,7 @@ TIP: バックアップとリカバリを使用してカスタムポリシーを
 
 
 .結果
-NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。
+NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。
 
 複製されたボリュームが宛先クラスターに作成され、プライマリ ストレージ ボリュームと同期されます。
 

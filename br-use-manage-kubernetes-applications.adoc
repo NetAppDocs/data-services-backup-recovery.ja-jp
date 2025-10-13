@@ -16,8 +16,8 @@ summary: NetApp Backup and Recovery を使用すると、Kubernetes アプリケ
 [role="lead"]
 NetApp Backup and Recovery を使用すると、Kubernetes アプリケーションと関連リソースの保護を解除したり削除したりできます。
 
-.必要なNetAppコンソールロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp のバックアップとリカバリのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+.必要なNetApp Consoleロール
+組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -26,7 +26,7 @@ NetApp Backup and Recovery を使用すると、Kubernetes アプリケーショ
 アプリケーションを保護する必要がなくなった場合は、保護を解除できます。アプリケーションの保護を解除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止しますが、関連するすべてのバックアップとスナップショットは保持されます。
 
 .手順
-. NetApp Backup and Recovery で、*Inventory* を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
 . *アプリケーション*タブを選択します。
 . アプリケーションのリストで、保護を解除するアプリケーションを選択し、関連する [アクション] メニューを選択します。
@@ -38,10 +38,10 @@ NetApp Backup and Recovery を使用すると、Kubernetes アプリケーショ
 
 == Kubernetes アプリケーションを削除する
 
-不要になったアプリケーションは削除できます。アプリケーションを削除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止し、関連するすべてのバックアップとスナップショットを削除します。
+不要になったアプリケーションは削除できます。アプリケーションを削除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止し、関連付けられているすべてのバックアップとスナップショットを削除します。
 
 .手順
-. NetApp Backup and Recovery で、*Inventory* を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
 . *アプリケーション*タブを選択します。
 . アプリケーションのリストで、削除するアプリケーションを選択し、関連する [アクション] メニューを選択します。

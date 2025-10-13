@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-reference-aws-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
+summary: NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
 ---
-= NetApp Backup and Recovery でサポートされている AWS アーカイブ ストレージ層
+= NetApp Backup and Recoveryでサポートされている AWS アーカイブ ストレージ層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレ�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
+NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
 
 []
 ====
-*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
 ====
 
 
-== NetAppバックアップおよびリカバリでサポートされている S3 アーカイブ ストレージ クラス
+== NetApp Backup and Recoveryでサポートされている S3 アーカイブ ストレージ クラス
 
 バックアップ ファイルは最初に作成されると、S3 _Standard_ ストレージに保存されます。この層は、アクセス頻度の低いデータを保存するように最適化されていますが、すぐにアクセスすることもできます。  30 日後、コストを節約するために、バックアップは S3 _Standard-Infrequent Access_ ストレージ クラスに移行します。
 
@@ -31,14 +31,14 @@ NetApp Backup and Recovery は、2 つの S3 アーカイブ ストレージ ク
 
 これらの層のデータは必要なときにすぐにアクセスできず、取得コストも高くなります。そのため、アーカイブされたバックアップ ファイルからデータを復元する必要がある頻度を考慮する必要があります。アーカイブ ストレージからのデータの復元については、このページのセクションを参照してください。
 
-* NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
+* NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
 * 最初のバックアップ ポリシーで _S3 Glacier_ を選択した場合は、そのクラスターの将来のバックアップ ポリシーを _S3 Glacier Deep Archive_ 層に変更できます。
 * 最初のバックアップ ポリシーで _S3 Glacier Deep Archive_ を選択した場合、その層はそのクラスターの将来のバックアップ ポリシーで使用できる唯一のアーカイブ層になります。
 
 
-このタイプのライフサイクル ルールを使用してNetApp Backup and Recovery を設定する場合は、AWS アカウントでバケットを設定するときにライフサイクル ルールを設定してはならないことに注意してください。
+このタイプのライフサイクル ルールを使用してNetApp Backup and Recoveryを設定する場合は、AWS アカウントでバケットを設定するときにライフサイクル ルールを設定してはならないことに注意してください。
 
-https://aws.amazon.com/s3/storage-classes/["S3 ストレージクラスについて学ぶ"^] 。
+https://aws.amazon.com/s3/storage-classes/["S3 ストレージクラスについて学ぶ"^]。
 
 
 
@@ -60,7 +60,7 @@ Amazon S3 Glacier および Amazon S3 Glacier Deep Archive からデータを復
 | *S3 氷河* | 最速の検索、最高コスト | 検索速度は遅いがコストは低い | 最も遅い検索、最も低いコスト 
 
 
-| *S3 グレイシャー ディープ アーカイブ* |  | 検索速度が速いほどコストが高くなる | 検索速度は遅いがコストは最低 
+| *S3 グレイシャー ディープ アーカイブ* |  | より速い検索、より高いコスト | 検索速度は遅いがコストは最低 
 |===
 それぞれの方法では、GB あたりの取得料金とリクエストあたりの料金が異なります。  AWSリージョン別のS3 Glacierの料金の詳細については、 https://aws.amazon.com/s3/pricing/["Amazon S3 料金ページ"^] 。
 

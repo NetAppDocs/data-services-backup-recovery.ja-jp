@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-vmware-protection-groups.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vm, virtual machines, workloads, volumes, snapshots 
-summary: NetApp Backup and Recovery で VMware ワークロードの保護グループを作成および管理します。 
+summary: NetApp Backup and Recoveryで VMware ワークロードの保護グループを作成および管理します。 
 ---
-= NetApp Backup and Recovery を使用して VMware ワークロードの保護グループを作成および管理します
+= NetApp Backup and Recoveryを使用して VMware ワークロードの保護グループを作成および管理します
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: NetApp Backup and Recovery で VMware ワークロードの保護グル
 
 * 保護グループを作成します。
 * 保護の詳細を表示します。
-* 今すぐ保護グループをバックアップします。見るlink:br-use-vmware-backup.html["VMwareワークロードを今すぐバックアップ"] 。
+* 今すぐ保護グループをバックアップします。見るlink:br-use-vmware-backup.html["VMwareワークロードを今すぐバックアップ"]。
 * 保護グループのバックアップ スケジュールを一時停止および再開します。
 * 保護グループを削除します。
 
@@ -31,10 +31,10 @@ summary: NetApp Backup and Recovery で VMware ワークロードの保護グル
 
 保護するワークロードを保護グループにグループ化します。まとめてバックアップおよび復元するワークロードのセットの保護グループを作成できます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . *保護グループ*タブを選択します。
@@ -60,11 +60,11 @@ summary: NetApp Backup and Recovery で VMware ワークロードの保護グル
 保護グループを一時停止すると、保護ステータスが「メンテナンス中」に変わります。バックアップ スケジュールはいつでも再開できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . *保護グループ*タブを選択します。
-. アクションアイコンを選択image:../media/icon-action.png["アクションオプション"]> *保護グループを一時停止します*。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護グループを一時停止します*。
 . 確認メッセージを確認し、「一時停止」を選択します。
 
 
@@ -77,11 +77,11 @@ summary: NetApp Backup and Recovery で VMware ワークロードの保護グル
 保護グループを一時停止すると、保護ステータスは「メンテナンス中」から再開すると「保護済み」に変わります。バックアップ スケジュールはいつでも再開できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . *保護グループ*タブを選択します。
-. アクションアイコンを選択image:../media/icon-action.png["アクションオプション"]> *保護グループを再開します*。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護グループを再開します*。
 . 確認メッセージを確認し、「再開」を選択します。
 
 
@@ -95,11 +95,11 @@ summary: NetApp Backup and Recovery で VMware ワークロードの保護グル
 保護グループを削除すると、保護グループとそれに関連付けられているすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除することができます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . *保護グループ*タブを選択します。
 . 削除する保護グループを選択します。
-. アクションアイコンを選択image:../media/icon-action.png["アクションオプション"]> *削除*。
+. アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *削除*。
 . 関連するバックアップの削除に関する確認メッセージを確認し、削除を確定します。
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations-kvm.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, KVM, SAP HANA database, virtual machine, vm 
-summary: NetApp Backup and Recovery のこのリリースには、次の既知の制限があります。 
+summary: NetApp Backup and Recoveryのこのリリースには、次の既知の制限があります。 
 ---
-= KVM ワークロードに対するNetAppバックアップおよびリカバリの既知の制限
+= KVM ワークロードに対するNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery のこのリリースには、次の既知�
 [role="lead"]
 このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。
 
-NetApp Backup and Recovery の KVM ワークロードのプライベート プレビュー バージョンでは、次のアクションと構成はサポートされていません。
+NetApp Backup and Recoveryの KVM ワークロードのプライベート プレビュー バージョンでは、次のアクションと構成はサポートされていません。
 
 
 
@@ -30,7 +30,7 @@ NetApp Backup and Recovery の KVM ワークロードのプライベート プ�
 * アプリケーションを保護する
 * 保護グループを編集する
 * 複数の KVM ホストの VM を使用して保護グループを作成する
-* ユーザー定義のバックアップを作成します（ NetAppコンソールから開始されたバックアップのみがサポートされます）
+* ユーザー定義のバックアップを作成します（ NetApp Consoleから開始されたバックアップのみがサポートされます）
 
 
 
@@ -56,7 +56,7 @@ NetApp Backup and Recovery の KVM ワークロードのプライベート プ�
 . NetApp Consoleメニューから、*管理 > ID とアクセス* を選択します。
 . *組織*の下で、組織 ID の横に *アカウント ID* が表示されているかどうかを確認します。
 +
-*アカウント ID* が表示されている場合は、従来のアカウントを使用しています。
+*アカウント ID* が表示されている場合は、レガシー アカウントを使用しています。
 
 . 従来のアカウントを使用している場合は、次の手順を実行します。
 +

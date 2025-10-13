@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-reference-azure-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery は、1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。 
+summary: NetApp Backup and Recovery は、 1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。 
 ---
-= NetApp Backup and Recovery でサポートされている Azure アーカイブ アクセス層
+= NetApp Backup and Recoveryでサポートされている Azure アーカイブ アクセス層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: NetApp Backup and Recovery は、1 つの Azure アーカイブ アク�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。
+NetApp Backup and Recovery は、 1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。
 
 []
 ====
-*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
 ====
 
 
-== NetAppバックアップおよびリカバリでサポートされている Azure BLOB アクセス層
+== NetApp Backup and Recoveryでサポートされている Azure BLOB アクセス層
 
 バックアップ ファイルは最初に作成されると、_Cool_ アクセス層に保存されます。この層は、アクセス頻度は低いが、必要なときにすぐにアクセスできるデータを保存するように最適化されています。
 
 ソース クラスターでONTAP 9.10.1 以降が実行されている場合は、コストをさらに最適化するために、一定の日数 (通常は 30 日以上) 後にバックアップを _Cool_ ストレージから _Azure Archive_ ストレージに階層化することを選択できます。この層のデータは必要なときにすぐにアクセスできず、取得コストも高くなります。そのため、アーカイブされたバックアップ ファイルからデータを復元する必要がある頻度を考慮する必要があります。アーカイブ ストレージからのデータの復元については、このページのセクションを参照してください。
 
-このタイプのライフサイクル ルールを使用してNetApp Backup and Recovery を構成する場合は、Azure アカウントでコンテナーを設定するときにライフサイクル ルールを構成しないでください。
+このタイプのライフサイクル ルールを使用してNetApp Backup and Recoveryを構成する場合は、Azure アカウントでコンテナーを設定するときにライフサイクル ルールを構成しないでください。
 
-https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azure BLOB アクセス層について学ぶ"^] 。
+https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azure BLOB アクセス層について学ぶ"^]。
 
 
 

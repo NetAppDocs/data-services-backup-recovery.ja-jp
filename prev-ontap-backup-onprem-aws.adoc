@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery を使用してオンプレミスのONTAPデータを Amazon S3 にバックアップする
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータを Amazon S3 にバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery でいくつかの手順を完了して、オンプレミスのONTAPシステムからセカンダリ ストレージ システムと Amazon S3 クラウド ストレージへのボリューム データのバックアップを開始します。
+NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのONTAPシステムからセカンダリ ストレージ システムと Amazon S3 クラウド ストレージへのボリューム データのバックアップを開始します。
 
 
-NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、 ONTAP Selectシステムが含まれます。
+NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -42,13 +42,13 @@ image:diagram_cloud_backup_onprem_aws_public.png["NetApp Backup and Recovery が
 
 次の図は、*プライベート接続*方式と、コンポーネント間で準備する必要がある接続を示しています。オンプレミスにインストールしたコンソールエージェント、または AWS VPC にデプロイしたコンソールエージェントを使用できます。
 
-image:diagram_cloud_backup_onprem_aws_private.png["NetApp Backup and Recovery がプライベート接続を介してクラスター上のボリュームおよびバックアップ ファイルが保存されている AWS S3 ストレージと通信する方法を示す図。"]
+image:diagram_cloud_backup_onprem_aws_private.png["NetApp Backup and Recovery が、プライベート接続を介してクラスター上のボリュームおよびバックアップ ファイルが保存されている AWS S3 ストレージと通信する方法を示す図。"]
 
 
 
 == コンソールエージェントを準備する
 
-コンソール エージェントは、 NetAppコンソール機能のメイン ソフトウェアです。  ONTAPデータをバックアップおよび復元するには、コンソール エージェントが必要です。
+コンソール エージェントは、 NetApp Console機能のメイン ソフトウェアです。  ONTAPデータをバックアップおよび復元するには、コンソール エージェントが必要です。
 
 
 
@@ -56,14 +56,14 @@ image:diagram_cloud_backup_onprem_aws_private.png["NetApp Backup and Recovery �
 
 AWS VPC またはオンプレミスにコンソールエージェントがすでにデプロイされている場合は、準備は完了です。
 
-そうでない場合は、 ONTAPデータを AWS S3 ストレージにバックアップするために、いずれかの場所にコンソールエージェントを作成する必要があります。別のクラウド プロバイダーにデプロイされたコンソール エージェントは使用できません。
+そうでない場合は、 ONTAPデータを AWS S3 ストレージにバックアップするために、これらの場所のいずれかにコンソールエージェントを作成する必要があります。別のクラウド プロバイダーにデプロイされたコンソール エージェントは使用できません。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["AWSにコンソールエージェントをインストールする"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["オンプレミスにコンソールエージェントをインストールする"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["AWS GovCloud リージョンにコンソールエージェントをインストールする"^]
 +
-NetApp Backup and Recovery は、コンソール エージェントがオンプレミスでインストールされている場合ではなく、クラウドに展開されている場合に、GovCloud リージョンでサポートされます。さらに、AWS Marketplace からコンソールエージェントをデプロイする必要があります。  NetAppコンソール SaaS Web サイトからコンソール エージェントを政府地域に展開することはできません。
+NetApp Backup and Recovery は、コンソール エージェントがオンプレミスでインストールされている場合ではなく、クラウドに展開されている場合に、GovCloud リージョンでサポートされます。さらに、AWS Marketplace からコンソールエージェントをデプロイする必要があります。  NetApp Console SaaS Web サイトからコンソール エージェントを政府地域に展開することはできません。
 
 
 
@@ -80,18 +80,18 @@ NetApp Backup and Recovery は、コンソール エージェントがオンプ�
 ** AWS および AWS GovCloud のデプロイメントには、追加の受信および送信セキュリティ グループ ルールが必要です。見る https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["AWS のコンソールエージェントのルール"^]詳細については。
 
 
-* ONTAPクラスターから VPC への Direct Connect または VPN 接続があり、コンソール エージェントと S3 間の通信を AWS 内部ネットワーク (プライベート接続) 内に維持したい場合は、S3 への VPC エンドポイント インターフェイスを有効にする必要があります。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>> 。
+* ONTAPクラスターから VPC への Direct Connect または VPN 接続があり、コンソール エージェントと S3 間の通信を AWS 内部ネットワーク (プライベート接続) 内に維持したい場合は、S3 への VPC エンドポイント インターフェイスを有効にする必要があります。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>>。
 
 
 
 
 == ライセンス要件を確認する
 
-AWS とNetAppコンソールの両方のライセンス要件を確認する必要があります。
+AWS とNetApp Consoleの両方のライセンス要件を確認する必要があります。
 
-* クラスターでNetApp Backup and Recovery を有効にする前に、AWS の従量課金制 (PAYGO) NetApp Console Marketplace オファリングに登録するか、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入して有効にする必要があります。これらのライセンスはあなたのアカウント用であり、複数のシステムで使用できます。
+* クラスターでNetApp Backup and Recoveryを有効にする前に、AWS の従量課金制 (PAYGO) NetApp Console Marketplace オファリングに登録するか、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入して有効にする必要があります。これらのライセンスはあなたのアカウント用であり、複数のシステムで使用できます。
 +
-** NetApp Backup and Recovery PAYGOライセンスの場合は、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace からのNetAppコンソールの提供"^] 。  NetApp Backup and Recovery の課金は、このサブスクリプションを通じて行われます。
+** NetApp Backup and Recovery PAYGOライセンスの場合は、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace からのNetApp Consoleの提供"^] 。  NetApp Backup and Recoveryの課金は、このサブスクリプションを通じて行われます。
 ** NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの有効期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要になります。
 
 
@@ -110,7 +110,7 @@ AWS GovCloud リージョンを含むすべてのリージョンで、オンプ�
 
 ONTAPクラスタを準備するには、次の手順を実行します。
 
-* NetAppコンソールでONTAPシステムを検出する
+* NetApp ConsoleでONTAPシステムを検出する
 * ONTAPのシステム要件を確認する
 * オブジェクトストレージにデータをバックアップするためのONTAPネットワーク要件を確認する
 * ボリュームを複製するためのONTAPネットワーク要件を確認する
@@ -118,11 +118,11 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
-=== NetAppコンソールでONTAPシステムを検出する
+=== NetApp ConsoleでONTAPシステムを検出する
 
-ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetAppコンソールの *システム* ページで利用できる必要があります。
+ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetApp Consoleの*システム* ページで利用できる必要があります。
 
-クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^] 。
+クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^]。
 
 
 
@@ -133,7 +133,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 * SnapMirrorライセンス (プレミアム バンドルまたはデータ保護バンドルの一部として含まれています)。
 +
-*注:* NetApp Backup and Recovery を使用する場合、「Hybrid Cloud Bundle」は必要ありません。
+*注:* NetApp Backup and Recoveryを使用する場合、「Hybrid Cloud Bundle」は必要ありません。
 
 +
 方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["クラスターライセンスを管理する"^]。
@@ -141,7 +141,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 時間とタイムゾーンは正しく設定されています。方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["クラスター時間を設定する"^]。
 * データをレプリケートする場合は、データをレプリケートする前に、ソース システムとデスティネーション システムで互換性のあるONTAPバージョンが実行されていることを確認する必要があります。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^]。
 
 
 
@@ -164,7 +164,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 * クラスタ間 LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
 +
-NetApp Backup and Recovery をセットアップするときに、使用する IPspace の入力を求められます。これらの LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
+NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。これらの LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
 
 +
 「デフォルト」とは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。
@@ -173,15 +173,15 @@ NetApp Backup and Recovery をセットアップするときに、使用する I
 IPspace 内のすべてのクラスタ間 LIF はオブジェクト ストアにアクセスできる必要があります。現在の IPspace に対してこれを構成できない場合は、すべてのクラスタ間 LIF がオブジェクト ストアにアクセスできる専用の IPspace を作成する必要があります。
 
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが設定されている必要があります。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
-* 必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery 接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。
-* S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>> 。  *[ ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。
+* 必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。
+* S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>>。  *[ ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。
 
 
 
 
 === ボリュームを複製するためのONTAPネットワーク要件を確認する
 
-NetApp Backup and Recovery を使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
+NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
 
 
 
@@ -224,7 +224,7 @@ Amazon S3 をバックアップターゲットとして準備するには、次�
 
 
 .手順
-. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetAppコンソールポリシー権限"^] 。
+. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"^] 。
 +
 
 NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。
@@ -292,7 +292,7 @@ NOTE: AWS中国リージョンでバックアップを作成する場合、IAM�
 
 デフォルトでは、サービスによってバケットが作成されます。または、独自のバケットを使用する場合は、バックアップ アクティベーション ウィザードを開始する前にバケットを作成し、ウィザードでそれらのバケットを選択できます。
 
-link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"^] 。
+link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"^]。
 
 独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、 `ontapcloud-instance-policy-netapp-backup`既存の CVO の IAMRole を作成し、次のリストを S3 権限に追加します。含める必要がある `"Resource": "arn:aws:s3:::*"`バケットに関連付ける必要のあるすべての必要な権限を割り当てます。
 
@@ -307,11 +307,11 @@ link:prev-ontap-protect-journey.html["独自のバケットの作成について
 
 デフォルトの Amazon S3 暗号化キーを使用してオンプレミスのクラスターと S3 バケット間で渡されるデータを暗号化する場合は、デフォルトのインストールでそのタイプの暗号化が使用されるため、すべて準備完了です。
 
-代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetAppバックアップおよびリカバリ ウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。
+代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetApp Backup and Recoveryウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。
 
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["Cloud Volumes ONTAPで独自のAmazon暗号化キーを使用する方法を参照してください。"^] 。
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["Cloud Volumes ONTAPで独自のAmazon暗号化キーを使用する方法を参照してください。"^]。
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html#configure-encryption-settings["NetApp Backup and Recoveryで独自のAmazon暗号化キーを使用する方法を参照してください。"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html#configure-encryption-settings["NetApp Backup and Recoveryで独自のAmazon暗号化キーを使用する方法を参照してください。"^]。
 
 
 
@@ -325,7 +325,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-blu
 . Amazon VPC コンソールまたはコマンドラインを使用して、インターフェイスエンドポイント設定を作成します。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["Amazon S3 の AWS PrivateLink の使用に関する詳細については、こちらをご覧ください。"^] 。
 . コンソール エージェントに関連付けられているセキュリティ グループ構成を変更します。ポリシーを「カスタム」（「フルアクセス」から）に変更し、<<S3の権限を設定する,バックアップポリシーからS3権限を追加する>>先に示したとおりです。
 +
-プライベート エンドポイントへの通信にポート 80 (HTTP) を使用している場合は、設定は完了です。これで、クラスター上でNetApp Backup and Recovery を有効にできるようになりました。
+プライベート エンドポイントへの通信にポート 80 (HTTP) を使用している場合は、設定は完了です。これで、クラスター上でNetApp Backup and Recoveryを有効にできるようになりました。
 
 +
 プライベート エンドポイントへの通信にポート 443 (HTTPS) を使用している場合は、次の 4 つの手順に示すように、VPC S3 エンドポイントから証明書をコピーし、 ONTAPクラスターに追加する必要があります。
@@ -394,8 +394,8 @@ Please enter Certificate: Press <Enter> when done
 
 . 次のオプションを続行します。
 +
-** コンソール エージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
-** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。。 <<コンソールエージェントを準備する>> 。
+** コンソールエージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。参照<<コンソールエージェントを準備する>>。
 
 
 

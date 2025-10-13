@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations-hyperv.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Hyper-V, SAP HANA database, virtual machine, vm 
-summary: NetApp Backup and Recovery では、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+summary: NetApp Backup and Recovery、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
 ---
-= Hyper-V ワークロード向けNetApp Backup and Recovery の既知の制限
+= Hyper-V ワークロード向けNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: NetApp Backup and Recovery では、サービスを使用するため�
 
 == サポートされていないアクション
 
-NetApp Backup and Recovery の Hyper-V ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。
+NetApp Backup and Recoveryの Hyper-V ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。
 
 * リソース グループの作成
 * スパニングディスク（複数の CIFS 共有にまたがる）
@@ -39,7 +39,7 @@ NetApp Backup and Recovery の Hyper-V ワークロードのプライベート �
 . NetApp Consoleメニューから、*管理 > ID とアクセス* を選択します。
 . *組織*の下で、組織 ID の横に *アカウント ID* が表示されているかどうかを確認します。
 +
-*アカウント ID* が表示されている場合は、従来のアカウントを使用しています。
+*アカウント ID* が表示されている場合は、レガシー アカウントを使用しています。
 
 . 従来のアカウントを使用している場合は、次の手順を実行します。
 +

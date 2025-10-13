@@ -4,7 +4,7 @@ permalink: concept-backup-to-cloud.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ サービスです。 
 ---
-= NetAppのバックアップとリカバリについて学ぶ
+= NetApp Backup and Recoveryについて学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,16 +23,16 @@ NOTE: VMware、KVM、Hyper-V、Kubernetes ワークロードの保護に関す�
 
 
 
-== NetAppのバックアップとリカバリでできること
+== NetApp Backup and Recoveryでできること
 
-NetAppバックアップとリカバリを使用して、次の目標を達成します。
+NetApp Backup and Recoveryを使用して、次の目標を達成します。
 
 * * ONTAPボリューム ワークロード*:
 +
 ** ローカル スナップショットを作成し、セカンダリ ストレージに複製し、オンプレミスのONTAPまたはCloud Volumes ONTAPONTAPからパブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストレージに ONTAP ボリュームをバックアップします。
 ** 別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されるブロック レベルの永久増分バックアップを作成します。
-** NetApp Backup and Recovery をSnapCenterと併用します。
-** 。 link:prev-ontap-protect-overview.html["ONTAPボリュームを保護する"] 。
+** NetApp Backup and RecoveryをSnapCenterと併用します。
+** 参照link:prev-ontap-protect-overview.html["ONTAPボリュームを保護する"]。
 
 
 * *Microsoft SQL Server ワークロード*:
@@ -40,25 +40,25 @@ NetAppバックアップとリカバリを使用して、次の目標を達成�
 ** オンプレミスのONTAP、 Cloud Volumes ONTAP、またはAmazon FSx for NetApp ONTAPから Microsoft SQL Server インスタンスとデータベースをバックアップします。
 ** Microsoft SQL Server データベースを復元します。
 ** Microsoft SQL Server データベースを複製します。
-** SnapCenterを使用せずにNetApp Backup and Recovery を使用します。
-** 。 link:br-use-mssql-protect-overview.html["Microsoft SQL Server ワークロードを保護する"] 。
+** SnapCenterを使用せずにNetApp Backup and Recoveryを使用します。
+** 参照link:br-use-mssql-protect-overview.html["Microsoft SQL Server ワークロードを保護する"]。
 
 
 * *VMware ワークロード ( SnapCenter Plug-in for VMware vSphereなしの新しい UI のプレビュー)*:
 +
-** NetApp Backup and Recovery を使用して VMware VM とデータストアを保護します。
+** NetApp Backup and Recoveryを使用して VMware VM とデータストアを保護します。
 ** VMware ワークロードを Amazon Web Services S3 またはStorageGRID (プレビュー用) にバックアップします。
 ** クラウドから VMware データをオンプレミスの vCenter に復元します。
-** SnapCenter Plug-in for VMware vSphere を使用せずにNetApp Backup and Recovery を使用します。
-** 。 link:br-use-vmware-protect-overview.html["VMwareワークロードを保護する"] 。
+** SnapCenter Plug-in for VMware vSphere を使用せずにNetApp Backup and Recoveryを使用します。
+** 参照link:br-use-vmware-protect-overview.html["VMwareワークロードを保護する"]。
 
 
 * *VMware ワークロード ( SnapCenter Plug-in for VMware vSphereを使用)*:
 +
 ** VM とデータストアを Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform、 StorageGRIDにバックアップし、VM をオンプレミスのSnapCenter Plug-in for VMware vSphereに復元します。
-** NetApp Backup and Recovery を使用して、クラウドからオンプレミスの vCenter に VM データを復元します。VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。
+** NetApp Backup and Recoveryを使用して、クラウドからオンプレミスの vCenter に VM データを復元します。VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。
 ** NetApp Backup and Recovery をSnapCenter Plug-in for VMware vSphereと併用します。
-** 。 link:prev-vmware-protect-overview.html["VMwareワークロードを保護する"] 。
+** 参照link:prev-vmware-protect-overview.html["VMwareワークロードを保護する"]。
 
 
 * *KVM ワークロード (プレビュー)*:
@@ -66,14 +66,14 @@ NetAppバックアップとリカバリを使用して、次の目標を達成�
 ** 仮想マシンのバックアップと復元
 ** KVMストレージプールのバックアップ
 ** 保護グループを使用してバックアップタスクを管理する
-** 。 link:br-use-kvm-protect-overview.html["KVMワークロードを保護する"] 。
+** 参照link:br-use-kvm-protect-overview.html["KVMワークロードを保護する"]。
 
 
 * *Hyper-V ワークロード (プレビュー)*:
 +
 ** 仮想マシンのバックアップと復元
 ** 保護グループを使用してバックアップタスクを管理する
-** 。 link:br-use-hyperv-protect-overview.html["Hyper-V ワークロードを保護する"] 。
+** 参照link:br-use-hyperv-protect-overview.html["Hyper-V ワークロードを保護する"]。
 
 
 * *Oracle ワークロード (プレビュー)*:
@@ -84,7 +84,7 @@ NetAppバックアップとリカバリを使用して、次の目標を達成�
 ** 3-2-1バックアップアーキテクチャによるデータベースの保護
 ** バックアップ保持を構成する
 ** ARCHIVELOGバックアップのマウントとアンマウント
-** 。 link:br-use-oracle-protect-overview.html["Oracleワークロードを保護する"] 。
+** 参照link:br-use-oracle-protect-overview.html["Oracleワークロードを保護する"]。
 
 
 * *Kubernetes ワークロード (プレビュー)*:
@@ -92,17 +92,17 @@ NetAppバックアップとリカバリを使用して、次の目標を達成�
 ** Kubernetes アプリケーションとリソースをすべて 1 か所で管理および保護します。
 ** 保護ポリシーを使用して増分バックアップを構成します。
 ** アプリケーションとリソースを同じまたは異なるクラスターと名前空間に復元します。
-** SnapCenterを使用せずにNetApp Backup and Recovery を使用します。
-** 。 link:br-use-kubernetes-protect-overview.html["Kubernetesワークロードを保護する"] 。
+** SnapCenterを使用せずにNetApp Backup and Recoveryを使用します。
+** 参照link:br-use-kubernetes-protect-overview.html["Kubernetesワークロードを保護する"]。
 
 
 
 
 
 
-== NetAppバックアップとリカバリを使用するメリット
+== NetApp Backup and Recoveryを使用するメリット
 
-NetAppバックアップおよびリカバリには、次のような利点があります。
+NetApp Backup and Recoveryには、次のような利点があります。
 
 * **効率的**: NetApp Backup and Recovery は、ブロックレベルの永久増分レプリケーションを実行するため、複製および保存されるデータの量が大幅に削減されます。これにより、ネットワーク トラフィックとストレージ コストを最小限に抑えることができます。
 * **安全**: NetApp Backup and Recovery は、転送中および保存中のデータを暗号化し、安全な通信プロトコルを使用してデータを保護します。
@@ -117,7 +117,7 @@ NetAppバックアップおよびリカバリには、次のような利点が�
 
 NetApp は試用版の使用に対して料金を請求しません。ただし、ストレージやデータ転送コストなど、使用するクラウド リソースに関連するコストはお客様の負担となります。
 
-ONTAPシステムでNetApp Backup and Recovery のオブジェクトへのバックアップ機能を使用する場合、次の 2 種類のコストが発生します。
+ONTAPシステムでNetApp Backup and Recoveryのオブジェクトへのバックアップ機能を使用する場合、次の 2 種類のコストが発生します。
 
 * リソース料金
 * サービス料
@@ -199,13 +199,13 @@ NetApp Backup and Recovery は、次の消費モデルで利用できます。
 
 BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年間）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。
 
-サービスを有効にするためにNetAppコンソールに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetAppコンソール組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
+サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
 
-link:br-start-licensing.html["ライセンスの設定方法を学ぶ"] 。
+link:br-start-licensing.html["ライセンスの設定方法を学ぶ"]。
 
 *従量課金制サブスクリプション*
 
-NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。料金は、毎月の請求書を通じてクラウド プロバイダーから請求されます。
+NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。
 
 PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。
 
@@ -264,9 +264,9 @@ NetApp Backup and Recovery は、次のワークロードを保護します。
 
 
 
-== NetAppバックアップとリカバリの仕組み
+== NetApp Backup and Recoveryの仕組み
 
-NetApp Backup and Recovery を有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップになります。これにより、ネットワーク トラフィックが最小限に抑えられます。
+NetApp Backup and Recoveryを有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップになります。これにより、ネットワーク トラフィックが最小限に抑えられます。
 
 次の図は、コンポーネント間の関係を示しています。
 
@@ -279,16 +279,16 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 
 === オブジェクトストア内のバックアップの保存場所
 
-バックアップ コピーは、 NetAppコンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスターまたはシステムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに次のように名前が付けられます。 `netapp-backup-clusteruuid` 。このオブジェクト ストアを削除しないように注意してください。
+バックアップ コピーは、 NetApp Consoleがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスターまたはシステムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに次のように名前が付けられます。 `netapp-backup-clusteruuid` 。このオブジェクト ストアを削除しないように注意してください。
 
 ifdef::aws[]
 
-* AWSでは、 NetAppコンソールにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3バケットで。endif::aws[]
+* AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3バケットで。endif::aws[]
 
 
 ifdef::azure[]
 
-* Azureでは、 NetAppコンソールはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトでは。endif::azure[]
+* Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトでは。endif::azure[]
 
 
 ifdef::gcp[]
@@ -301,18 +301,18 @@ endif::gcp[]
 
 
 
-=== バックアップコピーはNetAppコンソール組織に関連付けられます
+=== バックアップコピーはNetApp Console組織に関連付けられます
 
-バックアップ コピーは、コンソール エージェントが存在するNetAppコンソール組織に関連付けられます。 https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"^] 。
+バックアップ コピーは、コンソール エージェントが存在するNetApp Console組織に関連付けられます。 https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetApp ConsoleのIDとアクセスについて学ぶ"^] 。
 
-同じNetAppコンソール組織内に複数のコンソール エージェントがある場合、各コンソール エージェントには同じバックアップ リストが表示されます。
+同じNetApp Console組織内に複数のコンソール エージェントがある場合、各コンソール エージェントには同じバックアップ リストが表示されます。
 
 
 
-== NetApp のバックアップとリカバリに役立つ用語
+== NetApp Backup and Recoveryに役立つ用語
 
 保護に関連するいくつかの用語を理解しておくと役立つかもしれません。
 
-* *保護*: NetAppバックアップおよびリカバリにおける保護とは、保護ポリシーを使用して、スナップショットと不変のバックアップが別のセキュリティ ドメインに定期的に実行されるようにすることを意味します。
-* *ワークロード*: NetApp Backup and Recovery のワークロードには、 ONTAPボリューム、Microsoft SQL Server インスタンスとデータベース、VMware VM とデータストア、Kubernetes クラスターとアプリケーションが含まれます。
+* *保護*: NetApp Backup and Recoveryにおける保護とは、保護ポリシーを使用して、スナップショットと不変のバックアップが別のセキュリティ ドメインに定期的に実行されるようにすることを意味します。
+* *ワークロード*: NetApp Backup and Recoveryのワークロードには、 ONTAPボリューム、Microsoft SQL Server インスタンスとデータベース、VMware VM とデータストア、Kubernetes クラスターとアプリケーションが含まれます。
 

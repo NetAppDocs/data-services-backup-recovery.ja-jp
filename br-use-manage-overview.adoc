@@ -4,7 +4,7 @@ permalink: br-use-manage-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDにバックアップして、データを保護することができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。 
 ---
-= NetAppバックアップおよびリカバリの概要によるリソース管理
+= NetApp Backup and Recoveryの概要によるリソース管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,12 @@ summary: Microsoft SQL Server アプリケーション データをオンプレ�
 
 
 [role="lead"]
-データが保護されることを確実にするには、 NetApp Backup and Recovery でリソースを管理することが不可欠です。バックアップ、データベース、インスタンス、アプリケーション ホスト、作業環境などのリソースを管理できます。リソースの保護設定を表示、編集、削除できます。
+データが保護されることを確実にするには、 NetApp Backup and Recoveryでリソースを管理することが不可欠です。バックアップ、データベース、インスタンス、アプリケーション ホスト、作業環境などのリソースを管理できます。リソースの保護設定を表示、編集、削除できます。
 
 リソースの管理に関連する次のタスクを実行できます。
 
-* link:br-use-manage-inventory.html["在庫管理"] 。
-* link:br-use-manage-snapshots.html["スナップショットを管理する"] 。
-* link:br-use-manage-kubernetes-clusters.html["Kubernetes クラスターを管理する"] 。
-* link:br-use-manage-kubernetes-applications.html["Kubernetes アプリケーションを管理する"] 。
+* link:br-use-manage-inventory.html["在庫管理"]。
+* link:br-use-manage-snapshots.html["スナップショットを管理する"]。
+* link:br-use-manage-kubernetes-clusters.html["Kubernetes クラスターを管理する"]。
+* link:br-use-manage-kubernetes-applications.html["Kubernetes アプリケーションを管理する"]。
 

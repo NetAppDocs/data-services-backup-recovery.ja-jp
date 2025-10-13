@@ -24,4 +24,4 @@
 
 === SnapMirrorクラウド再同期
 
-この更新により、 SnapMirror関係が削除された後、サポートされていないONTAPバージョンに対してNetApp Backup and Recovery からSnapMirror Cloud の再同期を開始できなくなります。
+この更新により、 SnapMirror関係が削除された後、サポートされていないONTAPバージョンに対してNetApp Backup and RecoveryからSnapMirror Cloud の再同期を開始できなくなります。

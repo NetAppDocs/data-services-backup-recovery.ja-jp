@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery を使用してCloud Volumes ONTAPデータを Google Cloud Storage にバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPデータを Google Cloud Storage にバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery でいくつかの手順を完了して、 Cloud Volumes ONTAPシステムから Google Cloud Storage へのボリューム データのバックアップを開始します。
+Cloud Volumes ONTAPシステムから Google Cloud Storage へのボリューム データのバックアップを開始するには、NetApp Backup and Recoveryでいくつかの手順を完了します。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -34,20 +34,20 @@ Google Cloud Storage へのボリュームのバックアップを開始する�
 image:diagram_cloud_backup_cvo_google.png["NetApp Backup and Recovery が、ソース システムのボリュームおよびバックアップ ファイルが保存されている宛先ストレージと通信する方法を示す図。"]
 
 サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
-サポートされているGCPリージョン:: NetAppバックアップとリカバリは、すべての GCP リージョンでサポートされています。
+サポートされているGCPリージョン:: NetApp Backup and Recoveryは、すべての GCP リージョンでサポートされています。
 GCP サービス アカウント:: Google Cloud プロジェクトにカスタムロールを持つサービス アカウントが必要です。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["サービスアカウントの作成方法を学ぶ"^] 。
 
 
 
-NOTE: NetApp Backup and Recovery が Google Cloud Storage バケットにアクセスできるようにするサービス アカウントには、ストレージ管理者のロールは不要になりました。
+NOTE: NetApp Backup and Recovery がGoogle Cloud Storage バケットにアクセスできるようにするサービス アカウントには、ストレージ管理者のロールは不要になりました。
 
 
 
 == ライセンス要件を確認する
 
-NetApp Backup and Recovery PAYGO ライセンスの場合、 Cloud Volumes ONTAPとNetApp Backup and Recovery の導入を可能にするコンソール サブスクリプションが Google Marketplace で利用できます。必要がある https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["このコンソールサブスクリプションを購読する"^]NetApp Backup and Recovery を有効にする前に。  NetApp Backup and Recovery の課金は、このサブスクリプションを通じて行われます。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["システムウィザードの詳細と資格情報ページからサブスクライブできます"^] 。
+NetApp Backup and Recovery PAYGO ライセンスの場合、 Cloud Volumes ONTAPとNetApp Backup and Recoveryの導入を可能にするコンソール サブスクリプションが Google Marketplace で利用できます。必要がある https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["このコンソールサブスクリプションを購読する"^]NetApp Backup and Recoveryを有効にする前に。  NetApp Backup and Recoveryの課金は、このサブスクリプションを通じて行われます。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["システムウィザードの詳細と資格情報ページからサブスクライブできます"^] 。
 
-NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"] 。
+NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
 また、バックアップを保存するストレージスペース用の Google サブスクリプションが必要です。
 
@@ -120,7 +120,7 @@ cloudkms.keyRings.setIamPolicy
 * 新しく作成された Cloud KMS キーとインポートされた Cloud KMS キーの両方がサポートされます。
 * 地域キーのみがサポートされ、グローバル キーはサポートされません。
 * 現在、「対称暗号化/復号化」目的のみがサポートされています。
-* ストレージ アカウントに関連付けられたサービス エージェントには、 NetApp Backup and Recovery によって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
+* ストレージ アカウントに関連付けられたサービス エージェントには、NetApp Backup and Recoveryによって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
 
 
 
@@ -129,13 +129,13 @@ cloudkms.keyRings.setIamPolicy
 
 デフォルトでは、サービスによってバケットが作成されます。独自のバケットを使用する場合は、バックアップ アクティベーション ウィザードを開始する前にバケットを作成し、ウィザードでそれらのバケットを選択できます。
 
-link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"] 。
+link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"]。
 
 
 
 == ボリュームを複製するためのONTAPネットワーク要件を確認する
 
-NetApp Backup and Recovery を使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
+NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
 
 
 
@@ -160,11 +160,11 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 
 
 
-== Cloud Volumes ONTAPでNetApp のバックアップとリカバリを有効にする
+== Cloud Volumes ONTAPでNetApp Backup and Recoveryを有効にする
 
-NetAppバックアップとリカバリを有効にする手順は、既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって若干異なります。
+NetApp Backup and Recoveryを有効にする手順は、既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって若干異なります。
 
-*新しいシステムでNetAppバックアップとリカバリを有効にする*
+*新しいシステムでNetApp Backup and Recoveryを有効にする*
 
 システム ウィザードを完了して新しいCloud Volumes ONTAPシステムを作成すると、 NetApp Backup and Recovery を有効にできます。
 
@@ -194,7 +194,7 @@ GCP Marketplace サブスクリプションが設定されていることを確�
 .結果
 システムでNetApp Backup and Recovery が有効になっています。これらのCloud Volumes ONTAPシステムでボリュームを作成したら、 NetApp Backup and Recoveryを起動し、link:prev-ontap-backup-manage.html["保護したいボリュームごとにバックアップを有効化します"] 。
 
-*既存のシステムでNetAppバックアップとリカバリを有効にする*
+*既存のシステムでNetApp Backup and Recoveryを有効にする*
 
 NetApp Backup and Recovery は、いつでもシステムから直接有効にすることができます。
 
@@ -220,7 +220,7 @@ Google Cloud Storage をバックアップ ターゲットとして準備する�
 
 === 権限を設定する
 
-カスタム ロールを使用して特定の権限を持つサービス アカウントにストレージ アクセス キーを提供する必要があります。サービス アカウントにより、 NetApp Backup and Recovery は、バックアップの保存に使用される Cloud Storage バケットを認証してアクセスできるようになります。Google Cloud Storage が誰がリクエストを行っているかを認識するために、キーが必要になります。
+カスタム ロールを使用して特定の権限を持つサービス アカウントにストレージ アクセス キーを提供する必要があります。サービス アカウントにより、NetApp Backup and Recovery は、バックアップの保存に使用される Cloud Storage バケットを認証してアクセスできるようになります。Google Cloud Storage が誰がリクエストを行っているかを認識するために、キーが必要になります。
 
 .手順
 . の中で https://console.cloud.google.com["Google Cloud コンソール"^]、*役割*ページに移動します。
@@ -255,7 +255,7 @@ storage.objects.update
 .. プロジェクトを選択し、*相互運用性*を選択します。まだ行っていない場合は、[相互運用性アクセスを有効にする] を選択します。
 .. *サービス アカウントのアクセス キー* の下で、*サービス アカウントのキーの作成* を選択し、作成したサービス アカウントを選択して、*キーの作成* をクリックします。
 +
-後でバックアップ サービスを構成するときに、 NetApp Backup and Recovery にキーを入力する必要があります。
+後でバックアップ サービスを構成するときに、 NetApp Backup and Recoveryにキーを入力する必要があります。
 
 
 
@@ -267,7 +267,7 @@ storage.objects.update
 
 デフォルトでは、サービスによってバケットが作成されます。または、独自のバケットを使用する場合は、バックアップ アクティベーション ウィザードを開始する前にバケットを作成し、ウィザードでそれらのバケットを選択できます。
 
-link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"] 。
+link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"]。
 
 
 
@@ -300,7 +300,7 @@ cloudkms.keyRings.setIamPolicy
 * 新しく作成された Cloud KMS キーとインポートされた Cloud KMS キーの両方がサポートされます。
 * 地域キーのみがサポートされ、グローバル キーはサポートされません。
 * 現在、「対称暗号化/復号化」目的のみがサポートされています。
-* ストレージ アカウントに関連付けられたサービス エージェントには、 NetApp Backup and Recovery によって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
+* ストレージ アカウントに関連付けられたサービス エージェントには、NetApp Backup and Recoveryによって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
 
 
 
@@ -337,8 +337,8 @@ cloudkms.keyRings.setIamPolicy
 
 . 次のオプションを続行します。
 +
-** コンソール エージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
-** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。。 <<コンソールエージェントを準備する>> 。
+** コンソールエージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。参照<<コンソールエージェントを準備する>>。
 
 
 
@@ -383,7 +383,7 @@ FlexVolまたはFlexGroupボリュームを保護することを選択できま�
 * レプリケーションターゲットとポリシー
 +
 
-NOTE: 選択したボリュームのスナップショットおよびレプリケーション ポリシーがこの手順で選択したポリシーと異なる場合、既存のポリシーは上書きされます。
+NOTE: 選択したボリュームのスナップショットおよびレプリケーション ポリシーがこの手順で選択したポリシーと異なる場合、既存のポリシーが上書きされます。
 
 * オブジェクト ストレージ情報へのバックアップ (プロバイダー、暗号化、ネットワーク、バックアップ ポリシー、エクスポート オプション)。
 
@@ -490,7 +490,7 @@ TIP: バックアップをアクティブ化する前にカスタムポリシー
 
 
 .結果
-NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ システム データの差分コピーが含まれます。
+NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ システム データの差分コピーが含まれます。
 
 複製されたボリュームが宛先クラスターに作成され、プライマリ ストレージ システム ボリュームと同期されます。
 
@@ -517,7 +517,7 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 
 == 次の手順
 
-* あなたは link:prev-ontap-backup-manage.html["バックアップファイルとバックアップポリシーを管理する"]。これには、バックアップの開始と停止、バックアップの削除、バックアップ スケジュールの追加と変更などが含まれます。
-* あなたは link:prev-ontap-policy-object-advanced-settings.html["クラスタレベルのバックアップ設定を管理する"]。これには、 ONTAPがクラウド ストレージにアクセスするために使用するストレージ キーの変更、オブジェクト ストレージへのバックアップのアップロードに使用できるネットワーク帯域幅の変更、将来のボリュームの自動バックアップ設定の変更などが含まれます。
+* あなたはできるlink:prev-ontap-backup-manage.html["バックアップファイルとバックアップポリシーを管理する"]。これには、バックアップの開始と停止、バックアップの削除、バックアップ スケジュールの追加と変更などが含まれます。
+* あなたはできるlink:prev-ontap-policy-object-advanced-settings.html["クラスタレベルのバックアップ設定を管理する"]。これには、 ONTAPがクラウド ストレージにアクセスするために使用するストレージ キーの変更、オブジェクト ストレージへのバックアップのアップロードに使用できるネットワーク帯域幅の変更、将来のボリュームの自動バックアップ設定の変更などが含まれます。
 * また、link:prev-ontap-restore.html["バックアップ ファイルからボリューム、フォルダ、または個々のファイルを復元する"] AWS のCloud Volumes ONTAPシステム、またはオンプレミスのONTAPシステムに接続します。
 

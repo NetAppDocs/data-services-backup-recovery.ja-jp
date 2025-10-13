@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-vmware-prereqs.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryにおける仮想マシンワークロードの前提条件
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して仮想マシンのワークロードを保護する前に、次の前提条件を満たしていることを確認してください。
+NetApp Backup and Recoveryを使用して仮想マシンのワークロードを保護する前に、次の前提条件を満たしていることを確認してください。
 
 * SnapCenter Plug-in for VMware vSphere
 +
@@ -22,11 +22,11 @@ NetApp Backup and Recovery を使用して仮想マシンのワークロード�
 
 
 * ONTAP 9.8 以降
-* NetAppコンソール
+* NetApp Console
 * NFS および VMFS データストアがサポートされています。vVolsはサポートされていません。
 * VMFS をサポートするには、 SnapCenter Plug-in for VMware vSphereが4.9 以降で実行されている必要があります。  SnapCenter Plug-in for VMware vSphereホストが以前のバージョンから 4.9 リリースにアップグレードされた場合は、必ず VMFS データストアのバックアップを作成してください。
 * SnapCenter Plug-in for VMware vSphere 4.6P1 で少なくとも 1 つのバックアップが作成されている必要があります。
-* コンソールの仮想マシン ポリシーと同じラベルまたはラベルのない、SnapCenter Plug-in for VMware vSphereの日次、週次、月次ポリシーが少なくとも 1 つ。
+* コンソールの仮想マシン ポリシーと同じラベルまたはラベルのない、SnapCenter Plug-in for VMware vSphereの少なくとも 1 つの日次、週次、または月次ポリシー。
 * 事前に設定されたポリシーの場合、スケジュール層は、 SnapCenter Plug-in for VMware vSphereとクラウドのデータストアで同じである必要があります。
 * FlexGroupボリュームのバックアップと復元はサポートされていないため、データストアにFlexGroupボリュームがないことを確認してください。
 * 必要なリソース グループで「*_recent*」を無効にします。リソース グループに対して「*_recent*」が有効になっている場合、それらのリソース グループのバックアップはクラウドへのデータ保護に使用できず、その後の復元操作にも使用できません。

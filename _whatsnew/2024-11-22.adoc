@@ -6,9 +6,9 @@
 
 === SnapLock ComplianceとSnapLock Enterpriseの保護モード
 
-NetApp Backup and Recovery では、SnapLock ComplianceまたはSnapLock Enterprise保護モードのいずれかを使用して構成されたFlexVolとFlexGroup の両方のオンプレミス ボリュームをバックアップできるようになりました。このサポートを受けるには、クラスタでONTAP 9.14 以降を実行している必要があります。SnapLock Enterpriseモードを使用したFlexVolボリュームのバックアップは、 ONTAPバージョン 9.11.1 以降でサポートされています。以前のONTAPリリースでは、 SnapLock保護ボリュームのバックアップはサポートされていません。
+NetApp Backup and Recoveryでは、SnapLock ComplianceまたはSnapLock Enterprise保護モードのいずれかを使用して構成されたFlexVolとFlexGroup の両方のオンプレミス ボリュームをバックアップできるようになりました。このサポートを受けるには、クラスタでONTAP 9.14 以降を実行している必要があります。SnapLock Enterpriseモードを使用したFlexVolボリュームのバックアップは、 ONTAPバージョン 9.11.1 以降でサポートされています。以前のONTAPリリースでは、 SnapLock保護ボリュームのバックアップはサポートされていません。
 
-サポートされているボリュームの完全なリストについては、 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetAppのバックアップとリカバリについて学ぶ"] 。
+サポートされているボリュームの完全なリストについては、 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recoveryについて学ぶ"] 。
 
 
 
@@ -16,7 +16,7 @@ NetApp Backup and Recovery では、SnapLock ComplianceまたはSnapLock Enterpr
 
 検索と復元を使用する前に、ボリューム データを復元する各ソース システムで「インデックス作成」を有効にする必要があります。これにより、インデックス カタログは各ボリュームのバックアップ ファイルを追跡できるようになります。ボリューム ページにインデックスのステータスが表示されるようになりました。
 
-* インデックス作成済み: ボリュームのインデックスが作成されました。
+* インデックス作成済み: ボリュームにインデックスが作成されました。
 * 進行中
 * インデックスなし
 * インデックス作成を一時停止しました

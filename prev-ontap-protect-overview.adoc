@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-overview.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetAppバックアップとリカバリを使用してONTAPボリューム データを保護します
+= NetApp Backup and Recoveryを使用してONTAPボリューム データを保護します
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長期アーカイブのためのバックアップおよび復元機能を提供します。ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存する 3-2-1 戦略を実装できます。
+NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長期アーカイブのためのバックアップおよび復元機能を提供します。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
-アクティブ化後、バックアップとリカバリによって、ブロックレベルの永久増分バックアップが作成され、別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されます。ソース ボリュームに加えて、次のものも用意されます。
+アクティブ化後、バックアップとリカバリによって、ブロックレベルの永久増分バックアップが作成され、別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されます。ソース ボリュームに加えて、次のものも用意します。
 
 * ソースシステム上のボリュームのスナップショットコピー
 * 別のストレージシステム上の複製ボリューム
@@ -30,7 +30,7 @@ NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長�
 
 image:diagram-321-overview-unified.png["バックアップ ファイルが、ソース システムではスナップショット コピーとして、セカンダリ ストレージ システムでは複製されたボリュームとして、オブジェクト ストレージではバックアップ ファイルとしてどのように存在するかを示す図。"]
 
-NetApp Backup and Recovery は、NetApp のSnapMirrorデータ レプリケーション テクノロジを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
+NetApp Backup and Recovery は、 NetApp のSnapMirrorデータ レプリケーション テクノロジを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
 
 3-2-1 アプローチの利点は次のとおりです。
 
@@ -52,7 +52,7 @@ NetApp Backup and Recovery は、NetApp のSnapMirrorデータ レプリケー�
 * 2 つのシステム間の事前共有キー (PSK) を介して設定されたネイティブONTAPインフライト暗号化。
 * コピーされたデータは、書き込み可能になって使用可能になるまで変更できません。
 * 転送に失敗した場合、レプリケーションは自動的に修復されます。
-* と比較すると https://docs.netapp.com/us-en/data-services-replication/index.html["NetAppレプリケーション"^]NetApp Backup and Recovery のレプリケーションには、次の機能が含まれています。
+* と比較すると https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]NetApp Backup and Recoveryのレプリケーションには、次の機能が含まれています。
 +
 ** 一度に複数のFlexVolボリュームをセカンダリ システムに複製します。
 ** UI を使用して、複製されたボリュームをソース システムまたは別のシステムに復元します。
@@ -60,7 +60,7 @@ NetApp Backup and Recovery は、NetApp のSnapMirrorデータ レプリケー�
 
 
 
-見るlink:br-reference-limitations.html["ONTAPボリュームのレプリケーションの制限"]ONTAPボリュームのNetApp Backup and Recovery で使用できないレプリケーション機能のリストについては、こちらをご覧ください。
+見るlink:br-reference-limitations.html["ONTAPボリュームのレプリケーションの制限"]ONTAPボリュームのNetApp Backup and Recoveryで使用できないレプリケーション機能のリストについては、こちらをご覧ください。
 
 *オブジェクトへのバックアップ機能:*
 
@@ -175,7 +175,7 @@ NOTE: NetApp Backup and Recovery は、 FlexCacheボリュームのバックア�
 
 == 料金
 
-ONTAPシステムでNetApp Backup and Recovery を使用する場合、リソース料金とサービス料金の 2 種類のコストが関連します。これら両方の料金は、サービスのオブジェクト部分へのバックアップに対して発生します。
+ONTAPシステムでNetApp Backup and Recoveryを使用する場合、リソース料金とサービス料金の 2 種類のコストが発生します。これら両方の料金は、サービスのオブジェクト部分へのバックアップに対して発生します。
 
 スナップショット コピーまたは複製ボリュームの作成には、スナップショット コピーと複製ボリュームを保存するために必要なディスク領域以外は料金はかかりません。
 
@@ -244,19 +244,19 @@ NetApp Backup and Recovery は、次の消費モデルで利用できます。
 
 === 自分のライセンスを持参する
 
-BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースとなります。一定期間（たとえば 1 年間）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。
+BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。
 
-サービスを有効にするためにNetAppコンソールに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetAppコンソール組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
+サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
 
-link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"] 。
+link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
 
 
 === 従量課金制サブスクリプション
 
-NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。料金は、毎月の請求書を通じてクラウド プロバイダーから請求されます。
+NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。
 
-link:br-start-licensing.html["従量課金制サブスクリプションの設定方法を学ぶ"] 。
+link:br-start-licensing.html["従量課金制サブスクリプションの設定方法を学ぶ"]。
 
 PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。
 
@@ -290,13 +290,13 @@ GCP を使用する場合、 NetAppからプライベート オファーをリ�
 
 endif::gcp[]
 
-link:br-start-licensing.html["年間契約の設定方法を学ぶ"] 。
+link:br-start-licensing.html["年間契約の設定方法を学ぶ"]。
 
 
 
-== NetAppバックアップとリカバリの仕組み
+== NetApp Backup and Recoveryの仕組み
 
-Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムでNetApp Backup and Recovery を有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップとなり、変更されたブロックと新しいブロックのみがバックアップされます。これにより、ネットワーク トラフィックが最小限に抑えられます。オブジェクトストレージへのバックアップは、 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirrorクラウドテクノロジー"^] 。
+Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムでNetApp Backup and Recoveryを有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップとなり、変更されたブロックと新しいブロックのみがバックアップされます。これにより、ネットワーク トラフィックが最小限に抑えられます。オブジェクトストレージへのバックアップは、 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirrorクラウドテクノロジー"^] 。
 
 
 CAUTION: クラウド プロバイダー環境から直接クラウド バックアップ ファイルを管理または変更するアクションを実行すると、ファイルが破損し、サポートされていない構成になる可能性があります。
@@ -314,7 +314,7 @@ image:diagram-backup-recovery-general.png["NetApp Backup and Recovery が、ソ�
 バックアップは、バックアップの種類に応じて異なる場所に保存されます。
 
 * _スナップショット コピー_ はソース システムのソース ボリュームに存在します。
-* _複製されたボリューム_ は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。
+* _複製されたボリューム_は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。
 * _バックアップ コピー_ は、コンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスター/システムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに「netapp-backup-clusteruuid」という名前が付けられます。このオブジェクト ストアを削除しないように注意してください。
 
 
@@ -340,7 +340,7 @@ endif::gcp[]
 
 + ** ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 
-将来的にクラスタの宛先オブジェクトストアを変更する場合は、link:prev-ontap-backup-manage.html["システムのNetApp Backup and Recoveryの登録を解除する"] 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recovery を有効にします。
+将来的にクラスタの宛先オブジェクトストアを変更する場合は、link:prev-ontap-backup-manage.html["システムのNetApp Backup and Recoveryの登録を解除する"] 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recoveryを有効にします。
 
 
 
@@ -368,7 +368,7 @@ TIP: データ保護ボリュームのバックアップの保持期間は、ソ
 * _ランサムウェア保護_ は、バックアップ ファイルの作成時とバックアップ ファイルからのデータの復元時に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。
 
 
-スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショット コピーに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。 「詳細設定」ページのオプションを使用して、最新のスナップショット コピーに対するスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位または週単位に変更したり、無効にしたりしてコストを節約できます。
+スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショット コピーに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。 「詳細設定」ページのオプションを使用して、最新のスナップショット コピーに対するスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。
 
 バックアップの保持期間は、バックアップ スケジュールの保持期間に最大 31 日間のバッファを加えた期間と同じです。たとえば、_5_ 個のコピーが保持される _毎週_ のバックアップでは、各バックアップ ファイルが 5 週間ロックされます。  _6_ 個のコピーが保持される _月次_ バックアップでは、各バックアップ ファイルが 6 か月間ロックされます。
 
@@ -376,8 +376,8 @@ TIP: データ保護ボリュームのバックアップの保持期間は、ソ
 
 詳細については、次の情報を参照してください。
 
-* link:prev-ontap-policy-object-options.html["DataLockとランサムウェア保護の仕組み"] 。
-* link:prev-ontap-policy-object-advanced-settings.html["詳細設定ページでランサムウェア保護オプションを更新する方法"] 。
+* link:prev-ontap-policy-object-options.html["DataLockとランサムウェア保護の仕組み"]。
+* link:prev-ontap-policy-object-advanced-settings.html["詳細設定ページでランサムウェア保護オプションを更新する方法"]。
 
 
 
@@ -393,7 +393,7 @@ ifdef::aws[]
 
 * AWS では、バックアップは _Standard_ ストレージ クラスで開始され、30 日後に _Standard-Infrequent Access_ ストレージ クラスに移行します。
 +
-クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"] 。
+クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"]。
 
 
 
@@ -403,7 +403,7 @@ ifdef::azure[]
 
 * Azure では、バックアップは _Cool_ アクセス層に関連付けられています。
 +
-クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _Azure Archive_ ストレージに階層化することを選択できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"] 。
+クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _Azure Archive_ ストレージに階層化することを選択できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"]。
 
 
 
@@ -413,7 +413,7 @@ ifdef::gcp[]
 
 * GCP では、バックアップは _Standard_ ストレージ クラスに関連付けられています。
 +
-クラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"] 。
+クラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"]。
 
 
 
@@ -421,7 +421,7 @@ endif::gcp[]
 
 * StorageGRIDでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。
 +
-オンプレミスのクラスタでONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムで 11.4 以上を使用している場合は、一定の日数後に古いバックアップ ファイルをパブリック クラウド アーカイブ ストレージにアーカイブできます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。link:prev-ontap-backup-onprem-storagegrid.html["StorageGRIDからのバックアップファイルのアーカイブについて詳しくは、こちらをご覧ください。"] 。
+オンプレミスのクラスタでONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムで 11.4 以上を使用している場合は、一定の日数後に古いバックアップ ファイルをパブリック クラウド アーカイブ ストレージにアーカイブできます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。link:prev-ontap-backup-onprem-storagegrid.html["StorageGRIDからのバックアップファイルのアーカイブについて詳しくは"]。
 
 
 

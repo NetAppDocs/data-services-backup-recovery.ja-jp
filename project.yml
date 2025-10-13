@@ -23,7 +23,7 @@ settings:
   langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: NetAppバックアップおよびリカバリのドキュメント
+  - title: NetApp Backup and Recoveryのドキュメント
     url: "/index.html"
   - title: リリース ノート
     entries:
@@ -43,25 +43,25 @@ sidebar:
       url: "/br-limitations-oracle.html"
   - title: 始めましょう
     entries:
-    - title: NetAppのバックアップとリカバリについて学ぶ
+    - title: NetApp Backup and Recoveryについて学ぶ
       url: "/concept-backup-to-cloud.html"
-    - title: NetAppバックアップおよびリカバリの前提条件
+    - title: NetApp Backup and Recoveryの前提条件
       url: "/concept-start-prereq.html"
-    - title: NetAppバックアップおよびリカバリのライセンスを設定する
+    - title: NetApp Backup and Recoveryのライセンスを設定する
       url: "/br-start-licensing.html"
     - title: ONTAPおよびStorageGRIDのセキュリティ証明書を設定する
       url: "/task-setup-ca-certificates.html"
     - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
       url: "/br-start-setup.html"
-    - title: NetAppバックアップおよびリカバリにログイン
+    - title: NetApp Backup and Recoveryにログイン
       url: "/br-start-login.html"
     - title: バックアップターゲットの検出
       url: "/br-start-discover-backup-targets.html"
-    - title: さまざまなNetAppバックアップおよびリカバリワークロードに切り替える
+    - title: さまざまなNetApp Backup and Recoveryワークロードに切り替える
       url: "/br-start-switch-ui.html"
-    - title: NetAppバックアップおよびリカバリの一般設定を構成する
+    - title: NetApp Backup and Recoveryの一般設定を構成する
       url: "/br-start-configure.html"
-  - title: NetAppバックアップとリカバリを使用する
+  - title: NetApp Backup and Recoveryを使用する
     entries:
     - title: ダッシュボードで保護の状態を確認する
       url: "/br-use-dashboard.html"
@@ -213,17 +213,17 @@ sidebar:
         url: "/br-use-manage-execution-hook-templates.html"
     - title: ジョブの監視
       url: "/br-use-monitor-tasks.html"
-    - title: NetAppバックアップとリカバリを再起動します
+    - title: NetApp Backup and Recoveryを再起動します
       url: "/reference-restart-backup.html"
   - title: REST APIによる自動化
     url: "/br-api-backup-restore.html"
   - title: 参照
     entries:
-    - title: SnapCenterのポリシーとNetApp のバックアップおよびリカバリの比較
+    - title: SnapCenterのポリシーとNetApp Backup and Recoveryの比較
       url: "/reference-policy-differences-snapcenter.html"
-    - title: NetAppバックアップおよびリカバリの役割と権限
+    - title: NetApp Backup and Recoveryの役割と権限
       url: "/reference-roles.html"
-    - title: ダークサイトでのNetAppバックアップおよびリカバリデータの復元
+    - title: ダークサイトでのNetApp Backup and Recoveryデータの復元
       url: "/reference-backup-cbs-db-in-dark-site.html"
     - title: サポートされているAWSアーカイブストレージ層
       url: "/prev-reference-aws-archive-storage-tiers.html"

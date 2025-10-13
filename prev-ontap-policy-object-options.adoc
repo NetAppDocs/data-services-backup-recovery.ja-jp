@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-options.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery のオブジェクトへのバックアップ ポリシー オプション
+= NetApp Backup and Recoveryのオブジェクトへのバックアップ ポリシー オプション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -21,7 +21,7 @@ NOTE: これらのポリシー設定は、オブジェクト ストレージへ�
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -30,7 +30,7 @@ NOTE: これらのポリシー設定は、オブジェクト ストレージへ�
 
 NetApp Backup and Recovery を使用すると、システム (クラスタ) ごとに固有のスケジュールを持つ複数のバックアップ ポリシーを作成できます。異なる復旧ポイント目標 (RPO) を持つボリュームに、異なるバックアップ ポリシーを割り当てることができます。
 
-各バックアップ ポリシーには、バックアップ ファイルに適用できる「ラベルと保持」のセクションが用意されています。ボリュームに適用されるスナップショット ポリシーは、 NetApp Backup and Recovery によって認識されるポリシーのいずれかである必要があることに注意してください。そうでないと、バックアップ ファイルは作成されません。
+各バックアップ ポリシーには、バックアップ ファイルに適用できる「ラベルと保持」のセクションが用意されています。ボリュームに適用されるスナップショット ポリシーは、NetApp Backup and Recoveryによって認識されるポリシーのいずれかである必要があることに注意してください。そうでないと、バックアップ ファイルは作成されません。
 
 スケジュールには、ラベルと保持値の 2 つの部分があります。
 
@@ -48,7 +48,7 @@ NetApp Backup and Recovery を使用すると、システム (クラスタ) ご�
 
 * 毎週、毎月、ボリュームのバックアップファイルが作成されます
 * 8週目には、最初の週次バックアップが削除され、8週目の新しい週次バックアップが追加されます（最大7つの週次バックアップが保持されます）
-* 13 か月目に、最初の月次バックアップが削除され、13 か月目の新しい月次バックアップが追加されます (最大 12 個の月次バックアップが保持されます)
+* 13 か月目に、最初の月次バックアップが削除され、13 か月目の新しい月次バックアップが追加されます (最大 12 の月次バックアップが保持されます)
 
 
 年間バックアップは、オブジェクト ストレージに転送された後、ソース システムから自動的に削除されます。このデフォルトの動作は、システムの「詳細設定」ページで変更できます。
@@ -59,9 +59,9 @@ NetApp Backup and Recovery を使用すると、システム (クラスタ) ご�
 
 NetApp Backup and Recovery は、ボリューム バックアップに対する DataLock およびランサムウェア保護のサポートを提供します。これらの機能を使用すると、バックアップ ファイルをロックしてスキャンし、バックアップ ファイル上のランサムウェアの可能性を検出できます。これは、クラスターのボリューム バックアップをさらに保護したい場合に、バックアップ ポリシーで定義できるオプションの設定です。
 
-これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。DataLock および Ransomware Resilience オプションを有効にすると、 NetApp Backup and Recovery アクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。
+これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。  DataLock および Ransomware Resilience オプションを有効にすると、 NetApp Backup and Recoveryアクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。
 
-https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["詳細については、DataLockとランサムウェア保護のブログをご覧ください。"^] 。
+https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["詳細については、DataLockとランサムウェア保護のブログをご覧ください。"^]。
 
 この機能はソース ボリュームを保護するものではなく、ソース ボリュームのバックアップのみを保護します。いくつかの https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAPが提供するランサムウェア対策"^]ソースボリュームを保護します。
 
@@ -106,7 +106,7 @@ DataLock は、バックアップ ファイルが一定期間変更または削�
 * 毎日 30 回、毎週 7 回、毎月 12 回のバックアップを作成するバックアップ ポリシーを作成する場合、ロックされた保持期間は 3 つあります。
 +
 ** 「30日ごと」のバックアップは61日間（30日間＋31日間のバッファ）保持されます。
-** 「7週間ごと」のバックアップは11週間（7週間＋31日間）保持され、
+** 「7週間ごと」のバックアップは11週間（7週間＋31日）保持され、
 ** 「12 か月ごと」のバックアップは 12 か月間 (プラス 31 日間) 保持されます。
 
 
@@ -134,7 +134,7 @@ DataLock の保持設定は、バックアップ ポリシーのポリシー保�
 
 
 
-。 link:prev-ontap-policy-object-advanced-settings.html["詳細設定ページでランサムウェア保護オプションを更新する方法"] 。
+参照link:prev-ontap-policy-object-advanced-settings.html["詳細設定ページでランサムウェア保護オプションを更新する方法"]。
 
 
 
@@ -228,7 +228,7 @@ ifdef::aws[]
 
 ====
 +
-https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["必要な権限をコピーして貼り付けることができるポリシーの完全なJSON形式を表示します。"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["必要な権限をコピーして貼り付けることができるポリシーの完全なJSON形式を表示します。"^]。
 
 
 
@@ -307,7 +307,7 @@ endif::gcp[]
 === 制限事項
 
 * バックアップ ポリシーでアーカイブ ストレージを構成している場合、DataLock およびランサムウェア保護機能は使用できません。
-* NetApp Backup and Recovery をアクティブ化するときに選択した DataLock オプションは、そのクラスターのすべてのバックアップ ポリシーに使用する必要があります。
+* NetApp Backup and Recoveryをアクティブ化するときに選択した DataLock オプションは、そのクラスターのすべてのバックアップ ポリシーに使用する必要があります。
 * 単一のクラスターで複数の DataLock モードを使用することはできません。
 * DataLock を有効にすると、すべてのボリュームのバックアップがロックされます。  1 つのクラスターにロックされたボリューム バックアップとロックされていないボリューム バックアップを混在させることはできません。
 * DataLock およびランサムウェア保護は、DataLock およびランサムウェア保護が有効になっているバックアップ ポリシーを使用した新しいボリューム バックアップに適用されます。後で「詳細設定」オプションを使用してこれらの機能を有効または無効にすることができます。
@@ -339,7 +339,7 @@ NOTE: 代わりに、Microsoft Azure ではロックおよびロック解除モ�
 
 DataLockのコストを軽減するためのヒントについては、以下を参照してください。https://community.netapp.com/t5/Tech-ONTAP-Blogs/Understanding-NetApp-Backup-and-Recovery-DataLock-and-Ransomware-Feature-TCO/ba-p/453475[]
 
-さらに、DataLockに関連する費用の見積もりは、 https://bluexp.netapp.com/cloud-backup-service-tco-calculator["NetAppバックアップおよびリカバリの総所有コスト (TCO) 計算ツール"] 。
+さらに、DataLockに関連する費用の見積もりは、 https://bluexp.netapp.com/cloud-backup-service-tco-calculator["NetApp Backup and Recoveryの総所有コスト (TCO) 計算ツール"] 。
 
 
 
@@ -363,10 +363,10 @@ ifdef::aws[]
 
 * AWS では、バックアップは _Standard_ ストレージ クラスで開始され、30 日後に _Standard-Infrequent Access_ ストレージ クラスに移行します。
 +
-クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"] 。
+クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"]。
 
 +
-** NetApp Backup and Recovery をアクティブ化するときに最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
+** NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。
 ** 最初のバックアップ ポリシーで _S3 Glacier_ を選択した場合は、そのクラスターの将来のバックアップ ポリシーを _S3 Glacier Deep Archive_ 層に変更できます。
 ** 最初のバックアップ ポリシーで _S3 Glacier Deep Archive_ を選択した場合、その層はそのクラスターの将来のバックアップ ポリシーで使用できる唯一のアーカイブ層になります。
 
@@ -379,7 +379,7 @@ ifdef::azure[]
 
 * Azure では、バックアップは _Cool_ アクセス層に関連付けられています。
 +
-クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"] 。
+クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"]。
 
 
 
@@ -389,7 +389,7 @@ ifdef::gcp[]
 
 * GCP では、バックアップは _Standard_ ストレージ クラスに関連付けられています。
 +
-オンプレミスのクラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"] 。
+オンプレミスのクラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"]。
 
 
 
@@ -403,12 +403,12 @@ endif::gcp[]
 
 ifdef::aws[]
 
-+ ** AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"^] 。
++ ** AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"^]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-+ ** Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"^] 。
++ ** Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"^]。
 
 endif::azure[]

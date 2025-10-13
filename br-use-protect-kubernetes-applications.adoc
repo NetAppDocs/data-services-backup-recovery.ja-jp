@@ -14,22 +14,22 @@ summary: NetApp Backup and Recovery を使用すると、ワークロード ホ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用すると、kubeconfig ファイルを生成してアップロードしなくても、Kubernetes クラスターを簡単に検出できます。  NetAppコンソール ユーザー インターフェイスからコピーした簡単なコマンドを使用して、Kubernetes クラスターを接続し、必要なソフトウェアをインストールできます。
+NetApp Backup and Recovery を使用すると、kubeconfig ファイルを生成してアップロードしなくても、Kubernetes クラスターを簡単に検出できます。  NetApp Consoleのユーザー インターフェイスからコピーした簡単なコマンドを使用して、Kubernetes クラスターを接続し、必要なソフトウェアをインストールできます。
 
-.必要なNetAppコンソールロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp のバックアップとリカバリのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+.必要なNetApp Consoleロール
+組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
 == 新しいKubernetesアプリケーションを追加して保護する
 
-Kubernetes アプリケーションを保護するための最初のステップは、 NetApp Backup and Recovery 内にアプリケーションを作成することです。アプリケーションを作成すると、Kubernetes クラスター上で実行中のアプリケーションがコンソールに認識されます。
+Kubernetes アプリケーションを保護するための最初のステップは、NetApp Backup and Recovery内にアプリケーションを作成することです。アプリケーションを作成すると、Kubernetes クラスター上で実行中のアプリケーションがコンソールに認識されます。
 
 .開始する前に
-Kubernetesアプリケーションを追加して保護する前に、 link:br-start-discover.html["Kubernetesワークロードを発見する"] 。
+Kubernetesアプリケーションを追加して保護する前に、link:br-start-discover.html["Kubernetesワークロードを発見する"] 。
 
 .手順
-. NetApp Backup and Recovery で、*Inventory* を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
 . *アプリケーション*タブを選択します。
 . *アプリケーションの作成*を選択します。
@@ -56,7 +56,7 @@ NOTE: コンソールには検索パラメータや結果は保存されませ�
 
 
 .結果
-アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetAppコンソールは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。
+アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetApp Consoleは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。
 
 
 
@@ -65,7 +65,7 @@ NOTE: コンソールには検索パラメータや結果は保存されませ�
 すでに追加した Kubernetes アプリケーションで保護ポリシーを有効にします。
 
 .手順
-. NetApp Backup and Recovery で、*Inventory* を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
 . *アプリケーション*タブを選択します。
 . アプリケーションのリストで、保護するアプリケーションを選択し、関連する [アクション] メニューを選択します。
@@ -85,7 +85,7 @@ NOTE: コンソールには検索パラメータや結果は保存されませ�
 将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。
 
 .手順
-. NetApp Backup and Recovery で、*Inventory* を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
 . *アプリケーション*タブを選択します。
 . アプリケーションのリストで、バックアップするアプリケーションを選択し、関連する [アクション] メニューを選択します。

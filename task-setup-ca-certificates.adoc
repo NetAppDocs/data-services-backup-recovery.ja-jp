@@ -52,7 +52,7 @@ local service-manager-2_cloudmanager_cbs_volume"
 ----
 +
 
-NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では標準モードを使用します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では標準モードを使用します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 . NetApp Backup and Recoveryボリュームのマウント ポイントを見つけます。以下を実行します。
 +
@@ -70,7 +70,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 +
 
-NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 . MountPoint ディレクトリに変更します。以下を実行します。
 +
@@ -104,7 +104,7 @@ cd cbs_config
 ** `production-customer.json`標準モードと制限モードの展開に使用されます。
 ** `darksite-customer.json`プライベート モードの展開に使用されます。
 +
-参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 +
 *設定ファイル*
@@ -162,7 +162,7 @@ cd cbs_catalog_config
 ** `production-customer.json`標準モードと制限モードの展開に使用されます。
 ** `darksite-customer.json`プライベート モードの展開に使用されます。
 +
-参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 +
 *カタログ設定ファイル*
@@ -256,7 +256,7 @@ openssl crl2pkcs7 -nocrl -certfile /etc/pki/tls/certs/ca-bundle.crt | openssl pk
 
 NetApp Backup and RecoveryコンテナとONTAP間の通信でONTAP証明書を検証する必要がある場合は、次の手順を実行します。
 
-NetApp Backup and Recovery は、クラスタ管理 IP を使用してONTAPに接続します。証明書のサブジェクト代替名にクラスターの IP アドレスを入力します。  System Manager UI を使用して CSR を生成する場合は、この手順を指定します。
+NetApp Backup and Recovery は、クラスタ管理 IP を使用してONTAPに接続します。証明書のサブジェクト代替名にクラスターの IP アドレスを入力します。System Manager UI を使用して CSR を生成する場合は、この手順を指定します。
 
 System Manager のドキュメントを使用して、 ONTAPの新しい CA 証明書を作成します。
 
@@ -287,7 +287,7 @@ local service-manager-2_cloudmanager_cbs_volume
 ----
 +
 
-NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 . ボリュームのマウントを取得します。以下を実行します。
 +
@@ -305,7 +305,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 +
 
-NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 . マウントポイント ディレクトリに変更します。以下を実行します。
 +
@@ -344,7 +344,7 @@ cd cbs_config
 ** `production-customer.json`標準モードと制限モードの展開に使用されます。
 ** `darksite-customer.json`プライベート モードの展開に使用されます。
 +
-参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 +
 *設定ファイル*
@@ -400,7 +400,7 @@ cd cbs_catalog_config
 ** `production-customer.json`標準モードと制限モードの展開に使用されます。
 ** `darksite-customer.json`プライベート モードの展開に使用されます。
 +
-参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"]。
 
 +
 *設定ファイル*

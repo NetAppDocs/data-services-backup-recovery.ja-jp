@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-start-prereq.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery 
-summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、 NetApp Backup and Recovery を開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。 
+summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。 
 ---
-= NetAppバックアップおよびリカバリの前提条件
+= NetApp Backup and Recoveryの前提条件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 運用環境、コンソール エージェント、コンソール ア
 
 
 [role="lead"]
-運用環境、 NetAppコンソール エージェント、およびNetAppコンソール アカウントの準備状況を確認して、 NetAppバックアップおよびリカバリを開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。
+運用環境、 NetApp Consoleエージェント、およびNetApp Consoleアカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。
 
 
 
@@ -53,10 +53,10 @@ Microsoft Windows サポートされているバージョンに関する最新�
 
 
 | SnapCenter Serverのバージョン  a| 
-SnapCenterからNetApp Backup and Recovery に既存のデータをインポートする場合は、 SnapCenter Server バージョン 5.0 以上が必要です。
+SnapCenterからNetApp Backup and Recoveryに既存のデータをインポートする場合は、 SnapCenter Server バージョン 5.0 以上が必要です。
 
 
-NOTE: SnapCenterがすでにある場合は、まずSnapCenterからインポートする前に前提条件を満たしていることを確認してください。見るlink:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"] 。
+NOTE: SnapCenterがすでにある場合は、まずSnapCenterからインポートする前に前提条件を満たしていることを確認してください。見るlink:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"]。
 
 
 
@@ -163,7 +163,7 @@ Oracle リソースを検出して保護するための特定の要件を環境�
 
 Kubernetes リソースを検出し、Kubernetes アプリケーションを保護するには、特定の要件が必要です。
 
-NetAppコンソールの要件については、<<NetAppコンソール>> 。
+NetApp Consoleの要件については、<<NetApp Console>> 。
 
 * プライマリONTAPシステム（ONTAP 9.16.1 以降）
 * Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンは次のとおりです。
@@ -224,16 +224,16 @@ NOTE: Hyper-V ホストにログ フォルダー用の十分なディスク領�
 
 
 
-== NetAppコンソール
+== NetApp Console
 
-NetAppコンソールが次の要件を満たしていることを確認します。
+NetApp Consoleが次の要件を満たしていることを確認します。
 
-* コンソール ユーザーには、Microsoft SQL Server および Kubernetes ワークロードで操作を実行するために必要なロールと権限が必要です。リソースを検出するには、 NetAppバックアップおよびリカバリのスーパー管理者のロールが必要です。見るlink:reference-roles.html["NetAppバックアップおよびリカバリ機能へのロールベースのアクセス"]NetApp Backup and Recovery で操作を実行するために必要なロールと権限の詳細については、こちらをご覧ください。
+* コンソール ユーザーには、Microsoft SQL Server および Kubernetes ワークロードで操作を実行するために必要なロールと権限が必要です。リソースを検出するには、 NetApp Backup and Recoveryのスーパー管理者のロールが必要です。見るlink:reference-roles.html["NetApp Backup and Recovery機能へのロールベースのアクセス"]NetApp Backup and Recoveryで操作を実行するために必要なロールと権限の詳細については、 を参照してください。
 * オンプレミスのONTAPクラスターまたはCloud Volumes ONTAPに接続するアクティブなコンソール エージェントが少なくとも 1 つあるコンソール組織。
 * NetAppオンプレミスONTAPまたはCloud Volumes ONTAPクラスターを備えた少なくとも 1 つのコンソール システム。
 * コンソールエージェント
 +
-参照 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントの設定方法を学ぶ"]そして https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetAppコンソールの要件"^]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントの設定方法を学ぶ"]そして https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetApp Consoleの要件"^]。
 
 +
 ** プレビュー バージョンでは、コンソール エージェントに Ubuntu 22.04 LTS オペレーティング システムが必要です。
@@ -243,11 +243,11 @@ NetAppコンソールが次の要件を満たしていることを確認しま�
 
 
 
-=== NetAppコンソールのセットアップ
+=== NetApp Consoleのセットアップ
 
-次のステップは、コンソールとNetAppバックアップおよびリカバリをセットアップすることです。
+次のステップは、コンソールとNetApp Backup and Recovery をセットアップすることです。
 
-レビュー https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetAppコンソールの要件"^]。
+レビュー https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準のNetApp Consoleの要件"^]。
 
 
 
@@ -255,7 +255,7 @@ NetAppコンソールが次の要件を満たしていることを確認しま�
 
 バックアップとリカバリを試すには、 NetApp製品チームに問い合わせてください。その後、コンソール エージェントを使用すると、サービスに適切な機能が含まれるようになります。
 
-サービスを使用する前にNetAppコンソールでコンソールエージェントを作成するには、コンソールのドキュメントを参照してください。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コンソールエージェントを作成する方法"^] 。
+サービスを使用する前にNetApp Consoleでコンソールエージェントを作成するには、コンソールのドキュメントを参照してください。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コンソールエージェントを作成する方法"^] 。
 
 .コンソールエージェントをインストールする場所
 復元操作を完了するには、コンソール エージェントを次の場所にインストールできます。

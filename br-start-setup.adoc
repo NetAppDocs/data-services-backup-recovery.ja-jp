@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-setup.html 
 keywords: backup, back up, restore, recovery, aws, azure 
-summary: NetApp Backup and Recovery を使用する前に、いくつかの手順を実行してバックアップ先を設定します。 
+summary: NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。 
 ---
 = NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recovery を使用する前に、いくつかの手�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用する前に、いくつかの手順を実行してバックアップ先を設定します。
+NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。
 
 始める前に、link:concept-start-prereq.html["前提条件"]環境の準備ができていることを確認します。
 
@@ -51,7 +51,7 @@ AWS をバックアップ先として準備するには、次の手順を実行�
 
 
 
-バックアップ先自体でオプションを設定した後、後でNetApp Backup and Recovery でバックアップ先として設定します。  NetApp Backup and Recoveryでバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"] 。
+バックアップ先自体でオプションを設定した後、後でNetApp Backup and Recoveryでバックアップ先として設定します。  NetApp Backup and Recoveryでバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"] 。
 
 
 
@@ -64,7 +64,7 @@ AWS S3 権限を 2 セット設定する必要があります。
 
 
 .手順
-. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetAppコンソールポリシー権限"] 。
+. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"] 。
 +
 
 NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。

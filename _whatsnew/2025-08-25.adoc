@@ -11,7 +11,7 @@
 
 NOTE: VMware ワークロードの保護に関するドキュメントは、テクノロジー プレビューとして提供されます。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMwareワークロードの保護について詳しくは、こちらをご覧ください。"] 。
+link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMwareワークロードの保護について詳しくは、こちらをご覧ください。"]。
 
 
 

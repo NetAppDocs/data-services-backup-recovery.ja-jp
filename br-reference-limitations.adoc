@@ -16,14 +16,14 @@ summary: 既知の制限事項では、このリリースの製品ではサポ�
 [role="lead"]
 このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。
 
-* NetApp Backup and Recovery では、 Cloud Volumes ONTAP をAWS 中国リージョン (北京と寧夏を含む) のオブジェクト ストアにバックアップできますが、最初に ID およびアクセス ポリシーを手動で変更する必要がある場合があります。
+* NetApp Backup and Recovery、 Cloud Volumes ONTAP をAWS 中国リージョン (北京と寧夏を含む) のオブジェクト ストアにバックアップできますが、最初に ID およびアクセス ポリシーを手動で変更する必要がある場合があります。
 +
 AWSでコンソールエージェントを作成する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html["AWS にコンソールエージェントをインストールする"^] 。
 
 +
-詳細については、ブログ投稿をご覧ください。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetAppバックアップおよびリカバリ機能ブログ 2023 年 5 月"^] 。
+詳細については、ブログ投稿をご覧ください。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetApp Backup and Recovery機能ブログ 2023 年 5 月"^] 。
 
-* NetApp Backup and Recovery は、Microsoft Azure China リージョンをサポートしていません。
+* NetApp Backup and Recovery は、 Microsoft Azure China リージョンをサポートしていません。
 +
 Azureでコンソールエージェントを作成する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-bluexp.html["Azure にコンソール エージェントをインストールする"^] 。
 
@@ -38,7 +38,7 @@ Azureでコンソールエージェントを作成する方法の詳細につい
 +
 FlexVolボリュームには制限はありません。システム内のすべてのFlexVolボリュームを選択し、同じバックアップ ポリシーを割り当てることができます。
 
-* 以下の機能は以下でサポートされています https://docs.netapp.com/us-en/data-services-replication/index.html["NetAppレプリケーション"]ただし、 NetApp Backup and Recovery のレプリケーション機能を使用する場合は除きます。
+* 以下の機能は以下でサポートされています https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"]ただし、 NetApp Backup and Recoveryのレプリケーション機能を使用する場合は除きます。
 +
 ** ボリューム A からボリューム B へ、またボリューム B からボリューム C へレプリケーションが行われるカスケード構成はサポートされていません。ボリューム A からボリューム B へのレプリケーションはサポートされています。
 ** FSx for ONTAPシステムとの間でのデータの複製はサポートされていません。
@@ -58,19 +58,19 @@ FlexVolボリュームには制限はありません。システム内のすべ�
 
 
 
-* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recovery を使用してこれらのボリュームをバックアップしないでください。
+* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recoveryを使用してこれらのボリュームをバックアップしないでください。
 * データをバックアップする場合、 NetApp Backup and Recovery はNetApp Volume Encryption (NVE) を維持しません。つまり、NVE ボリューム上の暗号化されたデータは、データが宛先に転送されている間に復号化され、暗号化は維持されません。
 +
 これらの暗号化の種類についての説明については、https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryptionの設定 - 概要"^] 。
 
 
 
-* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recovery を使用してこれらのボリュームをバックアップしないでください。
+* SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recoveryを使用してこれらのボリュームをバックアップしないでください。
 * ボリュームがポリシーに割り当てられていない状態でバックアップ ポリシーを作成または編集すると、保持されるバックアップの数は最大 1018 になります。ボリュームをポリシーに割り当てた後、ポリシーを編集して最大 4000 個のバックアップを作成できます。
 * データ保護 (DP) ボリュームをバックアップする場合:
 +
 ** SnapMirrorラベルとの関係 `app_consistent`そして `all_source_snapshot`クラウドにバックアップされません。
-** SnapMirror の宛先ボリュームにスナップショットのローカル コピーを作成した場合 (使用されているSnapMirrorラベルに関係なく)、これらのスナップショットはバックアップとしてクラウドに移動されません。この時点で、 NetApp Backup and Recovery でバックアップできるように、ソース DP ボリュームに必要なラベルが付いたスナップショット ポリシーを作成する必要があります。
+** SnapMirror の宛先ボリュームにスナップショットのローカル コピーを作成した場合 (使用されているSnapMirrorラベルに関係なく)、これらのスナップショットはバックアップとしてクラウドに移動されません。この時点で、NetApp Backup and Recoveryでバックアップできるように、ソース DP ボリュームに必要なラベルが付いたスナップショット ポリシーを作成する必要があります。
 
 
 * FlexGroupボリュームのバックアップはアーカイブ ストレージに移動できません。
@@ -78,7 +78,7 @@ FlexVolボリュームには制限はありません。システム内のすべ�
 * SVM-DR ボリュームのバックアップは、次の制限付きでサポートされます。
 +
 ** バックアップはONTAPセカンダリからのみサポートされます。
-** ボリュームに適用されるスナップショット ポリシーは、毎日、毎週、毎月など、 NetApp Backup and Recovery で認識されるポリシーのいずれかである必要があります。デフォルトの「sm_created」ポリシー (すべてのスナップショットのミラーリングに使用) は認識されず、DP ボリュームはバックアップ可能なボリュームのリストに表示されません。
+** ボリュームに適用されるスナップショット ポリシーは、毎日、毎週、毎月など、 NetApp Backup and Recoveryで認識されるポリシーのいずれかである必要があります。デフォルトの「sm_created」ポリシー (すべてのスナップショットのミラーリングに使用される) は認識されず、DP ボリュームはバックアップ可能なボリュームのリストに表示されません。
 ** SVM-DR とボリュームのバックアップおよびリカバリは、バックアップがソースまたは宛先のいずれかから取得される場合、完全に独立して動作します。唯一の制限は、SVM-DR がSnapMirrorクラウド関係を複製しないことです。  DR シナリオでは、SVM がセカンダリ ロケーションでオンラインになったときに、 SnapMirrorクラウド関係を手動で更新する必要があります。
 
 
@@ -93,8 +93,8 @@ FlexVolボリュームには制限はありません。システム内のすべ�
 
 * *今すぐバックアップ* ボタンを使用したアドホック ボリューム バックアップは、データ保護ボリュームではサポートされていません。
 * SM-BC 構成はサポートされていません。
-* ONTAP は、単一のボリュームから複数のオブジェクト ストアへのSnapMirror関係のファンアウトをサポートしていないため、この構成はNetApp Backup and Recovery ではサポートされていません。
-* 現在、オブジェクト ストアの WORM/コンプライアンス モードは、Amazon S3、Azure、 StorageGRIDでサポートされています。これは DataLock 機能と呼ばれ、クラウド プロバイダー インターフェイスではなく、 NetApp のバックアップおよびリカバリ設定を使用して管理する必要があります。
+* ONTAP は、単一のボリュームから複数のオブジェクト ストアへのSnapMirror関係のファンアウトをサポートしていません。そのため、この構成はNetApp Backup and Recoveryではサポートされていません。
+* 現在、オブジェクト ストアの WORM/コンプライアンス モードは、Amazon S3、Azure、 StorageGRIDでサポートされています。これは DataLock 機能と呼ばれ、クラウド プロバイダー インターフェイスではなく、 NetApp Backup and Recoveryの設定を使用して管理する必要があります。
 
 
 

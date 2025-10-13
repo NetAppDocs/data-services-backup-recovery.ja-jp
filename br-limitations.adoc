@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery では、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+summary: NetApp Backup and Recovery、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
 ---
-= Microsoft SQL Server ワークロードに対するNetApp Backup and Recovery の既知の制限
+= Microsoft SQL Server ワークロードに対するNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -30,7 +30,7 @@ summary: NetApp Backup and Recovery では、サービスを使用するため�
 
 == 標準展開モードのみ
 
-このNetApp Backup and Recovery バージョンは、制限モードやプライベート モードではなく、標準展開モードでのみ動作します。
+このNetApp Backup and Recoveryバージョンは、制限モードやプライベート モードではなく、標準展開モードでのみ動作します。
 
 
 
@@ -42,9 +42,9 @@ Windows クラスター名にはアンダースコア (_) 文字を含めるこ�
 
 == SnapCenterの移行に関する問題
 
-SnapCenterからNetApp Backup and Recovery へのリソースの移行には、次の制限があります。
+SnapCenterからNetApp Backup and Recoveryへのリソースの移行には、次の制限があります。
 
-SnapCenterポリシーをNetAppバックアップおよびリカバリポリシーに移行する方法の詳細については、以下を参照してください。link:reference-policy-differences-snapcenter.html["SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較"] 。
+SnapCenterポリシーをNetApp Backup and Recoveryポリシーに移行する方法の詳細については、以下を参照してください。link:reference-policy-differences-snapcenter.html["SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較"] 。
 
 
 
@@ -98,15 +98,15 @@ NetApp Backup and Recovery は、 SnapCenterからログのみのバックアッ
 
 === ホストマッピング
 
-SnapCenter には、リソースをホストにマップするストレージ クラスターや SVM がありませんが、 NetApp Backup and Recovery にはあります。オンプレミスのONTAPクラスターまたは SVM は、 NetApp Backup and Recovery プレビュー バージョンではホストにマッピングされません。さらに、 NetAppコンソールは SVM をサポートしていません。
+SnapCenter には、リソースをホストにマップするストレージ クラスターや SVM がありませんが、 NetApp Backup and Recovery にはあります。オンプレミスのONTAPクラスターまたは SVM は、NetApp Backup and Recoveryプレビュー バージョンではホストにマッピングされません。さらに、 NetApp ConsoleはSVM をサポートしていません。
 
-*回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recovery で作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recovery にインポートします。
+*回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recoveryで作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recoveryにインポートします。
 
 
 
 === 15分間隔ではないスケジュール
 
-特定の時間に開始され、15 分間隔以外の間隔で繰り返されるSnapCenterポリシー スケジュールがある場合、 NetApp Backup and Recovery ではそのスケジュールはインポートされません。
+特定の時間に開始され、15 分間隔以外の間隔で繰り返されるSnapCenterポリシー スケジュールがある場合、 NetApp Backup and Recoveryそのスケジュールはインポートされません。
 
 *回避策*: SnapCenterを使用して、ポリシーが 15 分間隔で繰り返されるように調整します。
 
@@ -114,4 +114,4 @@ SnapCenter には、リソースをホストにマップするストレージ �
 
 == 仮想化管理ソフトウェアのサポートが限定的
 
-KVM ワークロードを保護する場合、Apache CloudStack や Red Hat OpenShift Virtualization などの仮想化管理ソフトウェアが使用されている場合、 NetApp Backup and Recovery は KVM ワークロードの検出をサポートしません。
+KVM ワークロードを保護する場合、Apache CloudStack や Red Hat OpenShift Virtualization などの仮想化管理ソフトウェアが使用されている場合、 NetApp Backup and Recovery はKVM ワークロードの検出をサポートしません。

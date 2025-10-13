@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-mount-unmount.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery を使用して Oracle ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して Oracle ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery を使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする
+= NetApp Backup and Recoveryを使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,7 +23,7 @@ summary: NetApp Backup and Recovery を使用して Oracle ワークロードを
 データベースの保護ポリシーを構成してアーカイブ ログを保持すると、データベースの回復ポイントをマウントして、データベースに加えられたすべての変更の履歴を表示できます。
 
 .手順
-. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
 . Oracle タイルを選択します。
 . [バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。
 . リスト内の Oracle Database ワークロードについては、「*表示*」を選択します。
@@ -55,7 +55,7 @@ summary: NetApp Backup and Recovery を使用して Oracle ワークロードを
 データベースに加えられた変更を表示する必要がなくなった場合は、回復ポイントをマウント解除します。
 
 .手順
-. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
 . Oracle タイルを選択します。
 . [バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。
 . リスト内の Oracle ワークロードについては、「*表示*」を選択します。

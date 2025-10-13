@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore.html 
 keywords: restore, vmware, vm, virtual machine, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery で VMware ワークロードを復元する
+= NetApp Backup and Recoveryで VMware ワークロードを復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから VMware ワークロードを復元します。
+NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから VMware ワークロードを復元します。
 
 .これらの場所から復元
 異なる開始場所からワークロードを復元できます。
@@ -45,7 +45,7 @@ TIP: バックアップ ファイルの内容にアクセスするには、ク�
 * ローカル バックアップ ファイルからワークロードを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。
 * 複製されたワークロードから復元する場合、ワークロードを元のシステムまたはオンプレミスのONTAPシステムに復元できます。
 +
-image:diagram_browse_restore_volume-unified.png["リソースを復元するフローを示す図"]
+image:diagram_browse_restore_volume-unified.png["リソースを復元する流れを示す図"]
 
 * オブジェクト ストレージからバックアップを復元する場合、データを元のシステムまたはオンプレミスのONTAPシステムに復元できます。
 
@@ -58,10 +58,10 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元するフ�
 
 復元オプションを使用して VMware ワークロードを復元します。スナップショットは、名前またはフィルターを使用して検索できます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ リストア管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ リストア管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、[復元] を選択します。
+. NetApp Backup and Recoveryメニューから、[復元] を選択します。
 . 名前検索フィールドの右側にあるドロップダウン リストから、*仮想マシン* を選択します。
 . 復元するリソースの名前を入力するか、復元するリソースが配置されている vCenter、データセンター、またはデータストアでフィルタリングします。
 +

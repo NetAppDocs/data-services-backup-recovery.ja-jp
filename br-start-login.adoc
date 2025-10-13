@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-login.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetAppコンソールを使用して、 NetApp Backup and Recovery サービスにログインします。 
+summary: NetApp Consoleを使用して、 NetApp Backup and Recoveryサービスにログインします。 
 ---
-= NetAppバックアップおよびリカバリにログイン
+= NetApp Backup and Recoveryにログイン
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ summary: NetAppコンソールを使用して、 NetApp Backup and Recovery サ�
 
 
 [role="lead"]
-NetAppコンソールを使用してNetApp Backup and Recovery にログインします。
+NetApp Consoleを使用してNetApp Backup and Recoveryにログインします。
 
 NetApp Backup and Recovery は、アイデンティティおよびアクセス管理を使用して、各ユーザーが実行できる操作を制御します。
 
-各ロールが実行できるアクションの詳細については、link:reference-roles.html["NetAppバックアップおよびリカバリのユーザー ロール"] 。
+各ロールが実行できるアクションの詳細については、link:reference-roles.html["NetApp Backup and Recoveryのユーザー ロール"] 。
 
-NetAppコンソールにログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetAppコンソール ログインにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
+NetApp Consoleにログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetApp Consoleログインにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
 
-*必要なNetAppコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 コンソール エージェントを追加するには、バックアップとリカバリのスーパー管理者ロールが必要です。
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com/["NetAppコンソール"^] 。
+. ウェブブラウザを開いて、 https://console.netapp.com/["NetApp Console"^] 。
 +
-NetAppコンソールのログイン ページが表示されます。
+NetApp Consoleのログイン ページが表示されます。
 
 . コンソールにログインします。
 . コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
 +
-** バックアップおよびリカバリに初めてログインし、*システム* ページにまだシステムを追加していない場合は、バックアップおよびリカバリによって「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、システムを追加するオプションが提供されます。*システム*ページにシステムを追加する方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetAppコンソール標準モードの使用開始"^] 。
+** バックアップおよびリカバリに初めてログインし、*システム* ページにまだシステムを追加していない場合は、バックアップおよびリカバリによって「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、システムを追加するオプションが提供されます。  *システム*ページにシステムを追加する方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準モードの使用開始"^] 。
 ** バックアップおよびリカバリに初めてログインし、*システム* ページにシステムをすでに追加しているが、リソースがまだ検出されていない場合は、「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、*リソースの検出* オプションが表示されます。
 
 

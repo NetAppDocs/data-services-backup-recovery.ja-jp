@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-reports.html 
 keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
-summary: NetApp Backup and Recovery では、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。 
+summary: NetApp Backup and Recoveryでは、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。 
 ---
-= NetApp Backup and Recovery で Microsoft SQL Server ワークロードのレポートを作成する
+= NetApp Backup and Recoveryで Microsoft SQL Server ワークロードのレポートを作成する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,15 +12,15 @@ summary: NetApp Backup and Recovery では、バックアップの数、成功�
 
 
 [role="lead"]
-NetApp Backup and Recovery では、Microsoft SQL Server ワークロードのレポートを作成して、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。
+NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、バックアップの数、成功したバックアップの数、失敗したバックアップの数などのバックアップのステータスを表示します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。
 
 
 
 == レポートを作成する
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
-. NetAppバックアップおよびリカバリ メニューから、*レポート* オプションを選択します。
+. NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。
 . *レポートの作成*を選択します。
 . レポート範囲の詳細を入力します:
 +

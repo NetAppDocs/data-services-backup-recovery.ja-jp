@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations-oracle.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, KVM, SAP HANA database, virtual machine, vm 
-summary: NetApp Backup and Recovery では、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+summary: NetApp Backup and Recovery、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
 ---
-= Oracle ワークロード向けNetApp Backup and Recovery の既知の制限
+= Oracle ワークロード向けNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery では、サービスを使用するため�
 [role="lead"]
 このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。
 
-NetApp Backup and Recovery の Oracle Database ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。
+NetApp Backup and Recoveryの Oracle Database ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。
 
 * オフライン バックアップ
 * クローン

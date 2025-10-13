@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-roles.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, IAM, identity, access, management 
-summary: NetApp Backup and Recovery は、IAM ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを管理します。 
+summary: NetApp Backup and Recovery は、 IAM ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを管理します。 
 ---
-= NetAppバックアップおよびリカバリの ID およびアクセス管理 (IAM) ロール
+= NetApp Backup and RecoveryのID およびアクセス管理 (IAM) ロール
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,6 +14,6 @@ summary: NetApp Backup and Recovery は、IAM ロールを使用して、各ユ�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、Identity and Access Management (IAM) を使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。
+NetApp Backup and Recovery は、 Identity and Access Management (IAM) を使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。
 
-NetApp Backup and Recoveryに固有のIAMロールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetAppコンソールのNetAppバックアップおよびリカバリの役割"^] 。
+NetApp Backup and Recoveryに固有のIAMロールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^] 。

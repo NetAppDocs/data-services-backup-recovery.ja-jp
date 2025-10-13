@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-reference-gcp-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery は、1 つの Google アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
+summary: NetApp Backup and Recovery は、 1 つの Google アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
 ---
-= NetApp Backup and Recovery でサポートされている Google アーカイブ ストレージ層
+= NetApp Backup and Recoveryでサポートされている Google アーカイブ ストレージ層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: NetApp Backup and Recovery は、1 つの Google アーカイブ スト
 
 
 [role="lead"]
-NetApp Backup and Recovery は、1 つの Google アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
+NetApp Backup and Recovery は、 1 つの Google アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
 
 []
 ====
-*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetAppバックアップおよびリカバリUIに切り替える"] 。
+*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
 ====
 
 
-== NetAppバックアップとリカバリでサポートされている Google アーカイブ ストレージ クラス
+== NetApp Backup and Recoveryでサポートされている Google アーカイブ ストレージ クラス
 
 バックアップ ファイルは、最初に作成されると、_標準_ ストレージに保存されます。この層は、アクセス頻度の低いデータを保存するように最適化されていますが、すぐにアクセスすることもできます。
 
 オンプレミスのクラスターでONTAP 9.12.1 以降を使用している場合は、一定の日数 (通常は 30 日以上) が経過すると、 NetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化して、コストをさらに最適化することができます。この層のデータは取得コストが高くなるため、アーカイブされたバックアップ ファイルからデータを復元する必要がある頻度を考慮する必要があります。アーカイブ ストレージからのデータの復元については、このページのセクションを参照してください。
 
-このタイプのライフサイクル ルールを使用してNetApp Backup and Recovery を構成する場合は、Google アカウントでバケットを設定するときにライフサイクル ルールを構成しないでください。
+このタイプのライフサイクル ルールを使用してNetApp Backup and Recoveryを構成する場合は、Google アカウントでバケットを設定するときにライフサイクル ルールを構成しないでください。
 
-https://cloud.google.com/storage/docs/storage-classes["Google のストレージ クラスについて学ぶ"^] 。
+https://cloud.google.com/storage/docs/storage-classes["Google のストレージ クラスについて学ぶ"^]。
 
 
 

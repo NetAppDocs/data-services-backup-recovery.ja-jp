@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-configure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetAppバックアップとリカバリを構成するには、いくつかの手順を実行します。 
+summary: NetApp Backup and Recoveryを構成するには、いくつかの手順を実行します。 
 ---
-= NetAppバックアップおよびリカバリ設定を構成する
+= NetApp Backup and Recovery設定を構成する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: NetAppバックアップとリカバリを構成するには、いく�
 
 
 [role="lead"]
-NetAppコンソールをセットアップした後、バックアップとリカバリの設定を構成します。ホスト リソースの資格情報を追加し、 SnapCenterリソースをインポートし、ログ ディレクトリを構成し、VMware vCenter 設定を設定します。データをバックアップまたは復元する前に、これらの手順を完了してください。
+NetApp Consoleをセットアップした後、バックアップとリカバリの設定を構成します。ホスト リソースの資格情報を追加し、 SnapCenterリソースをインポートし、ログ ディレクトリを構成し、VMware vCenter 設定を設定します。データをバックアップまたは復元する前に、これらの手順を完了してください。
 
 * <<ホストリソースの資格情報を追加する>>SnapCenterからインポートした Windows および SQL Server ホストに対して、資格情報を追加します。  (Microsoft SQL Server ワークロードのみ)
-* <<VMware vCenter 設定を維持する>> 。
-* <<SnapCenterホストリソースのインポートと管理>> 。(Microsoft SQL Server ワークロードのみ)
-* <<Windowsホストのスナップショットのログディレクトリを構成する>> 。
+* <<VMware vCenter 設定を維持する>>。
+* <<SnapCenterホストリソースのインポートと管理>>。(Microsoft SQL Server ワークロードのみ)
+* <<Windowsホストのスナップショットのログディレクトリを構成する>>。
 
 
-*必要なNetAppコンソール ロール* バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -39,10 +39,10 @@ SnapCenterからインポートするホスト リソースの資格情報を追
 
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . *資格情報*の下矢印を選択します。
 . *新しい資格情報の追加*を選択します。
-. 資格情報の情報を入力します。選択した認証モードに応じて、異なるフィールドが表示されます。フィールドの詳細については、[情報] *i* を選択してください。
+. 資格情報の情報を入力します。選択した認証モードに応じて、異なるフィールドが表示されます。フィールドの詳細については、情報 *i* を選択してください。
 +
 ** *資格情報名*: 資格情報の名前を入力します。
 ** *認証モード*: *Windows* または *Microsoft SQL* を選択します。
@@ -75,7 +75,7 @@ TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必
 後で、 SnapCenterからインポートしたホスト リソースのパスワードを編集できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . 下矢印を選択して、*資格情報*セクションを展開します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *資格情報を編集*。
 +
@@ -92,7 +92,7 @@ TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必
 バックアップのワークロードを検出するには、VMware vCenter の資格情報を提供します。資格情報がない場合は、VMware vCenter Server ワークロードにアクセスして管理する権限を持つ資格情報を作成します。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . 下矢印を選択して、*VMware vCenter* セクションを展開します。
 . *vCenter の追加*を選択します。
 . VMware vCenter Server 情報を入力します。
@@ -110,7 +110,7 @@ TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必
 
 == SnapCenterホストリソースのインポートと管理
 
-以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recovery でそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数の Snapcenter サーバーを登録し、データベース ワークロードを検出できます。
+以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recoveryでそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数の Snapcenter サーバーを登録し、データベース ワークロードを検出できます。
 
 これは 2 つの部分から成るプロセスです。
 
@@ -122,13 +122,13 @@ TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必
 
 === SnapCenter Server アプリケーションとホスト リソースをインポートする
 
-この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp のバックアップおよびリカバリ インベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recovery によって管理されていません。
+この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recoveryによって管理されていません。
 
 
-TIP: SnapCenterホスト リソースをインポートした後、 NetApp Backup and Recovery は保護管理を引き継ぎません。そのためには、 NetApp Backup and Recovery でこれらのリソースを管理することを明示的に選択する必要があります。
+TIP: SnapCenterホスト リソースをインポートした後、 NetApp Backup and Recovery は保護管理を引き継ぎません。そのためには、 NetApp Backup and Recoveryでこれらのリソースを管理することを明示的に選択する必要があります。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . 下矢印を選択して、* SnapCenterからのインポート *セクションを展開します。
 . SnapCenterリソースをインポートするには、[* SnapCenterからのインポート*] を選択します。
 . * SnapCenterアプリケーションの資格情報*を入力してください:
@@ -159,14 +159,14 @@ NOTE: SnapCenterサーバーがすでに登録されている場合は、既存�
 
 === SnapCenterホストリソースの管理
 
-SnapCenterリソースをインポートした後、 NetApp Backup and Recovery でそれらのホスト リソースを管理します。インポートしたリソースを管理することを選択すると、 NetApp Backup and Recovery はSnapCenterからインポートしたリソースをバックアップおよびリカバリできるようになります。  SnapCenter Server でこれらのリソースを管理する必要がなくなります。
+SnapCenterリソースをインポートした後、 NetApp Backup and Recoveryでそれらのホスト リソースを管理します。インポートしたリソースを管理することを選択すると、 NetApp Backup and Recovery はSnapCenterからインポートしたリソースをバックアップおよびリカバリできるようになります。  SnapCenter Server でこれらのリソースを管理する必要がなくなります。
 
 .手順
-. SnapCenterリソースをインポートした後、表示される [インベントリ] ページで、今後NetApp Backup and Recovery で管理するインポートしたSnapCenterリソースを選択します。
+. SnapCenterリソースをインポートした後、表示される [インベントリ] ページで、今後NetApp Backup and Recoveryで管理するインポートしたSnapCenterリソースを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理* をクリックしてリソースを管理します。
-. * NetAppコンソールで管理* を選択します。
+. * NetApp Consoleで管理*を選択します。
 +
-インベントリ ページのホスト名の下に「*管理対象*」と表示され、選択したホスト リソースがNetApp Backup and Recovery によって管理されていることを示します。
+インベントリ ページで、ホスト名の下に *管理対象* と表示され、選択したホスト リソースがNetApp Backup and Recoveryによって管理されていることを示します。
 
 
 
@@ -179,7 +179,7 @@ SnapCenterリソースをインポートした後、 NetApp Backup and Recovery 
 SnapCenter Server のポートとパスワードの詳細のみを変更できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、[設定] を選択します。
+. NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . * SnapCenterからのインポート *の下矢印を選択します。
 +
 SnapCenterからのインポート ページには、以前のすべてのインポートが表示されます。
@@ -196,7 +196,7 @@ SnapCenterからのインポート ページには、以前のすべてのイン
 Windows ホストのポリシーを作成する前に、Windows ホストのスナップショット内のログ ディレクトリを構成する必要があります。ログ ディレクトリは、バックアップ プロセス中に生成されるログを保存するために使用されます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . インベントリページでワークロードを選択し、アクションアイコンを選択します。image:../media/icon-action.png["アクションオプション"] > *詳細を表示* をクリックして、ワークロードの詳細を表示します。
 . Microsoft SQL Server が表示されているインベントリの詳細ページで、[ホスト] タブを選択します。
 . インベントリの詳細ページでホストを選択し、アクションアイコンを選択します。image:../media/icon-action.png["アクションオプション"] > *ログディレクトリを設定します*。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-api-backup-restore.html 
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
-summary: Web UI を通じて利用できるNetApp のバックアップおよびリカバリ機能は、RESTful API を通じても利用できます。 
+summary: Web UI を通じて利用できるNetApp Backup and Recovery機能は、RESTful API を通じても利用できます。 
 ---
-= NetAppバックアップおよびリカバリ REST API による自動化
+= NetApp Backup and RecoveryREST API による自動化
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: Web UI を通じて利用できるNetApp のバックアップおよび
 [role="lead"]
 Web UI を通じて利用できるNetApp Backup and Recovery機能は、バックアップおよびリカバリ REST API を通じても利用できます。
 
-NetAppバックアップおよびリカバリでは、エンドポイントには 10 のカテゴリが定義されています。
+NetApp Backup and Recoveryには、次の 10 のエンドポイント カテゴリが定義されています。
 
 * `backup`- クラウドおよびオンプレミスのリソースのバックアップ操作を管理し、バックアップデータの詳細を取得します
 * `catalog`- クエリに基づいてファイルのインデックスカタログ検索を管理します (検索と復元)
@@ -34,21 +34,21 @@ NetAppバックアップおよびリカバリでは、エンドポイントに�
 
 == APIリファレンス
 
-NetAppの各バックアップおよびリカバリAPIのドキュメントは、以下から入手できます。 https://docs.netapp.com/us-en/console-automation/cbs/overview.html["NetAppバックアップおよびリカバリのためのNetAppコンソール自動化"^] 。
+NetApp Backup and RecoveryAPIのドキュメントは、以下から入手できます。 https://docs.netapp.com/us-en/console-automation/cbs/overview.html["NetApp Backup and RecoveryのためのNetApp Console自動化"^] 。
 
 
 
-== はじめる
+== 開始
 
-NetAppバックアップおよびリカバリ API の使用を開始するには、ユーザー トークン、 NetAppコンソール アカウント ID、およびコンソール エージェント ID を取得する必要があります。
+NetApp Backup and RecoveryAPI の使用を開始するには、ユーザー トークン、 NetApp Consoleアカウント ID、およびコンソール エージェント ID を取得する必要があります。
 
-API 呼び出しを行うときは、Authorization ヘッダーにユーザー トークンを追加し、x-agent-id ヘッダーにコンソール エージェント ID を追加します。  API ではNetAppコンソール アカウント ID を使用する必要があります。
+API 呼び出しを行うときは、Authorization ヘッダーにユーザー トークンを追加し、x-agent-id ヘッダーにコンソール エージェント ID を追加します。  API ではNetApp Consoleアカウント ID を使用する必要があります。
 
 
 NOTE: サービス アカウントを使用している場合は、ユーザー トークンの代わりにサービス アクセス トークンを使用する必要があります。「client_id」の値 (「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」) は固定値であり、変更できません。この場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-automation/platform/create_service_token.html["サービスアクセストークンを作成する"^] 。
 
 .手順
-. NetApp NetAppコンソール Web サイトからユーザー トークンを取得します。
+. NetApp NetApp ConsoleWeb サイトからユーザー トークンを取得します。
 +
 次のリンクからリフレッシュトークンを生成してください: https://services.cloud.netapp.com/refresh-token/.リフレッシュ トークンは、ユーザー トークンを生成するために使用する英数字の文字列です。
 
@@ -65,9 +65,9 @@ curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/tok
 ----
 +
 
-NOTE: NetAppコンソール Web サイトのユーザー トークンには有効期限があります。 API レスポンスには、トークンの有効期限を示す「expires_in」フィールドが含まれています。トークンを更新するには、この API を再度呼び出す必要があります。
+NOTE: NetApp ConsoleWeb サイトのユーザー トークンには有効期限があります。API レスポンスには、トークンの有効期限を示す「expires_in」フィールドが含まれています。トークンを更新するには、この API を再度呼び出す必要があります。
 
-. NetAppコンソール アカウント ID を取得します。
+. NetApp Consoleアカウント ID を取得します。
 +
 [source, console]
 ----
@@ -114,10 +114,10 @@ Header:
 
 == APIの使用例
 
-次の例は、Azure クラウドの East-US-2 リージョンで、毎日、毎時、毎週のラベルが設定され、アーカイブ日数が 180 日に設定された新しいポリシーを持つシステムでNetApp Backup and Recovery をアクティブ化する API 呼び出しを示しています。これにより、システム上のバックアップのみが有効になり、ボリュームはバックアップされないことに注意してください。
+次の例は、Azure クラウドの East-US-2 リージョンで、毎日、毎時、毎週のラベルが設定され、アーカイブ日数が 180 日に設定された新しいポリシーを持つシステムでNetApp Backup and Recoveryをアクティブ化する API 呼び出しを示しています。これにより、システム上のバックアップのみが有効になり、ボリュームはバックアップされないことに注意してください。
 
 .API 要求
-NetAppコンソールのアカウントIDを使用していることがわかります `account-DpTFcxN3`、コンソールエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`このコマンドでは。
+NetApp ConsoleのアカウントIDを使用していることがわかります `account-DpTFcxN3`、コンソールエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`このコマンドでは。
 
 [source, console]
 ----

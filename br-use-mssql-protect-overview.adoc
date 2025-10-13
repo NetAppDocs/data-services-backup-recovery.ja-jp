@@ -4,7 +4,7 @@ permalink: br-use-mssql-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDにバックアップして、データの保護を確実に行うことができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。 
 ---
-= NetApp のバックアップとリカバリによる Microsoft SQL ワークロードの保護の概要
+= NetApp Backup and Recoveryによる Microsoft SQL ワークロードの保護の概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Microsoft SQL Server アプリケーション データをオンプレ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。バックアップは、作成したポリシーに基づいて、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに自動的に生成され、保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。
+NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。バックアップは、作成したポリシーに基づいて、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに自動的に生成され、保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。
 
 3-2-1 アプローチの利点は次のとおりです。
 

@@ -4,7 +4,7 @@ permalink: br-use-mssql-clone.html
 keywords: backing up, restoring, back up, backup, clone, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。 
 ---
-= NetApp のバックアップとリカバリを使用して Microsoft SQL Server ワークロードをクローンする
+= NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードをクローンする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 開発、テスト、または保護の目的で、Microsoft SQL Server
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。
+NetApp Backup and Recoveryを使用して、開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。
 
 次のクローンの種類から選択します。
 
@@ -30,7 +30,7 @@ NetApp Backup and Recovery を使用して、開発、テスト、または保�
 * クローンを削除する
 
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -41,7 +41,7 @@ Microsoft SQL Server ワークロードのクローンを作成できます。�
 既存のスナップショットまたはインスタント スナップショットからクローンを作成できます。インスタント スナップショットは、バックアップから作成されたソース データの特定時点のコピーです。データが失われたり破損したりした場合に、クローンを使用してワークロードを復元できます。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、*クローン* を選択します。
+. NetApp Backup and Recoveryメニューから、*クローン* を選択します。
 . *新しいクローンを作成*を選択します。
 . クローンの種類を選択します:
 +
@@ -112,7 +112,7 @@ Microsoft SQL Server ワークロードのクローンを更新できます。�
 データベース名を変更したり、最新のインスタント スナップショットを使用したり、既存の運用スナップショットから更新したりすることができます。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、*クローン* を選択します。
+. NetApp Backup and Recoveryメニューから、*クローン* を選択します。
 . 更新するクローンを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *クローンを更新*。
 . *詳細設定*セクションを完了します。
@@ -140,7 +140,7 @@ Microsoft SQL Server ワークロードのクローンを更新できます。�
 ソース ワークロードの最新データでクローンを更新したくない場合は、クローンの更新をスキップすることができます。クローンの更新をスキップすると、クローンを更新せずにそのまま維持できます。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、*クローン* を選択します。
+. NetApp Backup and Recoveryメニューから、*クローン* を選択します。
 . 更新をスキップするクローンを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *更新をスキップ*。
 . [更新をスキップする] 確認ダイアログ ボックスで、次の操作を行います。
@@ -162,7 +162,7 @@ Microsoft SQL Server ワークロードのクローンを分割できます。�
 クローンジョブは削除されず、他のクローンに再度再利用できます。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、*クローン* を選択します。
+. NetApp Backup and Recoveryメニューから、*クローン* を選択します。
 . クローンを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *分割クローン*。
 . 分割クローンの詳細を確認し、「分割」を選択します。
@@ -178,7 +178,7 @@ Microsoft SQL Server ワークロードのクローンを削除できます。�
 クローン がポリシーによって保護されている場合、ジョブを含めてクローン が削除されます。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、*クローン* を選択します。
+. NetApp Backup and Recoveryメニューから、*クローン* を選択します。
 . クローンを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *クローンを削除*。
 . クローンの削除確認ダイアログボックスで、削除の詳細を確認します。

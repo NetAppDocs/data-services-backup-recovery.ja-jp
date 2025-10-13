@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-journey.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
-= NetApp のバックアップとリカバリで保護の旅を計画する
+= NetApp Backup and Recoveryで保護の旅を計画する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ NetApp Backup and Recovery を使用すると、ソース ボリュームのコ�
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 以下のオプションについて説明します。
@@ -69,7 +69,7 @@ NOTE: 複製されたボリュームまたはバックアップ ファイルの�
 
 次の表は、3 つのバックアップ方法の一般的な比較を示しています。オブジェクト ストレージ スペースは通常、オンプレミスのディスク ストレージよりも安価ですが、クラウドからデータを頻繁に復元する可能性があると予想される場合は、クラウド プロバイダーからの送信料金によって節約額がいくらか減る可能性があります。クラウド内のバックアップ ファイルからデータを復元する必要がある頻度を特定する必要があります。
 
-この基準に加えて、クラウド ストレージでは、DataLock および Ransomware Resilience 機能を使用する場合、追加のセキュリティ オプションが提供され、古いバックアップ ファイルにアーカイブ ストレージ クラスを選択することで、さらにコストを節約できます。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策およびアーカイブストレージ設定の詳細"] 。
+この基準に加えて、クラウド ストレージでは、DataLock および Ransomware Resilience 機能を使用する場合、追加のセキュリティ オプションが提供され、古いバックアップ ファイルにアーカイブ ストレージ クラスを選択することで、さらにコストを節約できます。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア対策およびアーカイブストレージ設定の詳細"]。
 
 [cols="18,18,22,18,22"]
 |===
@@ -123,11 +123,11 @@ NetAppが提供するデフォルトのポリシーを使用してバックア�
 * デフォルトのバックアップ ポリシーでは、毎日および毎週のスナップショット コピーが複製され、毎日 7 個のスナップショット コピーと毎週 52 個のスナップショット コピーが保持されます。
 
 
-レプリケーションまたはバックアップ用のカスタム ポリシーを作成する場合、ポリシー ラベル (「毎日」や「毎週」など) がスナップショット ポリシーに存在するラベルと一致している必要があります。一致していないと、レプリケートされたボリュームとバックアップ ファイルは作成されません。
+レプリケーションまたはバックアップ用のカスタム ポリシーを作成する場合、ポリシー ラベル (「毎日」や「毎週」など) がスナップショット ポリシーに存在するラベルと一致している必要があります。一致していないと、レプリケートされたボリュームとバックアップ ファイルが作成されません。
 
 NetApp Backup and Recovery UI で、スナップショット、レプリケーション、およびオブジェクト ストレージ ポリシーへのバックアップを作成できます。セクションを参照してくださいlink:prev-ontap-backup-manage.html["新しいバックアップポリシーの追加"]詳細については。
 
-NetApp Backup and Recovery を使用してカスタム ポリシーを作成するだけでなく、System Manager またはONTAPコマンド ライン インターフェイス (CLI) を使用することもできます。
+NetApp Backup and Recoveryを使用してカスタム ポリシーを作成するだけでなく、System Manager またはONTAPコマンド ライン インターフェイス (CLI) を使用することもできます。
 
 * https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["System ManagerまたはONTAP CLIを使用してスナップショットポリシーを作成します"^]
 * https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["System ManagerまたはONTAP CLIを使用してレプリケーションポリシーを作成します。"^]
@@ -196,7 +196,7 @@ NOTE: クラウド関係へのバックアップには、ボールト ポリシ�
 
 システムのオブジェクト ストレージにバックアップ ファイルを作成すると、デフォルトでは、バックアップおよびリカバリ サービスによって、構成したオブジェクト ストレージ アカウントにバックアップ ファイル用のコンテナー (バケットまたはストレージ アカウント) が作成されます。  AWS または GCP バケットの名前は、デフォルトで「netapp-backup-<uuid>」になります。  Azure Blob ストレージ アカウントの名前は「netappbackup<uuid>」です。
 
-特定のプレフィックスを使用したり、特別なプロパティを割り当てたりしたい場合は、オブジェクト プロバイダー アカウントでコンテナーを自分で作成できます。独自のコンテナーを作成する場合は、アクティベーション ウィザードを開始する前にコンテナーを作成する必要があります。 NetApp Backup and Recovery では、任意のバケットを使用したり、バケットを共有したりできます。バックアップ アクティベーション ウィザードは、選択したアカウントと資格情報に対してプロビジョニングされたコンテナーを自動的に検出し、使用するコンテナーを選択できるようにします。
+特定のプレフィックスを使用したり、特別なプロパティを割り当てたりしたい場合は、オブジェクト プロバイダー アカウントでコンテナーを自分で作成できます。独自のコンテナーを作成する場合は、アクティベーション ウィザードを開始する前にコンテナーを作成する必要があります。 NetApp Backup and Recovery、任意のバケットを使用したり、バケットを共有したりできます。バックアップ アクティベーション ウィザードは、選択したアカウントと資格情報に対してプロビジョニングされたコンテナーを自動的に検出し、使用するコンテナーを選択できるようにします。
 
 バケットは、コンソールから、またはクラウド プロバイダーから作成できます。
 
@@ -205,7 +205,7 @@ NOTE: クラウド関係へのバックアップには、ボールト ポリシ�
 * https://docs.netapp.com/us-en/storage-management-google-cloud-storage/task-add-gcp-bucket.html["コンソールから Google Cloud Storage バケットを作成する"^]
 
 
-「netapp-backup-xxxxxx」以外のバケットプレフィックスを使用する予定の場合は、コンソールエージェント IAM ロールの S3 権限を変更する必要があります。
+「netapp-backup-xxxxxx」以外のバケットプレフィックスを使用する予定の場合は、コンソールエージェントの IAM ロールの S3 権限を変更する必要があります。
 
 *高度なバケット設定*
 
@@ -229,17 +229,17 @@ NOTE: クラウド関係へのバックアップには、ボールト ポリシ�
 
 == どのコンソールエージェント展開モードを使用していますか
 
-すでにコンソールを使用してストレージを管理している場合は、コンソール エージェントがすでにインストールされています。 NetApp Backup and Recovery と同じコンソール エージェントを使用する予定であれば、準備は完了です。別のコンソール エージェントを使用する必要がある場合は、バックアップとリカバリの実装を開始する前にそれをインストールする必要があります。
+すでにコンソールを使用してストレージを管理している場合は、コンソール エージェントがすでにインストールされています。 NetApp Backup and Recoveryと同じコンソール エージェントを使用する予定であれば、準備は完了です。別のコンソール エージェントを使用する必要がある場合は、バックアップとリカバリの実装を開始する前にそれをインストールする必要があります。
 
-NetAppコンソールは、ビジネス要件とセキュリティ要件を満たす方法でコンソールを使用できるようにする複数の導入モードを提供します。  _標準モード_ では、コンソール SaaS レイヤーを活用して完全な機能を提供しますが、_制限モード_ と _プライベート モード_ は接続制限のある組織で利用できます。
+NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす方法でコンソールを使用できるようにする複数の導入モードを提供します。  _標準モード_ では、コンソール SaaS レイヤーを活用して完全な機能を提供しますが、_制限モード_ と _プライベート モード_ は接続制限のある組織で利用できます。
 
-https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの導入モードの詳細"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの導入モードの詳細"^]。
 
 
 
 === 完全なインターネット接続を備えたサイトのサポート
 
-NetApp Backup and Recovery を完全なインターネット接続 (_標準モード_ または _SaaS モード_ とも呼ばれます) を備えたサイトで使用する場合、コンソールによって管理されるオンプレミスのONTAPまたはCloud Volumes ONTAPシステムに複製されたボリュームを作成でき、サポートされているいずれかのクラウド プロバイダーのオブジェクト ストレージにバックアップ ファイルを作成できます。link:concept-backup-to-cloud.html["サポートされているバックアップ先の完全なリストを参照してください"] 。
+NetApp Backup and Recovery を完全なインターネット接続 (_標準モード_ または _SaaS モード_ とも呼ばれます) を備えたサイトで使用する場合、コンソールによって管理されるオンプレミスのONTAPまたはCloud Volumes ONTAPシステムに複製されたボリュームを作成でき、サポートされているいずれかのクラウド プロバイダーのオブジェクト ストレージにバックアップ ファイルを作成できます。link:concept-backup-to-cloud.html["サポートされているバックアップ先の完全なリストを参照してください"]。
 
 有効なコンソール エージェントの場所の一覧については、バックアップ ファイルを作成する予定のクラウド プロバイダーの次のいずれかのバックアップ手順を参照してください。コンソール エージェントを Linux マシンに手動でインストールするか、特定のクラウド プロバイダーに展開する必要があるという制限がいくつかあります。
 
@@ -261,14 +261,14 @@ NetApp Backup and Recovery は、インターネット接続が制限されて�
 
 ifdef::aws[]
 
-* オンプレミスのONTAPシステムまたは AWS 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Amazon S3 にデータをバックアップできます。link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAPデータを Amazon S3 にバックアップする"] 。
+* オンプレミスのONTAPシステムまたは AWS 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Amazon S3 にデータをバックアップできます。link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAPデータを Amazon S3 にバックアップする"]。
 
 
 endif::aws[]
 
 ifdef::azure[]
 
-* オンプレミスのONTAPシステムまたは Azure 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Azure Blob にデータをバックアップできます。link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAPデータを Azure Blob にバックアップする"] 。
+* オンプレミスのONTAPシステムまたは Azure 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Azure Blob にデータをバックアップできます。link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAPデータを Azure Blob にバックアップする"]。
 
 
 endif::azure[]
@@ -282,7 +282,7 @@ NetApp Backup and Recovery は、インターネット接続のないサイト (
 
 NOTE: BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。従来のBlueXPインターフェースのプライベートモードのドキュメントについては、 https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモードの PDF ドキュメント"] 。
 
-* ローカルのオンプレミスONTAPシステムからローカルのNetApp StorageGRIDシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-storagegrid.html["オンプレミスのONTAPデータをStorageGRIDにバックアップする"] 。
+* ローカルのオンプレミスONTAPシステムからローカルのNetApp StorageGRIDシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-storagegrid.html["オンプレミスのONTAPデータをStorageGRIDにバックアップする"]。
 * ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-ontaps3.html["オンプレミスのONTAPデータをONTAP S3 にバックアップする"] .ifdef::aws[]
 
 

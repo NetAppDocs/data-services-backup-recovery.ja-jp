@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-restore.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery を使用して Oracle ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して Oracle ワークロードを保護します。 
 ---
 = NetApp Backup and RecoveryでOracleデータベースを復元する
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery を使用して Oracle ワークロードを
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージに保存されたバックアップから Oracle データベースを復元します。
+NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージに保存されたバックアップから Oracle データベースを復元します。
 
 .これらの場所から復元
 異なる開始場所からデータベースを復元できます。
@@ -49,11 +49,11 @@ Oracle データベースを復元すると、次のことが起こります。
 
 ニーズに応じて、Oracle データベースを特定の時点、特定のシステム変更番号 (SCN)、または最後の正常な状態に復元します。また、スナップショットからデータベースを復元し、自動回復プロセスをスキップすることもできます。手動で回復を実行する場合は、自動回復プロセスをスキップすることができます。データベースは、名前または特定のフィルターを使用して検索できます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
-. NetApp のバックアップとリカバリ メニューから、[復元] を選択します。
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Backup and Recoveryメニューから、[復元] を選択します。
 . 名前検索フィールドの右側にあるドロップダウン リストから、*Oracle* を選択します。
 . 復元するデータベースの名前を入力するか、復元するデータベースが配置されているデータベース ホストをフィルターします。
 +
@@ -68,7 +68,7 @@ Oracle データベースを復元すると、次のことが起こります。
 --
 .. *特定の時点に復元*を選択します。
 .. *次へ*を選択します。
-.. ドロップダウンから日付を選択し、「検索」を選択します。
+.. ドロップダウンから日付を選択し、「*検索*」を選択します。
 +
 指定された日付に一致するスナップショットのリストが表示されます。
 

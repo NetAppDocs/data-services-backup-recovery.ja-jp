@@ -1,4 +1,4 @@
-= NetAppコンソールでONTAPシステムを検出する
+= NetApp ConsoleでONTAPシステムを検出する
 :allow-uri-read: 
 
 
@@ -6,7 +6,7 @@
 
 ONTAPクラスタを準備するには、次の手順を実行します。
 
-* NetAppコンソールでONTAPシステムを検出する
+* NetApp ConsoleでONTAPシステムを検出する
 * ONTAPのシステム要件を確認する
 * オブジェクトストレージにデータをバックアップするためのONTAPネットワーク要件を確認する
 * ボリュームを複製するためのONTAPネットワーク要件を確認する
@@ -14,11 +14,11 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
-=== NetAppコンソールでONTAPシステムを検出する
+=== NetApp ConsoleでONTAPシステムを検出する
 
-ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetAppコンソールの *システム* ページで利用できる必要があります。
+ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetApp Consoleの*システム* ページで利用できる必要があります。
 
-クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^] 。
+クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^]。
 
 
 
@@ -29,7 +29,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 * SnapMirrorライセンス (プレミアム バンドルまたはデータ保護バンドルの一部として含まれています)。
 +
-*注:* NetApp Backup and Recovery を使用する場合、「Hybrid Cloud Bundle」は必要ありません。
+*注:* NetApp Backup and Recoveryを使用する場合、「Hybrid Cloud Bundle」は必要ありません。
 
 +
 方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["クラスターライセンスを管理する"^]。
@@ -37,6 +37,6 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 時間とタイムゾーンは正しく設定されています。方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["クラスター時間を設定する"^]。
 * データをレプリケートする場合は、データをレプリケートする前に、ソース システムとデスティネーション システムで互換性のあるONTAPバージョンが実行されていることを確認する必要があります。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^]。
 
 

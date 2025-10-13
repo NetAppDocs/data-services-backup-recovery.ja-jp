@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-policy-differences-snapcenter.html 
 keywords: backup policy, backup policies, snapcenter, migration 
-summary: NetApp Backup and Recovery で使用されるポリシーとSnapCenterで使用されるポリシーにはいくつかの違いがあります。 
+summary: NetApp Backup and Recoveryで使用されるポリシーとSnapCenterで使用されるポリシーにはいくつかの違いがあります。 
 ---
 = SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recovery で使用されるポリシーとSnapCenter�
 
 
 [role="lead"]
-SnapCenterで使用されるポリシーとNetApp Backup and Recovery で使用されるポリシーにはいくつかの違いがあり、 SnapCenterからリソースとポリシーをインポートした後の表示内容に影響する可能性があります。
+SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーにはいくつかの違いがあり、 SnapCenterからリソースとポリシーをインポートした後の表示内容に影響する可能性があります。
 
 
 
@@ -26,7 +26,7 @@ SnapCenter は次のスケジュール層を使用します。
 * *毎月*: 1 月から 12 月までの月で、毎月 7 日など、月の特定の日に実行するオプションや、月の複数の日に実行するオプションがあります。
 
 
-NetApp Backup and Recovery では、若干異なる次のスケジュール層が使用されます。
+NetApp Backup and Recoveryでは、若干異なる次のスケジュール層が使用されます。
 
 * *時間ごと*: 15 分間隔でのみスナップショットを実行します (例: 1 時間または 60 未満の 15 分間隔)。
 * *毎日*: 1 日の時間帯 (0 ～ 23)、開始時刻 (例: 午前 10:00)、および一定時間ごとに実行するオプション。
@@ -39,9 +39,9 @@ NetApp Backup and Recovery では、若干異なる次のスケジュール層�
 
 == SnapCenterで同じスケジュール層を持つ複数のポリシー
 
-SnapCenterのリソースに、同じスケジュール層を持つ複数のポリシーを割り当てることができます。ただし、 NetApp Backup and Recovery では、同じスケジュール層を使用するリソース上の複数のポリシーはサポートされていません。
+SnapCenterのリソースに、同じスケジュール ティアを持つ複数のポリシーを割り当てることができます。ただし、 NetApp Backup and Recovery、同じスケジュール層を使用するリソース上の複数のポリシーはサポートされていません。
 
-*例*: SnapCenterで 3 つのポリシー (データ、ログ、スナップショットのログ) を使用している場合、 SnapCenterからの移行後、 NetApp Backup and Recovery は 3 つすべてのポリシーではなく 1 つのポリシーを使用します。
+*例*: SnapCenterで 3 つのポリシー (データ、ログ、スナップショットのログ) を使用している場合、 SnapCenterからの移行後、 NetApp Backup and Recovery は3 つすべてのポリシーではなく 1 つのポリシーを使用します。
 
 
 
@@ -63,11 +63,11 @@ NetApp Backup and Recovery は、 SnapCenter のスケジュールを次のよ�
 
 == インポートされたSnapCenterの時間別スケジュール
 
-繰り返し間隔が 1 時間を超えるSnapCenter の時間別ポリシーは、 NetApp Backup and Recovery の日次ポリシーに変換されます。
+繰り返し間隔が 1 時間を超えるSnapCenter の時間別ポリシーは、NetApp Backup and Recoveryの日次ポリシーに変換されます。
 
 繰り返し間隔が 24 の倍数ではない (たとえば 5、7 など) 時間単位のポリシーでは、1 日にいくつかのスナップショットがスキップされます。
 
-*例*: 午前 1 時から 5 時間ごとに繰り返す間隔を持つSnapCenter の時間単位ポリシーがある場合、 NetApp Backup and Recovery (移行後) は、午前 1 時、午前 6 時、午前 11 時、午後 4 時、午後 9 時の 5 時間間隔で毎日スケジュールを設定します。いくつかの時間はスキップされます。午後 9:00 以降は 5 時間ごとに繰り返すために午前 2:00 になるはずですが、常に午前 1:00 になります。
+*例*: 午前 1 時から 5 時間ごとに繰り返す間隔を持つSnapCenter の時間単位ポリシーがある場合、 NetApp Backup and Recovery (移行後) は、スケジュールを毎日、午前 1 時、午前 6 時、午前 11 時、午後 4 時、午後 9 時に 5 時間間隔で設定します。いくつかの時間はスキップされます。午後 9:00 以降は 5 時間ごとに繰り返すために午前 2:00 になるはずですが、常に午前 1:00 になります。
 
 
 
@@ -78,14 +78,14 @@ SnapCenterに複数のポリシーを持つリソースがある場合、 NetApp
 * SnapCenterの「ログ バックアップ ポリシーによる完全バックアップ」と「ログのみ」ポリシーの場合、 NetApp Backup and Recovery はログのみポリシーの保持値を使用します。
 * SnapCenterの「ログのみの完全バックアップ」および「完全バックアップとログ」ポリシーの場合、 NetApp Backup and Recovery はログのみの保持値を使用します。
 * SnapCenterの「フル バックアップとログ」と「フル バックアップ」の場合、 NetApp Backup and Recovery は「フル バックアップとログ」の保持値を使用します。
-* SnapCenterに完全バックアップのみがある場合、 NetApp Backup and Recovery ではログ バックアップは有効になりません。
+* SnapCenterに完全バックアップのみがある場合、 NetApp Backup and Recoveryログ バックアップは有効になりません。
 
 
 
 
 == ログバックアップの保持
 
-SnapCenter を使用すると、リソースにアタッチされた複数のポリシーにわたって複数の保持値を持つことができます。ただし、 NetApp Backup and Recovery では、リソースに添付されたすべてのポリシーに対して単一の保持値のみがサポートされます。
+SnapCenter を使用すると、リソースにアタッチされた複数のポリシーにわたって複数の保持値を持つことができます。ただし、 NetApp Backup and Recovery、リソースに添付されたすべてのポリシーに対して単一の保持値のみがサポートされます。
 
 
 
@@ -101,4 +101,4 @@ SnapCenterで、複数のソース ボリューム、複数の宛先ボリュー
 
 SnapCenterのすべてのポリシーのSnapMirrorラベルは、階層が変更されても移行後もそのまま残ります。
 
-*例*: SnapCenterの時間単位のポリシーが、 NetApp Backup and Recovery では日単位に変更される場合があります。ただし、移行後もSnapMirrorラベルは同じままです。
+*例*: SnapCenterの時間単位のポリシーが、 NetApp Backup and Recoveryで日単位に変更される場合があります。ただし、移行後もSnapMirrorラベルは同じままです。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-hyperv-restore.html 
 keywords: restore, vm, kvm, virtual machine, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery を使用して Hyper-V ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して Hyper-V ワークロードを保護します。 
 ---
-= NetAppバックアップとリカバリを使用して Hyper-V ワークロードを復元する
+= NetApp Backup and Recoveryを使用して Hyper-V ワークロードを復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery を使用して Hyper-V ワークロード�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。
+NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。
 
 .これらの場所から復元
 異なる開始場所からワークロードを復元できます。
@@ -51,10 +51,10 @@ TIP: バックアップ ファイルの内容にアクセスするには、ク�
 
 復元オプションを使用して Hyper-V ワークロードを復元します。スナップショットは、名前またはフィルターを使用して検索できます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、[復元] を選択します。
+. NetApp Backup and Recoveryメニューから、[復元] を選択します。
 . 名前検索フィールドの右側にあるドロップダウン リストから、*Hyper-V* を選択します。
 . 復元するリソースの名前を入力するか、復元するリソースが配置されている VM 名、VM ホスト、またはストレージ プールでフィルターします。
 +

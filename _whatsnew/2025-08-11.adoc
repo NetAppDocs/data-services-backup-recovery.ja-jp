@@ -6,7 +6,7 @@
 
 === Microsoft SQL Server ワークロードが一般提供 (GA) でサポートされるようになりました
 
-Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recovery で一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
+Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
 
 このリリースには、以前のプレビュー バージョンからの Microsoft SQL Server ワークロード サポートに対する次の機能強化が含まれています。
 
@@ -18,13 +18,13 @@ Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Rec
 image:../media/screen-br-sql-protection-details.png["Microsoft SQL Server ワークロードの保護の詳細ページ"]
 
 * *マルチバケットのサポート*: 異なるクラウド プロバイダーにまたがる作業環境ごとに最大 6 つのバケットを使用して、作業環境内のボリュームを保護できるようになりました。
-* *SQL Server ワークロードのライセンスと無料トライアルの更新*: 既存のNetApp Backup and Recovery ライセンス モデルを使用して、SQL Server ワークロードを保護できるようになりました。SQL Server ワークロードには個別のライセンス要件はありません。
+* *SQL Server ワークロードのライセンスと無料トライアルの更新*: 既存のNetApp Backup and Recoveryライセンス モデルを使用して、SQL Server ワークロードを保護できるようになりました。SQL Server ワークロードには個別のライセンス要件はありません。
 +
-詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetApp Backup and Recoveryのライセンスを設定する"] 。
 
 * *カスタム スナップショット名*: Microsoft SQL Server ワークロードのバックアップを管理するポリシーで、独自のスナップショット名を使用できるようになりました。ポリシー ページの *詳細設定* セクションにこの情報を入力します。
 +
-image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetAppバックアップおよびリカバリ ポリシーのSnapMirrorおよびスナップショット形式の設定のスクリーンショット"]
+image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetApp Backup and RecoveryポリシーのSnapMirrorおよびスナップショット形式の設定のスクリーンショット"]
 
 +
 参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["ポリシーを使用してワークロードを保護する"]。
@@ -32,13 +32,13 @@ image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetAppバッ
 * *セカンダリ ボリュームのプレフィックスとサフィックス*: ポリシー ページの *詳細設定* セクションで、カスタムのプレフィックスとサフィックスを入力できます。
 * *ID とアクセス*: ユーザーの機能へのアクセスを制御できるようになりました。
 +
-参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["NetAppバックアップおよびリカバリにログイン"]そして https://docs.netapp.com/us-en/data-services-backup-recovery/reference-roles.html["NetAppバックアップおよびリカバリ機能へのアクセス"]。
+参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["NetApp Backup and Recoveryにログイン"]そして https://docs.netapp.com/us-en/data-services-backup-recovery/reference-roles.html["NetApp Backup and Recovery機能へのアクセス"]。
 
 * *オブジェクト ストレージから代替ホストへの復元*: プライマリ ストレージがダウンしている場合でも、オブジェクト ストレージから代替ホストに復元できるようになりました。
 * *ログ バックアップ データ*: データベース保護の詳細ページにログ バックアップが表示されるようになりました。バックアップが完全バックアップかログ バックアップかを示す「バックアップ タイプ」列が表示されます。
 * *強化されたダッシュボード*: ダッシュボードにストレージとクローンの節約が表示されるようになりました。
 +
-image:../media/screen-br-dashboard3.png["NetAppバックアップおよびリカバリダッシュボード"]
+image:../media/screen-br-dashboard3.png["NetApp Backup and Recoveryダッシュボード"]
 
 
 
@@ -46,8 +46,8 @@ image:../media/screen-br-dashboard3.png["NetAppバックアップおよびリカ
 
 === ONTAPボリュームワークロードの強化
 
-* * ONTAPボリュームの複数フォルダの復元*: これまでは、参照と復元機能から一度に 1 つのフォルダまたは複数のファイルを復元できました。NetApp Backup and Recovery では、参照と復元機能を使用して一度に複数のフォルダを選択できるようになりました。
-* *削除されたボリュームのバックアップの表示と管理*: NetAppバックアップおよびリカバリ ダッシュボードに、 ONTAPから削除されたボリュームを表示および管理するオプションが追加されました。これにより、 ONTAPに存在しなくなったボリュームのバックアップを表示および削除できるようになります。
+* * ONTAPボリュームの複数フォルダの復元*: これまでは、参照と復元機能から一度に 1 つのフォルダまたは複数のファイルを復元できました。NetApp Backup and Recoveryでは、参照と復元機能を使用して一度に複数のフォルダを選択できるようになりました。
+* *削除されたボリュームのバックアップの表示と管理*: NetApp Backup and Recoveryダッシュボードに、 ONTAPから削除されたボリュームを表示および管理するオプションが追加されました。これにより、 ONTAPに存在しなくなったボリュームのバックアップを表示および削除できるようになります。
 * *バックアップの強制削除*: 極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプションを使用できます (ボリュームおよび作業環境レベル)。
 
 

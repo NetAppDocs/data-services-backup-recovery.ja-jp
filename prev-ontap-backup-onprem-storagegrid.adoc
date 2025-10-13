@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-storagegrid.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery でいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。 
+summary: NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。 
 ---
-= NetApp Backup and Recovery を使用してオンプレミスのONTAPデータをStorageGRIDにバックアップします。
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをStorageGRIDにバックアップします。
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: NetApp Backup and Recovery でいくつかの手順を完了して、�
 
 
 [role="lead"]
-NetApp Backup and Recovery でいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。
+NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。
 
 
-NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、 ONTAP Selectシステムが含まれます。
+NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 
@@ -62,27 +62,27 @@ StorageGRIDにデータをバックアップする場合、オンプレミスで
 
 * ポート443経由のStorageGRIDゲートウェイノードへのHTTPS接続
 * ポート443経由のONTAPクラスタ管理LIFへのHTTPS接続
-* NetApp Backup and Recovery へのポート 443 経由のアウトバウンド インターネット接続 (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)
+* NetApp Backup and Recoveryへのポート 443 経由のアウトバウンド インターネット接続 (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)
 
 
 
 
 ==== プライベートモード（ダークサイト）の考慮事項
 
-* NetAppバックアップおよびリカバリ機能は、コンソール エージェントに組み込まれています。プライベート モードでインストールされている場合、新しい機能にアクセスするには、コンソール エージェント ソフトウェアを定期的に更新する必要があります。チェックしてくださいlink:whats-new.html["NetAppバックアップおよびリカバリの新機能"]NetApp Backup and Recovery の各リリースの新機能を確認してください。新しい機能を使用する場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["コンソールエージェントソフトウェアをアップグレードする"^] 。
+* NetApp Backup and Recovery機能は、コンソール エージェントに組み込まれています。プライベート モードでインストールされている場合、新しい機能にアクセスするには、コンソール エージェント ソフトウェアを定期的に更新する必要があります。チェックしてくださいlink:whats-new.html["NetApp Backup and Recoveryの新機能"]NetApp Backup and Recovery の各リリースの新機能を確認してください。新しい機能を使用する場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["コンソールエージェントソフトウェアをアップグレードする"^] 。
 +
-オブジェクト ストレージへのバックアップの作成に加えて、スナップショット コピーと複製されたボリュームをスケジュールして作成する機能が含まれるNetApp Backup and Recovery の新しいバージョンでは、コンソール エージェントのバージョン 3.9.31 以上を使用する必要があります。したがって、すべてのバックアップを管理するには、この最新リリースを入手することをお勧めします。
+オブジェクト ストレージへのバックアップの作成に加えて、スナップショット コピーと複製されたボリュームをスケジュールして作成する機能が含まれるNetApp Backup and Recoveryの新しいバージョンでは、コンソール エージェントのバージョン 3.9.31 以上を使用する必要があります。したがって、すべてのバックアップを管理するには、この最新リリースを入手することをお勧めします。
 
-* SaaS 環境でNetApp Backup and Recovery を使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recovery を使用する場合、 NetApp Backup and Recovery 構成データは、バックアップが保存されているStorageGRIDバケットにバックアップされます。
+* SaaS 環境でNetApp Backup and Recovery を使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、 NetApp Backup and Recovery構成データは、バックアップが保存されているStorageGRIDバケットにバックアップされます。
 
 
 
 
 == ライセンス要件を確認する
 
-クラスターに対してNetApp Backup and Recovery をアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはアカウント用であり、複数のシステムで使用できます。
+クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはアカウント用であり、複数のシステムで使用できます。
 
-ライセンスの有効期間と容量にわたってサービスを使用するには、 NetAppからのシリアル番号が必要になります。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"] 。
+ライセンスの有効期間と容量にわたってサービスを使用するには、 NetAppからのシリアル番号が必要になります。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
 
 TIP: StorageGRIDにファイルをバックアップする場合、PAYGO ライセンスはサポートされません。
@@ -95,7 +95,7 @@ TIP: StorageGRIDにファイルをバックアップする場合、PAYGO ライ�
 
 ONTAPクラスタを準備するには、次の手順を実行します。
 
-* NetAppコンソールでONTAPシステムを検出する
+* NetApp ConsoleでONTAPシステムを検出する
 * ONTAPのシステム要件を確認する
 * オブジェクトストレージにデータをバックアップするためのONTAPネットワーク要件を確認する
 * ボリュームを複製するためのONTAPネットワーク要件を確認する
@@ -103,11 +103,11 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
-=== NetAppコンソールでONTAPシステムを検出する
+=== NetApp ConsoleでONTAPシステムを検出する
 
-ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetAppコンソールの *システム* ページで利用できる必要があります。
+ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetApp Consoleの*システム* ページで利用できる必要があります。
 
-クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^] 。
+クラスターを追加するには、クラスター管理 IP アドレスと管理者ユーザー アカウントのパスワードを知っておく必要があります。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["クラスターの検出方法を学ぶ"^]。
 
 
 
@@ -118,7 +118,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 * SnapMirrorライセンス (プレミアム バンドルまたはデータ保護バンドルの一部として含まれています)。
 +
-*注:* NetApp Backup and Recovery を使用する場合、「Hybrid Cloud Bundle」は必要ありません。
+*注:* NetApp Backup and Recoveryを使用する場合、「Hybrid Cloud Bundle」は必要ありません。
 
 +
 方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["クラスターライセンスを管理する"^]。
@@ -126,7 +126,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 * 時間とタイムゾーンは正しく設定されています。方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["クラスター時間を設定する"^]。
 * データをレプリケートする場合は、データをレプリケートする前に、ソース システムとデスティネーション システムで互換性のあるONTAPバージョンが実行されていることを確認する必要があります。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^]。
 
 
 
@@ -149,19 +149,19 @@ ONTAP はオブジェクト ストレージとの間でデータの読み取り�
 * ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。コンソール エージェントは社内に常駐する必要があります。
 * バックアップするボリュームをホストする各ONTAPノードには、クラスタ間 LIF が必要です。  LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
 +
-NetApp Backup and Recovery をセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
+NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
 
 * ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
 * デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。
-* 必要に応じてファイアウォール ルールを更新し、指定したポート (通常はポート 443) を介してONTAPからオブジェクト ストレージへのNetApp Backup and Recovery サービス接続と、ポート 53 (TCP/UDP) を介してストレージ VM から DNS サーバーへの名前解決トラフィックを許可します。
+* 必要に応じてファイアウォール ルールを更新し、指定したポート (通常はポート 443) を介してONTAPからオブジェクト ストレージへのNetApp Backup and Recoveryサービス接続と、ポート 53 (TCP/UDP) を介してストレージ VM から DNS サーバーへの名前解決トラフィックを許可します。
 
 
 
 
 === ボリュームを複製するためのONTAPネットワーク要件を確認する
 
-NetApp Backup and Recovery を使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
+NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複製ボリュームを作成する場合は、ソース システムと宛先システムが次のネットワーク要件を満たしていることを確認してください。
 
 
 
@@ -204,7 +204,7 @@ StorageGRIDのDataLockおよびランサムウェア耐性要件の詳細につ�
 S3 認証情報:: StorageGRIDストレージへのアクセスを制御するには、S3 テナント アカウントを作成する必要があります。 https://docs.netapp.com/us-en/storagegrid-117/admin/creating-tenant-account.html["詳細についてはStorageGRIDのドキュメントを参照してください。"^] 。
 +
 --
-StorageGRIDへのバックアップを設定すると、バックアップ ウィザードによってテナント アカウントの S3 アクセス キーとシークレット キーの入力が求められます。テナント アカウントにより、 NetApp Backup and Recovery は、バックアップの保存に使用されるStorageGRIDバケットを認証してアクセスできるようになります。キーは、 StorageGRID が誰がリクエストを行っているかを認識するために必要です。
+StorageGRIDへのバックアップを設定すると、バックアップ ウィザードによってテナント アカウントの S3 アクセス キーとシークレット キーの入力が求められます。テナント アカウントにより、NetApp Backup and Recovery は、バックアップの保存に使用されるStorageGRIDバケットを認証してアクセスできるようになります。キーは、 StorageGRID が誰がリクエストを行っているかを認識するために必要です。
 
 これらのアクセス キーは、次の権限を持つユーザーに関連付ける必要があります。
 
@@ -243,7 +243,7 @@ StorageGRIDへのバックアップを設定すると、バックアップ ウ�
 *Amazon S3 の要件*
 
 * アーカイブされたバックアップが保存されるストレージスペース用の Amazon S3 アカウントにサインアップする必要があります。
-* バックアップを AWS S3 Glacier または S3 Glacier Deep Archive ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブ層の詳細"] 。
+* バックアップを AWS S3 Glacier または S3 Glacier Deep Archive ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブ層の詳細"]。
 * StorageGRIDはバケットへのフルコントロールアクセス権を持っている必要があります(`s3:*`); ただし、これが不可能な場合は、バケットポリシーでStorageGRIDに次の S3 権限を付与する必要があります。
 +
 ** `s3:AbortMultipartUpload`
@@ -308,8 +308,8 @@ image:screenshot_sg_archive_to_cloud.png["StorageGRIDから AWS S3 または Azu
 
 . 次のオプションを続行します。
 +
-** コンソール エージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
-** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。。 <<コンソールエージェントを準備する>> 。
+** コンソールエージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。参照<<コンソールエージェントを準備する>>。
 
 
 
@@ -419,7 +419,7 @@ TIP: カスタムポリシーを作成するには、link:br-use-policies-create
 ** *ネットワーク*: バックアップするボリュームが存在するONTAPクラスター内の IPspace を選択します。この IPspace のクラスタ間 LIF には、アウトバウンド インターネット アクセスが必要です (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。
 +
 
-TIP: 正しい IPspace を選択すると、 NetApp Backup and Recovery がONTAPからStorageGRIDオブジェクト ストレージへの接続を確立できるようになります。
+TIP: 適切な IPspace を選択すると、 NetApp Backup and Recovery がONTAPからStorageGRIDオブジェクト ストレージへの接続を確立できるようになります。
 
 ** *バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択するか、新しいポリシーを作成します。
 +
@@ -442,7 +442,7 @@ TIP: カスタムポリシーを作成するには、link:br-use-policies-create
 
 
 +
-クラスターがONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムがバージョン 11.4 以上を使用している場合は、一定の日数後に古いバックアップをパブ​​リック クラウド アーカイブ層に階層化することを選択できます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。<<古いバックアップファイルをパブリッククラウドストレージにアーカイブする準備をする,この機能を使用するためにシステムを構成する方法をご覧ください>> 。
+クラスターがONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムがバージョン 11.4 以上を使用している場合は、一定の日数後に古いバックアップをパブ​​リック クラウド アーカイブ層に階層化することを選択できます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。<<古いバックアップファイルをパブリッククラウドストレージにアーカイブする準備をする,この機能を使用するためにシステムを構成する方法をご覧ください>>。
 
 +
 ** *パブリック クラウドへの階層化バックアップ*: バックアップを階層化するクラウド プロバイダーを選択し、プロバイダーの詳細を入力します。
@@ -468,7 +468,7 @@ TIP: カスタムポリシーを作成するには、link:br-use-policies-create
 
 
 .結果
-NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。
+NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。
 
 複製されたボリュームが宛先クラスターに作成され、プライマリ ストレージ ボリュームと同期されます。
 

@@ -18,15 +18,15 @@ ONTAPボリューム データのバックアップは、バックアップを�
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 * *ボリューム* (新しいボリュームとして) を元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。
-* *フォルダー* を元のシステム内のボリューム、同じクラウド アカウントを使用している別のシステム内のボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。
+* *フォルダー* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。
 * *ファイル* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。
 
 
-バックアップ ファイルから実稼働システムにデータを復元するには、有効なNetApp Backup and Recovery ライセンスが必要です。
+バックアップ ファイルから実稼働システムにデータを復元するには、有効なNetApp Backup and Recoveryライセンスが必要です。
 
 要約すると、ボリューム データをONTAPシステムに復元するために使用できる有効なフローは次のとおりです。
 
@@ -116,19 +116,19 @@ NOTE: NetApp Backup and Recovery は少なくとも 1 つのシステムに対�
 
 ifdef::aws[]
 
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"] 。
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"] 。
+link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"] 。
+link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。
 
 endif::gcp[]
 
@@ -209,7 +209,7 @@ NOTE: システムのONTAPバージョンが 9.13.1 未満の場合、バック�
 
 バックアップ ファイルからボリュームを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいボリュームを作成します。オブジェクト ストレージからのバックアップを使用すると、データを元のシステムのボリューム、ソース システムと同じクラウド アカウントにある別のシステム、またはオンプレミスのONTAPシステムに復元できます。
 
-ONTAP 9.13.0 以降を使用しているCloud Volumes ONTAPシステム、またはONTAP 9.14.1 を実行しているオンプレミスのONTAPシステムにクラウド バックアップを復元する場合は、_クイック復元_ 操作を実行するオプションがあります。クイック リストアは、ボリュームへのアクセスをできるだけ早く提供する必要がある災害復旧の状況に最適です。クイック リストアでは、バックアップ ファイル全体を復元するのではなく、バックアップ ファイルからボリュームにメタデータを復元します。クイック リストアは、パフォーマンスや待ち時間が重要となるアプリケーションには推奨されません。また、アーカイブ ストレージ内のバックアップではサポートされません。
+ONTAP 9.13.0 以降を使用しているCloud Volumes ONTAPシステム、またはONTAP 9.14.1 を実行しているオンプレミスのONTAPシステムにクラウド バックアップを復元する場合は、_クイック リストア_ 操作を実行するオプションがあります。クイック リストアは、ボリュームへのアクセスをできるだけ早く提供する必要がある災害復旧の状況に最適です。クイック リストアでは、バックアップ ファイル全体を復元するのではなく、バックアップ ファイルからボリュームにメタデータを復元します。クイック リストアは、パフォーマンスや待ち時間が重要となるアプリケーションには推奨されません。また、アーカイブ ストレージ内のバックアップではサポートされません。
 
 
 NOTE: クイック リストアは、クラウド バックアップが作成されたソース システムでONTAP 9.12.1 以降が実行されている場合にのみ、 FlexGroupボリュームに対してサポートされます。また、ソース システムでONTAP 9.11.0 以降が実行されている場合にのみ、 SnapLockボリュームでサポートされます。
@@ -230,7 +230,7 @@ image:diagram_browse_restore_volume.png["参照と復元を使用してボリュ
 
 . *次へ*を選択します。
 +
-オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対してランサムウェア耐性がアクティブになっている場合 (バックアップ ポリシーで DataLock とランサムウェア耐性を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。(バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)
+オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対してランサムウェア耐性がアクティブになっている場合 (バックアップ ポリシーで DataLock とランサムウェア耐性を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。  (バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)
 
 . [_宛先の選択_] ページで、ボリュームを復元する *システム* を選択します。
 . オブジェクト ストレージからバックアップ ファイルを復元するときに、オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。
@@ -276,19 +276,19 @@ ifdef::aws[]
 
 
 
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"] 。
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"] 。
+link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"] 。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
+link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
 
 endif::gcp[]
 
@@ -325,7 +325,7 @@ ONTAP 9.13.0 以降を使用している場合は、フォルダーとその中�
 * バックアップ ファイルがアーカイブ ストレージに存在する場合、 ONTAPバージョンが 9.13.1 以上の場合にのみ、フォルダー レベルの復元がサポートされます。以前のバージョンのONTAPを使用している場合は、アーカイブされていない新しいバックアップ ファイルからフォルダを復元するか、アーカイブされたバックアップからボリューム全体を復元して、必要なフォルダとファイルにアクセスすることができます。
 * ONTAP 9.15.1 では、「参照と復元」オプションを使用してFlexGroupフォルダを復元できます。この機能はテクノロジープレビュー モードです。
 +
-特別なフラグを使用してテストすることができます。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993#toc-hId-1830672444["NetAppバックアップおよびリカバリ 2024 年 7 月リリース ブログ"^] 。
+特別なフラグを使用してテストすることができます。 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993#toc-hId-1830672444["NetApp Backup and Recovery2024 年 7 月リリース ブログ"^] 。
 
 
 
@@ -347,7 +347,7 @@ ONTAP 9.13.0 以降を使用している場合は、フォルダーとその中�
 
 . ボリューム バックアップからフォルダーまたは 1 つ以上のファイルを復元する場合は、[復元] タブをクリックし、[参照と復元] の下にある [ファイルまたはフォルダーの復元] をクリックします。
 . フォルダーまたはファイルが存在するソース システム、ボリューム、およびバックアップ ファイルを選択します。
-. NetApp Backup and Recovery では、選択したバックアップ ファイル内に存在するフォルダとファイルが表示されます。
+. NetApp Backup and Recovery、選択したバックアップ ファイル内に存在するフォルダとファイルが表示されます。
 . そのバックアップから復元するフォルダーまたはファイルを選択します。
 . フォルダまたはファイルを復元する宛先場所 (システム、ボリューム、フォルダ) を選択し、[復元] をクリックします。
 . ファイルが復元されました。
@@ -373,10 +373,10 @@ ONTAPボリューム バックアップからボリュームにフォルダー�
 アーカイブ ストレージ層にあるバックアップ ファイルからフォルダーまたはファイルを復元する場合は、復元の優先順位を選択できます。
 
 +
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"] 。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"] 。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"] 。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
 
 +
-また、バックアップ ファイルに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。(バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)
+また、バックアップ ファイルに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。  (バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)
 
 . [_アイテムの選択_] ページで、復元するフォルダーまたはファイルを選択し、[続行] を選択します。アイテムを見つける際に役立つ情報:
 +
@@ -456,19 +456,19 @@ ONTAP 9.13.0 以降を使用している場合は、フォルダーとその中�
 
 ifdef::aws[]
 
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"] 。
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"] 。
+link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"] 。
+link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。
 
 endif::gcp[]
 
@@ -489,7 +489,7 @@ endif::gcp[]
 
 セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショット コピーはソース システム上に存在し、同じシステムにのみ復元できます。
 
-*注:* ボリュームとファイルはどのタイプのバックアップ ファイルからでも復元できますが、現時点ではフォルダーを復元できるのはオブジェクト ストレージ内のバックアップ ファイルからのみです。
+*注意:* ボリュームとファイルはどのタイプのバックアップ ファイルからでも復元できますが、現時点では、フォルダーを復元できるのはオブジェクト ストレージ内のバックアップ ファイルからのみです。
 
 [cols="33,33,33"]
 |===
@@ -560,9 +560,9 @@ ifdef::aws[]
 
 * AWS 要件:
 +
-** コンソールに権限を付与するユーザー ロールに、特定の Amazon Athena、AWS Glue、および AWS S3 権限を追加する必要があります。link:prev-ontap-backup-onprem-aws.html["すべての権限が正しく設定されていることを確認してください"] 。
+** コンソールに権限を付与するユーザー ロールに、特定の Amazon Athena、AWS Glue、および AWS S3 権限を追加する必要があります。link:prev-ontap-backup-onprem-aws.html["すべての権限が正しく設定されていることを確認してください"]。
 +
-以前に設定したコンソール エージェントでNetApp Backup and Recovery をすでに使用していた場合は、コンソール ユーザー ロールに Athena および Glue 権限を追加する必要があることに注意してください。これらは検索と復元に必要です。
+以前に設定したコンソール エージェントでNetApp Backup and Recoveryをすでに使用していた場合は、コンソール ユーザー ロールに Athena および Glue 権限を追加する必要があることに注意してください。これらは検索と復元に必要です。
 
 
 
@@ -575,7 +575,7 @@ ifdef::azure[]
 * Azure の要件:
 +
 ** Azure Synapse Analytics リソース プロバイダー (「Microsoft.Synapse」と呼ばれます) をサブスクリプションに登録する必要があります。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["このリソースプロバイダーをサブスクリプションに登録する方法をご覧ください"^] 。リソース プロバイダーを登録するには、サブスクリプションの *所有者* または *投稿者* である必要があります。
-** コンソールに権限を付与するユーザー ロールに、特定の Azure Synapse ワークスペースおよび Data Lake Storage アカウントの権限を追加する必要があります。link:prev-ontap-backup-onprem-azure.html["すべての権限が正しく設定されていることを確認してください"] 。
+** コンソールに権限を付与するユーザー ロールに、特定の Azure Synapse ワークスペースおよび Data Lake Storage アカウントの権限を追加する必要があります。link:prev-ontap-backup-onprem-azure.html["すべての権限が正しく設定されていることを確認してください"]。
 +
 以前に構成したコンソール エージェントでNetApp Backup and Recovery を既に使用していた場合は、Azure Synapse ワークスペースと Data Lake ストレージ アカウントのアクセス許可をコンソール ユーザー ロールに追加する必要があることに注意してください。これらは検索と復元に必要です。
 
@@ -590,7 +590,7 @@ ifdef::gcp[]
 
 * Google Cloud の要件:
 +
-** NetAppコンソールに権限を付与するユーザー ロールに、特定の Google BigQuery 権限を追加する必要があります。link:prev-ontap-backup-onprem-gcp.html["すべての権限が正しく設定されていることを確認してください"] 。
+** NetApp Consoleに権限を付与するユーザー ロールに、特定の Google BigQuery 権限を追加する必要があります。link:prev-ontap-backup-onprem-gcp.html["すべての権限が正しく設定されていることを確認してください"]。
 +
 以前に構成したコンソール エージェントでNetApp Backup and Recovery をすでに使用していた場合は、コンソール ユーザー ロールに BigQuery 権限を追加する必要があります。これらは検索と復元に必要です。
 
@@ -655,8 +655,8 @@ v2 に関する次の考慮事項を確認してください。
 * Indexed Catalog v2 はプレビュー モードで利用できます。
 * 既存のお客様で Catalog v2 を使用する場合は、環境のインデックスを完全に再作成する必要があります。
 * カタログ v2 は、スナップショット ラベルを持つスナップショットのみをインデックス化します。
-* NetApp Backup and Recovery は、「時間別」のSnapMirrorラベルを使用してスナップショットをインデックス化しません。  「時間別」のSnapMirrorラベルを使用してスナップショットをインデックスする場合は、v2 がプレビュー モードのときに手動で有効にする必要があります。
-* NetApp Backup and Recovery は、カタログ v2 のみを使用して、 NetApp Backup and Recovery によって保護されているシステムに関連付けられたボリュームとスナップショットをインデックス化します。コンソール プラットフォームで検出されたその他のシステムはインデックス化されません。
+* NetApp Backup and Recovery は、 「時間別」のSnapMirrorラベルを使用してスナップショットをインデックス化しません。  「時間別」 SnapMirrorラベルを使用してスナップショットをインデックスする場合は、v2 がプレビュー モードのときに手動で有効にする必要があります。
+* NetApp Backup and Recovery は、カタログ v2 のみを使用して、NetApp Backup and Recoveryによって保護されているシステムに関連付けられたボリュームとスナップショットをインデックス化します。コンソール プラットフォームで検出されたその他のシステムはインデックス化されません。
 * Catalog v2 によるデータのインデックス作成は、オンプレミス環境と、Amazon Web Services、Microsoft Azure、Google Cloud Platform (GCP) 環境で行われます。
 
 
@@ -733,7 +733,7 @@ v2 リリースより前にインデックス カタログを有効にした場�
 ifdef::aws[]
 
 +
-*** Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。link:prev-ontap-backup-onprem-aws.html["これらの要件の詳細については、こちらをご覧ください。"] 。
+*** Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。link:prev-ontap-backup-onprem-aws.html["これらの要件の詳細については、こちらをご覧ください。"]。
 
 
 
@@ -744,21 +744,21 @@ endif::aws[]
 
 ifdef::azure[]
 
-* Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。link:prev-ontap-backup-onprem-azure.html["これらの要件の詳細については、こちらをご覧ください。"] 。
+* Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。link:prev-ontap-backup-onprem-azure.html["これらの要件の詳細については、こちらをご覧ください。"]。
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするためのアクセス キーとシークレット キーを選択します。link:prev-ontap-backup-onprem-gcp.html["これらの要件の詳細については、こちらをご覧ください。"] 。
+* Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするためのアクセス キーとシークレット キーを選択します。link:prev-ontap-backup-onprem-gcp.html["これらの要件の詳細については、こちらをご覧ください。"]。
 
 
 endif::gcp[]
 
-* StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。link:prev-ontap-backup-onprem-storagegrid.html["これらの要件の詳細については、こちらをご覧ください。"] 。
-* ONTAP S3 からリストアする場合は、 ONTAP S3 サーバーの FQDN と、 ONTAP がONTAP S3 との HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスター内の IPspace を選択します。link:prev-ontap-backup-onprem-ontaps3.html["これらの要件の詳細については、こちらをご覧ください。"] 。
+* StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。link:prev-ontap-backup-onprem-storagegrid.html["これらの要件の詳細については、こちらをご覧ください。"]。
+* ONTAP S3 からリストアする場合は、 ONTAP S3 サーバーの FQDN と、 ONTAP がONTAP S3 との HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスター内の IPspace を選択します。link:prev-ontap-backup-onprem-ontaps3.html["これらの要件の詳細については、こちらをご覧ください。"]。
 
 
 .結果
-ボリューム、フォルダー、またはファイルが復元され、復元ダッシュボードに戻り、復元操作の進行状況を確認できます。また、*ジョブ監視*タブを選択して、復元の進行状況を確認することもできます。見るlink:br-use-monitor-tasks.html["ジョブモニターページ"] 。
+ボリューム、フォルダー、またはファイルが復元され、復元ダッシュボードに戻り、復元操作の進行状況を確認できます。また、*ジョブ監視*タブを選択して、復元の進行状況を確認することもできます。見るlink:br-use-monitor-tasks.html["ジョブモニターページ"]。

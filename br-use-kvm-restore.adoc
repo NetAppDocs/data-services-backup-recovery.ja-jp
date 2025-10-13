@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-kvm-restore.html 
 keywords: restore, vm, kvm, virtual machine, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery を使用して KVM ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して KVM ワークロードを保護します。 
 ---
-= NetApp Backup and Recovery で KVM 仮想マシンを復元する
+= NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery を使用して KVM ワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スナップショット コピー、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。
+NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。
 
 .これらの場所から復元
 異なる開始場所から仮想マシンを復元できます。
@@ -55,11 +55,11 @@ TIP: バックアップ ファイルの内容にアクセスするには、ク�
 
 復元オプションを使用して KVM 仮想マシンを復元します。スナップショットは、名前またはフィルターを使用して検索できます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppコンソール メニューから、*保護 > バックアップとリカバリ* を選択します。
-. NetApp のバックアップとリカバリ メニューから、[復元] を選択します。
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Backup and Recoveryメニューから、[復元] を選択します。
 . 名前検索フィールドの右側にあるドロップダウン リストから、*KVM* を選択します。
 . 復元する VM の名前を入力するか、復元するリソースが配置されている VM ホストまたはストレージ プールをフィルターします。
 +

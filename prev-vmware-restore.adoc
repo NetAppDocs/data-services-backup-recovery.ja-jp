@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-vmware-restore.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロードを保護します。 
+summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryで仮想マシンのデータを復元する
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: NetApp NetApp Backup and Recovery を使用して VMware ワークロ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用すると、クラウドからオンプレミスの vCenter に仮想マシンのデータを復元できます。仮想マシンを、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。仮想マシンがアーカイブ ポリシーを使用してバックアップされた場合は、アーカイブ復元の優先順位を設定できます。
+NetApp Backup and Recoveryを使用すると、クラウドからオンプレミスの vCenter に仮想マシンのデータを復元できます。仮想マシンを、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。仮想マシンがアーカイブ ポリシーを使用してバックアップされた場合は、アーカイブ復元の優先順位を設定できます。
 
 
 NOTE: データストアにまたがる仮想マシンを復元することはできません。
 
 []
 ====
-*注意* NetAppのバックアップとリカバリのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetAppバックアップおよびリカバリワークロードに切り替える"] 。
+*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
 ====
 .開始する前に
@@ -29,7 +29,7 @@ NOTE: データストアにまたがる仮想マシンを復元することは�
 * 別の場所に復元する場合:
 +
 ** ソース vCenter とターゲット vCenter がリンク モードになっていることを確認します。
-** NetAppコンソールの *Systems* ページと、両方のSnapCenter Plug-in for VMware vSphereホストのリンク モードの vCenter に、ソース クラスタと宛先クラスタの詳細が追加されていることを確認します。
+** NetApp Consoleの*Systems* ページと、両方のSnapCenter Plug-in for VMware vSphereホストのリンク モードの vCenter に、ソース クラスタと宛先クラスタの詳細が追加されていることを確認します。
 ** コンソールの *システム* ページで、代替の場所に対応するシステムが追加されていることを確認します。
 
 

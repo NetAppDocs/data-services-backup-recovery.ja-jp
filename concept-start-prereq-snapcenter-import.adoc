@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-start-prereq-snapcenter-import.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
-summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、 NetApp Backup and Recovery を開始します。  NetApp Backup and Recovery を使用するには、次の前提条件が必要です。 
+summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。 
 ---
-= プラグイン サービスからNetApp Backup and Recovery にインポートするための前提条件
+= プラグイン サービスからNetApp Backup and Recoveryにインポートするための前提条件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 運用環境、コンソール エージェント、コンソール ア
 
 
 [role="lead"]
-Microsoft SQL Server 用のSnapCenterプラグイン サービスからNetApp Backup and Recovery にリソースをインポートする場合は、さらにいくつかの項目を構成する必要があります。
+Microsoft SQL Server 用のSnapCenterプラグイン サービスからNetApp Backup and Recoveryにリソースをインポートする場合は、さらにいくつかの項目を構成する必要があります。
 
 
 
-== まずNetAppコンソールでシステムを作成する
+== まずNetApp Consoleでシステムを作成する
 
 SnapCenterからリソースをインポートする場合は、 SnapCenterからインポートする前に、オンプレミスのすべてのSnapCenterクラスター ストレージをコンソールの [システム] ページに追加する必要があります。これにより、ホスト リソースが正しく検出され、インポートされるようになります。
 
@@ -28,7 +28,7 @@ SnapCenterからリソースをインポートする場合は、 SnapCenterか�
 
 SnapCenter Plug-in for Microsoft SQL Server からリソースをインポートするには、 SnapCenter Plug-in for Microsoft SQL Server をインストールするためのホスト要件が満たされていることを確認します。
 
-SnapCenterの要件については、link:concept-start-prereq.html["NetAppバックアップおよびリカバリの前提条件"] 。
+SnapCenterの要件については、link:concept-start-prereq.html["NetApp Backup and Recoveryの前提条件"] 。
 
 
 
@@ -77,7 +77,7 @@ UAC リモート制限を無効にする前に、次の問題を考慮してく�
 . 次の手順に従って、 SnapCenter Windows ホストでレジストリ エディターを開きます。
 +
 .. プレス `Windows+R`[実行]ダイアログ ボックスを開きます。
-.. タイプ `regedit`そして押す `Enter`。
+.. タイプ `regedit`押すと `Enter`。
 
 
 . ポリシーキーに移動します。

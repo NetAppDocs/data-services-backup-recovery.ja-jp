@@ -4,7 +4,7 @@ permalink: br-start-discover-hyperv.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
 summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。 
 ---
-= NetAppバックアップおよびリカバリで Hyper-V ワークロードを発見
+= NetApp Backup and Recoveryで Hyper-V ワークロードを発見
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前
 [role="lead"]
 NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。
 
-*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。学ぶlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -25,12 +25,12 @@ NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、そ
 Hyper-V ホスト情報を追加し、 NetApp Backup and Recovery で仮想マシンを検出できるようにします。各コンソール エージェント内で、リソースを検出するシステムを選択します。
 
 
-NOTE: Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recovery によって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
+NOTE: Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
 
 .手順
-. NetAppコンソール メニューから、*保護* > *バックアップとリカバリ* を選択します。
+. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
 +
-NetApp Backup and Recovery に初めてログインする場合、コンソールにはすでにシステムがあるがリソースがまだ検出されていないと、「新しいNetApp Backup and Recovery へようこそ」ランディング ページが表示され、*リソースの検出* オプションが表示されます。
+NetApp Backup and Recoveryに初めてログインする場合、コンソールにはすでにシステムがあるがリソースがまだ検出されていないと、「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、*リソースの検出*オプションが表示されます。
 
 . *リソースの検出*を選択します。
 . 次の情報を入力してください。
@@ -59,9 +59,9 @@ NetApp Backup and Recovery がリソースを検出すると、インベント�
 
 
 
-== NetAppバックアップおよびリカバリダッシュボードに進みます
+== NetApp Backup and Recoveryダッシュボードに進みます
 
 .手順
-. NetAppバックアップおよびリカバリ ダッシュボードを表示するには、 NetAppコンソール メニューから *ダッシュボード* を選択します。
+. NetApp Backup and Recoveryダッシュボードを表示するには、 NetApp Consoleメニューから *ダッシュボード* を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 

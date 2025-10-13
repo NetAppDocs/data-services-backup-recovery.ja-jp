@@ -4,7 +4,7 @@ permalink: br-use-manage-inventory.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
 summary: NetApp Backup and Recovery を使用すると、ワークロード ホスト情報、データベース情報、インスタンス情報を管理できます。インベントリの保護設定を表示、編集、削除できます。 
 ---
-= NetApp Backup and Recovery で Microsoft SQL Server のインベントリを管理する
+= NetApp Backup and Recoveryで Microsoft SQL Server のインベントリを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,7 +39,7 @@ NetApp Backup and Recovery を使用すると、Microsoft SQL Server ワーク�
 ** オンデマンドバックアップを開始して今すぐバックアップ
 
 
-* ログ ディレクトリを構成します ([インベントリ] > [ホスト] から)。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recovery でログを構成します。詳細については、link:br-start-setup.html["NetAppバックアップおよびリカバリ設定を構成する"] 。
+* ログ ディレクトリを構成します ([インベントリ] > [ホスト] から)。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
 
 
 
@@ -48,9 +48,9 @@ NetApp Backup and Recovery を使用すると、Microsoft SQL Server ワーク�
 
 ホスト情報を管理して、適切なホストが保護されるようにすることができます。ホスト情報を表示、編集、削除できます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューア、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、またはバックアップおよびリカバリ クローン管理者のロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューア、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、またはバックアップおよびリカバリ クローン管理者のロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
-* ログディレクトリを構成します。詳細については、link:br-start-setup.html["NetAppバックアップおよびリカバリ設定を構成する"] 。
+* ログディレクトリを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
 * スケジュールを中断
 * ホストを編集する
 * ホストを削除する
@@ -63,11 +63,11 @@ NetApp Backup and Recovery を使用すると、Microsoft SQL Server ワーク�
 システム内で検出されたホストを管理できます。個別に、またはグループとして管理できます。
 
 
-TIP: ホスト列に「管理対象外」ステータスが表示されているホストのみを管理できます。ステータスが「管理済み」の場合、ホストはすでにNetApp Backup and Recovery によって管理されていることを意味します。
+TIP: ホスト列に「管理対象外」ステータスが表示されているホストのみを管理できます。ステータスが「管理済み」の場合、ホストはすでにNetApp Backup and Recoveryによって管理されていることを意味します。
 
-NetApp Backup and Recovery でホストを管理すると、 SnapCenterそれらのホスト上のリソースは管理されなくなります。
+NetApp Backup and Recoveryでホストを管理すると、 SnapCenterそれらのホスト上のリソースは管理されなくなります。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、またはバックアップおよびリカバリのスーパー管理者。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、またはバックアップおよびリカバリのスーパー管理者。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
 . メニューから*インベントリ*を選択します。
@@ -93,7 +93,7 @@ NetApp Backup and Recovery でホストを管理すると、 SnapCenterそれら
 スケジュールを一時停止して、ホストのバックアップおよび復元操作を停止できます。ホスト上でメンテナンス作業を実行する必要がある場合は、これを実行することをお勧めします。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . スケジュールを一時停止するホストを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[*スケジュールの一時停止*]を選択します。
 . 確認ダイアログボックスで、[一時停止] を選択します。
@@ -106,7 +106,7 @@ NetApp Backup and Recovery でホストを管理すると、 SnapCenterそれら
 vCenter サーバー情報、ホスト登録資格情報、および詳細設定オプションを変更できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 編集するホストを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[ホストの編集] を選択します。
 . ホスト情報を編集します。
@@ -120,7 +120,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 ホスト情報を削除すると、サービス料金を停止できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 削除するホストを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[ホストの削除] を選択します。
 . 確認情報を確認し、「削除」を選択します。
@@ -139,7 +139,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 * 今すぐバックアップ
 
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -148,14 +148,14 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 リソース保護のスケジュールと保持を管理するポリシーを使用して、データベース インスタンスにポリシーを割り当てることができます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *インスタンス*タブを選択します。
 . インスタンスを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護] を選択します。
 . ポリシーを選択するか、新しいポリシーを作成します。
 +
-ポリシー作成の詳細については、以下を参照してください。link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
 
 . バックアップの前後に実行するスクリプトに関する情報を提供します。
 +
@@ -178,10 +178,10 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 保護が行われるように、資格情報をリソースに関連付けることができます。
 
-詳細については、 link:br-start-configure.html["資格情報を含むNetAppのバックアップとリカバリの設定を構成する"] 。
+詳細については、link:br-start-configure.html["資格情報を含むNetApp Backup and Recoveryの設定を構成する"] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *インスタンス*タブを選択します。
 . インスタンスを選択します。
@@ -196,13 +196,13 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 ポリシーを変更したり、新しいポリシーを作成したり、スケジュールを設定したり、保持設定を設定したりできます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *インスタンス*タブを選択します。
 . インスタンスを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護の編集] を選択します。
 +
-ポリシー作成の詳細については、以下を参照してください。link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
 
 
 
@@ -213,7 +213,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 データがすぐに保護されるように、今すぐデータをバックアップすることができます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *インスタンス*タブを選択します。
 . インスタンスを選択します。
@@ -243,16 +243,16 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 ポリシーを変更したり、新しいポリシーを作成したり、スケジュールを設定したり、保持設定を設定したりできます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *データベース*タブを選択します。
 . データベースを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護] を選択します。
 +
-ポリシー作成の詳細については、以下を参照してください。link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
 
 
 
@@ -262,7 +262,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 データが保護されていることを保証するために、データベースを復元することができます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 . *データベース*タブを選択します。
 . データベースを選択します。
@@ -278,16 +278,16 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 ポリシーを変更したり、新しいポリシーを作成したり、スケジュールを設定したり、保持設定を設定したりできます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *データベース*タブを選択します。
 . データベースを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護の編集] を選択します。
 +
-ポリシー作成の詳細については、以下を参照してください。link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
 
 
 
@@ -297,10 +297,10 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 今すぐ Microsoft SQL Server インスタンスとデータベースをバックアップして、データがすぐに保護されるようにすることができます。
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 表示するワークロードを選択し、[表示] を選択します。
 . *インスタンス*または*データベース*タブを選択します。
 . インスタンスまたはデータベースを選択します。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, backup, restore, NetApp Backup and Recovery, protection, sql server, workloads, volumes, snapshots' 
-summary: NetAppバックアップおよびリカバリの新機能について説明します。 
+summary: NetApp Backup and Recoveryの新機能について説明します。 
 ---
-= NetAppバックアップおよびリカバリの新機能
+= NetApp Backup and Recoveryの新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,33 +14,33 @@ summary: NetAppバックアップおよびリカバリの新機能について�
 
 
 [role="lead"]
-NetAppバックアップおよびリカバリの新機能について説明します。
+NetApp Backup and Recoveryの新機能について説明します。
 
 
 
 == 2025年10月6日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
-=== BlueXP backup and recoveryはNetAppバックアップおよびリカバリになりました
+=== BlueXP backup and recoveryはNetApp Backup and Recoveryになりました
 
-BlueXP backup and recoveryは、 NetAppバックアップおよびリカバリに名前が変更されました。
+BlueXP backup and recoveryは、 NetApp Backup and Recoveryに名前が変更されました。
 
 
 
-=== BlueXPはNetAppコンソールになりました
+=== BlueXPはNetApp Consoleになりました
 
-NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、安全性とコンプライアンスが確保された簡素化された管理を実現します。
+NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度に安全でコンプライアンスに準拠した簡素化された管理を実現します。
 
-変更内容の詳細については、link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetAppコンソールのリリース ノート。"]
+変更内容の詳細については、link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Consoleのリリース ノート。"]
 
 
 
 === プライベートプレビューとしての Hyper-V ワークロード サポート
 
-NetApp Backup and Recovery のこのリリースでは、Hyper-V ワークロードの検出と管理のサポートが導入されています。
+NetApp Backup and Recoveryのこのリリースでは、Hyper-V ワークロードの検出と管理のサポートが導入されています。
 
 * スタンドアロン インスタンスとフェールオーバー クラスター インスタンス (FCI) 上の VM のバックアップと復元
 * SMB3共有に保存されたVMを保護する
@@ -54,9 +54,9 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 
 
 
-=== プライベートプレビューとしての KVM ワークロードサポート
+=== プライベートプレビューとしての KVM ワークロード サポート
 
-NetApp Backup and Recovery のこのリリースでは、KVM ワークロードの検出と管理のサポートが導入されています。
+NetApp Backup and Recoveryのこのリリースでは、KVM ワークロードの検出と管理のサポートが導入されています。
 
 * NFS共有に保存されたqcow2 VMイメージのバックアップと復元
 * ストレージプールのバックアップ
@@ -89,7 +89,7 @@ Kubernetes ワークロードのプレビュー リリースでは、次の拡�
 * マルチバケットのサポート: 異なるクラウドプロバイダー間でシステムごとに複数のバケットを使用して、システム内のボリュームを保護できるようになりました。
 
 
-Kubernetesワークロードの保護の詳細については、以下を参照してください。  https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
 
 
 
@@ -113,7 +113,7 @@ VMwareワークロードの保護の詳細については、以下を参照し�
 
 === Oracle Database ワークロード サポートのプライベート プレビュー
 
-NetApp Backup and Recovery のこのリリースでは、Oracle Database ワークロードの検出と管理のサポートが導入されています。
+NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワークロードの検出と管理のサポートが導入されています。
 
 * スタンドアロンのOracleデータベースを発見
 * データのみ、またはデータとログのバックアップの保護ポリシーを作成する
@@ -131,7 +131,7 @@ Oracle Databaseワークロードの保護の詳細については、以下を�
 
 == 2025年8月25日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -142,7 +142,7 @@ Oracle Databaseワークロードの保護の詳細については、以下を�
 
 NOTE: VMware ワークロードの保護に関するドキュメントは、テクノロジー プレビューとして提供されます。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMwareワークロードの保護について詳しくは、こちらをご覧ください。"] 。
+link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMwareワークロードの保護について詳しくは、こちらをご覧ください。"]。
 
 
 
@@ -160,13 +160,13 @@ link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMw
 
 == 2025年8月12日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === Microsoft SQL Server ワークロードが一般提供 (GA) でサポートされるようになりました
 
-Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recovery で一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
+Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
 
 このリリースには、以前のプレビュー バージョンからの Microsoft SQL Server ワークロード サポートに対する次の機能強化が含まれています。
 
@@ -178,13 +178,13 @@ Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Rec
 image:../media/screen-br-sql-protection-details.png["Microsoft SQL Server ワークロードの保護の詳細ページ"]
 
 * *マルチバケットのサポート*: 異なるクラウド プロバイダーにまたがる作業環境ごとに最大 6 つのバケットを使用して、作業環境内のボリュームを保護できるようになりました。
-* *SQL Server ワークロードのライセンスと無料トライアルの更新*: 既存のNetApp Backup and Recovery ライセンス モデルを使用して、SQL Server ワークロードを保護できるようになりました。SQL Server ワークロードには個別のライセンス要件はありません。
+* *SQL Server ワークロードのライセンスと無料トライアルの更新*: 既存のNetApp Backup and Recoveryライセンス モデルを使用して、SQL Server ワークロードを保護できるようになりました。SQL Server ワークロードには個別のライセンス要件はありません。
 +
-詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetApp Backup and Recoveryのライセンスを設定する"] 。
 
 * *カスタム スナップショット名*: Microsoft SQL Server ワークロードのバックアップを管理するポリシーで、独自のスナップショット名を使用できるようになりました。ポリシー ページの *詳細設定* セクションにこの情報を入力します。
 +
-image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetAppバックアップおよびリカバリ ポリシーのSnapMirrorおよびスナップショット形式の設定のスクリーンショット"]
+image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetApp Backup and RecoveryポリシーのSnapMirrorおよびスナップショット形式の設定のスクリーンショット"]
 
 +
 参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["ポリシーを使用してワークロードを保護する"]。
@@ -192,13 +192,13 @@ image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetAppバッ
 * *セカンダリ ボリュームのプレフィックスとサフィックス*: ポリシー ページの *詳細設定* セクションで、カスタムのプレフィックスとサフィックスを入力できます。
 * *ID とアクセス*: ユーザーの機能へのアクセスを制御できるようになりました。
 +
-参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["NetAppバックアップおよびリカバリにログイン"]そして https://docs.netapp.com/us-en/data-services-backup-recovery/reference-roles.html["NetAppバックアップおよびリカバリ機能へのアクセス"]。
+参照 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["NetApp Backup and Recoveryにログイン"]そして https://docs.netapp.com/us-en/data-services-backup-recovery/reference-roles.html["NetApp Backup and Recovery機能へのアクセス"]。
 
 * *オブジェクト ストレージから代替ホストへの復元*: プライマリ ストレージがダウンしている場合でも、オブジェクト ストレージから代替ホストに復元できるようになりました。
 * *ログ バックアップ データ*: データベース保護の詳細ページにログ バックアップが表示されるようになりました。バックアップが完全バックアップかログ バックアップかを示す「バックアップ タイプ」列が表示されます。
 * *強化されたダッシュボード*: ダッシュボードにストレージとクローンの節約が表示されるようになりました。
 +
-image:../media/screen-br-dashboard3.png["NetAppバックアップおよびリカバリダッシュボード"]
+image:../media/screen-br-dashboard3.png["NetApp Backup and Recoveryダッシュボード"]
 
 
 
@@ -206,8 +206,8 @@ image:../media/screen-br-dashboard3.png["NetAppバックアップおよびリカ
 
 === ONTAPボリュームワークロードの強化
 
-* * ONTAPボリュームの複数フォルダの復元*: これまでは、参照と復元機能から一度に 1 つのフォルダまたは複数のファイルを復元できました。NetApp Backup and Recovery では、参照と復元機能を使用して一度に複数のフォルダを選択できるようになりました。
-* *削除されたボリュームのバックアップの表示と管理*: NetAppバックアップおよびリカバリ ダッシュボードに、 ONTAPから削除されたボリュームを表示および管理するオプションが追加されました。これにより、 ONTAPに存在しなくなったボリュームのバックアップを表示および削除できるようになります。
+* * ONTAPボリュームの複数フォルダの復元*: これまでは、参照と復元機能から一度に 1 つのフォルダまたは複数のファイルを復元できました。NetApp Backup and Recoveryでは、参照と復元機能を使用して一度に複数のフォルダを選択できるようになりました。
+* *削除されたボリュームのバックアップの表示と管理*: NetApp Backup and Recoveryダッシュボードに、 ONTAPから削除されたボリュームを表示および管理するオプションが追加されました。これにより、 ONTAPに存在しなくなったボリュームのバックアップを表示および削除できるようになります。
 * *バックアップの強制削除*: 極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプションを使用できます (ボリュームおよび作業環境レベル)。
 
 
@@ -220,13 +220,13 @@ CAUTION: このオプションは慎重に使用し、極端なクリーンア�
 
 == 2025年7月28日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === Kubernetes ワークロードのサポート (プレビュー)
 
-NetApp Backup and Recovery のこのリリースでは、Kubernetes ワークロードの検出と管理のサポートが導入されています。
+NetApp Backup and Recoveryのこのリリースでは、Kubernetes ワークロードの検出と管理のサポートが導入されています。
 
 * kubeconfig ファイルを共有せずに、 NetApp ONTAPを搭載した Red Hat OpenShift とオープンソースの Kubernetes クラスターを発見します。
 * 統合されたコントロール プレーンを使用して、複数の Kubernetes クラスターにわたるアプリケーションを検出、管理、保護します。
@@ -237,13 +237,13 @@ NetApp Backup and Recovery のこのリリースでは、Kubernetes ワークロ
 * 実行フックとテンプレートを使用して、アプリケーション整合性のあるバックアップを作成します。
 
 
-Kubernetesワークロードの保護の詳細については、以下を参照してください。  https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
 
 
 
 == 2025年7月14日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -251,30 +251,30 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 
 2025 年 4 月には、はるかに高速で効率的な、強化されたONTAPボリューム ダッシュボードのプレビューをリリースしました。
 
-このダッシュボードは、多数のワークロードを抱えるエンタープライズ顧客を支援するために設計されました。  20,000 ボリュームを持つお客様の場合でも、新しいダッシュボードは 10 秒未満で読み込まれます。
+このダッシュボードは、多数のワークロードを抱えるエンタープライズ顧客を支援するために設計されました。20,000 ボリュームを持つお客様の場合でも、新しいダッシュボードは 10 秒未満で読み込まれます。
 
-プレビューが成功し、プレビューのお客様から素晴らしいフィードバックをいただいたため、これをすべてのお客様向けのデフォルトのエクスペリエンスにすることにいたしました。驚くほど高速なダッシュボードに備えてください。
+プレビューが成功し、プレビューのお客様から素晴らしいフィードバックをいただいたため、これをすべてのお客様のデフォルトのエクスペリエンスにすることにいたしました。驚くほど高速なダッシュボードに備えてください。
 
-詳細については、 link:br-use-dashboard.html["ダッシュボードで保護の状態を確認する"] 。
+詳細については、link:br-use-dashboard.html["ダッシュボードで保護の状態を確認する"] 。
 
 
 
 === パブリック テクノロジー プレビューとしての Microsoft SQL Server ワークロード サポート
 
-NetApp Backup and Recovery のこのリリースでは、 NetApp Backup and Recovery でお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。
+NetApp Backup and Recoveryのこのリリースでは、NetApp Backup and Recoveryでお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。
 
 プレビューにサインアップするには、こちらに記入してください https://forms.office.com/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOojtBW63mDRDv3ZK50MaTlJUNjdENllaVTRTVFJGSDQ2MFJIREcxN0EwQi4u&route=shorturl["プレビュー登録フォーム"^]。
 
 
 NOTE: Microsoft SQL Server ワークロードの保護に関するこのドキュメントは、テクノロジープレビューとして提供されています。このプレビュー提供において、 NetApp は一般提供開始前に提供内容、内容、およびスケジュールを変更する権利を留保します。
 
-このバージョンのNetApp Backup and Recovery には、次の更新が含まれています。
+このバージョンのNetApp Backup and Recoveryには、次の更新が含まれています。
 
-* *3-2-1 バックアップ機能*: このバージョンではSnapCenter機能が統合されており、 NetApp Backup and Recovery ユーザー インターフェイスから 3-2-1 データ保護戦略を使用してSnapCenterリソースを管理および保護できます。
-* * SnapCenterからのインポート*: SnapCenter のバックアップ データとポリシーをNetApp Backup and Recovery にインポートできます。
+* *3-2-1 バックアップ機能*: このバージョンではSnapCenter機能が統合されており、 NetApp Backup and Recoveryユーザー インターフェイスから 3-2-1 データ保護戦略を使用してSnapCenterリソースを管理および保護できます。
+* * SnapCenterからのインポート*: SnapCenter のバックアップ データとポリシーをNetApp Backup and Recoveryにインポートできます。
 * *再設計されたユーザー インターフェイス* により、バックアップおよびリカバリ タスクをより直感的に管理できるようになります。
 * *バックアップ ターゲット*: Amazon Web Services (AWS)、Microsoft Azure Blob Storage、 StorageGRID、 ONTAP S3 環境にバケットを追加して、Microsoft SQL Server ワークロードのバックアップ ターゲットとして使用できます。
-* *ワークロード サポート*: このバージョンでは、Microsoft SQL Server データベースと可用性グループのバックアップ、復元、検証、複製が可能になります。  (他のワークロードのサポートは、将来のリリースで追加される予定です。)
+* *ワークロード サポート*: このバージョンでは、Microsoft SQL Server データベースと可用性グループのバックアップ、復元、検証、および複製が可能になります。(他のワークロードのサポートは将来のリリースで追加される予定です。)
 * *柔軟な復元オプション*: このバージョンでは、破損や偶発的なデータ損失が発生した場合に、データベースを元の場所と別の場所の両方に復元できます。
 * *即時の実稼働コピー*: 開発、テスト、分析用のスペース効率の高い実稼働コピーを、数時間または数日ではなく数分で生成します。
 * このバージョンには、詳細なレポートを作成する機能が含まれています。
@@ -286,13 +286,13 @@ Microsoft SQL Server ワークロードの保護の詳細については、以�
 
 == 2025年6月9日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === インデックスカタログのサポートの更新
 
-2025 年 2 月に、データの復元における検索と復元方法で使用する更新されたインデックス作成機能 (インデックス カタログ v2) を導入しました。以前のリリースでは、オンプレミス環境でのデータ インデックス作成のパフォーマンスが大幅に向上しました。このリリースでは、インデックス カタログが Amazon Web Services、Microsoft Azure、Google Cloud Platform (GCP) 環境で利用できるようになりました。
+2025 年 2 月に、データの復元における検索と復元方法で使用する更新されたインデックス作成機能 (インデックス カタログ v2) を導入しました。前回のリリースでは、オンプレミス環境でのデータ インデックス作成のパフォーマンスが大幅に向上しました。このリリースでは、インデックス カタログが Amazon Web Services、Microsoft Azure、Google Cloud Platform (GCP) 環境で利用できるようになりました。
 
 新規のお客様の場合、すべての新しい環境では Indexed Catalog v2 がデフォルトで有効になっています。既存のお客様の場合は、環境のインデックスを再作成して、Indexed Catalog v2 を活用することができます。
 
@@ -301,13 +301,13 @@ Microsoft SQL Server ワークロードの保護の詳細については、以�
 
 インデックスカタログはすべてのボリュームとバックアップ ファイルを追跡できるため、検索が迅速かつ効率的になります。
 
- https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["検索と復元のインデックスを有効にする"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["検索と復元のインデックスを有効にする"] 。
 
 
 
 === Azure プライベート リンク エンドポイントとサービス エンドポイント
 
-通常、 NetApp Backup and Recovery は、保護タスクを処理するためにクラウド プロバイダーとのプライベート エンドポイントを確立します。このリリースでは、 NetApp Backup and Recovery によるプライベート エンドポイントの自動作成を有効または無効にできるオプション設定が導入されました。プライベート エンドポイントの作成プロセスをより細かく制御したい場合、これは役立つ可能性があります。
+通常、 NetApp Backup and Recovery は、保護タスクを処理するためにクラウド プロバイダーとのプライベート エンドポイントを確立します。このリリースでは、NetApp Backup and Recoveryによるプライベート エンドポイントの自動作成を有効または無効にできるオプション設定が導入されました。プライベート エンドポイントの作成プロセスをより細かく制御したい場合、これは役立つ可能性があります。
 
 保護を有効にするとき、または復元プロセスを開始するときに、このオプションを有効または無効にすることができます。
 
@@ -323,7 +323,7 @@ Microsoft SQL Server ワークロードの保護の詳細については、以�
 
 === StorageGRID用の独自のバケットを用意する
 
-作業環境のオブジェクト ストレージにバックアップ ファイルを作成すると、デフォルトでは、 NetApp Backup and Recovery によって、設定したオブジェクト ストレージ アカウントにバックアップ ファイル用のコンテナ (バケットまたはストレージ アカウント) が作成されます。以前は、これをオーバーライドして、Amazon S3、Azure Blob Storage、Google Cloud Storage に独自のコンテナを指定できました。このリリースでは、独自のStorageGRIDオブジェクト ストレージ コンテナーを導入できるようになりました。
+作業環境のオブジェクト ストレージにバックアップ ファイルを作成すると、デフォルトでは、 NetApp Backup and Recoveryによって、設定したオブジェクト ストレージ アカウントにバックアップ ファイル用のコンテナ (バケットまたはストレージ アカウント) が作成されます。以前は、これをオーバーライドして、Amazon S3、Azure Blob Storage、Google Cloud Storage に独自のコンテナを指定できました。このリリースでは、独自のStorageGRIDオブジェクト ストレージ コンテナーを導入できるようになりました。
 
 見る https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html["独自のオブジェクトストレージコンテナを作成する"]。
 
@@ -331,7 +331,7 @@ Microsoft SQL Server ワークロードの保護の詳細については、以�
 
 == 2025年5月13日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -376,7 +376,7 @@ IMPORTANT: この機能は本番環境では使用しないでください。
 
 == 2025年4月16日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -401,7 +401,7 @@ IMPORTANT: この機能は本番環境では使用しないでください。
 
 === サードパーティの Wasabi オブジェクト ストアのサポート (プレビュー)
 
-NetApp Backup and Recovery は現在、Wasabi に重点を置き、サードパーティのオブジェクト ストアまでサポートを拡張しています。この新しいプレビュー機能により、バックアップとリカバリのニーズに合わせて、S3 互換のオブジェクト ストアを活用できるようになります。
+NetApp Backup and Recovery は、Wasabi に重点を置き、サードパーティのオブジェクト ストアまでサポートを拡張しました。この新しいプレビュー機能により、バックアップとリカバリのニーズに合わせて、S3 互換のオブジェクト ストアを活用できるようになります。
 
 
 
@@ -452,7 +452,7 @@ vi default.json
 
 == 2025年3月17日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -476,19 +476,19 @@ vi default.json
 
 === SnapMirrorクラウド再同期
 
-この更新により、 SnapMirror関係が削除された後、サポートされていないONTAPバージョンに対してNetApp Backup and Recovery からSnapMirror Cloud の再同期を開始できなくなります。
+この更新により、 SnapMirror関係が削除された後、サポートされていないONTAPバージョンに対してNetApp Backup and RecoveryからSnapMirror Cloud の再同期を開始できなくなります。
 
 
 
 == 2025年2月21日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === 高性能インデックス
 
-NetApp Backup and Recovery では、ソース システム上のデータのインデックス作成をより効率的にする、更新されたインデックス作成機能が導入されています。新しいインデックス作成機能には、UI の更新、データ復元の検索と復元方法のパフォーマンスの向上、グローバル検索機能のアップグレード、およびスケーラビリティの向上が含まれます。
+NetApp Backup and Recovery、ソース システム上のデータのインデックス作成をより効率的にする、更新されたインデックス作成機能が導入されています。新しいインデックス作成機能には、UI の更新、データ復元の検索と復元方法のパフォーマンスの向上、グローバル検索機能のアップグレード、およびスケーラビリティの向上が含まれます。
 
 改善点の内訳は次のとおりです。
 
@@ -536,13 +536,13 @@ NetApp Backup and Recovery では、ソース システム上のデータのイ�
 
 == 2025年2月13日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
-=== NetAppバックアップおよびリカバリ プレビュー リリース
+=== NetApp Backup and Recoveryプレビュー リリース
 
-NetApp Backup and Recovery のこのプレビュー リリースでは、 NetApp Backup and Recovery でお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。
+NetApp Backup and Recoveryのこのプレビュー リリースでは、NetApp Backup and Recoveryでお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。
 
 
 NOTE: このドキュメントはテクノロジープレビューとして提供されています。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
@@ -550,24 +550,24 @@ NOTE: このドキュメントはテクノロジープレビューとして提�
 NetApp Backup and Recovery Preview 2025 のこのバージョンには、次の更新が含まれています。
 
 * バックアップおよびリカバリ タスクをより直感的に管理できるように再設計されたユーザー インターフェイス。
-* プレビュー バージョンでは、Microsoft SQL Server データベースのバックアップと復元が可能になります。  (他のワークロードのサポートは、将来のリリースで追加される予定です。)
-* このバージョンではSnapCenter の機能が統合されており、 NetApp Backup and Recovery ユーザー インターフェイスから 3-2-1 データ保護戦略を使用してSnapCenterリソースを管理および保護できます。
-* このバージョンでは、 SnapCenterワークロードをNetApp Backup and Recovery にインポートできます。
+* プレビュー バージョンでは、Microsoft SQL Server データベースのバックアップと復元が可能になります。(他のワークロードのサポートは将来のリリースで追加される予定です。)
+* このバージョンではSnapCenter の機能が統合されており、 NetApp Backup and Recoveryユーザー インターフェイスから 3-2-1 データ保護戦略を使用してSnapCenterリソースを管理および保護できます。
+* このバージョンでは、 SnapCenterワークロードをNetApp Backup and Recoveryにインポートできます。
 
 
 
 
 == 2024年11月22日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === SnapLock ComplianceとSnapLock Enterpriseの保護モード
 
-NetApp Backup and Recovery では、SnapLock ComplianceまたはSnapLock Enterprise保護モードのいずれかを使用して構成されたFlexVolとFlexGroup の両方のオンプレミス ボリュームをバックアップできるようになりました。このサポートを受けるには、クラスタでONTAP 9.14 以降を実行している必要があります。SnapLock Enterpriseモードを使用したFlexVolボリュームのバックアップは、 ONTAPバージョン 9.11.1 以降でサポートされています。以前のONTAPリリースでは、 SnapLock保護ボリュームのバックアップはサポートされていません。
+NetApp Backup and Recoveryでは、SnapLock ComplianceまたはSnapLock Enterprise保護モードのいずれかを使用して構成されたFlexVolとFlexGroup の両方のオンプレミス ボリュームをバックアップできるようになりました。このサポートを受けるには、クラスタでONTAP 9.14 以降を実行している必要があります。SnapLock Enterpriseモードを使用したFlexVolボリュームのバックアップは、 ONTAPバージョン 9.11.1 以降でサポートされています。以前のONTAPリリースでは、 SnapLock保護ボリュームのバックアップはサポートされていません。
 
-サポートされているボリュームの完全なリストについては、 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetAppのバックアップとリカバリについて学ぶ"] 。
+サポートされているボリュームの完全なリストについては、 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recoveryについて学ぶ"] 。
 
 
 
@@ -575,7 +575,7 @@ NetApp Backup and Recovery では、SnapLock ComplianceまたはSnapLock Enterpr
 
 検索と復元を使用する前に、ボリューム データを復元する各ソース システムで「インデックス作成」を有効にする必要があります。これにより、インデックス カタログは各ボリュームのバックアップ ファイルを追跡できるようになります。ボリューム ページにインデックスのステータスが表示されるようになりました。
 
-* インデックス作成済み: ボリュームのインデックスが作成されました。
+* インデックス作成済み: ボリュームにインデックスが作成されました。
 * 進行中
 * インデックスなし
 * インデックス作成を一時停止しました
@@ -587,17 +587,17 @@ NetApp Backup and Recovery では、SnapLock ComplianceまたはSnapLock Enterpr
 
 == 2024年9月27日
 
-このNetApp Backup and Recovery リリースには、次の更新が含まれています。
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
 
 
 
 === RHEL 8 または 9 での参照と復元による Podman サポート
 
-NetApp Backup and Recovery は、Podman エンジンを使用して Red Hat Enterprise Linux (RHEL) バージョン 8 および 9 でのファイルとフォルダーの復元をサポートするようになりました。これは、 NetAppバックアップおよびリカバリの参照および復元方法に適用されます。
+NetApp Backup and Recovery は、Podman エンジンを使用して Red Hat Enterprise Linux (RHEL) バージョン 8 および 9 でのファイルとフォルダーの復元をサポートするようになりました。これは、NetApp Backup and Recoveryの参照および復元方法に適用されます。
 
 コンソールエージェントバージョン3.9.40は、RHEL 8または9ホストへのコンソールエージェントソフトウェアの手動インストールにおいて、場所に関係なく、Red Hat Enterprise Linuxバージョン8および9の特定のバージョンをサポートします。 https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["ホスト要件"^] 。これらの新しい RHEL バージョンでは、Docker エンジンではなく Podman エンジンが必要です。以前は、 NetApp Backup and Recovery には、Podman エンジンの使用時に 2 つの制限がありました。これらの制限は削除されました。
 
-https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["バックアップファイルからONTAPデータを復元する方法の詳細"] 。
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["バックアップファイルからONTAPデータを復元する方法の詳細"]。
 
 
 
@@ -605,4 +605,4 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.h
 
 このリリースには、ベースライン インデックス作成をより高速に完了する、改良されたカタログ インデックスが含まれています。インデックス作成が高速化されると、検索と復元機能をより迅速に使用できるようになります。
 
-https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["バックアップファイルからONTAPデータを復元する方法の詳細"] 。
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["バックアップファイルからONTAPデータを復元する方法の詳細"]。

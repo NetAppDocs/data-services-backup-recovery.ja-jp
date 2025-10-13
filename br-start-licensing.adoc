@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-licensing.html 
 keywords: license, licensing, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual, netapp intelligent services 
-summary: NetApp Backup and Recovery のライセンスを取得するには、クラウド プロバイダーから従量課金制または年間マーケットプレイス サブスクリプションを購入するか、 NetAppから個人ラ​​イセンスを購入します。システム上でNetApp Backup and Recovery をアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。 
+summary: NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから従量課金制または年間マーケットプレイス サブスクリプションを購入するか、 NetAppから個人ラ​​イセンスを購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。 
 ---
-= NetAppバックアップおよびリカバリのライセンスを設定する
+= NetApp Backup and Recoveryのライセンスを設定する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,23 +14,23 @@ summary: NetApp Backup and Recovery のライセンスを取得するには、�
 
 
 [role="lead"]
-NetApp Backup and Recovery のライセンスを取得するには、クラウド プロバイダーから * NetApp Intelligent Services* の従量課金制 (PAYGO) または年間マーケットプレイス サブスクリプションを購入するか、 NetAppからライセンス持ち込み (BYOL) を購入します。システム上でNetApp Backup and Recovery をアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。
+NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから * NetApp Intelligent Services* の従量課金制 (PAYGO) または年間マーケットプレイス サブスクリプションを購入するか、 NetAppからライセンス持ち込み (BYOL) を購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。
 
 読み進める前にいくつか注意事項があります。
 
-* クラウド プロバイダーのマーケットプレイスでCloud Volumes ONTAPシステムの従量課金制 (PAYGO) サブスクリプションにすでに加入している場合は、 NetApp Backup and Recovery にも自動的に加入されます。再度登録する必要はありません。
-* NetApp Backup and Recovery の Bring Your Own License (BYOL) は、 NetAppコンソール組織またはアカウントに関連付けられているすべてのシステムで使用できるフローティング ライセンスです。したがって、既存の BYOL ライセンスから十分なバックアップ容量を利用できる場合は、別の BYOL ライセンスを購入する必要はありません。
+* クラウド プロバイダーのマーケットプレイスでCloud Volumes ONTAPシステムの従量課金制 (PAYGO) サブスクリプションにすでに加入している場合は、 NetApp Backup and Recoveryにも自動的に加入されます。再度登録する必要はありません。
+* NetApp Backup and Recovery のBring Your Own License (BYOL) は、 NetApp Console組織またはアカウントに関連付けられているすべてのシステムで使用できるフローティング ライセンスです。したがって、既存の BYOL ライセンスから十分なバックアップ容量を利用できる場合は、別の BYOL ライセンスを購入する必要はありません。
 * BYOL ライセンスを使用している場合は、PAYGO サブスクリプションにも加入することをお勧めします。  BYOL ライセンスで許可されている量よりも多くのデータをバックアップした場合、またはライセンスの有効期限が切れた場合でも、従量課金制サブスクリプションを通じてバックアップは継続され、サービスが中断されることはありません。
 * オンプレミスのONTAPデータをStorageGRIDにバックアップする場合は BYOL ライセンスが必要ですが、クラウド プロバイダーのストレージ スペースにはコストはかかりません。
 
 
-link:concept-backup-to-cloud.html["NetApp Backup and Recovery の使用に関連するコストについて詳しく説明します。"]
+link:concept-backup-to-cloud.html["NetApp Backup and Recoveryの使用に関連するコストについて詳しく説明します。"]
 
 
 
 == 30日間無料トライアル
 
-クラウド プロバイダーのマーケットプレイスで * NetApp Intelligent Services* の従量課金制サブスクリプションにサインアップすると、 NetApp Backup and Recovery の 30 日間無料トライアルを利用できます。無料トライアルは、マーケットプレイスのリストに登録した時点で開始されます。  Cloud Volumes ONTAPシステムの導入時にマーケットプレイスのサブスクリプション料金を支払い、その 10 日後にNetApp Backup and Recovery の無料トライアルを開始すると、無料トライアルを使用できる残り期間は 20 日間になることに注意してください。
+クラウド プロバイダーのマーケットプレイスで * NetApp Intelligent Services * の従量課金制サブスクリプションにサインアップすると、 NetApp Backup and Recovery の30 日間無料トライアルを利用できます。無料トライアルは、マーケットプレイスのリストに登録した時点で開始されます。  Cloud Volumes ONTAPシステムの導入時にマーケットプレイスのサブスクリプション料金を支払い、その 10 日後にNetApp Backup and Recovery の無料トライアルを開始すると、無料トライアルを使用できる残り期間は 20 日間になることに注意してください。
 
 無料トライアルが終了すると、中断することなく自動的に PAYGO サブスクリプションに切り替わります。  NetApp Backup and Recoveryの使用を継続しない場合は、link:prev-ontap-backup-manage.html["NetApp Backup and Recoveryをシステムから登録解除する"]試用期間が終了する前に解約すれば料金は発生しません。
 
@@ -38,12 +38,12 @@ link:concept-backup-to-cloud.html["NetApp Backup and Recovery の使用に関連
 
 === 無料トライアルを終了する
 
-無料トライアル終了後もNetApp Backup and Recovery を引き続き使用する場合は、有料サブスクリプションを設定する必要があります。これは、 NetAppコンソール インターフェイスから課金セクションに移動し、ニーズに合ったサブスクリプション プランを選択することで実行できます。  NetApp Backup and Recovery を引き続き使用しない場合は、無料トライアルを終了できます。
+無料トライアル終了後もNetApp Backup and Recoveryを引き続き使用する場合は、有料サブスクリプションを設定する必要があります。これは、NetApp Consoleインターフェイスから課金セクションに移動し、ニーズに合ったサブスクリプション プランを選択することで実行できます。  NetApp Backup and Recoveryの使用を継続しない場合は、無料トライアルを終了できます。
 
 有料プランに加入せずに無料トライアルを終了すると、無料トライアル終了から 60 日後にデータが自動的に削除されます。オプションで、システムにデータを即時に削除させることもできます。
 
 .手順
-. NetApp Backup and Recovery ランディング ページから、*無料トライアルを表示* を選択します。
+. NetApp Backup and Recoveryランディング ページから、*無料トライアルを表示* を選択します。
 . *無料トライアルを終了*を選択します。
 . データを直ちに削除するには、「無料トライアル終了後すぐにデータを削除する」を選択します。
 . ボックスに「*トライアル終了*」と入力します。
@@ -54,7 +54,7 @@ link:concept-backup-to-cloud.html["NetApp Backup and Recovery の使用に関連
 
 == NetApp Backup and Recovery PAYGOサブスクリプションを使用する
 
-従量課金制の場合、オブジェクト ストレージ コストとNetAppバックアップ ライセンス コストを、単一のサブスクリプションで時間単位でクラウド プロバイダーに支払います。無料トライアルをお持ちの場合や、独自のライセンス (BYOL) をお持ちの場合でも、マーケットプレイスで * NetApp Intelligent Services* をサブスクライブする必要があります。
+従量課金制の場合、オブジェクト ストレージ コストとNetAppバックアップ ライセンス コストを、単一のサブスクリプションで時間単位でクラウド プロバイダーに支払います。無料トライアルをお持ちの場合や、独自のライセンス (BYOL) をお持ちの場合でも、マーケットプレイスで * NetApp Intelligent Services* にサブスクライブする必要があります。
 
 * サブスクリプションに登録すると、無料トライアル期間終了後もサービスが中断されることがなくなります。試用期間が終了すると、バックアップしたデータの量に応じて時間ごとに料金が発生します。
 * BYOL ライセンスで許可されている量よりも多くのデータをバックアップする場合、データのバックアップと復元の操作は従量課金制サブスクリプションを通じて継続されます。たとえば、10 TiB の BYOL ライセンスがある場合、10 TiB を超えるすべての容量は PAYGO サブスクリプションを通じて課金されます。
@@ -62,7 +62,7 @@ link:concept-backup-to-cloud.html["NetApp Backup and Recovery の使用に関連
 
 無料トライアル期間中、または BYOL ライセンスを超過していない場合は、従量課金制サブスクリプションから料金は請求されません。
 
-NetApp Backup and Recovery にはいくつかの PAYGO プランがあります。
+NetApp Backup and Recoveryにはいくつかの PAYGO プランがあります。
 
 * Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」パッケージ。
 * Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」パッケージ。これには、ライセンスを使用したCloud Volumes ONTAPシステムの無制限のバックアップが含まれます (バックアップ容量はライセンス容量にカウントされません)。このオプションでは、オンプレミスのONTAPデータをバックアップすることはできません。
@@ -71,32 +71,32 @@ NetApp Backup and Recovery にはいくつかの PAYGO プランがあります�
 
 
 
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["容量ベースのライセンスパッケージの詳細"] 。
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["容量ベースのライセンスパッケージの詳細"]。
 
-次のリンクを使用して、クラウド プロバイダー マーケットプレイスからNetApp Backup and Recovery をサブスクライブします。
+次のリンクを使用して、クラウド プロバイダー マーケットプレイスからNetApp Backup and Recoveryをサブスクライブします。
 
 ifdef::aws[]
 
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["価格の詳細については、 NetApp Intelligent Services のマーケットプレイス オファリングをご覧ください。"^] . endif::aws[]
+* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::aws[]
 
 
 ifdef::azure[]
 
-* アズール: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Services のマーケットプレイス オファリングをご覧ください。"^] . endif::azure[]
+* アズール: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::azure[]
 
 
 ifdef::gcp[]
 
-* Google クラウド: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["価格の詳細については、 NetApp Intelligent Services のマーケットプレイス オファリングをご覧ください。"^] . endif::gcp[]
+* Google クラウド: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::gcp[]
 
 
 
 
 == 年間契約を利用する
 
-年間契約を購入して、 NetAppバックアップおよびリカバリの料金を毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。
+年間契約を購入して、 NetApp Backup and Recoveryを毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。
 
-マーケットプレイスから年間契約を結んでいる場合、 NetApp のバックアップとリカバリのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。
+マーケットプレイスから年間契約を結んでいる場合、 NetApp Backup and Recoveryのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。
 
 ifdef::aws[]
 
@@ -128,7 +128,7 @@ Azureを使用する場合、2つの年間契約が利用可能です。 https:/
 参照 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAPライセンスのトピック"^]このライセンス オプションの詳細については、こちらをご覧ください。
 
 +
-このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるメッセージが表示されます。endif::azure[]
+このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるプロンプトが表示されます。endif::azure[]
 
 
 
@@ -144,12 +144,12 @@ NetApp がプライベート オファーを共有した後、 NetApp Backup and
 
 NetAppの Bring-Your-Own ライセンスには、1 年、2 年、または 3 年の契約期間があります。保護するデータに対してのみ料金を支払います。料金は、バックアップ対象のソースONTAPボリュームの論理使用容量（効率性考慮前）に基づいて計算されます。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。
 
-BYOL NetApp Backup and Recovery ライセンスはフローティング ライセンスであり、 NetAppコンソール組織またはアカウントに関連付けられているすべてのシステム間で合計容量が共有されます。  ONTAPシステムの場合、CLIコマンドを実行することで、必要な容量の大まかな見積もりを取得できます。 `volume show -fields logical-used-by-afs`バックアップする予定のボリュームに対して。
+BYOL NetApp Backup and Recoveryライセンスはフローティング ライセンスであり、 NetApp Console組織またはアカウントに関連付けられているすべてのシステム間で合計容量が共有されます。  ONTAPシステムの場合、CLIコマンドを実行することで、必要な容量の大まかな見積もりを取得できます。 `volume show -fields logical-used-by-afs`バックアップする予定のボリュームに対して。
 
 NetApp Backup and Recovery BYOL ライセンスをお持ちでない場合は、コンソールの右下にあるチャット アイコンをクリックしてライセンスを購入してください。
 
-オプションとして、使用しないCloud Volumes ONTAPの未割り当てのノードベースのライセンスがある場合は、同じドル相当額と同じ有効期限を持つNetApp Backup and Recovery ライセンスに変換できます。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["詳細はこちら"^] 。
+オプションとして、使用しないCloud Volumes ONTAPの未割り当てのノードベースのライセンスがある場合は、同じドル相当額と同じ有効期限を持つNetApp Backup and Recoveryライセンスに変換できます。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["詳細はこちら"^] 。
 
-BYOL ライセンスを管理するには、 NetAppコンソールを使用します。コンソールから、新しいライセンスを追加したり、既存のライセンスを更新したり、ライセンスのステータスを表示したりできます。
+BYOL ライセンスを管理するには、 NetApp Consoleを使用します。コンソールから、新しいライセンスを追加したり、既存のライセンスを更新したり、ライセンスのステータスを表示したりできます。
 
-https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["ライセンスの追加について学ぶ"^] 。
+https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["ライセンスの追加について学ぶ"^]。

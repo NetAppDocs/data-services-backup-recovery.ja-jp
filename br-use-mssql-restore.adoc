@@ -4,7 +4,7 @@ permalink: br-use-mssql-restore.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。 
 ---
-= NetApp のバックアップとリカバリを使用して Microsoft SQL Server のワークロードを復元する
+= NetApp Backup and Recoveryを使用して Microsoft SQL Server のワークロードを復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: スナップショット コピー、セカンダリ ストレージに
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Microsoft SQL Server ワークロードを復元します。ワークロードを元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。
+NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Microsoft SQL Server ワークロードを復元します。ワークロードを元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。
 
 .これらの場所から復元
 異なる開始場所からワークロードを復元できます。
@@ -47,7 +47,7 @@ TIP: バックアップ ファイルの内容にアクセスするには、ク�
 * バックアップ ファイルからワークロードを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。
 * 複製されたワークロードから復元する場合、ワークロードを元のシステムまたはオンプレミスのONTAPシステムに復元できます。
 +
-image:diagram_browse_restore_volume-unified.png["リソースを復元するフローを示す図"]
+image:diagram_browse_restore_volume-unified.png["リソースを復元する流れを示す図"]
 
 * オブジェクト ストレージからバックアップを復元する場合、データを元のシステムまたはオンプレミスのONTAPシステムに復元できます。
 
@@ -62,7 +62,7 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元するフ�
 * *インベントリ ページから*: 過去 1 週間または 1 か月間の特定のリソースを復元する必要がある場合、リソースの名前と場所、およびリソースが最後に良好な状態であった日付がわかっている場合にこれを使用します。リソースのリストを参照して、復元するリソースを見つけます。
 
 
-*必要なNetAppコンソール ロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 
 
@@ -71,7 +71,7 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元するフ�
 復元オプションを使用してデータベース ワークロードを復元します。
 
 .手順
-. NetApp のバックアップとリカバリ メニューから、[復元] を選択します。
+. NetApp Backup and Recoveryメニューから、[復元] を選択します。
 . 復元するデータベースを選択します。フィルターを使用して検索します。
 . 復元オプションを選択します:
 +
@@ -166,7 +166,7 @@ NetApp Backup and Recovery は、ログと最新のスナップショットを�
 
 . 復元オプション ページから続行して、*最新のバックアップに復元*を選択します。
 +
-NetApp Backup and Recovery では、復元操作に使用できるスナップショットが表示されます。
+NetApp Backup and Recovery、復元操作に使用できるスナップショットが表示されます。
 
 . 「最新の状態に復元」ページで、ローカル、セカンダリ ストレージ、またはオブジェクト ストレージのスナップショットの場所を選択します。
 . *次へ*を選択します。
@@ -202,7 +202,7 @@ NetApp Backup and Recovery では、復元操作に使用できるスナップ�
 インベントリ ページからデータベース ワークロードを復元します。インベントリ オプションを使用すると、インスタンスではなくデータベースのみを復元できます。
 
 .手順
-. NetAppバックアップおよびリカバリ メニューから、*インベントリ* を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 復元するリソースが配置されているホストを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[詳細を表示] を選択します。
 . Microsoft SQL Server ページで、*データベース* タブを選択します。
