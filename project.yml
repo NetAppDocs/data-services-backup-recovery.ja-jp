@@ -49,6 +49,8 @@ sidebar:
       url: "/concept-start-prereq.html"
     - title: NetAppバックアップおよびリカバリのライセンスを設定する
       url: "/br-start-licensing.html"
+    - title: ONTAPおよびStorageGRIDのセキュリティ証明書を設定する
+      url: "/task-setup-ca-certificates.html"
     - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
       url: "/br-start-setup.html"
     - title: NetAppバックアップおよびリカバリにログイン

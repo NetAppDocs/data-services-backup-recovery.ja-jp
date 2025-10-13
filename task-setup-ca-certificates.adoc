@@ -1,0 +1,456 @@
+---
+sidebar: sidebar 
+permalink: task-setup-ca-certificates.html 
+keywords: cloud backup, backup and recovery, backup, restore, certificates, protection, security, storagegrid, backup, back up 
+summary: NetApp Backup and RecoveryとStorageGRIDまたはONTAP間の通信を可能にするセキュリティ証明書を作成します。 
+---
+= NetApp Backup and RecoveryでStorageGRIDとONTAPのセキュリティ証明書を設定する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and RecoveryとStorageGRIDまたはONTAP間の通信を可能にするセキュリティ証明書を作成します。
+
+
+
+== StorageGRIDのセキュリティ証明書を作成する
+
+NetApp Backup and RecoveryコンテナとStorageGRID間の通信でStorageGRID証明書を検証する必要がある場合は、次の手順を実行します。
+
+生成された証明書には、バックアップをアクティブ化したときにNetApp Backup and Recoveryで指定した名前と同じ CN と Subject Alternative Name が含まれている必要があります。
+
+.手順
+. StorageGRIDドキュメントの手順に従って、 StorageGRID証明書を作成します。
++
+https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-load-balancer-endpoints.html#attach-certificate["証明書の設定に関するStorageGRIDの情報"]
+
+. まだ行っていない場合は、証明書を使用してStorageGRID を更新します。
+. コンソール エージェントに root ユーザーとしてログインします。以下を実行します。
++
+[source, console]
+----
+sudo su
+----
+. NetApp Backup and Recovery (Cloud Backup Service) Docker ボリュームを取得します。以下を実行します。
++
+[source, console]
+----
+docker volume ls | grep cbs
+----
++
+出力例:
+
++
+[listing]
+----
+local service-manager-2_cloudmanager_cbs_volume"
+----
++
+
+NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では標準モードを使用します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
+. NetApp Backup and Recoveryボリュームのマウント ポイントを見つけます。以下を実行します。
++
+[source, console]
+----
+docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
+----
++
+出力例:
+
++
+[listing]
+----
+"Mountpoint": "/var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data"
+----
++
+
+NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
+. MountPoint ディレクトリに変更します。以下を実行します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. StorageGRIDの証明書がルートCAと中間CAによって署名されている場合は、 `pem`両方のファイルを1つのファイルにまとめ、 `sgws.crt`現在の場所にあります。このファイルにリーフ証明書を追加しないでください。
+
+
+
+
+=== cloudmanager_cbsコンテナの手順
+
+NetApp Backup and Recovery (Cloud Backup Service) でStorageGRID Server 証明書の検証を有効にする必要があります。
+
+. 前の手順で取得した Docker ボリュームにディレクトリを変更します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. ディレクトリを config ディレクトリに変更します。
++
+[source, console]
+----
+cd cbs_config
+----
+. デプロイメント環境に基づいて、次のいずれかの名前で、以下に示すように構成ファイルを作成して保存します。
++
+** `production-customer.json`標準モードと制限モードの展開に使用されます。
+** `darksite-customer.json`プライベート モードの展開に使用されます。
++
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
++
+*設定ファイル*
+
++
+[source, json]
+----
+{
+  "protocols": {
+    "sgws": {
+      "certificates": {
+        "reject-unauthorized": true,
+        "ca-bundle": "/config/sgws.crt"
+      }
+    }
+  }
+}
+----
+
+
+. コンテナから出ます。以下を実行します。
++
+[source, console]
+----
+exit
+----
+. 再起動 `cloudmanager_cbs`。以下を実行します。
++
+[source, console]
+----
+docker restart cloudmanager_cbs
+----
+
+
+
+
+=== cloudmanager_cbs_catalogコンテナの手順
+
+次に、カタログ サービスに対してStorageGRID Server 証明書の検証を有効にする必要があります。
+
+. ディレクトリを Docker ボリュームに変更します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. カタログを構成します。以下を実行します。
++
+[source, console]
+----
+cd cbs_catalog_config
+----
+. デプロイメント環境に基づいて、次のいずれかの名前で、以下に示すように構成ファイルを作成します。
++
+** `production-customer.json`標準モードと制限モードの展開に使用されます。
+** `darksite-customer.json`プライベート モードの展開に使用されます。
++
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
++
+*カタログ設定ファイル*
+
++
+[source, json]
+----
+{
+  "protocols": {
+    "sgws": {
+      "certificates": {
+        "reject-unauthorized": true,
+        "ca-bundle": "/config/sgws.crt"
+      }
+    }
+  }
+}
+----
+
+
+. カタログを再起動します。以下を実行します。
++
+[source, console]
+----
+docker restart cloudmanager_cbs_catalog
+----
+
+
+
+
+=== エージェントのオペレーティング システムに基づいて、コンソール エージェント証明書をStorageGRID証明書に更新します。
+
+
+
+==== Ubuntu
+
+. SGWS証明書をコピーする `/usr/local/share/ca-certificates`。次に例を示します。
++
+[source, console]
+----
+cp /config/sgws.crt /usr/local/share/ca-certificates/
+----
++
+どこ `sgws.crt`ルート CA 証明書です。
+
+. ホスト証明書をStorageGRID証明書で更新します。次のコマンドを実行します。
++
+[source, console]
+----
+sudo update-ca-certificates
+----
+
+
+
+
+==== Red Hat Enterprise Linux
+
+. SGWS証明書をコピーする `/etc/pki/ca-trust/source/anchors/`。
++
+[source, console]
+----
+cp /config/sgws.crt /etc/pki/ca-trust/source/anchors/
+----
++
+どこ `sgws.crt`ルート CA 証明書です。
+
+. ホスト証明書をStorageGRID証明書で更新します。
++
+[source, console]
+----
+update-ca-trust extract
+----
+. 更新する `ca-bundle.crt`
++
+[source, console]
+----
+cd /etc/pki/tls/certs/
+openssl x509 -in ca-bundle.crt -text -noout
+----
+. 証明書が存在するかどうかを確認するには、次のコマンドを実行します。
++
+[source, console]
+----
+openssl crl2pkcs7 -nocrl -certfile /etc/pki/tls/certs/ca-bundle.crt | openssl pkcs7 -print_certs | grep subject | head
+----
+
+
+
+
+== ONTAPのセキュリティ証明書を作成する
+
+NetApp Backup and RecoveryコンテナとONTAP間の通信でONTAP証明書を検証する必要がある場合は、次の手順を実行します。
+
+NetApp Backup and Recovery は、クラスタ管理 IP を使用してONTAPに接続します。証明書のサブジェクト代替名にクラスターの IP アドレスを入力します。  System Manager UI を使用して CSR を生成する場合は、この手順を指定します。
+
+System Manager のドキュメントを使用して、 ONTAPの新しい CA 証明書を作成します。
+
+* https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["System Managerを使用した証明書の管理"]
+* https://kb.netapp.com/on-prem/ontap/DM/System_Manager/SM-KBs/How_to_manage_ONTAP_SSL_certificates_via_System_Manager["System ManagerでONTAP SSL証明書を管理する方法"]
+
+
+.手順
+. コンソール エージェントに root としてログインします。以下を実行します。
++
+[source, console]
+----
+sudo su
+----
+. NetApp Backup and RecoveryDocker ボリュームを取得します。以下を実行します。
++
+[source, console]
+----
+docker volume ls | grep cbs
+----
++
+出力例:
+
++
+[listing]
+----
+local service-manager-2_cloudmanager_cbs_volume
+----
++
+
+NOTE: ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
+. ボリュームのマウントを取得します。以下を実行します。
++
+[source, console]
+----
+docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
+----
++
+出力例:
+
++
+[listing]
+----
+"Mountpoint": "/var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
++
+
+NOTE: マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
+. マウントポイント ディレクトリに変更します。以下を実行します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. 次のいずれかの手順を実行します。
++
+** ONTAP証明書がルートCAと中間CAによって署名されている場合は、 `pem`両方のファイルを1つのファイルにまとめ、 `ontap.crt`現在の場所にあります。
+** ONTAP証明書が単一のCAによって署名されている場合は、 `pem`ファイルとして `ontap.crt`それを現在の場所にコピーします。このファイルにリーフ証明書を追加しないでください。
+
+
+
+
+
+
+=== cloudmanager_cbsコンテナの手順
+
+次に、 NetApp Backup and Recovery (Cloud Backup Service) でONTAP Server 証明書の検証を有効にします。
+
+. 前の手順で取得した Docker ボリュームにディレクトリを変更します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. config ディレクトリに変更します。以下を実行します。
++
+[source, console]
+----
+cd cbs_config
+----
+. デプロイメント環境に基づいて、次のいずれかの名前で、以下に示すように構成ファイルを作成します。
++
+** `production-customer.json`標準モードと制限モードの展開に使用されます。
+** `darksite-customer.json`プライベート モードの展開に使用されます。
++
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
++
+*設定ファイル*
+
++
+[source, json]
+----
+{
+  "ontap": {
+    "certificates": {
+      "reject-unauthorized": true,
+      "ca-bundle": "/config/ontap.crt"
+    }
+  }
+}
+----
+
+
+. コンテナから出ます。以下を実行します。
++
+[source, console]
+----
+exit
+----
+. NetApp Backup and Recovery を再起動します。以下を実行します。
++
+[source, console]
+----
+docker restart cloudmanager_cbs
+----
+
+
+
+
+=== cloudmanager_cbs_catalogコンテナの手順
+
+カタログ サービスに対してONTAPサーバ証明書の検証を有効にします。
+
+. ディレクトリを Docker ボリュームに変更します。以下を実行します。
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. 以下を実行します。
++
+[source, console]
+----
+cd cbs_catalog_config
+----
+. デプロイメント環境に基づいて、次のいずれかの名前で、以下に示すように構成ファイルを作成します。
++
+** `production-customer.json`標準モードと制限モードの展開に使用されます。
+** `darksite-customer.json`プライベート モードの展開に使用されます。
++
+参照 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"]。
+
++
+*設定ファイル*
+
++
+[source, json]
+----
+{
+  "ontap": {
+    "certificates": {
+      "reject-unauthorized": true,
+      "ca-bundle": "/config/ontap.crt"
+    }
+  }
+}
+----
+
+
+. NetApp Backup and Recovery を再起動します。以下を実行します。
++
+[source, console]
+----
+docker restart cloudmanager_cbs_catalog
+----
+
+
+
+
+== ONTAPとStorageGRIDの両方の証明書を作成する
+
+ONTAPとStorageGRID の両方で証明書を有効にする必要がある場合、設定ファイルは次のようになります。
+
+* ONTAPとStorageGRIDの両方の設定ファイル*
+
+[source, json]
+----
+{
+  "protocols": {
+    "sgws": {
+      "certificates": {
+        "reject-unauthorized": true,
+        "ca-bundle": "/config/sgws.crt"
+      }
+    }
+  },
+  "ontap": {
+    "certificates": {
+      "reject-unauthorized": true,
+      "ca-bundle": "/config/ontap.crt"
+    }
+  }
+}
+----
