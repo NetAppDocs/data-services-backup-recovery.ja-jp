@@ -273,8 +273,6 @@
   <block id="01edc88c05b373b3f7ebaedf025e6c66" category="list-text">KVM ベースの VM と VM データをバックアップおよび復元するためのガイド付きプロセス</block>
   <block id="4cfb069ae88ce34afb281a4bbf65ac6e" category="inline-link">KVM ワークロードの保護の概要</block>
   <block id="79fcd951f792f60f767e44b5011c7851" category="paragraph">KVMワークロードの保護の詳細については、以下を参照してください。<block ref="e92217b78da768e08fd669e597378b8f" category="inline-link-rx"></block> 。</block>
-  <block id="7f72a27277a7289e66ee8f5e8c51ffe5" category="section-title">Kubernetes プレビューの改善</block>
-  <block id="0de024d994558b5d82bfea2474dcdb5a" category="paragraph">Kubernetes ワークロードのプレビュー リリースでは、次の機能強化が導入されています。</block>
   <block id="7f6a04aadde1854e173d7668132da89b" category="list-text">3-2-1 ファンアウトバックアップアーキテクチャのサポート</block>
   <block id="b3b9066f003af6e4047de0ee6690e863" category="list-text">バックアップターゲットとしてのONTAP S3 のサポート</block>
   <block id="e35ded7c45cf2f4d4c707e6aeb803b42" category="list-text">管理を容易にする新しいKubernetesダッシュボード</block>
@@ -324,7 +322,6 @@
   <block id="020a36deb114af1bb518c70d5975e940" category="list-text">リソース グループの作成</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">スパニングディスク（複数の CIFS 共有にまたがる）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">SAN経由でVMを保護する</block>
-  <block id="9450dff5efb3139ece9422b6c372527d" category="list-text">オブジェクトストアから復元</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">System Center Virtual Machine Manager (SCVMM) を使用してクラスター化された Hyper-V ホストを保護する</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">NetApp Backup and Recovery のこのリリースには、次の既知の制限があります。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">KVM ワークロードに対するNetAppバックアップおよびリカバリの既知の制限</block>
@@ -335,7 +332,6 @@
   <block id="e2b26238e3aec34978fbb465dfd6baff" category="list-text">VMを別の場所に復元する</block>
   <block id="fe8e9fc813c1e8a639c0cadb6115589f" category="list-text">SANに保存されたVMを保護する</block>
   <block id="ca73b42f56baa81e1c83e31ee5c53d42" category="list-text">アプリケーションを保護する</block>
-  <block id="58bfd5253f13fe06cafc37225664e506" category="list-text">オブジェクトストアからのバックアップまたは復元</block>
   <block id="41bfa1316b52f6772c1921990bc34f69" category="list-text">保護グループを編集する</block>
   <block id="d5598f128bb28f962fcd8574013f2a43" category="list-text">複数の KVM ホストの VM を使用して保護グループを作成する</block>
   <block id="2fbb28a0f1560254b88f56b3632cf88b" category="list-text">ユーザー定義のバックアップを作成します（ NetAppコンソールから開始されたバックアップのみがサポートされます）</block>
@@ -5000,4 +4996,15 @@
   <block id="ee885caa95dc922f4f4ba9860f7342f6" category="admonition">バックアップとリカバリを使用してカスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery を使用すると、ソース ボリュームのコピーを最大 3 つ作成してデータを保護できます。ボリュームでバックアップと回復を有効にするときに選択できるオプションは多数あるため、準備ができるように選択内容を確認する必要があります。</block>
   <block id="460a4c33ada7a6581872d15b96a4344b" category="sidebar">VMware ワークロードを保護する（プレビュー）</block>
+  <block id="c95af44ddc098359d1a302a271aa883b" category="section-title">Kubernetes プレビューの機能強化</block>
+  <block id="a9db09b7be48f8631739b57e73f48cd3" category="paragraph">Kubernetes ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。</block>
+  <block id="80aadfb002c0fe2115f71c7aeb012ab4" category="section-title">VMware プレビューの機能強化</block>
+  <block id="307d24114a1eea93601b6d95cac55bcb" category="paragraph">VMware ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。</block>
+  <block id="52c7fc54a0416d5bc7625cf3e154f5ee" category="list-text">オブジェクトストレージからの復元のサポート</block>
+  <block id="729609f8890f70080c4290c1a64f6901" category="list-text">NetApp ConsoleダッシュボードにVMwareワークロードのステータス情報が表示されるようになりました</block>
+  <block id="e0aea66343c11d9c167af3537c61eac6" category="list-text">デモ モードのサポート: VMware vCenter Server 環境を追加せずに VMware ワークロードの機能を試すことができます。</block>
+  <block id="48286fbde233324a7f7880389e103924" category="list-text">ジョブイベントの電子メールアラートと通知のサポート</block>
+  <block id="7c0ae68b454f9ff601ed1bdd5dcc3c30" category="list-text">NVMeベースのストレージへのバックアップと復元のサポート</block>
+  <block id="dfa4b5c6b997823449e673db12ef526d" category="list-text">保護ポリシーを編集する</block>
+  <block id="c54d53d5c9b9527bb4d1e1020b2a04ec" category="paragraph">VMwareワークロードの保護の詳細については、以下を参照してください。<block ref="81bdea79654f29d88dbffb87457fe1f5" category="inline-link-rx"></block> 。</block>
 </blocks>

@@ -50,9 +50,9 @@ KVMワークロードの保護の詳細については、以下を参照して�
 
 
 
-=== Kubernetes プレビューの改善
+=== Kubernetes プレビューの機能強化
 
-Kubernetes ワークロードのプレビュー リリースでは、次の機能強化が導入されています。
+Kubernetes ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。
 
 * 3-2-1 ファンアウトバックアップアーキテクチャのサポート
 * バックアップターゲットとしてのONTAP S3 のサポート
@@ -70,6 +70,24 @@ Kubernetes ワークロードのプレビュー リリースでは、次の機�
 
 
 Kubernetesワークロードの保護の詳細については、以下を参照してください。  https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+
+
+
+=== VMware プレビューの機能強化
+
+VMware ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。
+
+* オブジェクトストレージからの復元のサポート
+* NetApp ConsoleダッシュボードにVMwareワークロードのステータス情報が表示されるようになりました
+* デモ モードのサポート: VMware vCenter Server 環境を追加せずに VMware ワークロードの機能を試すことができます。
+* ロールベースアクセス制御（RBAC）のサポート
+* ジョブイベントの電子メールアラートと通知のサポート
+* NVMeベースのストレージへのバックアップと復元のサポート
+* 保護グループを編集する
+* 保護ポリシーを編集する
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。
 
 
 

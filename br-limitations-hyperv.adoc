@@ -25,7 +25,7 @@ NetApp Backup and Recovery の Hyper-V ワークロードのプライベート �
 * リソース グループの作成
 * スパニングディスク（複数の CIFS 共有にまたがる）
 * SAN経由でVMを保護する
-* オブジェクトストアから復元
+* 保護グループを編集する
 * System Center Virtual Machine Manager (SCVMM) を使用してクラスター化された Hyper-V ホストを保護する
 
 
