@@ -91,7 +91,7 @@ TIP: StorageGRIDにファイルをバックアップする場合、PAYGO ライ�
 
 == ONTAPクラスタを準備する
 
-ソースのオンプレミスONTAPシステムと、セカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムを準備する必要があります。
+ソースのオンプレミスONTAPシステムと、セカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムを準備します。
 
 ONTAPクラスタを準備するには、次の手順を実行します。
 
@@ -113,7 +113,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 === ONTAPのシステム要件を確認する
 
-次のONTAP要件が満たされていることを確認します。
+ONTAPシステムが次の要件を満たしていることを確認してください。
 
 * 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 * SnapMirrorライセンス (プレミアム バンドルまたはデータ保護バンドルの一部として含まれています)。
@@ -124,7 +124,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["クラスターライセンスを管理する"^]。
 
 * 時間とタイムゾーンは正しく設定されています。方法を学ぶ https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["クラスター時間を設定する"^]。
-* データをレプリケートする場合は、データをレプリケートする前に、ソース システムとデスティネーション システムで互換性のあるONTAPバージョンが実行されていることを確認する必要があります。
+* データを複製する場合は、ソース システムと宛先システムで互換性のあるONTAPバージョンが実行されていることを確認します。
 +
 https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror関係に互換性のあるONTAPバージョンを表示する"^]。
 
@@ -167,7 +167,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 
 ==== オンプレミスのONTAPネットワーク要件
 
-* クラスターが社内にある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
+* クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
 Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。

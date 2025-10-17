@@ -168,7 +168,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 
 ==== オンプレミスのONTAPネットワーク要件
 
-* クラスターが社内にある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
+* クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
 Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
