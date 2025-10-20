@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-mssql-backup.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。 
+summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。 
 ---
 = NetApp Backup and Recoveryで Microsoft SQL Server ワークロードをバックアップする
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。
+オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムは自動的にバックアップを作成し、データ保護のためにクラウド アカウント内のオブジェクト ストアに保存します。
 
 * スケジュールに従ってワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
 * バックアップを開始する前に、検出されたホストのログ ディレクトリを構成します。
@@ -40,7 +40,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 == 検出されたホストのログディレクトリを構成する
 
-ワークロードをバックアップする前に、検出されたホストのアクティビティ ログへのパスを設定します。これにより、操作のステータスを追跡できるようになります。
+ワークロードをバックアップする前に、検出されたホストのアクティビティ ログ パスを設定して操作ステータスを追跡します。
 
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、またはバックアップおよびリカバリ リストア管理者のロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -50,7 +50,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . ホストを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *ログディレクトリを設定します*。
-. ホスト パスを指定するか、ホストまたはホスト上のノード ホストのリストを参照して、ホスト ログを保存する場所を見つけます。
+. ホスト パスを入力するか、ホストまたはノードのリストを参照して、ホスト ログを保存する場所を見つけます。
 . ログを保存するものを選択します。
 +
 
@@ -63,7 +63,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 == 保護グループを作成する
 
-保護グループを作成して、一連のワークロードのバックアップおよび復元操作を管理できます。保護グループとは、まとめて保護するワークロードの論理的なグループです。
+複数のワークロードのバックアップおよび復元操作を管理するための保護グループを作成します。保護グループは、ワークロードの論理的なグループです。
 
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -89,7 +89,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 == オンデマンドバックアップでワークロードを今すぐバックアップ
 
-オンデマンド バックアップをすぐに作成します。システムに変更を加える予定があり、開始する前にバックアップがあることを確認したい場合は、オンデマンド バックアップを実行することをお勧めします。
+システムに変更を加える前にオンデマンド バックアップを実行して、データが保護されていることを確認してください。
 
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -109,7 +109,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 == バックアップスケジュールを一時停止する
 
-スケジュールを一時停止すると、スケジュールされた時間にバックアップが一時的に実行されなくなります。システムのメンテナンスを実行している場合、またはバックアップで問題が発生している場合は、これを実行することをお勧めします。
+メンテナンスやトラブルシューティング中にバックアップを一時的に停止するには、スケジュールを一時停止します。
 
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -126,7 +126,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 == 保護グループを削除する
 
-保護グループを作成して、一連のワークロードのバックアップおよび復元操作を管理できます。保護グループとは、まとめて保護するワークロードの論理的なグループです。
+保護グループを削除すると、保護グループとそれに関連付けられているすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除することができます。
 
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 

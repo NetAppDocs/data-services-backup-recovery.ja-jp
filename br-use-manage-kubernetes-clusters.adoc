@@ -40,7 +40,7 @@ NOTE: Kubernetesクラスターを発見するには、以下を参照してく�
 
 == Kubernetes クラスターを削除する
 
-Kubernetes クラスターによってホストされているリソースを保護する必要がなくなった場合は、 NetApp Backup and Recoveryから削除できます。クラスタを削除しても、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。クラスターを削除する前に、保護を無効にし、 NetApp Backup and Recoveryから関連するアプリケーションを削除する必要があります。
+Kubernetes クラスターの保護を停止するには、保護を無効にして関連付けられているアプリケーションを削除し、 NetApp Backup and Recoveryからクラスターを削除します。  NetApp Backup and Recovery、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。
 
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。

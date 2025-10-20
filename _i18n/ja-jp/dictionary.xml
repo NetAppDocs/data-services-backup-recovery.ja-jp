@@ -886,34 +886,6 @@
   <block id="8ea9fd29df4eb58092d8258c6ccf3ad8" category="inline-link-macro">Hyper-V ワークロードの検出</block>
   <block id="3b97616ae538f454d8812a77c84392d1" category="list-text">Hyper-Vワークロードについては、以下を参照してください。<block ref="e853aa4eb98908dd4b95a8cc80d9972f" category="inline-link-macro-rx"></block> 。</block>
   <block id="e5dd8794e7e239a004607625309c03bb" category="list-text">Kubernetesワークロードについては、以下を参照してください。<block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block> 。</block>
-  <block id="a88e44059c42ea669c8e082925b4f685" category="summary">NetApp Backup and Recovery Preview に参加することで、 NetApp Backup and Recovery の改良と強化に重要な役割を果たすことになります。 NetApp Backup and Recoveryのプレビュー バージョンについては、セットアップのお手伝いをいたします。プロセスは次のとおりです。</block>
-  <block id="d962dd4a2dd136e11ea9e6b1fc4f0231" category="doc">NetApp Backup and Recoveryのプレビュー版をセットアップする</block>
-  <block id="44c9fe33d945a811c980c2222cb4a7f4" category="paragraph">NetApp Backup and Recovery のプレビュー バージョンのいずれかに参加することで、 NetApp Backup and Recovery の改良と強化に重要な役割を果たすことになります。 NetApp Backup and Recoveryのプレビュー バージョンについては、セットアップのお手伝いをいたします。プロセスは次のとおりです。</block>
-  <block id="1df25d83dcd96998ab1214f0f596e625" category="list-text">*登録*: NetApp Consoleアカウントをまだお持ちでない場合は、サインアップしてください。方法は次のとおりです。</block>
-  <block id="03b9d18619003b0462fbb22e0f737c14" category="inline-link">NetApp Consoleポータル</block>
-  <block id="fe522e0e492bdfc81fd85fe149b3e2f3" category="list-text">訪問<block ref="761f9c2f831126887f2401ade5ba082a" category="inline-link-rx"></block>。</block>
-  <block id="c994e4babe23a451bef9eb9c4e6ae1bd" category="list-text">*開始*を選択します。</block>
-  <block id="89cbd307e3a030d88901f3a0b6db05f9" category="inline-image-macro">ポータル画面にログイン</block>
-  <block id="a36f36cea71dbb3ece06859026f2a219" category="paragraph"><block ref="a36f36cea71dbb3ece06859026f2a219" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7408a50737fd936622eeec54bbeb439c" category="list-text">*サインアップ*を選択します。</block>
-  <block id="4a5516994f808f657f563e4c644704a8" category="inline-image-macro">コンソール画面にサインアップ</block>
-  <block id="bd85572698ab218980e4334fbaad7780" category="paragraph"><block ref="bd85572698ab218980e4334fbaad7780" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="49a7eb06443c6823da67cb30105865cb" category="list-text">名前、メールアドレス、組織名、その他の詳細を入力し、[次へ] を選択します。</block>
-  <block id="62e103a9bdfbc60da8d1a6cd84c64574" category="paragraph">メールアドレスを確認するためのリンクが記載されたメールが届きます。</block>
-  <block id="42435fc392a09cfc52a784c811f725c8" category="list-text">メール内のリンクを選択して、メールアドレスを確認してください。</block>
-  <block id="67d948af642d80e01ae49095566abfc0" category="list-text">コンソール ポータルにログインします。</block>
-  <block id="09b34a6d0f4d291f84f3e8f79dde8d4c" category="list-text">次の情報を入力してプロフィールを完成させます。</block>
-  <block id="1e9e8ba34e717628d41f149382680873" category="list-text">*組織 ID*: 登録後、組織名と ID が提供されます。それをここに入力してください。</block>
-  <block id="4d9ae5d322cb8c8f7adf9b48949b1bc8" category="list-text">*共有 ID*: 組織名と ID をNetApp製品チームと共有します。</block>
-  <block id="7c22ebb7979774c7df05585903c12d01" category="paragraph">*アクセス期間*: 48 ～ 72 時間以内に、 NetApp Backup and Recoveryにアクセスできるようになります。</block>
-  <block id="81b6fb15733ca902602c664fabd1e467" category="list-text">サービスを*探索*し、その機能をテストし、既存の SQL Server ワークロードと統合します。</block>
-  <block id="93e2a47a6514ac40751d124a8f1f46b3" category="list-text">*定期的な連絡を維持する*。プレビュー セッション中は、 NetApp製品チームとの定期的なチェックインに参加してください。これらのセッションは、サービスを理解し、フィードバックを提供するのに役立ちます。</block>
-  <block id="f8ff994376a64d4d3d6d193d64f1da36" category="list-text">*アップデートについて聞く*: プレビューに関連する最新の開発について聞くことができます。</block>
-  <block id="63ad8c7fe181c1240348c85b7b859e2b" category="list-text">*質問*すると、 NetApp Consoleチームからすぐに回答が得られます。</block>
-  <block id="e7528011261fdc65206ea9ab08e68144" category="list-text">サービスを改善するために、 NetApp製品チームに*フィードバックを提供*してください。</block>
-  <block id="1ebf3d019af1cc6cd51eaefe85900b86" category="list-text">*ベストプラクティス*とサービスを効果的に使用するためのヒントを共有します。</block>
-  <block id="e85274cf54ca4909a650a11dc227ee47" category="list-text">*コラボレーションを促進する*: 他のユーザーと協力して経験を共有し、お互いから学びます。</block>
-  <block id="3ccfc5136e3977900273dfda295aa615" category="list-text">NetApp製品チームに*フィードバック*を提供してください。</block>
   <block id="47531513e36377c6a5c78be39708d962" category="summary">NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。</block>
   <block id="e902bc2010ef35580633bf1114aee5b3" category="doc">NetApp Backup and Recoveryを使用する前にバックアップ先を設定する</block>
   <block id="8a0933307f827fb9f8c7b526a219880b" category="paragraph">NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。</block>
@@ -1004,7 +976,6 @@
   <block id="0c1d62f4779d7aef54687bd64095f6b0" category="list-text">*保護グループ*、*データストア*、または*仮想マシン*タブを選択します。</block>
   <block id="758c66b3945b48ce4d666362f0f4cb3e" category="list-text">バックアップする保護グループまたは仮想マシンを選択します。</block>
   <block id="bbddd84df8379f7ccf7c6beb918fb121" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *今すぐバックアップ*。</block>
-  <block id="8a48c0ede0c153ed05c127d90e727be5" category="admonition">バックアップに適用されるポリシーは、保護グループまたは仮想マシンに割り当てられているポリシーと同じです。</block>
   <block id="85ec80b493e6765547d2b4489252b82e" category="list-text">スケジュール層を選択します。</block>
   <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">*バックアップ*を選択します。</block>
   <block id="4efc134fd5130564588a4806f9c977f0" category="summary">オンプレミスのONTAPシステムからプライマリ ストレージおよびセカンダリ ストレージまで、Hyper-V 仮想マシンを保護して、データが確実に保護されるようにすることができます。</block>
@@ -1013,9 +984,7 @@
   <block id="27bf4d1e94a4188d82244d997deb945d" category="inline-image-macro">一般的なバックアップとリカバリのアーキテクチャ図</block>
   <block id="a25193bbdff09f58ab1dcb4151b659ec" category="paragraph"><block ref="a25193bbdff09f58ab1dcb4151b659ec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。</block>
-  <block id="b192cd10ae3edf138508f051bb99fba2" category="list-text">複数のデータ コピーにより、内部 (インサイダー) と外部の両方のサイバー セキュリティの脅威に対する多層的な保護が提供されます。</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。</block>
-  <block id="a4a3ea8ff455067664e384b62470a7a9" category="list-text">オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーも利用できます。</block>
   <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">以前のNetApp Backup and RecoveryUIに切り替える</block>
   <block id="9847581c7ebe97c62f71ab1d90ed1696" category="admonition">NetApp Backup and Recovery UIのバージョンを切り替えるには、<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block> 。</block>
   <block id="124a0ee1a6efcb80b27fc999fe308e62" category="paragraph">NetApp Backup and Recoveryを使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。</block>
@@ -1035,7 +1004,6 @@
   <block id="bdeee485153f055707f0a73a8af513ba" category="list-text">今すぐ保護グループをバックアップします。見る<block ref="d41aaac62fb0d74a0e59fc21f102f78e" category="inline-link-macro-rx"></block>。</block>
   <block id="75fd7259089ff0f83a33c40dd073fef1" category="list-text">保護グループを削除します。</block>
   <block id="d3bc7420d7e89fa51ba74ffa21c65564" category="section-title">保護グループを作成する</block>
-  <block id="65c7327c98e288c3f5e4a2ae048a02df" category="paragraph">保護するワークロードを保護グループにグループ化します。まとめてバックアップおよび復元するワークロードのセットの保護グループを作成できます。</block>
   <block id="9c6ace0005a93555e47af40a4cdea531" category="list-text">*保護グループ*タブを選択します。</block>
   <block id="8ff0bca3a887fcf730ec3c488508786c" category="list-text">*保護グループの作成*を選択します。</block>
   <block id="ef84603df71c48cb6dcebd2e9e3fcb87" category="list-text">保護グループの名前を指定します。</block>
@@ -1208,7 +1176,6 @@
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">*作成*を選択します。</block>
   <block id="909eae293e55e9fb02681b3c1668c555" category="summary">NetApp Backup and Recovery を使用すると、ワークロード ホスト情報、データベース情報、インスタンス情報を管理できます。インベントリの保護設定を表示、編集、削除できます。</block>
   <block id="1923fb9432a776bac3edea16865917a7" category="doc">NetApp Backup and Recoveryで Microsoft SQL Server のインベントリを管理する</block>
-  <block id="2d9b7a32eaf0657975c7a926a06dfff1" category="paragraph">NetApp Backup and Recovery を使用すると、Microsoft SQL Server ワークロードのホスト情報、データベース情報、インスタンス情報を管理できます。インベントリの保護設定を表示、編集、削除できます。</block>
   <block id="f49c5e3d566ad0a23180a96b0ec02d6a" category="paragraph">在庫管理に関連する次のタスクを実行できます。</block>
   <block id="366cb36384bed83fd20b39e6a1c107e6" category="list-text">ホスト情報の管理</block>
   <block id="e03dfc11cf3bf9f6353b24940f428fe8" category="list-text">スケジュールを中断</block>
@@ -1300,7 +1267,6 @@
   <block id="36f0283cb14ad41f5a35341825d6cb8f" category="list-text">*保護解除*を選択します。</block>
   <block id="8896e71a8de95cbfa7c12f414c5bf926" category="list-text">通知を読み、準備ができたら [*保護解除*] を選択します。</block>
   <block id="f0b8c712a2979155a90a4d45542f57f1" category="section-title">Kubernetes アプリケーションを削除する</block>
-  <block id="5b37d656b7480a0d1ba63c0ceeb91543" category="paragraph">不要になったアプリケーションは削除できます。アプリケーションを削除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止し、関連付けられているすべてのバックアップとスナップショットを削除します。</block>
   <block id="e9f066e195a46d59f447e0e9faed2a72" category="list-text">アプリケーションのリストで、削除するアプリケーションを選択し、関連する [アクション] メニューを選択します。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">*削除*を選択します。</block>
   <block id="ef50a59af25c08fa4e4c545948dd656e" category="list-text">*スナップショットとバックアップの削除* を有効にすると、アプリケーションのすべてのスナップショットとバックアップが削除されます。</block>
@@ -1315,12 +1281,9 @@
   <block id="539e1806cdbd1431ba6cb6b4b84fc393" category="list-text">*クラスターの編集*を選択します。</block>
   <block id="9d5bb9ed8ea1b49d007ac97a59fc2f73" category="list-text">クラスター名に必要な変更を加えます。クラスター名は、検出プロセス中にHelmコマンドで使用した名前と一致する必要があります。</block>
   <block id="f23e3ed54ae928c06add368fe4fe5a66" category="section-title">Kubernetes クラスターを削除する</block>
-  <block id="8a4712efb642c0cdfd6db07aa95e5ba4" category="paragraph">Kubernetes クラスターによってホストされているリソースを保護する必要がなくなった場合は、 NetApp Backup and Recoveryから削除できます。クラスタを削除しても、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。クラスターを削除する前に、保護を無効にし、 NetApp Backup and Recoveryから関連するアプリケーションを削除する必要があります。</block>
   <block id="884dae5f1c15db330f66f8e2866510c1" category="list-text">*クラスターの削除*を選択します。</block>
   <block id="19ce5318fcc2968a80a3d2213a7120af" category="list-text">確認ダイアログボックスの情報を確認し、「削除」を選択します。</block>
-  <block id="36739fba3e0e2771f42b08419cec5110" category="summary">Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDにバックアップして、データを保護することができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
   <block id="6e464deab83d8eb0500f0c27ef47c58b" category="doc">NetApp Backup and Recoveryの概要によるリソース管理</block>
-  <block id="6b901ae8359d24ec75c2ee3adc79920a" category="paragraph">データが保護されることを確実にするには、 NetApp Backup and Recoveryでリソースを管理することが不可欠です。バックアップ、データベース、インスタンス、アプリケーション ホスト、作業環境などのリソースを管理できます。リソースの保護設定を表示、編集、削除できます。</block>
   <block id="1391797a0b30576f1f116202d3da3a46" category="paragraph">リソースの管理に関連する次のタスクを実行できます。</block>
   <block id="ccc9658d0f980f24634bf5ef6aaceb3d" category="inline-link-macro">在庫管理</block>
   <block id="9517c8b5ba697f22d1982a7a6950dbce" category="list-text"><block ref="84e97f55697cdae80cb35f3f0e373346" category="inline-link-macro-rx"></block>。</block>
@@ -1334,13 +1297,9 @@
   <block id="597dd5cc22a8db7fa97336df9ce2dcf7" category="list-text">スナップショットを削除するデータベースを選択します。</block>
   <block id="d72708af931281c83921470bca8a42e3" category="list-text">[アクション] メニューから、[保護の詳細を表示] を選択します。</block>
   <block id="d04ac725754632fa49ee2c8d7b662bd5" category="list-text">削除するローカル スナップショットを選択します。</block>
-  <block id="33a51da1985a56a71a1ed4ec0b77b967" category="admonition">その行の *場所* 列のローカル スナップショット アイコンは青色で表示される必要があります。</block>
   <block id="35422d2db629b4a63ca95691f2286539" category="list-text">*アクション*を選択します<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>アイコンをクリックし、[ローカル スナップショットの削除] を選択します。</block>
   <block id="ed09f3ce9d7f603634c8b3a4750cc390" category="list-text">確認ダイアログボックスで、[削除] を選択します。</block>
-  <block id="bbcb762ce62661d50d1870856602096d" category="summary">NetApp Backup and Recovery を使用すると、ローカル スナップショット、レプリケーション、開始したオブジェクト ストレージ ジョブへのバックアップの状態を監視し、開始したジョブを復元できます。</block>
   <block id="c6e625be6eb278b391f109fa71a2563b" category="doc">NetApp Backup and Recoveryのジョブを監視する</block>
-  <block id="2aba4bf12650545f167b338115bff248" category="paragraph">NetApp Backup and Recovery を使用すると、ローカル スナップショット、レプリケーション、開始したオブジェクト ストレージ ジョブへのバックアップの状態を監視し、開始したジョブを復元できます。完了したジョブ、進行中のジョブ、失敗したジョブを確認して、問題を診断して修正することができます。 NetApp Console通知センターを使用すると、電子メールによる通知の送信を有効にして、システムにログインしていないときでも重要なシステム アクティビティについて通知を受けることができます。コンソール タイムラインを使用すると、UI または API を介して開始されたすべてのアクションの詳細を確認できます。</block>
-  <block id="7d7877165e305d5d9166908f3d8e07c5" category="paragraph">NetApp Backup and Recovery はジョブ情報を 15 日間保持しますが、その後は消去され、ジョブ モニターに表示されなくなります。</block>
   <block id="06bf7dd6f0ab94d87f59e43fc93b6d3c" category="section-title">ジョブモニターでジョブのステータスを表示する</block>
   <block id="7189b993e1f29567a55606a3a2b812ad" category="paragraph">*ジョブ監視* タブでは、すべてのスナップショット、レプリケーション、オブジェクト ストレージへのバックアップ、および復元操作とその現在のステータスのリストを表示できます。これには、 Cloud Volumes ONTAP、オンプレミスのONTAP、アプリケーション、仮想マシンからの操作が含まれます。各操作またはジョブには、一意の ID とステータスがあります。</block>
   <block id="402bab7d605cd8ea629df214c4351f69" category="paragraph">ステータスは次のようになります。</block>
@@ -1351,7 +1310,6 @@
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="list-text">失敗</block>
   <block id="f5c50f0f405ba073846066df149c9150" category="paragraph">NetApp Backup and Recovery UI および API から開始したスナップショット、レプリケーション、オブジェクト ストレージへのバックアップ、および復元操作は、[ジョブ監視] タブで利用できます。</block>
   <block id="d263c7d70394e4465e07f91a7cda636c" category="inline-link-macro">NetApp Backup and Recoveryを再起動する方法を学ぶ</block>
-  <block id="dc761c5722384bd8a68caf5410677414" category="admonition">ONTAPシステムを 9.13.x にアップグレードし、ジョブ モニターに進行中のスケジュールされたバックアップ操作が表示されない場合は、 NetApp Backup and Recoveryを再起動する必要があります。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
   <block id="f12cc055f626f9974e07168ee36fc2b6" category="list-text">NetApp Backup and Recoveryメニューから、*監視* を選択します。</block>
   <block id="e81a8bad1be4be12a837fcfb49f51617" category="list-text">追加の列 (システム、SVM、ユーザー名、ワークロード、ポリシー名、スナップショット ラベル) を表示するには、プラス記号を選択します。</block>
   <block id="87aa191eff82d3ce3518c07577f209bd" category="section-title">求人リストを検索してフィルタリングする</block>
@@ -1360,7 +1318,6 @@
   <block id="a466bc110c2ee16333fcf19f4e7b5dc2" category="list-text">結果を異なる方法で並べ替えるには、各列見出しを選択し、ステータス、開始時刻、リソース名などで並べ替えます。</block>
   <block id="abfa7a0ebf0068a9c8b2a22cab7ee2b3" category="list-text">特定の求人を探している場合は、「*詳細検索とフィルタリング*」領域を選択して検索パネルを開きます。</block>
   <block id="f55acf819cf64faf595e14da13d54f0b" category="paragraph">このパネルを使用して、任意のリソースのフリーテキスト検索を入力します (例:「ボリューム 1」または「アプリケーション 3」)。ドロップダウン メニューの項目に応じてジョブ リストをフィルターすることもできます。</block>
-  <block id="327b66d091add79b859ef84933343b9b" category="paragraph">ほとんどのフィルターは説明を要しません。  「ワークロード」のフィルターを使用すると、次のカテゴリのジョブを表示できます。</block>
   <block id="5695919edc7944640ed4ec81a9a36f71" category="list-text">ONTAPボリューム (Cloud Volumes ONTAPおよびオンプレミスのONTAPボリューム)</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
   <block id="76b0fa668c1cd016096eb9bc1bfde44a" category="list-text">仮想マシン</block>
@@ -1377,12 +1334,10 @@
   <block id="a338f0236c9cd90b94c866169e207597" category="list-text">アクションメニューを選択します<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>[詳細を表示]を選択します。</block>
   <block id="a2f820f1e803ccce8bb7aecd68c2172d" category="list-text">各セクションを展開すると詳細が表示されます。</block>
   <block id="8b512d5ba4f8158f9bbde90865caba8c" category="section-title">ジョブ監視の結果をレポートとしてダウンロードする</block>
-  <block id="e58d30d472d33acd3100a5f519e69afe" category="paragraph">メインのジョブ監視ページのコンテンツは、調整後にレポートとしてダウンロードできます。 NetApp Backup and Recovery は、必要に応じて確認したり他のグループに送信したりできる .CSV ファイルを生成してダウンロードします。.CSV ファイルには最大 10,000 行のデータが含まれます。</block>
   <block id="4ef79a32c3fec53a7c7441bdc6ef7cd0" category="paragraph">ジョブ監視の詳細情報から、単一のジョブの詳細を含む JSON ファイルをダウンロードできます。</block>
   <block id="2b0ecb40cc305f7af9fe7f986b5bb2dd" category="list-text">すべてのジョブの CSV ファイルをダウンロードするには、[ダウンロード] ボタンを選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="1dc45daaf063a4c51a123d4f491b6b42" category="list-text">単一のジョブのJSONファイルをダウンロードするには、[アクション]メニューを選択します。<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>ジョブの場合は、*JSON ファイルのダウンロード*を選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="f1a15f873b659fefcf2800c9489b580b" category="section-title">保持（バックアップ ライフサイクル）ジョブを確認する</block>
-  <block id="97ed68d89be18084aed5cb3445ac40c1" category="paragraph">保持 (または _バックアップ ライフサイクル_) フローの監視は、監査の完全性、説明責任、およびバックアップの安全性の向上に役立ちます。バックアップのライフサイクルを追跡するには、すべてのバックアップ コピーの有効期限を識別する必要があります。</block>
   <block id="86fa0897ffcce46e8eca8c43e8684ef8" category="paragraph">バックアップ ライフサイクル ジョブは、削除されたか、削除キューにあるすべてのスナップショット コピーを追跡します。  ONTAP 9.13 以降では、「ジョブ監視」ページで「保持」と呼ばれるすべてのジョブ タイプを確認できます。</block>
   <block id="5168f75ce01db43e41309dbb9ba106a7" category="paragraph">「保持」ジョブ タイプは、NetApp Backup and Recoveryによって保護されているボリューム上で開始されたすべてのスナップショット削除ジョブをキャプチャします。</block>
   <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">*高度な検索とフィルタリング*領域を選択して、検索パネルを開きます。</block>
@@ -1390,7 +1345,6 @@
   <block id="1c3cccbea914c20304f63319b99fb585" category="section-title">NetApp Console通知センターでバックアップとリストアのアラートを確認する</block>
   <block id="bacd9783e91bb01896a4e564be2f9207" category="paragraph">NetApp Console通知センターは、開始したバックアップおよび復元ジョブの進行状況を追跡し、操作が成功したかどうかを確認できます。</block>
   <block id="44d4deb8868ac8159ee85f4a8e68725c" category="inline-link">通知センターの詳細と、バックアップおよび復元ジョブのアラートメールを送信する方法を学びます</block>
-  <block id="13e610b9aab0d9b0b45bb4a37586af8b" category="paragraph">通知センターでアラートを表示するだけでなく、特定の種類の通知をアラートとして電子メールで送信するようにコンソールを構成することもできます。これにより、システムにログインしていない場合でも重要なシステム アクティビティについて通知を受けることができます。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
   <block id="3b27991b1aa229f52835df236ba4b917" category="paragraph">通知センターには、スナップショット、レプリケーション、クラウドへのバックアップ、復元のイベントが多数表示されますが、電子メールアラートをトリガーするのは特定のイベントのみです。</block>
   <block id="9e35f94818feb2156d0744e4be9fb2ea" category="cell">処理のタイプ</block>
   <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">イベント</block>
@@ -1412,7 +1366,6 @@
   <block id="93d1a6c01d156e393187858c16c5c626" category="cell">NetApp Backup and Recoveryレプリケーション逆再同期ジョブの失敗</block>
   <block id="594e604651fd901124d237d8caf5c86f" category="cell">NetApp Backup and Recovery のレプリケーション削除ジョブの失敗</block>
   <block id="910e8697aa5e0e59e920af3a4cf26b12" category="admonition">ONTAP 9.13.0 以降では、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのすべてのアラートが表示されます。  Cloud Volumes ONTAP 9.13.0 およびオンプレミスのONTAPを搭載したシステムの場合、「復元ジョブは完了しましたが、警告があります」に関連するアラートのみが表示されます。</block>
-  <block id="4c84697ea11760e260e11cbcfa89f1d5" category="paragraph">デフォルトでは、 NetApp Consoleの組織およびアカウント管理者は、すべての「重大」および「推奨事項」アラートに関するメールを受信します。他のすべてのユーザーと受信者は、デフォルトで通知メールを受信しないように設定されています。電子メールは、 NetAppクラウド アカウントに属しているすべてのコンソール ユーザー、またはバックアップと復元のアクティビティを把握している必要があるその他の受信者に送信できます。</block>
   <block id="4e1654b110548c12172bd1f4aa2a9b85" category="paragraph">NetApp Backup and Recovery の電子メールアラートを受信するには、通知設定ページで通知の重大度タイプとして「重大」、「警告」、「エラー」を選択する必要があります。</block>
   <block id="ac92ec63bcc51fd7fbdc332411a1c313" category="inline-link">バックアップおよび復元ジョブのアラートメールを送信する方法を学びます</block>
   <block id="3b47f916b2f443d824df44877447d71b" category="paragraph"><block ref="79adfec10aebf964dc5e4c3b78205ffe" category="inline-link-rx"></block>。</block>
@@ -1423,22 +1376,15 @@
   <block id="63e8201dff1eb0f61fc15408465cb6b1" category="paragraph">コンソール タイムラインでバックアップおよび復元操作の詳細を表示して、さらに調査することができます。コンソール タイムラインには、ユーザーが開始したものかシステムが開始したものかに関係なく、各イベントの詳細が提供され、UI または API 経由で開始されたアクションが表示されます。</block>
   <block id="b47bbc8022db13f22970dc58a89f44a2" category="inline-link">タイムラインと通知センターの違いについて学びましょう</block>
   <block id="7c9a9551a82f974f54945fe3abbeec59" category="paragraph"><block ref="be62b15feb39ec16dcb7570febe101f2" category="inline-link-rx"></block>。</block>
-  <block id="096522687dff045b7ad64a12bd783789" category="summary">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
   <block id="d3c6745f840c2a30a5e3e9367ddd315a" category="doc">NetApp Backup and Recoveryで Microsoft SQL Server ワークロードをバックアップする</block>
-  <block id="1f24b8f05d126b4e6981228bbcf414a6" category="paragraph">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。</block>
-  <block id="67fee12a630a39f3a2419ba00890580f" category="list-text">バックアップを開始する前に、検出されたホストのログ ディレクトリを構成します。</block>
   <block id="7f9f81d01b7164c9af904c1ddc62367d" category="section-title">ワークロード保護ステータスの表示</block>
-  <block id="98dae635da462d2ed6a530fba52f89b8" category="paragraph">バックアップを開始する前に、ワークロードの保護ステータスを表示します。</block>
   <block id="9ba224f0573e42a55a47b26c40bae95c" category="list-text">ホスト、保護グループ、可用性グループ、インスタンス、およびデータベースのタブで詳細を確認します。</block>
   <block id="3c440e2fe11de8b0c9ba750fb038f088" category="section-title">検出されたホストのログディレクトリを構成する</block>
-  <block id="32e9ec0558b517ab2c691dae389cf40a" category="paragraph">ワークロードをバックアップする前に、検出されたホストのアクティビティ ログへのパスを設定します。これにより、操作のステータスを追跡できるようになります。</block>
   <block id="0e7efc08a39aef2e4e81084cfd484cde" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、またはバックアップおよびリカバリ リストア管理者のロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f664fa7f8e8f64dd3b179d0894c484df" category="list-text">ホストを選択します。</block>
   <block id="75d216d45ee5cd87dedb6c923b7ac199" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *ログディレクトリを設定します*。</block>
-  <block id="1e0bff2c91c15e182127000ba2a1a851" category="list-text">ホスト パスを指定するか、ホストまたはホスト上のノード ホストのリストを参照して、ホスト ログを保存する場所を見つけます。</block>
   <block id="c90f3128927fb9082f339e01f74e41df" category="list-text">ログを保存するものを選択します。</block>
   <block id="f6a597cfb62c5f7cf588253ccc058cc4" category="admonition">表示されるフィールドは、フェールオーバー クラスター インスタンスやスタンドアロンなど、選択した展開モデルによって異なります。</block>
-  <block id="8ae6648bb93b53d7957fdb87eb19a53c" category="paragraph">保護グループを作成して、一連のワークロードのバックアップおよび復元操作を管理できます。保護グループとは、まとめて保護するワークロードの論理的なグループです。</block>
   <block id="8d20c84ae4e022fee3ea1139418904bc" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="6b653f8c4346a4566e361ada95367bb5" category="list-text">保護グループに含めるインスタンスまたはデータベースを選択します。</block>
   <block id="488ea583abd404c5855a27397f193fbe" category="paragraph">ポリシーを作成する場合は、「*新しいポリシーの作成*」を選択し、指示に従ってポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
@@ -1448,7 +1394,6 @@
   <block id="17b12279059c23fe5c84e8a845d07595" category="list-text">バックアップに適用するポリシーを選択します。</block>
   <block id="9a7eb301acc1f194e9e93fc439819834" category="list-text">*今すぐバックアップ*を選択します。</block>
   <block id="d9913a0b510a8288a50990315eb1bf1a" category="section-title">バックアップスケジュールを一時停止する</block>
-  <block id="591200027d004fef90874849895023dc" category="paragraph">スケジュールを一時停止すると、スケジュールされた時間にバックアップが一時的に実行されなくなります。システムのメンテナンスを実行している場合、またはバックアップで問題が発生している場合は、これを実行することをお勧めします。</block>
   <block id="25c71a87678c86f2cc5bd3e9fb6b141a" category="list-text">一時停止する保護グループ、インスタンス、またはデータベースを選択します。</block>
   <block id="26e2e85490e0359c71f79e8496ccac21" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *一時停止*。</block>
   <block id="3fc0db42b81a7ffcf33f957b455005fa" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *保護グループを削除します*。</block>
@@ -1458,18 +1403,11 @@
   <block id="e06e5b57a1ecbd92fac84b5373930c7c" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *保護を解除*。</block>
   <block id="8c994cb58807d04791298c103bd8eeba" category="list-text">[保護の削除] ダイアログ ボックスで、バックアップとメタデータを保持するか削除するかを選択します。</block>
   <block id="a126c201103ea34a2e266dd030d47028" category="list-text">操作を確認するには、[*削除*] を選択します。</block>
-  <block id="d6b2c7fe6cfaf9e8fbb20cdf55e97309" category="summary">開発、テスト、または保護の目的で Microsoft SQL Server アプリケーションを複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。</block>
-  <block id="77ba0160716d8682ae13dff6d21afaf7" category="doc">NetApp Backup and Recoveryを使用した Microsoft SQL Server ワークロードのクローン作成の概要</block>
-  <block id="db45e2afb836e1acca3688f68f7a2864" category="paragraph">開発、テスト、または保護の目的で、 NetApp Backup and Recoveryを使用して Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。</block>
   <block id="8b7fbced126fee3a3d3fdb0185af6396" category="list-text">クローンを作成する</block>
   <block id="1170d6f09309cb8dc382034a34680937" category="list-text">クローンの更新</block>
   <block id="d91a0b52cfc5d0c3e4b59e8544b3c61d" category="list-text">クローンのスプリット</block>
   <block id="9ceb80285d65a64605bf06f35da2e5cb" category="list-text">クローンを削除する</block>
-  <block id="efe0a5bd1ee267cf1eec471f081d02ac" category="summary">開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。</block>
-  <block id="5cca8c2d9bf5f6aa48a19d4032df28ff" category="doc">NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードをクローンする</block>
-  <block id="93d5078699842e380bbf3d48df8dff3e" category="paragraph">NetApp Backup and Recoveryを使用して、開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを同じまたは別の VM に複製します。  Microsoft SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成できます。</block>
   <block id="9623ff55868a27048ab1f8af19865a58" category="paragraph">次のクローンの種類から選択します。</block>
-  <block id="0cd667209ba1928bb0427b9c34fccc5c" category="list-text">*インスタント スナップショットとクローン*: インスタント スナップショットから Microsoft SQL Server ワークロードのクローンを作成できます。インスタント スナップショットは、バックアップから作成されたソース データの特定時点のコピーです。クローンは、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。データが失われたり破損したりした場合に、クローンを使用してワークロードを復元できます。</block>
   <block id="24e1f95a50968c8afba32ada56159269" category="list-text">*既存のスナップショットからのクローン作成*: ワークロードで使用可能なスナップショットのリストから既存のスナップショットを選択できます。このオプションは、特定の時点からクローンを作成する場合に便利です。プライマリ ストレージまたはセカンダリ ストレージにクローンを作成します。</block>
   <block id="442c1f9989df3374284c4930ad61deca" category="paragraph">次の保護目標を達成できます。</block>
   <block id="1266af1011cfb1f4a1155423d32259d6" category="paragraph">Microsoft SQL Server ワークロードのクローンを作成できます。クローンとは、バックアップから作成されたソース データのコピーです。クローンは、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。データが失われたり破損したりした場合に、クローンを使用してワークロードを復元できます。</block>
@@ -1477,17 +1415,14 @@
   <block id="2a1d395bc8ea4d34d2d0de653b0ca483" category="list-text">NetApp Backup and Recoveryメニューから、*クローン* を選択します。</block>
   <block id="b24b65db988f919f27863b57062418df" category="list-text">*新しいクローンを作成*を選択します。</block>
   <block id="fc3c9ac07c83f451e74212c9c611b0cd" category="list-text">クローンの種類を選択します:</block>
-  <block id="263c8565a56fc9cee1338445e2ecd218" category="list-text">*既存のスナップショットからのクローン作成とデータベースの更新*: クローンのスナップショットを選択し、クローンのオプションを構成します。これは、クローンのスナップショットを選択し、オプションを構成する場合に役立ちます。</block>
   <block id="22a9747df4fcda6600928f010255f13d" category="list-text">*インスタント スナップショットとクローン*: ソース データのスナップショットを今すぐ作成し、そのスナップショットからクローンを作成します。このオプションは、ソース ワークロードの最新データからクローンを作成する場合に便利です。</block>
   <block id="a4ff90b0c32ccdad935e744d34c444fd" category="list-text">*データベース ソース* セクションを完了します。</block>
   <block id="695f4384f95690fc983fbdce3ff6e9d6" category="list-text">*単一クローンまたは一括クローン*: 単一クローンを作成するか、複数クローンを作成するかを選択します。 *一括クローン*を選択すると、既に作成した保護グループを使用して一度に複数のクローンを作成できます。このオプションは、異なるワークロードに対して複数のクローンを作成する場合に便利です。</block>
   <block id="cb774ddad741e39d5eac8293855ed186" category="list-text">*ソース データベース ホスト、インスタンス、および名前*: クローンのソース データベース ホスト、インスタンス、および名前を選択します。ソース データベースは、クローンの作成元となるデータベースです。</block>
   <block id="2f7d350d3fe65b8cb52912184bc13eb7" category="list-text">*データベース ターゲット* セクションを完了します。</block>
   <block id="7f38a98dca4e28d50ffdd4e70d1272fb" category="list-text">*ターゲット データベース ホスト、インスタンス、および名前*: クローンのターゲット データベース ホスト、インスタンス、および名前を選択します。ターゲット データベースは、クローンが作成される場所です。</block>
-  <block id="37ad09b5fc9eac0f3e23c1c4f9e317fb" category="paragraph">必要に応じて、ターゲット名のドロップダウン リストから *サフィックス* を選択し、クローンされたデータベース名にサフィックスを追加します。サフィックスを指定しない場合、クローンされたデータベース名はソース データベース名と同じになります。</block>
   <block id="33c7a9f80e0270738b2f53f0d17dc32a" category="list-text">*QoS (最大スループット)*: クローンのサービス品質 (QoS) 最大スループットを MBps 単位で選択します。  QoS は、最大スループットや IOPS など、クローンのパフォーマンス特性を定義します。</block>
   <block id="37b49273c9a13926dac916abd3204dc6" category="list-text">*マウント*セクションを完了します。</block>
-  <block id="87ab5c708e198be9797861286f2d81c4" category="list-text">*マウント ポイントの自動割り当て*: クローンのマウント ポイントを自動的に割り当てるには、このオプションを選択します。マウント ポイントは、オブジェクト ストア内でクローンがマウントされる場所です。</block>
   <block id="ba8b4d3f86d22c66cce9496f01f41360" category="list-text">*マウント ポイント パスの定義*: クローンのマウント ポイントを入力します。マウント ポイントは、オブジェクト ストア内でクローンがマウントされる場所です。ドライブ文字を選択し、データ ファイルのパスを入力し、ログ ファイルのパスを入力します。</block>
   <block id="81e1b4393ce5a82bf9236d29d949e252" category="list-text">復元ポイントを選択します:</block>
   <block id="de3839b8d125e88adfb277a547882fa6" category="list-text">*既存のスナップショット*: ワークロードで使用可能なスナップショットのリストから既存のスナップショットを選択します。このオプションは、特定の時点からクローンを作成する場合に便利です。</block>
@@ -1501,9 +1436,7 @@
   <block id="4de1eb06fca003a6a62865125c06ed51" category="list-text">*クローンの更新スケジュールと有効期限*: *インスタントクローン* を選択した場合は、クローンの更新を開始する日付を入力します。クローン スケジュールは、クローンがいつ作成されるかを定義します。</block>
   <block id="70cf932d9292bbd69ded2413914416ee" category="list-text">*スケジュールの有効期限が切れたらクローンを削除*: クローンの有効期限が切れたらクローンを削除する場合。</block>
   <block id="42c8d79897e584888df9def8b2398ceb" category="list-text">*クローンの更新間隔*: クローンを更新する頻度を選択します。クローンを毎時、毎日、毎週、毎月、または四半期ごとに更新することを選択できます。このオプションは、クローンをソース ワークロードに合わせて最新の状態に保つ場合に便利です。</block>
-  <block id="9afe7218901464aef836f1f00288c5ef" category="list-text">*プレスクリプトとポストスクリプト*: オプションで、クローンの作成前と作成後に実行するクローン前スクリプトとクローン後スクリプトを指定します。これらのスクリプトは、クローンの構成や通知の送信などの追加タスクを実行するために使用できます。</block>
   <block id="6f3ec318a7d03c1c478b8a78c38cb19e" category="list-text">*通知*: オプションで、ジョブ レポートとともにクローン作成ステータスに関する通知を受信する電子メール アドレスを指定します。クローン作成ステータスに関する通知を受信するための Webhook URL を指定することもできます。成功通知と失敗通知の両方、またはどちらか一方のみの通知を指定することができます。</block>
-  <block id="b46751469d66299eb9d9677c4e065141" category="list-text">*タグ*: 後でリソース グループを検索するときに役立つ 1 つ以上のラベルを選択し、[*適用*] を選択します。たとえば、複数のリソース グループに「HR」をタグとして追加すると、後で HR タグに関連付けられているすべてのリソース グループを見つけることができます。</block>
   <block id="2d97727e427122b709150b5f4a1cbcbc" category="list-text">クローンが作成されると、*インベントリ*ページで確認できます。</block>
   <block id="81cf121adb942b1ee3a232dfbd071787" category="paragraph">Microsoft SQL Server ワークロードのクローンを更新できます。クローンを更新すると、クローンはそのソース ワークロードの最新データで更新されます。これは、クローンをソース ワークロードに合わせて最新の状態に保つ場合に便利です。</block>
   <block id="b55bb5e4d643379b3f1e865f8af81a9e" category="paragraph">データベース名を変更したり、最新のインスタント スナップショットを使用したり、既存の運用スナップショットから更新したりすることができます。</block>
@@ -1515,7 +1448,6 @@
   <block id="30d826de8ef0821df1383cf392c54866" category="list-text">*タグ*: 後でリソース グループを検索するときに役立つ 1 つ以上のラベルを入力します。たとえば、複数のリソース グループに「HR」をタグとして追加すると、後で HR タグに関連付けられているすべてのリソース グループを見つけることができます。</block>
   <block id="7ae396d8697569c4da682196e15a598f" category="list-text">続行するには、更新確認ダイアログボックスで「*更新*」を選択します。</block>
   <block id="2e7a2fe6aba8a77893665dc04b468dbf" category="section-title">クローンの更新をスキップする</block>
-  <block id="7d41efc2d32f9ec60952d826d03f219e" category="paragraph">ソース ワークロードの最新データでクローンを更新したくない場合は、クローンの更新をスキップすることができます。クローンの更新をスキップすると、クローンを更新せずにそのまま維持できます。</block>
   <block id="71625decb35c7e43fdb5deae9f939931" category="list-text">更新をスキップするクローンを選択します。</block>
   <block id="acdc6d8215bdc39a7c6ac48e5ff4b6f5" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *更新をスキップ*。</block>
   <block id="c613ef03cc363aefacc22f329f86876b" category="list-text">[更新をスキップする] 確認ダイアログ ボックスで、次の操作を行います。</block>
@@ -1529,16 +1461,11 @@
   <block id="91a9421f27cf61e52bea5d9c90e7f79e" category="list-text">分割クローンの詳細を確認し、「分割」を選択します。</block>
   <block id="e249edf19fe073ddd9570fbd4ae541d6" category="list-text">分割クローンが作成されると、*インベントリ*ページで確認できます。</block>
   <block id="8a65745379abeb0cfae60a1c9411fbf7" category="paragraph">Microsoft SQL Server ワークロードのクローンを削除できます。クローンを削除すると、オブジェクト ストアからクローンが削除され、ストレージ領域が解放されます。</block>
-  <block id="0dcbaebd2d0c67351c93ea429ff57403" category="paragraph">クローン がポリシーによって保護されている場合、ジョブを含めてクローン が削除されます。</block>
   <block id="7d96331ecc4c49d8309c629c038259b6" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *クローンを削除*。</block>
   <block id="443b1721520eef28b9df0cfca4b895f7" category="list-text">クローンの削除確認ダイアログボックスで、削除の詳細を確認します。</block>
   <block id="6bf252e4479008373232d625cc16f3f0" category="list-text">クローンまたはそのストレージにアクセスできない場合でも、クローンされたリソースをSnapCenterから削除するには、[強制削除] を選択します。</block>
   <block id="071238f352b79bf42fc764c1c3e7a672" category="list-text">クローンを削除すると、*インベントリ* ページから削除されます。</block>
-  <block id="d53f53fc30ebcedcac10bb63c84a7334" category="summary">Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDにバックアップして、データの保護を確実に行うことができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
-  <block id="970704c6c31da44d60a09e434504ddef" category="doc">NetApp Backup and Recoveryによる Microsoft SQL ワークロードの保護の概要</block>
-  <block id="26637088d9fc088395262f4cadc1d551" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。バックアップは、作成したポリシーに基づいて、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに自動的に生成され、保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
   <block id="920a86bab58426e670d364756915fe89" category="paragraph">3-2-1 アプローチの利点は次のとおりです。</block>
-  <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
   <block id="90611cad8ce642f37b020e9f74335606" category="inline-link-macro">SnapCenterからインポートする場合の追加項目を構成する</block>
   <block id="4be4857ddf5f778e68cf136f6d4a1b8f" category="list-text"><block ref="4be4857ddf5f778e68cf136f6d4a1b8f" category="inline-link-macro-rx"></block></block>
   <block id="d15c46d418dcb12c5418f755f162b739" category="list-text"><block ref="d15c46d418dcb12c5418f755f162b739" category="inline-link-macro-rx"></block></block>
@@ -1557,7 +1484,6 @@
   <block id="50becc4bb7baee84bd10aa757aaa2048" category="inline-link-macro">ワークロードのインベントリを管理する</block>
   <block id="e5c866c0e49172f48184bec3e11aa6b9" category="list-text"><block ref="e5c866c0e49172f48184bec3e11aa6b9" category="inline-link-macro-rx"></block></block>
   <block id="d66ed6d81bd70c133ddb80e0d8285080" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block></block>
-  <block id="8b387432a535fb4b84f9acc0531a283f" category="paragraph">ワークロードをバックアップするには、通常、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="3f7e0c8d0c7fc98faaf4d36a5bb06680" category="paragraph-title">サポートされているバックアップ先</block>
   <block id="124dee118a2923f54724c274f69ca91a" category="paragraph">NetApp Backup and Recovery を使用すると、次のソース システムからパブリック クラウド プロバイダーとプライベート クラウド プロバイダーの次のセカンダリ システムおよびオブジェクト ストレージに、Microsoft SQL Server インスタンスとデータベースをバックアップできます。スナップショット コピーはソース システムに存在します。</block>
   <block id="48a431e7da72cf4ddb716b44e3bd3022" category="cell">ソースシステム</block>
@@ -1588,29 +1514,19 @@
   <block id="7a27f6aeca7faa30d91e24a0b044228e" category="cell">オンプレミスのONTAPシステムONTAP S3</block>
   <block id="d4cd0dabcf4caa22ad92fab40844c786" category="cell">NA</block>
   <block id="046252999ea760a859cd9ed58c250005" category="admonition">「オンプレミスのONTAPシステム」への参照には、 FASとAFFシステムが含まれます。</block>
-  <block id="b1064fed29b0dc7e3aa35001b7aa5fe8" category="summary">データのバックアップは、スナップショット、レプリケーション、オブジェクト ストレージ内のバックアップなど、バックアップを作成した場所から復元できます。復元元の場所、復元ポイント、および復元するリソースの種類を確認します。</block>
-  <block id="03a7e475e1c12b2c6d0164d66fc949cf" category="doc">NetApp Backup and Recoveryを使用したMicrosoft SQLワークロードの復元の概要</block>
-  <block id="93538a05b075f118ed03b0213f47df07" category="paragraph">NetApp Backup and Recoveryからの Microsoft SQL Server データのバックアップは、バックアップを移動した場所 (スナップショット、レプリケーション、またはオブジェクト ストレージ内のバックアップ) から復元できます。ワークロードを元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。復元元の場所、復元ポイント、および復元するリソースの種類を確認します。</block>
   <block id="a1a24114f8ff152b1eaa793979cceb31" category="list-text">プライマリロケーションから復元</block>
   <block id="214aa1c07261842a0c66c9807fb461a5" category="list-text">複製されたリソースから復元する</block>
   <block id="cba441d877fe3c83dc3240cc40b07914" category="list-text">オブジェクトストアのバックアップから復元する</block>
   <block id="41850d3e69864b055a26374069c9dbda" category="paragraph">データを最新のスナップショットまたは以下のポイントに復元できます。</block>
   <block id="66b1424fe6641f4697268af9ed07b5e0" category="list-text">スナップショットからの復元</block>
-  <block id="a0310fc93942385f0bbe33726461ece4" category="list-text">特定の時点に復元します。これは、ファイルの名前と場所、およびファイルが最後に良好な状態であった日付がわかっている場合に役立ちます。</block>
   <block id="c1f62c4a8bd3bfc797c0a4be8f29b273" category="list-text">最新のバックアップに復元する</block>
-  <block id="01e12de62fa77fda2815719aed8ff892" category="section-title">次の手順</block>
-  <block id="957b594a5345d19dcb7aee8617ab18dd" category="paragraph">ワークロードの復元方法の詳細については、以下を参照してください。<block ref="62e2cc937cfdf889c63d65a36a05b5ee" category="inline-link-macro-rx"></block> 。</block>
   <block id="9c53b2dcf4ff2026b3d9b30dfa263b65" category="summary">スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。</block>
   <block id="4a2c019e4f44d11b6cc64ba3161fb171" category="doc">NetApp Backup and Recoveryを使用して Microsoft SQL Server のワークロードを復元する</block>
-  <block id="12d4e9f9d243b572a971e5529456a50b" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Microsoft SQL Server ワークロードを復元します。ワークロードを元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="42ace45b519d448bedf9ce14d8cc4c23" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加の整合性チェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
   <block id="52386b1f1b11ed7ab3350096c7964c69" category="list-text">バックアップ ファイルからワークロードを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。</block>
   <block id="b70369c3c6532f77755358e7ea82a3d2" category="inline-image-macro">リソースを復元する流れを示す図</block>
   <block id="2ce2b4590446a5b67b1664d9a59c0e14" category="paragraph"><block ref="2ce2b4590446a5b67b1664d9a59c0e14" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b4e33e7622acc9618ace6e8ff3afc69" category="section-title">復元方法</block>
-  <block id="a4e9043cd0d08a3604d4fa5900f2b6c6" category="paragraph">次のいずれかの方法を使用してワークロードを復元できます。通常、復元のニーズに応じて次のいずれかの方法を選択します。</block>
-  <block id="ab93af0ba0fbf755cb83f2b85d489b69" category="list-text">*復元ページから*: リソースを復元する必要があるが、リソースの正確な名前や保存場所、またはリソースが最後に良好な状態であった日付を覚えていない場合に、これを使用します。フィルターを使用してスナップショットを検索できます。</block>
-  <block id="4eade6c0159669915da700f6eafaf549" category="list-text">*インベントリ ページから*: 過去 1 週間または 1 か月間の特定のリソースを復元する必要がある場合、リソースの名前と場所、およびリソースが最後に良好な状態であった日付がわかっている場合にこれを使用します。リソースのリストを参照して、復元するリソースを見つけます。</block>
   <block id="c156ce96487fbc2d3146c1025eeb814e" category="section-title">復元オプションからワークロードデータを復元します</block>
   <block id="ff5f9394e9c4c274ba276dbd8baa7e78" category="paragraph">復元オプションを使用してデータベース ワークロードを復元します。</block>
   <block id="284d26c101f9b764ac03ab9ee1f7d9cc" category="list-text">復元するデータベースを選択します。フィルターを使用して検索します。</block>
@@ -1650,14 +1566,10 @@
   <block id="a5b572eff428c980edb20994fe7c49f1" category="list-text">復元するリソースが配置されているホストを選択します。</block>
   <block id="c9aaadacbb7ccfbb21c9167dc0b06cb2" category="list-text">*アクション*を選択します<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>アイコンをクリックし、[詳細を表示] を選択します。</block>
   <block id="917bc4b9739215b75cd62f3d93879136" category="list-text">Microsoft SQL Server ページで、*データベース* タブを選択します。</block>
-  <block id="d69ca0b6bfa475ff327b8d26bb282775" category="list-text">[データベース] タブで、復元可能なバックアップがあることを示す「保護済み」ステータスが表示されているデータベースを選択します。</block>
   <block id="f467c6231a57911e62401cfb0159d95b" category="paragraph">「復元」ページから復元する場合と同じ 3 つのオプションが表示されます。</block>
   <block id="3cc2b93a80a97a7cacb8c0d4f5da6c20" category="list-text">特定の時点に復元する</block>
   <block id="d25e9ce84a1050d163d601d4bd2fa073" category="list-text">復元ページから復元オプションについて同じ手順を続行します。</block>
   <block id="7b588dfa65a0573a51e5ab0e2d3023e9" category="summary">NetApp のバックアップとリカバリを使用して Oracle ワークロードを保護します。</block>
-  <block id="84686185827208a5aa3cd73e8914c726" category="doc">NetApp Backup and RecoveryでOracleワークロードをバックアップ</block>
-  <block id="4870aee82774514f58cbe0b5e13295c6" category="paragraph">データが確実に保護されるように、オンプレミスのONTAPシステムから Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、またはONTAP S3 に Oracle Database 保護グループまたはデータベースをバックアップします。保護グループをバックアップすると、 NetApp Consoleは保護グループに含まれるデータベースとログ データをバックアップします。</block>
-  <block id="256e34b5265109a270fa88b84b389445" category="admonition">保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を制御するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>手順についてはこちらをご覧ください。</block>
   <block id="2fb29b6c97ac2109b4c3d3537ae25b9d" category="inline-link-macro">NetApp Backup and Recoveryを使用して Oracle ワークロードの保護グループを作成および管理します</block>
   <block id="02cdaf324b33a661330ff286d04c61aa" category="list-text">保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見る<block ref="c9c15450fe1a04e77c0be05f7471779a" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="5a232101cd6b911084269b39726e0f05" category="list-text">保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。</block>
@@ -1669,7 +1581,6 @@
   <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">NetApp Backup and Recoveryを使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする</block>
   <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">リカバリ操作を実行するために制御された状態でデータベースにアクセスする必要がある場合は、Oracle データベースのリカバリ ポイントをマウントすることをお勧めします。</block>
   <block id="079a3f8ec0bb95d8f0ae5d36f04de7c4" category="section-title">Oracle データベースの復元ポイントをマウントする</block>
-  <block id="3fc01e05055881fda72e906971695293" category="paragraph">データベースの保護ポリシーを構成してアーカイブ ログを保持すると、データベースの回復ポイントをマウントして、データベースに加えられたすべての変更の履歴を表示できます。</block>
   <block id="027d1aa00ef27e7ff911f7a3ecb49c5d" category="list-text">Oracle タイルを選択します。</block>
   <block id="3fe9c6f0345265378a65d07de3e0456f" category="list-text">[バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。</block>
   <block id="872dd4524336673d42ecaa46bc8eb4a9" category="list-text">リスト内の Oracle Database ワークロードについては、「*表示*」を選択します。</block>
@@ -1690,7 +1601,6 @@
   <block id="504b4d4156c8604edbbda8b908e689cf" category="list-text">*アンマウント*を選択してアクションを確認します。</block>
   <block id="bb205d6469d1d38895fc74e5fe58b024" category="summary">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Oracle 仮想マシンを保護して、データを確実に保護できます。</block>
   <block id="3e4addf457cac6e6f2f337996275bb1f" category="doc">Oracle Databaseワークロードの保護の概要</block>
-  <block id="5272953587a56b79833b0c22e9ec015b" category="paragraph">NetApp Backup and Recoveryを使用して Oracle データベースとログを保護します。  NetApp Backup and Recovery は、高速でスペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップおよび復元操作を提供します。  Oracle ワークロードを Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、またはONTAP S3 にバックアップし、オンプレミスの Oracle ホストに復元できます。</block>
   <block id="e58749f44abd3f2817fad6c2ae87fb45" category="paragraph">NetApp Backup and Recoveryを使用すると、Oracle ワークロードに関連する次のタスクを実行できます。</block>
   <block id="0ef9d15a5323698b079164a26f451715" category="list-text"><block ref="0ef9d15a5323698b079164a26f451715" category="inline-link-macro-rx"></block></block>
   <block id="f7f66fefaac908c86a635d80ae33c9ef" category="inline-link-macro">Oracle ワークロードの保護グループの作成と管理</block>
@@ -1859,7 +1769,6 @@
   <block id="87bf438f6aafcccba8118644c7f4ed8b" category="list-text">* SnapMirrorボリュームとスナップショット形式*: 必要に応じて、Microsoft SQL Server ワークロードのバックアップを管理するポリシーに独自のスナップショット名を入力します。フォーマットとカスタムテキストを入力します。セカンダリ ストレージにバックアップすることを選択した場合は、 SnapMirrorボリュームのプレフィックスとサフィックスを追加することもできます。</block>
   <block id="fb6e9d876191a4c0c156e739e377be59" category="section-title">ポリシーを編集する</block>
   <block id="1f5ec7f8a8c15e5d3277be8ae844a249" category="paragraph">バックアップ アーキテクチャ、バックアップ頻度、保持ポリシー、その他のポリシー設定を編集できます。</block>
-  <block id="ecee2fc394ac60057e7928bb6138339d" category="admonition">この機能は、VMware Preview ワークロードでは使用できません。</block>
   <block id="f985f1951686384a15ea5ddf855b3cab" category="paragraph">ポリシーを編集するときに別の保護レベルを追加することはできますが、保護レベルを削除することはできません。たとえば、ポリシーがローカル スナップショットのみを保護する場合は、セカンダリ ストレージへのレプリケーションやオブジェクト ストレージへのバックアップを追加できます。ローカル スナップショットとレプリケーションがある場合は、オブジェクト ストレージを追加できます。ただし、ローカル スナップショット、レプリケーション、およびオブジェクト ストレージがある場合は、これらのレベルのいずれかを削除することはできません。</block>
   <block id="f28c1acceb60dde3fa2b864db8f83957" category="paragraph">オブジェクト ストレージにバックアップするポリシーを編集している場合は、アーカイブを有効にすることができます。</block>
   <block id="eeef4d21ae9c8e573641508f4902329d" category="paragraph">SnapCenterからリソースをインポートした場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーにいくつかの違いが生じる可能性があります。見る<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block>。</block>
@@ -2033,7 +1942,6 @@
   <block id="29881d0b044ceba86593dcfef30e0573" category="list-text">保護グループのバックアップ スケジュールを一時停止および再開します。</block>
   <block id="99ea4945ef61f5a29b7463a5d1480fe7" category="list-text">保護グループに含める VM またはデータベースを選択します。</block>
   <block id="224efd4fdb5f19c474ab2b6ea6b4132b" category="section-title">保護グループのバックアップスケジュールを一時停止する</block>
-  <block id="8ea08fb46b36f3cd2195756f05e3b2d7" category="paragraph">保護グループを一時停止すると、保護グループのスケジュールされたバックアップが一時停止されます。保護グループ内のワークロードのバックアップを一時的に停止する場合は、保護グループを一時停止することをお勧めします。</block>
   <block id="67671aa34b0789a08ab7d6954bfb7122" category="paragraph">保護グループを一時停止すると、保護ステータスが「メンテナンス中」に変わります。バックアップ スケジュールはいつでも再開できます。</block>
   <block id="e18d539be2570002127583bafd748cad" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *保護グループを一時停止します*。</block>
   <block id="e1bdaded4d7fd6d9209905a6b9ce591a" category="list-text">確認メッセージを確認し、「一時停止」を選択します。</block>
@@ -2873,7 +2781,6 @@
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">確認ダイアログボックスで、システムの名前を入力します。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">*詳細設定*を選択します。</block>
   <block id="faf054b5001a252d9df902ee16e53f79" category="list-text">*バックアップの強制削除*: すべてのバックアップを強制的に削除するかどうかを指定します。</block>
-  <block id="985c6503d77bf7e7b0a1cdf7cb2f8dcc" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプションを使用できます (ボリュームおよび作業環境レベル)。</block>
   <block id="22f12d99e813b34048e25ac4a5f568f3" category="section-title">ボリュームのすべてのバックアップファイルを削除する</block>
   <block id="a8ba6304562632a6eb4762aebfe0d175" category="paragraph">ボリュームのすべてのバックアップを削除すると、そのボリュームの今後のバックアップも無効になります。</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">その他のアイコン</block>
@@ -2881,7 +2788,6 @@
   <block id="782b223a2a5766a12495d35a0f0fc4a1" category="paragraph">すべてのバックアップ ファイルのリストが表示されます。</block>
   <block id="2c9220461da540ceac8b243e96929a74" category="list-text">*アクション* &gt; *すべてのバックアップを削除*を選択します。</block>
   <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">ボリューム名を入力します。</block>
-  <block id="eb1f707d55b4ea05ecb250f1ee6bee84" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、他のサービスがバックアップ バケットにアクセスできない場合や、バックアップが DataLock で保護されているが不要になった場合などに発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプションを使用できます (ボリュームおよび作業環境レベル)。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">ボリュームの単一のバックアップファイルを削除する</block>
   <block id="e300bd32052d102b8a28f9965281effd" category="paragraph">不要になったバックアップ ファイルを 1 つ削除できます。これには、ボリューム スナップショット コピーまたはオブジェクト ストレージ内のバックアップの単一のバックアップの削除が含まれます。</block>
   <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">複製されたボリューム (データ保護ボリューム) は削除できません。</block>
@@ -3808,7 +3714,6 @@
   <block id="f21e38c1a38f1c4f4e956d882bff761e" category="inline-image-macro">バックアップ ファイルが、ソース システムではスナップショット コピーとして、セカンダリ ストレージ システムでは複製されたボリュームとして、オブジェクト ストレージではバックアップ ファイルとしてどのように存在するかを示す図。</block>
   <block id="58ead0698b2403892dd8d82de5be7c29" category="paragraph"><block ref="58ead0698b2403892dd8d82de5be7c29" category="inline-image-macro-rx" type="image"></block></block>
   <block id="69cf282ad2d2af37ce5b061e5f12b928" category="paragraph">NetApp Backup and Recovery は、 NetApp のSnapMirrorデータ レプリケーション テクノロジを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
-  <block id="544723094263b1778fa9139a8dc94c28" category="list-text">オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーが準備されます。</block>
   <block id="094fa5b5a02089cb6ef9dcfe3de478b1" category="paragraph">必要に応じて、任意のバックアップ コピーから、_ボリューム_全体、_フォルダ_、または 1 つ以上の_ファイル_を同じシステムまたは別のシステムに復元できます。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">機能</block>
   <block id="d7b479d32340f96732225021d096cc62" category="paragraph">*レプリケーション機能:*</block>
@@ -4804,4 +4709,73 @@
   <block id="ba74bff4c4deec01ccafcf5a160089e4" category="paragraph">SnapCenter は、リソースのポリシーに対して複数の保持値をサポートします。  NetApp Backup and Recovery、リソースごとに 1 つの保持値のみをサポートします。</block>
   <block id="524363c64fff15aa09ef827516a023c0" category="paragraph">SnapCenter は、階層が変更された場合でも、移行後に各ポリシーのSnapMirrorラベルを保持します。</block>
   <block id="16a81293ba902fc66da927551f9b54a7" category="paragraph">コンソール エージェントには、NetApp Backup and Recovery機能が含まれています。</block>
+  <block id="5023c4ac532ec0c4d3bcb45ab912017b" category="paragraph">システムを変更する前にデータが保護されるように、オンデマンド バックアップを使用します。</block>
+  <block id="2d7b174d15c513f1d3517bf8118a70aa" category="admonition">バックアップでは、保護グループまたは仮想マシンに割り当てたのと同じポリシーが使用されます。</block>
+  <block id="135489daff067c8c0689c51f8f9dfa0f" category="list-text">複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。</block>
+  <block id="d6948cb4b08b9cf746550052f3ca9a7d" category="list-text">オンサイト コピーを使用すると、データを迅速に復元できます。また、オンサイト コピーが侵害された場合は、オフサイト コピーを使用できます。</block>
+  <block id="a7ac7524a020a5d14426a370db992e91" category="paragraph">保護するワークロードを保護グループにグループ化します。保護グループを作成して、ワークロードをまとめてバックアップおよび復元します。</block>
+  <block id="5352ebde938dbfee2e240093091d21b6" category="list-text">異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。</block>
+  <block id="10a12f1b238b4aca3eea0e189209f95f" category="list-text">オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。</block>
+  <block id="04946e97d5c9879a750d6fbb35c8c54a" category="summary">NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベース、インスタンスの管理に役立ちます。</block>
+  <block id="e7a5ac87e73475a462d4dc0b02fe041a" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベース、インスタンスの管理に役立ちます。インベントリの保護設定を表示、変更、または削除できます。</block>
+  <block id="cfdfd7a1b72e8e723d4b5a0b7e6afbf5" category="paragraph">不要になったアプリケーションを削除します。  NetApp Backup and Recovery は保護を停止し、削除されたアプリケーションのバックアップとスナップショットをすべて削除します。</block>
+  <block id="f211d824587f775c16c5bded7ee65614" category="paragraph">Kubernetes クラスターの保護を停止するには、保護を無効にして関連付けられているアプリケーションを削除し、 NetApp Backup and Recoveryからクラスターを削除します。  NetApp Backup and Recovery、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。</block>
+  <block id="2bba4a20b069f20b81f5d7e00bb55ee1" category="summary">NetApp Backup and Recoveryのリソースを管理してデータを保護します。</block>
+  <block id="5a32edb5240e680dd91847bce7538e99" category="paragraph">NetApp Backup and Recoveryのリソースを管理してデータを保護します。バックアップ、データベース、インスタンス、アプリケーション ホスト、およびシステムを制御します。リソース保護設定を表示、編集、または削除します。</block>
+  <block id="76be0aa5e848bc95ef63cb71a62a4a8c" category="admonition">その行の *場所* 列のローカル スナップショット アイコンが青色で表示されていることを確認します。</block>
+  <block id="c9ba59160e2a933914b5eb21420c64e0" category="summary">NetApp Backup and Recoveryを使用すると、ローカル スナップショット、レプリケーション、および開始したバックアップ ジョブを監視します。</block>
+  <block id="e10e8c5d47314e650f29f8a9e66e579f" category="paragraph">NetApp Backup and Recoveryを使用すると、ローカル スナップショット、レプリケーション、および開始したバックアップ ジョブを監視します。開始した復元ジョブを追跡します。完了したジョブ、進行中のジョブ、失敗したジョブを表示して、問題の診断に役立ちます。  NetApp Console通知センターで電子メール通知を有効にすると、ログインしていないときでもシステム アクティビティに関する最新情報を入手できます。コンソール タイムラインを使用して、UI または API から開始されたすべてのアクションの詳細を表示します。</block>
+  <block id="62d96e21fc365a7f9d8b078e4d5ed7eb" category="paragraph">NetApp Backup and Recovery はジョブ情報を 15 日間保持し、その後ジョブ情報を削除してジョブ モニターから除去します。</block>
+  <block id="c06e8b3ad6c2a4bcf247b5b6ff031cbf" category="admonition">ONTAPシステムを 9.13.x にアップグレードし、ジョブ モニターに進行中のスケジュールされたバックアップ操作が表示されない場合は、 NetApp Backup and Recoveryを再起動してください。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d7e91b503470d39f08e98b06f5d7864" category="paragraph">ほとんどのフィルターは説明を要しません。「ワークロード」のフィルターを使用すると、次のカテゴリのジョブを表示できます。</block>
+  <block id="fd5a28f02b854b31443e6f70095cf97f" category="paragraph">結果をフィルタリングまたは並べ替えた後、メインのジョブ監視ページの内容をレポートとしてダウンロードできます。NetApp Backup and Recovery は、必要に応じて確認したり他のグループに送信したりできる .CSV ファイルを生成してダウンロードします。.CSV ファイルには最大 10,000 行のデータが含まれます。</block>
+  <block id="28309eee9c974a9a7f8e577ac89552ad" category="paragraph">保持（_バックアップ ライフサイクル_）フローを監視して、バックアップを確認し、安全に保ち、監査をサポートします。ライフサイクルを追跡するために、バックアップ コピーの有効期限を特定します。</block>
+  <block id="9535df3e89123a36d140c06cf83471aa" category="paragraph">通知センターでアラートを表示し、ログインしていない場合でも重要なシステム アクティビティに関する電子メール アラートを送信するようにコンソールを構成することができます。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
+  <block id="63369edef3fcbf27a13a1f4394250d9b" category="paragraph">デフォルトでは、 NetApp Consoleの組織およびアカウント管理者は、すべての「重大」および「推奨事項」アラートに関するメールを受信します。デフォルトでは、システムは他のユーザーや受信者が通知メールを受信するように設定しません。  NetAppクラウド アカウントのコンソール ユーザー、またはバックアップと復元のアクティビティについて知る必要があるその他の受信者への電子メール アラートを構成します。</block>
+  <block id="5f5f4cee6315d890fa94bb1a326b0d96" category="summary">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。</block>
+  <block id="e37ce4efad7ee552a69ced8294691e5b" category="paragraph">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムは自動的にバックアップを作成し、データ保護のためにクラウド アカウント内のオブジェクト ストアに保存します。</block>
+  <block id="24fa20750f9318bf02e6c8dece85f94d" category="list-text">スケジュールに従ってワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>手順についてはこちらをご覧ください。</block>
+  <block id="31aacaea95ea11818f2629af38fa3f2c" category="list-text">バックアップを開始する前に、検出されたホストのログ ディレクトリを構成します。</block>
+  <block id="6f74e6b5a59cfaab5656a1be6c164a0a" category="paragraph">バックアップを開始する前に、ワークロードの保護ステータスを表示します。</block>
+  <block id="457aa988b8eb5473cac5e0469be1df6a" category="paragraph">ワークロードをバックアップする前に、検出されたホストのアクティビティ ログ パスを設定して操作ステータスを追跡します。</block>
+  <block id="080eb3bfa30dcebe4f464b99c543203f" category="list-text">ホスト パスを入力するか、ホストまたはノードのリストを参照して、ホスト ログを保存する場所を見つけます。</block>
+  <block id="689e7d0d3bec77daaa3e898a325feb08" category="paragraph">複数のワークロードのバックアップおよび復元操作を管理するための保護グループを作成します。保護グループは、ワークロードの論理的なグループです。</block>
+  <block id="bfd48fbe75694adad47437674f096479" category="paragraph">システムに変更を加える前にオンデマンド バックアップを実行して、データが保護されていることを確認してください。</block>
+  <block id="cf51cc5e19834617c83934c7925ac274" category="paragraph">メンテナンスやトラブルシューティング中にバックアップを一時的に停止するには、スケジュールを一時停止します。</block>
+  <block id="a46532f4ef2f48598210a6371a54ce44" category="summary">開発、テスト、または保護の目的で、Microsoft SQL Server アプリケーション データを複製します。</block>
+  <block id="634a07db17d43ffa48b0833d4d8ae675" category="doc">NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードをクローンする</block>
+  <block id="9a9ce4cb3209a16c6920e90538eadbc2" category="paragraph">NetApp Backup and Recoveryを使用して、開発、テスト、または保護のために Microsoft SQL Server アプリケーション データを VM に複製します。  SQL Server ワークロードのインスタント スナップショットまたは既存のスナップショットからクローンを作成します。</block>
+  <block id="4f01a6cf229c637b4b35854f4d232241" category="list-text">*インスタント スナップショットとクローン*: バックアップから作成されたソース データのポイントインタイム コピーであるインスタント スナップショットから、Microsoft SQL Server ワークロードのクローンを作成できます。クローンは、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。データが失われたり破損したりした場合に、クローンを使用してワークロードを復元できます。</block>
+  <block id="4b958757c89a83492b7bbd549a07ee21" category="list-text">*既存のスナップショットからのクローン作成とデータベースの更新*: スナップショットを選択し、クローン オプションを構成します。</block>
+  <block id="50154417ec4f040ce30712cfee50f7b4" category="paragraph">必要に応じて、ターゲット名のドロップダウン リストから *サフィックス* を選択し、クローンされたデータベース名にサフィックスを追加します。サフィックスを追加しない場合、クローンされたデータベース名はソース データベース名と同じになります。</block>
+  <block id="58f2d89bc55d8ef8651af1e18e4acfb4" category="list-text">*マウント ポイントの自動割り当て*: オブジェクト ストア内のクローンのマウント ポイントを自動的に割り当てます。</block>
+  <block id="13f642fe7002963c8cf22b63ae21a0e6" category="list-text">*プレスクリプトとポストスクリプト*: オプションで、クローンの作成前と作成後に実行するスクリプトを追加します。これらのスクリプトは、クローンの設定や通知の送信などの追加タスクを実行できます。</block>
+  <block id="0bf69b5671c7c924972463627bd22a70" category="list-text">*タグ*: 後でリソース グループを検索する際に役立つラベルを選択し、[適用] を選択します。たとえば、複数のリソース グループに「HR」をタグとして追加すると、後で「HR」タグに関連付けられているすべてのリソース グループを見つけることができます。</block>
+  <block id="8b44463d6dea841eba5655fcddf2d308" category="paragraph">クローンを変更せずに維持するには、クローンの更新をスキップします。</block>
+  <block id="9c56aad86b05797af73b468bb579fca1" category="paragraph">ポリシーによってクローンが保護されている場合、クローンおよびそのジョブの両方が削除されます。</block>
+  <block id="ba0363fe48f14ee1de2dc51cf57a540a" category="summary">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。</block>
+  <block id="f67bd1ebeb2e1458c18ee1bfe3a0d5e2" category="doc">NetApp Backup and Recoveryを使用した Microsoft SQL ワークロードの保護の概要</block>
+  <block id="a355bd32745a1495313545b192a3533f" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから AWS、Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムはポリシーに従って、クラウド アカウントにバックアップを自動的に作成して保存します。  3-2-1 戦略を使用します。つまり、データの 3 つのコピーを 2 つのストレージ システムに保存し、1 つのコピーをクラウドに保存します。</block>
+  <block id="8c08de76609beebf11bb1d984d12384e" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショット コピーを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
+  <block id="d23f996c9926f1f022cbe22d0fcae8e8" category="paragraph">データを保護するために、次の操作を実行できます。</block>
+  <block id="f59023f77e90026f16f584d31820eb90" category="paragraph">ワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="a54794387a0e725b2c0a86422f5c42f4" category="paragraph">NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードを復元します。スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージ内のバックアップを使用します。ワークロードを元のシステム、同じクラウド アカウントを持つ別のシステム、またはオンプレミスのONTAPシステムに復元します。</block>
+  <block id="5f0d7635bc31258066861934b2abce44" category="list-text">ファイル名、場所、最終有効日が分かっている場合は、特定の時点に復元します。</block>
+  <block id="045eae722cda03b00d9ad8dfdd4cbe51" category="admonition">バックアップ ファイルにアクセスするには、クラウド プロバイダーに追加料金を支払う必要があります。</block>
+  <block id="2215c4c479bee2e93b68b2a226280019" category="paragraph">次のいずれかの方法を使用してワークロードを復元します。</block>
+  <block id="3d1e74249acc11e215f68c784ae29e1f" category="list-text">*復元ページから*: リソースの名前、場所、または最終有効日がわからない場合に、このオプションを使用してリソースを復元します。フィルターを使用してスナップショットを検索します。</block>
+  <block id="925339af26e35afc6f5984d691aa25af" category="list-text">*インベントリ ページから*: 特定のリソースの名前、場所、最終有効日がわかっている場合は、このオプションを使用してそのリソースを復元します。リストを参照してリソースを見つけます。</block>
+  <block id="bf094c6c5fccca6c427a43080edf5833" category="list-text">「データベース」メニューで、「保護」ステータスのデータベースを選択します。</block>
+  <block id="ce2efe5d519e4c1242177b404520665a" category="doc">NetApp Backup and Recoveryを使用してOracleワークロードをバックアップする</block>
+  <block id="b3b9d779c6c22d1258ffcbda438336c1" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、 ONTAP S3 などのクラウド ストレージに Oracle Database 保護グループまたはデータベースをバックアップします。  NetApp Backup and Recovery は、各保護グループ内のデータベースとログ データをバックアップします。</block>
+  <block id="fe390808083985de8172887380a80c5e" category="admonition">保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>手順についてはこちらをご覧ください。</block>
+  <block id="26bbb7b442740e80ed850d884bef0605" category="paragraph">システムを変更する前にオンデマンド バックアップを実行して、データが保護されていることを確認します。</block>
+  <block id="0dd484dd2e82385c156b95d98fd2f3fa" category="admonition">NetApp Backup and Recovery、バックアップと保護グループの両方に同じポリシーが使用されます。</block>
+  <block id="b5ba243769c03b5476a2b6c06b8c5b5a" category="paragraph">データベースの保護ポリシーを構成してアーカイブ ログを保持すると、回復ポイントをマウントしてデータベースの変更履歴を表示できます。</block>
+  <block id="d038c8bfa872280d5c1a567bff169d05" category="paragraph">NetApp Backup and Recoveryを使用して Oracle データベースとログを保護します。高速で、スペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップと復元を実現します。 Oracle ワークロードを AWS S3、 NetApp StorageGRID、Azure Blob Storage、またはONTAP S3 にバックアップします。オンプレミスの Oracle ホストにバックアップを復元します。</block>
+  <block id="21214671e7222d24ea30444729853d36" category="paragraph">保護するワークロードを保護グループにグループ化し、まとめてバックアップおよび復元します。</block>
+  <block id="e1a8b67cb61fcb0e0a3b88e66f93f4cd" category="paragraph">保護グループを一時停止して、スケジュールされたバックアップを一時停止します。</block>
+  <block id="2efbc86f2f62c8819af426f268c543d5" category="paragraph">保護グループを削除すると、保護グループとグループのすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除します。</block>
+  <block id="d0be562abb07ac98b80cbaa51990f79d" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプション (ボリューム レベルとシステム レベル) を使用できるようになりました。</block>
+  <block id="fb744a1324313d70fed478c851dab696" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、他のサービスがバックアップ バケットにアクセスできない場合や、バックアップが DataLock で保護されているが不要になった場合などに発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプション (ボリューム レベルとシステム レベル) を使用できるようになりました。</block>
 </blocks>

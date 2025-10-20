@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-mssql-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: Microsoft SQL Server アプリケーション データをオンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDにバックアップして、データの保護を確実に行うことができます。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。 
+summary: NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。 
 ---
-= NetApp Backup and Recoveryによる Microsoft SQL ワークロードの保護の概要
+= NetApp Backup and Recoveryを使用した Microsoft SQL ワークロードの保護の概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: Microsoft SQL Server アプリケーション データをオンプレ�
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。バックアップは、作成したポリシーに基づいて、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに自動的に生成され、保存されます。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。
+NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから AWS、Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムはポリシーに従って、クラウド アカウントにバックアップを自動的に作成して保存します。  3-2-1 戦略を使用します。つまり、データの 3 つのコピーを 2 つのストレージ システムに保存し、1 つのコピーをクラウドに保存します。
 
 3-2-1 アプローチの利点は次のとおりです。
 
-* 複数のデータ コピーにより、内部 (インサイダー) と外部の両方のサイバー セキュリティの脅威に対する多層的な保護が提供されます。
-* 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
-* オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーも利用できます。
+* 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
+* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
+NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショット コピーを作成し、それをバックアップの場所に転送することでバックアップを同期します。
 
-次の保護目標を達成できます。
+データを保護するために、次の操作を実行できます。
 
 * link:concept-start-prereq-snapcenter-import.html["SnapCenterからインポートする場合の追加項目を構成する"]
 * link:br-start-discover.html["Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします"]
@@ -39,7 +39,7 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーシ�
 * link:br-use-manage-snapshots.html["スナップショットを管理する"]
 
 
-ワークロードをバックアップするには、通常、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]詳細についてはこちらをご覧ください。
+ワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]詳細についてはこちらをご覧ください。
 
 .サポートされているバックアップ先
 NetApp Backup and Recovery を使用すると、次のソース システムからパブリック クラウド プロバイダーとプライベート クラウド プロバイダーの次のセカンダリ システムおよびオブジェクト ストレージに、Microsoft SQL Server インスタンスとデータベースをバックアップできます。スナップショット コピーはソース システムに存在します。

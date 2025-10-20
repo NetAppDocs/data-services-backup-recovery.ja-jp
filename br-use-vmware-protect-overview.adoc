@@ -21,16 +21,14 @@ NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter の�
 
 NetApp Backup and Recoveryを使用して 3-2-1 戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
-* 複数のデータ コピーにより、内部 (インサイダー) と外部の両方のサイバー セキュリティの脅威に対する多層的な保護が提供されます。
-* 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
-* オンサイト コピーにより迅速な復元が可能になり、オンサイト コピーが侵害された場合に備えてオフサイト コピーも利用できます。
+* 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
+* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-[]
-====
-*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
+
 NetApp Backup and Recoveryを使用すると、VMware ワークロードに関連する次のタスクを実行できます。
 
 * link:br-use-vmware-discovery.html["VMware ワークロードを発見"]

@@ -4,7 +4,7 @@ permalink: br-use-oracle-backup.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
 summary: NetApp のバックアップとリカバリを使用して Oracle ワークロードを保護します。 
 ---
-= NetApp Backup and RecoveryでOracleワークロードをバックアップ
+= NetApp Backup and Recoveryを使用してOracleワークロードをバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: NetApp のバックアップとリカバリを使用して Oracle ワ�
 
 
 [role="lead"]
-データが確実に保護されるように、オンプレミスのONTAPシステムから Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、またはONTAP S3 に Oracle Database 保護グループまたはデータベースをバックアップします。保護グループをバックアップすると、 NetApp Consoleは保護グループに含まれるデータベースとログ データをバックアップします。
+NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、 ONTAP S3 などのクラウド ストレージに Oracle Database 保護グループまたはデータベースをバックアップします。  NetApp Backup and Recovery は、各保護グループ内のデータベースとログ データをバックアップします。
 
 
-NOTE: 保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を制御するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
+NOTE: 保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
 
 * 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-kvm-protection-groups.html["NetApp Backup and Recoveryを使用して Oracle ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
 * 保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。
@@ -28,7 +28,7 @@ NOTE: 保護グループまたは単一のデータベースをスケジュー�
 
 == オンデマンド バックアップで保護グループを今すぐバックアップ
 
-オンデマンド バックアップをすぐに実行できます。これは、システムに変更を加える前にバックアップがあることを確認したい場合に役立ちます。
+システムを変更する前にオンデマンド バックアップを実行して、データが保護されていることを確認します。
 
 *必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -43,7 +43,7 @@ NOTE: 保護グループまたは単一のデータベースをスケジュー�
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
 +
 
-NOTE: バックアップに適用されるポリシーは、保護グループに割り当てられているポリシーと同じです。
+NOTE: NetApp Backup and Recovery、バックアップと保護グループの両方に同じポリシーが使用されます。
 
 . スケジュール層を選択します。
 . *バックアップ*を選択します。

@@ -38,7 +38,7 @@ NetApp Backup and Recovery を使用すると、Kubernetes アプリケーショ
 
 == Kubernetes アプリケーションを削除する
 
-不要になったアプリケーションは削除できます。アプリケーションを削除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止し、関連付けられているすべてのバックアップとスナップショットを削除します。
+不要になったアプリケーションを削除します。  NetApp Backup and Recovery は保護を停止し、削除されたアプリケーションのバックアップとスナップショットをすべて削除します。
 
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。
