@@ -287,7 +287,6 @@
   <block id="307d24114a1eea93601b6d95cac55bcb" category="paragraph">VMware ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。</block>
   <block id="52c7fc54a0416d5bc7625cf3e154f5ee" category="list-text">オブジェクトストレージからの復元のサポート</block>
   <block id="729609f8890f70080c4290c1a64f6901" category="list-text">NetApp ConsoleダッシュボードにVMwareワークロードのステータス情報が表示されるようになりました</block>
-  <block id="e0aea66343c11d9c167af3537c61eac6" category="list-text">デモ モードのサポート: VMware vCenter Server 環境を追加せずに VMware ワークロードの機能を試すことができます。</block>
   <block id="0b781a1bfcfc82e8ce2c41a12166f555" category="list-text">ロールベースアクセス制御（RBAC）のサポート</block>
   <block id="48286fbde233324a7f7880389e103924" category="list-text">ジョブイベントの電子メールアラートと通知のサポート</block>
   <block id="7c0ae68b454f9ff601ed1bdd5dcc3c30" category="list-text">NVMeベースのストレージへのバックアップと復元のサポート</block>
@@ -550,7 +549,6 @@
   <block id="7a7bd0e5e2c8bb51a37a242f6499ad01" category="list-text">*ポート*: VMware vCenter Server のポート番号を入力します。</block>
   <block id="d448876927f65c1f1ffa9fbacd95a1c7" category="list-text">*プロトコル*: *HTTP* または *HTTPS* を選択します。</block>
   <block id="c7a0590a9821b8dee0782b0f2f78a6eb" category="section-title">SnapCenterホストリソースのインポートと管理</block>
-  <block id="1e69c53525c65378aa99055dd2ebfdd1" category="paragraph">以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recoveryでそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数の Snapcenter サーバーを登録し、データベース ワークロードを検出できます。</block>
   <block id="8ee500e67ed174fc635bb51aa15a8144" category="paragraph">これは 2 つの部分から成るプロセスです。</block>
   <block id="5b47a2e71047fd0fb279720aee2ba791" category="list-text">SnapCenter Server アプリケーションとホスト リソースをインポートする</block>
   <block id="be17fa66fcbe51ceaa12130a926f665f" category="list-text">選択したSnapCenterホストリソースを管理する</block>
@@ -1444,7 +1442,6 @@
   <block id="ae06e0a9d46406c88e0c6671869c7658" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *クローンを更新*。</block>
   <block id="8f52d4571bbd43086873d13933d1ae7c" category="list-text">*詳細設定*セクションを完了します。</block>
   <block id="751b2629b2c0cd2ab8329869ea1440ab" category="list-text">*回復範囲*: すべてのログ バックアップを回復するか、特定の時点までのログ バックアップを回復するかを選択します。このオプションは、クローンを特定の時点に復元する場合に便利です。</block>
-  <block id="ee4fb905e08184e09eb066a70768d247" category="list-text">*iGroup 設定*: クローンの igroup を選択します。 igroup は、クローンへのアクセスに使用されるイニシエーターの論理グループです。既存の igroup を選択するか、新しい igroup を作成することができます。プライマリまたはセカンダリONTAPストレージ システムから igroup を選択します。</block>
   <block id="30d826de8ef0821df1383cf392c54866" category="list-text">*タグ*: 後でリソース グループを検索するときに役立つ 1 つ以上のラベルを入力します。たとえば、複数のリソース グループに「HR」をタグとして追加すると、後で HR タグに関連付けられているすべてのリソース グループを見つけることができます。</block>
   <block id="7ae396d8697569c4da682196e15a598f" category="list-text">続行するには、更新確認ダイアログボックスで「*更新*」を選択します。</block>
   <block id="2e7a2fe6aba8a77893665dc04b468dbf" category="section-title">クローンの更新をスキップする</block>
@@ -1560,7 +1557,6 @@
   <block id="afd0f0cb3df3da985d47ad6cb48ff1b9" category="paragraph">NetApp Backup and Recovery、復元操作に使用できるスナップショットが表示されます。</block>
   <block id="626e5bb027c4aa701b03e1a2ad940196" category="list-text">「最新の状態に復元」ページで、ローカル、セカンダリ ストレージ、またはオブジェクト ストレージのスナップショットの場所を選択します。</block>
   <block id="d9d6e07be6295b563fa2df09e2c46f12" category="list-text">*復元前にトランザクション ログ バックアップを作成する*: 復元操作の前にトランザクション ログ バックアップを作成します。</block>
-  <block id="e6259c0f26d81b281034782b38f78aba" category="list-text">*復元前のトランザクション ログ バックアップが失敗した場合は復元を終了*: トランザクション ログ バックアップが失敗した場合は復元操作を停止します。</block>
   <block id="bd0d10db4b0dd9e27ab86ed5c1179368" category="section-title">インベントリオプションからワークロードデータを復元する</block>
   <block id="9fa956de7108d564b78bfc1c4b99ffb2" category="paragraph">インベントリ ページからデータベース ワークロードを復元します。インベントリ オプションを使用すると、インスタンスではなくデータベースのみを復元できます。</block>
   <block id="a5b572eff428c980edb20994fe7c49f1" category="list-text">復元するリソースが配置されているホストを選択します。</block>
@@ -1832,7 +1828,6 @@
   <block id="baeaf9ec5b3f1514a0e74632387b1436" category="list-text">*ホストを選択*: ワークロードで選択した場合は、レポートを生成するホストを選択します。</block>
   <block id="d6b2fc5f6100a1d9ca1a63a42e2b74ee" category="list-text">*コンテンツの選択*: レポートにすべてのバックアップの概要を含めるか、各バックアップの詳細を含めるかを選択します。  （「アカウント別」を選択した場合）</block>
   <block id="53e06767337b5ec67b8efa63e42148aa" category="list-text">レポート範囲を入力: レポートに過去 1 日、過去 7 日間、過去 30 日間、前四半期、または前年度のデータを含めるかどうかを選択します。</block>
-  <block id="17efeb67a4236aa362e1097098517211" category="list-text">レポート配信の詳細を入力します。レポートを電子メールで配信する場合は、[*電子メールを使用してレポートを送信*] をオンにします。レポートを送信するメール アドレスを入力します。</block>
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">設定を構成する</block>
   <block id="33d5eea2cdcc60026d006f7ddcce9495" category="paragraph">設定ページで電子メール通知を構成します。電子メール通知の設定の詳細については、<block ref="d31e50b2f0a34cda84cb4d51887db3bf" category="inline-link-macro-rx"></block> 。</block>
   <block id="e1fb45ea82cb12d1d1dbdee887e2850a" category="summary">NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。</block>
@@ -4777,5 +4772,8 @@
   <block id="e1a8b67cb61fcb0e0a3b88e66f93f4cd" category="paragraph">保護グループを一時停止して、スケジュールされたバックアップを一時停止します。</block>
   <block id="2efbc86f2f62c8819af426f268c543d5" category="paragraph">保護グループを削除すると、保護グループとグループのすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除します。</block>
   <block id="d0be562abb07ac98b80cbaa51990f79d" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプション (ボリューム レベルとシステム レベル) を使用できるようになりました。</block>
-  <block id="fb744a1324313d70fed478c851dab696" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、他のサービスがバックアップ バケットにアクセスできない場合や、バックアップが DataLock で保護されているが不要になった場合などに発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプション (ボリューム レベルとシステム レベル) を使用できるようになりました。</block>
+  <block id="79fdb904d05c701adaa1a8d4744b06b9" category="paragraph">以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recoveryでそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数のSnapCenterサーバーを登録し、データベース ワークロードを検出できます。</block>
+  <block id="96de4b90f5864c84829fbe7735879827" category="list-text">*iGroup 設定*: クローンの iGroup を選択します。iGroup は、クローンへのアクセスに使用されるイニシエーターの論理グループです。既存の iGroup を選択するか、新しい iGroup を作成することができます。プライマリまたはセカンダリONTAPストレージ システムから iGroup を選択します。</block>
+  <block id="5261c1383d98ed2b1e8b4a1fd943a918" category="list-text">*復元前のトランザクション ログ バックアップが失敗した場合は復元を終了*: トランザクション ログ バックアップが失敗した場合は復元操作を停止します。</block>
+  <block id="8f40cc47127edbc609e36af0ad86f259" category="list-text">レポート配信の詳細を入力します。レポートを電子メールで配信する場合は、[*電子メールを使用してレポートを送信*] をオンにします。レポートを送信するメールアドレスを入力します。</block>
 </blocks>

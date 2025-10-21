@@ -110,7 +110,7 @@ TIP: Windows と Microsoft SQL Server の両方の資格情報を入力する必
 
 == SnapCenterホストリソースのインポートと管理
 
-以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recoveryでそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数の Snapcenter サーバーを登録し、データベース ワークロードを検出できます。
+以前にSnapCenterを使用してリソースをバックアップしていた場合は、 NetApp Backup and Recoveryでそれらのリソースをインポートして管理できます。このオプションを使用すると、 SnapCenterサーバー情報をインポートして複数のSnapCenterサーバーを登録し、データベース ワークロードを検出できます。
 
 これは 2 つの部分から成るプロセスです。
 
