@@ -682,7 +682,6 @@
   <block id="98ab4e23cce41ca38b39c7baf6ef4567" category="admonition">このプロセスには数分かかる場合があります。</block>
   <block id="d4908a7dd622060706f5e0df98a716da" category="paragraph">NetApp Backup and Recovery がリソースを検出すると、インベントリ ページのワークロード リストに Hyper-V ワークロードが表示されます。</block>
   <block id="8c75bc4aab98ebfa4607c6737296d0fa" category="section-title">NetApp Backup and Recoveryダッシュボードに進みます</block>
-  <block id="4a94cfaf243c22ac5a3b2acf1849db11" category="list-text">NetApp Backup and Recoveryダッシュボードを表示するには、 NetApp Consoleメニューから *ダッシュボード* を選択します。</block>
   <block id="8c0d3ed018f04fbf259db34d9167eae7" category="list-text">データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。</block>
   <block id="dd9e4491810d247bd97912faae187a39" category="summary">NetApp Backup and Recovery、サービスを使用するために、まずワークロードを検出する必要があります。</block>
   <block id="dfbbf83657db8e9ef8d6ee3a468873c2" category="doc">NetApp Backup and Recoveryで Kubernetes ワークロードを発見</block>
@@ -705,7 +704,6 @@
   <block id="6b3946603d5588826f1cd3f2695b8542" category="paragraph">クラスターがインベントリに追加されます。</block>
   <block id="95f06f6ac101b19d86ae2a17fb3eb848" category="list-text">関連付けられている Kubernetes ワークロードで [*表示*] を選択すると、そのワークロードのアプリケーション、クラスター、および名前空間のリストが表示されます。</block>
   <block id="b0719c20a836424f725e51c9b181748d" category="paragraph">NetApp Backup and Recoveryダッシュボードを表示するには、次の手順に従います。</block>
-  <block id="0023e6c28000b2b0e540612bd4511db3" category="list-text">上部のメニューから*ダッシュボード*を選択します。</block>
   <block id="09799d4864834161536cca195023364b" category="inline-link-macro">ダッシュボードに表示される内容を学ぶ</block>
   <block id="d5292ed1370bb405095587cd10827f95" category="paragraph"><block ref="2a35d34f81dbac907e6068b45b5d538a" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d8543f27c131c1d9b3ca0cf9f1f4ea" category="summary">NetApp Backup and Recovery、ワークロードを保護するために、まずワークロードを検出する必要があります。</block>
@@ -721,7 +719,6 @@
   <block id="4eefc3e53a1cd35eca7d32b6b2c550f5" category="list-text">ルート資格情報を使用するか、非ルート資格情報を使用するかを選択します。</block>
   <block id="87f459dd6c99dc89040246d5ef818100" category="list-text">*ホスト登録*: 新しい KVM ホストを追加します。ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力します。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM ワークロードは、インベントリ ページのワークロード リストに表示されます。</block>
-  <block id="bcfa92e95d27d2c808d23768de744fd9" category="list-text">NetApp Backup and Recoveryダッシュボードを表示するには、上部のメニューから *ダッシュボード* を選択します。</block>
   <block id="0a6dc8ac33152480a18098d8eb98ccb6" category="doc">NetApp Backup and Recoveryで Oracle ワークロードを発見</block>
   <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery、まず Oracle データベースを検出して保護する必要があります。</block>
   <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">Oracleホストを追加してリソースを検出する</block>
@@ -788,7 +785,6 @@
   <block id="80be79a75ac4a79f740ad2838c734534" category="list-text">*手動インストールを使用する*: プラグインを手動でインストールするには、このボックスをオンにします。</block>
   <block id="628bc160a519e5ae69b6c8aa88610900" category="list-text">*クラスター内のすべてのホストを追加*: 検出中にクラスター内のすべてのホストをNetApp Backup and Recoveryに追加するには、このボックスをオンにします。</block>
   <block id="b7dfb6860d9af743a7d3f0fe2adfde3d" category="list-text">*オプションのインストール前チェックをスキップ*: オプションのインストール前チェックをスキップするには、このチェックボックスをオンにします。たとえば、メモリやスペースの考慮事項が近い将来に変更されることがわかっていて、今すぐプラグインをインストールしたい場合などに、これを実行することができます。</block>
-  <block id="413f1bdf68093f037d6630a5904e6a17" category="list-text">NetApp Backup and Recoveryダッシュボードを表示するには、[バックアップおよびリカバリ] メニューから [*ダッシュボード*] を選択します。</block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link">NetApp Consoleの展開モード</block>
   <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから従量課金制または年間マーケットプレイス サブスクリプションを購入するか、 NetAppから個人ラ​​イセンスを購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。</block>
   <block id="d44c500b8ff5c565a7d3b02d14def6a3" category="paragraph">NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから * NetApp Intelligent Services* の従量課金制 (PAYGO) または年間マーケットプレイス サブスクリプションを購入するか、 NetAppからライセンス持ち込み (BYOL) を購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。</block>
@@ -936,7 +932,6 @@
   <block id="a160325dcdf365b6a979dfed5c7d50f7" category="doc">NetApp Backup and Recoveryダッシュボードで保護の健全性を確認する</block>
   <block id="2da92f995ab136dd344c314ba2b4eed1" category="paragraph">ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetApp Backup and Recoveryダッシュボードでバックアップと復元のステータスを表示します。システムの概要、保護の概要、ジョブの概要、復元の概要などを確認できます。</block>
   <block id="f8dd3e1869946d83a9dde01dd1d1532b" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者、またはバックアップおよびリカバリ ビューアー ロール。詳細はこちら<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
-  <block id="cb8f96f7586f61e5cb6878a228c22371" category="list-text">NetApp Backup and Recoveryメニューから、*ダッシュボード* を選択します。</block>
   <block id="786dc54a357443785ac613f07c08cc8f" category="list-text">検出されたホストまたはVMの数</block>
   <block id="6393f4da4761be4d85c7778d5e5ebdea" category="list-text">検出されたKubernetesクラスターの数</block>
   <block id="54b82ae02ee9c233cf025fb2566edaf9" category="list-text">オブジェクトストレージ上のバックアップ対象の数</block>
@@ -4776,4 +4771,7 @@
   <block id="96de4b90f5864c84829fbe7735879827" category="list-text">*iGroup 設定*: クローンの iGroup を選択します。iGroup は、クローンへのアクセスに使用されるイニシエーターの論理グループです。既存の iGroup を選択するか、新しい iGroup を作成することができます。プライマリまたはセカンダリONTAPストレージ システムから iGroup を選択します。</block>
   <block id="5261c1383d98ed2b1e8b4a1fd943a918" category="list-text">*復元前のトランザクション ログ バックアップが失敗した場合は復元を終了*: トランザクション ログ バックアップが失敗した場合は復元操作を停止します。</block>
   <block id="8f40cc47127edbc609e36af0ad86f259" category="list-text">レポート配信の詳細を入力します。レポートを電子メールで配信する場合は、[*電子メールを使用してレポートを送信*] をオンにします。レポートを送信するメールアドレスを入力します。</block>
+  <block id="e666fdc6314d0f6cb22614788075b3bc" category="list-text">ワークロード タイル (Microsoft SQL Server など) を選択します。</block>
+  <block id="55398f7948e83c03d38dfb4b136d75ee" category="list-text">「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。</block>
+  <block id="4837f0befea6b35d3b9827d282853ed9" category="paragraph">次の種類の情報を確認できます。</block>
 </blocks>

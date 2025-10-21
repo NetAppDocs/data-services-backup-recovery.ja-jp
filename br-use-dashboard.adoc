@@ -19,7 +19,12 @@ summary: ワークロードの健全性を監視することで、ワークロ�
 *必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者、またはバックアップおよびリカバリ ビューアー ロール。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetApp Backup and Recoveryメニューから、*ダッシュボード* を選択します。
+. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
+. ワークロード タイル (Microsoft SQL Server など) を選択します。
+. 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
++
+次の種類の情報を確認できます。
+
 +
 ** 検出されたホストまたはVMの数
 ** 検出されたKubernetesクラスターの数
