@@ -4774,4 +4774,6 @@
   <block id="e666fdc6314d0f6cb22614788075b3bc" category="list-text">ワークロード タイル (Microsoft SQL Server など) を選択します。</block>
   <block id="55398f7948e83c03d38dfb4b136d75ee" category="list-text">「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。</block>
   <block id="4837f0befea6b35d3b9827d282853ed9" category="paragraph">次の種類の情報を確認できます。</block>
+  <block id="70cc82710208295496c70c203368aaf9" category="paragraph">このリリースのONTAPボリューム ワークロードでは、次の拡張機能が導入されています。</block>
+  <block id="bb13349ac4c9ef7d368732d3a4fdabed" category="paragraph">ONTAP 9.17.1 以降では、DataLock が Google Cloud Platform でサポートされるようになりました。これは、Amazon AWS、Microsoft Azure、 NetApp StorageGRIDによる既存の DataLock サポートを補完するものです。</block>
 </blocks>
