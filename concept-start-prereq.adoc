@@ -135,6 +135,27 @@ KVM 仮想マシンを検出して保護するには、特定の要件が必要�
 * libvirt バージョン 10.5.0 以降
 
 
+[NOTE]
+====
+非ルート ユーザーによって管理される KVM VM の保護を有効にするには、次の手順に従います。
+
+. ボリュームをNFS3タイプとしてマウントして、 `nobody` ユーザーとグループ。
+. 非ルートユーザーを追加するには、次のコマンドを使用します。 `qemu` 既存のグループを維持しながらグループを作成します。
++
+[source, console]
+----
+usermod -aG qemu <non-root-user>
+----
+. マウントパスの所有権を付与するには、次のコマンドを使用します。 `qemu` ユーザーとグループを作成し、マウント パスの権限を変更します。
++
+[source, console]
+----
+chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
+----
+. 既存の NetApp_SnapCenter_Backups ディレクトリが存在する場合は削除します。
+
+
+====
 
 
 == Oracleワークロードを保護するための要件
