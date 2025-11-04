@@ -19,11 +19,9 @@ NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレ
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == 接続方法を特定する
@@ -94,7 +92,7 @@ NetApp Backup and Recovery の「検索と復元」機能を使用するには�
 . ロールの権限を更新するには、「*ロールの編集*」を選択します。
 . 次の新しい権限をロールに追加するには、「権限の追加」を選択します。
 +
-[source, json]
+[source, console]
 ----
 bigquery.jobs.get
 bigquery.jobs.list
@@ -245,7 +243,7 @@ Google Cloud Storage をバックアップ ターゲットとして準備する�
 . の中で https://console.cloud.google.com["Google Cloud コンソール"^]、*役割*ページに移動します。
 . https://cloud.google.com/iam/docs/creating-custom-roles#creating_a_custom_role["新しいロールの作成"^]以下の権限を持ちます:
 +
-[source, json]
+[source, console]
 ----
 storage.buckets.create
 storage.buckets.delete
@@ -299,7 +297,7 @@ link:prev-ontap-protect-journey.html["独自のバケットの作成について
 * アクティベーション ウィザードでこの情報を追加するには、キー リングとキー名が必要です。 https://cloud.google.com/kms/docs/cmek["顧客管理暗号化キーの詳細"^] 。
 * コンソール エージェントのロールに次の必要な権限が含まれていることを確認する必要があります。
 +
-[source, json]
+[source, console]
 ----
 cloudkms.cryptoKeys.get
 cloudkms.cryptoKeys.getIamPolicy

@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長期アーカイブのためのバックアップおよび復元機能を提供します。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 アクティブ化後、バックアップとリカバリによって、ブロックレベルの永久増分バックアップが作成され、別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されます。ソース ボリュームに加えて、次のものも用意します。
 
 * ソースシステム上のボリュームのスナップショットコピー

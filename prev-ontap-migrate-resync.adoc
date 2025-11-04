@@ -23,11 +23,9 @@ NOTE: この機能は、2025 年 5 月にリリースされたNetApp Backup and 
 
 SnapMirror to Cloud Resync は、環境間でバックアップの継続性を維持し、ハイブリッドおよびマルチクラウド設定でのデータ管理を容易にします。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .開始する前に
 次の前提条件が満たされていることを確認してください。
 

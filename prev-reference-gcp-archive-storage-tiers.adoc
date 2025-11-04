@@ -18,7 +18,8 @@ NetApp Backup and Recovery は、 1 つの Google アーカイブ ストレー�
 
 []
 ====
-*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
+
+NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
 ====
 

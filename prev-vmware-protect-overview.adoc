@@ -18,11 +18,9 @@ NetApp Backup and Recoveryを使用して仮想マシンのワークロードを
 
 データストアを Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform、 StorageGRIDにバックアップし、仮想マシンをオンプレミスのSnapCenter Plug-in for VMware vSphereに復元できます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 仮想マシンのワークロードを保護する手順については、次のトピックを参照してください。
 
 * link:prev-vmware-policy-create.html["VMwareワークロードのポリシーを作成する"]

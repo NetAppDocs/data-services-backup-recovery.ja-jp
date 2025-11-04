@@ -18,11 +18,9 @@ SnapCenter Plug-in for VMware vSphereホストをNetApp Backup and Recoveryと�
 
 データストアがアーカイブ ポリシーに関連付けられている場合は、アーカイブ層を選択するオプションが提供されます。サポートされているアーカイブ層は Azure Archive Blob Storage です。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .開始する前に
 すべての要件を満たしていることを確認してくださいlink:prev-vmware-prereqs.html["仮想マシンの保護要件"]データストアをクラウドにバックアップする前に。
 

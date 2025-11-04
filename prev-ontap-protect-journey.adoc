@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 NetApp Backup and Recovery を使用すると、ソース ボリュームのコピーを最大 3 つ作成してデータを保護できます。ボリュームでバックアップと回復を有効にするときに選択できるオプションは多数あるため、準備ができるように選択内容を確認する必要があります。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 以下のオプションについて説明します。
 
 * どのような保護機能を使用しますか: スナップショットコピー、複製ボリューム、クラウドへのバックアップ

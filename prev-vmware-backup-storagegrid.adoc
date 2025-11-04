@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 SnapCenter Plug-in for VMware vSphereホストをNetApp Backup and Recoveryと統合することで、1 つ以上のデータストアをStorageGRIDにバックアップできます。これにより、VM 管理者は、ストレージ効率を高め、クラウド移行を加速するために、データを簡単にすばやくバックアップおよびアーカイブできるようになります。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .開始する前に
 すべての要件を満たしていることを確認してくださいlink:prev-vmware-prereqs.html["仮想マシンの保護要件"]データストアをクラウドにバックアップする前に。
 

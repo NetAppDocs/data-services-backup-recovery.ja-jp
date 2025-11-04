@@ -56,14 +56,10 @@ FlexVolボリュームには制限はありません。システム内のすべ�
 +
 これらの暗号化の種類についての説明については、https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryptionの設定 - 概要"^] 。
 
-
-
 * SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recoveryを使用してこれらのボリュームをバックアップしないでください。
 * データをバックアップする場合、 NetApp Backup and Recovery はNetApp Volume Encryption (NVE) を維持しません。つまり、NVE ボリューム上の暗号化されたデータは、データが宛先に転送されている間に復号化され、暗号化は維持されません。
 +
 これらの暗号化の種類についての説明については、https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryptionの設定 - 概要"^] 。
-
-
 
 * SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recoveryを使用してこれらのボリュームをバックアップしないでください。
 * ボリュームがポリシーに割り当てられていない状態でバックアップ ポリシーを作成または編集すると、保持されるバックアップの数は最大 1018 になります。ボリュームをポリシーに割り当てた後、ポリシーを編集して最大 4000 個のバックアップを作成できます。
@@ -80,8 +76,6 @@ FlexVolボリュームには制限はありません。システム内のすべ�
 ** バックアップはONTAPセカンダリからのみサポートされます。
 ** ボリュームに適用されるスナップショット ポリシーは、毎日、毎週、毎月など、 NetApp Backup and Recoveryで認識されるポリシーのいずれかである必要があります。デフォルトの「sm_created」ポリシー (すべてのスナップショットのミラーリングに使用される) は認識されず、DP ボリュームはバックアップ可能なボリュームのリストに表示されません。
 ** SVM-DR とボリュームのバックアップおよびリカバリは、バックアップがソースまたは宛先のいずれかから取得される場合、完全に独立して動作します。唯一の制限は、SVM-DR がSnapMirrorクラウド関係を複製しないことです。  DR シナリオでは、SVM がセカンダリ ロケーションでオンラインになったときに、 SnapMirrorクラウド関係を手動で更新する必要があります。
-
-
 
 
 * MetroClusterサポート:

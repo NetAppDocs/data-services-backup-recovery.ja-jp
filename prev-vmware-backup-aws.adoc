@@ -18,11 +18,9 @@ NetApp Backup and Recoveryを使用して 1 つ以上のデータストアを Am
 
 データストアがアーカイブ ポリシーに関連付けられている場合は、アーカイブ層を選択するオプションがあります。サポートされているアーカイブ層は、Glacier と Glacier Deep です。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .開始する前に
 すべての要件を満たしていることを確認してくださいlink:prev-vmware-prereqs.html["仮想マシンの保護要件"]データストアをクラウドにバックアップする前に。
 

@@ -19,11 +19,9 @@ NetApp Backup and Recoveryを使用すると、バックアップ スケジュ�
 
 CAUTION: ストレージ システム上またはクラウド プロバイダー環境からバックアップ ファイルを直接管理または変更しないでください。これによりファイルが破損し、サポートされない構成になる可能性があります。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == システム内のボリュームのバックアップステータスを表示します

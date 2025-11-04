@@ -19,11 +19,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 
 NOTE: これらの設定は、オブジェクト ストレージへのバックアップでのみ使用できます。これらの設定はいずれもスナップショットまたはレプリケーションの設定には影響しません。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 詳細設定ページで次のオプションを変更できます。
 
 * 最大転送速度オプション ifdef::aws[] を使用して、オブジェクトストレージにバックアップをアップロードするために割り当てられたネットワーク帯域幅を変更する

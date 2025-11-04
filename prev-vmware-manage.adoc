@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 NetApp Backup and Recoveryを使用してデータをバックアップおよび復元する前に、ポリシー、データストア、仮想マシンを表示できます。データベース、ポリシー、またはリソース グループの変更に応じて、 NetApp ConsoleUI から更新を表示できます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == ポリシーを表示

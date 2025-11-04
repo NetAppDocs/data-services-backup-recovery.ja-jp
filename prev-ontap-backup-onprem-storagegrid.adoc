@@ -19,11 +19,9 @@ NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレ
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == 接続方法を特定する
@@ -208,7 +206,7 @@ StorageGRIDへのバックアップを設定すると、バックアップ ウ�
 
 これらのアクセス キーは、次の権限を持つユーザーに関連付ける必要があります。
 
-[source, json]
+[source, console]
 ----
 "s3:ListAllMyBuckets",
 "s3:ListBucket",

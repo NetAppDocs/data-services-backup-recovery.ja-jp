@@ -19,11 +19,9 @@ NetApp Backup and Recovery を使用すると、オンプレミスのONTAPおよ
 
 NOTE: これらのポリシー設定は、オブジェクト ストレージへのバックアップにのみ関連します。これらの設定はいずれもスナップショットまたはレプリケーション ポリシーには影響しません。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == バックアップスケジュールオプション

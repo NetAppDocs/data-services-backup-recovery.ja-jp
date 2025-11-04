@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 NetApp Backup and Recoveryでは、 NetAppが提供するデフォルトのバックアップ ポリシーを使用してバックアップを作成するか、カスタム ポリシーを作成します。ポリシーは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御します。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 アクティベーション ウィザードを使用してボリュームのバックアップおよびリカバリ サービスを有効にする場合、デフォルトのポリシーと、システム (Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) にすでに存在するその他のポリシーから選択できます。既存のポリシーとは異なるポリシーを使用する場合は、アクティベーション ウィザードを使用する前または使用中にポリシーを作成できます。
 
 提供されているデフォルトのバックアップポリシーの詳細については、以下を参照してください。link:prev-ontap-protect-journey.html["保護の旅を計画する"] 。

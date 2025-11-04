@@ -834,14 +834,11 @@
   <block id="c6b7de80c7a26cff06eecf17f7d3c273" category="list-text">Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、ライセンスを使用したCloud Volumes ONTAPシステムの無制限のバックアップが含まれます (バックアップ容量はライセンス容量にカウントされません)。このオプションでは、オンプレミスのONTAPデータをバックアップすることはできません。</block>
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAPライセンスのトピック</block>
   <block id="8bf40ad9f866315020ec4fdd4f65701a" category="paragraph">参照<block ref="efcb71a951fd69a7db06309cdcce3842" category="inline-link-rx"></block>このライセンス オプションの詳細については、こちらをご覧ください。</block>
-  <block id="0b97613d452c304bdd00b00b89019bd9" category="paragraph">このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで AWS Marketplace へのサブスクライブを求めるプロンプトが表示されます。endif::aws[]</block>
   <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure Marketplace ページ</block>
   <block id="ba52c601f575024f72fb5f7ac8154b76" category="paragraph">Azureを使用する場合、2つの年間契約が利用可能です。<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block> Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:</block>
   <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">サブスクリプションをAzure資格情報に関連付ける</block>
   <block id="bb2a4ab21c5ccf409e44b59faacde869" category="paragraph">このオプションを使用する場合は、マーケットプレイスページからサブスクリプションを設定し、<block ref="ee52880e3726e54668f91a4b65aa4b29" category="inline-link-rx"></block> 。コンソールで Azure 資格情報に割り当てることができるアクティブなサブスクリプションは 1 つだけであるため、この年間契約サブスクリプションを使用してCloud Volumes ONTAPシステムの料金も支払う必要があることに注意してください。</block>
-  <block id="3171104ba9fba92f7a3e17caa85af873" category="paragraph">このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるプロンプトが表示されます。endif::azure[]</block>
   <block id="78cb5753f269296b8cbe81558d864e4f" category="paragraph">GCP を使用する場合は、 NetApp の営業担当者に連絡して年間契約を購入してください。この契約は、Google Cloud Marketplace でプライベート オファーとして入手できます。</block>
-  <block id="855947b446550d6dbeba8337db6ee4ab" category="paragraph">NetApp がプライベート オファーを共有した後、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときに年間プランを選択できます。endif::gcp[]</block>
   <block id="f795b2e1a1434e0b0c432d97df55b423" category="section-title">NetApp Backup and Recovery BYOLライセンスを使用する</block>
   <block id="70af97100aa32faf0090b5c729f50df0" category="paragraph">NetAppの Bring-Your-Own ライセンスには、1 年、2 年、または 3 年の契約期間があります。保護するデータに対してのみ料金を支払います。料金は、バックアップ対象のソースONTAPボリュームの論理使用容量（効率性考慮前）に基づいて計算されます。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。</block>
   <block id="b323a5cd735592858ae199d4fb24a0ed" category="paragraph">BYOL NetApp Backup and Recoveryライセンスはフローティング ライセンスであり、 NetApp Console組織またはアカウントに関連付けられているすべてのシステム間で合計容量が共有されます。  ONTAPシステムの場合、CLIコマンドを実行することで、必要な容量の大まかな見積もりを取得できます。<block ref="2a47fed7b3c4b7d59e03f10c018cf5cc" prefix=" " category="inline-code"></block>バックアップする予定のボリュームに対して。</block>
@@ -1912,7 +1909,6 @@
   <block id="9f292a76282f4f6731d03460bcd3b924" category="doc">NetApp Backup and Recoveryによる VMware ワークロードの保護の概要</block>
   <block id="c59e55a8f797ea977bb075c0da4e3733" category="paragraph">NetApp Backup and Recoveryを使用して VMware VM とデータストアを保護します。 NetApp Backup and Recovery は、高速でスペース効率が高く、クラッシュ整合性と VM 整合性を備えたバックアップおよび復元操作を提供します。VMware ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、VMware ワークロードをオンプレミスの VMware ホストに復元できます。</block>
   <block id="13a7ab00fe9ae146021f5c5ab40ca443" category="paragraph">NetApp Backup and Recoveryを使用して 3-2-1 戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。</block>
-  <block id="ba84ec6936d5a457a5ab6e919e49c77e" category="paragraph">*注意* NetApp Backup and Recovery UIのバージョンを切り替えるには、<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block> 。</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">NetApp Backup and Recoveryを使用すると、VMware ワークロードに関連する次のタスクを実行できます。</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
   <block id="fa3a5087c48da1a523ef45fa2253ea19" category="inline-link-macro">VMware ワークロードの保護グループの作成と管理</block>
@@ -2302,7 +2298,6 @@
   <block id="88c51ea85ad6413ada0a99db3150b7ad" category="list-text"><block ref="88c51ea85ad6413ada0a99db3150b7ad" category="inline-link-macro-rx"></block></block>
   <block id="2290b2de6091d65659ff672552a33073" category="doc">NetApp Backup and Recoveryを使用してCloud Volumes ONTAPデータを Amazon S3 にバックアップする</block>
   <block id="6dd5730fa3cd9ee8d3ed7531a2a5d9be" category="paragraph">Cloud Volumes ONTAPシステムから Amazon S3 へのボリューム データのバックアップを開始するには、NetApp Backup and Recoveryでいくつかの手順を完了します。</block>
-  <block id="0011ab0d93b0c9ad9321732a590a280b" category="paragraph">*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block> 。</block>
   <block id="b70f6a951e89b0cf19d78de39f9fd2ce" category="section-title">構成のサポートを確認する</block>
   <block id="f540dcb6244343752d809a32f46fe48c" category="paragraph">ボリュームを S3 にバックアップする前に、次の要件を読んで、サポートされている構成であることを確認してください。</block>
   <block id="61e795ce0fde928ad06964786c5284cb" category="paragraph">次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。</block>
@@ -2861,7 +2856,6 @@
   <block id="16b737dd94da3821905b2064f8068f45" category="inline-link">SVMのDNSサービスを構成する</block>
   <block id="e30347a67bfdcb246f056cfd9aa4efbd" category="list-text">ボリュームが配置されているストレージ VM に対して DNS サーバーが設定されている必要があります。方法を見る<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
   <block id="35668631a609fe2e8e53c6ff298d9d50" category="list-text">必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。</block>
-  <block id="e37afd2469ef3f0bffe0633c97d91c16" category="list-text">S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。  *[ ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。</block>
   <block id="85c59068ab95a15b1e1949adae268196" category="section-title">Amazon S3をバックアップターゲットとして準備する</block>
   <block id="a8b807b8ea1b15db459046c0c0aae9df" category="paragraph">Amazon S3 をバックアップターゲットとして準備するには、次の手順を実行します。</block>
   <block id="cf9f41217020d9194c2e913c73ab3139" category="list-text">S3 権限を設定します。</block>
@@ -4361,7 +4355,6 @@
   <block id="1a26e136f07c381d3ef8cb588918beec" category="list-text">次のコマンドを使用して、 NetApp Backup and Recovery MySQL DB を復元します。</block>
   <block id="9dec29ea058162b5bb29413e333f6c4c" category="list-text">次の SQL コマンドを使用して、 NetApp Backup and Recovery MySQL DB が正しく復元されたことを確認します。</block>
   <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">パスワードを入力してください。</block>
-  <block id="3ec8f556a760c1ea438f0c8012517d09" category="paragraph">表示されるボリュームが元の環境に存在していたボリュームと同じかどうかを確認します。</block>
   <block id="83760b08057d3103fac3ba1635b60ee2" category="list-text">インデックス付きカタログのバックアップ zip ファイル (サンプル ファイル名は「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」を使用します) を、バックアップ場所から「/opt/application/netapp/cbs」フォルダー内の新しいコンソール エージェント ホストにコピーします。</block>
   <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">次のコマンドを使用して、「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」ファイルを解凍します。</block>
   <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">*ls* コマンドを実行して、フォルダー「catalogdb1」が作成され、その下にサブフォルダー「changes」と「snapshots」が作成されていることを確認します。</block>
@@ -4781,4 +4774,10 @@
   <block id="22d1aa2ecc719d7521d0a8859fe171f9" category="paragraph">ボリュームを復元するには、ソース システム名、ストレージ VM、ボリューム名、およびバックアップ ファイルの日付が必要です。</block>
   <block id="0e9332d24e8223d33f0f13c12dc28e78" category="list-text">*復元* を選択して復元ダッシュボードに戻り、復元操作の進行状況を確認します。</block>
   <block id="dc48f529dae728780c55fde51597adee" category="paragraph">完了したら<block ref="d2ec4e5679d82dbce801a1d23c311912" category="inline-xref-macro-rx"></block>、検索と復元を使用してボリューム、フォルダー、およびファイルを復元できます。これにより、幅広いフィルターを使用して、すべてのバックアップ ファイルから復元するファイルまたはボリュームを正確に見つけることができます。</block>
+  <block id="b28e4b1f62c3596ace4ffe33a5315f55" category="paragraph">このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで AWS Marketplace へのサブスクライブを求めるプロンプトが表示されます。</block>
+  <block id="4f3497b4ac779d63c0943697b51c6c4c" category="paragraph">このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるプロンプトが表示されます。</block>
+  <block id="d192426871b83b5c662b0cfa51cfd2e6" category="paragraph">NetApp がプライベート オファーを共有した後、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときに年間プランを選択できます。</block>
+  <block id="60c015b8ddd8d831a4c02882c86d1b96" category="list-text">S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。</block>
+  <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。</block>
+  <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">表示されるボリュームが元の環境に存在していたボリュームと同じであることを確認します。</block>
 </blocks>

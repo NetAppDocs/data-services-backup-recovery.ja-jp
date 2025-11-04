@@ -18,11 +18,9 @@ NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレ
 
 プライマリオンプレミスONTAPシステムには、 FAS、 AFF、またはONTAP Selectシステムを使用できます。セカンダリONTAPシステムは、オンプレミスのONTAPまたはCloud Volumes ONTAPシステムになります。オブジェクト ストレージは、オンプレミスのONTAPシステム、または Simple Storage Service (S3) オブジェクト ストレージ サーバーを有効にしたCloud Volumes ONTAPシステム上に配置できます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 
 
 == 接続方法を特定する
@@ -208,7 +206,7 @@ ONTAP S3 へのバックアップを設定すると、バックアップ ウィ�
 
 これらのアクセス キーは、次の権限を持つユーザーに関連付ける必要があります。
 
-[source, json]
+[source, console]
 ----
 "s3:ListAllMyBuckets",
 "s3:ListBucket",

@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 ポリシーを作成するか、 NetApp Backup and Recoveryで使用可能な次の定義済みポリシーのいずれかを使用することができます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .開始する前に
 * 定義済みのポリシーを編集したくない場合は、ポリシーを作成する必要があります。
 * バックアップをオブジェクト ストアからアーカイブ ストレージに移動するには、 ONTAP 9.10.1 以降を実行し、Amazon Web Services または Microsoft Azure をクラウド プロバイダーにする必要があります。

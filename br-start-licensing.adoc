@@ -111,11 +111,9 @@ AWSを使用する場合、2つの年間契約から選択できます。 https:
 参照 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAPライセンスのトピック"^]このライセンス オプションの詳細については、こちらをご覧ください。
 
 +
-このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで AWS Marketplace へのサブスクライブを求めるプロンプトが表示されます。endif::aws[]
+このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで AWS Marketplace へのサブスクライブを求めるプロンプトが表示されます。
 
 
-
-ifdef::azure[]
 
 Azureを使用する場合、2つの年間契約が利用可能です。 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure Marketplace ページ"^] Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:
 
@@ -128,15 +126,13 @@ Azureを使用する場合、2つの年間契約が利用可能です。 https:/
 参照 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAPライセンスのトピック"^]このライセンス オプションの詳細については、こちらをご覧ください。
 
 +
-このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるプロンプトが表示されます。endif::azure[]
+このオプションを使用する場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定でき、コンソールで Azure Marketplace へのサブスクライブを求めるプロンプトが表示されます。
 
 
-
-ifdef::gcp[]
 
 GCP を使用する場合は、 NetApp の営業担当者に連絡して年間契約を購入してください。この契約は、Google Cloud Marketplace でプライベート オファーとして入手できます。
 
-NetApp がプライベート オファーを共有した後、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときに年間プランを選択できます。endif::gcp[]
+NetApp がプライベート オファーを共有した後、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときに年間プランを選択できます。
 
 
 

@@ -16,11 +16,9 @@ summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロー
 [role="lead"]
 データストアと仮想マシンを表示するには、NetApp Backup and RecoveryにSnapCenter Plug-in for VMware vSphereホストを登録する必要があります。管理アクセス権を持つユーザーのみが、SnapCenter Plug-in for VMware vSphereを登録できます。
 
-[]
-====
-*注意* NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
 
-====
+NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
+
 .手順
 . NetApp ConsoleUI で、*保護* > *バックアップとリカバリ* > *仮想マシン* を選択します。
 . *設定* ドロップダウンから、* SnapCenter Plug-in for VMware vSphere* を選択します。
