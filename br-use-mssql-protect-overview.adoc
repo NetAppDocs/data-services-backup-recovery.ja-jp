@@ -33,7 +33,7 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップ�
 * link:br-use-mssql-backup.html["ワークロードをONTAPセカンダリストレージに複製する"]
 * link:br-use-mssql-backup.html["ワークロードをオブジェクトストアの場所にバックアップする"]
 * link:br-use-mssql-backup.html["今すぐワークロードをバックアップ"]
-* link:br-use-mssql-restore-overview.html["ワークロードを復元する"]
+* link:br-use-mssql-restore.html["ワークロードを復元する"]
 * link:br-use-mssql-clone.html["クローンワークロード"]
 * link:br-use-manage-inventory.html["ワークロードのインベントリを管理する"]
 * link:br-use-manage-snapshots.html["スナップショットを管理する"]

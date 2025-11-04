@@ -17,7 +17,7 @@ summary: NetApp のバックアップとリカバリを使用して Hyper-V ワ�
 オンプレミスのONTAPシステムから Amazon Web Services、 Azure NetApp Files、またはStorageGRIDに Hyper-V VM をバックアップして、データが保護されるようにします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。
 
 * スケジュールに従ってワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
-* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-hyper-v-protection-groups.html["NetApp Backup and Recoveryを使用して Hyper-V ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
+* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-hyperv-protection-groups.html["NetApp Backup and Recoveryを使用して Hyper-V ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
 * 今すぐワークロードをバックアップします (今すぐオンデマンド バックアップを作成します)。
 
 

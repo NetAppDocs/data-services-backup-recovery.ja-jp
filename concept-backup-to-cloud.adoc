@@ -281,20 +281,8 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 
 バックアップ コピーは、 NetApp Consoleがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスターまたはシステムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに次のように名前が付けられます。 `netapp-backup-clusteruuid` 。このオブジェクト ストアを削除しないように注意してください。
 
-ifdef::aws[]
-
-* AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3バケットで。endif::aws[]
-
-
-ifdef::azure[]
-
-* Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトでは。endif::azure[]
-
-
-ifdef::gcp[]
-
-endif::gcp[]
-
+* AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
+* Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトです。
 * StorageGRIDでは、コンソールはオブジェクト ストア バケットに既存のストレージ アカウントを使用します。
 * ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 

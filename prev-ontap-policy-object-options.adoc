@@ -61,8 +61,6 @@ NetApp Backup and Recovery は、ボリューム バックアップに対する 
 
 これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。  DataLock および Ransomware Resilience オプションを有効にすると、 NetApp Backup and Recoveryアクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。
 
-https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["詳細については、DataLockとランサムウェア保護のブログをご覧ください。"^]。
-
 この機能はソース ボリュームを保護するものではなく、ソース ボリュームのバックアップのみを保護します。いくつかの https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAPが提供するランサムウェア対策"^]ソースボリュームを保護します。
 
 [CAUTION]
@@ -339,7 +337,7 @@ NOTE: 代わりに、Microsoft Azure ではロックおよびロック解除モ�
 
 DataLockのコストを軽減するためのヒントについては、以下を参照してください。https://community.netapp.com/t5/Tech-ONTAP-Blogs/Understanding-NetApp-Backup-and-Recovery-DataLock-and-Ransomware-Feature-TCO/ba-p/453475[]
 
-さらに、DataLockに関連する費用の見積もりは、 https://bluexp.netapp.com/cloud-backup-service-tco-calculator["NetApp Backup and Recoveryの総所有コスト (TCO) 計算ツール"] 。
+さらに、DataLockに関連する費用の見積もりは、 https://www.netapp.com/data-services/backup-and-recovery-tco-calculator/["NetApp Backup and Recoveryの総所有コスト (TCO) 計算ツール"] 。
 
 
 
