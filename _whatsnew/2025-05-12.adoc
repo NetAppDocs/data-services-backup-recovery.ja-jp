@@ -6,7 +6,7 @@
 
 === ボリューム移行のためのSnapMirrorからCloud Resyncへの変更
 
-SnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を合理化します。  SnapMirror Logical Replication (LRSE) を使用してボリュームをオンプレミスのNetApp展開から別の展開へ、またはCloud Volumes ONTAPやCloud Volumes Serviceなどのクラウドベースのソリューションに移行した場合、 SnapMirror to Cloud Resync により、既存のクラウド バックアップがそのまま維持され、動作可能な状態が維持されます。
+SnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を合理化します。SnapMirror Logical Replication (LRSE) を使用してボリュームをオンプレミスのNetApp展開から別の展開へ、またはCloud Volumes ONTAPなどのクラウドベースのソリューションに移行した場合、 SnapMirror to Cloud Resync により、既存のクラウド バックアップがそのままの状態で動作し続けることが保証されます。
 
 この機能により、時間とリソースを大量に消費する再ベースライン操作が不要になり、移行後もバックアップ操作を続行できるようになります。この機能は、FlexVol と FlexGroup の両方をサポートし、ワークロード移行シナリオで役立ち、 ONTAPバージョン 9.16.1 以降で利用できます。
 
