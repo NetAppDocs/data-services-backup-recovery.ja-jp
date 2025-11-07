@@ -23,7 +23,7 @@ NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステ�
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショット コピーを作成し、それをバックアップの場所に転送することでバックアップを同期します。
+NetApp Backup and Recovery は、 NetApp SnapMirror を使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。
 
 データを保護するために、次の操作を実行できます。
 
@@ -42,7 +42,7 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップ�
 ワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]詳細についてはこちらをご覧ください。
 
 .サポートされているバックアップ先
-NetApp Backup and Recovery を使用すると、次のソース システムからパブリック クラウド プロバイダーとプライベート クラウド プロバイダーの次のセカンダリ システムおよびオブジェクト ストレージに、Microsoft SQL Server インスタンスとデータベースをバックアップできます。スナップショット コピーはソース システムに存在します。
+NetApp Backup and Recovery を使用すると、Microsoft SQL Server インスタンスとデータベースを次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにバックアップできます。スナップショットはソース システムに存在します。
 
 [cols="33,33,33"]
 |===
@@ -58,10 +58,10 @@ NetApp Backup and Recovery を使用すると、次のソース システムか�
 | オンプレミスのONTAPシステム | Cloud Volumes ONTAPオンプレミスONTAPシステム | Amazon S3 Azure Blob NetApp StorageGRID ONTAP S3 
 
 
-| Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | 該当なし ifdef::gcp[] endif::gcp[] ifdef::gcp[] endif::gcp[] 
+| Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | NA 
 |===
 .サポートされている復元先
-プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショット コピーはソース システム上に存在し、同じシステムにのみ復元できます。
+プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。
 
 [cols="33,33,33"]
 |===
@@ -74,7 +74,7 @@ NetApp Backup and Recovery を使用すると、次のソース システムか�
 | Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスのONTAPシステムONTAP S3 の Cloud Volumes 
 
 
-| Azure ブロブ | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3 ifdef::gcp[] endif::gcp[] 
+| Azure ブロブ | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3 
 
 
 | StorageGRID | Cloud Volumes ONTAPオンプレミスONTAPシステム | オンプレミスのONTAPシステムONTAP S3 

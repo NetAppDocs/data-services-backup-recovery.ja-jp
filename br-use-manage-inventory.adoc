@@ -39,7 +39,7 @@ NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベ�
 ** オンデマンドバックアップを開始して今すぐバックアップ
 
 
-* ログ ディレクトリを構成します ([インベントリ] > [ホスト] から)。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
+* ログ ディレクトリを構成します ([インベントリ] > [ホスト])。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-mssql-restore.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。 
+summary: スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。 
 ---
 = NetApp Backup and Recoveryを使用して Microsoft SQL Server のワークロードを復元する
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: スナップショット コピー、セカンダリ ストレージに
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードを復元します。スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージ内のバックアップを使用します。ワークロードを元のシステム、同じクラウド アカウントを持つ別のシステム、またはオンプレミスのONTAPシステムに復元します。
+NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードを復元します。スナップショット、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージ内のバックアップを使用します。ワークロードを元のシステム、同じクラウド アカウントを持つ別のシステム、またはオンプレミスのONTAPシステムに復元します。
 
 .これらの場所から復元
 異なる開始場所からワークロードを復元できます。

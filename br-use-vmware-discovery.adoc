@@ -22,7 +22,7 @@ NetApp Backup and Recoveryサービスを使用するには、まずONTAPシス�
 
 == VMware ワークロードを検出し、オプションでSnapCenterリソースをインポートする
 
-検出中に、 NetApp Backup and Recovery は組織内の VMware ワークロードを分析し、既存の保護ポリシー、スナップショット コピー、バックアップおよび復元オプションを評価してインポートします。
+検出中に、 NetApp Backup and Recovery は組織内の VMware ワークロードを分析し、既存の保護ポリシー、スナップショット、バックアップおよび復元オプションを評価してインポートします。
 
 VMware NFS および VMFS データストアと VM を、オンプレミスのSnapCenter Plug-in for VMware vSphereからNetApp Backup and Recoveryインベントリにインポートできます。
 
@@ -36,7 +36,7 @@ NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter の�
 * vCenter のメタデータを準備し、 NetApp Consoleで管理対象外としてマークします。
 * データベース アクセスを構成します。
 * VMware vCenter、データストア、および VM を検出します。
-* SnapCenter Plug-in for VMware vSphereから既存の保護ポリシー、スナップショット コピー、バックアップおよび復元オプションをインポートします。
+* SnapCenter Plug-in for VMware vSphereから既存の保護ポリシー、スナップショット、バックアップおよび復元オプションをインポートします。
 * 検出されたリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。
 
 
@@ -156,3 +156,14 @@ SnapCenter Plug-in for VMware から vCenter メタデータをインポート�
 
 .結果
 インベントリ ページには、新しく管理された vCenter リソースが表示されます。
+
+
+
+==== NetApp Backup and Recoveryダッシュボードに進みます
+
+. ダッシュボードを表示するには、「バックアップとリカバリ」メニューから「ダッシュボード」を選択します。
+. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
++
+link:br-use-dashboard.html["ダッシュボードに表示される内容を学ぶ"]。
+
+

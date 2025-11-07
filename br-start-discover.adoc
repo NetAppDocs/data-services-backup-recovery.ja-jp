@@ -24,7 +24,7 @@ NetApp Backup and Recovery、サービスを使用するために、まず Micro
 
 検出中に、 NetApp Backup and Recovery は組織内のシステム内の Microsoft SQL Server インスタンスとデータベースを分析します。
 
-NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット コピー、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。
+NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。
 
 検出は次のように行われます。
 

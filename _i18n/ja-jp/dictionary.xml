@@ -731,7 +731,6 @@
   <block id="cd6726508604886a0b7b678ad4f6a2b8" category="paragraph">NetApp Backup and Recovery、サービスを使用するために、まず Microsoft SQL Server ワークロードを検出する必要があります。  SnapCenterがすでにインストールされている場合は、オプションでSnapCenterからバックアップ データとポリシーをインポートできます。</block>
   <block id="da39a7712232603b7b60f32ff70cea25" category="section-title">Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします</block>
   <block id="c3c491309ae5a0dc1e917949dbce3a2d" category="paragraph">検出中に、 NetApp Backup and Recovery は組織内のシステム内の Microsoft SQL Server インスタンスとデータベースを分析します。</block>
-  <block id="9e14ee6e25eb212c5eab3fb4b2f1d2ea" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット コピー、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。</block>
   <block id="bf184a96d410b4704d25049f36c78720" category="paragraph">検出は次のように行われます。</block>
   <block id="822dada5711404421b3ad03cb9601709" category="list-text">SnapCenterがすでにある場合は、 NetApp Backup and Recovery UI を使用してSnapCenterリソースをNetApp Backup and Recoveryにインポートします。</block>
   <block id="6140d44536dc7afba283e304997341e8" category="inline-link-macro">SnapCenterからリソースをインポートするための前提条件</block>
@@ -819,10 +818,7 @@
   <block id="015af6eddd6b75dc43fff454de1ee680" category="paragraph"><block ref="4167d6981fc6619a0d8f5d6e353e481b" category="inline-link-rx"></block>。</block>
   <block id="7744fc20060f2753538eb1cbe03db4f0" category="paragraph">次のリンクを使用して、クラウド プロバイダー マーケットプレイスからNetApp Backup and Recoveryをサブスクライブします。</block>
   <block id="14c403304e8650321be08c9edd75c486" category="inline-link">価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。</block>
-  <block id="edb466d68f36c5d8f76ba746b949c72f" category="list-text">AWS:<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> . endif::aws[]</block>
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。</block>
-  <block id="b294dc3d09aa4c3ad03432d6c8b3cb18" category="list-text">アズール:<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> . endif::azure[]</block>
-  <block id="617b0d322000b6ccc4c1b2e0ca18611c" category="list-text">Google クラウド:<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> . endif::gcp[]</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">年間契約を利用する</block>
   <block id="e8081693b5a02447f0b48df91b9f65d8" category="paragraph">年間契約を購入して、 NetApp Backup and Recoveryを毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。</block>
   <block id="ba3a3b81b7867cbfec5cb03d1bbc6d9a" category="paragraph">マーケットプレイスから年間契約を結んでいる場合、 NetApp Backup and Recoveryのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。</block>
@@ -1006,7 +1002,6 @@
   <block id="725673b0a06edab1f72366f95cac31d6" category="list-text">関連するバックアップの削除に関する確認メッセージを確認し、削除を確定します。</block>
   <block id="36ccaf20340ab2265ab95f5a1b0da632" category="summary">NetApp Backup and Recoveryを使用して Hyper-V ワークロードを保護します。</block>
   <block id="4d5f8949076d70b843ef7586496cfbd1" category="doc">NetApp Backup and Recoveryを使用して Hyper-V ワークロードを復元する</block>
-  <block id="d44fa1de9a60a5400a1be1a9818710a3" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。</block>
   <block id="c94de744a34e573fc1502f60b252bde0" category="paragraph-title">これらの場所から復元</block>
   <block id="9af59aa30e320dfa8526246a9b94ba25" category="paragraph">異なる開始場所からワークロードを復元できます。</block>
   <block id="ce5b3e5e52619a3c4bbedee0586f057a" category="list-text">プライマリロケーション（ローカルスナップショット）からの復元</block>
@@ -1098,7 +1093,6 @@
   <block id="9c2fae8ab9610727167de6adcf83385e" category="paragraph">バックアップポリシーの作成の詳細については、以下を参照してください。<block ref="cd0fe2184bcc128231bc74042531d5e7" category="inline-link-macro-rx"></block> 。</block>
   <block id="42b3c9b2282ae6b4644cee5b5995979d" category="summary">NetApp Backup and Recoveryを使用して KVM ワークロードを保護します。</block>
   <block id="02055854e5f8d7c0a2161503c5645d5a" category="doc">NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する</block>
-  <block id="505a00eea193c85b618202cede0a5964" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。</block>
   <block id="4ebed5b1ff5b9230bfba78b5f3751082" category="paragraph">異なる開始場所から仮想マシンを復元できます。</block>
   <block id="2003d1dd0ff605a8b0183ae69c3823f3" category="paragraph">データを元の場所に復元することはできますが、別の場所への復元はこのプレビュー リリースでは利用できません。</block>
   <block id="c149f6b4ccbdba8011de4b1e3579b42f" category="list-text">元の場所に復元する</block>
@@ -1175,7 +1169,6 @@
   <block id="dcfab68c581d6599e850b96e241636d0" category="list-text">データベース情報の管理</block>
   <block id="9ce5968862f805302d5e98cf0c20ffe4" category="list-text">データベースを保護する</block>
   <block id="c2c5db1d1d2621038f3f8eed4c38e455" category="list-text">データベースを復元する</block>
-  <block id="9a2a68b035095269a7f1c0aacc3d668e" category="list-text">ログ ディレクトリを構成します ([インベントリ] &gt; [ホスト] から)。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block> 。</block>
   <block id="25ef121f0e7b6c2bccdb92c9ee0c85f2" category="paragraph">ホスト情報を管理して、適切なホストが保護されるようにすることができます。ホスト情報を表示、編集、削除できます。</block>
   <block id="d34a310043a97652f9151b93c8ee3473" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューア、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、またはバックアップおよびリカバリ クローン管理者のロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a53b0f7c5740f1ddf0d66520bf53e285" category="list-text">ログディレクトリを構成します。詳細については、<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block> 。</block>
@@ -1326,7 +1319,6 @@
   <block id="2b0ecb40cc305f7af9fe7f986b5bb2dd" category="list-text">すべてのジョブの CSV ファイルをダウンロードするには、[ダウンロード] ボタンを選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="1dc45daaf063a4c51a123d4f491b6b42" category="list-text">単一のジョブのJSONファイルをダウンロードするには、[アクション]メニューを選択します。<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>ジョブの場合は、*JSON ファイルのダウンロード*を選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="f1a15f873b659fefcf2800c9489b580b" category="section-title">保持（バックアップ ライフサイクル）ジョブを確認する</block>
-  <block id="86fa0897ffcce46e8eca8c43e8684ef8" category="paragraph">バックアップ ライフサイクル ジョブは、削除されたか、削除キューにあるすべてのスナップショット コピーを追跡します。  ONTAP 9.13 以降では、「ジョブ監視」ページで「保持」と呼ばれるすべてのジョブ タイプを確認できます。</block>
   <block id="5168f75ce01db43e41309dbb9ba106a7" category="paragraph">「保持」ジョブ タイプは、NetApp Backup and Recoveryによって保護されているボリューム上で開始されたすべてのスナップショット削除ジョブをキャプチャします。</block>
   <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">*高度な検索とフィルタリング*領域を選択して、検索パネルを開きます。</block>
   <block id="67e8772c27eee052c978af0d5760e36a" category="list-text">ジョブタイプとして「保持」を選択します。</block>
@@ -1471,7 +1463,6 @@
   <block id="e5c866c0e49172f48184bec3e11aa6b9" category="list-text"><block ref="e5c866c0e49172f48184bec3e11aa6b9" category="inline-link-macro-rx"></block></block>
   <block id="d66ed6d81bd70c133ddb80e0d8285080" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block></block>
   <block id="3f7e0c8d0c7fc98faaf4d36a5bb06680" category="paragraph-title">サポートされているバックアップ先</block>
-  <block id="124dee118a2923f54724c274f69ca91a" category="paragraph">NetApp Backup and Recovery を使用すると、次のソース システムからパブリック クラウド プロバイダーとプライベート クラウド プロバイダーの次のセカンダリ システムおよびオブジェクト ストレージに、Microsoft SQL Server インスタンスとデータベースをバックアップできます。スナップショット コピーはソース システムに存在します。</block>
   <block id="48a431e7da72cf4ddb716b44e3bd3022" category="cell">ソースシステム</block>
   <block id="ceca89b59e8a39253f91a2e1640ba29e" category="cell">セカンダリシステム（レプリケーション）</block>
   <block id="01d7442dea4ae392305c30e31fbcf649" category="cell">宛先オブジェクトストア（バックアップ）</block>
@@ -1485,9 +1476,7 @@
   <block id="98400e25853b9557e8e4820e3839eefc" category="cell">Cloud Volumes ONTAPオンプレミスONTAPシステム</block>
   <block id="abd2f027d3fc68343aa027c16d5dbc39" category="cell">Amazon S3 Azure Blob NetApp StorageGRID ONTAP S3</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="cell">Amazon FSx for NetApp ONTAP</block>
-  <block id="70698e1f6287a5fbf5ebd7a7402a40ab" category="cell">該当なし ifdef::gcp[] endif::gcp[] ifdef::gcp[] endif::gcp[]</block>
   <block id="d5f38a7a202d0755d6fe62d10aa0f70c" category="paragraph-title">サポートされている復元先</block>
-  <block id="0fbf32686960c8d8b26d8d75b58d8a8b" category="paragraph">プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショット コピーはソース システム上に存在し、同じシステムにのみ復元できます。</block>
   <block id="e0893da01d668b23122f21e47097eb86" category="cell">バックアップファイルの場所から</block>
   <block id="f4c21749a38da8f3dc983e46edd28a64" category="cell">宛先システムへ</block>
   <block id="46243f69a1d8c01c30626c78c1a61418" category="cell">*オブジェクトストア（バックアップ）*</block>
@@ -1495,7 +1484,6 @@
   <block id="270fcb785810d0206945029bb05f4e97" category="cell">Amazon S3</block>
   <block id="79275132ce20ef3de2a8b64113eb6892" category="cell">AWS オンプレミスのONTAPシステムONTAP S3 の Cloud Volumes</block>
   <block id="52745271323ee9ea30e3a37d0338d118" category="cell">Azure ブロブ</block>
-  <block id="b4db18c26e935cf1968a4373b28c553e" category="cell">Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3 ifdef::gcp[] endif::gcp[]</block>
   <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
   <block id="7a27f6aeca7faa30d91e24a0b044228e" category="cell">オンプレミスのONTAPシステムONTAP S3</block>
   <block id="d4cd0dabcf4caa22ad92fab40844c786" category="cell">NA</block>
@@ -1506,7 +1494,6 @@
   <block id="41850d3e69864b055a26374069c9dbda" category="paragraph">データを最新のスナップショットまたは以下のポイントに復元できます。</block>
   <block id="66b1424fe6641f4697268af9ed07b5e0" category="list-text">スナップショットからの復元</block>
   <block id="c1f62c4a8bd3bfc797c0a4be8f29b273" category="list-text">最新のバックアップに復元する</block>
-  <block id="9c53b2dcf4ff2026b3d9b30dfa263b65" category="summary">スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。</block>
   <block id="4a2c019e4f44d11b6cc64ba3161fb171" category="doc">NetApp Backup and Recoveryを使用して Microsoft SQL Server のワークロードを復元する</block>
   <block id="42ace45b519d448bedf9ce14d8cc4c23" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加の整合性チェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
   <block id="52386b1f1b11ed7ab3350096c7964c69" category="list-text">バックアップ ファイルからワークロードを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。</block>
@@ -1599,7 +1586,6 @@
   <block id="30549a9efedf2c08f7e3c1070d0ec4a4" category="inline-link-macro">Oracleワークロードを今すぐバックアップ</block>
   <block id="9d2eb7298d6b079511014afa9fcf74b8" category="list-text">今すぐ保護グループをバックアップします。見る<block ref="6391799ae7a331a8ab5f8579820481db" category="inline-link-macro-rx"></block>。</block>
   <block id="4d11952e83e906d7c1c3bb7b8d814881" category="doc">NetApp Backup and RecoveryでOracleデータベースを復元する</block>
-  <block id="1da1f96085164d7f248d5a759fa71412" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージに保存されたバックアップから Oracle データベースを復元します。</block>
   <block id="79f77d8cbb1beb81481eb9b45d453a34" category="paragraph">異なる開始場所からデータベースを復元できます。</block>
   <block id="d69f96cdc13d3a1e25929628b856adfc" category="section-title">Oracleデータベースの復元の仕組み</block>
   <block id="adbdf0278700ecb3a3aedab26748cd0c" category="paragraph">Oracle データベースを復元すると、次のことが起こります。</block>
@@ -1656,7 +1642,6 @@
   <block id="eacf7361c754b5087b6ade2e010c1a1f" category="list-text">*アーキテクチャ*: 例としては、ローカル スナップショット、ファンアウト、カスケード、ディスク間、ディスクからオブジェクト ストアなどがあります。</block>
   <block id="292fca252d0ac5aa32931919e05e3331" category="list-text">*保護されているリソース*: そのワークロード上のリソースの合計数のうち、保護されているリソースの数を表示します。</block>
   <block id="817b82403aa370acb5f863d3bd73073f" category="list-text">*ランサムウェア保護*: ポリシーに、ローカル スナップショットのスナップショット ロック、セカンダリ ストレージのスナップショット ロック、またはオブジェクト ストレージの DataLock ロックが含まれているかどうかを示します。</block>
-  <block id="b417d2acd31069ff006d3ac9b48de072" category="paragraph">ローカル スナップショット、セカンダリ ストレージへのレプリケーション、オブジェクト ストレージへのバックアップを管理するポリシーを作成できます。  3-2-1 戦略の一部として、プライマリ ストレージ システム上のインスタンス、データベース、アプリケーション、または VM のスナップショット コピーを作成します。</block>
   <block id="5e116320ce28dcfdae299c1ab1e1d47b" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者。詳細はこちら<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="253d0e4a062daad466aad4fa375b12c0" category="paragraph">セカンダリ ストレージに複製し、ローカル スナップショットまたはリモートONTAPセカンダリ ストレージでスナップショット ロックを使用する予定の場合は、まずクラスタ レベルでONTAPコンプライアンス クロックを初期化する必要があります。これは、ポリシーでスナップショット ロックを有効にするための要件です。</block>
   <block id="6e8754ff907c91289017110ca55a88ae" category="inline-link">ONTAPのコンプライアンスクロックを初期化する</block>
@@ -1857,7 +1842,6 @@
   <block id="f1e9f00ae199ca6520d1d2e98102cd84" category="doc">NetApp Backup and Recoveryで VMware ワークロードを発見</block>
   <block id="7ac2807cf305b6eed9abb3096eafd7b5" category="paragraph">NetApp Backup and Recoveryサービスを使用するには、まずONTAPシステムで実行されている VMware データストアと VM を検出する必要があります。すでにインストールされている場合は、オプションでSnapCenter Plug-in for VMware vSphereからバックアップ データとポリシーをインポートできます。</block>
   <block id="dcd2ed119bd25caa1d2e5fbbadd0e260" category="section-title">VMware ワークロードを検出し、オプションでSnapCenterリソースをインポートする</block>
-  <block id="7e9d0096f9cba430fd3294ab281c1c54" category="paragraph">検出中に、 NetApp Backup and Recovery は組織内の VMware ワークロードを分析し、既存の保護ポリシー、スナップショット コピー、バックアップおよび復元オプションを評価してインポートします。</block>
   <block id="20224d78d1f591aa6ed092cd19c23642" category="paragraph">VMware NFS および VMFS データストアと VM を、オンプレミスのSnapCenter Plug-in for VMware vSphereからNetApp Backup and Recoveryインベントリにインポートできます。</block>
   <block id="02bff5613eedf1bcc6846345d0b55fbd" category="admonition">このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。</block>
   <block id="fee320715a193861e4f6dc2068899465" category="paragraph">インポート プロセス中に、 NetApp Backup and Recovery は次のタスクを実行します。</block>
@@ -1866,7 +1850,6 @@
   <block id="9f59193f9c9e33c893e85e7a65ff421d" category="list-text">vCenter のメタデータを準備し、 NetApp Consoleで管理対象外としてマークします。</block>
   <block id="f3cd1cfa60b70ab3833f6ec373ec8327" category="list-text">データベース アクセスを構成します。</block>
   <block id="ed39d64277006cf603e473c457526c25" category="list-text">VMware vCenter、データストア、および VM を検出します。</block>
-  <block id="cacf184d61110918ea81e29a46df1f55" category="list-text">SnapCenter Plug-in for VMware vSphereから既存の保護ポリシー、スナップショット コピー、バックアップおよび復元オプションをインポートします。</block>
   <block id="9ebd805e73003051d15b45a35a4e54e5" category="list-text">検出されたリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。</block>
   <block id="48f6d5cbb866129c890c2677a75d46eb" category="list-text">SnapCenter Plug-in for VMware vSphere がすでにインストールされている場合は、 NetApp Backup and Recovery UI を使用してSnapCenterリソースをNetApp Backup and Recoveryにインポートします。</block>
   <block id="b758229c4311907d27297d6e3812db06" category="admonition">SnapCenterプラグインがすでにある場合は、 SnapCenterからインポートする前に前提条件を満たしていることを確認してください。たとえば、 SnapCenterからインポートする前に、まずNetApp ConsoleですべてのオンプレミスのSnapCenterクラスター ストレージ用のシステムを作成する必要があります。見る<block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>。</block>
@@ -1934,7 +1917,6 @@
   <block id="5b760b98c14fddaa18f5b88edb9ca3f6" category="list-text">確認メッセージを確認し、「再開」を選択します。</block>
   <block id="bc36e4718e22660ffc6a870feaf65f3a" category="paragraph">システムはスケジュールを検証し、スケジュールが有効な場合は保護ステータスを「保護済み」に変更します。スケジュールが有効でない場合、システムはエラー メッセージを表示し、保護グループは再開しません。</block>
   <block id="ae6771902a8163ff6ab3c15cf2e407b0" category="doc">NetApp Backup and Recoveryで VMware ワークロードを復元する</block>
-  <block id="4a3d619c8f5571cf4de02c83e47aed31" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット コピー、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから VMware ワークロードを復元します。</block>
   <block id="ba48c3305320f5df1a8db5cbd6fed75a" category="paragraph">以下のポイントまでデータを復元できます:</block>
   <block id="600582313b42616fbf96d317e8033ef9" category="paragraph">復元オプションを使用して VMware ワークロードを復元します。スナップショットは、名前またはフィルターを使用して検索できます。</block>
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ リストア管理者ロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
@@ -2011,7 +1993,6 @@
   <block id="679ef0fa66aaa020c22367d226f81f55" category="paragraph">ONTAPシステムでNetApp Backup and Recoveryのオブジェクトへのバックアップ機能を使用する場合、次の 2 種類のコストが発生します。</block>
   <block id="fb0fa008eff995c2ab3bdbedb2b9753f" category="list-text">リソース料金</block>
   <block id="7b134b802c9d8174603567006b38e1c0" category="list-text">サービス料</block>
-  <block id="27449a17856cd9d923ceb08cfbc9bff7" category="paragraph">スナップショット コピーまたは複製ボリュームの作成には、スナップショット コピーと複製ボリュームを保存するために必要なディスク領域以外は料金はかかりません。</block>
   <block id="d14d70754e8322b819c6bc86af6beefd" category="paragraph">*リソース料金*</block>
   <block id="fe66ea47b1e195d0a8f311d62ee027d8" category="paragraph">オブジェクト ストレージ容量とクラウドへのバックアップ ファイルの書き込みと読み取りに対して、リソース料金がクラウド プロバイダーに支払われます。</block>
   <block id="da8845e5304a59d7d37af79e23b5072b" category="list-text">オブジェクト ストレージへのバックアップの場合、オブジェクト ストレージのコストをクラウド プロバイダーに支払います。</block>
@@ -2040,7 +2021,6 @@
   <block id="9db5c387eb2c1a4533c42a082e094d13" category="list-text">*お客様独自のライセンスの持ち込み (BYOL)*: NetAppから購入したライセンスは、どのクラウド プロバイダーでも使用できます。</block>
   <block id="467e5d512a9162ad6d144008e41f967e" category="list-text">*従量課金制 (PAYGO)*: クラウド プロバイダーのマーケットプレイスからの時間単位のサブスクリプション。</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年間*: クラウド プロバイダーのマーケットプレイスからの年間契約。</block>
-  <block id="6aea87da9521ec65982cf1cd716dd84e" category="paragraph">バックアップ ライセンスは、オブジェクト ストレージからのバックアップと復元にのみ必要です。スナップショット コピーと複製されたボリュームの作成にはライセンスは必要ありません。</block>
   <block id="2d800cbdf9ba7a82c10657f2a93b18b5" category="paragraph">*ライセンスはご持参ください*</block>
   <block id="e030c8eecbfc992cc68549bf0348d474" category="paragraph">BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年間）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。</block>
@@ -2433,13 +2413,11 @@
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">*バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択するか、新しいポリシーを作成します。</block>
   <block id="37c981be270bef0d7503a46e3ee55d35" category="admonition">バックアップをアクティブ化する前にカスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
   <block id="72c9277e73379a7669bea5aea529fe2e" category="list-text">オブジェクトへのバックアップ ポリシーの場合は、DataLock と Ransomware Resilience の設定を行います。  DataLockとランサムウェア耐性の詳細については、以下を参照してください。<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block> 。</block>
-  <block id="cd6dcf8587329d56e9a684f1fcc33d0e" category="list-text">*既存のスナップショット コピーをバックアップ コピーとしてオブジェクト ストレージにエクスポートします*: このシステム内のボリュームのローカル スナップショット コピーが、このシステムに対して選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) と一致する場合、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。</block>
   <block id="1637762bf8b62862e92c5779dd292872" category="section-title">選択内容を確認する</block>
   <block id="6ff9dd41947ac05f6484a120fb4310b2" category="paragraph">ここで選択内容を確認し、必要に応じて調整を行うことができます。</block>
   <block id="5e60167ed1d8120de85b8b38a5697af4" category="list-text">「レビュー」ページで選択内容を確認します。</block>
   <block id="37e3df2e25134f80025a985e8dd1d807" category="list-text">オプションで、*スナップショット ポリシー ラベルをレプリケーション ポリシー ラベルおよびバックアップ ポリシー ラベルと自動的に同期する* チェックボックスをオンにします。これにより、レプリケーションおよびバックアップ ポリシーのラベルと一致するラベルを持つスナップショットが作成されます。</block>
   <block id="577f80967f06665724436706ec1290b9" category="list-text">*バックアップの有効化*を選択します。</block>
-  <block id="ac5a7f58b30d346978bf16a38b72c4c1" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ システム データの差分コピーが含まれます。</block>
   <block id="a3e7bf097fa92851593d1a4d3d8a1dd5" category="paragraph">複製されたボリュームが宛先クラスターに作成され、プライマリ ストレージ ボリュームと同期されます。</block>
   <block id="3c18340bbb79b0ca736442b5eb3d21e5" category="paragraph">入力した S3 アクセスキーとシークレットキーで示されるサービスアカウントに S3 バケットが作成され、そこにバックアップファイルが保存されます。</block>
   <block id="cd7c9421cd0c5fe113ed01f9335a65d3" category="paragraph">ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。</block>
@@ -2527,9 +2505,7 @@
   <block id="397c2eb57e908a7a0dfd7a5b9a549eb3" category="inline-link">Azure プライベート エンドポイントの使用について学習します</block>
   <block id="d141f0c2447307010bfe69b567dcec15" category="list-text">必要に応じて、以前に構成した Azure プライベート エンドポイントを使用するかどうかを選択します。<block ref="8692a626a666ec68cdf3ab557e9f55c0" category="inline-link-rx"></block> 。</block>
   <block id="6f016177210af1e863aa59b8f2e97752" category="list-text">*バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択します。</block>
-  <block id="6a4e7f88a55688bb72e7d13096b62242" category="list-text">*既存のスナップショット コピーをバックアップ コピーとしてオブジェクト ストレージにエクスポートします*: このシステムで選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致する、このシステムのボリュームのローカル スナップショット コピーがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。</block>
   <block id="dfa0e65275e79a512c005617a18e8851" category="list-text">オプションで、*スナップショット ポリシー ラベルをレプリケーション ポリシー ラベルおよびバックアップ ポリシー ラベルと自動的に同期する* チェックボックスをオンにします。これにより、レプリケーションおよびバックアップ ポリシーのラベルと一致するラベルを持つスナップショットが作成されます。</block>
-  <block id="c30195f276d4dee1d7b03414b727d032" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。</block>
   <block id="ffec7ec0cd271a5f8e4f646a0028cabb" category="paragraph">複製されたボリュームが宛先クラスターに作成され、プライマリ ボリュームと同期されます。</block>
   <block id="fd8e00004c8fa188a1fbd959a0eb17ba" category="paragraph">入力したリソース グループに BLOB ストレージ コンテナーが作成され、そこにバックアップ ファイルが保存されます。</block>
   <block id="a384f6970ddbfebee596f46795e91c90" category="paragraph">デフォルトでは、 NetApp Backup and Recovery はコストの最適化のためにローカル冗長性 (LRS) を使用して BLOB コンテナーをプロビジョニングします。異なるゾーン間でデータが複製されるようにしたい場合は、この設定をゾーン冗長性 (ZRS) に変更できます。  Microsoftの指示を参照してください<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>。</block>
@@ -2636,26 +2612,20 @@
   <block id="db6c06ba70bb540dceaa13d8dd243987" category="paragraph">デフォルトでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。低コストの _Nearline_、_Coldline_、または _Archive_ ストレージ クラスを使用できます。ただし、ストレージ クラスは、 NetApp Backup and Recovery UI ではなく、Google を通じて構成します。  Googleトピックを見る<block ref="d037ca255a8eefed8e879939d65bfbbd" category="inline-link-rx"></block>詳細については。</block>
   <block id="3b7cf6250a1252161dd5b8b3328243ca" category="summary">NetApp Backup and Recoveryを使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化、バックアップの一時停止、バックアップの削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。  NetApp Backup and Recovery の登録を解除することもできます。</block>
   <block id="da96e180bd899c512c50d9b0318270ce" category="doc">NetApp Backup and Recoveryを使用してONTAPシステムのバックアップを管理します</block>
-  <block id="fa24d84cb38a69fe000e95a2350584f1" category="paragraph">NetApp Backup and Recoveryを使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化/無効化、バックアップの一時停止、バックアップの削除、バックアップの強制削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。これには、スナップショット コピー、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。  NetApp Backup and Recovery の登録を解除することもできます。</block>
   <block id="f60a029ad87a896d979011a7be077ccc" category="admonition">ストレージ システム上またはクラウド プロバイダー環境からバックアップ ファイルを直接管理または変更しないでください。これによりファイルが破損し、サポートされない構成になる可能性があります。</block>
   <block id="85864bf37adc93b72e0338ca257eb3a1" category="section-title">システム内のボリュームのバックアップステータスを表示します</block>
-  <block id="77994bb78f0dae3510ff3af319a1334f" category="paragraph">ボリューム バックアップ ダッシュボードで、現在バックアップ中のすべてのボリュームのリストを表示できます。これには、スナップショット コピー、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。現在バックアップされていないシステム内のボリュームを表示することもできます。</block>
   <block id="d6f479583cad4e67680c447abd8ba269" category="list-text">コンソール メニューから、*保護 &gt; バックアップとリカバリ* を選択します。</block>
   <block id="fa72bd720d056e7babef4250c9f04a78" category="list-text">*ボリューム* メニューを選択して、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップされたボリュームのリストを表示します。</block>
   <block id="e44fc1f1184fad322f753d2fd49e065b" category="list-text">特定のシステム内の特定のボリュームを探している場合は、システムとボリューム別にリストを絞り込むことができます。検索フィルターを使用したり、ボリューム スタイル (FlexVolまたはFlexGroup)、ボリューム タイプなどに基づいて列を並べ替えたりすることもできます。</block>
   <block id="967a559f8463f8584f05c86c2fe8737e" category="paragraph">追加の列（集計、セキュリティ スタイル（Windows または UNIX）、スナップショット ポリシー、レプリケーション ポリシー、バックアップ ポリシー）を表示するには、プラス記号を選択します。</block>
-  <block id="18d077b55630f941e172475576116494" category="list-text">「既存の保護」列で保護オプションのステータスを確認します。  3 つのアイコンは、「ローカル スナップショット コピー」、「複製されたボリューム」、および「オブジェクト ストレージ内のバックアップ」を表します。</block>
   <block id="994d86579a5334a5d4b1d409d5976ee7" category="paragraph">各バックアップ タイプがアクティブになっているときはアイコンは青色になり、バックアップ タイプが非アクティブになっているときは灰色になります。各アイコンの上にカーソルを置くと、使用されているバックアップ ポリシーや、各バックアップ タイプに関するその他の関連情報が表示されます。</block>
   <block id="7a5095d2213da4d8d8d6f7835126440e" category="section-title">システム内の追加ボリュームでバックアップを有効にする</block>
   <block id="8d9e236023d48edfbb8546d1322f938b" category="paragraph">NetApp Backup and Recovery を最初に有効にしたときに、システム内の一部のボリュームでのみバックアップをアクティブ化した場合は、後で追加のボリュームでバックアップをアクティブ化できます。</block>
   <block id="350cebc09a12734c052df1349098314b" category="list-text">*ボリューム*タブから、バックアップをアクティブ化するボリュームを特定し、アクションメニューを選択します。<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>行の末尾にある [*バックアップをアクティブ化*] を選択します。</block>
-  <block id="4e2b2dce8472a108a762fba565953ce7" category="list-text">[バックアップ戦略の定義] ページで、バックアップ アーキテクチャを選択し、ローカル スナップショット コピー、複製されたボリューム、およびバックアップ ファイルのポリシーとその他の詳細を定義します。このシステムでアクティブ化した初期ボリュームからのバックアップ オプションの詳細を参照してください。次に「次へ」を選択します。</block>
   <block id="40a7b9f9f8520270d9a6a6f8c3b155e3" category="list-text">このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。</block>
   <block id="617bf089a60793ed8197f15849023ab0" category="section-title">既存のボリュームに割り当てられたバックアップ設定を変更する</block>
-  <block id="7269f6d1693137deca5f8c1b619981ef" category="paragraph">ポリシーが割り当てられている既存のボリュームに割り当てられたバックアップ ポリシーを変更できます。ローカル スナップショット コピー、複製されたボリューム、およびバックアップ ファイルのポリシーを変更できます。ボリュームに適用する新しいスナップショット、レプリケーション、またはバックアップ ポリシーがすでに存在している必要があります。</block>
   <block id="6c143468a72ae48b392ccaf6bfdab3dd" category="section-title">単一ボリュームのバックアップ設定を編集する</block>
   <block id="6783230016acdea3f2efff067c9f0ae2" category="list-text">*ボリューム*タブから、ポリシーを変更するボリュームを特定し、アクションメニューを選択します。<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>行の末尾にある [*バックアップ戦略の編集*] を選択します。</block>
-  <block id="6ec852eec1715258286ed981ae615b37" category="list-text">[バックアップ戦略の編集] ページで、ローカル スナップショット コピー、複製されたボリューム、およびバックアップ ファイルの既存のバックアップ ポリシーを変更し、[次へ] を選択します。</block>
   <block id="28d4180de7948c969ad2c178ab5ac2ba" category="paragraph">このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合は、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。</block>
   <block id="ed3685aa06ca7db640e77339c669a75e" category="section-title">複数のボリュームのバックアップ設定を編集する</block>
   <block id="90d35772fb2c0d1903fd5cb179fca792" category="paragraph">複数のボリュームで同じバックアップ設定を使用する場合は、複数のボリュームで同時にバックアップ設定をアクティブ化または編集できます。バックアップ設定がないボリューム、スナップショット設定のみがあるボリューム、クラウドへのバックアップ設定のみがあるボリュームなどを選択し、さまざまなバックアップ設定を持つこれらすべてのボリュームに対して一括変更を行うことができます。</block>
@@ -2677,10 +2647,8 @@
   <block id="8c3d1570ebf5aa31ec7a06f9c1d61144" category="cell">*バックアップの管理*</block>
   <block id="5bd93cee59ad710a10e8571eb3dc88f0" category="cell">複数の種類のバックアップ設定を管理します。このオプションを使用すると、バックアップ アーキテクチャも変更できます。</block>
   <block id="f267cda93e6efd257f0820df08e7ba96" category="cell">*バックアップとリカバリの管理*</block>
-  <block id="ad42328811d8644b8f83f21e31a99935" category="list-text">表示されるバックアップ ページで、ローカル スナップショット コピー、複製されたボリューム、またはバックアップ ファイルの既存のバックアップ ポリシーを変更し、[保存] を選択します。</block>
   <block id="b375649be7fa816f6d56f9db0ecc29b6" category="section-title">いつでも手動でボリュームバックアップを作成</block>
   <block id="2df585918dfe79cb1c0f8dfb403b8933" category="paragraph">いつでもオンデマンド バックアップを作成して、ボリュームの現在の状態をキャプチャできます。これは、ボリュームに非常に重要な変更が加えられ、そのデータを保護するために次回のスケジュールされたバックアップまで待ちたくない場合に役立ちます。この機能を使用すると、現在バックアップされていないボリュームのバックアップを作成し、その現在の状態をキャプチャすることもできます。</block>
-  <block id="9097ffd4045af3a3ae322b0f719b20c9" category="paragraph">ボリュームのオブジェクトにアドホック スナップショット コピーまたはバックアップを作成できます。アドホック複製ボリュームを作成することはできません。</block>
   <block id="75f0ab2aa06321fc5a92c205273b43b6" category="paragraph">バックアップ名にはタイムスタンプが含まれるため、オンデマンド バックアップを他のスケジュールされたバックアップと区別できます。</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">DataLockとランサムウェア対策について詳しくはこちら</block>
   <block id="b6488996839d3ef81eaf4ab204a7cf5a" category="paragraph">このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block>。</block>
@@ -2692,7 +2660,6 @@
   <block id="9803985aa2d019cb1230ddfd51b0a626" category="section-title">各ボリュームのバックアップのリストを表示する</block>
   <block id="38bf6532d289335e780251f9c177e17b" category="paragraph">各ボリュームに存在するすべてのバックアップ ファイルのリストを表示できます。このページには、ソース ボリューム、宛先の場所、最後に実行されたバックアップ、現在のバックアップ ポリシー、バックアップ ファイルのサイズなどのバックアップの詳細が表示されます。</block>
   <block id="85e3a28228b1d1821dc533a7d19751f7" category="list-text">*ボリューム*タブから、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ソースボリュームの[ボリュームの詳細を表示]を選択します。</block>
-  <block id="8bd68d83695f8c9260fa24649f5daeca" category="paragraph">ボリュームの詳細とスナップショット コピーのリストが表示されます。</block>
   <block id="b1cb92c2a23b4cbaa76face717d899cf" category="list-text">*スナップショット*、*レプリケーション*、または*バックアップ*を選択すると、各バックアップ タイプのすべてのバックアップ ファイルのリストが表示されます。</block>
   <block id="c3da5f4c5e9e366bce0761355a7a32b9" category="section-title">オブジェクトストレージ内のボリュームバックアップでランサムウェアスキャンを実行する</block>
   <block id="76d4ec74983530f8007b9dfb9961f585" category="paragraph">NetApp Backup and Recovery は、オブジェクト ファイルへのバックアップが作成される際、およびバックアップ ファイルからデータが復元される際に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。また、いつでもオンデマンド スキャンを実行して、オブジェクト ストレージ内の特定のバックアップ ファイルの使用可能かどうかを確認することもできます。これは、特定のボリュームでランサムウェアの問題が発生し、そのボリュームのバックアップが影響を受けていないことを確認したい場合に役立ちます。</block>
@@ -2713,7 +2680,6 @@
   <block id="e683957c73101b7eb5117854ffc5c0a0" category="cell">更新レプリケーション</block>
   <block id="c553894546b4640e57eebbc7d4672bf6" category="cell">増分転送を開始し、宛先ボリュームを更新してソース ボリュームと同期させます。</block>
   <block id="ddba96748b79c779661c8b679a82809e" category="cell">レプリケーションを一時停止</block>
-  <block id="323d318991c337f981313e51297e76a7" category="cell">スナップショット コピーの増分転送を一時停止して、宛先ボリュームを更新します。増分更新を再開したい場合は、後で再開できます。</block>
   <block id="40310e31b252ba141cc31d7583db7bbe" category="cell">レプリケーションを中断する</block>
   <block id="f0cd8087559cf56fb0d34726dbd85d38" category="inline-link">ONTAPドキュメントで、データアクセス用に宛先ボリュームを設定し、ソースボリュームを再アクティブ化する方法について学習します。</block>
   <block id="2c6c2d97ef0a1cb4ab12e45a4ef02721" category="cell">ソース ボリュームと宛先ボリュームの関係を解除し、宛先ボリュームをデータ アクセス用にアクティブ化して、読み取り/書き込み可能にします。このオプションは通常、データの破損、誤った削除、オフライン状態などのイベントによりソース ボリュームがデータを提供できない場合に使用されます。<block ref="7a7ac6ccb9be4e5f4f0b719a95b68333" category="inline-link-rx"></block></block>
@@ -2755,7 +2721,6 @@
   <block id="62fcab4349f4ca0402c709f1892d15bf" category="section-title">システムのすべてのバックアップファイルを削除する</block>
   <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-xref">ここで説明されているように</block>
   <block id="390711dbf9b1194e9b19351d96031550" category="paragraph">システムのオブジェクト ストレージ上のすべてのバックアップを削除しても、このシステム内のボリュームの将来のバックアップは無効になりません。システム内のすべてのボリュームのバックアップの作成を停止したい場合は、バックアップを非アクティブ化できます。<block ref="f79da60ab60aec0656411209a64eca6e" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="b7726bf807f669806d064d7e428c02fc" category="paragraph">このアクションはスナップショット コピーや複製されたボリュームには影響しないことに注意してください。これらの種類のバックアップ ファイルは削除されません。</block>
   <block id="29e9cf7ef22475594ad87c1e6e2499e4" category="list-text">選択<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>すべてのバックアップを削除するシステムを選択し、[すべてのバックアップを削除] を選択します。</block>
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">確認ダイアログボックスで、システムの名前を入力します。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">*詳細設定*を選択します。</block>
@@ -2768,10 +2733,8 @@
   <block id="2c9220461da540ceac8b243e96929a74" category="list-text">*アクション* &gt; *すべてのバックアップを削除*を選択します。</block>
   <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">ボリューム名を入力します。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">ボリュームの単一のバックアップファイルを削除する</block>
-  <block id="e300bd32052d102b8a28f9965281effd" category="paragraph">不要になったバックアップ ファイルを 1 つ削除できます。これには、ボリューム スナップショット コピーまたはオブジェクト ストレージ内のバックアップの単一のバックアップの削除が含まれます。</block>
   <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">複製されたボリューム (データ保護ボリューム) は削除できません。</block>
   <block id="c6f11bef049f9978b6acc052d17daf5a" category="list-text">*ボリューム*タブから、<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>ソースボリュームの[ボリュームの詳細を表示]を選択します。</block>
-  <block id="720c9e00fafd4e708d8298f7f3cc89cd" category="paragraph">ボリュームの詳細が表示され、*スナップショット*、*レプリケーション*、または*バックアップ*を選択して、ボリュームのすべてのバックアップ ファイルのリストを表示できます。デフォルトでは、利用可能なスナップショットのコピーが表示されます。</block>
   <block id="f92abbb1e1dd381a84bc092e3bc1232f" category="list-text">削除するバックアップ ファイルの種類を確認するには、[*スナップショット*] または [*バックアップ*] を選択します。</block>
   <block id="8dac01775d5cf014de7509d0b8b228e4" category="list-text">選択<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>削除するボリューム バックアップ ファイルを選択し、[削除] を選択します。</block>
   <block id="471249ebfaeaa3824bfa8f102a312106" category="list-text">確認ダイアログボックスで、[削除] を選択します。</block>
@@ -2901,8 +2864,6 @@
   <block id="a08b285fd78cf03936887841fbc87805" category="inline-link">Amazon S3 の AWS PrivateLink の使用に関する詳細をご覧ください</block>
   <block id="da6211c797a89720b6883bacdc774e98" category="list-text">必要に応じて、以前に設定した AWS PrivateLink を使用するかどうかを選択します。<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block> 。</block>
   <block id="f840f9756698d2642c682c57635ce422" category="list-text">*バックアップ ポリシー*: 既存のバックアップ ポリシーを選択するか、ポリシーを作成します。</block>
-  <block id="5deff6c2be51ef1dacb5d79ad864d0d7" category="list-text">*既存のスナップショット コピーをバックアップ コピーとしてオブジェクト ストレージにエクスポートします*: このシステムで選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致する、このシステムのボリュームのローカル スナップショット コピーがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの保護が最も完全になります。</block>
-  <block id="01fbd55edfb2a3051bbc565a6cf73db5" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ データの差分コピーが含まれます。</block>
   <block id="fab7b62aef677a7dfc0c2e880e574c3e" category="paragraph">入力した S3 アクセスキーとシークレットキーで示されるサービスアカウントに S3 バケットが作成され、そこにバックアップファイルが保存されます。ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。</block>
   <block id="26d69f43fddc5c2bcb70609e2dca79ff" category="paragraph">バックアップと復元ジョブのステータスを監視することもできます。<block ref="c9b7a5ec15675760150fc860d9b68ff4" category="inline-link-macro-rx"></block> 。</block>
   <block id="c3f60ccbc7d01616ad2cb7705e425bc4" category="doc">NetApp Backup and Recoveryを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする</block>
@@ -3033,7 +2994,6 @@
   <block id="fdfde9e0b311ff5fac1cb59718becd99" category="inline-link">コンソールエージェントソフトウェアをアップグレードする</block>
   <block id="ec30666e80cfd436428146ff15b8cd86" category="paragraph">NetApp Backup and Recovery機能は、コンソール エージェントに組み込まれています。プライベート モードでインストールされている場合、新しい機能にアクセスするには、コンソール エージェント ソフトウェアを定期的に更新する必要があります。チェックしてください<block ref="4f503e3438aa28bc2c8e70f6f3ca470a" category="inline-link-macro-rx"></block>NetApp Backup and Recovery の各リリースの新機能を確認してください。新しい機能を使用する場合は、次の手順に従ってください。<block ref="fe15289ddf0b41ec634abd6111ef3db4" category="inline-link-rx"></block> 。</block>
   <block id="2b3a52e7d48b516f3751583e2d7f6d87" category="paragraph">標準の SaaS 環境でNetApp Backup and Recoveryを使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、 NetApp Backup and Recovery の構成データは、バックアップが保存されているONTAP S3 バケットにバックアップされます。</block>
-  <block id="406b3d4cdd893cbefe3f97c24e0dabd1" category="paragraph">クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはオブジェクト ストレージへのバックアップと復元用です。スナップショット コピーや複製されたボリュームを作成するのにライセンスは必要ありません。このライセンスはアカウント用であり、複数のシステムで使用できます。</block>
   <block id="697b86f7e988fa09258b45f4602902bd" category="paragraph">ライセンスの有効期間と容量にわたってサービスを使用するには、 NetAppからのシリアル番号が必要になります。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
   <block id="6693ad1f879b89cff96414a6cbe91add" category="admonition">ONTAP S3 にファイルをバックアップする場合、PAYGO ライセンスはサポートされません。</block>
   <block id="cb37d999576786c4642b70e73ab52a62" category="paragraph">オブジェクト ストレージに接続するシステムでは、次の要件が満たされていることを確認する必要があります。</block>
@@ -3066,7 +3026,6 @@
   <block id="bfdcb4c8994c35ddcbf57b86b98f3f35" category="list-text">保護オプション: ローカルスナップショット、レプリケーション、オブジェクトストレージへのバックアップなど、バックアップオプションの1つまたはすべてを実装するかどうか</block>
   <block id="46a34e4ec1b576e981a1d3de1e6efb19" category="list-text">アーキテクチャ: ファンアウトまたはカスケードバックアップアーキテクチャを使用するかどうか</block>
   <block id="a293331e4a15a1bd7c5ea3a447d9e130" category="list-text">「バックアップ戦略の定義」ページで、次のいずれかまたはすべてを選択します。デフォルトでは 3 つすべてが選択されています。</block>
-  <block id="b74d253e4a199789a7d19f6040694e04" category="list-text">*ローカル スナップショット*: ローカル スナップショット コピーを作成します。</block>
   <block id="f97ad73f017e5e9a85a2ba4d7f9f0e1c" category="list-text">*バックアップ*: S3 用に設定されたONTAPシステム上のバケットにボリュームをバックアップします。</block>
   <block id="757ddf3a67f3bb933e1f0daa98d655c1" category="list-text">*アーキテクチャ*: レプリケーションとバックアップの両方を選択した場合は、次のいずれかの情報フローを選択します。</block>
   <block id="114e1e484d37f8ec51f8c9bd144982c0" category="list-text">*カスケード*: バックアップ データはプライマリ システムからセカンダリ システムへ流れ、次にセカンダリ システムからオブジェクト ストレージへ流れます。</block>
@@ -3083,9 +3042,7 @@
   <block id="bb248f7221f98ec46ba72866b8f97fb1" category="admonition">正しい IPspace を選択すると、 NetApp Backup and Recovery がONTAPからONTAP S3 オブジェクト ストレージへの接続を確立できるようになります。</block>
   <block id="0773e77bb0db21a781b5bbb39f7a4ee7" category="list-text">*バックアップ ポリシー*: 既存のバックアップ ポリシーを選択するか、新しいバックアップ ポリシーを作成します。</block>
   <block id="c14db437f776a13459f3d49279cc036d" category="admonition">System Manager またはONTAP CLI を使用してポリシーを作成できます。  ONTAP CLIを使用してカスタムポリシーを作成するには<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>コマンドについては、<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block> 。</block>
-  <block id="9fc7eb00f9b92c6517ac1c668a33a50e" category="list-text">*既存のスナップショット コピーをバックアップ ファイルとしてオブジェクト ストレージにエクスポートします*: このシステム内のボリュームに、選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致するローカル スナップショット コピーがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。</block>
   <block id="682f8e921eb37ddb3e47689c62db0a2e" category="list-text">オプションで、*スナップショット ポリシー ラベルをレプリケーション ポリシー ラベルおよびバックアップ ポリシー ラベルと自動的に同期する* チェックボックスをオンにします。これにより、レプリケーションおよびバックアップ ポリシーのラベルと一致するラベルを持つスナップショットが作成されます。ポリシーが一致しない場合、バックアップは作成されません。</block>
-  <block id="6027b21041fbbf14fdd0e5f8d1e5b8bb" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップの作成を開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。</block>
   <block id="da89f84b672c457d24c04269e668b99b" category="summary">NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。</block>
   <block id="7118c1a3bbb6dabf070fc402ff8a9fd3" category="doc">NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをStorageGRIDにバックアップします。</block>
   <block id="3fa08464a9a599a3c36d5915624e40cf" category="paragraph">次の図は、オンプレミスのONTAPシステムをStorageGRIDにバックアップする場合の各コンポーネントと、それらの間で準備する必要がある接続を示しています。</block>
@@ -3094,7 +3051,6 @@
   <block id="5e4344df99920e524cfb6d919eb4a494" category="paragraph">コンソール エージェントとオンプレミスのONTAPシステムがインターネットにアクセスできないオンプレミスの場所 (「ダーク サイト」) にインストールされている場合、 StorageGRIDシステムは同じオンプレミス データセンターに配置する必要があります。ダーク サイト構成では、古いバックアップ ファイルのパブリック クラウドへのアーカイブはサポートされていません。</block>
   <block id="334180f7df5c8324d128afe54273063b" category="paragraph">StorageGRIDにデータをバックアップする場合、オンプレミスでコンソール エージェントが使用可能である必要があります。新しいコンソール エージェントをインストールするか、現在選択されているコンソール エージェントがオンプレミスに存在することを確認する必要があります。コンソール エージェントは、インターネットにアクセスできるサイトにも、アクセスできないサイトにもインストールできます。</block>
   <block id="92a508a0037c85cca367ecb3e92a0fde" category="list-text">ポート443経由のStorageGRIDゲートウェイノードへのHTTPS接続</block>
-  <block id="a95b23a2cdaf127b085474599d441fb2" category="paragraph">オブジェクト ストレージへのバックアップの作成に加えて、スナップショット コピーと複製されたボリュームをスケジュールして作成する機能が含まれるNetApp Backup and Recoveryの新しいバージョンでは、コンソール エージェントのバージョン 3.9.31 以上を使用する必要があります。したがって、すべてのバックアップを管理するには、この最新リリースを入手することをお勧めします。</block>
   <block id="cb850fad5e1fad8d32e7eb265ae3906e" category="list-text">SaaS 環境でNetApp Backup and Recovery を使用すると、 NetApp Backup and Recovery の構成データがクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、 NetApp Backup and Recovery構成データは、バックアップが保存されているStorageGRIDバケットにバックアップされます。</block>
   <block id="5f9f04c739428b05a64b13f60000d391" category="paragraph">クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはアカウント用であり、複数のシステムで使用できます。</block>
   <block id="60a2dc1fd82db84a092db92c95942712" category="admonition">StorageGRIDにファイルをバックアップする場合、PAYGO ライセンスはサポートされません。</block>
@@ -3162,7 +3118,6 @@
   <block id="43f4c1811765abf291168aea7f16a205" category="paragraph">クラスターがONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムがバージョン 11.4 以上を使用している場合は、一定の日数後に古いバックアップをパブ​​リック クラウド アーカイブ層に階層化することを選択できます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。<block ref="bf8884094e353a761ed88341de6eaf54" category="inline-xref-macro-rx"></block>。</block>
   <block id="1f56b8f69150cdfb9829cf942c51a8d3" category="list-text">*パブリック クラウドへの階層化バックアップ*: バックアップを階層化するクラウド プロバイダーを選択し、プロバイダーの詳細を入力します。</block>
   <block id="e2a74f20d433c85025a6f5807d74682d" category="paragraph">新しいStorageGRIDクラスターを選択または作成します。コンソールが検出できるStorageGRIDクラスタの作成の詳細については、<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block> 。</block>
-  <block id="dff128be4d6710494db3e76f65383ab0" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショット コピーに含まれるプライマリ ストレージ データの差分コピーが含まれます。</block>
   <block id="85ffdbd09ff5b2ecfdcbea6cb8697013" category="summary">NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。</block>
   <block id="254385f2eec62c0f2399c9da13dde7f6" category="doc">NetApp Backup and RecoveryでSnapMirrorを使用してボリュームを Cloud Resync に移行する</block>
   <block id="ee9ee6fb5d3eb14594205c52636211ec" category="admonition">この機能は、2025 年 5 月にリリースされたNetApp Backup and Recoveryバージョン 4.0.3 以降で利用できます。</block>
@@ -3254,12 +3209,10 @@
   <block id="5d4ed65e56adaf2c1b70e5e97ddbe2b5" category="list-text">バックアップ設定ページでシステムを選択し、*アクション*を選択します。<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>アイコンをクリックし、*ポリシー管理*を選択します。</block>
   <block id="5bf9959b9f847b53c7772e7dc90d3a04" category="paragraph">ポリシー管理ページが表示されます。スナップショット ポリシーはデフォルトで表示されます。</block>
   <block id="c74f8ecec1da944cebb96c4d6493ef7f" category="list-text">システム内に存在する他のポリシーを表示するには、*レプリケーション ポリシー* または *バックアップ ポリシー* のいずれかを選択します。既存のポリシーをバックアップ プランに使用できる場合は、準備は完了です。異なる特性を持つポリシーが必要な場合は、このページから新しいポリシーを作成できます。</block>
-  <block id="7aa02d1490041a6267fc77bf9b4232c2" category="paragraph">オブジェクト ストレージへのスナップショットのコピー、レプリケーション、バックアップを管理するポリシーを作成できます。</block>
   <block id="896b5143341e108efeca5446e0008eeb" category="list-text"><block ref="b92b977610ec95f89ddb2711a418bfb2" category="inline-xref-macro-rx"></block></block>
   <block id="8c93ad30ee0d14353ceadd8305690a2f" category="list-text"><block ref="0116f7fb14fa9b1ea4004469c89c7378" category="inline-xref-macro-rx"></block></block>
   <block id="4d1e42c53c197b9eec9ce78b1832dc8c" category="list-text"><block ref="4b4395fe768c3ae3b25642d7a52ea888" category="inline-xref-macro-rx"></block></block>
   <block id="7947d73fa73ec5c50e39c84f93a38c5a" category="section-title">スナップショットを開始する前にスナップショットポリシーを作成する</block>
-  <block id="aeb01d4a73a6e0541b2da03a87828d08" category="paragraph">3-2-1 戦略の一部として、プライマリ ストレージ システム上のボリュームのスナップショット コピーを作成します。</block>
   <block id="166d942d7c3fa0fdf526bdef845eebef" category="paragraph">ポリシー作成プロセスの一部として、スケジュールと保持を示すスナップショットとSnapMirrorラベルを識別することが含まれます。定義済みのラベルを使用することも、独自のラベルを作成することもできます。</block>
   <block id="ad1858c9b18af8cbe0b4325833b61ce0" category="paragraph">ポリシー管理ページが表示されます。</block>
   <block id="f2d390fa1db9923459b003140db5abec" category="list-text">[ポリシー] ページで、[ポリシーの作成] &gt; [スナップショット ポリシーの作成] を選択します。</block>
@@ -3318,11 +3271,9 @@
   <block id="fb258284d7569744ca758873d339532b" category="inline-link">ONTAP CLIを使用してオブジェクトストレージポリシーへのバックアップを作成する</block>
   <block id="bc7ba4c7d62d6d4917e638edbc43dbb5" category="paragraph"><block ref="1d5508fcd8027e26b48962bd984558d5" category="inline-link-rx"></block> <block ref="25d9216966497b44f1274c2fdc3f62ee" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
   <block id="d6b2f75c5e7cc6c2d5da7268c117d88e" category="doc">NetApp Backup and Recoveryの詳細設定でオブジェクト ストレージへのバックアップ オプションを管理する</block>
-  <block id="7f1c17ad86ed1874be7a9a51049ab485" category="paragraph">[詳細設定] ページを使用して、各ONTAPシステムに対してNetApp Backup and Recovery をアクティブ化するときに設定した、クラスタ レベルのオブジェクトへのバックアップ ストレージ設定を変更できます。 「デフォルト」のバックアップ設定として適用されているいくつかの設定を変更することもできます。これには、オブジェクト ストレージへのバックアップの転送速度の変更、履歴 Snapshot コピーをバックアップ ファイルとしてエクスポートするかどうか、システムのランサムウェア スキャンの有効化または無効化などが含まれます。</block>
   <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">これらの設定は、オブジェクト ストレージへのバックアップでのみ使用できます。これらの設定はいずれもスナップショットまたはレプリケーションの設定には影響しません。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">詳細設定ページで次のオプションを変更できます。</block>
   <block id="6d1da260b80b103438f3aedda67c1b8e" category="list-text">最大転送速度オプション ifdef::aws[] を使用して、オブジェクトストレージにバックアップをアップロードするために割り当てられたネットワーク帯域幅を変更する</block>
-  <block id="0b1a1078de1b2e72b07bf2ffac16d26d" category="list-text">過去のスナップショットコピーをバックアップファイルとしてエクスポートし、将来のボリュームの初期ベースラインバックアップファイルに含めるかどうかを変更する</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">「年次」スナップショットをソースシステムから削除するかどうかを変更する</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">スケジュールされたスキャンを含む、システムのランサムウェアスキャンを有効または無効にする</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">クラスターレベルのバックアップ設定を表示する</block>
@@ -3339,24 +3290,17 @@
   <block id="057d6c600d485e4ee55de2a7a7001dc5" category="list-text">*制限*ラジオ ボタンを選択し、使用できる最大帯域幅を入力するか、*無制限*を選択して制限がないことを示します。</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">*適用*を選択します。</block>
   <block id="d6fbc65447ac5ec301ff9302b857a824" category="paragraph">この設定は、システム内のボリュームに対して構成されている可能性のある他のレプリケーション関係に割り当てられる帯域幅には影響しません。</block>
-  <block id="814fcb42fca8be942e3018ecb7509457" category="section-title">履歴スナップショットのコピーをバックアップファイルとしてエクスポートするかどうかを変更する</block>
-  <block id="77c498376f900ba05c47aab2ca4f1632" category="paragraph">このシステムで使用しているバックアップ スケジュール ラベル (毎日、毎週など) に一致するボリュームのローカル スナップショット コピーがある場合は、それらの履歴スナップショットをバックアップ ファイルとしてオブジェクト ストレージにエクスポートできます。これにより、古いスナップショット コピーをベースライン バックアップ コピーに移動して、クラウド内のバックアップを初期化できるようになります。</block>
   <block id="65fd1c000589ff36a794229f1987490d" category="paragraph">このオプションは、新しい読み取り/書き込みボリュームの新しいバックアップ ファイルにのみ適用され、データ保護 (DP) ボリュームではサポートされないことに注意してください。</block>
-  <block id="d76835a7e29bfba07068479c7f8fe1c9" category="list-text">[詳細設定] ページで、[*既存のスナップショット コピーのエクスポート*] セクションを展開します。</block>
-  <block id="5ded7f0f282abee3856eb702a71c490f" category="list-text">既存のスナップショット コピーをエクスポートするかどうかを選択します。</block>
   <block id="cef9bbe98866aa24765a5c6e51e5daa5" category="section-title">「年次」スナップショットをソースシステムから削除するかどうかを変更する</block>
-  <block id="8577d7fd44fe39164228bbbe19ab37b5" category="paragraph">いずれかのボリュームのバックアップ ポリシーに「年間」バックアップ ラベルを選択すると、作成されるスナップショット コピーが非常に大きくなります。デフォルトでは、これらの年次スナップショットは、オブジェクト ストレージに転送された後、ソース システムから自動的に削除されます。このデフォルトの動作は、年間スナップショットの削除セクションから変更できます。</block>
   <block id="69ef3b07789885abe39838d3bdd565ae" category="list-text">[詳細設定] ページで、[*年次スナップショットの削除*] セクションを展開します。</block>
   <block id="550e2d4456467c22193939aa0029676d" category="inline-image-macro">詳細設定ページの年間スナップショットエントリのスクリーンショット。</block>
   <block id="824924c3b132c056f8e7a92e2b64399e" category="paragraph"><block ref="824924c3b132c056f8e7a92e2b64399e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="906f0c83e11579cff84ef8bb2602e8ee" category="list-text">ソース システムに年次スナップショットを保持するには、[無効] を選択します。</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">ランサムウェアスキャンを有効または無効にする</block>
-  <block id="c8677ee89c299128bf83f5ed7ce0b535" category="paragraph">ランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショット コピーに対してのみ実行されます。 [詳細設定] ページのオプションを使用して、最新のスナップショット コピーに対するランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトで 7 日ごとにスキャンが実行されます。</block>
   <block id="4451065c28f2079aa69e4b099c64d39a" category="inline-link-macro">DataLockとランサムウェア耐性オプション</block>
   <block id="653a7bec9106146215db26707b6bc097" category="paragraph">DataLockとランサムウェア耐性オプションの詳細については、以下を参照してください。<block ref="9598f959fcd7486a6e0c3ffa9bbb6de9" category="inline-link-macro-rx"></block> 。</block>
   <block id="823af9cc6541e49164fb4b1c88f90a63" category="paragraph">スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。</block>
   <block id="c000460328529e6cc52a2a89e3a697dc" category="admonition">ランサムウェアスキャンを有効にすると、クラウドプロバイダーに応じて追加料金が発生します。</block>
-  <block id="564c5feaa7f154c02296acfa87cd72f2" category="paragraph">スケジュールされたランサムウェア スキャンは、最新のスナップショット コピーに対してのみ実行されます。</block>
   <block id="753626f8e1f5bd64d141de3a2128da9a" category="paragraph">スケジュールされたランサムウェア スキャンが無効になっている場合でも、オンデマンド スキャンを実行することはでき、復元操作中にスキャンが実行されます。</block>
   <block id="e7326f303b8abf78625da7d8f22fa0b4" category="inline-link-macro">ポリシーの管理</block>
   <block id="53f2e5824456fc72fcf46ed59f0055b0" category="paragraph">参照<block ref="413884571f4d053a53a019b431cecdb2" category="inline-link-macro-rx"></block>ランサムウェア検出を実装するポリシーの管理の詳細については、こちらをご覧ください。</block>
@@ -3523,7 +3467,6 @@
   <block id="bb4d18abee2ac1ac9616f24e56d8201d" category="doc">NetApp Backup and Recoveryで保護の旅を計画する</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery を使用すると、ソース ボリュームのコピーを最大 3 つ作成してデータを保護できます。ボリュームでバックアップと回復を有効にするときに選択できるオプションは多数あるため、準備ができるように選択内容を確認する必要があります。</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">以下のオプションについて説明します。</block>
-  <block id="79bf4ea3e9cb2d13a5d787f30856e1de" category="list-text">どのような保護機能を使用しますか: スナップショットコピー、複製ボリューム、クラウドへのバックアップ</block>
   <block id="85c221c528aa48303ce42bd715536fcc" category="list-text">どのバックアップアーキテクチャを使用しますか: ボリュームのカスケードバックアップまたはファンアウトバックアップ</block>
   <block id="ac2c17b7d9121a38bd0676675759e2d0" category="list-text">デフォルトのバックアップポリシーを使用しますか、それともカスタムポリシーを作成する必要がありますか</block>
   <block id="f53a4fccf3f0875b00c8fa67a6206306" category="list-text">サービスにクラウドバケットを作成させたいですか、それとも始める前にオブジェクトストレージコンテナを作成したいですか？</block>
@@ -3532,18 +3475,11 @@
   <block id="66d3fadb53e8ad6e337ef250060f45d9" category="paragraph">使用する機能を選択する前に、各機能の機能と、提供される保護の種類について簡単に説明します。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">バックアップ タイプ</block>
   <block id="d4e2713d1b1725a1592f9268589f990d" category="cell">Snapshot</block>
-  <block id="e7d16b4cd92faa6bebd0c1d15ea1bfbf" category="cell">ソース ボリューム内のボリュームの読み取り専用の特定時点のイメージをスナップショット コピーとして作成します。スナップショット コピーを使用して、個々のファイルを回復したり、ボリュームの内容全体を復元したりできます。</block>
   <block id="a23b9135121ccd8c6b9cf5a020774e95" category="cell">別のONTAPストレージ システムにデータのセカンダリ コピーを作成し、セカンダリ データを継続的に更新します。データは最新の状態に保たれ、必要なときにいつでも利用できます。</block>
   <block id="0861d887e6d95fe35a1ca67b5f5e81b5" category="cell">クラウド バックアップ</block>
   <block id="a17b29813f2c46cd9491d767baf0ff23" category="cell">保護と長期アーカイブの目的でクラウドにデータのバックアップを作成します。必要に応じて、ボリューム、フォルダー、または個々のファイルをバックアップから同じシステムまたは別のシステムに復元できます。</block>
-  <block id="0d822d10f9dce62d035fd0a19a7fca01" category="paragraph">スナップショットはすべてのバックアップ方法の基礎であり、バックアップおよびリカバリ サービスを使用するために必要です。スナップショット コピーは、ボリュームの読み取り専用の特定時点のイメージです。イメージは、最後のスナップショット コピーが作成されてからファイルに加えられた変更のみを記録するため、最小限のストレージ スペースしか消費せず、パフォーマンスのオーバーヘッドもごくわずかです。ボリューム上に作成されたスナップショット コピーは、図に示すように、複製されたボリュームとバックアップ ファイルをソース ボリュームに加えられた変更と同期させるために使用されます。</block>
-  <block id="fba7073e7b9f0ebbf2a16aba03def013" category="inline-image-macro">バックアップ ファイルが、スナップショット コピーとしてソース システム上に、セカンダリ ストレージ システム上に複製されたボリュームとして、およびオブジェクト ストレージ内のバックアップ ファイルとしてどのように存在するかを示す図。</block>
-  <block id="3fe18b5afee65e24db0af46c099ee28b" category="paragraph"><block ref="3fe18b5afee65e24db0af46c099ee28b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="112d5b2e7f70a350b739f08063ce85af" category="paragraph">別のONTAPストレージ システムに複製されたボリュームを作成し、クラウドにファイルをバックアップすることもできます。または、複製されたボリュームまたはバックアップ ファイルのみを作成することもできます。それはあなたの選択です。</block>
   <block id="e6be33e5c4b92c8fe5ab63510eedf003" category="paragraph">要約すると、 ONTAPシステム内のボリュームに対して作成できる有効な保護フローは次のとおりです。</block>
-  <block id="f46d552561904382654668028ef332b7" category="list-text">ソースボリューム -&gt; スナップショットコピー -&gt; 複製ボリューム -&gt; バックアップファイル</block>
-  <block id="6e0f3f7af71dbdcd66969d229d562636" category="list-text">ソースボリューム -&gt; スナップショットコピー -&gt; バックアップファイル</block>
-  <block id="416d6dba97115e0823c4346a7315efbf" category="list-text">ソースボリューム -&gt; スナップショットコピー -&gt; 複製ボリューム</block>
   <block id="8b6929ad62460b55df90661f6ce3447e" category="admonition">複製されたボリュームまたはバックアップ ファイルの最初の作成には、ソース データの完全なコピーが含まれます。これは、_ベースライン転送_ と呼ばれます。後続の転送には、ソース データの差分コピー (スナップショット) のみが含まれます。</block>
   <block id="72d6d7225fde1dafbc05317df9f5b442" category="paragraph">*さまざまなバックアップ方法の比較*</block>
   <block id="8d4622541c56b47641b741cdbe4f8ddf" category="paragraph">次の表は、3 つのバックアップ方法の一般的な比較を示しています。オブジェクト ストレージ スペースは通常、オンプレミスのディスク ストレージよりも安価ですが、クラウドからデータを頻繁に復元する可能性があると予想される場合は、クラウド プロバイダーからの送信料金によって節約額がいくらか減る可能性があります。クラウド内のバックアップ ファイルからデータを復元する必要がある頻度を特定する必要があります。</block>
@@ -3566,24 +3502,14 @@
   <block id="2b769a9268eb2aee4276cba6c57ef0e9" category="cell">高額（プロバイダー料金）</block>
   <block id="f20b3ca4032bc39e75089941e59da9ae" category="section-title">どのバックアップアーキテクチャを使用するか</block>
   <block id="df2734a3248ea58d4bd1131a234481c4" category="paragraph">複製されたボリュームとバックアップ ファイルの両方を作成する場合、ボリュームをバックアップするためにファンアウト アーキテクチャまたはカスケード アーキテクチャを選択できます。</block>
-  <block id="a2a9ac91325c0db29e163fbc9e667a11" category="paragraph">*ファンアウト* アーキテクチャは、スナップショットのコピーを、宛先ストレージ システムとクラウド内のバックアップ オブジェクトの両方に独立して転送します。</block>
-  <block id="adf84925b2895a3bd5ae0a120cb8ad17" category="inline-image-macro">ボリュームのスナップショット コピーを使用して、複製されたボリュームとバックアップ ファイルを作成および更新する方法を示した図。</block>
-  <block id="ad4c3469af64746e775ed7115a090081" category="paragraph"><block ref="ad4c3469af64746e775ed7115a090081" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f7a44c472b4d89a85927c5b659923abb" category="paragraph">*カスケード* アーキテクチャでは、まずスナップショットのコピーが宛先ストレージ システムに転送され、次にそのシステムがそのコピーをクラウド内のバックアップ オブジェクトに転送します。</block>
-  <block id="0e75839fe626c68e31622d428c4d570a" category="paragraph"><block ref="0e75839fe626c68e31622d428c4d570a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="38a76ea4648b1e59685f3787ddf9021d" category="paragraph">*さまざまなアーキテクチャの選択肢の比較*</block>
   <block id="688c41a4a08a3e0f4011a51649a5a459" category="paragraph">この表は、ファンアウト アーキテクチャとカスケード アーキテクチャの比較を示します。</block>
   <block id="3bd4e18208001e378e54469a0b8e5993" category="cell">ファンアウト</block>
   <block id="2dc2b15e8b0ee7ed3fdd4cf53ad0a8c3" category="cell">カスケード</block>
-  <block id="87c81224d48d741dfbd247952615fc4e" category="cell">スナップショットのコピーを 2 つの異なるシステムに送信するため、ソース システムのパフォーマンスへの影響はわずかです。</block>
-  <block id="478c6c161866c8e1ddab01aa9b106fc3" category="cell">スナップショットコピーを一度だけ送信するため、ソースストレージシステムのパフォーマンスへの影響が少なくなります。</block>
   <block id="ec56411e6ab7919a698db099e7ce9d99" category="cell">すべてのポリシー、ネットワーク、 ONTAP構成がソースシステム上で実行されるため、セットアップが簡単になります。</block>
   <block id="2de573829fbd9b8bb14cbeb57e049422" category="cell">一部のネットワークとONTAP構成をセカンダリ システムからも実行する必要があります。</block>
   <block id="6a56b6ee195df37efb9dcd54ebb245de" category="section-title">スナップショット、レプリケーション、バックアップのデフォルトポリシーを使用しますか？</block>
   <block id="db24e99a2622697aa035e5706aff38ea" category="paragraph">NetAppが提供するデフォルトのポリシーを使用してバックアップを作成することも、カスタム ポリシーを作成することもできます。アクティベーション ウィザードを使用してボリュームのバックアップおよびリカバリ サービスを有効にする場合、デフォルトのポリシーと、システム (Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) にすでに存在するその他のポリシーから選択できます。既存のポリシーとは異なるポリシーを使用する場合は、アクティベーション ウィザードを開始する前または使用中にポリシーを作成できます。</block>
-  <block id="1301be7ec7ade67f5147fdcccd80fa2a" category="list-text">デフォルトのスナップショット ポリシーでは、時間別、日次、週次のスナップショット コピーが作成され、時間別 6 個、日次 2 個、週次 2 個のスナップショット コピーが保持されます。</block>
-  <block id="c1d5bf3c2ec7b585c447b9b4cea582ac" category="list-text">デフォルトのレプリケーション ポリシーでは、毎日および毎週のスナップショット コピーがレプリケートされ、毎日 7 個のスナップショット コピーと毎週 52 個のスナップショット コピーが保持されます。</block>
-  <block id="840e2f78c01f1959c64c8f5ecd750690" category="list-text">デフォルトのバックアップ ポリシーでは、毎日および毎週のスナップショット コピーが複製され、毎日 7 個のスナップショット コピーと毎週 52 個のスナップショット コピーが保持されます。</block>
   <block id="307fac06deb7cfd0fa48e676ffc86224" category="paragraph">レプリケーションまたはバックアップ用のカスタム ポリシーを作成する場合、ポリシー ラベル (「毎日」や「毎週」など) がスナップショット ポリシーに存在するラベルと一致している必要があります。一致していないと、レプリケートされたボリュームとバックアップ ファイルが作成されません。</block>
   <block id="8cb2e913decbf9b532c186901104e076" category="inline-link-macro">新しいバックアップポリシーの追加</block>
   <block id="ee49cee7c44ccb04a139f40fb9f4a214" category="paragraph">NetApp Backup and Recovery UI で、スナップショット、レプリケーション、およびオブジェクト ストレージ ポリシーへのバックアップを作成できます。セクションを参照してください<block ref="0559f444e8f88edb894615ec30a1d00b" category="inline-link-macro-rx"></block>詳細については。</block>
@@ -3676,12 +3602,8 @@
   <block id="8116cbee5887b07b452fecf9c1836d5c" category="doc">NetApp Backup and Recoveryを使用してONTAPボリューム データを保護します</block>
   <block id="f147568c086732bd86eb443dc52d5e33" category="paragraph">NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長期アーカイブのためのバックアップおよび復元機能を提供します。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
   <block id="80281310e7f1753680348f039d61ece0" category="paragraph">アクティブ化後、バックアップとリカバリによって、ブロックレベルの永久増分バックアップが作成され、別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されます。ソース ボリュームに加えて、次のものも用意します。</block>
-  <block id="4dfb74d83687d8ca40ab05bac1885b0a" category="list-text">ソースシステム上のボリュームのスナップショットコピー</block>
   <block id="00b4fe156d0b170f5196995dd8889b0d" category="list-text">別のストレージシステム上の複製ボリューム</block>
   <block id="809b026ec469d1b8bfa79721e15f539b" category="list-text">オブジェクトストレージ内のボリュームのバックアップ</block>
-  <block id="f21e38c1a38f1c4f4e956d882bff761e" category="inline-image-macro">バックアップ ファイルが、ソース システムではスナップショット コピーとして、セカンダリ ストレージ システムでは複製されたボリュームとして、オブジェクト ストレージではバックアップ ファイルとしてどのように存在するかを示す図。</block>
-  <block id="58ead0698b2403892dd8d82de5be7c29" category="paragraph"><block ref="58ead0698b2403892dd8d82de5be7c29" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="69cf282ad2d2af37ce5b061e5f12b928" category="paragraph">NetApp Backup and Recovery は、 NetApp のSnapMirrorデータ レプリケーション テクノロジを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
   <block id="094fa5b5a02089cb6ef9dcfe3de478b1" category="paragraph">必要に応じて、任意のバックアップ コピーから、_ボリューム_全体、_フォルダ_、または 1 つ以上の_ファイル_を同じシステムまたは別のシステムに復元できます。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">機能</block>
   <block id="d7b479d32340f96732225021d096cc62" category="paragraph">*レプリケーション機能:*</block>
@@ -3708,7 +3630,6 @@
   <block id="bd72e14abd3526a8879e36ff21989129" category="list-text">クラウド プロバイダーのデフォルトの暗号化キーを使用する代わりに、独自の顧客管理キーを使用してデータを暗号化します。</block>
   <block id="31225c51d46e8620e15eeda9d9aede1c" category="list-text">単一ボリュームの最大 4,000 件のバックアップをサポートします。</block>
   <block id="2ef86679dc81862bbea0ea37e255ca59" category="paragraph">*復元機能:*</block>
-  <block id="ba8be4a78d73005d396b001c480790d5" category="list-text">オブジェクト ストレージ内のローカル スナップショット コピー、複製されたボリューム、またはバックアップされたボリュームから特定の時点のデータを復元します。</block>
   <block id="ca636232aaf17fe5d8fef3b105b4363c" category="list-text">ボリューム、フォルダー、または個々のファイルをソース システムまたは別のシステムに復元します。</block>
   <block id="e4dccda809ca16eca6edfd9c690a62ee" category="list-text">別のサブスクリプション/アカウントを使用しているシステム、または別のリージョンにあるシステムにデータを復元します。</block>
   <block id="4c83a0fb55b796cfb06bd7c5684420d7" category="list-text">クラウド ストレージからCloud Volumes ONTAPシステムまたはオンプレミス システムへのボリュームの _クイック リストア_ を実行します。ボリュームへのアクセスをできるだけ早く提供する必要がある災害復旧の状況に最適です。</block>
@@ -3719,13 +3640,11 @@
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">サポートされている地域</block>
   <block id="c120c4e2a5b4e4e9674aa4b23a31ab0a" category="paragraph">NetApp Backup and Recovery は、多くの Amazon Web Services、Microsoft Azure、Google Cloud リージョンでCloud Volumes ONTAPによってサポートされています。</block>
   <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">グローバル地域マップを使用して詳細を確認する</block>
-  <block id="9f91fcd773ad2a225e5e66714c4ab412" category="paragraph">NetApp Backup and Recovery を使用すると、次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにONTAPボリュームをバックアップできます。スナップショット コピーはソース システムに存在します。</block>
   <block id="1d85e7a2656bd01575d59e1548bbed4b" category="cell">宛先オブジェクトストア（バックアップ） ifdef::aws[]</block>
   <block id="c373a9aa878db8431d1195796e8e6695" category="cell">Google のCloud Volumes ONTAP</block>
   <block id="9ecea76e21268445d7d03aec4130ba29" category="cell">Google オンプレミスONTAPシステムのCloud Volumes ONTAP</block>
   <block id="c0b279eeed106351906f95aa546f2ffa" category="cell">Google Cloud Storage endif::gcp[]</block>
   <block id="54ae5f645a65dd82ea439de20806bd9f" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud Storage endif::gcp[] NetApp StorageGRID ONTAP S3</block>
-  <block id="839ea92fa23f691822ce0135ecd8e9ed" category="paragraph">セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショット コピーはソース システム上に存在し、同じシステムにのみ復元できます。</block>
   <block id="85970a97aacb509bbf4ce9364724b494" category="cell">バックアップファイルの場所</block>
   <block id="1f7c54e25f65414cece608c8f0604e55" category="cell">宛先システム</block>
   <block id="bc7aa7434d0ca9752e2c02b4ffee9953" category="cell">AWS オンプレミスONTAPシステムのCloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
@@ -3744,7 +3663,6 @@
   <block id="aa0373aa24c3795f9860b49e074ec0b5" category="inline-link-macro">ONTAPボリュームのバックアップとリストアの制限</block>
   <block id="ebdfb969c44f2d0deea1007cbf186b81" category="paragraph">以下のセクションを参照してください<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block>追加の要件と制限については、こちらをご覧ください。</block>
   <block id="9b228e8142c1f49c9a7b1365505bc5d5" category="paragraph">ONTAPシステムでNetApp Backup and Recoveryを使用する場合、リソース料金とサービス料金の 2 種類のコストが発生します。これら両方の料金は、サービスのオブジェクト部分へのバックアップに対して発生します。</block>
-  <block id="1854bdaf3ded217ffdff52794b6c84fc" category="paragraph">スナップショット コピーまたは複製ボリュームの作成には、スナップショット コピーと複製ボリュームを保存するために必要なディスク領域以外は料金はかかりません。</block>
   <block id="dd49bc28723be22ffdd3f04630c122df" category="paragraph">NetApp Backup and Recovery はソース ボリュームのストレージ効率を維持するため、 ONTAP効率化後のデータ (重複排除と圧縮が適用された後の少量のデータ) に対してクラウド プロバイダーのオブジェクト ストレージ コストを支払います。</block>
   <block id="fedaab8c05c476a14c09d3ad41bf9a22" category="list-text">Googleでは新しいバケットがデプロイされ、<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>アカウント/プロジェクト レベルでプロビジョニングされます。</block>
   <block id="1cd41d0d05820bca7b344cb3376a61e1" category="list-text">ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。</block>
@@ -3774,7 +3692,6 @@
   <block id="39895b41edb7cf3963dcb646a1e20553" category="paragraph">この図は、ボリュームがCloud Volumes ONTAPシステムに複製されていることを示していますが、ボリュームはオンプレミスのONTAPシステムにも複製できます。</block>
   <block id="57739bc049ff58f3d3db6f5281e84b85" category="section-title">バックアップの保存場所</block>
   <block id="19fe226921eb8023a05c222ee84c5db8" category="paragraph">バックアップは、バックアップの種類に応じて異なる場所に保存されます。</block>
-  <block id="f063a288d9f943a1ba418ca3e5c0631e" category="list-text">_スナップショット コピー_ はソース システムのソース ボリュームに存在します。</block>
   <block id="84b23b52a16a2d456b93cfcd37a9fb17" category="list-text">_複製されたボリューム_は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。</block>
   <block id="9b1fec5e0f334c7c6734500536c26eec" category="list-text">_バックアップ コピー_ は、コンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスター/システムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに「netapp-backup-clusteruuid」という名前が付けられます。このオブジェクト ストアを削除しないように注意してください。</block>
   <block id="6dd0453948f319bf0e93a8760cf57765" category="paragraph">+ ** AWSでは、コンソールで<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block>S3 バケット上。</block>
@@ -3785,16 +3702,13 @@
   <block id="ce6bd8b7e44a144f2c3eefb8fb43c028" category="inline-link-macro">システムのNetApp Backup and Recoveryの登録を解除する</block>
   <block id="dde7812a2b64115f166d47da097a615f" category="paragraph">将来的にクラスタの宛先オブジェクトストアを変更する場合は、<block ref="4b0267ab70996ada4858bf6db6495e68" category="inline-link-macro-rx"></block> 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recoveryを有効にします。</block>
   <block id="47c63e2d9d67be358326c1eff2c87d12" category="section-title">カスタマイズ可能なバックアップスケジュールと保持設定</block>
-  <block id="88c69def3d7b1f25782ddaba85be2909" category="paragraph">システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、選択したポリシーを使用してバックアップされます。スナップショット コピー、複製されたボリューム、バックアップ ファイルごとに個別のポリシーを選択できます。異なるリカバリポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、 NetApp Backup and Recovery をアクティブ化した後でそれらのポリシーを他のボリュームに割り当てることができます。</block>
   <block id="2e15d79bbec0c847d20d0f428a238b39" category="paragraph">すべてのボリュームの毎時、毎日、毎週、毎月、毎年のバックアップの組み合わせを選択できます。オブジェクトへのバックアップでは、3 か月、1 年、7 年間のバックアップと保持を提供するシステム定義のポリシーのいずれかを選択することもできます。 ONTAP System Manager またはONTAP CLI を使用してクラスタ上に作成したバックアップ保護ポリシーも選択肢として表示されます。これには、カスタムSnapMirrorラベルを使用して作成されたポリシーが含まれます。</block>
-  <block id="3ded04ab14e3868e7d9393ed137519a9" category="admonition">ボリュームに適用されるスナップショット ポリシーには、レプリケーション ポリシーとオブジェクトへのバックアップ ポリシーで使用しているラベルのいずれかが必要です。一致するラベルが見つからない場合、バックアップ ファイルは作成されません。たとえば、「毎週」複製されたボリュームとバックアップ ファイルを作成する場合は、「毎週」スナップショット コピーを作成するスナップショット ポリシーを使用する必要があります。</block>
   <block id="27f4e7945442348457ec28cf1aa6eefd" category="paragraph">カテゴリまたは間隔のバックアップの最大数に達すると、古いバックアップが削除されるため、常に最新のバックアップが保持されます (そのため、古いバックアップがスペースを占有し続けることはありません)。</block>
   <block id="c1855e2778d4090a158417283de29dbc" category="admonition">データ保護ボリュームのバックアップの保持期間は、ソースSnapMirror関係で定義されている期間と同じです。必要に応じて、API を使用してこれを変更できます。</block>
   <block id="01ec9d3adb6b85775aeeda0d6d533e54" category="section-title">バックアップファイルの保護設定</block>
   <block id="03159d4daf48846363441f62acc89b17" category="paragraph">クラスターでONTAP 9.11.1 以降を使用している場合は、オブジェクト ストレージ内のバックアップを削除やランサムウェア攻撃から保護できます。各バックアップ ポリシーには、特定の期間 (_保持期間_) にわたってバックアップ ファイルに適用できる _DataLock および Ransomware Resilience_ のセクションが用意されています。</block>
   <block id="8756c7c925830c8c39d9804961d7d40b" category="list-text">_DataLock_ は、バックアップ ファイルが変更されたり削除されたりするのを防ぎます。</block>
   <block id="c73b2d161daabc3a9a53d6dd0c4df263" category="list-text">_ランサムウェア保護_ は、バックアップ ファイルの作成時とバックアップ ファイルからのデータの復元時に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。</block>
-  <block id="e3414eaea3759c338f18072fbecaa19f" category="paragraph">スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショット コピーに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。 「詳細設定」ページのオプションを使用して、最新のスナップショット コピーに対するスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。</block>
   <block id="78505512ebd89d20931322ac265d9153" category="paragraph">バックアップの保持期間は、バックアップ スケジュールの保持期間に最大 31 日間のバッファを加えた期間と同じです。たとえば、_5_ 個のコピーが保持される _毎週_ のバックアップでは、各バックアップ ファイルが 5 週間ロックされます。  _6_ 個のコピーが保持される _月次_ バックアップでは、各バックアップ ファイルが 6 か月間ロックされます。</block>
   <block id="4df1a85d32abc942958400f1bc79add0" category="paragraph">現在、バックアップ先が Amazon S3、Azure Blob、またはNetApp StorageGRIDの場合にサポートが利用できます。他のストレージ プロバイダーの宛先は、今後のリリースで追加される予定です。</block>
   <block id="0518809725b483d8fb74affb68a52a55" category="paragraph">詳細については、次の情報を参照してください。</block>
@@ -3819,7 +3733,6 @@
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">割り当てる前にバックアップの影響を考慮してください<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>ボリュームへの階層化ポリシー。データは即座に階層化されるため、 NetApp Backup and Recovery はローカル層ではなくクラウド層からデータを読み取ります。同時バックアップ操作ではクラウド オブジェクト ストアへのネットワーク リンクが共有されるため、ネットワーク リソースが飽和状態になるとパフォーマンスが低下する可能性があります。この場合、このタイプのネットワーク飽和を減らすために、複数のネットワーク インターフェイス (LIF) を事前に構成する必要がある場合があります。</block>
   <block id="c5a5bd782e20196933e5157112eab21c" category="summary">NetApp Backup and Recovery を使用すると、バックアップ ファイルからONTAPボリューム全体を復元したり、少数のファイルのみを復元する必要がある場合は、フォルダーまたは個々のファイルを復元したりできます。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">NetApp Backup and Recoveryを使用してバックアップファイルからONTAPデータを復元する</block>
-  <block id="87a4832d04243d1148150c025b69d9b6" category="paragraph">ONTAPボリューム データのバックアップは、バックアップを作成した場所（スナップショット コピー、複製されたボリューム、オブジェクト ストレージに保存されたバックアップ）から利用できます。これらのバックアップ場所のいずれからでも、特定の時点のデータを復元できます。  NetApp Backup and Recovery を使用すると、バックアップ ファイルからONTAPボリューム全体を復元したり、少数のファイルのみを復元する必要がある場合は、フォルダーまたは個々のファイルを復元したりできます。</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">*ボリューム* (新しいボリュームとして) を元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">*フォルダー* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">*ファイル* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
@@ -3827,7 +3740,6 @@
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">要約すると、ボリューム データをONTAPシステムに復元するために使用できる有効なフローは次のとおりです。</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">バックアップファイル -&gt; 復元されたボリューム</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">複製されたボリューム -&gt; 復元されたボリューム</block>
-  <block id="294431832876ce9e39076e7ab6f99361" category="list-text">スナップショットコピー -&gt; 復元されたボリューム</block>
   <block id="0039af36cdd68741c89e8c730e7b7442" category="admonition">ONTAPデータのリストアに関する制限については、<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block> 。</block>
   <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">復元ダッシュボード</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">詳細ボタン</block>
@@ -3854,7 +3766,6 @@
   <block id="cdabcc59f5dffd726bced2c44fc05f05" category="cell">*ボリュームを復元*</block>
   <block id="45b00b8867e09fe86605e260afbdb0e5" category="cell">*ファイルを復元*</block>
   <block id="d65d23f3099e6017c3c2569abf596741" category="cell">*フォルダを復元*</block>
-  <block id="e9fc6e7f6ec31fec53528f9b89ee0dcc" category="cell">Snapshotコピー</block>
   <block id="68295476c4bddb2040705057bdff61c0" category="cell">複製ボリューム</block>
   <block id="6b8f9734c5bdfb71d16a6d3d8a40513c" category="cell">バックアップファイル</block>
   <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">いずれかの復元方法を使用する前に、固有のリソース要件に合わせて環境が構成されていることを確認してください。これらの要件については、以下のセクションで説明します。</block>
@@ -3898,7 +3809,6 @@
   <block id="97df4568ca8321a997d9ed32ea75ab0a" category="list-text">*復元*タブを選択すると、復元ダッシュボードが表示されます。</block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">[参照と復元] セクションから、[ボリュームの復元] を選択します。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">[_ソースの選択_] ページで、復元するボリュームのバックアップ ファイルに移動します。復元する日付/タイムスタンプを持つ *システム*、*ボリューム*、および *バックアップ* ファイルを選択します。</block>
-  <block id="c884a3e70e8bce1d15f993ac9cb50a73" category="paragraph">*場所* 列には、バックアップ ファイル (スナップショット) が *ローカル* (ソース システム上のスナップショット コピー)、*セカンダリ* (セカンダリONTAPシステム上の複製されたボリューム)、または *オブジェクト ストレージ* (オブジェクト ストレージ内のバックアップ ファイル) のいずれであるかが表示されます。復元するファイルを選択します。</block>
   <block id="2dbe24936b99777ea029c253c6887625" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対してランサムウェア耐性がアクティブになっている場合 (バックアップ ポリシーで DataLock とランサムウェア耐性を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。  (バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">[_宛先の選択_] ページで、ボリュームを復元する *システム* を選択します。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">オブジェクト ストレージからバックアップ ファイルを復元するときに、オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。</block>
@@ -3919,7 +3829,6 @@
   <block id="db4e4a49003b7dd44bc5766a32164bcb" category="paragraph">アーカイブ ストレージにあるバックアップ ファイルからボリュームを復元する場合、アーカイブ層と復元の優先度に応じて数分から数時間かかる場合があることに注意してください。復元の進行状況を確認するには、[*ジョブ監視*] タブを選択します。</block>
   <block id="310dbba96c4cb79d0f5f822051257fc8" category="section-title">参照と復元を使用してフォルダとファイルを復元する</block>
   <block id="a391d0d3fdfe2f62007fc5c6a836f776" category="paragraph">ONTAPボリューム バックアップから少数のファイルのみを復元する必要がある場合は、ボリューム全体を復元するのではなく、フォルダーまたは個々のファイルを復元することを選択できます。フォルダーとファイルを元のシステムの既存のボリュームに復元することも、同じクラウド アカウントを使用している別のシステムに復元することもできます。オンプレミスのONTAPシステム上のボリュームにフォルダーとファイルを復元することもできます。</block>
-  <block id="b05475d66d7cbbe07fdea29b594c209b" category="admonition">現時点では、オブジェクト ストレージ内のバックアップ ファイルからのみフォルダーまたは個々のファイルを復元できます。現在、ローカル スナップショット コピーまたはセカンダリ システム (複製されたボリューム) にあるバックアップ ファイルからのファイルとフォルダーの復元はサポートされていません。</block>
   <block id="5a583661a8908e9d0eb4e2adb7e14660" category="paragraph">ONTAP 9.13.0 以降を使用している場合は、フォルダーとその中のすべてのファイルおよびサブフォルダーを復元できます。  9.13.0 より前のバージョンのONTAPを使用する場合、そのフォルダのファイルのみが復元され、サブフォルダまたはサブフォルダ内のファイルは復元されません。</block>
   <block id="c2d4eb2ee4a0b78ea11dd0bb39d93ab0" category="list-text">バックアップ ファイルに DataLock および Ransomware 保護が設定されている場合、 ONTAPバージョンが 9.13.1 以上の場合にのみフォルダー レベルの復元がサポートされます。以前のバージョンのONTAPを使用している場合は、バックアップ ファイルからボリューム全体を復元し、必要なフォルダーとファイルにアクセスできます。</block>
   <block id="df253d89e3119a8555e39eb63655c32c" category="list-text">バックアップ ファイルがアーカイブ ストレージに存在する場合、 ONTAPバージョンが 9.13.1 以上の場合にのみ、フォルダー レベルの復元がサポートされます。以前のバージョンのONTAPを使用している場合は、アーカイブされていない新しいバックアップ ファイルからフォルダを復元するか、アーカイブされたバックアップからボリューム全体を復元して、必要なフォルダとファイルにアクセスすることができます。</block>
@@ -3966,7 +3875,6 @@
   <block id="09fa58168e9af9ca1cd785d08f1c7401" category="list-text">ソース フォルダ/ファイルが配置されていたのと同じ宛先システムとボリュームを選択した場合は、[*ソース フォルダ パスを維持*] を選択して、フォルダまたはファイルをソース構造に存在していたのと同じフォルダに復元できます。同じフォルダーとサブフォルダーがすべてすでに存在している必要があります。フォルダーは作成されません。ファイルを元の場所に復元する場合、ソース ファイルを上書きするか、新しいファイルを作成するかを選択できます。</block>
   <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">検索と復元を使用してONTAPデータを復元する</block>
   <block id="4647e43883c439381a72ddb443f378a3" category="paragraph">検索と復元を使用して、 ONTAPバックアップ ファイルからボリューム、フォルダー、またはファイルを復元できます。検索と復元を使用すると、すべてのバックアップから特定のボリューム、フォルダー、またはファイルを検索し、復元を実行できます。正確なシステム名、ボリューム名、またはファイル名を知る必要はありません。検索ではすべてのボリューム バックアップ ファイルを検索します。</block>
-  <block id="bf802d832421f119f7634686c468943a" category="paragraph">検索操作では、 ONTAPボリュームに存在するすべてのローカル スナップショット コピー、セカンダリ ストレージ システム上のすべての複製ボリューム、およびオブジェクト ストレージに存在するすべてのバックアップ ファイルを検索します。ローカルのスナップショット コピーまたは複製されたボリュームからデータを復元する方が、オブジェクト ストレージ内のバックアップ ファイルから復元するよりも高速でコストも抑えられるため、これらの他の場所からデータを復元することもできます。</block>
   <block id="852fc25af352236327df0d0cfcc56af6" category="paragraph">バックアップ ファイルから完全なボリュームを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいボリュームを作成します。データは、元のシステムのボリュームとして、ソース システムと同じクラウド アカウントにある別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="1c207467db02af6d5369de8a352a5deb" category="paragraph">フォルダーまたはファイルを、元のボリュームの場所、同じシステム内の別のボリューム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
   <block id="20f2d0bb5e696b331efc736ffadbb3f3" category="paragraph">復元するボリュームのバックアップ ファイルがアーカイブ ストレージ ( ONTAP 9.10.1 以降で使用可能) に存在する場合、復元操作には時間がかかり、追加のコストが発生します。なお、宛先クラスタでは、ボリュームの復元の場合はONTAP 9.10.1 以上、ファイルの復元の場合は 9.11.1、Google Archive およびStorageGRIDの場合は 9.12.1、フォルダの復元の場合は 9.13.1 を実行している必要があります。</block>
@@ -3982,7 +3890,6 @@
   <block id="042e2868bd27cf0f2d07239f80a976dd" category="list-text">ONTAPバージョンは 9.8 以上である必要があります。</block>
   <block id="6f0cd96277bd61a1a3f4c2504033ded7" category="list-text">ボリュームが存在するストレージ VM (SVM) には、データ LIF が設定されている必要があります。</block>
   <block id="aba6991b1b269dad52e52cd4c3998779" category="list-text">ボリューム上で NFS を有効にする必要があります (NFS ボリュームと SMB/CIFS ボリュームの両方がサポートされています)。</block>
-  <block id="2c8d83a35f8a30eb4b51cf39268742ac" category="list-text">SnapDiff RPC サーバを SVM 上でアクティブ化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。  (SnapDiff は、スナップショット コピー間のファイルとディレクトリの違いを迅速に識別するテクノロジです。)</block>
   <block id="b08d607bff755a82c8c9d9351d968b4a" category="list-text">AWS 要件:</block>
   <block id="69822c6d3eec5c2a5b83f578217d08ce" category="inline-link-macro">すべての権限が正しく設定されていることを確認してください</block>
   <block id="1e7dbc6a754183195338f872192f2c45" category="list-text">コンソールに権限を付与するユーザー ロールに、特定の Amazon Athena、AWS Glue、および AWS S3 権限を追加する必要があります。<block ref="06b194663576cd6f267595be51223fa0" category="inline-link-macro-rx"></block>。</block>
@@ -4049,11 +3956,9 @@
   <block id="2d11ad8508024a513d6b7186c8a38a23" category="list-text">検索と復元ページから:</block>
   <block id="50804d8e3eafe9323d24fb2bfd7d13dc" category="list-text">_検索バー_ に、ボリューム名、フォルダー名、またはファイル名の完全または一部を入力します。</block>
   <block id="46937cc6416c5746cc8a700eea0e8703" category="list-text">リソースの種類を選択します: *ボリューム*、*ファイル*、*フォルダー*、または*すべて*。</block>
-  <block id="a07004effbfedc37a717427224dfdff0" category="list-text">[フィルター条件] 領域で、フィルター条件を選択します。たとえば、データが存在するシステムとファイルの種類（.JPEG ファイルなど）を選択できます。または、オブジェクト ストレージ内の利用可能なスナップショット コピーまたはバックアップ ファイル内のみで結果を検索する場合は、バックアップの場所のタイプを選択できます。</block>
   <block id="85a46e33aff0f68ce9ba52bf07ca5bc7" category="list-text">*検索*を選択すると、検索結果領域に、検索に一致するファイル、フォルダー、またはボリュームを持つすべてのリソースが表示されます。</block>
   <block id="78406c28c28b069751b1b5a8f5dea6f8" category="list-text">復元するデータがあるリソースを見つけて、[すべてのバックアップを表示] を選択し、一致するボリューム、フォルダー、またはファイルを含むすべてのバックアップ ファイルを表示します。</block>
   <block id="2990ab511029f6c10e696e43177d4fdd" category="list-text">データの復元に使用するバックアップ ファイルを見つけて、[復元] を選択します。</block>
-  <block id="406385bac6b7601aab1eff5d8a317cc3" category="paragraph">結果には、検索対象のファイルを含むローカル ボリュームのスナップショット コピーとリモートの複製ボリュームが識別されることに注意してください。クラウド バックアップ ファイル、スナップショット コピー、または複製されたボリュームから復元することを選択できます。</block>
   <block id="4d1f1dc63841491797cde0fde7dec31d" category="list-text">ボリューム、フォルダー、またはファイルを復元する宛先の場所を選択し、[復元] を選択します。</block>
   <block id="01b01daa5325b920936f5377a7aac296" category="list-text">ボリュームの場合、元の宛先システムを選択することも、代替システムを選択することもできます。  FlexGroupボリュームを復元する場合は、複数のアグリゲートを選択する必要があります。</block>
   <block id="41fa550da57731d6e696f924a00a377f" category="list-text">フォルダーの場合は、元の場所に復元することも、システム、ボリューム、フォルダーなどの別の場所を選択することもできます。</block>
@@ -4715,10 +4620,8 @@
   <block id="ba0363fe48f14ee1de2dc51cf57a540a" category="summary">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。</block>
   <block id="f67bd1ebeb2e1458c18ee1bfe3a0d5e2" category="doc">NetApp Backup and Recoveryを使用した Microsoft SQL ワークロードの保護の概要</block>
   <block id="a355bd32745a1495313545b192a3533f" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから AWS、Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムはポリシーに従って、クラウド アカウントにバックアップを自動的に作成して保存します。  3-2-1 戦略を使用します。つまり、データの 3 つのコピーを 2 つのストレージ システムに保存し、1 つのコピーをクラウドに保存します。</block>
-  <block id="8c08de76609beebf11bb1d984d12384e" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショット コピーを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
   <block id="d23f996c9926f1f022cbe22d0fcae8e8" category="paragraph">データを保護するために、次の操作を実行できます。</block>
   <block id="f59023f77e90026f16f584d31820eb90" category="paragraph">ワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
-  <block id="a54794387a0e725b2c0a86422f5c42f4" category="paragraph">NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードを復元します。スナップショット コピー、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージ内のバックアップを使用します。ワークロードを元のシステム、同じクラウド アカウントを持つ別のシステム、またはオンプレミスのONTAPシステムに復元します。</block>
   <block id="5f0d7635bc31258066861934b2abce44" category="list-text">ファイル名、場所、最終有効日が分かっている場合は、特定の時点に復元します。</block>
   <block id="045eae722cda03b00d9ad8dfdd4cbe51" category="admonition">バックアップ ファイルにアクセスするには、クラウド プロバイダーに追加料金を支払う必要があります。</block>
   <block id="2215c4c479bee2e93b68b2a226280019" category="paragraph">次のいずれかの方法を使用してワークロードを復元します。</block>
@@ -4767,7 +4670,6 @@
   <block id="e527fef252b77845c6d10efb41d3077b" category="list-text">Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>デフォルトです。</block>
   <block id="ec0d6793cc0295c832eb8da5d335a0c2" category="paragraph">さらに、DataLockに関連する費用の見積もりは、<block ref="b1f8c55788f886bad3d3eaf7350ac38f" category="inline-link-rx"></block> 。</block>
   <block id="4bcdbd17280f1741e2f9e78f6f376421" category="paragraph"><block ref="4bcdbd17280f1741e2f9e78f6f376421" category="inline-link-rx"></block></block>
-  <block id="cb447a62b60246b3a0d4eebb0e7236e4" category="paragraph">復元する前に、ソース ボリューム名、ソース システムと SVM、およびバックアップ ファイルの日付をメモします。ONTAPデータは、Snapshot コピー、複製されたボリューム、またはオブジェクト ストレージに保存されているバックアップから復元できます。</block>
   <block id="7eb5606462668a7d8775b600838f4f32" category="admonition">復元するバックアップ ファイルがアーカイブ クラウド ストレージ ( ONTAP 9.10.1 以降) に存在する場合、復元操作に時間がかかり、コストも発生します。また、宛先クラスタでは、ボリュームの復元の場合はONTAP 9.10.1 以上、ファイルの復元の場合は 9.11.1、Google Archive およびStorageGRIDの場合は 9.12.1、フォルダの復元の場合は 9.13.1 を実行している必要があります。</block>
   <block id="5b386dd69a6743085be6c1e524866fb5" category="paragraph">複数のファイルを選択した場合、それらは同じ宛先ボリュームに復元されます。ファイルを別のボリュームに復元するには、プロセスを複数回実行します。</block>
   <block id="b46b886ddef2fe81123875f2839d0892" category="list-text">ボリューム バックアップからフォルダーまたはファイルを復元するには、[復元] メニューを選択し、[参照と復元] の下にある [ファイルまたはフォルダーの復元] を選択します。</block>
@@ -4780,4 +4682,99 @@
   <block id="60c015b8ddd8d831a4c02882c86d1b96" category="list-text">S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。</block>
   <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。</block>
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">表示されるボリュームが元の環境に存在していたボリュームと同じであることを確認します。</block>
+  <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。</block>
+  <block id="1bf1acc6c6a3e3af639e9ae129364ba0" category="paragraph">この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recoveryによって管理されていません。</block>
+  <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS:<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
+  <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">アズール:<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
+  <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google クラウド:<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
+  <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。</block>
+  <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。</block>
+  <block id="c4a9fad82bfaa655d1dc063df314c9ed" category="list-text">ログ ディレクトリを構成します ([インベントリ] &gt; [ホスト])。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d4269b8b09864c01c1c86fd8fbf36f7e" category="paragraph">バックアップ ライフサイクル ジョブは、削除されたスナップショット、または削除待ちのキューにあるスナップショットをすべて追跡します。ONTAP 9.13 以降では、「ジョブ監視」ページで「保持」と呼ばれるすべてのジョブ タイプを確認できます。</block>
+  <block id="e55271e37b053fabbe06b3671cfb3c48" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirror を使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
+  <block id="ac953870175731881060585a6b9ee690" category="paragraph">NetApp Backup and Recovery を使用すると、Microsoft SQL Server インスタンスとデータベースを次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにバックアップできます。スナップショットはソース システムに存在します。</block>
+  <block id="d07d19d5986209f0a00db1f8289e73d2" category="paragraph">プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
+  <block id="4c0cc18e33fa07512d511f9a04e0629a" category="cell">Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3</block>
+  <block id="c60e36349d596cf0c1aa6f81af07e331" category="summary">スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップからデータベース ワークロードを復元します。</block>
+  <block id="5a2a139323e6d5500103ef2022ae2f1b" category="paragraph">NetApp Backup and Recoveryを使用して Microsoft SQL Server ワークロードを復元します。スナップショット、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージ内のバックアップを使用します。ワークロードを元のシステム、同じクラウド アカウントを持つ別のシステム、またはオンプレミスのONTAPシステムに復元します。</block>
+  <block id="f9bef19f0d38828a9a73a3af229a72d5" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージに保存されたバックアップから Oracle データベースを復元します。</block>
+  <block id="e6e260ceb36a63c5c858a5939aa0a093" category="paragraph">ローカル スナップショット、セカンダリ ストレージへのレプリケーション、オブジェクト ストレージへのバックアップを管理するポリシーを作成できます。3-2-1 戦略の一部として、プライマリ ストレージ システム上のインスタンス、データベース、アプリケーション、または VM のスナップショットを作成します。</block>
+  <block id="6401b61f7f56a390f004be1c6e52452f" category="paragraph">検出中に、 NetApp Backup and Recovery は組織内の VMware ワークロードを分析し、既存の保護ポリシー、スナップショット、バックアップおよび復元オプションを評価してインポートします。</block>
+  <block id="bd45d990ee6243026d43e7ba09d9dcc7" category="list-text">SnapCenter Plug-in for VMware vSphereから既存の保護ポリシー、スナップショット、バックアップおよび復元オプションをインポートします。</block>
+  <block id="738f5e601244316981f42d0e0d74788f" category="list-text">ダッシュボードを表示するには、「バックアップとリカバリ」メニューから「ダッシュボード」を選択します。</block>
+  <block id="52e10d37ef7bbcf001c2af25b92aaa07" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから VMware ワークロードを復元します。</block>
+  <block id="c7216ade1ce2641cd0b5ceae5c192aea" category="paragraph">スナップショットや複製ボリュームの作成には、スナップショットや複製ボリュームを保存するために必要なディスク容量以外は料金はかかりません。</block>
+  <block id="ec5903fe264ba75792e588ee687f9158" category="paragraph">バックアップ ライセンスは、オブジェクト ストレージからのバックアップと復元にのみ必要です。スナップショットおよび複製されたボリュームの作成にはライセンスは必要ありません。</block>
+  <block id="0f3f39435676ffeef4ba4ef82d2d4b94" category="list-text">*既存のスナップショットをバックアップ コピーとしてオブジェクト ストレージにエクスポートする*: このシステムで選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致する、このシステムのボリュームのローカル スナップショットがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。</block>
+  <block id="b26fafb8754488cba5d1c6f4c35f4b89" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショットに含まれるプライマリ ストレージ システム データの差分コピーが含まれます。</block>
+  <block id="bb5dc31143cea02e04349aa386dc4c27" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショットに含まれるプライマリ ストレージ データの差分コピーが含まれます。</block>
+  <block id="d04d7ffd1d421df13a11259032d9191e" category="paragraph">NetApp Backup and Recoveryを使用すると、バックアップ スケジュールの変更、ボリューム バックアップの有効化/無効化、バックアップの一時停止、バックアップの削除、バックアップの強制削除などを行って、 Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムのバックアップを管理できます。これには、スナップショット、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。NetApp Backup and Recovery の登録を解除することもできます。</block>
+  <block id="294441075d63ebaf575b2bea27e26a8b" category="paragraph">ボリューム バックアップ ダッシュボードで、現在バックアップ中のすべてのボリュームのリストを表示できます。これには、スナップショット、複製されたボリューム、オブジェクト ストレージ内のバックアップ ファイルなど、すべての種類のバックアップが含まれます。現在バックアップされていないシステム内のボリュームを表示することもできます。</block>
+  <block id="16733ccec61246c84b6ccea8b096ea96" category="list-text">「既存の保護」列で保護オプションのステータスを確認します。3 つのアイコンは、「ローカル スナップショット」、「複製されたボリューム」、「オブジェクト ストレージ内のバックアップ」を表します。</block>
+  <block id="41164544ff8c92dec6c6202f3c48b888" category="list-text">[バックアップ戦略の定義] ページで、バックアップ アーキテクチャを選択し、ローカル スナップショット、レプリケートされたボリューム、およびバックアップ ファイルのポリシーとその他の詳細を定義します。このシステムでアクティブ化した初期ボリュームからのバックアップ オプションの詳細を参照してください。次に「次へ」を選択します。</block>
+  <block id="6c93c0ee904d580923385784899b59a3" category="paragraph">ポリシーが割り当てられている既存のボリュームに割り当てられたバックアップ ポリシーを変更できます。ローカル スナップショット、複製されたボリューム、およびバックアップ ファイルのポリシーを変更できます。ボリュームに適用する新しいスナップショット、レプリケーション、またはバックアップ ポリシーがすでに存在している必要があります。</block>
+  <block id="257aa7f9d15bc46fa7c45edeac5b1ab7" category="list-text">[バックアップ戦略の編集] ページで、ローカル スナップショット、複製されたボリューム、およびバックアップ ファイルの既存のバックアップ ポリシーを変更し、[次へ] を選択します。</block>
+  <block id="96f9f5071945e75714c9ffbe54f80851" category="list-text">表示されるバックアップ ページで、ローカル スナップショット、複製されたボリューム、またはバックアップ ファイルの既存のバックアップ ポリシーを変更し、[保存] を選択します。</block>
+  <block id="c394a26f3d6de3615a172a12e31a16e4" category="paragraph">ボリュームのオブジェクトにアドホック スナップショットまたはバックアップを作成できます。アドホック複製ボリュームを作成することはできません。</block>
+  <block id="44b2c63b1441a7eef6175bc2818c45c0" category="paragraph">ボリュームの詳細とスナップショットのリストが表示されます。</block>
+  <block id="2e3f296276fc537735df961d32dd7d12" category="cell">スナップショットの増分転送を一時停止して、宛先ボリュームを更新します。増分更新を再開したい場合は、後で再開できます。</block>
+  <block id="695fbf9213e2d5d1e929e9356fa04c37" category="paragraph">このアクションはスナップショットや複製されたボリュームには影響しないことに注意してください。これらの種類のバックアップ ファイルは削除されません。</block>
+  <block id="241f8ce89369b1ae16481599cd708881" category="paragraph">不要になったバックアップ ファイルを 1 つ削除できます。これには、ボリューム スナップショットの単一のバックアップまたはオブジェクト ストレージ内のバックアップの単一のバックアップの削除が含まれます。</block>
+  <block id="9c01aed76561204d094a863f38d38ad2" category="paragraph">ボリュームの詳細が表示され、*スナップショット*、*レプリケーション*、または*バックアップ*を選択して、ボリュームのすべてのバックアップ ファイルのリストを表示できます。デフォルトでは、利用可能なスナップショットが表示されます。</block>
+  <block id="d525060e9ad215c3aa2a00862d266e25" category="list-text">*既存のスナップショットをバックアップ コピーとしてオブジェクト ストレージにエクスポートする*: このシステムで選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致する、このシステムのボリュームのローカル スナップショットがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの保護が最も完全になります。</block>
+  <block id="7c5de50c41f0a8634817597808c6df4b" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショットに含まれるプライマリ データの差分コピーが含まれます。</block>
+  <block id="d35a77cfe575d13394b221b746fe1f0b" category="paragraph">クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。このライセンスはオブジェクト ストレージへのバックアップと復元用です。スナップショットや複製されたボリュームを作成するのにライセンスは必要ありません。このライセンスはアカウント用であり、複数のシステムで使用できます。</block>
+  <block id="4ae0ae424ac8104b3b6379720f5d11c7" category="list-text">*ローカル スナップショット*: ローカル スナップショットを作成します。</block>
+  <block id="45f89ff96066abe8d4fab644a72cff53" category="list-text">*既存のスナップショットをバックアップ ファイルとしてオブジェクト ストレージにエクスポートする*: このシステム内のボリュームに、選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致するローカル スナップショットがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの最も完全な保護が確保されます。</block>
+  <block id="3a4f7228272f3d796e47dc3105df1408" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、ソース データの完全なコピーが含まれます。後続の転送には、スナップショットに含まれるプライマリ ストレージ データの差分コピーが含まれます。</block>
+  <block id="d8521ea0d293cfc6440bf09453cebbd9" category="paragraph">オブジェクト ストレージへのバックアップの作成に加えて、スナップショットと複製されたボリュームのスケジュール設定と作成の機能を備えたNetApp Backup and Recoveryの新しいバージョンでは、コンソール エージェントのバージョン 3.9.31 以上を使用する必要があります。したがって、すべてのバックアップを管理するには、この最新リリースを入手することをお勧めします。</block>
+  <block id="33b4029bcdc81d3d05791f1403584ca0" category="paragraph">オブジェクト ストレージへのスナップショット、レプリケーション、バックアップを管理するポリシーを作成できます。</block>
+  <block id="6a765f5fb9e687173df4e2b03937673d" category="paragraph">3-2-1 戦略の一部として、プライマリ ストレージ システム上のボリュームのスナップショットを作成します。</block>
+  <block id="ac82d5df0fb83f5f0530ce8aa4d94a15" category="paragraph">[詳細設定] ページを使用して、各ONTAPシステムに対してNetApp Backup and Recovery をアクティブ化するときに設定した、クラスタ レベルのオブジェクトへのバックアップ ストレージ設定を変更できます。「デフォルト」のバックアップ設定として適用されているいくつかの設定を変更することもできます。これには、オブジェクト ストレージへのバックアップの転送速度の変更、履歴スナップショットをバックアップ ファイルとしてエクスポートするかどうか、システムのランサムウェア スキャンの有効化または無効化などが含まれます。</block>
+  <block id="1b22a10a2875f8854738412fd55a7964" category="list-text">履歴スナップショットをバックアップ ファイルとしてエクスポートし、将来のボリュームの初期ベースライン バックアップ ファイルに含めるかどうかを変更する</block>
+  <block id="8590a86fff0fbd8d0c19bac8d47c9fe1" category="section-title">履歴スナップショットをバックアップファイルとしてエクスポートするかどうかを変更する</block>
+  <block id="20cf918510f72844a04ae68981e61c14" category="paragraph">このシステムで使用しているバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致するボリュームのローカル スナップショットがある場合は、それらの履歴スナップショットをバックアップ ファイルとしてオブジェクト ストレージにエクスポートできます。これにより、古いスナップショットをベースライン バックアップ コピーに移動して、クラウド内のバックアップを初期化できるようになります。</block>
+  <block id="5f73887604eb5a0b44550e5a1371b94d" category="list-text">[詳細設定] ページで、[*既存のスナップショットのエクスポート*] セクションを展開します。</block>
+  <block id="7eb825e7b5e7636a29150410089bcbf5" category="list-text">既存のスナップショットをエクスポートするかどうかを選択します。</block>
+  <block id="98d551107f1d17645e2b050fe333480b" category="paragraph">いずれかのボリュームのバックアップ ポリシーに「年間」バックアップ ラベルを選択すると、作成されるスナップショットが非常に大きくなります。デフォルトでは、これらの年次スナップショットは、オブジェクト ストレージに転送された後、ソース システムから自動的に削除されます。このデフォルトの動作は、年間スナップショットの削除セクションから変更できます。</block>
+  <block id="9d667c05d0d18216605cbb0bc59a1281" category="paragraph">ランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショットに対してのみ実行されます。「詳細設定」ページのオプションを使用して、最新のスナップショットに対するランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトで 7 日ごとにスキャンが実行されます。</block>
+  <block id="b337f362b39ae43e2ecb969af7243145" category="paragraph">スケジュールされたランサムウェア スキャンは、最新のスナップショットに対してのみ実行されます。</block>
+  <block id="da251788f86e521e7d3714c723201b4e" category="list-text">どのような保護機能を使用しますか: スナップショット、複製ボリューム、クラウドへのバックアップ</block>
+  <block id="55aeb9ffe6571ee026c3aced844fd2a8" category="cell">ソース ボリューム内のボリュームの読み取り専用の特定時点のイメージをスナップショットとして作成します。スナップショットを使用して、個々のファイルを回復したり、ボリュームの内容全体を復元したりできます。</block>
+  <block id="df0b18dcdaa591155a9eed6206daef89" category="paragraph">スナップショットはすべてのバックアップ方法の基礎であり、バックアップおよびリカバリ サービスを使用するために必要です。スナップショットは、ボリュームの読み取り専用の特定時点のイメージです。イメージは、最後のスナップショットが作成されてからファイルに加えられた変更のみを記録するため、最小限のストレージスペースしか消費せず、パフォーマンスのオーバーヘッドもごくわずかです。ボリューム上に作成されたスナップショットは、図に示すように、複製されたボリュームとバックアップ ファイルをソース ボリュームに加えられた変更と同期させるために使用されます。</block>
+  <block id="f657f3a24ce036c104527afcc922edf3" category="inline-image-macro">バックアップ ファイルが、ソース システムではスナップショットとして、セカンダリ ストレージ システムでは複製されたボリュームとして、オブジェクト ストレージではバックアップ ファイルとしてどのように存在するかを示す図。</block>
+  <block id="dcbf20d88463ce5fd2bc493556922c47" category="paragraph"><block ref="dcbf20d88463ce5fd2bc493556922c47" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2776758e5e8aebbda8cfb9befc94e487" category="list-text">ソースボリューム -&gt; スナップショット -&gt; 複製ボリューム -&gt; バックアップファイル</block>
+  <block id="804e9de66928797cdc078acab1089abf" category="list-text">ソースボリューム -&gt; スナップショット -&gt; バックアップファイル</block>
+  <block id="3c66f6c34fa4c46a8e7745dfec597ca4" category="list-text">ソースボリューム -&gt; スナップショット -&gt; 複製ボリューム</block>
+  <block id="1cecb337312aeb1c06c561eedd94effd" category="paragraph">*ファンアウト* アーキテクチャは、スナップショットを宛先ストレージ システムとクラウド内のバックアップ オブジェクトの両方に独立して転送します。</block>
+  <block id="e86b3ba1e8d7c819fe8eb9abc1c4c695" category="inline-image-macro">ボリュームのスナップショットを使用して、複製されたボリュームとバックアップ ファイルを作成および更新する方法を示す図。</block>
+  <block id="e275cc404d288505406ea21d6353319e" category="paragraph"><block ref="e275cc404d288505406ea21d6353319e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfa9ed0e82f69a09befb3dbb6cfec828" category="paragraph">*カスケード* アーキテクチャでは、まずスナップショットが宛先ストレージ システムに転送され、次にそのシステムがそのコピーをクラウド内のバックアップ オブジェクトに転送します。</block>
+  <block id="94ca58d677a1508cb37719aa6942c1fb" category="paragraph"><block ref="94ca58d677a1508cb37719aa6942c1fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a15375a7b3327e9590f9cabdb3323373" category="cell">スナップショットを 2 つの異なるシステムに送信するため、ソース システムのパフォーマンスへの影響はわずかです。</block>
+  <block id="44031357b6c3b154b9d96f1c9344912c" category="cell">スナップショットを一度だけ送信するため、ソースストレージシステムのパフォーマンスへの影響が少なくなります。</block>
+  <block id="27633467a4d084c1ae2d149610df116e" category="list-text">デフォルトのスナップショット ポリシーでは、時間別、日次、週次スナップショットが作成され、時間別スナップショットが 6 つ、日次スナップショットが 2 つ、週次スナップショットが 2 つ保持されます。</block>
+  <block id="479879a0a56a65760a613ed57fb23158" category="list-text">デフォルトのレプリケーション ポリシーでは、毎日および毎週のスナップショットがレプリケートされ、7 つの毎日のスナップショットと 52 の毎週のスナップショットが保持されます。</block>
+  <block id="4781e0ae3fa76dcbea28b4037c95437d" category="list-text">デフォルトのバックアップ ポリシーでは、毎日および毎週のスナップショットが複製され、7 つの毎日のスナップショットと 52 の毎週のスナップショットが保持されます。</block>
+  <block id="4505d5dc59ca341c8aa8ef2c0fac02a6" category="list-text">ソースシステム上のボリュームのスナップショット</block>
+  <block id="caec39d67e86a9c850947c8f558df9b9" category="paragraph"><block ref="caec39d67e86a9c850947c8f558df9b9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aad04fb15ee44595658c033dd06ddac1" category="paragraph">NetApp Backup and Recovery は、 NetApp のSnapMirrorデータ レプリケーション テクノロジを活用して、スナップショットを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
+  <block id="4d9a28db017266e35e5d4203c8c74098" category="list-text">ローカル スナップショット、複製されたボリューム、またはオブジェクト ストレージ内のバックアップされたボリュームから特定の時点のデータを復元します。</block>
+  <block id="80833b701d0227f13b23b9e423eb6766" category="paragraph">NetApp Backup and Recoveryと、次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにONTAPボリュームをバックアップできます。スナップショットはソース システムに存在します。</block>
+  <block id="1bbb6529f158f1043f5462af251a4d8d" category="paragraph">セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから次のシステムにONTAPデータを復元できます。スナップショットはソース システムに存在し、同じシステムにのみ復元できます。</block>
+  <block id="45374e4c2372e5efe029c3622265209a" category="list-text">_スナップショット_ はソース システムのソース ボリュームに存在します。</block>
+  <block id="30e07a9dd02dd98f372bd162ec8456ef" category="paragraph">システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、選択したポリシーを使用してバックアップされます。スナップショット、複製されたボリューム、バックアップ ファイルごとに個別のポリシーを選択できます。異なるリカバリポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、 NetApp Backup and Recovery をアクティブ化した後でそれらのポリシーを他のボリュームに割り当てることができます。</block>
+  <block id="fa3dd3bcafecb630044b7d1eddb7cd43" category="admonition">ボリュームに適用されるスナップショット ポリシーには、レプリケーション ポリシーとオブジェクトへのバックアップ ポリシーで使用しているラベルのいずれかが必要です。一致するラベルが見つからない場合、バックアップ ファイルは作成されません。たとえば、「毎週」複製されたボリュームとバックアップ ファイルを作成する場合は、「毎週」スナップショットを作成するスナップショット ポリシーを使用する必要があります。</block>
+  <block id="9e813756b5af6bc196c66209061d9d1a" category="paragraph">スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショットに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。「詳細設定」ページのオプションを使用して、最新のスナップショットでスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。</block>
+  <block id="c379b9e8581a6fd59a6755037f41a617" category="paragraph">ONTAPボリューム データのバックアップは、バックアップを作成した場所（スナップショット、複製されたボリューム、オブジェクト ストレージに保存されたバックアップ）から利用できます。これらのバックアップ場所のいずれからでも、特定の時点のデータを復元できます。NetApp Backup and Recovery を使用すると、バックアップ ファイルからONTAPボリューム全体を復元したり、少数のファイルのみを復元する必要がある場合は、フォルダーまたは個々のファイルを復元したりできます。</block>
+  <block id="02c75a95538b43e9e819f0d1b0cc19f2" category="list-text">スナップショット -&gt; 復元されたボリューム</block>
+  <block id="2630c5e201ef46189b621a683ffbc8dc" category="paragraph">復元する前に、ソース ボリューム名、ソース システムと SVM、およびバックアップ ファイルの日付をメモします。スナップショット、複製されたボリューム、またはオブジェクト ストレージに保存されたバックアップからONTAPデータを復元できます。</block>
+  <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
+  <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">*場所* 列には、バックアップ ファイル (スナップショット) が *ローカル* (ソース システム上のスナップショット)、*セカンダリ* (セカンダリONTAPシステム上の複製されたボリューム)、または *オブジェクト ストレージ* (オブジェクト ストレージ内のバックアップ ファイル) のいずれであるかが表示されます。復元するファイルを選択します。</block>
+  <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">現時点では、オブジェクト ストレージ内のバックアップ ファイルからのみフォルダーまたは個々のファイルを復元できます。現在、ローカル スナップショットまたはセカンダリ システム (複製されたボリューム) にあるバックアップ ファイルからのファイルとフォルダーの復元はサポートされていません。</block>
+  <block id="0c33ea8397b0b32c84a3332e9860b200" category="paragraph">検索操作では、 ONTAPボリュームに存在するすべてのローカル スナップショット、セカンダリ ストレージ システム上のすべての複製ボリューム、およびオブジェクト ストレージに存在するすべてのバックアップ ファイルを検索します。ローカル スナップショットまたは複製されたボリュームからデータを復元する方が、オブジェクト ストレージ内のバックアップ ファイルから復元するよりも高速でコストも抑えられるため、これらの他の場所からデータを復元することもできます。</block>
+  <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">SnapDiff RPC サーバを SVM 上でアクティブ化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。(SnapDiff は、スナップショット間のファイルとディレクトリの違いをすばやく識別するテクノロジーです。)</block>
+  <block id="dff115c532ece3121746427a98f68318" category="list-text">[フィルター条件] 領域で、フィルター条件を選択します。たとえば、データが存在するシステムとファイルの種類（.JPEG ファイルなど）を選択できます。または、オブジェクト ストレージ内の利用可能なスナップショットまたはバックアップ ファイル内のみで結果を検索する場合は、バックアップの場所のタイプを選択できます。</block>
+  <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">結果には、検索したファイルを含むローカル ボリュームのスナップショットとリモートの複製ボリュームが識別されることに注意してください。クラウド バックアップ ファイル、スナップショット、または複製されたボリュームから復元することを選択できます。</block>
 </blocks>

@@ -75,19 +75,9 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 次のリンクを使用して、クラウド プロバイダー マーケットプレイスからNetApp Backup and Recoveryをサブスクライブします。
 
-ifdef::aws[]
-
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::aws[]
-
-
-ifdef::azure[]
-
-* アズール: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::azure[]
-
-
-ifdef::gcp[]
-
-* Google クラウド: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] . endif::gcp[]
+* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
+* アズール: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
+* Google クラウド: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
 
 
 
@@ -97,8 +87,6 @@ ifdef::gcp[]
 年間契約を購入して、 NetApp Backup and Recoveryを毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。
 
 マーケットプレイスから年間契約を結んでいる場合、 NetApp Backup and Recoveryのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。
-
-ifdef::aws[]
 
 AWSを使用する場合、2つの年間契約から選択できます。 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWSマーケットプレイスページ"^] Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:
 
