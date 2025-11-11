@@ -16,8 +16,6 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 [role="lead"]
 NetApp Backup and Recoveryを使用して Oracle データベースとログを保護します。高速で、スペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップと復元を実現します。 Oracle ワークロードを AWS S3、 NetApp StorageGRID、Azure Blob Storage、またはONTAP S3 にバックアップします。オンプレミスの Oracle ホストにバックアップを復元します。
 
-image:../media/diagram-backup-recovery-general.png["一般的なバックアップとリカバリのアーキテクチャ図"]
-
 NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。

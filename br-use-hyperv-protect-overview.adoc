@@ -18,8 +18,6 @@ NetApp Backup and Recoveryを使用して Hyper-V VM を保護します。  NetA
 
 Hyper-V ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、Hyper-V ワークロードをオンプレミスの Hyper-V ホストに復元できます。
 
-image:../media/diagram-backup-recovery-general.png["一般的なバックアップとリカバリのアーキテクチャ図"]
-
 NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
