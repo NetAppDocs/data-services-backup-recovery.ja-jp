@@ -965,8 +965,6 @@
   <block id="4efc134fd5130564588a4806f9c977f0" category="summary">オンプレミスのONTAPシステムからプライマリ ストレージおよびセカンダリ ストレージまで、Hyper-V 仮想マシンを保護して、データが確実に保護されるようにすることができます。</block>
   <block id="997367baf18d147848dcf07ba10d7d8d" category="paragraph">NetApp Backup and Recoveryを使用して Hyper-V VM を保護します。  NetApp Backup and Recovery は、スタンドアロン インスタンスと FCI クラスタ インスタンスの両方に対して、高速でスペース効率が高く、クラッシュ整合性があり、VM 整合性のあるバックアップおよび復元操作を提供します。</block>
   <block id="9772979b1b90e72fc3981d222d55243a" category="paragraph">Hyper-V ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、Hyper-V ワークロードをオンプレミスの Hyper-V ホストに復元できます。</block>
-  <block id="27bf4d1e94a4188d82244d997deb945d" category="inline-image-macro">一般的なバックアップとリカバリのアーキテクチャ図</block>
-  <block id="a25193bbdff09f58ab1dcb4151b659ec" category="paragraph"><block ref="a25193bbdff09f58ab1dcb4151b659ec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。</block>
   <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">以前のNetApp Backup and RecoveryUIに切り替える</block>
@@ -2016,25 +2014,13 @@
   <block id="a426b39cc5038676b39d2265b22cebec" category="list-text">2 番目のオプションは、年間契約を結ぶことです。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">ライセンス</block>
   <block id="8426d45850b9ec06adef93652db54080" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。読む<block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block>詳細についてはセクションをご覧ください。</block>
-  <block id="72097de9125a66d03bbdf7bf977af276" category="paragraph">NetApp Backup and Recovery は無料トライアルとしてご利用いただけます。ライセンスキーがなくても、一定期間サービスをご利用いただけます。</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery は、次の消費モデルで利用できます。</block>
-  <block id="9db5c387eb2c1a4533c42a082e094d13" category="list-text">*お客様独自のライセンスの持ち込み (BYOL)*: NetAppから購入したライセンスは、どのクラウド プロバイダーでも使用できます。</block>
-  <block id="467e5d512a9162ad6d144008e41f967e" category="list-text">*従量課金制 (PAYGO)*: クラウド プロバイダーのマーケットプレイスからの時間単位のサブスクリプション。</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年間*: クラウド プロバイダーのマーケットプレイスからの年間契約。</block>
-  <block id="2d800cbdf9ba7a82c10657f2a93b18b5" category="paragraph">*ライセンスはご持参ください*</block>
-  <block id="e030c8eecbfc992cc68549bf0348d474" category="paragraph">BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年間）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。</block>
   <block id="6e26156d53b8aed5293cf52d74acb49c" category="inline-link-macro">ライセンスの設定方法を学ぶ</block>
   <block id="520d2c423b38acf3262d3f1e93b53d8a" category="paragraph"><block ref="5f449dd4c94fd29d3e3b83e45dd58382" category="inline-link-macro-rx"></block>。</block>
-  <block id="3e0c229baf295106907effcb0c861fcc" category="paragraph">*従量課金制サブスクリプション*</block>
   <block id="0f3691e0fad1edbca841aabd38ddfc42" category="paragraph">NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。</block>
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。</block>
-  <block id="9cb9e2f871f88a22d8fe4b82590901c6" category="paragraph">*年間契約*</block>
-  <block id="d53b530085f1dc3e3526eed96fa256d8" category="paragraph">AWS を使用する場合、1 年、2 年、または 3 年の 2 つの年間契約が利用可能です。</block>
-  <block id="5987d4056acac19af6f78703bc378427" category="list-text">Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。endif::aws[]</block>
-  <block id="365c46b758ba93d5bfe4bf6066ae85d9" category="paragraph">Azure を使用する場合、1 年、2 年、または 3 年の 2 つの年間契約が利用可能です。</block>
-  <block id="c2031f4f264e0d58f523db5c7a98efbb" category="list-text">Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。endif::azure[]</block>
-  <block id="565e9b99ea730c02b444af9641d863c0" category="paragraph">GCP を使用する場合は、 NetAppからプライベート オファーをリクエストし、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときにプランを選択できます。endif::gcp[]</block>
   <block id="8d76c3c56611813110af76c5eca39835" category="section-title">サポートされているデータソース、システム、バックアップターゲット</block>
   <block id="cec0c370d9c2ef0dbbf7f89c16ef1a90" category="paragraph-title">サポートされているワークロード データ ソース</block>
   <block id="471bdf4d52cdd0764f463e7010138e3f" category="paragraph">NetApp Backup and Recovery は、次のワークロードを保護します。</block>
@@ -4790,4 +4776,19 @@
   <block id="de272d4987aa96a00ccf6441ad353c0e" category="list-text"><block ref="f454c0203410fcd923445c6d0fd3fe90" prefix="" category="inline-code"></block> マウントされているパスです</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">例：</block>
   <block id="67e93e04234f9801960d3d563faf4619" category="list-title">インデックスを有効にする手順</block>
+  <block id="7c8150e957629e4f178e1453b244de4e" category="paragraph">NetApp Backup and Recoveryでは無料トライアルが提供されており、ライセンス キーなしでも一定期間使用できます。</block>
+  <block id="9b337326626f108661db15ede8612161" category="paragraph">バックアップ ライセンスは、オブジェクト ストレージに関連するバックアップおよび復元操作にのみ必要です。スナップショットおよび複製されたボリュームの作成にはライセンスは必要ありません。</block>
+  <block id="38791ac6dfcab3a4a150d9b40eb83c4b" category="paragraph">次の 3 つのライセンス オプションから選択できます。</block>
+  <block id="24a3699faa66664ca496b9a5bd124662" category="list-text">*お客様独自のライセンスの使用 (BYOL)*: NetAppから期間ベース (1 年、2 年、または 3 年) および容量ベース (1 TiB 単位) のライセンスを購入します。提供されたシリアル番号をNetApp Consoleに入力してアクティブ化します。ライセンスは組織内のすべてのソース システムに適用されます。期間または容量制限に達した場合は更新が必要です。</block>
+  <block id="248848332301b53df791d76f885827be" category="inline-link">NetApp Backup and Recovery PAYGOサブスクリプションを使用する</block>
+  <block id="365539ae3de2669e3c6cab548aad4d26" category="list-text">*従量制課金 (PAYGO)*: クラウド プロバイダーのマーケットプレイスを通じてサブスクライブし、バックアップされたデータの GiB ごとに毎月請求される料金を支払います。前払いは必要ありません。初めてサインアップすると、30 日間の無料トライアルが利用できます。詳細については、<block ref="8edaf8cd3966d935673fb34ac864f172" category="inline-link-rx"></block> 。</block>
+  <block id="b2756926bee4401109074cd37d6bbfc7" category="list-text">*年間契約*: AWS および Azure マーケットプレイスを通じて 1 年、2 年、または 3 年間ご利用いただけます。  2 つの年間契約が利用可能です:</block>
+  <block id="56a16935ca4475c6ad8f6940bbbaa577" category="list-text">*クラウド バックアップ*: Cloud Volumes ONTAPとオンプレミスのONTAPデータをバックアップします。</block>
+  <block id="5051cac88a3b9ad2e2baad101b5e4862" category="list-text">*CVO Professional*: Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルし、 Cloud Volumes ONTAPボリュームのバックアップを無制限に提供します (バックアップ容量はライセンスにカウントされません)。</block>
+  <block id="c85bf80350e3e2b3024a57e3e63f42af" category="list-text">CVO プロフェッショナル プランには、次の 2 種類の料金があります。</block>
+  <block id="b11cbf7b17a0a28de648a14bc329d754" category="inline-link">Cloud Volumes ONTAPのライセンス</block>
+  <block id="3e2ef02026c97d7e5a6f8783f142b8ca" category="list-text">*リソース料金*: ストレージ使用量に基づきます。詳細については、<block ref="fb7e1562747222c6aa716c91aa0ab813" category="inline-link-rx"></block> 。</block>
+  <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*サービス料金*: NetApp Backup and Recoveryの料金。ただし、ソース ボリュームが CVO Professional プランを使用しているストレージ システム内にある場合は、 NetApp Backup and Recovery が無料で提供されます。</block>
+  <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">Google Cloud Platform を使用する場合は、 NetAppからプライベート オファーをリクエストし、Google Cloud Marketplace でのアクティベーション時にプランを選択します。</block>
+  <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle ワークロード (プレビュー)</block>
 </blocks>

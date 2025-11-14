@@ -184,52 +184,34 @@ NOTE: Microsoft SQL Server の場合、セカンダリONTAPターゲットまた
 
 == ライセンス
 
-NetApp Backup and Recovery は無料トライアルとしてご利用いただけます。ライセンスキーがなくても、一定期間サービスをご利用いただけます。
+NetApp Backup and Recoveryでは無料トライアルが提供されており、ライセンス キーなしでも一定期間使用できます。
 
-NetApp Backup and Recovery は、次の消費モデルで利用できます。
+バックアップ ライセンスは、オブジェクト ストレージに関連するバックアップおよび復元操作にのみ必要です。スナップショットおよび複製されたボリュームの作成にはライセンスは必要ありません。
 
-* *お客様独自のライセンスの持ち込み (BYOL)*: NetAppから購入したライセンスは、どのクラウド プロバイダーでも使用できます。
-* *従量課金制 (PAYGO)*: クラウド プロバイダーのマーケットプレイスからの時間単位のサブスクリプション。
-* *年間*: クラウド プロバイダーのマーケットプレイスからの年間契約。
+次の 3 つのライセンス オプションから選択できます。
+
+* *お客様独自のライセンスの使用 (BYOL)*: NetAppから期間ベース (1 年、2 年、または 3 年) および容量ベース (1 TiB 単位) のライセンスを購入します。提供されたシリアル番号をNetApp Consoleに入力してアクティブ化します。ライセンスは組織内のすべてのソース システムに適用されます。期間または容量制限に達した場合は更新が必要です。
+* *従量制課金 (PAYGO)*: クラウド プロバイダーのマーケットプレイスを通じてサブスクライブし、バックアップされたデータの GiB ごとに毎月請求される料金を支払います。前払いは必要ありません。初めてサインアップすると、30 日間の無料トライアルが利用できます。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-paygo-subscription["NetApp Backup and Recovery PAYGOサブスクリプションを使用する"] 。
+* *年間契約*: AWS および Azure マーケットプレイスを通じて 1 年、2 年、または 3 年間ご利用いただけます。  2 つの年間契約が利用可能です:
++
+** *クラウド バックアップ*: Cloud Volumes ONTAPとオンプレミスのONTAPデータをバックアップします。
+** *CVO Professional*: Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルし、 Cloud Volumes ONTAPボリュームのバックアップを無制限に提供します (バックアップ容量はライセンスにカウントされません)。
++
+*** CVO プロフェッショナル プランには、次の 2 種類の料金があります。
++
+**** *リソース料金*: ストレージ使用量に基づきます。詳細については、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#packages["Cloud Volumes ONTAPのライセンス"] 。
+**** *サービス料金*: NetApp Backup and Recoveryの料金。ただし、ソース ボリュームが CVO Professional プランを使用しているストレージ システム内にある場合は、 NetApp Backup and Recovery が無料で提供されます。
 
 
-バックアップ ライセンスは、オブジェクト ストレージからのバックアップと復元にのみ必要です。スナップショットおよび複製されたボリュームの作成にはライセンスは必要ありません。
 
-*ライセンスはご持参ください*
 
-BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年間）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。
 
-サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
+
+
+
+Google Cloud Platform を使用する場合は、 NetAppからプライベート オファーをリクエストし、Google Cloud Marketplace でのアクティベーション時にプランを選択します。
 
 link:br-start-licensing.html["ライセンスの設定方法を学ぶ"]。
-
-*従量課金制サブスクリプション*
-
-NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。
-
-PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。
-
-*年間契約*
-
-ifdef::aws[]
-
-AWS を使用する場合、1 年、2 年、または 3 年の 2 つの年間契約が利用可能です。
-
-* Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
-* Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。endif::aws[]
-
-
-ifdef::azure[]
-
-Azure を使用する場合、1 年、2 年、または 3 年の 2 つの年間契約が利用可能です。
-
-* Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
-* Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。endif::azure[]
-
-
-ifdef::gcp[]
-
-GCP を使用する場合は、 NetAppからプライベート オファーをリクエストし、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときにプランを選択できます。endif::gcp[]
 
 
 
@@ -243,6 +225,7 @@ NetApp Backup and Recovery は、次のワークロードを保護します。
 * VMware VM とデータストア
 * KVM ワークロード (プレビュー)
 * Hyper-V ワークロード (プレビュー)
+* Oracle ワークロード (プレビュー)
 * Kubernetes ワークロード (プレビュー)
 
 
