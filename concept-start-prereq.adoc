@@ -216,7 +216,6 @@ Hyper-V インスタンスが仮想マシンを検出して保護するための
 ** Microsoft Hyper-V 2019、2022、2025 エディション
 ** ASP.NET Core ランタイム 8.0.12 ホスティング バンドル (およびそれ以降のすべての 8.0.x パッチ)
 ** PowerShell 7.4.2以降
-** ホストガーディアンサービスの役割がインストールされていることを確認してください（ https://learn.microsoft.com/en-us/windows-server/administration/server-manager/add-remove-roles-features?tabs=gui#add-roles-and-features-to-windows-server["Microsoft Windows Server ドキュメント"^] 手順については
 ** Windows ファイアウォールの設定で、次のポートに対して双方向 HTTPS トラフィックが許可されていることを確認します。
 +
 *** 8144 (Hyper-V 用NetAppプラグイン)
