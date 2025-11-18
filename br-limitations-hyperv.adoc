@@ -22,7 +22,8 @@ summary: NetApp Backup and Recovery、サービスを使用するためにまず
 
 NetApp Backup and Recoveryの Hyper-V ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。
 
-* リソース グループの作成
+* 複数の Hyper-V ホストの VM を使用してリソース グループを作成する
+* VMを別の場所に復元する
 * スパニングディスク（複数の CIFS 共有にまたがる）
 * SAN経由でVMを保護する
 * 保護グループを編集する

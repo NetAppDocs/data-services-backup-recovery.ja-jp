@@ -346,7 +346,6 @@
   <block id="a9ad02ebb13f3d9fa3cb4a1b59be6548" category="paragraph">このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。</block>
   <block id="0e32e31adc232e70ce479856e16c7f00" category="section-title">サポートされていないアクション</block>
   <block id="57a114780f98fd4bb0b06506b0ca9577" category="paragraph">NetApp Backup and Recoveryの Hyper-V ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。</block>
-  <block id="020a36deb114af1bb518c70d5975e940" category="list-text">リソース グループの作成</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">スパニングディスク（複数の CIFS 共有にまたがる）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">SAN経由でVMを保護する</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">System Center Virtual Machine Manager (SCVMM) を使用してクラスター化された Hyper-V ホストを保護する</block>
@@ -677,7 +676,6 @@
   <block id="6fa0f470d5826983538c3b3091b8d4f3" category="list-text">このホストで使用するコンソール エージェントを選択します。</block>
   <block id="f536637d4867fa48ae5f42ffcabb3da0" category="list-text">この資格情報の名前を入力します。</block>
   <block id="c7312d0cf4cda8f78a6f1769e7958906" category="list-text">アカウントのユーザー名とパスワードを入力します。</block>
-  <block id="5cf90f1e7bb7c40d89ed2ddaf928978f" category="list-text">*ホスト登録*: 新しい Hyper-V ホストを追加します。ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力します。</block>
   <block id="98ab4e23cce41ca38b39c7baf6ef4567" category="admonition">このプロセスには数分かかる場合があります。</block>
   <block id="d4908a7dd622060706f5e0df98a716da" category="paragraph">NetApp Backup and Recovery がリソースを検出すると、インベントリ ページのワークロード リストに Hyper-V ワークロードが表示されます。</block>
   <block id="8c75bc4aab98ebfa4607c6737296d0fa" category="section-title">NetApp Backup and Recoveryダッシュボードに進みます</block>
@@ -4538,8 +4536,6 @@
   <block id="299981ed6b0aaf1c2eed2a8e35151313" category="list-text">*クイック復元を有効にする*: クイック復元操作を実行するにはこれを選択します。復元されたボリュームとデータはすぐに使用できます。クイック リストア プロセス中はデータへのアクセスが通常よりも遅くなる可能性があるため、高パフォーマンスが必要なボリュームではこれを使用しないでください。</block>
   <block id="ca9d8ef3573c04098ddeb120eb1f19e5" category="list-text">*電子メール通知を有効にする*: 復元操作に関する電子メール通知を受け取るには選択し、必要な通知タイプを選択します。</block>
   <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server ホストのソフトウェア要件:</block>
-  <block id="1acabacd9fabb89313b2019250c36913" category="inline-link">Microsoft Windows Server ドキュメント</block>
-  <block id="a05b36aea5976933f3daab44cd5602a1" category="list-text">ホストガーディアンサービスの役割がインストールされていることを確認してください（<block ref="48d767cc816bb4d4b129a75bf7c81af1" category="inline-link-rx"></block> 手順については</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">復元操作が完了しない場合は、ジョブ モニターに「失敗」と表示されるまで待ってから、復元操作を再試行してください。</block>
   <block id="df3ee99c8171743d8bd35d65cf62b2ed" category="paragraph">NetApp Backup and Recoveryを使用すると、クラウドからオンプレミスの vCenter Server に仮想マシンのデータを復元できます。仮想マシンを、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。仮想マシンがアーカイブ ポリシーを使用してバックアップされた場合は、アーカイブ復元の優先順位を設定できます。</block>
   <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">NetApp Backup and Recoveryのワークロードを切り替えるには、<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block> 。</block>
@@ -4791,4 +4787,9 @@
   <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*サービス料金*: NetApp Backup and Recoveryの料金。ただし、ソース ボリュームが CVO Professional プランを使用しているストレージ システム内にある場合は、 NetApp Backup and Recovery が無料で提供されます。</block>
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">Google Cloud Platform を使用する場合は、 NetAppからプライベート オファーをリクエストし、Google Cloud Marketplace でのアクティベーション時にプランを選択します。</block>
   <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle ワークロード (プレビュー)</block>
+  <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">複数の Hyper-V ホストの VM を使用してリソース グループを作成する</block>
+  <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*ホスト登録*: ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力して、新しい Hyper-V ホストを追加します。FQDN がコンソール エージェントによって解決できない場合は、代わりに IP アドレスを使用します。FCI クラスターの場合は、FCI クラスター管理 IP アドレスを入力します。</block>
+  <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">管理者ドメインに属していないユーザーが Hyper-V VM を保護する場合は、そのユーザーに次の権限があることを確認してください。</block>
+  <block id="57d2171dbc8d8d7a864a60de1ab4656c" category="list-text">ユーザーがローカル管理者グループのメンバーであることを確認します。</block>
+  <block id="27bc296e867cae2ef33b5cac51392cb2" category="list-text">ユーザーが「サービスとしてログオン」ローカル セキュリティ ポリシーの一部であることを確認します。</block>
 </blocks>
