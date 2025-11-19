@@ -2811,8 +2811,6 @@
   <block id="12486a40437a6b66be9b1d2eaf68dacb" category="list-text">(オプション) VPC エンドポイント インターフェイスを使用して、システムをプライベート接続用に設定します。</block>
   <block id="0d0602824136f714807f54069c6d5a89" category="paragraph">次の 2 セットの権限を構成する必要があります。</block>
   <block id="7ae76139c799959d1409fade800fdde1" category="list-text">コンソール エージェントに必要な権限があることを確認します。詳細については、<block ref="e7a931c701625a10dc7f3233361e94bd" category="inline-link-rx"></block> 。</block>
-  <block id="7ce349bd25d973c660fddbe184efffb5" category="paragraph">独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>既存の CVO の IAMRole を作成し、次のリストを S3 権限に追加します。含める必要がある<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>バケットに関連付ける必要のあるすべての必要な権限を割り当てます。</block>
-  <block id="3bf9e0d7d11ed7ade49f8eabd71927c8" category="paragraph">"アクション": [ "S3:ListBucket" "S3:GetBucketLocation" ] "リソース": "arn:aws:s3:::*", "効果": "許可" }, { "アクション": [ "S3:GetObject", "S3:PutObject", "S3:DeleteObject", "S3:ListAllMyBuckets", "S3:PutObjectTagging", "S3:GetObjectTagging", "S3:RestoreObject", "S3:GetBucketObjectLockConfiguration", "S3:GetObjectRetention", "S3:PutBucketObjectLockConfiguration", "S3:PutObjectRetention" ] "リソース": "arn:aws:s3:::*",</block>
   <block id="868fb9c55d4ddac7523d9c4697eb9d9f" category="section-title">データ暗号化用の顧客管理 AWS キーを設定する</block>
   <block id="72828ef5ab3d5aa027bfcdd1a9224f67" category="paragraph">デフォルトの Amazon S3 暗号化キーを使用してオンプレミスのクラスターと S3 バケット間で渡されるデータを暗号化する場合は、デフォルトのインストールでそのタイプの暗号化が使用されるため、すべて準備完了です。</block>
   <block id="aa9f769e3ac07b6605a7c510f6467b0d" category="paragraph">代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetApp Backup and Recoveryウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。</block>
@@ -3715,19 +3713,16 @@
   <block id="3b4f7847e0c80a6665d11cb27ec353f5" category="list-text">後続のバックアップは増分バックアップであるため、この影響はありません。</block>
   <block id="418dfdb508c036c09d2c850937665491" category="list-text">ボリュームが最初に作成されるときに階層化ポリシーが割り当てられている場合は、この問題は発生しません。</block>
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">割り当てる前にバックアップの影響を考慮してください<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>ボリュームへの階層化ポリシー。データは即座に階層化されるため、 NetApp Backup and Recovery はローカル層ではなくクラウド層からデータを読み取ります。同時バックアップ操作ではクラウド オブジェクト ストアへのネットワーク リンクが共有されるため、ネットワーク リソースが飽和状態になるとパフォーマンスが低下する可能性があります。この場合、このタイプのネットワーク飽和を減らすために、複数のネットワーク インターフェイス (LIF) を事前に構成する必要がある場合があります。</block>
-  <block id="c5a5bd782e20196933e5157112eab21c" category="summary">NetApp Backup and Recovery を使用すると、バックアップ ファイルからONTAPボリューム全体を復元したり、少数のファイルのみを復元する必要がある場合は、フォルダーまたは個々のファイルを復元したりできます。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">NetApp Backup and Recoveryを使用してバックアップファイルからONTAPデータを復元する</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">*ボリューム* (新しいボリュームとして) を元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">*フォルダー* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">*ファイル* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
-  <block id="c963f9a0ecc1066aa41c689730948ba3" category="paragraph">バックアップ ファイルから実稼働システムにデータを復元するには、有効なNetApp Backup and Recoveryライセンスが必要です。</block>
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">要約すると、ボリューム データをONTAPシステムに復元するために使用できる有効なフローは次のとおりです。</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">バックアップファイル -&gt; 復元されたボリューム</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">複製されたボリューム -&gt; 復元されたボリューム</block>
   <block id="0039af36cdd68741c89e8c730e7b7442" category="admonition">ONTAPデータのリストアに関する制限については、<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block> 。</block>
   <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">復元ダッシュボード</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">詳細ボタン</block>
-  <block id="c0a30a4e0cad41bfc465528739121146" category="paragraph">復元ダッシュボードを使用して、ボリューム、フォルダー、およびファイルの復元操作を実行します。復元ダッシュボードにアクセスするには、コンソール メニューから [*バックアップと復元*] をクリックし、[*復元*] タブをクリックします。クリックすることもできます<block ref="d1d86609a9d4211430bd00b714af288b" category="inline-image-macro-rx" type="image"></block>&gt; サービス パネルのバックアップと復元サービスから *復元ダッシュボードを表示* します。</block>
   <block id="c699c3ab8b3b70442456dfc7e6c2d402" category="admonition">NetApp Backup and Recovery は少なくとも 1 つのシステムに対してすでにアクティブ化されており、初期バックアップ ファイルが存在している必要があります。</block>
   <block id="5795e107f70b1fe309798439187a0470" category="paragraph">復元ダッシュボードでは、バックアップ ファイルからデータを復元する方法として、「参照と復元」と「検索と復元」の 2 つの方法が提供されています。</block>
   <block id="6b0b2f1ade447e93ec60561aec84daae" category="section-title">参照と復元と検索と復元の比較</block>
@@ -3752,13 +3747,9 @@
   <block id="d65d23f3099e6017c3c2569abf596741" category="cell">*フォルダを復元*</block>
   <block id="68295476c4bddb2040705057bdff61c0" category="cell">複製ボリューム</block>
   <block id="6b8f9734c5bdfb71d16a6d3d8a40513c" category="cell">バックアップファイル</block>
-  <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">いずれかの復元方法を使用する前に、固有のリソース要件に合わせて環境が構成されていることを確認してください。これらの要件については、以下のセクションで説明します。</block>
   <block id="91679e5e03d41aefa89ddfa7649b05d2" category="paragraph">使用する復元操作の種類に応じた要件と復元手順を参照してください。</block>
   <block id="ab298a1df9e049ac3ba4c02e893cc475" category="inline-xref">参照と復元を使用してボリュームを復元する</block>
-  <block id="8c10b03d547a79f12e4be387cd008855" category="list-text"><block ref="64106766a0115c58ac1976a627dae78e" category="inline-xref-macro-rx"></block></block>
-  <block id="657950c649165660c2b1df5994cc6ea1" category="list-text"><block ref="0198cacb5a3b3b848a16a5896a6b781e" category="inline-xref-macro-rx"></block></block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">検索と復元を使用してボリューム、フォルダ、ファイルを復元する</block>
-  <block id="c3c8ae924b0105406a696e4e3b08bd56" category="list-text"><block ref="28c71e441e3fed1e54d5e765ca1c9c87" category="inline-xref-macro-rx"></block></block>
   <block id="685a6ba7b83ab5e286920feb961c08bb" category="section-title">参照と復元を使用してONTAPデータを復元する</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">AWSアーカイブストレージからの復元の詳細</block>
   <block id="b03a3a022eb328afd14c51f9d25fd0aa" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。</block>
@@ -3789,7 +3780,6 @@
   <block id="8e602d0d71734b6cf234a5890bf1241a" category="paragraph">複製されたボリュームから復元する場合、ボリュームを元のシステム、 Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="9336df9a96bed9adb0f67170b2dad2b3" category="inline-image-macro">参照と復元を使用してボリューム復元操作を実行するフローを示す図。</block>
   <block id="38aad7ac8bd6898064d142472e3e7624" category="paragraph"><block ref="7d27a3070fb1dce60f7cb72cb7d60b55" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e024fe06d4f879196d3e62343aa21b12" category="paragraph">ご覧のとおり、ボリュームの復元を実行するには、ソース システム名、ストレージ VM、ボリューム名、およびバックアップ ファイルの日付を知る必要があります。</block>
   <block id="97df4568ca8321a997d9ed32ea75ab0a" category="list-text">*復元*タブを選択すると、復元ダッシュボードが表示されます。</block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">[参照と復元] セクションから、[ボリュームの復元] を選択します。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">[_ソースの選択_] ページで、復元するボリュームのバックアップ ファイルに移動します。復元する日付/タイムスタンプを持つ *システム*、*ボリューム*、および *バックアップ* ファイルを選択します。</block>
@@ -3823,13 +3813,7 @@
   <block id="502b9bcf8737b06b486f332278870bbf" category="list-text">_ファイル_復元操作を実行するには、 ONTAPバージョンが 9.6 以上である必要があります。</block>
   <block id="06e9f92e3090a798bd44efa87250ce22" category="list-text">フォルダの復元操作を実行するには、 ONTAPバージョンが 9.11.1 以上である必要があります。データがアーカイブ ストレージにある場合、またはバックアップ ファイルで DataLock およびランサムウェア保護が使用されている場合は、 ONTAPバージョン 9.13.1 が必要です。</block>
   <block id="57bb710d517f010c4fce20687ec1c6ff" category="list-text">参照と復元オプションを使用してFlexGroupディレクトリを復元するには、 ONTAPバージョンが 9.15.1 p2 以上である必要があります。</block>
-  <block id="cee5f78cfda5fc2f3b24ce19bdf5119a" category="section-title">フォルダとファイルの復元プロセス</block>
   <block id="01a85f08913124872d9b17dfdb08959a" category="paragraph">プロセスは次のようになります。</block>
-  <block id="b85ced4f441572e957c29b3e74a4335e" category="list-text">フォルダーまたはファイルが存在するソース システム、ボリューム、およびバックアップ ファイルを選択します。</block>
-  <block id="ecbf4074e5725b458774aa56add04b4e" category="list-text">NetApp Backup and Recovery、選択したバックアップ ファイル内に存在するフォルダとファイルが表示されます。</block>
-  <block id="f253b383194bb98b3c6ad49105cca717" category="list-text">そのバックアップから復元するフォルダーまたはファイルを選択します。</block>
-  <block id="af40ce2fd276ed07b36265ad3349591a" category="list-text">フォルダまたはファイルを復元する宛先場所 (システム、ボリューム、フォルダ) を選択し、[復元] をクリックします。</block>
-  <block id="77a738d7362cefd8d0f8a59020626e57" category="list-text">ファイルが復元されました。</block>
   <block id="983985e7b5c6473861f79292288f8649" category="inline-image-macro">参照と復元を使用してファイルの復元操作を実行するフローを示した図。</block>
   <block id="a86b95296a5e8660c2661d4c0fdd6403" category="paragraph"><block ref="b8616ef8bcb9351aff887ce7eb6910c4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f3b049ad5900157b661c3f11e45c18c" category="section-title">フォルダとファイルを復元する</block>
@@ -3857,11 +3841,6 @@
   <block id="3f25e82b6a6ddd7bce8047cf9c5eb6cf" category="list-text">任意のフォルダを選択できます。</block>
   <block id="8abf03f0afbcb37f53707147d7dc79ef" category="list-text">フォルダーの上にマウスを移動し、行の末尾をクリックしてサブフォルダーにドリルダウンし、フォルダーを選択できます。</block>
   <block id="09fa58168e9af9ca1cd785d08f1c7401" category="list-text">ソース フォルダ/ファイルが配置されていたのと同じ宛先システムとボリュームを選択した場合は、[*ソース フォルダ パスを維持*] を選択して、フォルダまたはファイルをソース構造に存在していたのと同じフォルダに復元できます。同じフォルダーとサブフォルダーがすべてすでに存在している必要があります。フォルダーは作成されません。ファイルを元の場所に復元する場合、ソース ファイルを上書きするか、新しいファイルを作成するかを選択できます。</block>
-  <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">検索と復元を使用してONTAPデータを復元する</block>
-  <block id="4647e43883c439381a72ddb443f378a3" category="paragraph">検索と復元を使用して、 ONTAPバックアップ ファイルからボリューム、フォルダー、またはファイルを復元できます。検索と復元を使用すると、すべてのバックアップから特定のボリューム、フォルダー、またはファイルを検索し、復元を実行できます。正確なシステム名、ボリューム名、またはファイル名を知る必要はありません。検索ではすべてのボリューム バックアップ ファイルを検索します。</block>
-  <block id="852fc25af352236327df0d0cfcc56af6" category="paragraph">バックアップ ファイルから完全なボリュームを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいボリュームを作成します。データは、元のシステムのボリュームとして、ソース システムと同じクラウド アカウントにある別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
-  <block id="1c207467db02af6d5369de8a352a5deb" category="paragraph">フォルダーまたはファイルを、元のボリュームの場所、同じシステム内の別のボリューム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
-  <block id="20f2d0bb5e696b331efc736ffadbb3f3" category="paragraph">復元するボリュームのバックアップ ファイルがアーカイブ ストレージ ( ONTAP 9.10.1 以降で使用可能) に存在する場合、復元操作には時間がかかり、追加のコストが発生します。なお、宛先クラスタでは、ボリュームの復元の場合はONTAP 9.10.1 以上、ファイルの復元の場合は 9.11.1、Google Archive およびStorageGRIDの場合は 9.12.1、フォルダの復元の場合は 9.13.1 を実行している必要があります。</block>
   <block id="123d4cc43e1a5345167ea23371a1a2c3" category="list-text">オブジェクト ストレージ内のバックアップ ファイルに DataLock および Ransomware 保護が設定されている場合、 ONTAPバージョンが 9.13.1 以上の場合にのみフォルダー レベルの復元がサポートされます。以前のバージョンのONTAPを使用している場合は、バックアップ ファイルからボリューム全体を復元し、必要なフォルダーとファイルにアクセスできます。</block>
   <block id="151be02e2bd1749a3dd2015c36005736" category="list-text">オブジェクト ストレージ内のバックアップ ファイルがアーカイブ ストレージに存在する場合、 ONTAPバージョンが 9.13.1 以上の場合にのみ、フォルダー レベルの復元がサポートされます。以前のバージョンのONTAPを使用している場合は、アーカイブされていない新しいバックアップ ファイルからフォルダを復元するか、アーカイブされたバックアップからボリューム全体を復元して、必要なフォルダとファイルにアクセスすることができます。</block>
   <block id="3ddfa13cbce20cc68cd19aca6f181eb0" category="list-text">Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、「高」復元優先度はサポートされません。</block>
@@ -3904,29 +3883,9 @@
   <block id="35823b9a43e6a86ef9fc8613d01ca7e0" category="list-text">ボリューム、フォルダー、またはファイルが復元されます。</block>
   <block id="03a6f07a65b68a9b91d1456b096d425e" category="inline-image-macro">検索と復元を使用してボリューム、フォルダー、またはファイルの復元操作を実行するフローを示す図。</block>
   <block id="326eb26933ce22b49d0c6ddf7a6e6180" category="paragraph"><block ref="1d155a4bab8461674fe4d884066d77ce" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a88d3ad33e6ade48c9940511206948e" category="paragraph">ご覧のとおり、実際には名前の一部を知るだけで、 NetApp Backup and Recovery は検索に一致するすべてのバックアップ ファイルを検索します。</block>
   <block id="5b9c355299c911b3f66ca50a1acb17d6" category="section-title">各システムでインデックスカタログを有効にする</block>
   <block id="f5b73dece12edcdf156fa7e3afdcb5ac" category="paragraph">検索と復元を使用する前に、ボリュームまたはファイルを復元する予定の各ソース システムで「インデックス作成」を有効にする必要があります。これにより、インデックス カタログはすべてのボリュームとすべてのバックアップ ファイルを追跡できるようになり、検索が非常に迅速かつ効率的になります。</block>
   <block id="ba56376909400e0d6a0546d3b85498ef" category="paragraph">インデックス カタログは、システム内のすべてのボリュームとバックアップ ファイルに関するメタデータを保存するデータベースです。これは、復元するデータが含まれているバックアップ ファイルをすばやく見つけるために、検索と復元機能によって使用されます。</block>
-  <block id="ace26ef20d7de77728de7522bd26d7de" category="paragraph-title">インデックスカタログv2の機能</block>
-  <block id="eb3e11343b7aaea59c83d36c6e8c8591" category="paragraph">2025 年 2 月にリリースされ、2025 年 6 月に更新された Indexed Catalog v2 には、より効率的で使いやすい機能が含まれています。このバージョンではパフォーマンスが大幅に向上しており、すべての新規顧客に対してデフォルトで有効になっています。</block>
-  <block id="e45e80a3aa32c47a9d6ef311dd8f2980" category="paragraph">v2 に関する次の考慮事項を確認してください。</block>
-  <block id="b98d519952606f96dcc615efa4f4e85c" category="list-text">Indexed Catalog v2 はプレビュー モードで利用できます。</block>
-  <block id="951398abbe6e1c3079efe911a6951621" category="list-text">既存のお客様で Catalog v2 を使用する場合は、環境のインデックスを完全に再作成する必要があります。</block>
-  <block id="eb720e0effbb1828841ea62695a758b9" category="list-text">カタログ v2 は、スナップショット ラベルを持つスナップショットのみをインデックス化します。</block>
-  <block id="0823f8728ac8dd7f06c41db39f3c9e79" category="list-text">NetApp Backup and Recovery は、 「時間別」のSnapMirrorラベルを使用してスナップショットをインデックス化しません。  「時間別」 SnapMirrorラベルを使用してスナップショットをインデックスする場合は、v2 がプレビュー モードのときに手動で有効にする必要があります。</block>
-  <block id="7d130cb45fabc3f14e6b9b7f4708d18d" category="list-text">NetApp Backup and Recovery は、カタログ v2 のみを使用して、NetApp Backup and Recoveryによって保護されているシステムに関連付けられたボリュームとスナップショットをインデックス化します。コンソール プラットフォームで検出されたその他のシステムはインデックス化されません。</block>
-  <block id="d018a9ab185158e1903377238af640ce" category="list-text">Catalog v2 によるデータのインデックス作成は、オンプレミス環境と、Amazon Web Services、Microsoft Azure、Google Cloud Platform (GCP) 環境で行われます。</block>
-  <block id="cba8da890b429c54fa89c60426136832" category="paragraph">Indexed Catalog v2 は以下をサポートします。</block>
-  <block id="d0ddbbe5ee1059ccc8adc742a7b4fc17" category="paragraph-title">システムのインデックスカタログを有効にする</block>
-  <block id="9f0efd5842b284741e756914a3653c06" category="paragraph">Indexed Catalog v2 を使用する場合、サービスでは別のバケットがプロビジョニングされません。代わりに、AWS、Azure、Google Cloud Platform、 StorageGRID、またはONTAP S3 に保存されているバックアップの場合、サービスはコンソール エージェントまたはクラウド プロバイダー環境にスペースをプロビジョニングします。</block>
-  <block id="13873715cccde14b864681e744f0f6e5" category="paragraph">v2 リリースより前にインデックス カタログを有効にした場合、システムでは次のようになります。</block>
-  <block id="1bf27db2b6cddc0bbfeb50bd92d954d2" category="inline-link">Amazon Athena インタラクティブクエリサービス</block>
-  <block id="304514e0e009199a95060650dbf9337e" category="inline-link">AWS Glue サーバーレスデータ統合サービス</block>
-  <block id="7f55f1ead15a67b08eea9e732f6ed59d" category="list-text">AWSに保存されているバックアップの場合は、新しいS3バケットをプロビジョニングし、<block ref="d5a117e0ffd0e43cc6657792905f20d6" category="inline-link-rx"></block>そして<block ref="101f211ea2a04b6a9a7d1de9342390c3" category="inline-link-rx"></block>。</block>
-  <block id="1a57137c00ac13558ef22f60c946d8b3" category="list-text">Azure に保存されるバックアップの場合、ワークスペース データを保存するコンテナーとして、Azure Synapse ワークスペースと Data Lake ファイル システムがプロビジョニングされます。</block>
-  <block id="b3cf2a0723236b8965edb17a6adc8bf5" category="list-text">Google Cloudに保存されているバックアップの場合は、新しいバケットがプロビジョニングされ、<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>アカウント/プロジェクト レベルでプロビジョニングされます。</block>
-  <block id="5452e61fa37cd56c55cfda6a5bbda2d3" category="list-text">StorageGRIDまたはONTAP S3 に保存されているバックアップの場合は、コンソール エージェントまたはクラウド プロバイダー環境にスペースをプロビジョニングします。</block>
   <block id="b72b787d86099aed222777bb2de8b6b5" category="paragraph">システムでインデックス作成がすでに有効になっている場合は、次のセクションに進み、データを復元してください。</block>
   <block id="851644a4a48fea1ac5cc79f5c9d8277e" category="list-title">システムのインデックス作成を有効にする手順:</block>
   <block id="e539a0c2cd27f449c2afc370c19cfb8a" category="list-text">システムがインデックスされていない場合は、復元ダッシュボードの [_検索と復元_] で [*システムのインデックスを有効にする*] を選択します。</block>
@@ -4652,9 +4611,7 @@
   <block id="e527fef252b77845c6d10efb41d3077b" category="list-text">Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>デフォルトです。</block>
   <block id="ec0d6793cc0295c832eb8da5d335a0c2" category="paragraph">さらに、DataLockに関連する費用の見積もりは、<block ref="b1f8c55788f886bad3d3eaf7350ac38f" category="inline-link-rx"></block> 。</block>
   <block id="4bcdbd17280f1741e2f9e78f6f376421" category="paragraph"><block ref="4bcdbd17280f1741e2f9e78f6f376421" category="inline-link-rx"></block></block>
-  <block id="7eb5606462668a7d8775b600838f4f32" category="admonition">復元するバックアップ ファイルがアーカイブ クラウド ストレージ ( ONTAP 9.10.1 以降) に存在する場合、復元操作に時間がかかり、コストも発生します。また、宛先クラスタでは、ボリュームの復元の場合はONTAP 9.10.1 以上、ファイルの復元の場合は 9.11.1、Google Archive およびStorageGRIDの場合は 9.12.1、フォルダの復元の場合は 9.13.1 を実行している必要があります。</block>
   <block id="5b386dd69a6743085be6c1e524866fb5" category="paragraph">複数のファイルを選択した場合、それらは同じ宛先ボリュームに復元されます。ファイルを別のボリュームに復元するには、プロセスを複数回実行します。</block>
-  <block id="b46b886ddef2fe81123875f2839d0892" category="list-text">ボリューム バックアップからフォルダーまたはファイルを復元するには、[復元] メニューを選択し、[参照と復元] の下にある [ファイルまたはフォルダーの復元] を選択します。</block>
   <block id="22d1aa2ecc719d7521d0a8859fe171f9" category="paragraph">ボリュームを復元するには、ソース システム名、ストレージ VM、ボリューム名、およびバックアップ ファイルの日付が必要です。</block>
   <block id="0e9332d24e8223d33f0f13c12dc28e78" category="list-text">*復元* を選択して復元ダッシュボードに戻り、復元操作の進行状況を確認します。</block>
   <block id="dc48f529dae728780c55fde51597adee" category="paragraph">完了したら<block ref="d2ec4e5679d82dbce801a1d23c311912" category="inline-xref-macro-rx"></block>、検索と復元を使用してボリューム、フォルダー、およびファイルを復元できます。これにより、幅広いフィルターを使用して、すべてのバックアップ ファイルから復元するファイルまたはボリュームを正確に見つけることができます。</block>
@@ -4749,13 +4706,10 @@
   <block id="30e07a9dd02dd98f372bd162ec8456ef" category="paragraph">システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、選択したポリシーを使用してバックアップされます。スナップショット、複製されたボリューム、バックアップ ファイルごとに個別のポリシーを選択できます。異なるリカバリポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、 NetApp Backup and Recovery をアクティブ化した後でそれらのポリシーを他のボリュームに割り当てることができます。</block>
   <block id="fa3dd3bcafecb630044b7d1eddb7cd43" category="admonition">ボリュームに適用されるスナップショット ポリシーには、レプリケーション ポリシーとオブジェクトへのバックアップ ポリシーで使用しているラベルのいずれかが必要です。一致するラベルが見つからない場合、バックアップ ファイルは作成されません。たとえば、「毎週」複製されたボリュームとバックアップ ファイルを作成する場合は、「毎週」スナップショットを作成するスナップショット ポリシーを使用する必要があります。</block>
   <block id="9e813756b5af6bc196c66209061d9d1a" category="paragraph">スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショットに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。「詳細設定」ページのオプションを使用して、最新のスナップショットでスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。</block>
-  <block id="c379b9e8581a6fd59a6755037f41a617" category="paragraph">ONTAPボリューム データのバックアップは、バックアップを作成した場所（スナップショット、複製されたボリューム、オブジェクト ストレージに保存されたバックアップ）から利用できます。これらのバックアップ場所のいずれからでも、特定の時点のデータを復元できます。NetApp Backup and Recovery を使用すると、バックアップ ファイルからONTAPボリューム全体を復元したり、少数のファイルのみを復元する必要がある場合は、フォルダーまたは個々のファイルを復元したりできます。</block>
   <block id="02c75a95538b43e9e819f0d1b0cc19f2" category="list-text">スナップショット -&gt; 復元されたボリューム</block>
-  <block id="2630c5e201ef46189b621a683ffbc8dc" category="paragraph">復元する前に、ソース ボリューム名、ソース システムと SVM、およびバックアップ ファイルの日付をメモします。スナップショット、複製されたボリューム、またはオブジェクト ストレージに保存されたバックアップからONTAPデータを復元できます。</block>
   <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
   <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">*場所* 列には、バックアップ ファイル (スナップショット) が *ローカル* (ソース システム上のスナップショット)、*セカンダリ* (セカンダリONTAPシステム上の複製されたボリューム)、または *オブジェクト ストレージ* (オブジェクト ストレージ内のバックアップ ファイル) のいずれであるかが表示されます。復元するファイルを選択します。</block>
   <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">現時点では、オブジェクト ストレージ内のバックアップ ファイルからのみフォルダーまたは個々のファイルを復元できます。現在、ローカル スナップショットまたはセカンダリ システム (複製されたボリューム) にあるバックアップ ファイルからのファイルとフォルダーの復元はサポートされていません。</block>
-  <block id="0c33ea8397b0b32c84a3332e9860b200" category="paragraph">検索操作では、 ONTAPボリュームに存在するすべてのローカル スナップショット、セカンダリ ストレージ システム上のすべての複製ボリューム、およびオブジェクト ストレージに存在するすべてのバックアップ ファイルを検索します。ローカル スナップショットまたは複製されたボリュームからデータを復元する方が、オブジェクト ストレージ内のバックアップ ファイルから復元するよりも高速でコストも抑えられるため、これらの他の場所からデータを復元することもできます。</block>
   <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">SnapDiff RPC サーバを SVM 上でアクティブ化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。(SnapDiff は、スナップショット間のファイルとディレクトリの違いをすばやく識別するテクノロジーです。)</block>
   <block id="dff115c532ece3121746427a98f68318" category="list-text">[フィルター条件] 領域で、フィルター条件を選択します。たとえば、データが存在するシステムとファイルの種類（.JPEG ファイルなど）を選択できます。または、オブジェクト ストレージ内の利用可能なスナップショットまたはバックアップ ファイル内のみで結果を検索する場合は、バックアップの場所のタイプを選択できます。</block>
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">結果には、検索したファイルを含むローカル ボリュームのスナップショットとリモートの複製ボリュームが識別されることに注意してください。クラウド バックアップ ファイル、スナップショット、または複製されたボリュームから復元することを選択できます。</block>
@@ -4792,4 +4746,37 @@
   <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">管理者ドメインに属していないユーザーが Hyper-V VM を保護する場合は、そのユーザーに次の権限があることを確認してください。</block>
   <block id="57d2171dbc8d8d7a864a60de1ab4656c" category="list-text">ユーザーがローカル管理者グループのメンバーであることを確認します。</block>
   <block id="27bc296e867cae2ef33b5cac51392cb2" category="list-text">ユーザーが「サービスとしてログオン」ローカル セキュリティ ポリシーの一部であることを確認します。</block>
+  <block id="6d397139779cf4483cf1c4693e7f6cfc" category="paragraph">独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>既存のCVOのIAMRoleを作成し、次のJSONブロックをS3権限に追加します。<block ref="2af6fd9ec72aee193ee7ffe09638e08f" prefix=" " category="inline-code"></block>配列。含める必要がある<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>バケットに関連付ける必要のあるすべての必要な権限を割り当てます。</block>
+  <block id="3f05712ac311679f5293cdeca4b95c4a" category="summary">NetApp Backup and Recoveryでは、Browse &amp; Restore を使用してONTAPデータを復元します。</block>
+  <block id="a9069e9a58042b9bc7056398756845ee" category="paragraph">NetApp Backup and Recoveryでは、Browse &amp; Restore を使用してONTAPデータを復元します。復元する前に、ソース ボリューム名、ソース システムと SVM、およびバックアップ ファイルの日付をメモします。スナップショット、複製されたボリューム、またはオブジェクト ストレージに保存されたバックアップからONTAPデータを復元できます。</block>
+  <block id="05347845672273f3cffd76e4077cdb51" category="paragraph">復元機能はONTAP のバージョンによって異なります。</block>
+  <block id="a03a5900281bf25c93cb811180bba191" category="list-text">*フォルダ:* ONTAP 9.13.0 以降を使用すると、すべてのファイルとサブフォルダを含むフォルダを復元できます。それ以前のバージョンでは、フォルダ内のファイルのみを復元できます。</block>
+  <block id="781858cefae9b60efaca9b16a3878de8" category="list-text">*アーカイブ ストレージ:* アーカイブ ストレージ ( ONTAP 9.10.1 以降で利用可能) からの復元は遅くなり、追加コストが発生する可能性があります。</block>
+  <block id="39ec579fcc2df5001dd753b681b0b968" category="list-text">*宛先クラスタの要件:*</block>
+  <block id="40a94f15cd6f305f18348e67a7079bb0" category="list-text">ボリュームリストア: ONTAP 9.10.1 以上</block>
+  <block id="093fffba6528268e08d16655a00408c0" category="list-text">ファイル復元: ONTAP 9.11.1 以上</block>
+  <block id="e2a690f8f0185ec41067ba5b3b30a529" category="list-text">Google Archive およびStorageGRID: ONTAP 9.12.1 以上</block>
+  <block id="8ca6fb4bb5529d6adfde15cbdb57e634" category="list-text">フォルダの復元: ONTAP 9.13.1 以上</block>
+  <block id="be0215992cfd3511d910e845d0356599" category="summary">検索と復元を使用して、 ONTAPバックアップ ファイルからボリューム、フォルダー、またはファイルを回復できます。</block>
+  <block id="7e1d8ccd1392087c63490394612a8c15" category="doc">検索と復元を使用してONTAPバックアップから復元する</block>
+  <block id="e7831cd0e41fd9e35bee516b706fabdd" category="paragraph">検索と復元を使用して、 ONTAPバックアップ ファイルからボリューム、フォルダー、またはファイルを回復できます。検索と復元を使用すると、正確なシステム名、ボリューム名、ファイル名を必要とせずに、すべてのバックアップ (ローカル スナップショット、複製されたボリューム、オブジェクト ストレージを含む) を検索できます。</block>
+  <block id="ac7a11fed1e42e0aabdca6e9d3df239d" category="paragraph">通常、ローカル スナップショットまたは複製されたボリュームからの復元は、オブジェクト ストレージからの復元よりも高速でコストも低くなります。</block>
+  <block id="84c030a8c3b510739684721f83cf4004" category="paragraph">ボリューム全体を復元する場合、 NetApp Backup and Recovery はバックアップ データを使用して新しいボリュームを作成します。元のシステム、同じクラウド アカウント内の別のシステム、またはオンプレミスのONTAPシステムに復元できます。フォルダーとファイルは、元の場所、同じシステム内の別のボリューム、同じクラウド アカウント内の別のシステム、またはオンプレミス システムに復元できます。</block>
+  <block id="1a7f268901b8ff64a74ae8d0296ce039" category="section-title">検索と復元の前提条件</block>
+  <block id="baa8edebfac5781913655070b19655c8" category="inline-xref">ボリュームをマウントしてカタログのインデックスを再作成する</block>
+  <block id="dca45b6ea4888774fa36a0cd7a4b4e66" category="list-text">NetApp、検索と復元の回復力を高めるために、コンソール エージェントに別のボリュームをマウントすることを推奨しています。手順については、<block ref="dc95f46ff7385c77f28ead631c4ffc28" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="cafaac51a733b2507a0934e42ab1b5de" category="section-title">レガシー検索と復元の前提条件（インデックスカタログ v1 を使用）</block>
+  <block id="d3373e3f2429c68c0bce2afd2ff81bea" category="paragraph">名前の一部を知るだけで、 NetApp Backup and Recovery は検索に一致するすべてのバックアップ ファイルを検索します。</block>
+  <block id="a6e55f722772b5f4e23c95969086688d" category="paragraph-title">インデックスカタログ機能</block>
+  <block id="d828defb287ef7f6ab63c8e2aa939f7c" category="paragraph">NetApp Backup and Recovery、インデックス カタログを使用する場合、別のバケットはプロビジョニングされません。代わりに、AWS、Azure、Google Cloud Platform、 StorageGRID、またはONTAP S3 に保存されているバックアップの場合、サービスはコンソール エージェントまたはクラウド プロバイダー環境にスペースをプロビジョニングします。</block>
+  <block id="489e35e793accc52ca3476061b2e9092" category="paragraph">インデックス カタログは以下をサポートします。</block>
+  <block id="bb5d5c858e67c64d78268e97ef8e801d" category="paragraph">ONTAPボリューム データのバックアップは、スナップショットとして、複製されたボリューム上、またはオブジェクト ストレージに保存されます。特定の時点でこれらのいずれかの場所からデータを復元できます。  NetApp Backup and Recovery を使用すると、必要に応じてボリューム全体、フォルダ、または個々のファイルを復元できます。</block>
+  <block id="e59ea42c20b1c148846a0526ff44c47a" category="paragraph">実稼働システムにデータを復元するには、有効なNetApp Backup and Recoveryライセンスが必要です。</block>
+  <block id="d3d7e7b22ee5c56584493699998d9117" category="paragraph">復元ダッシュボードを使用して、ボリューム、フォルダー、およびファイルの復元操作を実行します。復元ダッシュボードにアクセスするには、コンソール メニューから [*バックアップと復元*] を選択し、[*復元*] タブを選択します。選択することもできます<block ref="d1d86609a9d4211430bd00b714af288b" category="inline-image-macro-rx" type="image"></block>&gt; サービス パネルのバックアップと復元サービスから *復元ダッシュボードを表示* します。</block>
+  <block id="25578ef4f1298f0ec4e133f88caee125" category="paragraph">いずれかの復元方法を使用する前に、リソース要件を満たすように環境を構成します。詳細については、次のセクションを参照してください。</block>
+  <block id="a8c20c3f2c501cda4b216ab5d3a59157" category="list-text"><block ref="f9cc88ea2514d9b9242d31770690af88" category="inline-link-macro-rx"></block></block>
+  <block id="5e763606a0239729deac991a560d57c0" category="list-text"><block ref="34e43cfade3963995cc048abf44b0989" category="inline-link-macro-rx"></block></block>
+  <block id="b72cbffce68718636e4f9c2f1c2a8173" category="list-text"><block ref="f0a1a1822bca6dd563c941cbc831d447" category="inline-link-macro-rx"></block></block>
+  <block id="cee41b55e417d2c681bd345802b719fd" category="sidebar">リストアの概要</block>
+  <block id="a49488740a7ad2d76917598dae6b3fbb" category="sidebar">参照と復元を使用してONTAPバックアップから復元する</block>
 </blocks>

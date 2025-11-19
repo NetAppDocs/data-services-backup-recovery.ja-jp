@@ -104,7 +104,13 @@ sidebar:
       - title: ONTAPバックアップの管理
         url: "/prev-ontap-backup-manage.html"
       - title: ONTAPバックアップからの復元
-        url: "/prev-ontap-restore.html"
+        entries:
+        - title: リストアの概要
+          url: "/prev-ontap-restore.html"
+        - title: 検索と復元を使用してONTAPバックアップから復元する
+          url: "/prev-ontap-restore-search.html"
+        - title: 参照と復元を使用してONTAPバックアップから復元する
+          url: "/prev-ontap-restore-browse.html"
     - title: Microsoft SQL Server ワークロードを保護する
       entries:
       - title: Microsoft SQL Server ワークロードの保護の概要

@@ -206,7 +206,7 @@ ONTAP S3 へのバックアップを設定すると、バックアップ ウィ�
 
 これらのアクセス キーは、次の権限を持つユーザーに関連付ける必要があります。
 
-[source, console]
+[source, text]
 ----
 "s3:ListAllMyBuckets",
 "s3:ListBucket",

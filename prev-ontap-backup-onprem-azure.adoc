@@ -111,7 +111,7 @@ Azure Synapse Analytics リソース プロバイダー (「Microsoft.Synapse」
 +
 [%collapsible]
 ====
-[source, console]
+[source, text]
 ----
 "Microsoft.Storage/storageAccounts/listkeys/action",
 "Microsoft.Storage/storageAccounts/read",

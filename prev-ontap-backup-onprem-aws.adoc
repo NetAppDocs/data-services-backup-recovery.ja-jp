@@ -293,12 +293,40 @@ NOTE: AWS中国リージョンでバックアップを作成する場合、IAM�
 
 link:prev-ontap-protect-journey.html["独自のバケットの作成について詳しくは"^]。
 
-独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、 `ontapcloud-instance-policy-netapp-backup`既存の CVO の IAMRole を作成し、次のリストを S3 権限に追加します。含める必要がある `"Resource": "arn:aws:s3:::*"`バケットに関連付ける必要のあるすべての必要な権限を割り当てます。
+独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、 `ontapcloud-instance-policy-netapp-backup`既存のCVOのIAMRoleを作成し、次のJSONブロックをS3権限に追加します。 `Statement`配列。含める必要がある `"Resource": "arn:aws:s3:::*"`バケットに関連付ける必要のあるすべての必要な権限を割り当てます。
 
 [%collapsible]
 ====
-"アクション": [ "S3:ListBucket" "S3:GetBucketLocation" ] "リソース": "arn:aws:s3:::*", "効果": "許可" }, { "アクション": [ "S3:GetObject", "S3:PutObject", "S3:DeleteObject", "S3:ListAllMyBuckets", "S3:PutObjectTagging", "S3:GetObjectTagging", "S3:RestoreObject", "S3:GetBucketObjectLockConfiguration", "S3:GetObjectRetention", "S3:PutBucketObjectLockConfiguration", "S3:PutObjectRetention" ] "リソース": "arn:aws:s3:::*",
-
+[source, json]
+----
+[
+  {
+    "Effect": "Allow",
+    "Action": [
+      "s3:ListBucket",
+      "s3:GetBucketLocation"
+    ],
+    "Resource": "arn:aws:s3:::*"
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "s3:GetObject",
+      "s3:PutObject",
+      "s3:DeleteObject",
+      "s3:ListAllMyBuckets",
+      "s3:PutObjectTagging",
+      "s3:GetObjectTagging",
+      "s3:RestoreObject",
+      "s3:GetBucketObjectLockConfiguration",
+      "s3:GetObjectRetention",
+      "s3:PutBucketObjectLockConfiguration",
+      "s3:PutObjectRetention"
+    ],
+    "Resource": "arn:aws:s3:::*"
+  }
+]
+----
 ====
 
 
@@ -332,9 +360,9 @@ https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-blu
 . AWS コンソールからエンドポイントの DNS 名を取得します。
 . VPC S3 エンドポイントから証明書を取得します。これを実行するには https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["コンソールエージェントをホストするVMにログインする"^]次のコマンドを実行します。エンドポイントの DNS 名を入力するときは、先頭に「*」を置き換えて「bucket」を追加します。
 +
-[source, text]
+[source, console]
 ----
-[ec2-user@ip-10-160-4-68 ~]$ openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vpce.amazonaws.com:443 -showcerts
+openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vpce.amazonaws.com:443 -showcerts
 ----
 . このコマンドの出力から、S3 証明書のデータ (BEGIN / END CERTIFICATE タグを含む、その間のすべてのデータ) をコピーします。
 +
@@ -352,7 +380,7 @@ GqvbOz/oO2NWLLFCqI+xmkLcMiPrZy+/6Af+HH2mLCM4EsI2b+IpBmPkriWnnxo=
 ----
 . ONTAPクラスタ CLI にログインし、次のコマンドを使用してコピーした証明書を適用します (独自のストレージ VM 名に置き換えます)。
 +
-[source, text]
+[source, console]
 ----
 cluster1::> security certificate install -vserver cluster1 -type server-ca
 Please enter Certificate: Press <Enter> when done

@@ -206,7 +206,7 @@ StorageGRIDへのバックアップを設定すると、バックアップ ウ�
 
 これらのアクセス キーは、次の権限を持つユーザーに関連付ける必要があります。
 
-[source, console]
+[source, text]
 ----
 "s3:ListAllMyBuckets",
 "s3:ListBucket",
