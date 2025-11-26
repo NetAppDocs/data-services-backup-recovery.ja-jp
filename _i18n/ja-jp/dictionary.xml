@@ -3734,10 +3734,6 @@
   <block id="c601431e32ca59eda5545781d799fc84" category="cell">部分的または完全なボリューム名、部分的または完全なフォルダー/ファイル名、サイズの範囲、追加の検索フィルターを使用して、*すべてのバックアップ ファイル* 間でボリューム、フォルダー、またはファイルを検索します。</block>
   <block id="8042f6982b79849d158e3d7ac9190cc2" category="cell">ファイルが削除または名前変更され、ユーザーが元のファイル名を知らない場合、ファイルの回復は処理されません。</block>
   <block id="609c9e9bd29468f2ba84839f3741b886" category="cell">新しく作成/削除/名前変更されたディレクトリと新しく作成/削除/名前変更されたファイルを処理します</block>
-  <block id="c6df30fd69d443c5f65257f03e22d182" category="cell">追加のクラウドプロバイダーリソースは不要</block>
-  <block id="ba3b7ed6a9e20a17536af523c17d7d72" category="cell">クラウドから復元する場合は、アカウントごとに追加のバケットとパブリック クラウド プロバイダーのリソースが必要になります。</block>
-  <block id="f487cfb88239842615093e7eb26153a0" category="cell">追加のクラウドプロバイダー費用は不要</block>
-  <block id="e4da0c30ee3e36e87eec129bd901c319" category="cell">クラウドから復元する場合、バックアップとボリュームをスキャンして検索結果を取得する際に追加のコストが必要になります。</block>
   <block id="bc7f13477d0119c48bad565ccf971e6a" category="cell">クイック復元がサポートされています。</block>
   <block id="acf00c252198c9be0294aaf561c5d662" category="cell">クイック復元はサポートされていません。</block>
   <block id="36bce3524e4446bfe42ccad6f813430a" category="paragraph">この表には、バックアップ ファイルが存在する場所に基づいて、有効な復元操作の一覧が示されています。</block>
@@ -4715,7 +4711,6 @@
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">結果には、検索したファイルを含むローカル ボリュームのスナップショットとリモートの複製ボリュームが識別されることに注意してください。クラウド バックアップ ファイル、スナップショット、または複製されたボリュームから復元することを選択できます。</block>
   <block id="8cb59bcb28ab4d28eff3f32b41c1619f" category="paragraph">まず、カタログ ファイルを保持するための別のボリュームをマウントする必要があります。これにより、スナップショットを保持するファイルのサイズが大きくなりすぎた場合にデータが失われるのを防ぎます。これはすべてのクラスターで必要なわけではなく、環境内の任意のクラスターから任意の 1 つのボリュームをマウントできます。これを行わないと、インデックスが正しく機能しない可能性があります。</block>
   <block id="49b1bd86131611255094bea2f77118b7" category="paragraph">マウントされたボリュームについては、次のサイズ設定ガイダンスを使用します。</block>
-  <block id="0207db4ce855854d816d06443ff062ea" category="list-text">NetApp NVSボリュームを使用する</block>
   <block id="aa45cf8d923bfb8185fed2178e78d921" category="list-text">300 MB/秒のディスク スループットを備えたAFFストレージを推奨します。スループットが低下すると、検索やその他の操作に影響します。</block>
   <block id="076bea46cdc896921ec2687cf3f345bb" category="list-text">NetAppスナップショットを有効にして、カタログバックアップzipファイルに加えてカタログメタデータを保護します。</block>
   <block id="1c3669c2099ac1b271c6bc4f19601ca5" category="list-text">10億ファイルあたり50GB</block>
@@ -4779,4 +4774,7 @@
   <block id="b72cbffce68718636e4f9c2f1c2a8173" category="list-text"><block ref="f0a1a1822bca6dd563c941cbc831d447" category="inline-link-macro-rx"></block></block>
   <block id="cee41b55e417d2c681bd345802b719fd" category="sidebar">リストアの概要</block>
   <block id="a49488740a7ad2d76917598dae6b3fbb" category="sidebar">参照と復元を使用してONTAPバックアップから復元する</block>
+  <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">検索と復元を有効にする前に、環境が次の要件を満たしていることを確認してください。</block>
+  <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">従来のインデックスを使用する場合の検索と復元の要件は次のとおりです。</block>
+  <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">NetApp NFSボリュームを使用する</block>
 </blocks>
