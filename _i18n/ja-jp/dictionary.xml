@@ -4777,4 +4777,5 @@
   <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">検索と復元を有効にする前に、環境が次の要件を満たしていることを確認してください。</block>
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">従来のインデックスを使用する場合の検索と復元の要件は次のとおりです。</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">NetApp NFSボリュームを使用する</block>
+  <block id="459af9b852bd375bac17fb30c8c1b979" category="list-text">NetApp Backup &amp; Recovery では、クラウド バックアップ機能を維持しながら、アクティブなクラウド バックアップ関係を持つFlexVol volumeをFlexGroupボリュームに変換することはサポートされていません。</block>
 </blocks>
