@@ -1037,7 +1037,6 @@
   <block id="8dee103972185c1aba0e0c814961a8db" category="list-text">*通知*セクション:</block>
   <block id="d705348f84095bf9f266942da2cf2b84" category="list-text">*電子メール通知を有効にする*: 復元操作に関する電子メール通知を受信し、受信する通知の種類を指定するには、これを選択します。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">*復元*を選択します。</block>
-  <block id="aef04a364ab7bd7fcab1346a4084cdaa" category="paragraph">Hyper-V プライベート プレビューでは利用できません。</block>
   <block id="4c931104d6ff5fdc2a76bdfc6fba4662" category="summary">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Kubernetes アプリケーションとアプリケーション データを保護し、データを確実に保護できます。</block>
   <block id="ff1a3fbe6f92249e286b8a93cf5b5d2e" category="doc">Kubernetes ワークロードの管理の概要</block>
   <block id="14cca4b1ac5c46a49fffa25e733381e7" category="paragraph">NetApp Backup and Recoveryで Kubernetes ワークロードを管理することで、Kubernetes クラスターとアプリケーションをすべて 1 か所で検出、管理、保護できるようになります。クラスタでホストされているリソースとアプリケーションを管理できます。また、単一のインターフェースを使用して、Kubernetesワークロードに保護ポリシーを作成し、関連付けることもできます。</block>
@@ -1090,7 +1089,6 @@
   <block id="42b3c9b2282ae6b4644cee5b5995979d" category="summary">NetApp Backup and Recoveryを使用して KVM ワークロードを保護します。</block>
   <block id="02055854e5f8d7c0a2161503c5645d5a" category="doc">NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する</block>
   <block id="4ebed5b1ff5b9230bfba78b5f3751082" category="paragraph">異なる開始場所から仮想マシンを復元できます。</block>
-  <block id="2003d1dd0ff605a8b0183ae69c3823f3" category="paragraph">データを元の場所に復元することはできますが、別の場所への復元はこのプレビュー リリースでは利用できません。</block>
   <block id="c149f6b4ccbdba8011de4b1e3579b42f" category="list-text">元の場所に復元する</block>
   <block id="25a77bf38583c396d6997e367e9268c8" category="section-title">仮想マシンの復元の仕組み</block>
   <block id="01d60535f98ec4122ee816d29473c760" category="paragraph">仮想マシンを復元すると、次のことが起こります。</block>
@@ -1101,7 +1099,6 @@
   <block id="108ce4e259c8e5532d28e1f7b55053e0" category="paragraph">復元オプションを使用して KVM 仮想マシンを復元します。スナップショットは、名前またはフィルターを使用して検索できます。</block>
   <block id="28826b6f1571b9d0354ca0ae481f50c6" category="list-text">名前検索フィールドの右側にあるドロップダウン リストから、*KVM* を選択します。</block>
   <block id="066fa262c239f022506c95a1e09ebb65" category="list-text">復元する VM の名前を入力するか、復元するリソースが配置されている VM ホストまたはストレージ プールをフィルターします。</block>
-  <block id="7f95c9104d9c5d062c442ee5aade255c" category="paragraph">KVM プレビューでは利用できません。</block>
   <block id="67833cdc3e0f9b5bea226d3734262615" category="summary">NetApp Backup and Recovery を使用すると、実行フックを管理して、アプリケーション保護操作の前後にアクションを実行できます。</block>
   <block id="3d932cbb71cd117a65669b165e078b5b" category="doc">Kubernetes ワークロード用のNetApp Backup and Recovery実行フック テンプレートを管理する</block>
   <block id="ac84b7596169ab3fb6c24e8a5c85c234" category="inline-link">KubeVirt VM によるデータ保護</block>
@@ -1916,16 +1913,7 @@
   <block id="ba48c3305320f5df1a8db5cbd6fed75a" category="paragraph">以下のポイントまでデータを復元できます:</block>
   <block id="600582313b42616fbf96d317e8033ef9" category="paragraph">復元オプションを使用して VMware ワークロードを復元します。スナップショットは、名前またはフィルターを使用して検索できます。</block>
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ リストア管理者ロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
-  <block id="71032b474c00a68ab57e3f805cdf5d61" category="list-text">名前検索フィールドの右側にあるドロップダウン リストから、*仮想マシン* を選択します。</block>
   <block id="2aceb93307f82c2d88347faa7eaa4e71" category="list-text">復元するリソースの名前を入力するか、復元するリソースが配置されている vCenter、データセンター、またはデータストアでフィルタリングします。</block>
-  <block id="3fca73cfa6e5a82be82156106e4db553" category="paragraph">復元場所のオプションのリストが表示されます。</block>
-  <block id="eb58d19c210547f2e0cbe6a7689d6a12" category="list-text">スナップショットを復元する復元場所を選択します。</block>
-  <block id="c318ddc11c1d9b56e2cfda2af9351a42" category="list-text">ローカル: スナップショットを元の場所に復元します。</block>
-  <block id="e4e4935a5dbb6b2200b975d599e683e4" category="list-text">セカンダリ ストレージ: スナップショットをセカンダリ ストレージの場所に復元します。</block>
-  <block id="33a039fcca21669940ad7ee10455c43d" category="list-text">オブジェクト ストレージ: スナップショットをオブジェクト ストレージの場所に復元します。</block>
-  <block id="6fa9a019160376f2b85947c9116180fb" category="paragraph">オブジェクト ストレージを選択した場合は、復元する前にスナップショットを再度スキャンするかどうかを確認します。</block>
-  <block id="0bff45ae654663c7b091c0f6dd70d653" category="paragraph">復元先の詳細ページで、次の情報を入力します。</block>
-  <block id="c8f730ad9d8597b4dfcdd623d5a511aa" category="paragraph">VMware プレビューでは利用できません。</block>
   <block id="a5315c2927cf2b05876fdd6713fbd713" category="summary">NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ サービスです。</block>
   <block id="0541ead918a4013aad82336e0654ba53" category="paragraph">バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。  NetAppコンソールは、複数のリソース マネージャーや専門の担当者を必要とせずに、3-2-1 バックアップのさまざまなバリエーションを含むあらゆるバックアップ戦略の実装を簡素化します。</block>
   <block id="8fa16cd18cf0722e85fe3e62f649f0c8" category="admonition">VMware、KVM、Hyper-V、Kubernetes ワークロードの保護に関するドキュメントは、テクノロジー プレビューとして提供されます。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。</block>
@@ -4487,9 +4475,6 @@
   <block id="2b2261b532e949e52edc443eb38fcb1c" category="admonition">バックアップ ファイルにアクセスするには、クラウド プロバイダーに追加料金を支払う必要がある場合があります。</block>
   <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">[復元] ページ (検索と復元) では、正確な名前、場所、または最終日付を覚えていなくても、フィルターを使用してスナップショットを検索することでリソースを復元できます。</block>
   <block id="167f8fde1782c144b38a4f581246608e" category="paragraph">セカンダリ ストレージを選択した場合は、データとログの両方のソースと宛先の場所を入力します。</block>
-  <block id="9908b0e588dc1ce9587bfb1206e3118e" category="paragraph">次に、宛先設定と復元前および復元後のオプションを選択します。</block>
-  <block id="299981ed6b0aaf1c2eed2a8e35151313" category="list-text">*クイック復元を有効にする*: クイック復元操作を実行するにはこれを選択します。復元されたボリュームとデータはすぐに使用できます。クイック リストア プロセス中はデータへのアクセスが通常よりも遅くなる可能性があるため、高パフォーマンスが必要なボリュームではこれを使用しないでください。</block>
-  <block id="ca9d8ef3573c04098ddeb120eb1f19e5" category="list-text">*電子メール通知を有効にする*: 復元操作に関する電子メール通知を受け取るには選択し、必要な通知タイプを選択します。</block>
   <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server ホストのソフトウェア要件:</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">復元操作が完了しない場合は、ジョブ モニターに「失敗」と表示されるまで待ってから、復元操作を再試行してください。</block>
   <block id="df3ee99c8171743d8bd35d65cf62b2ed" category="paragraph">NetApp Backup and Recoveryを使用すると、クラウドからオンプレミスの vCenter Server に仮想マシンのデータを復元できます。仮想マシンを、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。仮想マシンがアーカイブ ポリシーを使用してバックアップされた場合は、アーカイブ復元の優先順位を設定できます。</block>
@@ -4778,4 +4763,40 @@
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">従来のインデックスを使用する場合の検索と復元の要件は次のとおりです。</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">NetApp NFSボリュームを使用する</block>
   <block id="459af9b852bd375bac17fb30c8c1b979" category="list-text">NetApp Backup &amp; Recovery では、クラウド バックアップ機能を維持しながら、アクティブなクラウド バックアップ関係を持つFlexVol volumeをFlexGroupボリュームに変換することはサポートされていません。</block>
+  <block id="063090df0880212c0ba8eec878096a21" category="doc">VMware ワークロードのプレビュー機能強化</block>
+  <block id="24936fb650df7af8295e75a3667becef" category="list-text">バックアップとスナップショットを別の場所に復元できるようになりました。これは、異なる VMware vCenter 展開、VMware ESXi ホスト、または VMware データストア上の VM のバージョンを管理する場合に便利です。</block>
+  <block id="99ee61e75520f174d08caa35e0ad294d" category="list-text">特定の VMware 仮想ディスク (VMDK イメージ) をプライマリまたはセカンダリの場所から復元できるようになり、VM データの復元をより細かく制御できるようになりました。</block>
+  <block id="814957340a966bc73ff87feca2905da9" category="inline-link-macro">NetApp Backup and Recoveryを使用したVMwareワークロードの復元の詳細</block>
+  <block id="8b8a6f71e41f04ff546fb14f0800f38f" category="paragraph"><block ref="9f09945a70747c90951b9e96b5ea16be" category="inline-link-macro-rx"></block>。</block>
+  <block id="7689264f717abcf16a917111f707d7e0" category="paragraph">Hyper-V ワークロード プレビューでは使用できません。</block>
+  <block id="77f252cb66af8ee7dab8b27bcf3851ca" category="paragraph">KVM ワークロード プレビューでは使用できません。</block>
+  <block id="516f1f530028d7905b72cd1b035c8a73" category="list-text">*元の場所に復元*: VM は元の場所、同じ vCenter 展開、ESXi ホスト、およびデータストアに復元されます。VM とそのすべてのデータが上書きされます。</block>
+  <block id="d2f574e5e69d11881580660614b89ba3" category="list-text">*別の場所に復元*: VM の復元先として、別の vCenter、ESXi ホスト、またはデータストアを選択できます。これは、異なる場所や状態にある同じ VM の異なるコピーを管理するのに役立ちます。</block>
+  <block id="fa378eb8651e1bbe815e91c2a4ec5b2b" category="list-text">名前検索フィールドの右側にあるドロップダウン リストから、*VMware* を選択します。</block>
+  <block id="b2135f4d6adba994b22c157197d8699b" category="paragraph">検索条件に一致する仮想マシンのリストが表示されます。</block>
+  <block id="7e4be521d13fb903d20636d087795bdb" category="list-text">リストから復元する VM を見つけて、その VM の *仮想マシンの復元* ボタンを選択します。</block>
+  <block id="02e027e60aca2a9aa354a74b09718442" category="paragraph">その仮想マシン上に作成されたスナップショット (復元ポイント) のリストが表示されます。</block>
+  <block id="a15361d377b43197c1044f0729f9742e" category="list-text">復元するスナップショットのチェックボックスを有効にします。</block>
+  <block id="4716cc8d1f61fba6b3c321e87aece13d" category="paragraph">スナップショットの場所のオプションが表示されます。</block>
+  <block id="f16b36eea83bd45d35d7613cab7f6cf8" category="list-text">スナップショットの復元先を選択します。</block>
+  <block id="086fbde8fbe590f104f5100808b42c0b" category="list-text">*ローカル*: ローカルの場所からスナップショットを復元します。</block>
+  <block id="3a786499ea5d54fb6bb418032aca3117" category="list-text">*セカンダリ*: リモート ストレージの場所からスナップショットを復元します。</block>
+  <block id="bc9234ce73c565f247a8ae290b842ff6" category="list-text">宛先設定と復元前および復元後のオプションを選択します。</block>
+  <block id="8ed9e5a565b596ef7f9cb364cf2536d7" category="paragraph">元の場所に復元する場合、宛先の vCenter、ESXi ホスト、データストア、または VM の名前を変更することはできません。復元操作により元の VM が上書きされます。</block>
+  <block id="10b0d3ffb47c4e67fc652e3b0f0220d7" category="list-text">*元の場所* ペインを選択します。</block>
+  <block id="1b8d4d654146b4eec3cc22bd8b461dbb" category="list-text">次のいずれかのオプションを選択します。</block>
+  <block id="9969fdcd80f8f04232cfe10158190f8c" category="list-text">*復元前オプション*セクション:</block>
+  <block id="3e4b444bf949d263dd0a42369aeba637" category="list-text">*プレスクリプト*: 復元操作を開始する前にカスタム スクリプトを実行して追加のタスクを自動化するには、このオプションを有効にします。実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
+  <block id="181dff5c613144551ed16703a090b3b5" category="list-text">*復元後のオプション*セクション:</block>
+  <block id="81dcec9119b8491a178fac7f1cf17c92" category="list-text">*仮想マシンを再起動*: 復元操作が完了し、復元後のスクリプトが適用された後に仮想マシンを再起動するには、このオプションを有効にします。</block>
+  <block id="7de4def82cb6f4cb7277085992e1be0a" category="list-text">*Postscript*: 復元が完了した後にカスタム スクリプトを実行して追加のタスクを自動化するには、このオプションを有効にします。実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
+  <block id="72e03b5a87389f676881b79f8d4170ca" category="paragraph">別の場所に復元する場合は、宛先の vCenter、ESXi ホスト、データストア、および VM の名前を変更して、別の場所または別の名前で VM の新しいコピーを作成できます。</block>
+  <block id="d9a04cc80eb84134a783629255c7bc36" category="list-text">*代替の場所* ペインを選択します。</block>
+  <block id="f78868ada341077e1afdf76ea00e0454" category="list-text">*宛先設定*セクション:</block>
+  <block id="fd6f2a9c82421585e9dfe5f8820c97c0" category="list-text">*vCenter FQDN または IP アドレス*: スナップショットを復元する vCenter サーバーを選択します。</block>
+  <block id="a239cc572a24441f1bb1a7abc259ccab" category="list-text">*ESXi ホスト*: スナップショットを復元するホストを選択します。</block>
+  <block id="c2942751152cd0449e1de7861200bde4" category="list-text">*ネットワーク*: スナップショットを復元するネットワークを選択します。</block>
+  <block id="08c806f7ec865a3481f751e978944e5d" category="list-text">*データストア*: スナップショットを復元するデータストアの名前を入力します。</block>
+  <block id="70fd3915e87d44c5f19fc35858b165f8" category="list-text">*仮想マシン名*: スナップショットを復元する仮想マシンの名前を入力します。名前がデータストア内に既に存在する VM と一致する場合、Backup and Recovery は現在のタイムスタンプを追加して名前を一意にします。</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
 </blocks>

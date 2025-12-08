@@ -18,6 +18,24 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+== 2025年12月8日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+=== VMware ワークロードのプレビュー機能強化
+
+VMware ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。
+
+* バックアップとスナップショットを別の場所に復元できるようになりました。これは、異なる VMware vCenter 展開、VMware ESXi ホスト、または VMware データストア上の VM のバージョンを管理する場合に便利です。
+* 特定の VMware 仮想ディスク (VMDK イメージ) をプライマリまたはセカンダリの場所から復元できるようになり、VM データの復元をより細かく制御できるようになりました。
+
+
+link:br-use-vmware-restore.html["NetApp Backup and Recoveryを使用したVMwareワークロードの復元の詳細"]。
+
+
+
 == 2025年10月6日
 
 このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
