@@ -1286,7 +1286,6 @@
   <block id="f12cc055f626f9974e07168ee36fc2b6" category="list-text">NetApp Backup and Recoveryメニューから、*監視* を選択します。</block>
   <block id="e81a8bad1be4be12a837fcfb49f51617" category="list-text">追加の列 (システム、SVM、ユーザー名、ワークロード、ポリシー名、スナップショット ラベル) を表示するには、プラス記号を選択します。</block>
   <block id="87aa191eff82d3ce3518c07577f209bd" category="section-title">求人リストを検索してフィルタリングする</block>
-  <block id="9d0747ab797d5b67d7daca67845988b1" category="paragraph">ポリシー、スナップショット ラベル、操作の種類 (保護、復元、保持など)、保護の種類 (ローカル スナップショット、レプリケーション、クラウドへのバックアップ) などのいくつかのフィルターを使用して、[ジョブ監視] ページで操作をフィルターできます。</block>
   <block id="7f8ba7d41d11ab3b1061dbce2eeadb52" category="paragraph">デフォルトでは、ジョブ監視ページには過去 24 時間の保護ジョブと回復ジョブが表示されます。タイムフレーム フィルターを使用してタイムフレームを変更できます。</block>
   <block id="a466bc110c2ee16333fcf19f4e7b5dc2" category="list-text">結果を異なる方法で並べ替えるには、各列見出しを選択し、ステータス、開始時刻、リソース名などで並べ替えます。</block>
   <block id="abfa7a0ebf0068a9c8b2a22cab7ee2b3" category="list-text">特定の求人を探している場合は、「*詳細検索とフィルタリング*」領域を選択して検索パネルを開きます。</block>
@@ -1311,16 +1310,13 @@
   <block id="2b0ecb40cc305f7af9fe7f986b5bb2dd" category="list-text">すべてのジョブの CSV ファイルをダウンロードするには、[ダウンロード] ボタンを選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="1dc45daaf063a4c51a123d4f491b6b42" category="list-text">単一のジョブのJSONファイルをダウンロードするには、[アクション]メニューを選択します。<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>ジョブの場合は、*JSON ファイルのダウンロード*を選択し、ダウンロード ディレクトリでファイルを見つけます。</block>
   <block id="f1a15f873b659fefcf2800c9489b580b" category="section-title">保持（バックアップ ライフサイクル）ジョブを確認する</block>
-  <block id="5168f75ce01db43e41309dbb9ba106a7" category="paragraph">「保持」ジョブ タイプは、NetApp Backup and Recoveryによって保護されているボリューム上で開始されたすべてのスナップショット削除ジョブをキャプチャします。</block>
   <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">*高度な検索とフィルタリング*領域を選択して、検索パネルを開きます。</block>
   <block id="67e8772c27eee052c978af0d5760e36a" category="list-text">ジョブタイプとして「保持」を選択します。</block>
   <block id="1c3cccbea914c20304f63319b99fb585" category="section-title">NetApp Console通知センターでバックアップとリストアのアラートを確認する</block>
   <block id="bacd9783e91bb01896a4e564be2f9207" category="paragraph">NetApp Console通知センターは、開始したバックアップおよび復元ジョブの進行状況を追跡し、操作が成功したかどうかを確認できます。</block>
   <block id="44d4deb8868ac8159ee85f4a8e68725c" category="inline-link">通知センターの詳細と、バックアップおよび復元ジョブのアラートメールを送信する方法を学びます</block>
-  <block id="3b27991b1aa229f52835df236ba4b917" category="paragraph">通知センターには、スナップショット、レプリケーション、クラウドへのバックアップ、復元のイベントが多数表示されますが、電子メールアラートをトリガーするのは特定のイベントのみです。</block>
   <block id="9e35f94818feb2156d0744e4be9fb2ea" category="cell">処理のタイプ</block>
   <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">イベント</block>
-  <block id="630469b1210edbcdbdfbbd418f05c1ca" category="cell">警戒レベル</block>
   <block id="cfa4593b1fb6aea2e32d9928f2c4349b" category="cell">メールが送信されました</block>
   <block id="a9a62e70841c4d06dd16306a85700d36" category="cell">アクティベーション</block>
   <block id="c74709859d025e289686ff60f170d924" category="cell">システムのバックアップとリカバリのアクティベーションに失敗しました</block>
@@ -4608,7 +4604,6 @@
   <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。</block>
   <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。</block>
   <block id="c4a9fad82bfaa655d1dc063df314c9ed" category="list-text">ログ ディレクトリを構成します ([インベントリ] &gt; [ホスト])。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block> 。</block>
-  <block id="d4269b8b09864c01c1c86fd8fbf36f7e" category="paragraph">バックアップ ライフサイクル ジョブは、削除されたスナップショット、または削除待ちのキューにあるスナップショットをすべて追跡します。ONTAP 9.13 以降では、「ジョブ監視」ページで「保持」と呼ばれるすべてのジョブ タイプを確認できます。</block>
   <block id="e55271e37b053fabbe06b3671cfb3c48" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirror を使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
   <block id="ac953870175731881060585a6b9ee690" category="paragraph">NetApp Backup and Recovery を使用すると、Microsoft SQL Server インスタンスとデータベースを次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにバックアップできます。スナップショットはソース システムに存在します。</block>
   <block id="d07d19d5986209f0a00db1f8289e73d2" category="paragraph">プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
@@ -4825,4 +4820,33 @@
   <block id="7580e90069a8f15fc27aabfe1ca9e800" category="list-text">表示されるメニューで、「*仮想マシンの復元*」を選択します。</block>
   <block id="17f7a448c0fdbce6c9a45d289bcf9e83" category="list-text">*データストア*: ドロップダウン リストから、スナップショットを復元するデータストアの名前を選択します。</block>
   <block id="92ef4bdfd24483ff1f89cbc83ac91ce5" category="list-text">VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。</block>
+  <block id="c8114f7295c45b5e4daffaaf7225f524" category="paragraph">ポリシー、スナップショット ラベル、操作の種類 (保護、復元、保持など)、保護の種類 (ローカル スナップショット、レプリケーション、クラウドへのバックアップ) などのいくつかのフィルターを使用して、[ジョブ監視] ページで操作をフィルターできます。</block>
+  <block id="8e357ee9c7f7033fb2069bec01bfa7b5" category="paragraph">バックアップ ライフサイクル ジョブは、削除されたスナップショット、または削除待ちのキューにあるスナップショットをすべて追跡します。ONTAP 9.13 以降では、「ジョブ監視」ページで「保持」と呼ばれるすべてのジョブ タイプを表示できます。</block>
+  <block id="192bfa3d569dc6662018c9e874cd07e8" category="paragraph">「保持」ジョブ タイプは、NetApp Backup and Recoveryによって保護されているボリューム上で開始されたすべてのスナップショット削除ジョブをキャプチャします。</block>
+  <block id="81f2ef03318777ac36a4a73237288610" category="paragraph">通知センターには、多数のスナップショット、レプリケーション、クラウドへのバックアップ、復元イベントが表示されますが、電子メールアラートをトリガーするのは特定のイベントのみです。</block>
+  <block id="5dd32721e3e223e6a87039f75b4c315d" category="cell">アラートが生成されました</block>
+  <block id="a907ac316a0e62996e50939eddb00cf1" category="cell">ボリュームがスナップショットポリシーに関連付けられました</block>
+  <block id="de05700e8dd719721f13f9c6b00f1b7a" category="cell">ボリュームのバックアップまたは状態の変更</block>
+  <block id="832781ccddafcada7da950ee920e4677" category="cell">システムのバックアップとリカバリのアクティベーションが成功しました</block>
+  <block id="f4ceecec904030bc411eb94dfb80f45a" category="cell">アドホックボリュームのバックアップに失敗しました</block>
+  <block id="80fd95bd893f8df76c2fa9dd4bad6849" category="cell">アドホックボリュームのバックアップが成功しました</block>
+  <block id="5ed835b77018cbf32fbdfb39bcc25527" category="cell">マルチボリュームバックアップに失敗しました</block>
+  <block id="0298583ff5a55aeec25dc314bbd47357" category="cell">Cron操作</block>
+  <block id="f771739629c02b8a1545a40985444450" category="cell">欠落しているスナップショットラベルの確認</block>
+  <block id="39e7a35fbe3bf187f05710b99a1abab5" category="cell">このシステムのONTAPにセキュリティ トークンを送信できませんでした</block>
+  <block id="1da6059b2e40a5d5dcd0f29c0344d522" category="cell">Pub/Subイベント</block>
+  <block id="75c3b3bb89bde01f9166a94cbfa98588" category="cell">接続失敗</block>
+  <block id="4d40cebef25fff7de69b66a1fd2b91ac" category="cell">スケジュールされたスナップショットを削除できませんでした</block>
+  <block id="01a38301f446b2e021e1fa29a4fb17a3" category="cell">ボリュームのスケジュールされたバックアップに失敗しました</block>
+  <block id="331af99e5b6a5cf68b545ebe121bccfb" category="cell">ボリュームの復元に成功しました</block>
+  <block id="6be567f0c08a3a4af17cffb149fa98ce" category="cell">ボリュームの復元に失敗しました</block>
+  <block id="232a2b16a1710c0ed1d16548ba8bb8f1" category="cell">ランサムウェア</block>
+  <block id="cac26c3a96c9684d7c23fab2394f7ee9" category="cell">バックアップコピーで潜在的なランサムウェア攻撃が検出されました</block>
+  <block id="4f7bae4887ae7adfba52529b1ef897f1" category="cell">このシステムのバックアップコピーで潜在的なランサムウェア攻撃が検出されました</block>
+  <block id="781ab27075c39bdc6b2c5a6f2d1c7999" category="cell">ボリューム障害のレプリケーション関係の変更</block>
+  <block id="dcbc181d9286ddc85c2def0e5a88a627" category="cell">ターゲット操作</block>
+  <block id="490b6cef8b42244be7db684255156f74" category="cell">ローカルまたはクラウドへの復元の失敗</block>
+  <block id="985aacac93e75bfb41dca796dd136773" category="cell">オンデマンド復元の失敗</block>
+  <block id="df660ed534483b04ecb1bf0371cdbe53" category="cell">システム操作</block>
+  <block id="eb31ef8eb2f5dc2e91e3fc628c278047" category="cell">アドホックボリュームスナップショットの作成失敗</block>
 </blocks>
