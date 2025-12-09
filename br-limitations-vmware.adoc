@@ -20,8 +20,6 @@ NetApp Backup and Recoveryの VMware ワークロードのプレビュー バー
 
 * マウント
 * アンマウント
-* 別の場所へのリストア
-* VMDKを復元する
 * VMDKをアタッチする
 * VMDKのデタッチ
 * vVol サポート

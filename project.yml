@@ -143,6 +143,8 @@ sidebar:
         url: "/br-use-vmware-backup.html"
       - title: VMwareワークロードを復元する
         url: "/br-use-vmware-restore.html"
+      - title: バックアップから特定の仮想ディスクを復元する
+        url: "/br-use-vmware-restore-vmdks-from-backups.html"
     - title: VMware ワークロードの保護 ( SnapCenter Plug-in for VMware を使用)
       entries:
       - title: 仮想マシンのワークロードの保護の概要

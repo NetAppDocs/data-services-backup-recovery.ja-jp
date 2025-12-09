@@ -49,6 +49,7 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** NetApp Backup and Recoveryを使用して VMware VM とデータストアを保護します。
 ** VMware ワークロードを Amazon Web Services S3 またはStorageGRID (プレビュー用) にバックアップします。
 ** クラウドから VMware データをオンプレミスの vCenter に復元します。
+** VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。
 ** SnapCenter Plug-in for VMware vSphere を使用せずにNetApp Backup and Recoveryを使用します。
 ** 参照link:br-use-vmware-protect-overview.html["VMwareワークロードを保護する"]。
 
