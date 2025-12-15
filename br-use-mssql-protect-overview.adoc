@@ -23,7 +23,7 @@ NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステ�
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-NetApp Backup and Recovery は、 NetApp SnapMirror を使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。
+NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。
 
 データを保護するために、次の操作を実行できます。
 

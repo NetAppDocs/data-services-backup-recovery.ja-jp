@@ -1779,7 +1779,6 @@
   <block id="408156cb89b56d3b746dba5ade40b0e4" category="paragraph">コンソールはアプリケーションのバックアップを作成し、バックアップとリカバリの *監視* 領域に進行状況を表示します。バックアップは、アプリケーションに関連付けられた保護ポリシーに基づいて作成されます。</block>
   <block id="2f2fda22f167ad6c7dcc0ac3f92cd945" category="summary">NetApp Backup and Recoveryでは、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。</block>
   <block id="8e6f4a9d7c64e35859548854a52b145a" category="doc">NetApp Backup and Recoveryで Microsoft SQL Server ワークロードのレポートを作成する</block>
-  <block id="9192196558994f8d47c11797f2b33682" category="paragraph">NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、バックアップの数、成功したバックアップの数、失敗したバックアップの数などのバックアップのステータスを表示します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。</block>
   <block id="df63e1970b7cb20512cb62b542bcd3f8" category="section-title">レポートを作成する</block>
   <block id="391ccda3039974f5c4561d91d157e4be" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。詳細はこちら<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a75db1c6ad7a6018f4076429dcb47fd8" category="list-text">NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。</block>
@@ -1910,7 +1909,6 @@
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ リストア管理者ロール。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="2aceb93307f82c2d88347faa7eaa4e71" category="list-text">復元するリソースの名前を入力するか、復元するリソースが配置されている vCenter、データセンター、またはデータストアでフィルタリングします。</block>
   <block id="a5315c2927cf2b05876fdd6713fbd713" category="summary">NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ サービスです。</block>
-  <block id="0541ead918a4013aad82336e0654ba53" category="paragraph">バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。  NetAppコンソールは、複数のリソース マネージャーや専門の担当者を必要とせずに、3-2-1 バックアップのさまざまなバリエーションを含むあらゆるバックアップ戦略の実装を簡素化します。</block>
   <block id="8fa16cd18cf0722e85fe3e62f649f0c8" category="admonition">VMware、KVM、Hyper-V、Kubernetes ワークロードの保護に関するドキュメントは、テクノロジー プレビューとして提供されます。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。</block>
   <block id="1f603af7daec690416eee590da3bda4c" category="section-title">NetApp Backup and Recoveryでできること</block>
   <block id="fa9b71fd6339baf1b1e8d4ce0528032e" category="paragraph">NetApp Backup and Recoveryを使用して、次の目標を達成します。</block>
@@ -1991,7 +1989,6 @@
   <block id="9b84371e23a14f93e2d9314a2599ac9a" category="admonition">Microsoft SQL Server の場合、セカンダリONTAPターゲットまたはオブジェクト ストレージへのスナップショットのレプリケーションを開始すると料金が発生します。</block>
   <block id="032820ef020ebdcb4972d36db7394681" category="list-text">最初のオプションは、クラウド プロバイダーにサブスクライブすることです。これにより、月ごとに支払いが可能になります。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">ライセンス</block>
-  <block id="8426d45850b9ec06adef93652db54080" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。読む<block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block>詳細についてはセクションをご覧ください。</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery は、次の消費モデルで利用できます。</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年間*: クラウド プロバイダーのマーケットプレイスからの年間契約。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。</block>
@@ -4601,7 +4598,6 @@
   <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。</block>
   <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。</block>
   <block id="c4a9fad82bfaa655d1dc063df314c9ed" category="list-text">ログ ディレクトリを構成します ([インベントリ] &gt; [ホスト])。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block> 。</block>
-  <block id="e55271e37b053fabbe06b3671cfb3c48" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirror を使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
   <block id="ac953870175731881060585a6b9ee690" category="paragraph">NetApp Backup and Recovery を使用すると、Microsoft SQL Server インスタンスとデータベースを次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにバックアップできます。スナップショットはソース システムに存在します。</block>
   <block id="d07d19d5986209f0a00db1f8289e73d2" category="paragraph">プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
   <block id="4c0cc18e33fa07512d511f9a04e0629a" category="cell">Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3</block>
@@ -4849,4 +4845,8 @@
   <block id="cf45f15c2dbe19bdbf9de3e329061b93" category="paragraph">サービス料金はNetAppに支払われ、オブジェクト ストレージまたはONTAPターゲットへのバックアップを作成するコストと、それらのバックアップからボリュームまたはファイルを復元するコストの両方をカバーします。オブジェクト ストレージまたはONTAP ( SnapMirror構成を含む) で保護するデータに対してのみ料金をお支払いいただきます。料金は、オブジェクト ストレージまたはONTAPターゲットにバックアップされるONTAPボリュームのソース論理使用容量 ( ONTAP効率前) を使用して計算されます。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。</block>
   <block id="1da151060a18e6460ac3d7eb0f913a37" category="paragraph">バックアップとリカバリの支払い方法は 3 つあります。</block>
   <block id="6fa5c823869ff5f58a4f5dcaaa68d86d" category="list-text">2 番目のオプションは、年間契約を購入することです。</block>
+  <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
+  <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、ストレージ システム、タイムスタンプなどのバックアップの状態と詳細を表示します。</block>
+  <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。NetApp Consoleでは、3-2-1ルールに基づく幅広いバックアップ戦略を含め、あらゆるバックアップ戦略を簡単に実装でき、複数のリソースマネージャーや専門の担当者を必要としません。</block>
+  <block id="41bda454559167e0de7967190676c8d0" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。参照 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳細についてはセクションをご覧ください。</block>
 </blocks>

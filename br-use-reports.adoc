@@ -12,7 +12,7 @@ summary: NetApp Backup and Recoveryでは、バックアップの数、成功し
 
 
 [role="lead"]
-NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、バックアップの数、成功したバックアップの数、失敗したバックアップの数などのバックアップのステータスを表示します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。
+NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、ストレージ システム、タイムスタンプなどのバックアップの状態と詳細を表示します。
 
 
 
