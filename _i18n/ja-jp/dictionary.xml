@@ -1986,7 +1986,6 @@
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。</block>
   <block id="e44d61516574d94ce56af3468723e18a" category="list-text">ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*サービス料*</block>
-  <block id="9b84371e23a14f93e2d9314a2599ac9a" category="admonition">Microsoft SQL Server の場合、セカンダリONTAPターゲットまたはオブジェクト ストレージへのスナップショットのレプリケーションを開始すると料金が発生します。</block>
   <block id="032820ef020ebdcb4972d36db7394681" category="list-text">最初のオプションは、クラウド プロバイダーにサブスクライブすることです。これにより、月ごとに支払いが可能になります。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">ライセンス</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery は、次の消費モデルで利用できます。</block>
@@ -4842,11 +4841,12 @@
   <block id="985aacac93e75bfb41dca796dd136773" category="cell">オンデマンド復元の失敗</block>
   <block id="df660ed534483b04ecb1bf0371cdbe53" category="cell">システム操作</block>
   <block id="eb31ef8eb2f5dc2e91e3fc628c278047" category="cell">アドホックボリュームスナップショットの作成失敗</block>
-  <block id="cf45f15c2dbe19bdbf9de3e329061b93" category="paragraph">サービス料金はNetAppに支払われ、オブジェクト ストレージまたはONTAPターゲットへのバックアップを作成するコストと、それらのバックアップからボリュームまたはファイルを復元するコストの両方をカバーします。オブジェクト ストレージまたはONTAP ( SnapMirror構成を含む) で保護するデータに対してのみ料金をお支払いいただきます。料金は、オブジェクト ストレージまたはONTAPターゲットにバックアップされるONTAPボリュームのソース論理使用容量 ( ONTAP効率前) を使用して計算されます。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。</block>
   <block id="1da151060a18e6460ac3d7eb0f913a37" category="paragraph">バックアップとリカバリの支払い方法は 3 つあります。</block>
   <block id="6fa5c823869ff5f58a4f5dcaaa68d86d" category="list-text">2 番目のオプションは、年間契約を購入することです。</block>
   <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
   <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、ストレージ システム、タイムスタンプなどのバックアップの状態と詳細を表示します。</block>
   <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。NetApp Consoleでは、3-2-1ルールに基づく幅広いバックアップ戦略を含め、あらゆるバックアップ戦略を簡単に実装でき、複数のリソースマネージャーや専門の担当者を必要としません。</block>
   <block id="41bda454559167e0de7967190676c8d0" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。参照 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳細についてはセクションをご覧ください。</block>
+  <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">ONTAPボリューム ワークロードの場合、オブジェクト ストレージに保護されているボリュームに対してのみ課金されます。料金は、効率化が適用される前のソースONTAPボリュームの論理使用容量（フロントエンド テラバイト (FETB) とも呼ばれます）に基づいて計算されます。</block>
+  <block id="2e122fa1e06865f6dee3fd6d67ea1488" category="paragraph">その他すべてのワークロードについては、少なくとも 1 つのセカンダリ ストレージ ターゲットまたはオブジェクト ストレージ ターゲットに保護されているリソースに対して課金されます。料金は、ソース ワークロードの論理サイズを使用して計算されます。データベースの場合、これはデータベースのサイズを意味し、VM の場合、VM のサイズを意味します。</block>
 </blocks>
