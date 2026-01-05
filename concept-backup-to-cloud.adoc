@@ -215,31 +215,31 @@ link:br-start-licensing.html["ライセンスの設定方法を学ぶ"]。
 
 
 
-== サポートされているデータソース、システム、バックアップターゲット
+== サポートされているワークロード、システム、バックアップターゲット
 
-.サポートされているワークロード データ ソース
-NetApp Backup and Recovery は、次のワークロードを保護します。
+.サポートされているワークロード
+NetApp Backup and Recovery は、次の種類のワークロードを保護します。
 
 * ONTAPボリューム
-* 物理、VMware 仮想マシン ファイル システム (VMFS)、および VMware 仮想マシン ディスク (VMDK) NFS 用の Microsoft SQL Server インスタンスとデータベース
+* VMFS または NFS 上の物理ディスクおよび VMware 仮想マシン ディスク (VMDK) に保存されたMicrosoft SQL Serverインスタンスとデータベース
 * VMware VM とデータストア
 * KVM ワークロード (プレビュー)
 * Hyper-V ワークロード (プレビュー)
-* Oracle ワークロード (プレビュー)
+* Oracle データベース ワークロード (プレビュー)
 * Kubernetes ワークロード (プレビュー)
 
 
 .サポートされているシステム
 * ONTAPバージョン 9.8 以降を搭載したオンプレミスのONTAP SAN (iSCSI プロトコル) および NAS (NFS および CIFS プロトコルを使用)
 * AWS 向けCloud Volumes ONTAP 9.8 以上（SAN および NAS を使用）
-
-
+* Google Cloud Platform 用のCloud Volumes ONTAP 9.8 以上（NFS および CIFS プロトコルを使用）
 * Microsoft Azure 用のCloud Volumes ONTAP 9.8 以上 (SAN および NAS を使用)
-* Amazon FSx for NetApp ONTAP
+* Amazon FSx for NetApp ONTAP (Microsoft SQL Serverワークロードのみ)
 
 
-.サポートされているバックアップターゲット
+.サポートされているバックアップ対象
 * Amazon Web Services（AWS）S3
+* Google Cloud Storage
 * Microsoft Azure Blob (プレビューでは VMware ワークロードでは利用できません)
 * StorageGRID
 * ONTAP S3 (プレビューでは VMware ワークロードでは利用できません)

@@ -349,15 +349,6 @@
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">スパニングディスク（複数の CIFS 共有にまたがる）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">SAN経由でVMを保護する</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">System Center Virtual Machine Manager (SCVMM) を使用してクラスター化された Hyper-V ホストを保護する</block>
-  <block id="a30c7324f4089fb51d237b923db4b02d" category="section-title">サポートされていないレガシーNetApp Consoleアカウント</block>
-  <block id="45cdae40d584305ee875a883ef9ba19e" category="paragraph">従来のNetApp Consoleアカウントは、Hyper-V ワークロードを保護するために必要な機能をサポートしていません。コンソール Web UI でレガシー アカウントを使用しているかどうかを確認します。従来のコンソール アカウントがある場合は、Hyper-V ワークロードを保護する前に新しいアカウントを作成してください。</block>
-  <block id="67d95bafb080d0463671b51cb30ed772" category="list-text">NetApp Consoleメニューから、*管理 &gt; ID とアクセス* を選択します。</block>
-  <block id="252a32da9415511e6633fdf05c3cbfc5" category="list-text">*組織*の下で、組織 ID の横に *アカウント ID* が表示されているかどうかを確認します。</block>
-  <block id="d0052af1d0af270827e3db57cce81803" category="paragraph">*アカウント ID* が表示されている場合は、レガシー アカウントを使用しています。</block>
-  <block id="f4e4e58b8e27317b0286b2d7a6325bb0" category="list-text">従来のアカウントを使用している場合は、次の手順を実行します。</block>
-  <block id="e0c1910c886d7600a19660b88b3e28fb" category="inline-link">コンソールログインページ</block>
-  <block id="9708523b754b4574d7d943207eacd560" category="list-text">コンソールからログアウトし、<block ref="5a8401fec198a207b346fd48bd2a9be6" category="inline-link-rx"></block> 。</block>
-  <block id="9f4166fee581a8bb153eacc3c742daca" category="list-text">新しいアカウントを作成するには、[サインアップ] を選択します。</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">NetApp Backup and Recoveryのこのリリースには、次の既知の制限があります。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">KVM ワークロードに対するNetApp Backup and Recoveryの既知の制限</block>
   <block id="448a90c8bbb9415c292cb0e585249a04" category="paragraph">NetApp Backup and Recoveryの KVM ワークロードのプライベート プレビュー バージョンでは、次のアクションと構成はサポートされていません。</block>
@@ -375,7 +366,6 @@
   <block id="5131ec6f366fecc1e6e217f1cd4771d5" category="list-text">複数の NFS マウント ポイントまたは共有にまたがるディスク</block>
   <block id="60cb90015b7d70207c84b5b4c09b1c4a" category="list-text">RAWディスクフォーマット</block>
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS以外のストレージプールタイプ（NetFSのみがサポートされます）</block>
-  <block id="09c71875e3bb444ec63263da7bac4c16" category="paragraph">従来のNetApp Consoleアカウントは、KVM ワークロードを保護するために必要な機能をサポートしていません。コンソール Web UI でレガシー アカウントを使用しているかどうかを確認します。従来のコンソール アカウントがある場合は、KVM ワークロードを保護する前に新しいアカウントを作成してください。</block>
   <block id="43250e477f245ad8251ae2cf9a6044b5" category="doc">Oracle ワークロード向けNetApp Backup and Recoveryの既知の制限</block>
   <block id="d905e8ea866675c3cf4643035604b776" category="paragraph">NetApp Backup and Recoveryの Oracle Database ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">オフライン バックアップ</block>
@@ -1995,20 +1985,13 @@
   <block id="520d2c423b38acf3262d3f1e93b53d8a" category="paragraph"><block ref="5f449dd4c94fd29d3e3b83e45dd58382" category="inline-link-macro-rx"></block>。</block>
   <block id="0f3691e0fad1edbca841aabd38ddfc42" category="paragraph">NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。</block>
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。</block>
-  <block id="8d76c3c56611813110af76c5eca39835" category="section-title">サポートされているデータソース、システム、バックアップターゲット</block>
-  <block id="cec0c370d9c2ef0dbbf7f89c16ef1a90" category="paragraph-title">サポートされているワークロード データ ソース</block>
-  <block id="471bdf4d52cdd0764f463e7010138e3f" category="paragraph">NetApp Backup and Recovery は、次のワークロードを保護します。</block>
   <block id="9504b35cbb481ca2332f36aedcf456c8" category="list-text">ONTAPボリューム</block>
-  <block id="42b12d53290c6e592a4d774a432752d6" category="list-text">物理、VMware 仮想マシン ファイル システム (VMFS)、および VMware 仮想マシン ディスク (VMDK) NFS 用の Microsoft SQL Server インスタンスとデータベース</block>
   <block id="5c1924f6230f429d87dfb7fd242478ba" category="list-text">VMware VM とデータストア</block>
   <block id="d696f54a4219f10612b2a92868d7f533" category="list-text">KVM ワークロード (プレビュー)</block>
   <block id="ba244ce1386922db2aac58f9ea35cf82" category="list-text">Hyper-V ワークロード (プレビュー)</block>
   <block id="339f6d69f0298e3d4bbd943ba3211c6c" category="list-text">Kubernetes ワークロード (プレビュー)</block>
-  <block id="40b884bfd6c5c8664261a0673de09aeb" category="list-title">サポートされているシステム</block>
-  <block id="60bbb47f4c25fbe48c0eaa18d9174d22" category="list-text">ONTAPバージョン 9.8 以降を搭載したオンプレミスのONTAP SAN (iSCSI プロトコル) および NAS (NFS および CIFS プロトコルを使用)</block>
   <block id="d97ad1eba4f90ab1f835497c1e04b99f" category="list-text">AWS 向けCloud Volumes ONTAP 9.8 以上（SAN および NAS を使用）</block>
   <block id="c5446f6574237d9a06e2a847d988c357" category="list-text">Microsoft Azure 用のCloud Volumes ONTAP 9.8 以上 (SAN および NAS を使用)</block>
-  <block id="d17b3abdd113c99dd97a58c22430220e" category="list-title">サポートされているバックアップターゲット</block>
   <block id="736ca911d7d143d01bd8cbfe0d4afbca" category="list-text">Amazon Web Services（AWS）S3</block>
   <block id="fd986c9449acb5abd97bea849d50dc49" category="list-text">Microsoft Azure Blob (プレビューでは VMware ワークロードでは利用できません)</block>
   <block id="2892aac222ad56500a9c836677137630" category="list-text">ONTAP S3 (プレビューでは VMware ワークロードでは利用できません)</block>
@@ -4705,7 +4688,6 @@
   <block id="3e2ef02026c97d7e5a6f8783f142b8ca" category="list-text">*リソース料金*: ストレージ使用量に基づきます。詳細については、<block ref="fb7e1562747222c6aa716c91aa0ab813" category="inline-link-rx"></block> 。</block>
   <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*サービス料金*: NetApp Backup and Recoveryの料金。ただし、ソース ボリュームが CVO Professional プランを使用しているストレージ システム内にある場合は、 NetApp Backup and Recovery が無料で提供されます。</block>
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">Google Cloud Platform を使用する場合は、 NetAppからプライベート オファーをリクエストし、Google Cloud Marketplace でのアクティベーション時にプランを選択します。</block>
-  <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle ワークロード (プレビュー)</block>
   <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">複数の Hyper-V ホストの VM を使用してリソース グループを作成する</block>
   <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*ホスト登録*: ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力して、新しい Hyper-V ホストを追加します。FQDN がコンソール エージェントによって解決できない場合は、代わりに IP アドレスを使用します。FCI クラスターの場合は、FCI クラスター管理 IP アドレスを入力します。</block>
   <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">管理者ドメインに属していないユーザーが Hyper-V VM を保護する場合は、そのユーザーに次の権限があることを確認してください。</block>
@@ -4849,4 +4831,14 @@
   <block id="41bda454559167e0de7967190676c8d0" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。参照 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳細についてはセクションをご覧ください。</block>
   <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">ONTAPボリューム ワークロードの場合、オブジェクト ストレージに保護されているボリュームに対してのみ課金されます。料金は、効率化が適用される前のソースONTAPボリュームの論理使用容量（フロントエンド テラバイト (FETB) とも呼ばれます）に基づいて計算されます。</block>
   <block id="2e122fa1e06865f6dee3fd6d67ea1488" category="paragraph">その他すべてのワークロードについては、少なくとも 1 つのセカンダリ ストレージ ターゲットまたはオブジェクト ストレージ ターゲットに保護されているリソースに対して課金されます。料金は、ソース ワークロードの論理サイズを使用して計算されます。データベースの場合、これはデータベースのサイズを意味し、VM の場合、VM のサイズを意味します。</block>
+  <block id="0d3a443ca8a1a321c3c002699cfc04c3" category="section-title">サポートされているワークロード、システム、バックアップターゲット</block>
+  <block id="e98d121a976b5b0869d0f6964c675ad8" category="paragraph-title">サポートされているワークロード</block>
+  <block id="3f4a151090dc4fc248f982a6f4be9919" category="paragraph">NetApp Backup and Recovery は、次の種類のワークロードを保護します。</block>
+  <block id="23d6a9248d1083059233422499f3d2d5" category="list-text">VMFS または NFS 上の物理ディスクおよび VMware 仮想マシン ディスク (VMDK) に保存されたMicrosoft SQL Serverインスタンスとデータベース</block>
+  <block id="6619e379e3694efd4480482eee432681" category="list-text">Oracle データベース ワークロード (プレビュー)</block>
+  <block id="933247e0be7796a309cfa4c95bd34938" category="list-title">サポートされているシステム</block>
+  <block id="6480be056b2a8398cb100f9a310f6040" category="list-text">ONTAPバージョン 9.8 以降を搭載したオンプレミスのONTAP SAN (iSCSI プロトコル) および NAS (NFS および CIFS プロトコルを使用)</block>
+  <block id="7a90fde5622dcca215688cd078d7dd01" category="list-text">Google Cloud Platform 用のCloud Volumes ONTAP 9.8 以上（NFS および CIFS プロトコルを使用）</block>
+  <block id="6f1c9788058344e9232a35579eac91e2" category="list-text">Amazon FSx for NetApp ONTAP (Microsoft SQL Serverワークロードのみ)</block>
+  <block id="0b115ac5b217f989a1fc7dd422161b82" category="list-title">サポートされているバックアップ対象</block>
 </blocks>
