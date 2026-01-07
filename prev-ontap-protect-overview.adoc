@@ -107,19 +107,19 @@ NetApp Backup and Recoveryと、次のソース システムから次のセカ�
 
 [cols="33,33,33"]
 |===
-| ソースシステム | セカンダリシステム（レプリケーション） | 宛先オブジェクトストア（バックアップ） ifdef::aws[] 
+| ソースシステム | セカンダリシステム（レプリケーション） | 宛先オブジェクトストア（バックアップ） 
 
 
-| AWS のCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Amazon S3 endif::aws[] ifdef::azure[] 
+| AWS のCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Amazon S3 
 
 
-| Azure のCloud Volumes ONTAP | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure BLOB endif::azure[] ifdef::gcp[] 
+| Azure のCloud Volumes ONTAP | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure ブロブ 
 
 
-| Google のCloud Volumes ONTAP | Google オンプレミスONTAPシステムのCloud Volumes ONTAP | Google Cloud Storage endif::gcp[] 
+| Google のCloud Volumes ONTAP | Google オンプレミスONTAPシステムのCloud Volumes ONTAP | Google Cloud Storage 
 
 
-| オンプレミスのONTAPシステム | Cloud Volumes ONTAPオンプレミスONTAPシステム | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud Storage endif::gcp[] NetApp StorageGRID ONTAP S3 
+| オンプレミスのONTAPシステム | Cloud Volumes ONTAPオンプレミスONTAPシステム | Amazon S3 Azure Blob Google Cloud Storage NetApp StorageGRID ONTAP S3 
 |===
 
 
@@ -132,16 +132,16 @@ NetApp Backup and Recoveryと、次のソース システムから次のセカ�
 2+| バックアップファイルの場所 | 宛先システム 
 
 
-| *オブジェクトストア（バックアップ）* | *セカンダリシステム（レプリケーション）* | ifdef::aws[] 
+| *オブジェクトストア（バックアップ）* | *セカンダリシステム（レプリケーション）* |  
 
 
-| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP endif::aws[] ifdef::azure[] 
+| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP 
 
 
-| Azure ブロブ | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム endif::azure[] ifdef::gcp[] 
+| Azure ブロブ | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム 
 
 
-| Google Cloud Storage | Google オンプレミスONTAPシステムのCloud Volumes ONTAP | Google オンプレミスONTAPシステムのCloud Volumes ONTAP endif::gcp[] 
+| Google Cloud Storage | Google オンプレミスONTAPシステムのCloud Volumes ONTAP | Google オンプレミスONTAPシステムのCloud Volumes ONTAP 
 
 
 | NetAppStorageGRID | オンプレミスのONTAPシステムCloud Volumes ONTAP | オンプレミスのONTAPシステム 
@@ -187,33 +187,10 @@ NetApp Backup and Recovery はソース ボリュームのストレージ効率�
 
 * 検索と復元を使用してデータを復元する場合、クラウド プロバイダーによって特定のリソースがプロビジョニングされ、検索要求によってスキャンされるデータの量に応じて TiB ごとにコストが発生します。  (これらのリソースは参照と復元には必要ありません。)
 +
-ifdef::aws[]
-
-+
 ** AWSでは、 https://aws.amazon.com/athena/faqs/["アマゾンアテナ"^]そして https://aws.amazon.com/glue/faqs/["AWS グルー"^]リソースは新しい S3 バケットにデプロイされます。
-+
-endif::aws[]
-
-
-
-+
-ifdef::azure[]
-
-+
 ** Azureでは、 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse ワークスペース"^]そして https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure データレイクストレージ"^]データを保存および分析するためにストレージ アカウントにプロビジョニングされます。
-+
-endif::azure[]
+** Googleでは新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]アカウント/プロジェクト レベルでプロビジョニングされます。
 
-
-
-
-
-ifdef::gcp[]
-
-* Googleでは新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]アカウント/プロジェクト レベルでプロビジョニングされます。
-
-
-endif::gcp[]
 
 * アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。
 * ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。
@@ -262,17 +239,11 @@ PAYGO サブスクリプションに最初にサインアップすると、30 �
 
 === 年間契約
 
-ifdef::aws[]
-
 AWS を使用する場合、1 年、2 年、または 3 年の期間で 2 つの年間契約を利用できます。
 
 * Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
 * Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 Azure を使用する場合、1 年、2 年、または 3 年の期間で 2 つの年間契約を利用できます。
 
@@ -280,13 +251,7 @@ Azure を使用する場合、1 年、2 年、または 3 年の期間で 2 つ�
 * Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 GCP を使用する場合、 NetAppからプライベート オファーをリクエストし、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときにプランを選択できます。
-
-endif::gcp[]
 
 link:br-start-licensing.html["年間契約の設定方法を学ぶ"]。
 
@@ -314,29 +279,15 @@ image:diagram-backup-recovery-general.png["NetApp Backup and Recovery が、ソ�
 * _スナップショット_ はソース システムのソース ボリュームに存在します。
 * _複製されたボリューム_は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。
 * _バックアップ コピー_ は、コンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスター/システムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに「netapp-backup-clusteruuid」という名前が付けられます。このオブジェクト ストアを削除しないように注意してください。
++
+** AWSでは、コンソールで https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
+** Azure では、コンソールは、Blob コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"] デフォルトです。
+** GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。
+** StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。
+** ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 
 
-ifdef::aws[]
 
-+ ** AWSでは、コンソールで https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^]S3 バケット上。
-
-endif::aws[]
-
-ifdef::azure[]
-
-+ ** Azure では、コンソールは、BLOB コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトです。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-+ ** GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。
-
-endif::gcp[]
-
-+ ** StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。
-
-+ ** ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 
 将来的にクラスタの宛先オブジェクトストアを変更する場合は、link:prev-ontap-backup-manage.html["システムのNetApp Backup and Recoveryの登録を解除する"] 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recoveryを有効にします。
 
@@ -387,17 +338,11 @@ TIP: バックアップをアーカイブ ストレージに階層化してい�
 
 特定のクラウド ストレージを使用する場合、一定の日数後に古いバックアップ ファイルをより安価なストレージ クラス/アクセス ティアに移動できます。バックアップ ファイルを標準のクラウド ストレージに書き込まずに、すぐにアーカイブ ストレージに送信することも選択できます。  DataLock を有効にしている場合はアーカイブ ストレージを使用できないことに注意してください。
 
-ifdef::aws[]
-
 * AWS では、バックアップは _Standard_ ストレージ クラスで開始され、30 日後に _Standard-Infrequent Access_ ストレージ クラスに移行します。
 +
 クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"]。
 
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 * Azure では、バックアップは _Cool_ アクセス層に関連付けられています。
 +
@@ -405,17 +350,9 @@ ifdef::azure[]
 
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 * GCP では、バックアップは _Standard_ ストレージ クラスに関連付けられています。
 +
 クラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"]。
-
-
-
-endif::gcp[]
 
 * StorageGRIDでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。
 +

@@ -257,19 +257,9 @@ NetApp Backup and Recovery を完全なインターネット接続 (_標準モ�
 
 NetApp Backup and Recovery は、インターネット接続が制限されているサイト (_制限モード_ とも呼ばれます) でボリューム データをバックアップするために使用できます。この場合、宛先のクラウド リージョンにコンソール エージェントを展開する必要があります。
 
-ifdef::aws[]
-
 * オンプレミスのONTAPシステムまたは AWS 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Amazon S3 にデータをバックアップできます。link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAPデータを Amazon S3 にバックアップする"]。
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * オンプレミスのONTAPシステムまたは Azure 商用リージョンにインストールされたCloud Volumes ONTAPシステムから Azure Blob にデータをバックアップできます。link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAPデータを Azure Blob にバックアップする"]。
 
-
-endif::azure[]
 
 
 
@@ -281,11 +271,5 @@ NetApp Backup and Recovery は、インターネット接続のないサイト (
 NOTE: BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。従来のBlueXPインターフェースのプライベートモードのドキュメントについては、 https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモードの PDF ドキュメント"] 。
 
 * ローカルのオンプレミスONTAPシステムからローカルのNetApp StorageGRIDシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-storagegrid.html["オンプレミスのONTAPデータをStorageGRIDにバックアップする"]。
-* ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-ontaps3.html["オンプレミスのONTAPデータをONTAP S3 にバックアップする"] .ifdef::aws[]
+* ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。link:prev-ontap-backup-onprem-ontaps3.html["オンプレミスのONTAPデータをONTAP S3 にバックアップする"]。
 
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]

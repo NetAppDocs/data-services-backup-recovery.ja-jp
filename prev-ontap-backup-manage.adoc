@@ -236,27 +236,12 @@ NetApp Backup and Recovery は、オブジェクト ファイルへのバック�
 クラスタでONTAP 9.10.1 以降を実行している場合は、一定の日数後にアーカイブ ストレージへのバックアップの階層化を有効または無効にするオプションもあります。
 
 +
-ifdef::aws[]
+link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
+
++
+アーカイブへのバックアップの階層化を停止した場合、アーカイブ ストレージに階層化されたバックアップ ファイルはすべてその階層に残り、標準階層に自動的に戻されないことに注意してください。新しいボリューム バックアップのみが標準層に保存されます。
 
 
-
-link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
-
-endif::gcp[]
-
-+ アーカイブ ストレージに階層化されたバックアップ ファイルは、アーカイブへのバックアップの階層化を停止すると、その階層に残ります。これらのファイルは自動的に標準階層に戻されるわけではありません。新しいボリューム バックアップのみが標準層に保存されます。
 
 
 
@@ -282,25 +267,9 @@ endif::gcp[]
 クラスタでONTAP 9.10.1 以降を実行している場合は、一定の日数後にアーカイブ ストレージへのバックアップの階層化を有効または無効にするオプションもあります。
 
 +
-ifdef::aws[]
+link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
 
 
-
-link:prev-reference-aws-archive-storage-tiers.html["AWS アーカイブストレージの使用について詳しくはこちら"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの使用について詳しく見る"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。"]。（ ONTAP 9.12.1 が必要です。）
-
-endif::gcp[]
 
 
 

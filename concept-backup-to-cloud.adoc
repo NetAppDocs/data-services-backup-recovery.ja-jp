@@ -136,35 +136,13 @@ NetApp Backup and Recovery はソース ボリュームのストレージ効率�
 
 * 検索と復元を使用してデータを復元する場合、クラウド プロバイダーによって特定のリソースがプロビジョニングされ、検索要求によってスキャンされるデータの量に応じて TiB ごとにコストが発生します。  (これらのリソースは参照と復元には必要ありません。)
 +
-ifdef::aws[]
-
-+
 ** AWSでは、 https://aws.amazon.com/athena/faqs/["アマゾンアテナ"^]そして https://aws.amazon.com/glue/faqs/["AWS グルー"^]リソースは新しい S3 バケットにデプロイされます。
-+
-endif::aws[]
-
-
-
-+
-ifdef::azure[]
-
-+
 ** Azureでは、 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse ワークスペース"^]そして https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure データレイクストレージ"^]データを保存および分析するためにストレージ アカウントにプロビジョニングされます。
-+
-endif::azure[]
+** Googleでは新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]アカウント/プロジェクト レベルでプロビジョニングされます。
 
 
-
-
-
-ifdef::gcp[]
-
-* Googleでは新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]アカウント/プロジェクトレベルでプロビジョニングされます。endif::gcp[]
-+
-** アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。
-** ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。
-
-
+* アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。
+* ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。
 
 
 *サービス料*

@@ -30,23 +30,7 @@ NetApp Backup and Recoveryでは、Browse & Restore を使用してONTAPデー�
 
 
 
-ifdef::aws[]
-
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。
-
-endif::gcp[]
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。
 
 
 NOTE: Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、高優先度はサポートされません。
@@ -61,43 +45,25 @@ NOTE: Azure アーカイブ ストレージからStorageGRIDシステムにデ�
 
 [cols="25,25,25,25"]
 |===
-| *オブジェクトストアから（バックアップ）* | *プライマリから（スナップショット）* | *セカンダリシステムから（レプリケーション）* | 宛先システム ifdef::aws[] 
+| *オブジェクトストアから（バックアップ）* | *プライマリから（スナップショット）* | *セカンダリシステムから（レプリケーション）* | 宛先システムへ 
 
 
-| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP endif::aws[] ifdef::azure[] | Azure ブロブ 
+| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Azure ブロブ 
 
 
-| Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム endif::azure[] ifdef::gcp[] | Google Cloud Storage | Google オンプレミスONTAPシステムのCloud Volumes ONTAP 
+| Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Google Cloud Storage | Google オンプレミスONTAPシステムのCloud Volumes ONTAP 
 
 
-| Google オンプレミスONTAPシステムのCloud Volumes ONTAP endif::gcp[] | NetAppStorageGRID | オンプレミスのONTAPシステム | オンプレミスのONTAPシステムCloud Volumes ONTAP 
+| Google オンプレミスONTAPシステムのCloud Volumes ONTAP | NetAppStorageGRID | オンプレミスのONTAPシステム | オンプレミスのONTAPシステムCloud Volumes ONTAP 
 
 
 | オンプレミスのONTAPシステムへ | ONTAP S3 | オンプレミスのONTAPシステム | オンプレミスのONTAPシステムCloud Volumes ONTAP 
 |===
 参照と復元の場合、コンソール エージェントは次の場所にインストールできます。
 
-ifdef::aws[]
-
 * Amazon S3の場合、コンソールエージェントはAWSまたはオンプレミスに導入できます。
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * Azure Blobの場合、コンソールエージェントはAzureまたはオンプレミスに展開できます。
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Google Cloud Storage の場合、コンソール エージェントを Google Cloud Platform VPC にデプロイする必要があります。
-
-
-endif::gcp[]
-
 * StorageGRIDの場合、コンソールエージェントは、インターネットアクセスの有無にかかわらず、お客様の敷地内に導入する必要があります。
 * ONTAP S3の場合、コンソールエージェントは、オンプレミス（インターネットアクセスの有無にかかわらず）またはクラウドプロバイダー環境に導入できます。
 
@@ -139,34 +105,14 @@ image:diagram_browse_restore_volume.png["参照と復元を使用してボリュ
 . [_宛先の選択_] ページで、ボリュームを復元する *システム* を選択します。
 . オブジェクト ストレージからバックアップ ファイルを復元するときに、オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。
 +
-ifdef::aws[]
-
-+
 ** Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。
+** Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オブジェクト ストレージにアクセスするための Azure サブスクリプションを選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。
+** Google Cloud Storage から復元する場合は、Google Cloud プロジェクトとアクセス キーおよびシークレット キーを選択して、オブジェクト ストレージ、バックアップが保存されるリージョン、および宛先ボリュームが存在するONTAPクラスター内の IPspace にアクセスします。
+** StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を選択します。
+** ONTAP S3 からリストアする場合は、 ONTAP S3 サーバーの FQDN と、 ONTAP がONTAP S3 との HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスター内の IPspace を選択します。
 
 
-
-
-endif::aws[]
-
-ifdef::azure[]
-
-* Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オブジェクト ストレージにアクセスするための Azure サブスクリプションを選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Google Cloud Storage から復元する場合は、Google Cloud プロジェクトとアクセス キーおよびシークレット キーを選択して、オブジェクト ストレージ、バックアップが保存されるリージョン、および宛先ボリュームが存在するONTAPクラスター内の IPspace にアクセスします。
-
-
-endif::gcp[]
-
-* StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を選択します。
-* ONTAP S3 からリストアする場合は、 ONTAP S3 サーバーの FQDN と、 ONTAP がONTAP S3 との HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスター内の IPspace を選択します。
-+
-.. 復元されたボリュームに使用する名前を入力し、ボリュームが保存されるストレージ VM とアグリゲートを選択します。 FlexGroupボリュームを復元する場合は、複数のアグリゲートを選択する必要があります。デフォルトでは、ボリューム名として *<source_volume_name>_restore* が使用されます。
+. 復元されたボリュームに使用する名前を入力し、ボリュームが保存されるストレージ VM とアグリゲートを選択します。 FlexGroupボリュームを復元する場合は、複数のアグリゲートを選択する必要があります。デフォルトでは、ボリューム名として *<source_volume_name>_restore* が使用されます。
 +
 オブジェクト ストレージからONTAP 9.13.0 以上を使用するCloud Volumes ONTAPシステム、またはONTAP 9.14.1 を実行するオンプレミスのONTAPシステムにバックアップを復元する場合は、クイック復元操作を実行するオプションがあります。
 
@@ -174,27 +120,7 @@ endif::gcp[]
 また、アーカイブ ストレージ層 ( ONTAP 9.10.1 以降で利用可能) にあるバックアップ ファイルからボリュームを復元する場合は、復元優先度を選択できます。
 
 +
-ifdef::aws[]
-
-
-
-
-
-link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
-
-endif::gcp[]
+link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージからの復元の詳細"]。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージからの復元の詳細"]。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージからの復元の詳細"]。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。
 
 . [次へ] を選択して、通常の復元プロセスを実行するか、クイック復元プロセスを実行するかを選択します。
 +
@@ -278,47 +204,25 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 オンプレミス クラスターを選択し、オブジェクト ストレージへのクラスター接続をまだ構成していない場合は、追加情報の入力を求められます。
 
 +
-ifdef::aws[]
-
-+
 ** Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスターの IPspace と、オブジェクト ストレージにアクセスするために必要な AWS アクセス キーとシークレット キーを入力します。クラスターへの接続にプライベート リンク構成を選択することもできます。
+** Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を入力します。クラスターへの接続にプライベート エンドポイント構成を選択することもできます。
+** Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キーを入力します。
+** StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。
 
 
-
-
-endif::aws[]
-
-ifdef::azure[]
-
-* Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を入力します。クラスターへの接続にプライベート エンドポイント構成を選択することもできます。
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キーを入力します。
-
-
-endif::gcp[]
-
-* StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。
-+
-.. 次に、フォルダーまたはファイルを復元する *ボリューム* と *フォルダー* を選択します。
+. 次に、フォルダーまたはファイルを復元する *ボリューム* と *フォルダー* を選択します。
 +
 フォルダーやファイルを復元する際の場所についてはいくつかのオプションがあります。
 
-
-
-* 上記のように*ターゲットフォルダーの選択*を選択した場合:
 +
-** 任意のフォルダを選択できます。
-** フォルダーの上にマウスを移動し、行の末尾をクリックしてサブフォルダーにドリルダウンし、フォルダーを選択できます。
-
-
-* ソース フォルダ/ファイルが配置されていたのと同じ宛先システムとボリュームを選択した場合は、[*ソース フォルダ パスを維持*] を選択して、フォルダまたはファイルをソース構造に存在していたのと同じフォルダに復元できます。同じフォルダーとサブフォルダーがすべてすでに存在している必要があります。フォルダーは作成されません。ファイルを元の場所に復元する場合、ソース ファイルを上書きするか、新しいファイルを作成するかを選択できます。
+** 上記のように*ターゲットフォルダーの選択*を選択した場合:
 +
-.. *復元* を選択して復元ダッシュボードに戻り、復元操作の進行状況を確認します。
+*** 任意のフォルダを選択できます。
+*** フォルダーの上にマウスを移動し、行の末尾をクリックしてサブフォルダーにドリルダウンし、フォルダーを選択できます。
 
 
+** ソース フォルダ/ファイルが配置されていたのと同じ宛先システムとボリュームを選択した場合は、[*ソース フォルダ パスを維持*] を選択して、フォルダまたはファイルをソース構造に存在していたのと同じフォルダに復元できます。同じフォルダーとサブフォルダーがすべてすでに存在している必要があります。フォルダーは作成されません。ファイルを元の場所に復元する場合、ソース ファイルを上書きするか、新しいファイルを作成するかを選択できます。
+
+
+. *復元* を選択して復元ダッシュボードに戻り、復元操作の進行状況を確認します。
 

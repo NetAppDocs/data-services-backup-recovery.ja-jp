@@ -1972,7 +1972,6 @@
   <block id="31f9c16bc3570a56499294176c354ee7" category="inline-link">Azure データレイクストレージ</block>
   <block id="82ba9e045163c7c72098c50671704351" category="list-text">Azureでは、<block ref="a3ff4de37e7a195a145416e9f02577ac" category="inline-link-rx"></block>そして<block ref="47b506e6a2508a9b210c02fa89bbdc24" category="inline-link-rx"></block>データを保存および分析するためにストレージ アカウントにプロビジョニングされます。</block>
   <block id="9fece9ac1c7d50fbf1a1498b93cbeb15" category="inline-link">Google Cloud BigQuery サービス</block>
-  <block id="a9e0f848e6e51d1ca02fdbb4bf91773a" category="list-text">Googleでは新しいバケットがデプロイされ、<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>アカウント/プロジェクトレベルでプロビジョニングされます。endif::gcp[]</block>
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。</block>
   <block id="e44d61516574d94ce56af3468723e18a" category="list-text">ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*サービス料*</block>
@@ -2643,12 +2642,8 @@
   <block id="1f2242e2c4c50f131ef13c9b0750cece" category="list-text">[_ポリシーの編集_] ページで下矢印を選択して [_ラベルと保持_] セクションを展開し、スケジュールやバックアップの保持を変更して [*保存*] を選択します。</block>
   <block id="11424b9a70e420c1dd25a5c8dd143872" category="paragraph">クラスタでONTAP 9.10.1 以降を実行している場合は、一定の日数後にアーカイブ ストレージへのバックアップの階層化を有効または無効にするオプションもあります。</block>
   <block id="2ee1435ab41f69d919a20dc4c3d48cc8" category="inline-link-macro">AWS アーカイブストレージの使用について詳しくはこちら</block>
-  <block id="c86e8102bf4f78e9feec6f5707740536" category="paragraph"><block ref="74169e9d6aed252bcfdf8c7b3af7403c" category="inline-link-macro-rx"></block>。</block>
   <block id="2a42635401c2f16c2080bd6994708fa1" category="inline-link-macro">Azure アーカイブ ストレージの使用について詳しく見る</block>
-  <block id="ba495708b905a450346e6127df6e1205" category="paragraph"><block ref="2ee7cc9e20761e67f0920429cf98cc54" category="inline-link-macro-rx"></block>。</block>
   <block id="0d1c0309cd5a222639167f043ad2659c" category="inline-link-macro">Google アーカイブ ストレージの使用について詳しくは、こちらをご覧ください。</block>
-  <block id="619556a98b7ce9c2609fd64276c45841" category="paragraph"><block ref="aba7d321ee8cc50f731dfdd9ecd7c01c" category="inline-link-macro-rx"></block>。（ ONTAP 9.12.1 が必要です。）</block>
-  <block id="273a0c18ae7ae64c7f1016a71ed51d1e" category="paragraph">+ アーカイブ ストレージに階層化されたバックアップ ファイルは、アーカイブへのバックアップの階層化を停止すると、その階層に残ります。これらのファイルは自動的に標準階層に戻されるわけではありません。新しいボリューム バックアップのみが標準層に保存されます。</block>
   <block id="d3b3f333837b21ed08dfd04c10e48346" category="section-title">新しいクラウドへのバックアップポリシーを追加する</block>
   <block id="704cbb6a4b98702a1ff1e784b08e0bc1" category="paragraph">システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、定義したデフォルトのバックアップ ポリシーを使用してバックアップされます。異なる復旧ポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、それらのポリシーを他のボリュームに割り当てることができます。</block>
   <block id="ebef09b04d71dbdf490084193f232a2f" category="inline-xref">そのシステム内のボリュームにポリシーを適用する</block>
@@ -3214,7 +3209,6 @@
   <block id="d6b2f75c5e7cc6c2d5da7268c117d88e" category="doc">NetApp Backup and Recoveryの詳細設定でオブジェクト ストレージへのバックアップ オプションを管理する</block>
   <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">これらの設定は、オブジェクト ストレージへのバックアップでのみ使用できます。これらの設定はいずれもスナップショットまたはレプリケーションの設定には影響しません。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">詳細設定ページで次のオプションを変更できます。</block>
-  <block id="6d1da260b80b103438f3aedda67c1b8e" category="list-text">最大転送速度オプション ifdef::aws[] を使用して、オブジェクトストレージにバックアップをアップロードするために割り当てられたネットワーク帯域幅を変更する</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">「年次」スナップショットをソースシステムから削除するかどうかを変更する</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">スケジュールされたスキャンを含む、システムのランサムウェアスキャンを有効または無効にする</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">クラスターレベルのバックアップ設定を表示する</block>
@@ -3275,7 +3269,6 @@
   <block id="9d6ba5ad698127fccb9f60a35f6f12bc" category="list-text">DataLock とランサムウェア保護を使用する予定の場合は、最初のバックアップ ポリシーを作成し、そのクラスターに対してNetApp Backup and Recovery をアクティブ化するときに、これを有効にできます。後で、 NetApp Backup and Recovery の詳細設定を使用して、ランサムウェア スキャンを有効または無効にすることができます。</block>
   <block id="b786f06f750594e45a7a7ec6d9cf4ac2" category="list-text">ボリューム データを復元するときにコンソールがバックアップ ファイルでランサムウェアをスキャンすると、バックアップ ファイルの内容にアクセスするためにクラウド プロバイダーから追加の送信コストが発生します。</block>
   <block id="921b747c1abfd997d26a273c0b62011b" category="section-title">DataLockとは</block>
-  <block id="8c5ed3c4325fc24dbf86bb370210fae8" category="paragraph">この機能を使用すると、 SnapMirror経由でクラウドに複製されたクラウド スナップショットをロックできるほか、ランサムウェア攻撃を検出してオブジェクト ストア上のスナップショットの一貫したコピーを回復する機能も有効になります。この機能は、AWS、Azure、 StorageGRIDでサポートされています。</block>
   <block id="1ba4a0b9c57fe8015ce8449413192339" category="paragraph">DataLock は、バックアップ ファイルが一定期間変更または削除されるのを防ぎます。これは、_不変ストレージ_ とも呼ばれます。この機能は、オブジェクト ストレージ プロバイダーの「オブジェクト ロック」テクノロジを使用します。</block>
   <block id="4e596858d3955027bd4bc8cab9e72010" category="paragraph">クラウド プロバイダーは、スナップショットの保持期間に基づいて計算される保持期限 (RUD) を使用します。スナップショットの保持期間は、ラベルとバックアップ ポリシーで定義された保持数に基づいて計算されます。</block>
   <block id="f50811813bbd72e21d2cb23e440692d9" category="paragraph">スナップショットの最小保存期間は 30 日です。これがどのように機能するか、いくつかの例を見てみましょう。</block>
@@ -3320,12 +3313,7 @@
   <block id="1364637fafeabf3ff1cd69cc9cda6bcf" category="list-text">回復プロセスでは、最後に正常だったコピーに戻す作業が行われます。</block>
   <block id="b3f1b65a3c7ad581029671863ce84f3e" category="section-title">サポートされているシステムとオブジェクトストレージプロバイダー</block>
   <block id="04caa6fde87b21be8738fc7aac2130d5" category="paragraph">次のパブリックおよびプライベート クラウド プロバイダーのオブジェクト ストレージを使用する場合、次のシステムのONTAPボリュームで DataLock およびランサムウェア保護を有効にできます。</block>
-  <block id="49930e1d4376887999c072bd91775525" category="cell">バックアップファイルの保存先 ifdef::aws[]</block>
-  <block id="8889077573d45691231050324d93b6a9" category="cell">Amazon S3 endif::aws[] ifdef::azure[]</block>
-  <block id="0959a2f5eff65303771c49363a01d789" category="cell">Azure BLOB endif::azure[] ifdef::gcp[]</block>
   <block id="155ec659cc4e13b84e26ac8a60d0983e" category="cell">Google Cloud のCloud Volumes ONTAP</block>
-  <block id="a9a9ab6f27a7c96f41b3ea91feb1ef02" category="cell">Google Cloud endif::gcp[]</block>
-  <block id="4e592a9288f7e548ef70784305002a5e" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID</block>
   <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">クラスタはONTAP 9.11.1以降を実行している必要があります</block>
   <block id="6eccb1b4300ae9587c674c0708c7ee79" category="list-text">コンソールエージェントはクラウドまたはオンプレミスに導入できます</block>
   <block id="685a143757efe250c8c69c08616cbe33" category="list-text">次の S3 権限は、コンソール エージェントに権限を提供する IAM ロールの一部である必要があります。これらは、リソース「arn:aws:s3:::netapp-backup-*」の「backupS3Policy」セクションにあります。</block>
@@ -3403,8 +3391,6 @@
   <block id="934b0a65e87eaa0952123591f2e40ba3" category="paragraph">オンプレミスのクラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。<block ref="a5f5ea528fdc4d7b7927a7bc5e75da85" category="inline-link-macro-rx"></block>。</block>
   <block id="c811e121a426ef27a318d7ddd351730d" category="list-text">StorageGRIDでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。</block>
   <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">オンプレミスのクラスタでONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムで 11.4 以上を使用している場合は、古いバックアップ ファイルをパブリック クラウド アーカイブ ストレージにアーカイブできます。</block>
-  <block id="8a63c8142c234622452551e194e08f2c" category="paragraph">+ ** AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
-  <block id="d9687428f28d3ac3ad41d545b8ad9fb3" category="paragraph">+ ** Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
   <block id="bb4d18abee2ac1ac9616f24e56d8201d" category="doc">NetApp Backup and Recoveryで保護の旅を計画する</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery を使用すると、ソース ボリュームのコピーを最大 3 つ作成してデータを保護できます。ボリュームでバックアップと回復を有効にするときに選択できるオプションは多数あるため、準備ができるように選択内容を確認する必要があります。</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">以下のオプションについて説明します。</block>
@@ -3539,7 +3525,6 @@
   <block id="c91b161e73b74151a87e57d1b478a8bf" category="admonition">BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。従来のBlueXPインターフェースのプライベートモードのドキュメントについては、<block ref="48f65378777d422181826aa490861bdb" category="inline-link-rx"></block> 。</block>
   <block id="7d137c690fd8c0d815296a007443c889" category="list-text">ローカルのオンプレミスONTAPシステムからローカルのNetApp StorageGRIDシステムにデータをバックアップできます。<block ref="860e591e9b4ec768065d563e22bafdf4" category="inline-link-macro-rx"></block>。</block>
   <block id="02cb06ba88a3c5f99e8d4b475bd0ac1b" category="inline-link-macro">オンプレミスのONTAPデータをONTAP S3 にバックアップする</block>
-  <block id="f64e5b9e38f4a83fb5814d4090a2cb6b" category="list-text">ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block> .ifdef::aws[]</block>
   <block id="8116cbee5887b07b452fecf9c1836d5c" category="doc">NetApp Backup and Recoveryを使用してONTAPボリューム データを保護します</block>
   <block id="f147568c086732bd86eb443dc52d5e33" category="paragraph">NetApp Backup and Recovery は、 ONTAPボリューム データの保護と長期アーカイブのためのバックアップおよび復元機能を提供します。  3-2-1 戦略を実装して、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存することができます。</block>
   <block id="80281310e7f1753680348f039d61ece0" category="paragraph">アクティブ化後、バックアップとリカバリによって、ブロックレベルの永久増分バックアップが作成され、別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されます。ソース ボリュームに加えて、次のものも用意します。</block>
@@ -3581,17 +3566,11 @@
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">サポートされている地域</block>
   <block id="c120c4e2a5b4e4e9674aa4b23a31ab0a" category="paragraph">NetApp Backup and Recovery は、多くの Amazon Web Services、Microsoft Azure、Google Cloud リージョンでCloud Volumes ONTAPによってサポートされています。</block>
   <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">グローバル地域マップを使用して詳細を確認する</block>
-  <block id="1d85e7a2656bd01575d59e1548bbed4b" category="cell">宛先オブジェクトストア（バックアップ） ifdef::aws[]</block>
   <block id="c373a9aa878db8431d1195796e8e6695" category="cell">Google のCloud Volumes ONTAP</block>
   <block id="9ecea76e21268445d7d03aec4130ba29" category="cell">Google オンプレミスONTAPシステムのCloud Volumes ONTAP</block>
-  <block id="c0b279eeed106351906f95aa546f2ffa" category="cell">Google Cloud Storage endif::gcp[]</block>
-  <block id="54ae5f645a65dd82ea439de20806bd9f" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud Storage endif::gcp[] NetApp StorageGRID ONTAP S3</block>
   <block id="85970a97aacb509bbf4ce9364724b494" category="cell">バックアップファイルの場所</block>
   <block id="1f7c54e25f65414cece608c8f0604e55" category="cell">宛先システム</block>
-  <block id="bc7aa7434d0ca9752e2c02b4ffee9953" category="cell">AWS オンプレミスONTAPシステムのCloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
-  <block id="b97f160a229c063bdce958beafa0f695" category="cell">Azure のCloud Volumes ONTAPオンプレミスONTAPシステム endif::azure[] ifdef::gcp[]</block>
   <block id="833c2c211a541e50ad94433664e4b5c1" category="cell">Google Cloud Storage</block>
-  <block id="a9f8eef7fdd18a9397fd96b661adbbf3" category="cell">Google オンプレミスONTAPシステムのCloud Volumes ONTAP endif::gcp[]</block>
   <block id="8c7ae1ac5e93ce07c68e74f8dae54373" category="cell">オンプレミスのONTAPシステムCloud Volumes ONTAP</block>
   <block id="b1b998a9bc88754640934520205257d6" category="paragraph">「オンプレミスのONTAPシステム」への参照には、 FAS、 AFF、およびONTAP Selectシステムが含まれることに注意してください。</block>
   <block id="8c9b6b8729507556572552d0d8f472e3" category="section-title">サポートされているボリューム</block>
@@ -3635,11 +3614,6 @@
   <block id="19fe226921eb8023a05c222ee84c5db8" category="paragraph">バックアップは、バックアップの種類に応じて異なる場所に保存されます。</block>
   <block id="84b23b52a16a2d456b93cfcd37a9fb17" category="list-text">_複製されたボリューム_は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。</block>
   <block id="9b1fec5e0f334c7c6734500536c26eec" category="list-text">_バックアップ コピー_ は、コンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスター/システムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに「netapp-backup-clusteruuid」という名前が付けられます。このオブジェクト ストアを削除しないように注意してください。</block>
-  <block id="6dd0453948f319bf0e93a8760cf57765" category="paragraph">+ ** AWSでは、コンソールで<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block>S3 バケット上。</block>
-  <block id="49f986a30678b9238f4b6ca6f8da583b" category="paragraph">+ ** Azure では、コンソールは、BLOB コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>デフォルトです。</block>
-  <block id="57e10e6b47afffacbbee5d09e4bc9473" category="paragraph">+ ** GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。</block>
-  <block id="564b1e8b7bc04c9ca474231a3cbf4c49" category="paragraph">+ ** StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。</block>
-  <block id="fc0acb7cce83e6633e2048efb8274cd6" category="paragraph">+ ** ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。</block>
   <block id="ce6bd8b7e44a144f2c3eefb8fb43c028" category="inline-link-macro">システムのNetApp Backup and Recoveryの登録を解除する</block>
   <block id="dde7812a2b64115f166d47da097a615f" category="paragraph">将来的にクラスタの宛先オブジェクトストアを変更する場合は、<block ref="4b0267ab70996ada4858bf6db6495e68" category="inline-link-macro-rx"></block> 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recoveryを有効にします。</block>
   <block id="47c63e2d9d67be358326c1eff2c87d12" category="section-title">カスタマイズ可能なバックアップスケジュールと保持設定</block>
@@ -3707,20 +3681,14 @@
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">検索と復元を使用してボリューム、フォルダ、ファイルを復元する</block>
   <block id="685a6ba7b83ab5e286920feb961c08bb" category="section-title">参照と復元を使用してONTAPデータを復元する</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">AWSアーカイブストレージからの復元の詳細</block>
-  <block id="b03a3a022eb328afd14c51f9d25fd0aa" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。</block>
   <block id="f0a32293e7110abfd30f9402fa924815" category="inline-link-macro">Azure アーカイブ ストレージからの復元の詳細</block>
-  <block id="4f7a7f0966b49199b4fcb96bfb027259" category="paragraph"><block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。</block>
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">Google アーカイブ ストレージからの復元の詳細</block>
-  <block id="5257e1b4d697f8d8bc3d04bda6a273e8" category="paragraph"><block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。</block>
   <block id="e429a3dcdf9ca5d36834b72490aae784" category="admonition">Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、高優先度はサポートされません。</block>
   <block id="598e51a2b37024d5f553af642c739db8" category="section-title">サポートされているシステムとオブジェクト ストレージ プロバイダーを参照および復元する</block>
   <block id="bc6bfb0b14fd7cced8ee62c645d8aa17" category="paragraph">*注:* ボリュームはどのタイプのバックアップ ファイルからでも復元できますが、現時点では、フォルダーまたは個々のファイルはオブジェクト ストレージ内のバックアップ ファイルからのみ復元できます。</block>
   <block id="4392d15c8884c7cc66b17ff794eb41d2" category="cell">*オブジェクトストアから（バックアップ）*</block>
   <block id="a4e7ccecf7c1ff2d3e2de88d9f7559d4" category="cell">*プライマリから（スナップショット）*</block>
   <block id="c1ad4111606308626e152e2bc5089a8b" category="cell">*セカンダリシステムから（レプリケーション）*</block>
-  <block id="aab3dd6e73e091e7f55c3e923a012dbb" category="cell">宛先システム ifdef::aws[]</block>
-  <block id="508c69ac69618e417c42c1ec4f1802fe" category="cell">AWS オンプレミスONTAPシステムのCloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
-  <block id="a57e78a7b424a1f155d5c251bf4bfe16" category="cell">Azure のCloud Volumes ONTAPオンプレミスONTAPシステム endif::azure[] ifdef::gcp[]</block>
   <block id="f6bc09197fbc5599ccf48032f3ead672" category="cell">オンプレミスのONTAPシステムへ</block>
   <block id="56a66e1fc15e989f40186eb5d1841f59" category="paragraph">参照と復元の場合、コンソール エージェントは次の場所にインストールできます。</block>
   <block id="26b66b8e6541c0f2e46ee638955dab17" category="list-text">Amazon S3の場合、コンソールエージェントはAWSまたはオンプレミスに導入できます。</block>
@@ -3749,7 +3717,6 @@
   <block id="2f7ffcf09fd8291d200be9f94baef41d" category="list-text">復元されたボリュームに使用する名前を入力し、ボリュームが保存されるストレージ VM とアグリゲートを選択します。 FlexGroupボリュームを復元する場合は、複数のアグリゲートを選択する必要があります。デフォルトでは、ボリューム名として *&lt;source_volume_name&gt;_restore* が使用されます。</block>
   <block id="7a2007148011e973184940a379d2cfeb" category="paragraph">オブジェクト ストレージからONTAP 9.13.0 以上を使用するCloud Volumes ONTAPシステム、またはONTAP 9.14.1 を実行するオンプレミスのONTAPシステムにバックアップを復元する場合は、クイック復元操作を実行するオプションがあります。</block>
   <block id="15c25e27b550e844257a7920d4c7a5ea" category="paragraph">また、アーカイブ ストレージ層 ( ONTAP 9.10.1 以降で利用可能) にあるバックアップ ファイルからボリュームを復元する場合は、復元優先度を選択できます。</block>
-  <block id="05a3d8f98ebfb8438c88a925f984d2a0" category="paragraph"><block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。</block>
   <block id="f88c0e05820f08ba199e29b639f011b8" category="list-text">[次へ] を選択して、通常の復元プロセスを実行するか、クイック復元プロセスを実行するかを選択します。</block>
   <block id="2618b905cdc9e04055a7d6a5328eebfb" category="list-text">*通常の復元*: 高いパフォーマンスが必要なボリュームでは通常の復元を使用します。復元プロセスが完了するまでボリュームは使用できません。</block>
   <block id="64063115b259542737cce343064e3233" category="list-text">*クイック復元*: 復元されたボリュームとデータはすぐに利用できるようになります。クイック リストア プロセス中はデータへのアクセスが通常よりも遅くなる可能性があるため、高パフォーマンスが必要なボリュームではこれを使用しないでください。</block>
@@ -4408,19 +4375,7 @@
   <block id="0253148ca606e51aa3fdb4d9f8b84f32" category="sidebar">サポートされているAWSアーカイブストレージ層</block>
   <block id="62967cdcfc7912e3c1a9b3870580fe3f" category="sidebar">サポートされている Azure アーカイブ ストレージ層</block>
   <block id="6af2225d62ab9c4b0de4dfa7f9e852f5" category="sidebar">サポートされている Google Cloud アーカイブ ストレージ層</block>
-  <block id="e29d7c0b36af68edd13ebac84f15b44b" category="sidebar">クラウド プロバイダ</block>
-  <block id="46aef2e5080a5347df1ce7546e1be1df" category="sidebar">すべてのクラウドプロバイダー</block>
-  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services</block>
-  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google Cloud</block>
-  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">Microsoft Azure</block>
-  <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure</block>
-  <block id="5a81378cdc7edd9ea960cf02d6ca78d2" category="paragraph">ifdef::aws[]</block>
-  <block id="6beb2fa01dc121194547db1bfbe03408" category="paragraph">endif::aws[]</block>
-  <block id="b010c7530103ef9947582474d65ff9a3" category="paragraph">ifdef::azure[]</block>
-  <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
-  <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
-  <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="6fc478198b32debce80454c7af87f2a6" category="paragraph">ソースのオンプレミスONTAPシステムと、セカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムを準備します。</block>
   <block id="9d6517026ceae75d40ad31bbce85a01f" category="paragraph">ONTAPシステムが次の要件を満たしていることを確認してください。</block>
   <block id="412575a7231cf720dd454d12218d97e8" category="list-text">データを複製する場合は、ソース システムと宛先システムで互換性のあるONTAPバージョンが実行されていることを確認します。</block>
@@ -4841,4 +4796,19 @@
   <block id="7a90fde5622dcca215688cd078d7dd01" category="list-text">Google Cloud Platform 用のCloud Volumes ONTAP 9.8 以上（NFS および CIFS プロトコルを使用）</block>
   <block id="6f1c9788058344e9232a35579eac91e2" category="list-text">Amazon FSx for NetApp ONTAP (Microsoft SQL Serverワークロードのみ)</block>
   <block id="0b115ac5b217f989a1fc7dd422161b82" category="list-title">サポートされているバックアップ対象</block>
+  <block id="c1ff016c5b916007ee8f97689d0cf42d" category="paragraph"><block ref="74169e9d6aed252bcfdf8c7b3af7403c" category="inline-link-macro-rx"></block>。<block ref="2ee7cc9e20761e67f0920429cf98cc54" category="inline-link-macro-rx"></block>。<block ref="aba7d321ee8cc50f731dfdd9ecd7c01c" category="inline-link-macro-rx"></block>。（ ONTAP 9.12.1 が必要です。）</block>
+  <block id="6d7ca5f3a62a8450cd1f9e559fa7f7d2" category="paragraph">アーカイブへのバックアップの階層化を停止した場合、アーカイブ ストレージに階層化されたバックアップ ファイルはすべてその階層に残り、標準階層に自動的に戻されないことに注意してください。新しいボリューム バックアップのみが標準層に保存されます。</block>
+  <block id="6fe3c37e727721914225ad76304d3726" category="list-text">最大転送速度オプションを使用して、オブジェクト ストレージにバックアップをアップロードするために割り当てられたネットワーク帯域幅を変更する</block>
+  <block id="5b9be87b8cd311cb68b9eddc1c1d9d4b" category="paragraph">この機能を使用すると、 SnapMirror経由でクラウドに複製されたクラウド スナップショットをロックできるほか、ランサムウェア攻撃を検出してオブジェクト ストア上のスナップショットの一貫したコピーを回復する機能も有効になります。この機能は、AWS、Azure、Google Cloud Platform、 StorageGRIDでサポートされています。</block>
+  <block id="ed56c48eb3d77598d7dd71524f288c12" category="cell">バックアップファイルの保存先</block>
+  <block id="e6af6ec70c8f1f9b1b24a05417aae82a" category="cell">Amazon S3 Azure Blob Google Cloud NetApp StorageGRID</block>
+  <block id="31c25778a66dd9ff2087fb25f9f003e3" category="list-text">AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
+  <block id="cf79bdcd3a75ca2aaf153bfbee77f91f" category="list-text">Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
+  <block id="55746a30fb9b4c5182484dec9b3600d3" category="list-text">ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block>。</block>
+  <block id="a99979a95e2c9dcb0b5768f80898dd11" category="cell">Amazon S3 Azure Blob Google Cloud Storage NetApp StorageGRID ONTAP S3</block>
+  <block id="5cbc97866d11e9b3160156a597fbd5bf" category="list-text">AWSでは、コンソールで<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 バケット上。</block>
+  <block id="108d25df82fe933520bf967ad1d14b85" category="list-text">Azure では、コンソールは、Blob コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> デフォルトです。</block>
+  <block id="fc2c90af4df4de3a15611b7cf431a683" category="list-text">GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。</block>
+  <block id="96e895b3970ec91a00e97afd2eb59250" category="list-text">StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。</block>
+  <block id="836b4aa41fc8e9938df6b2350419d4f6" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。</block>
 </blocks>

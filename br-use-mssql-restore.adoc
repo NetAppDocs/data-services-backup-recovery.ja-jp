@@ -219,27 +219,3 @@ NetApp Backup and Recovery、復元操作に使用できるスナップショッ
 
 . 復元ページから復元オプションについて同じ手順を続行します。
 
-
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]
-
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]

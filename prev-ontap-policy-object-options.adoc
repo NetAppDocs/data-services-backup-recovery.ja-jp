@@ -72,7 +72,7 @@ NetApp Backup and Recovery は、ボリューム バックアップに対する 
 
 === DataLockとは
 
-この機能を使用すると、 SnapMirror経由でクラウドに複製されたクラウド スナップショットをロックできるほか、ランサムウェア攻撃を検出してオブジェクト ストア上のスナップショットの一貫したコピーを回復する機能も有効になります。この機能は、AWS、Azure、 StorageGRIDでサポートされています。
+この機能を使用すると、 SnapMirror経由でクラウドに複製されたクラウド スナップショットをロックできるほか、ランサムウェア攻撃を検出してオブジェクト ストア上のスナップショットの一貫したコピーを回復する機能も有効になります。この機能は、AWS、Azure、Google Cloud Platform、 StorageGRIDでサポートされています。
 
 DataLock は、バックアップ ファイルが一定期間変更または削除されるのを防ぎます。これは、_不変ストレージ_ とも呼ばれます。この機能は、オブジェクト ストレージ プロバイダーの「オブジェクト ロック」テクノロジを使用します。
 
@@ -165,25 +165,23 @@ DataLock の保持設定は、バックアップ ポリシーのポリシー保�
 
 [cols="55,45"]
 |===
-| ソースシステム | バックアップファイルの保存先 ifdef::aws[] 
+| ソースシステム | バックアップファイルの保存先 
 
 
-| AWS のCloud Volumes ONTAP | Amazon S3 endif::aws[] ifdef::azure[] 
+| AWS のCloud Volumes ONTAP | Amazon S3 
 
 
-| Azure のCloud Volumes ONTAP | Azure BLOB endif::azure[] ifdef::gcp[] 
+| Azure のCloud Volumes ONTAP | Azure ブロブ 
 
 
-| Google Cloud のCloud Volumes ONTAP | Google Cloud endif::gcp[] 
+| Google Cloud のCloud Volumes ONTAP | Google Cloud 
 
 
-| オンプレミスのONTAPシステム | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID 
+| オンプレミスのONTAPシステム | Amazon S3 Azure Blob Google Cloud NetApp StorageGRID 
 |===
 
 
 === 要件
-
-ifdef::aws[]
 
 * AWS の場合:
 +
@@ -228,33 +226,17 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html
 
 
 
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * Azureの場合:
 +
 ** クラスタはONTAP 9.12.1以降を実行している必要があります
 ** コンソールエージェントはクラウドまたはオンプレミスに導入できます
 
 
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Google Cloud の場合:
 +
 ** クラスタはONTAP 9.17.1以降を実行している必要があります
 ** コンソールエージェントはクラウドまたはオンプレミスに導入できます
 
-
-
-
-endif::gcp[]
 
 * StorageGRIDの場合:
 +
@@ -355,8 +337,6 @@ AWS、Azure、または Google クラウド ストレージを使用する場合
 ====
 各バックアップ ポリシーには、バックアップ ファイルに適用できる「アーカイブ ポリシー」のセクションが用意されています。
 
-ifdef::aws[]
-
 * AWS では、バックアップは _Standard_ ストレージ クラスで開始され、30 日後に _Standard-Infrequent Access_ ストレージ クラスに移行します。
 +
 クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"]。
@@ -369,42 +349,23 @@ ifdef::aws[]
 
 
 
-endif::aws[]
-
-ifdef::azure[]
-
 * Azure では、バックアップは _Cool_ アクセス層に関連付けられています。
 +
 クラスターでONTAP 9.10.1 以降を使用している場合は、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"]。
 
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 * GCP では、バックアップは _Standard_ ストレージ クラスに関連付けられています。
 +
 オンプレミスのクラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"]。
-
-
-
-endif::gcp[]
 
 * StorageGRIDでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。
 +
 オンプレミスのクラスタでONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムで 11.4 以上を使用している場合は、古いバックアップ ファイルをパブリック クラウド アーカイブ ストレージにアーカイブできます。
 
++
+** AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"^]。
+** Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"^]。
 
 
-ifdef::aws[]
 
-+ ** AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"^]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-+ ** Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"^]。
-
-endif::azure[]
