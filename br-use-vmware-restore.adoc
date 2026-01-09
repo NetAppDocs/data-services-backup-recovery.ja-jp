@@ -91,8 +91,8 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元する流�
 
 
 
-. *次へ*を選択します。
-. 宛先設定と復元前および復元後のオプションを選択します。
+. 続行するには、[次へ] を選択します。
+. 復元先と設定を選択します。
 
 
 [discrete]

@@ -1013,10 +1013,7 @@
   <block id="47d76616568defc7344e2cfbcdf92653" category="paragraph">可能な復元ポイントのリストが表示されます。</block>
   <block id="effade56c0dfab07db57229c5b4e6e4e" category="list-text">使用する復元ポイントを選択します。</block>
   <block id="6f012e8e8abed5b3c7ee277d331469f3" category="list-text">スナップショットのソースの場所を選択します。</block>
-  <block id="39e791cd576f013480b8ac3c88fcd655" category="list-text">*完了*または*次へ*を選択して、復元先設定ページに進みます。</block>
-  <block id="94697b58b65e2562f9eac2c0fef08c35" category="paragraph">次に、宛先設定と復元前および復元後のオプションを選択できます。</block>
   <block id="23de539bf06cfaf2cd9dc515802272ce" category="floating-title">目的地の選択</block>
-  <block id="5dd0bd8435aec915fe085d771534ba47" category="list-text">宛先設定と復元前および復元後のオプションを選択します。</block>
   <block id="abfc7c0c366258e23e15cd12a5f89811" category="open-title">元の場所へのリストア</block>
   <block id="f841432c2e7b95f0e1480a64c27a957d" category="list-text">*クイック復元を有効にする*: クイック復元操作を実行するにはこれを選択します。復元されたボリュームとデータはすぐに利用できるようになります。クイック リストア プロセス中はデータへのアクセスが通常よりも遅くなる可能性があるため、高パフォーマンスが必要なボリュームではこれを使用しないでください。</block>
   <block id="6ca1e0675a4f2fa0425b153f38956afe" category="list-text">*復元前オプション*: 復元操作の前に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
@@ -1590,7 +1587,6 @@
   <block id="e778183067d12c261c4b71b0ccc4eaad" category="open-title">リカバリなしでスナップショットから復元</block>
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">*リカバリなしでスナップショットから復元*を選択します。</block>
   <block id="002b8c566162a2cd02c4e355805ac3f6" category="paragraph">一致するスナップショットが表示されます。</block>
-  <block id="ae0355b3acbc8735275d2415050e631f" category="list-text">*次へ* を選択して、復元先設定ページに進みます。</block>
   <block id="98b2af096c36f02920b21c788a2a0dc6" category="list-text">*宛先設定*:</block>
   <block id="12c0707880528cef62d0f97d7a498d1a" category="list-text">データベース全体を復元するか、データベースの表領域のみを復元するかを選択します。</block>
   <block id="78847577cebd91850d891ed95fe6bce3" category="list-text">*制御ファイル*: オプションで、このオプションを有効にすると、データベース制御ファイルも復元されます。</block>
@@ -4698,7 +4694,6 @@
   <block id="f16b36eea83bd45d35d7613cab7f6cf8" category="list-text">スナップショットの復元先を選択します。</block>
   <block id="086fbde8fbe590f104f5100808b42c0b" category="list-text">*ローカル*: ローカルの場所からスナップショットを復元します。</block>
   <block id="3a786499ea5d54fb6bb418032aca3117" category="list-text">*セカンダリ*: リモート ストレージの場所からスナップショットを復元します。</block>
-  <block id="bc9234ce73c565f247a8ae290b842ff6" category="list-text">宛先設定と復元前および復元後のオプションを選択します。</block>
   <block id="8ed9e5a565b596ef7f9cb364cf2536d7" category="paragraph">元の場所に復元する場合、宛先の vCenter、ESXi ホスト、データストア、または VM の名前を変更することはできません。復元操作により元の VM が上書きされます。</block>
   <block id="10b0d3ffb47c4e67fc652e3b0f0220d7" category="list-text">*元の場所* ペインを選択します。</block>
   <block id="1b8d4d654146b4eec3cc22bd8b461dbb" category="list-text">次のいずれかのオプションを選択します。</block>
@@ -4737,7 +4732,6 @@
   <block id="cd1f1a4a4415e09f2c3fc9ab17aff625" category="list-text">復元するスナップショットのラジオ ボタンを有効にします。</block>
   <block id="57385260ec48afcc58eb70dc9059c8c0" category="list-text">*オブジェクト ストア*: オブジェクト ストレージからスナップショットを復元します。</block>
   <block id="c1389ae5f188f85d79b6e1088e21576d" category="paragraph">セカンダリ ストレージを選択した場合は、ドロップダウン リストから保存先の場所を選択します。</block>
-  <block id="a1ff6993d36232fbd0d0471769216a69" category="list-text">宛先設定と復元前および復元後のオプションを選択します。</block>
   <block id="21ba1fcc630eae9c060829f621ac7124" category="paragraph">元の場所に復元する場合、宛先の vCenter、ESXi ホスト、データストア、または仮想ディスクの名前を変更することはできません。元の仮想ディスクは上書きされます。</block>
   <block id="9f63eee4b169a6ac1fce2d2e6ec65d64" category="list-text">*宛先設定*セクションで、復元する仮想ディスクのチェックボックスをオンにします。</block>
   <block id="e3926503d87ede09d428d2ca5fc4abf5" category="paragraph">別の場所に復元する場合は、宛先データストアを変更できます。選択したデータストアに関係なく、復元操作後に仮想ディスクは元の VM に接続されます。</block>
@@ -4811,4 +4805,9 @@
   <block id="fc2c90af4df4de3a15611b7cf431a683" category="list-text">GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。</block>
   <block id="96e895b3970ec91a00e97afd2eb59250" category="list-text">StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。</block>
   <block id="836b4aa41fc8e9938df6b2350419d4f6" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。</block>
+  <block id="ab042cf6b82a1ca2824a55aecccf0f72" category="list-text">続行するには、[次へ] を選択します。</block>
+  <block id="38cf859695687379726e3ea14b05ddc1" category="list-text">復元先と設定を選択します。</block>
+  <block id="a30b9d9cd5fcd792454de596b4a70bbf" category="paragraph">元の場所に復元する場合、[*宛先設定*] セクションを展開して宛先設定を表示することはできますが、変更することはできません。</block>
+  <block id="6ae1e8b4e49e0eb340bfe865ab9bf2be" category="list-text">*復元後のオプション* セクションで、次のオプションを検討してください。</block>
+  <block id="549fac1df4ed1f1a9ecf014524bf6245" category="paragraph">*仮想マシンを再起動します*: このオプションを有効にすると、復元後に新しい仮想マシンを起動できます。</block>
 </blocks>
