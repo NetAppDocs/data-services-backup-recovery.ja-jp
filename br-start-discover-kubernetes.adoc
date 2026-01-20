@@ -27,7 +27,7 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 .手順
 . 次のいずれかを実行します。
 +
-** Kubernetes ワークロードを初めて検出する場合は、 NetApp Backup and Recoveryで、Kubernetes ワークロード タイプの下の *Discover and Manage* を選択します。
+** Kubernetes ワークロードを初めて検出する場合は、 NetApp Backup and Recovery の*ワークロード* で、*Kubernetes* タイルを選択します。
 ** Kubernetes ワークロードをすでに検出している場合は、 NetApp Backup and Recoveryで *インベントリ* > *ワークロード* を選択し、*リソースの検出* を選択します。
 
 

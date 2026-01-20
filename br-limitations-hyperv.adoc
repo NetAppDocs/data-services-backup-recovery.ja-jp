@@ -26,6 +26,8 @@ NetApp Backup and Recoveryの Hyper-V ワークロードのプライベート �
 * VMを別の場所に復元する
 * スパニングディスク（複数の CIFS 共有にまたがる）
 * SAN経由でVMを保護する
-* 保護グループを編集する
-* System Center Virtual Machine Manager (SCVMM) を使用してクラスター化された Hyper-V ホストを保護する
+* Hyper-Vの「プロセッサ互換性」設定に関わらず、異なるCPUベンダー（IntelからAMD、またはその逆）のシステム間でVMまたはVMデータを復元することはできません。この設定は、同一ベンダーの異なる世代間（例：IntelからIntel、AMDからAMD）の互換性のみをサポートします。
 
+
+
+NOTE: 2026 年 1 月 19 日のリリースでは、[アクション] メニューの [アップグレード] オプションを使用して、Hyper-V または Windows 用のNetAppプラグインをアップグレードすることはできません。代わりに、各 Hyper-V ホストを削除し、再度追加してプラグインを更新します。

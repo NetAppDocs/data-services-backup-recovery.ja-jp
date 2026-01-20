@@ -14,7 +14,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して KVM VM とストレージ プールを保護します。  NetApp Backup and Recovery は、高速でスペース効率が高く、クラッシュ整合性と VM 整合性を備えたバックアップおよび復元操作を提供します。
+NetApp Backup and Recoveryを使用して、管理対象の KVM VM とストレージ プールを保護します。NetApp Backup and Recovery は、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態、VM 整合性のあるバックアップおよびリストア操作を提供します。バックアップとリカバリを使用して KVM ホストと VM を保護する前に、Apache CloudStack などの管理プラットフォームで KVM ホストと VM を管理する必要があります。
 
 KVM ワークロードを Amazon Web Services S3、 Azure NetApp Files、またはStorageGRIDにバックアップし、KVM ワークロードをオンプレミスの KVM ホストに復元できます。
 

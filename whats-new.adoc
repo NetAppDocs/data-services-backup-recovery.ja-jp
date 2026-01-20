@@ -18,6 +18,60 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+== 2026年1月19日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+=== ONTAPボリュームワークロードの機能強化
+
+このリリースのONTAPボリューム ワークロードでは、次の拡張機能が導入されています。
+
+*複数のバケットのサポート*: (プライベート プレビュー) ONTAP 9.17.1 以降では、異なるクラウド プロバイダーにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。
+
+link:prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細"]。
+
+
+
+=== VMwareワークロードの機能強化
+
+この VMware ワークロードのリリースでは、次の拡張機能が導入されています。
+
+* VMware ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されるようになりました。
+* ゲスト OS のファイルとフォルダーを復元できるようになりました。
+
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["NetApp Backup and Recoveryを使用したVMware VMの復元の詳細"]。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-overview.html["ゲストファイルとフォルダの復元の詳細"]。
+
+
+
+=== Hyper-V ワークロードのプレビュー機能強化
+
+このリリースの Hyper-V ワークロードでは、次の拡張機能が導入されています。
+
+* Hyper-V VM のバックアップとスナップショットを別の場所に復元できるようになりました。これは、異なる Hyper-V ホスト上の VM のバージョンを管理する場合に便利です。
+* System Center Virtual Machine Manager (SCVMM) によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンが、NetApp Backup and Recoveryでサポートされるようになりました。
+* 保護グループを編集できるようになりました。
+
+
+
+NOTE: このリリースでのみ、[アクション] メニューの [アップグレード] オプションを使用して、Hyper-V または Windows 用のNetAppプラグインをアップグレードすることはできません。代わりに、各 Hyper-V ホストを削除し、再度追加してプラグインを更新します。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restore.html["NetApp Backup and Recoveryを使用したHyper-V VMの復元の詳細"]。
+
+
+
+=== KVM ワークロードのプレビュー機能強化
+
+KVM ワークロード プレビューでは、Apache CloudStack 管理プラットフォームとの統合がサポートされるようになり、Apache CloudStack によって管理される KVM ホストと仮想マシンを保護できるようになりました。
+
+KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+
+
+
 == 2025年12月8日
 
 このNetApp Backup and Recoveryリリースには、次の更新が含まれています。

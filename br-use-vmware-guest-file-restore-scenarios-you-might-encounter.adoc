@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html 
+keywords:  
+summary: ゲスト ファイルを復元しようとすると、ゲスト ファイルの復元セッションが空白になったり、ゲスト ファイルの復元のディスク接続操作が失敗したり、ゲスト ファイルの復元セッションが中止された後にバックアップが切断されなかったりするシナリオが発生する可能性があります。 
+---
+= ゲストファイルの復元のトラブルシューティング
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ゲスト ファイルをリストアしようとすると、次のいずれかの状況が発生することがあります。
+
+
+
+== ゲスト ファイル リストア セッションが空白
+
+この問題は、ゲスト ファイルの復元セッションを作成し、そのセッション中にゲスト オペレーティング システムが再起動した場合に発生します。ゲスト OS の VMDK がオフラインのままになる可能性があるため、ゲスト ファイルの復元セッション リストは空白になります。
+
+この問題を修正するには、ゲストOSでVMDKを手動でオンラインに戻します。VMDKがオンラインになると、ゲスト ファイル リストア セッションに正しい内容が表示されます。
+
+
+
+== ゲスト ファイル リストアのディスク接続処理が失敗する
+
+この問題は、ゲスト ファイルの復元操作を開始したときに、VMware ツールが実行されていてゲスト OS の資格情報が正しいにもかかわらず、ディスクの接続操作が失敗した場合に発生します。これが発生すると、次のエラーが返されます。
+
+`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
+
+この問題を修正するには、ゲストOSでVMware Tools Windowsサービスを再起動してから、ゲスト ファイル リストア処理を再試行します。
+
+
+
+== ゲスト ファイル リストア セッションを中断してもバックアップが切断されない
+
+この問題は、VM整合性バックアップからゲスト ファイル リストア処理を実行した場合に発生します。ゲスト ファイル リストア セッションがアクティブな間に、同じVMに対して別のVM整合性バックアップが実行されます。ゲスト ファイル リストア セッションが手動または24時間後に自動的に切断されても、セッションのバックアップは切断されません。
+
+この問題を修正するには、アクティブ ゲスト ファイル リストア セッションから接続されていたVMDKを手動で切断します。
