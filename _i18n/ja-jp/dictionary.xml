@@ -4873,7 +4873,6 @@
   <block id="0bf794e2b090829c5f342b426fa04d5c" category="summary">WindowsゲストOSのVMDKから1つ以上のファイルまたはフォルダをリストアできます。</block>
   <block id="9cda0c7b074ab9336e54e5c799f32f1d" category="doc">VMDKからのゲスト ファイルとフォルダのリストア</block>
   <block id="a26360f952d07b84e1088cc6c613eafe" category="admonition">ゲスト VM からファイルやフォルダを復元する前に、 NetApp Backup and Recoveryでゲスト VM の資格情報を作成する必要があります。NetApp Backup and Recovery は、仮想ディスクを接続するときに、これらの資格情報を使用してゲスト VM を認証します。</block>
-  <block id="50f6ae852890a51c1bdcbc5fa3074be0" category="paragraph">デフォルトでは、 NetApp Backup and Recovery は接続された仮想ディスクを 24 時間使用可能にし、その後自動的に切断します。ウィザードでは、復元操作後にゲスト ファイルの復元セッションを自動的に削除するか、手動でセッションを削除するかを選択できます。</block>
   <block id="84768fbdedcb14c4c8dd78daf9604451" category="paragraph">ゲスト ファイルまたはフォルダのリストア パフォーマンスは、リストアするファイル/ /フォルダのサイズと、リストアするファイル / フォルダの数という2つの要因によって決まります。リストア対象のデータ セットのサイズが同じ場合、サイズの小さいファイルを多数リストアするのにかかる時間は、サイズの大きいファイルを少数リストアするのにかかる時間と比較して、想定よりも長くなることがあります。</block>
   <block id="851e8e79b33ecfa430d9ed62957e5cad" category="admonition">1つのVMで一度に実行できる接続処理またはリストア処理は1つだけです。同じVMに対して並行して接続処理またはリストア処理を実行することはできません。</block>
   <block id="7392d9ba3083cd42958684b4749d4c72" category="admonition">ゲスト復元機能を使用すると、システムファイルや隠しファイルを表示および復元したり、暗号化されたファイルを表示したりできます。既存のシステム ファイルを上書きしたり、暗号化されたファイルを暗号化されたフォルダーに復元したりしないでください。復元操作中、ゲスト ファイルの隠し属性、システム属性、および暗号化属性は復元されたファイルに保持されません。予約済みパーティションを表示または参照するとエラーが発生する可能性があります。</block>
@@ -4901,7 +4900,6 @@
   <block id="6682a5a344207b03b09bfb0798a193b6" category="section-title">ゲスト リストアのワークフロー</block>
   <block id="dfb5e1e797a80916627d17588b36ab12" category="paragraph">ゲストOSリストア処理には、次の手順が含まれます。</block>
   <block id="7193518e6f5f0076ef05680742323f9c" category="list-text">接続</block>
-  <block id="f02fee54a71e292fba6eea93ae620b05" category="paragraph">仮想ディスクをゲストVMまたはプロキシVMに接続し、ゲスト ファイル リストア セッションを開始します。</block>
   <block id="0f68101772bd5397ef8eb1b632798652" category="list-text">待機</block>
   <block id="75acbae837699c01fe86ee8a2c9fec00" category="paragraph">参照および復元する前に、接続操作が完了するまで待機してください。アタッチ操作が完了すると、ゲスト ファイルの復元セッションが自動的に作成されます。</block>
   <block id="137bf66cd89f2d7f861099ca8519563c" category="list-text">ファイルまたはフォルダの選択</block>
@@ -4912,7 +4910,6 @@
   <block id="6a7a37bd722f9a7ebe568ae7d8778d8f" category="paragraph">Windows ゲスト OS 上の VMDK からファイルまたはフォルダーを復元する前に、すべての要件を確認してください。</block>
   <block id="36139d788258b0f7f760e90a7e475cfb" category="list-text">VMware Toolsがインストールされ、実行されている必要があります。</block>
   <block id="9809213078fe536846ce61d52cfab742" category="paragraph">NetApp Backup and Recovery は、VMware ツールからの情報を使用して、VMware ゲスト OS への接続を確立します。</block>
-  <block id="1572f8be6f1646b62b5c0d4d4c380fe8" category="list-text">WindowsゲストOSでWindows Server 2008 R2以降が実行されている必要があります。</block>
   <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">NetApp Interoperability Matrix Tool（IMT）</block>
   <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> 。</block>
   <block id="73e99419f23009b467a68b78510f24c7" category="list-text">ターゲット VM の資格情報には、ユーザー名が「Administrator」の組み込みドメインまたはローカル管理者アカウントが使用されます。復元操作を開始する前に、仮想ディスクを接続する VM の資格情報を構成します。アタッチ操作と復元操作の両方に資格情報が必要です。ワークグループ ユーザーは、組み込みのローカル管理者アカウントを使用できます。</block>
@@ -4926,8 +4923,6 @@
   <block id="9229096468701d10aab6b30f546310c1" category="section-title">ゲスト ファイル リストアに関する制限事項</block>
   <block id="ce6cdc51d08da1519febc60a0e9593aa" category="paragraph">ゲスト OS からファイルまたはフォルダーを復元する前に、機能の制限に注意する必要があります。</block>
   <block id="0938c50db6a8d08637c074ab0c183305" category="list-text">ゲストOS内でダイナミック ディスク タイプをリストアすることはできません。</block>
-  <block id="306e51cbbbbd449259f2c9a524080247" category="list-text">暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。ファイルまたはフォルダを暗号化されたフォルダにリストアすることはできません。</block>
-  <block id="631e06eeff5fdebb1ee6aaaa3f7502fd" category="list-text">[Guest File Browse]ページには、隠しファイルとフォルダが表示されますが、フィルタすることはできません。</block>
   <block id="21e6b4873654be153e3c8d0024f83773" category="list-text">LinuxゲストOSからはリストアできません。</block>
   <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">LinuxゲストOSを実行しているVMからファイルやフォルダをリストアすることはできません。ただし、VMDKを接続し、ファイルとフォルダを手動でリストアすることもできます。サポートされているゲストOSの最新情報については、<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> 。</block>
   <block id="a24b5bfa95a0c9efe3023cae447296e6" category="list-text">NTFSファイルシステムからFATファイルシステムにリストアすることはできません。</block>
@@ -4975,4 +4970,9 @@
   <block id="9b7e5fddcf3e2a7a93fe6669de87fbc2" category="sidebar">特定の仮想ディスクを復元する</block>
   <block id="6d74a680eadd149117f584cf67b83c34" category="sidebar">ゲストファイルとフォルダを復元する</block>
   <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">ワークフロー、前提条件、制限事項</block>
+  <block id="d85468613eebe17a50e2bf01c2bd42f5" category="paragraph">仮想ディスクをゲスト VM に接続し、ゲスト ファイルの復元セッションを開始します。</block>
+  <block id="b2c5a3b35bd8f72bf653aa42e54cc06c" category="list-text">Windows ゲスト OS は Windows Server 2008 R2 以降を実行している必要があります。</block>
+  <block id="367aa9be05b109b226ffbefe3981ac88" category="list-text">暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。</block>
+  <block id="34454c78e4e96cfe4c311b8ba072f6cd" category="list-text">ファイルまたはフォルダを暗号化されたフォルダにリストアすることはできません。</block>
+  <block id="86a44ece7a205cf4a21804522a9cd44a" category="list-text">隠しファイルとフォルダーはファイル参照ページに表示されますが、フィルタリングすることはできません。</block>
 </blocks>

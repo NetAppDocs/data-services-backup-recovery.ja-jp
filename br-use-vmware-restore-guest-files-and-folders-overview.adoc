@@ -24,7 +24,7 @@ WindowsゲストOSの仮想マシン ディスク（VMDK）からファイルや
 
 . 接続
 +
-仮想ディスクをゲストVMまたはプロキシVMに接続し、ゲスト ファイル リストア セッションを開始します。
+仮想ディスクをゲスト VM に接続し、ゲスト ファイルの復元セッションを開始します。
 
 . 待機
 +
@@ -50,7 +50,7 @@ Windows ゲスト OS 上の VMDK からファイルまたはフォルダーを�
 +
 NetApp Backup and Recovery は、VMware ツールからの情報を使用して、VMware ゲスト OS への接続を確立します。
 
-* WindowsゲストOSでWindows Server 2008 R2以降が実行されている必要があります。
+* Windows ゲスト OS は Windows Server 2008 R2 以降を実行している必要があります。
 +
 サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^] 。
 
@@ -82,8 +82,9 @@ NetApp Backup and Recovery、復元するファイルまたはフォルダの検
 ゲスト OS からファイルまたはフォルダーを復元する前に、機能の制限に注意する必要があります。
 
 * ゲストOS内でダイナミック ディスク タイプをリストアすることはできません。
-* 暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。ファイルまたはフォルダを暗号化されたフォルダにリストアすることはできません。
-* [Guest File Browse]ページには、隠しファイルとフォルダが表示されますが、フィルタすることはできません。
+* 暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。
+* ファイルまたはフォルダを暗号化されたフォルダにリストアすることはできません。
+* 隠しファイルとフォルダーはファイル参照ページに表示されますが、フィルタリングすることはできません。
 * LinuxゲストOSからはリストアできません。
 +
 LinuxゲストOSを実行しているVMからファイルやフォルダをリストアすることはできません。ただし、VMDKを接続し、ファイルとフォルダを手動でリストアすることもできます。サポートされているゲストOSの最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^] 。
