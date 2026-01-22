@@ -18,11 +18,9 @@ link:prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONT
 
 この VMware ワークロードのリリースでは、次の拡張機能が導入されています。
 
-* VMware ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されるようになりました。
+* VMware ワークロード サポートが、NetApp Backup and Recovery で一般提供（GA）されました。
 * ゲスト OS のファイルとフォルダーを復元できるようになりました。
 
-
-https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["NetApp Backup and Recoveryを使用したVMware VMの復元の詳細"]。
 
 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-overview.html["ゲストファイルとフォルダの復元の詳細"]。
 
@@ -32,8 +30,8 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restor
 
 このリリースの Hyper-V ワークロードでは、次の拡張機能が導入されています。
 
-* Hyper-V VM のバックアップとスナップショットを別の場所に復元できるようになりました。これは、異なる Hyper-V ホスト上の VM のバージョンを管理する場合に便利です。
-* System Center Virtual Machine Manager (SCVMM) によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンが、NetApp Backup and Recoveryでサポートされるようになりました。
+* Hyper-V VMのバックアップとスナップショットを別の場所に復元できるようになりました。この機能を使用して、異なるHyper-Vホスト上のVMバージョンを管理できます。
+* NetApp Backup and Recovery では、System Center Virtual Machine Manager（SCVMM）によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンがサポートされるようになりました。
 * 保護グループを編集できるようになりました。
 
 
@@ -46,6 +44,6 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restor
 
 === KVM ワークロードのプレビュー機能強化
 
-KVM ワークロード プレビューでは、Apache CloudStack 管理プラットフォームとの統合がサポートされるようになり、Apache CloudStack によって管理される KVM ホストと仮想マシンを保護できるようになりました。
+KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。
 
 KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
