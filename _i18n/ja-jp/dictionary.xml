@@ -463,7 +463,6 @@
   <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroClusterサポート:</block>
   <block id="fa5ec1bbbde705a6b3fbd36d5f35b9f9" category="list-text">ONTAP 9.12.1 GA 以上を使用する場合、プライマリ システムに接続しているときにバックアップがサポートされます。バックアップ構成全体がセカンダリ システムに転送されるため、切り替え後もクラウドへのバックアップが自動的に継続されます。セカンダリ システムにバックアップを設定する必要はありません (実際、設定することは制限されています)。</block>
   <block id="a1e9108dbd21ffa07a61d3c3e7ecf506" category="list-text">ONTAP 9.12.0 以前を使用する場合、バックアップはONTAPセカンダリ システムからのみサポートされます。</block>
-  <block id="6413e2887d9fc1bca42a1d8fa137281d" category="list-text">現時点では、 FlexGroupボリュームのバックアップはサポートされていません。</block>
   <block id="ff65f252d2a0aa40e634cf2ad7eaa2d3" category="list-text">*今すぐバックアップ* ボタンを使用したアドホック ボリューム バックアップは、データ保護ボリュームではサポートされていません。</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">SM-BC 構成はサポートされていません。</block>
   <block id="28014e4f484f0639d9b0151965328912" category="list-text">ONTAP は、単一のボリュームから複数のオブジェクト ストアへのSnapMirror関係のファンアウトをサポートしていません。そのため、この構成はNetApp Backup and Recoveryではサポートされていません。</block>
@@ -4974,4 +4973,5 @@
   <block id="f411222cfe4404b6e0b3d9790460b804" category="list-text">Hyper-V VMのバックアップとスナップショットを別の場所に復元できるようになりました。この機能を使用して、異なるHyper-Vホスト上のVMバージョンを管理できます。</block>
   <block id="83de53928b74eea738d883969ca231fa" category="list-text">NetApp Backup and Recovery では、System Center Virtual Machine Manager（SCVMM）によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンがサポートされるようになりました。</block>
   <block id="fe3a06f4a23ebd296fcaecd751b29ac6" category="paragraph">KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。</block>
+  <block id="e82f8585939ff44aeed4d4c863058cee" category="list-text">ONTAP 9.18.1 以降、MetroCluster 構成で FlexGroup ボリュームのバックアップがサポートされます。</block>
 </blocks>
