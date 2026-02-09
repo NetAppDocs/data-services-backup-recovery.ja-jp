@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations-vmware.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vcenter 
-summary: NetApp Backup and Recoveryサービスを使用するには、まずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+summary: 環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。 
 ---
 = VMware ワークロード向けNetApp Backup and Recoveryの既知の制限
 :hardbreaks:

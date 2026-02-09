@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: br-rbac-setup.html 
+keywords: backup, back up, restore, recovery, aws, azure 
+summary: セキュリティを強化するために、NetApp Backup and Recovery で特定のロールのアクセスを設定してください。 
+---
+= NetApp Backup and Recovery でロールベースのアクセス制御を設定
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+セキュリティを強化し、リソースへのアクセスを制御するには、NetApp Backup and Recoveryのロールベースアクセスを設定します。NetApp Consoleは、一部のBackup and Recoveryワークロードに対してロールベースアクセス制御（RBAC）をサポートしています。これらのワークロードに固有の管理者ロールまたは閲覧者ロールを割り当てることができます。ロールベースアクセス制御をまだサポートしていない他のワークロードは、プロジェクトレベルの関連付けがサポートされるまで、Backup and Recoveryロールを持つすべてのユーザーがアクセスできます。
+
+組織内のリソースへのアクセスを制御するには、次の手順に従います。NetApp Console メニューの *管理 > ID とアクセス* ページで変更を行います。
+
+
+NOTE: これらの手順では、NetApp Consoleで組織管理者のロールが割り当てられていることを前提としています。
+
+.手順
+. IDおよびアクセスプロジェクト構造を作成します。
++
+組織管理者として、ワークロードが存在する Identity and access フォルダーおよびプロジェクト構造を設定します。
+
+. ユーザーロールを割り当てます。
++
+.. 主なオプション：
++
+ワークロード用に指定された各プロジェクトにユーザーを追加し、適切なロールを付与します。例：
+
++
+*** *組織管理者* および *Backup and Recovery スーパー管理者*：これらのロールを持つユーザーは、すべての組織内のすべてのリソースを表示し、Backup and Recovery ワークロードを検出してプロジェクト（米国東部や米国西部など）に割り当てることができます。
+*** *フォルダーまたはプロジェクト管理者* および *NetApp Backup and Recovery スーパー管理者*：これらのロールを持つユーザーは、権限を持つフォルダーまたはプロジェクト内のリソースのみを表示できますが、NetApp Backup and Recovery のワークロードを検出し、そのプロジェクトに割り当てることができます。
+
+
+.. 代替オプション：
++
+ユーザーに完全な NetApp Backup and Recovery の管理者アクセス権を付与する代わりに、自分自身に NetApp Backup and Recovery のスーパー管理者ロールを割り当てて、ワークロードを直接検出することができます。
+
+
+
+. Backup and Recoveryでワークロードを検出します。
++
+組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（US East や US West など）を選択します。各ワークロードは、選択したプロジェクトに自動的に関連付けられます。
+
+. プロジェクトにユーザーを追加します。
++
+組織管理者またはフォルダ/プロジェクト管理者は、ワークロードのあるプロジェクトにNetApp Consoleユーザーを追加します。アクセスのニーズに基づいて、ユーザーに組織閲覧者ロールとNetApp Backup and Recoveryロールを割り当てます。適切なNetApp Backup and Recoveryロールを持つユーザーは、これらのプロジェクト内の新しいワークロードへのアクセス権を自動的に取得します。
+
+
+
+
+
+== 関連情報
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetApp Console の ID とアクセス管理について説明します"^].
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^].
+

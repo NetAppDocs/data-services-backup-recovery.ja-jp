@@ -18,7 +18,7 @@ summary: NetApp Backup and Recovery を使用すると、実行フックを管�
 
 [NOTE]
 ====
-NetApp Backup and Recovery は、データ保護中に KubeVirt などのアプリケーションのファイルシステムをフリーズおよびアンフリーズします。  Trident protect ドキュメントを使用して、この動作をグローバルに、または特定のアプリケーションに対して無効にすることができます。
+NetApp Backup and Recoveryは、データ保護中にKubeVirtなどのアプリケーションのファイルシステムをフリーズおよびアンフリーズします。Trident Protectのドキュメントを使用して、この動作をグローバルに無効にすることも、特定のアプリケーションに対して無効にすることもできます：
 
 * すべてのアプリケーションでこの動作を無効にするには、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html#protecting-data-with-kubevirt-vms["KubeVirt VM によるデータ保護"] 。
 * 特定のアプリケーションでこの動作を無効にするには、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-manage-applications.html#define-an-application["アプリケーションを定義する"] 。
@@ -105,6 +105,9 @@ NOTE: 復元またはクローン操作後に実行される実行フックに�
 == 実行フックテンプレートを作成する
 
 アプリケーションでのデータ保護操作の前後にアクションを実行するために使用できるカスタム実行フック テンプレートを作成できます。
+
+
+NOTE: ここで作成するテンプレートは、Kubernetes ワークロードを保護する場合にのみ使用できます。
 
 .手順
 . コンソールで、[保護] > [バックアップと復元] に移動します。

@@ -14,7 +14,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して Oracle データベースとログを保護します。高速で、スペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップと復元を実現します。 Oracle ワークロードを AWS S3、 NetApp StorageGRID、Azure Blob Storage、またはONTAP S3 にバックアップします。オンプレミスの Oracle ホストにバックアップを復元します。
+NetApp Backup and Recoveryを使用してOracleデータベースとログを保護します。高速でスペース効率に優れた「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびデータベース整合性のあるバックアップとリストアを実現します。Oracle DatabaseワークロードをAWS S3、NetApp StorageGRID、Azure Blob Storage、またはONTAP S3にバックアップします。バックアップをオンプレミスのOracleホストにリストアします。
 
 NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
@@ -26,10 +26,10 @@ NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します�
 
 NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
 
-NetApp Backup and Recoveryを使用すると、Oracle ワークロードに関連する次のタスクを実行できます。
+NetApp Backup and Recoveryを使用して、Oracleデータベースワークロードに関連する次のタスクを実行できます：
 
-* link:br-start-discover-oracle.html["Oracleワークロードを発見"]
-* link:br-use-oracle-protection-groups.html["Oracle ワークロードの保護グループの作成と管理"]
-* link:br-use-oracle-backup.html["Oracleワークロードのバックアップ"]
-* link:br-use-oracle-restore.html["Oracleワークロードの復元"]
+* link:br-start-discover-oracle.html["Oracle Databaseワークロードを検出"]
+* link:br-use-oracle-protection-groups.html["Oracle Database ワークロードの保護グループの作成と管理"]
+* link:br-use-oracle-backup.html["Oracle Databaseワークロードのバックアップ"]
+* link:br-use-oracle-restore.html["Oracle Database ワークロードのリストア"]
 

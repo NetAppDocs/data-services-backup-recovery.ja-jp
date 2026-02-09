@@ -104,7 +104,7 @@ NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワー�
 * Oracleダッシュボードのサポート
 
 
-Oracle Databaseワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle ワークロードの保護の概要"] 。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
 
 
 

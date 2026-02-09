@@ -80,17 +80,17 @@ indexpage:
       url: "/br-use-hyperv-backup.html"
     - title: Hyper-V ワークロードを復元する
       url: "/br-use-hyperv-restore.html"
-  - title: Oracle ワークロードの保護（プライベート プレビュー）
+  - title: Oracle Database ワークロードの保護（プライベートプレビュー）
     links:
-    - title: Oracle ワークロードの保護の概要
+    - title: Oracle Databaseワークロードの保護の概要
       url: "/br-use-oracle-protect-overview.html"
-    - title: Oracleワークロードを発見
+    - title: Oracle Databaseワークロードを検出
       url: "/br-start-discover-oracle.html"
-    - title: Oracle ワークロードの保護グループの作成と管理
+    - title: Oracle Database ワークロードの保護グループの作成と管理
       url: "/br-use-oracle-protection-groups.html"
-    - title: Oracleワークロードのバックアップ
+    - title: Oracle Databaseワークロードのバックアップ
       url: "/br-use-oracle-backup.html"
-    - title: Oracleワークロードの復元
+    - title: Oracle Database ワークロードのリストア
       url: "/br-use-oracle-restore.html"
   - title: Kubernetes ワークロードを保護する（プレビュー）
     links:

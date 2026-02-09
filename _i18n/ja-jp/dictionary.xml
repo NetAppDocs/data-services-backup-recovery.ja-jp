@@ -302,8 +302,6 @@
   <block id="290536edae9da601f8170c5b55f24416" category="list-text">仮想化データベース</block>
   <block id="fa13bdfd9eed88794d8035a9e287804f" category="list-text">データベースのバックアップの検索と復元</block>
   <block id="50f97ccd9c70c1fad84f646a4f0a7844" category="list-text">Oracleダッシュボードのサポート</block>
-  <block id="51d8503c0e8b0708c3068080f066d721" category="inline-link">Oracle ワークロードの保護の概要</block>
-  <block id="834f349029c5bc6715f25a9eac82f171" category="paragraph">Oracle Databaseワークロードの保護の詳細については、以下を参照してください。<block ref="aa11c9ead0c1847dba5fa900ff49219a" category="inline-link-rx"></block> 。</block>
   <block id="8d799f5cd163dd189424382fcbc55641" category="summary">Web UI を通じて利用できるNetApp Backup and Recovery機能は、RESTful API を通じても利用できます。</block>
   <block id="3273eb60c717ba9173100472fd580bfa" category="doc">NetApp Backup and RecoveryREST API による自動化</block>
   <block id="c50c9f52d92103a492abf38f4b5325e0" category="paragraph">Web UI を通じて利用できるNetApp Backup and Recovery機能は、バックアップおよびリカバリ REST API を通じても利用できます。</block>
@@ -365,14 +363,7 @@
   <block id="5131ec6f366fecc1e6e217f1cd4771d5" category="list-text">複数の NFS マウント ポイントまたは共有にまたがるディスク</block>
   <block id="60cb90015b7d70207c84b5b4c09b1c4a" category="list-text">RAWディスクフォーマット</block>
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS以外のストレージプールタイプ（NetFSのみがサポートされます）</block>
-  <block id="43250e477f245ad8251ae2cf9a6044b5" category="doc">Oracle ワークロード向けNetApp Backup and Recoveryの既知の制限</block>
-  <block id="d905e8ea866675c3cf4643035604b776" category="paragraph">NetApp Backup and Recoveryの Oracle Database ワークロードのプライベート プレビュー バージョンでは、次のアクションはサポートされていません。</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">オフライン バックアップ</block>
-  <block id="ff24590464659ee8cdec688128c35f89" category="list-text">クローン</block>
-  <block id="2f42226f79de76630de2401fec50f917" category="list-text">ASM構成</block>
-  <block id="79df96f2a2c49c67db8b8abedacd66da" category="list-text">SANに保存されたデータベースの保護</block>
-  <block id="ed1c3b4d6aee5defa8827a5cd00e2e81" category="paragraph">Oracle Database は、Oracle ワークロードのプライベート プレビュー バージョンでは、NFS を使用したスタンドアロン デプロイメントとしてのみサポートされます。</block>
-  <block id="3af84d3004e466ae586915e19ffb662b" category="summary">NetApp Backup and Recoveryサービスを使用するには、まずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。</block>
   <block id="11750133b5aeccdb05ec0c5b1027ace4" category="doc">VMware ワークロード向けNetApp Backup and Recoveryの既知の制限</block>
   <block id="bd24e6cbfe24fff0710652a52a0736b5" category="paragraph">NetApp Backup and Recoveryの VMware ワークロードのプレビュー バージョンでは、次のアクションはサポートされていません。</block>
   <block id="eace16d66cdd93ad876c620db7456077" category="list-text">マウント</block>
@@ -669,10 +660,8 @@
   <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">*Kubernetes* ワークロード タイプを選択します。</block>
   <block id="96c35fcba67cbf6710845bcca4668cc2" category="list-text">クラスター名を入力し、クラスターで使用するコネクタを選択します。</block>
   <block id="39b0136210d9abd099b81781cc0a17db" category="list-text">表示されるコマンド ラインの指示に従います。</block>
-  <block id="3b47301a2201ba1175e2a109a103127b" category="list-text">Trident保護名前空間を作成する</block>
   <block id="ed6eabebedff09350cdabab556887c62" category="list-text">Kubernetesシークレットを作成する</block>
   <block id="6c27e11d1144953d7877449d5adc966d" category="list-text">Helmリポジトリを追加する</block>
-  <block id="c1a343fd7e28cea1253758e1b64a4d0d" category="list-text">TridentプロテクトとTridentプロテクトコネクタを取り付ける</block>
   <block id="efa5307bfad4cbe53b6ae3c88baa522e" category="paragraph">これらの手順により、 NetApp Backup and Recovery がクラスターと対話できるようになります。</block>
   <block id="9bac5e7d53677c1fdcf7d275fd58ed60" category="list-text">手順を完了したら、[*検出*] を選択します。</block>
   <block id="6b3946603d5588826f1cd3f2695b8542" category="paragraph">クラスターがインベントリに追加されます。</block>
@@ -686,7 +675,6 @@
   <block id="acaaf9de0e4071fe117da04dbbe9565d" category="list-text">KVM タイルで、[検出と管理] を選択します。</block>
   <block id="12d8eeba7e97739f6035cbec50bd2369" category="list-text">*ワークロード タイプ*: *KVM* を選択します。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM ワークロードは、インベントリ ページのワークロード リストに表示されます。</block>
-  <block id="0a6dc8ac33152480a18098d8eb98ccb6" category="doc">NetApp Backup and Recoveryで Oracle ワークロードを発見</block>
   <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery、まず Oracle データベースを検出して保護する必要があります。</block>
   <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">Oracleホストを追加してリソースを検出する</block>
   <block id="8160dc72c9473d18119ea3e52fe65572" category="paragraph">Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロードを検出できるようにします。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。</block>
@@ -832,8 +820,6 @@
   <block id="8eec52ebd7892b36424f0c784c1a70dc" category="list-text">VMwareワークロードについては、<block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block> 。</block>
   <block id="cbc99816ef9ba154c39b76f904359040" category="inline-link-macro">KVMワークロードを発見</block>
   <block id="f8e001546fd93d61022ff713e03298f8" category="list-text">KVMワークロードについては、<block ref="6343f6c391fb966ad325d76211a59524" category="inline-link-macro-rx"></block> 。</block>
-  <block id="73e8c7525f434c946114ba1e9477bb6e" category="inline-link-macro">Oracleワークロードを発見</block>
-  <block id="76b4ef756320e6f6ca5d1c225439f7f5" category="list-text">Oracleワークロードについては、以下を参照してください。<block ref="0ef9d15a5323698b079164a26f451715" category="inline-link-macro-rx"></block> 。</block>
   <block id="8ea9fd29df4eb58092d8258c6ccf3ad8" category="inline-link-macro">Hyper-V ワークロードの検出</block>
   <block id="3b97616ae538f454d8812a77c84392d1" category="list-text">Hyper-Vワークロードについては、以下を参照してください。<block ref="e853aa4eb98908dd4b95a8cc80d9972f" category="inline-link-macro-rx"></block> 。</block>
   <block id="e5dd8794e7e239a004607625309c03bb" category="list-text">Kubernetesワークロードについては、以下を参照してください。<block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block> 。</block>
@@ -1491,15 +1477,11 @@
   <block id="f467c6231a57911e62401cfb0159d95b" category="paragraph">「復元」ページから復元する場合と同じ 3 つのオプションが表示されます。</block>
   <block id="3cc2b93a80a97a7cacb8c0d4f5da6c20" category="list-text">特定の時点に復元する</block>
   <block id="d25e9ce84a1050d163d601d4bd2fa073" category="list-text">復元ページから復元オプションについて同じ手順を続行します。</block>
-  <block id="7b588dfa65a0573a51e5ab0e2d3023e9" category="summary">NetApp のバックアップとリカバリを使用して Oracle ワークロードを保護します。</block>
-  <block id="2fb29b6c97ac2109b4c3d3537ae25b9d" category="inline-link-macro">NetApp Backup and Recoveryを使用して Oracle ワークロードの保護グループを作成および管理します</block>
-  <block id="02cdaf324b33a661330ff286d04c61aa" category="list-text">保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見る<block ref="c9c15450fe1a04e77c0be05f7471779a" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="5a232101cd6b911084269b39726e0f05" category="list-text">保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。</block>
   <block id="99a4d620d348de03a46767ad6dd1a27c" category="list-text">今すぐデータベースをバックアップします。</block>
   <block id="0e3dfc8aecedae71e6c1e03c52c544ec" category="section-title">オンデマンドバックアップで今すぐデータベースをバックアップ</block>
   <block id="4875f551855c5d20449df9a7a54edc8a" category="paragraph">単一のデータベースのオンデマンド バックアップを実行できます。</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">バックアップするデータベースを選択します。</block>
-  <block id="630481ffe08dcea3b2119a33662f9d29" category="summary">NetApp Backup and Recoveryを使用して Oracle ワークロードを保護します。</block>
   <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">NetApp Backup and Recoveryを使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする</block>
   <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">リカバリ操作を実行するために制御された状態でデータベースにアクセスする必要がある場合は、Oracle データベースのリカバリ ポイントをマウントすることをお勧めします。</block>
   <block id="079a3f8ec0bb95d8f0ae5d36f04de7c4" category="section-title">Oracle データベースの復元ポイントをマウントする</block>
@@ -1523,18 +1505,7 @@
   <block id="504b4d4156c8604edbbda8b908e689cf" category="list-text">*アンマウント*を選択してアクションを確認します。</block>
   <block id="bb205d6469d1d38895fc74e5fe58b024" category="summary">オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Oracle 仮想マシンを保護して、データを確実に保護できます。</block>
   <block id="3e4addf457cac6e6f2f337996275bb1f" category="doc">Oracle Databaseワークロードの保護の概要</block>
-  <block id="e58749f44abd3f2817fad6c2ae87fb45" category="paragraph">NetApp Backup and Recoveryを使用すると、Oracle ワークロードに関連する次のタスクを実行できます。</block>
-  <block id="0ef9d15a5323698b079164a26f451715" category="list-text"><block ref="0ef9d15a5323698b079164a26f451715" category="inline-link-macro-rx"></block></block>
-  <block id="f7f66fefaac908c86a635d80ae33c9ef" category="inline-link-macro">Oracle ワークロードの保護グループの作成と管理</block>
-  <block id="f647111ef4b009cd2203e0e63adc9ed6" category="list-text"><block ref="f647111ef4b009cd2203e0e63adc9ed6" category="inline-link-macro-rx"></block></block>
-  <block id="4480911dc79312ba167f517766049321" category="inline-link-macro">Oracleワークロードのバックアップ</block>
-  <block id="e7a6be28bd48e7e2231639888ee15d80" category="list-text"><block ref="e7a6be28bd48e7e2231639888ee15d80" category="inline-link-macro-rx"></block></block>
-  <block id="9a5fb46f313add6fc79aea102dcbaeb7" category="inline-link-macro">Oracleワークロードの復元</block>
-  <block id="1cb9d10dd89115a71445adf4d5cf89fd" category="list-text"><block ref="1cb9d10dd89115a71445adf4d5cf89fd" category="inline-link-macro-rx"></block></block>
-  <block id="3fa704a0aa0f3e1205c4156e0affab68" category="summary">NetApp Backup and Recoveryで Oracle ワークロードの保護グループを作成および管理します。</block>
   <block id="e935651dcc727466a56b42d180db281c" category="paragraph">保護グループを作成して、Oracle Database リソース セットのバックアップ操作を管理します。保護グループとは、まとめて保護するデータベースなどのリソースの論理的なグループです。  Oracle データベースをバックアップするには、保護グループを作成する必要があります。</block>
-  <block id="30549a9efedf2c08f7e3c1070d0ec4a4" category="inline-link-macro">Oracleワークロードを今すぐバックアップ</block>
-  <block id="9d2eb7298d6b079511014afa9fcf74b8" category="list-text">今すぐ保護グループをバックアップします。見る<block ref="6391799ae7a331a8ab5f8579820481db" category="inline-link-macro-rx"></block>。</block>
   <block id="4d11952e83e906d7c1c3bb7b8d814881" category="doc">NetApp Backup and RecoveryでOracleデータベースを復元する</block>
   <block id="79f77d8cbb1beb81481eb9b45d453a34" category="paragraph">異なる開始場所からデータベースを復元できます。</block>
   <block id="d69f96cdc13d3a1e25929628b856adfc" category="section-title">Oracleデータベースの復元の仕組み</block>
@@ -1569,7 +1540,6 @@
   <block id="a4aa2f0da5fe920e49b4efa7582a1089" category="list-text">スクリプトのタイムアウト値を選択します。この期間内にスクリプトの実行に失敗した場合、復元は続行されます。</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*Postscript*: 必要に応じて、このオプションを有効にし、復元操作後に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
   <block id="f8b53e55e8c6663dd48cecfd73eac0aa" category="list-text">*リカバリ後にデータベースまたはコンテナ データベースを読み取り/書き込みモードで開きます*: 復元操作が完了すると、バックアップとリカバリによってデータベースの読み取り/書き込みモードが有効になります。</block>
-  <block id="edbf5d4d98db112afa4f80b2be7e4681" category="paragraph">Oracle ワークロード プレビューでは使用できません。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
   <block id="94b302da41c06e07da50582e09e11a6f" category="doc">NetApp Backup and Recoveryでバックアップを管理するポリシーを作成および管理します</block>
   <block id="014eafc4485f15b25db30025cd8b8df2" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
@@ -1586,7 +1556,6 @@
   <block id="b7e23f2fbc84fffbedf563f644b8df93" category="section-title">ポリシーを表示</block>
   <block id="9a23580d7344d92df6d39880be8984ee" category="list-text">NetApp Backup and Recoveryメニューから、*ポリシー* を選択します。</block>
   <block id="1acb02454e9197d4580e47cc314bafcc" category="list-text">これらのポリシーの詳細を確認してください。</block>
-  <block id="6c3c2610bdd335f75a90c7ddab40a182" category="list-text">*ワークロード*: 例としては、Microsoft SQL Server、ボリューム、VMware、KVM、Hyper-V、Kubernetes などがあります。</block>
   <block id="c0d97b31eeb845274929b3f74cfce135" category="list-text">*バックアップの種類*: 例としては、完全バックアップやログ バックアップなどがあります。</block>
   <block id="eacf7361c754b5087b6ade2e010c1a1f" category="list-text">*アーキテクチャ*: 例としては、ローカル スナップショット、ファンアウト、カスケード、ディスク間、ディスクからオブジェクト ストアなどがあります。</block>
   <block id="292fca252d0ac5aa32931919e05e3331" category="list-text">*保護されているリソース*: そのワークロード上のリソースの合計数のうち、保護されているリソースの数を表示します。</block>
@@ -1605,7 +1574,6 @@
   <block id="b2ba8b5a519744f308bb1fe099fca96c" category="admonition">避けるべき文字のリストについては、ホバーヒントを参照してください。</block>
   <block id="6fd5c80899312e5732b24f0d6a48f05a" category="list-text">*エージェント* リストからコンソール エージェントを選択します。</block>
   <block id="35acdaad091c35b1b0b01e1b4dfa1cae" category="list-text">*バックアップ アーキテクチャ* セクション: 下矢印を選択し、3-2-1 ファンアウト、3-2-1 カスケード、ディスク間など、バックアップのデータ フローを選択します。</block>
-  <block id="404347b12f0f61e72da6a2792d7aabdc" category="list-text">*3-2-1 ファンアウト*: プライマリ ストレージ (ディスク)、セカンダリ ストレージ (ディスク)、クラウド (オブジェクト ストア)。ONTAPからONTAP 、 ONTAPからオブジェクト ストア構成など、異なるストレージ システム間でデータの複数のコピーを作成します。これは、クラウド ハイパースケーラー オブジェクト ストアまたはプライベート オブジェクト ストア ( StorageGRID)になります。これらの構成は、最適なデータ保護と災害復旧の実現に役立ちます。</block>
   <block id="6cf0d5d70bb7be2a62ce45235fdc5421" category="admonition">このオプションは、Amazon FSx for NetApp ONTAPでは使用できません。</block>
   <block id="dd3964688f448cf4c53372241aa29860" category="paragraph">VMware ワークロードの場合、これにより、プライマリ上のデータストアまたは VM 上のローカル スナップショットが構成され、プライマリ ディスク ストレージからセカンダリ ディスク ストレージにレプリケートされるとともに、プライマリからクラウド オブジェクト ストレージにレプリケートされます。</block>
   <block id="786fc46f790a4c1a43af79907a835e9f" category="list-text">*3-2-1 カスケード*: (Kubernetes ワークロードでは使用できません) プライマリ ストレージ (ディスク) からセカンダリ ストレージ (ディスク) へ、プライマリ ストレージ (ディスク) からクラウド ストレージ (オブジェクト ストア) へ。これは、クラウド ハイパースケーラー オブジェクト ストアまたはプライベート オブジェクト ストア ( StorageGRID)になります。これにより、複数のシステムにわたるデータ複製のチェーンが作成され、冗長性と信頼性が確保されます。</block>
@@ -1724,14 +1692,6 @@
   <block id="4049c9e3b9c424f5991c5f917ad92c40" category="inline-link-macro">実行フックテンプレート</block>
   <block id="5e97a71c79e2f24deabf91daa3d20cd1" category="list-text">*プレスクリプトとポストスクリプト*領域で、バックアップ操作の前または後に実行するプレスクリプトまたはポストスクリプトの実行フックを有効にして構成します。プレスクリプトまたはポストスクリプトを有効にするには、少なくとも1つ作成しておく必要があります。<block ref="3059f3d40a47ddab4d322199b8601d95" category="inline-link-macro-rx"></block> 。</block>
   <block id="9f77aac915c7dddb04d022bff72e881d" category="paragraph">アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetApp Consoleは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。</block>
-  <block id="d34e75e1972332b08f5260e29a3eb456" category="section-title">既存のKubernetesアプリケーションを保護する</block>
-  <block id="bcd7e935fe0f91f433516ff86415dcd4" category="paragraph">すでに追加した Kubernetes アプリケーションで保護ポリシーを有効にします。</block>
-  <block id="104d1a34e290d2de5a494845fa1be7b8" category="list-text">アプリケーションのリストで、保護するアプリケーションを選択し、関連する [アクション] メニューを選択します。</block>
-  <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">*保護*を選択します。</block>
-  <block id="f58eabeb108df6c5973f0ece276c562f" category="list-text">*ポリシー* 領域で、アプリケーションを保護するための既存の保護ポリシーを選択するか、新しいポリシーを作成します。参照<block ref="3739f9f9696bd133d77df1c4736a8480" category="inline-link-macro-rx"></block>保護ポリシーの作成の詳細については、こちらをご覧ください。</block>
-  <block id="6eeabb5a1fdc64db00294aa16e2efc65" category="list-text">*プレスクリプトとポストスクリプト*領域で、バックアップ操作の前または後に実行するプレスクリプトまたはポストスクリプトの実行フックを有効にして構成します。実行フックのタイプ、使用するテンプレート、引数、ラベルセレクターを構成できます。</block>
-  <block id="1c5ac4940b53e1922d936ca78379e63f" category="paragraph">コンソールは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。アプリケーションの保護を有効にするとすぐに、コンソールはアプリケーションの完全バックアップを作成します。その後の増分バックアップは、アプリケーションに関連付けられた保護ポリシーで定義されたスケジュールに基づいて作成されます。</block>
-  <block id="53932eb694521eb34987ea9c43f0a292" category="section-title">Kubernetesアプリケーションを今すぐバックアップ</block>
   <block id="4b6c3c6a317300967177891eec6ba8fd" category="paragraph">将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。</block>
   <block id="ef4da1dbc592e89fff8af00102b37ff3" category="list-text">アプリケーションのリストで、バックアップするアプリケーションを選択し、関連する [アクション] メニューを選択します。</block>
   <block id="46b6ecff43461a732d3eda912df73a42" category="list-text">*今すぐバックアップ*を選択します。</block>
@@ -1906,12 +1866,9 @@
   <block id="492fd59c461c682062524e7444f188c1" category="list-text">*Hyper-V ワークロード (プレビュー)*:</block>
   <block id="bcd52013d4bab273c97ec6049c73eb19" category="inline-link-macro">Hyper-V ワークロードを保護する</block>
   <block id="6a88dd8d1df81c216e94864f62adb181" category="list-text">参照<block ref="5ad55f158503485706ea0446a924f3eb" category="inline-link-macro-rx"></block>。</block>
-  <block id="543cf4a1253e720b7d0efccfee564ef5" category="list-text">*Oracle ワークロード (プレビュー)*:</block>
   <block id="9ccb39720e55d973803af308a46b7f9d" category="list-text">データベースとログのバックアップと復元</block>
   <block id="b9f9fe4773f2a73086e819aa78413e31" category="list-text">データベースとログのバックアップを管理するためのポリシーを作成する</block>
   <block id="1aced3c59920e62aa237af558421e7bc" category="list-text">3-2-1バックアップアーキテクチャによるデータベースの保護</block>
-  <block id="a0150835683a46b302509d38f9c83e9f" category="inline-link-macro">Oracleワークロードを保護する</block>
-  <block id="f09a108fc13868756069afcfa8a6c090" category="list-text">参照<block ref="5b41776fecc34d5acf699b1f80f8e0f5" category="inline-link-macro-rx"></block>。</block>
   <block id="3066f1ebade966cf5d09fd225d9c82df" category="list-text">*Kubernetes ワークロード (プレビュー)*:</block>
   <block id="1c1c6b4c5003945f6d28242d24286ee6" category="list-text">Kubernetes アプリケーションとリソースをすべて 1 か所で管理および保護します。</block>
   <block id="3f06fb8fe2ecccdacfaa2644488d935d" category="list-text">保護ポリシーを使用して増分バックアップを構成します。</block>
@@ -2098,7 +2055,6 @@
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">カーネルバージョン 5.14.0-503.22.1.el9_5.x86_64 (長期) 以降を実行している最新の Linux ディストリビューション</block>
   <block id="c970c11004fdd5ce2f1cc065c0a6ad6b" category="list-text">QEMU ゲストエージェント バージョン 9.0.0 以降</block>
   <block id="1264706b848dd57765cb327cb40961af" category="list-text">libvirt バージョン 10.5.0 以降</block>
-  <block id="a006e7e12c4a49555c6da7767f1640f2" category="section-title">Oracleワークロードを保護するための要件</block>
   <block id="bd1f903de615a0961eab2be934f825c0" category="paragraph">Oracle リソースを検出して保護するための特定の要件を環境が満たしていることを確認します。</block>
   <block id="7509d7baf822c07a0ff0cabeada1f21a" category="list-text">Oracle データベース:</block>
   <block id="d4e3176f0ba3c81be4e51425c09b9e73" category="list-text">Oracle 19C および 21C はスタンドアロン展開でサポートされています。</block>
@@ -2119,9 +2075,6 @@
   <block id="42113cf11e30b764619d3a98db65262d" category="list-text">Rancher Kubernetes Engine 2 (RKE2) v1.26.7+rke2r1、v1.28.5+rke2r1</block>
   <block id="3c230289b9e480de28e2d616db466bc7" category="list-text">Suseランチャー</block>
   <block id="59aaea4a07522d3cb111c0d446b7e7e3" category="list-text">NetApp Trident 24.10 以降</block>
-  <block id="f186f228bc71cb57a140bcc20f23c216" category="list-text">NetApp Trident Protect 25.07 以降 (Kubernetes ワークロード検出時にインストール)</block>
-  <block id="2c2fbc0a1685b20c95a5f489ce3868b3" category="list-text">NetApp Trident Protect Connector 25.07 以降 (Kubernetes ワークロード検出時にインストール)</block>
-  <block id="362363dccd2cc68b02c87c4b9e577f91" category="list-text">Kubernetes クラスター、 Trident保護コネクタ、およびTrident保護プロキシ間の送信方向で TCP ポート 443 がフィルタリングされていないことを確認します。</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">Hyper-V ワークロードを保護するための要件</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">Hyper-V インスタンスが仮想マシンを検出して保護するための特定の要件を満たしていることを確認します。</block>
   <block id="99fcf7547e608c33c370f1d5fe54e0a9" category="list-text">Microsoft Hyper-V 2019、2022、2025 エディション</block>
@@ -4266,7 +4219,6 @@
   <block id="460a4c33ada7a6581872d15b96a4344b" category="sidebar">VMware ワークロードを保護する（プレビュー）</block>
   <block id="6a3bb59ab6ca7e1af58c7f804a58a47c" category="sidebar">KVM ワークロードの保護（プライベート プレビュー）</block>
   <block id="d800ef02fd04e0bcce643b8bacdfd33e" category="sidebar">Hyper-V ワークロードの保護 (プライベート プレビュー)</block>
-  <block id="0b4d495603c5e5fa389805d34bdd9a7f" category="sidebar">Oracle ワークロードの保護（プライベート プレビュー）</block>
   <block id="8f12fe2d1611902de146ad61b89b8295" category="sidebar">Kubernetes ワークロードを保護する（プレビュー）</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログとコミュニティ</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
@@ -4278,7 +4230,6 @@
   <block id="fe5216e8c6ca199aaa9802985fb31c17" category="sidebar">VMware ワークロードの既知の制限</block>
   <block id="006d31cf1f539a7e450614470546345c" category="sidebar">Hyper-V ワークロードの既知の制限</block>
   <block id="c97a0e572b66db226b5bead553a18a21" category="sidebar">KVMワークロードの既知の制限</block>
-  <block id="3feb49183384fc17fa972d94a86ad3c6" category="sidebar">Oracle ワークロードの既知の制限</block>
   <block id="af63af72a4851d67644aa944a5b730df" category="sidebar">NetApp Backup and Recoveryの前提条件</block>
   <block id="ad4016cac47a83a6e1446b1b38d42180" category="sidebar">ONTAPおよびStorageGRIDのセキュリティ証明書を設定する</block>
   <block id="302152c28a081827c4d7c5eeb2372c70" category="sidebar">NetApp Backup and Recoveryの一般設定を構成する</block>
@@ -4316,7 +4267,6 @@
   <block id="9234f5bc35aa09673eacbf8fece508db" category="sidebar">仮想マシンのデータとデータストアを復元する</block>
   <block id="a6c93de7c03701dfba222e9072ffe5e7" category="sidebar">KVM ワークロードを保護する（プレビュー）</block>
   <block id="1db561ecd535caff5b4a1e7b87668d89" category="sidebar">Hyper-V ワークロードを保護する (プレビュー)</block>
-  <block id="d9f824c8f622071705d9d0322fc719f8" category="sidebar">Oracle ワークロードの保護（プレビュー）</block>
   <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">リカバリポイントのマウントとアンマウント</block>
   <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">Kubernetes ワークロードを保護する（プレビュー）</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">Kubernetes ワークロードの実行フック テンプレートを管理する</block>
@@ -4338,7 +4288,6 @@
   <block id="96804f828cf944ce68e80e74ae8d7cc0" category="list-text">SUSE Rancher Kubernetesディストリビューションのサポート</block>
   <block id="7d6928dd953d625f33fbfd89243bf778" category="paragraph">NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワークロードの検出と管理のサポートが導入されています。</block>
   <block id="d2ce5b8a55f10a315816f6647894815f" category="paragraph">実行フックは、管理された Kubernetes アプリケーションのデータ保護操作で実行されるカスタム アクションです。たとえば、実行フックを使用してスナップショットの前にデータベース トランザクションを一時停止し、スナップショット後に再開することで、アプリケーション整合性のあるスナップショットを作成します。実行フック テンプレートを作成するときは、フックの種類、実行するスクリプト、およびターゲット コンテナーのフィルターを指定します。テンプレートを使用して、実行フックをアプリケーションにリンクします。</block>
-  <block id="404af526c79edf2284a92604e83b4a45" category="paragraph">NetApp Backup and Recovery は、データ保護中に KubeVirt などのアプリケーションのファイルシステムをフリーズおよびアンフリーズします。  Trident protect ドキュメントを使用して、この動作をグローバルに、または特定のアプリケーションに対して無効にすることができます。</block>
   <block id="d77282c03df8b10c2c7ca1ca7deb9f52" category="list-text">適用可能なカスタム操作前実行フックは、適切なコンテナで実行されます。複数のカスタム事前操作フックを作成できますが、その実行順序は保証されず、構成もできません。</block>
   <block id="8ae86463dd99c66d5a9ac9fadaa7dbd9" category="list-text">NetApp Backup and Recovery は、適切なコンテナで適用可能なカスタム操作前実行フックを実行します。複数のカスタム操作後フックを作成できますが、その実行順序は保証されず、構成もできません。</block>
   <block id="fa277bc4215bc063ac5d9134fd68a383" category="paragraph">同じタイプのフックを複数作成した場合、それらの実行順序は保証されません。異なるタイプのフックは常に指定された順序で実行されます。たとえば、さまざまな種類のフックがすべて含まれる構成の実行順序は次のとおりです。</block>
@@ -4429,13 +4378,11 @@
   <block id="3d1e74249acc11e215f68c784ae29e1f" category="list-text">*復元ページから*: リソースの名前、場所、または最終有効日がわからない場合に、このオプションを使用してリソースを復元します。フィルターを使用してスナップショットを検索します。</block>
   <block id="925339af26e35afc6f5984d691aa25af" category="list-text">*インベントリ ページから*: 特定のリソースの名前、場所、最終有効日がわかっている場合は、このオプションを使用してそのリソースを復元します。リストを参照してリソースを見つけます。</block>
   <block id="bf094c6c5fccca6c427a43080edf5833" category="list-text">「データベース」メニューで、「保護」ステータスのデータベースを選択します。</block>
-  <block id="ce2efe5d519e4c1242177b404520665a" category="doc">NetApp Backup and Recoveryを使用してOracleワークロードをバックアップする</block>
   <block id="b3b9d779c6c22d1258ffcbda438336c1" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、 ONTAP S3 などのクラウド ストレージに Oracle Database 保護グループまたはデータベースをバックアップします。  NetApp Backup and Recovery は、各保護グループ内のデータベースとログ データをバックアップします。</block>
   <block id="fe390808083985de8172887380a80c5e" category="admonition">保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見る<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>手順についてはこちらをご覧ください。</block>
   <block id="26bbb7b442740e80ed850d884bef0605" category="paragraph">システムを変更する前にオンデマンド バックアップを実行して、データが保護されていることを確認します。</block>
   <block id="0dd484dd2e82385c156b95d98fd2f3fa" category="admonition">NetApp Backup and Recovery、バックアップと保護グループの両方に同じポリシーが使用されます。</block>
   <block id="b5ba243769c03b5476a2b6c06b8c5b5a" category="paragraph">データベースの保護ポリシーを構成してアーカイブ ログを保持すると、回復ポイントをマウントしてデータベースの変更履歴を表示できます。</block>
-  <block id="d038c8bfa872280d5c1a567bff169d05" category="paragraph">NetApp Backup and Recoveryを使用して Oracle データベースとログを保護します。高速で、スペース効率が高く、クラッシュ整合性とデータベース整合性を備えたバックアップと復元を実現します。 Oracle ワークロードを AWS S3、 NetApp StorageGRID、Azure Blob Storage、またはONTAP S3 にバックアップします。オンプレミスの Oracle ホストにバックアップを復元します。</block>
   <block id="21214671e7222d24ea30444729853d36" category="paragraph">保護するワークロードを保護グループにグループ化し、まとめてバックアップおよび復元します。</block>
   <block id="e1a8b67cb61fcb0e0a3b88e66f93f4cd" category="paragraph">保護グループを一時停止して、スケジュールされたバックアップを一時停止します。</block>
   <block id="2efbc86f2f62c8819af426f268c543d5" category="paragraph">保護グループを削除すると、保護グループとグループのすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除します。</block>
@@ -4765,7 +4712,6 @@
   <block id="48ddddb06a7cca979a8b0eb4de198113" category="doc">ONTAPボリュームワークロードの機能強化</block>
   <block id="cbab7e5b614b876bebcce0c29fd1afb6" category="paragraph">*複数のバケットのサポート*: (プライベート プレビュー) ONTAP 9.17.1 以降では、異なるクラウド プロバイダーにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。</block>
   <block id="695e42eb94aa8a143b557dc75e4cc65e" category="inline-link-macro">NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細</block>
-  <block id="c380d2c239579706adcab966ccded39a" category="paragraph"><block ref="040f925aac1483fc9f3f6e8bd68d3888" category="inline-link-macro-rx"></block>。</block>
   <block id="558e5aec99d772eb277c493188d3c607" category="section-title">VMwareワークロードの機能強化</block>
   <block id="d8cf45a94e57901a57764525baf2f9bf" category="paragraph">この VMware ワークロードのリリースでは、次の拡張機能が導入されています。</block>
   <block id="3b2cdba7e0b9954f4d9e79b310fdbccd" category="list-text">ゲスト OS のファイルとフォルダーを復元できるようになりました。</block>
@@ -4974,4 +4920,329 @@
   <block id="83de53928b74eea738d883969ca231fa" category="list-text">NetApp Backup and Recovery では、System Center Virtual Machine Manager（SCVMM）によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンがサポートされるようになりました。</block>
   <block id="fe3a06f4a23ebd296fcaecd751b29ac6" category="paragraph">KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。</block>
   <block id="e82f8585939ff44aeed4d4c863058cee" category="list-text">ONTAP 9.18.1 以降、MetroCluster 構成で FlexGroup ボリュームのバックアップがサポートされます。</block>
+  <block id="09b3e69fece0c8fed98cbfa4f60560d0" category="paragraph">AWS セッショントークンの有効期限が、長時間実行される s3 バックアップ処理に十分であることを確認します。バックアップ処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。</block>
+  <block id="5eb831e0d78e65bcd3dba1b12bc07037" category="inline-link">AWS API ドキュメント</block>
+  <block id="acc296a904bd0d4d976a52cfe9fe9b8c" category="list-text">現在のセッショントークンの有効期限を確認する方法の詳細については、<block ref="718365c4473e4015a2556ceb49bc6d0e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="47700faecc8b055ea48413402a7add11" category="inline-link">AWS IAM ドキュメント</block>
+  <block id="40a9530583ad3747ca30675858b0a6cd" category="list-text"><block ref="101809cc7793764f39e2d5fc223ea04c" category="inline-link-rx"></block>AWS リソースの認証情報の詳細については、こちらを参照してください。</block>
+  <block id="40a81a4873df306bd0d241dc6c5f81ba" category="admonition">ここで作成するテンプレートは、Kubernetes ワークロードを保護する場合にのみ使用できます。</block>
+  <block id="782b4a6bf31d7d564f002ed80e56a970" category="doc">データムーバータイムアウトアノテーション</block>
+  <block id="2cf4114566459ea3b3a5ac507cb86fd9" category="paragraph">バックアップおよびリストア処理中に、アノテーション<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>を使用して、データ移動処理のタイムアウトを設定できます。このアノテーションは、データムーバーが特定の処理の完了を待機してからタイムアウトするまでの最大時間（秒単位）を指定します。これは、ネットワークの問題やその他の要因によってデータ移動処理が停止する可能性がある状況で特に役立ちます。プロセス全体に一般的なタイムアウトを設定するのではなく、停止した処理を検出して処理するのに役立ちます。たとえば、ネットワークの問題によりボリュームデータのリストアが進行しない場合、指定された期間に基づいて処理がタイムアウトします。</block>
+  <block id="c2b7f24f4ddbaedb4e3d9e19f77eebac" category="paragraph">以下のように、このアノテーションを YAML ファイルで使用できます：</block>
+  <block id="14a0e26cbe187a4754f8b523ffba6073" category="paragraph">この例では、リストア処理で 2 秒以内に進行が見られない場合、アノテーションは<block ref="ec2a2895b09b6030ec8cc1b3c43ddc4d" prefix=" " category="inline-code"></block>処理を中止します。</block>
+  <block id="c49aaf233c16f1193a8d683c17866eea" category="admonition">注釈値が 0 以下の場合、操作は直ちに失敗します。</block>
+  <block id="94d4a30d9c79c7c0ed251e92efa4cf7e" category="paragraph">Trident Protectは、データ保護操作中にKubeVirt仮想マシンのファイルシステムのフリーズとアンフリーズ機能を提供し、データの整合性を確保します。VMフリーズ操作の設定方法とデフォルトの動作はTrident Protectのバージョンによって異なり、新しいリリースではHelmチャートパラメータを通じて簡素化された設定が提供されます。</block>
+  <block id="5ac5b84505fffb8149e9d0cb84ddedbe" category="admonition">復元操作中は、仮想マシン（VM）用に作成された<block ref="890b633d48ac6398f14ae722463da08b" prefix=" " category="inline-code"></block>は復元されません。</block>
+  <block id="d7a7411094ef8b2d0700b0d64c688766" category="example-title">Trident Protect 25.10以降</block>
+  <block id="bef8e5378f20989a496a5caac68e7dc0" category="paragraph">Trident Protectは、データ保護処理中にKubeVirtファイルシステムを自動的にフリーズおよびアンフリーズして、整合性を確保します。Trident Protect 25.10以降では、Helmチャートのインストール時に<block ref="f9e1922095ec0e9e8b4f185586e66425" prefix=" " category="inline-code"></block>パラメータを使用してこの動作を無効にできます。このパラメータはデフォルトで有効になっています。</block>
+  <block id="e8ac8c64b628b92773c6f939fe2b1102" category="example-title">Trident Protect 24.10.1～25.06</block>
+  <block id="a099f4b5b32bb2a3c98bf39fd2eada0d" category="paragraph">Trident Protect 24.10.1以降、Trident Protectはデータ保護操作中にKubeVirtファイルシステムを自動的にフリーズおよびアンフリーズします。オプションで、次のコマンドを使用してこの自動動作を無効にすることができます：</block>
+  <block id="ea7f18044a9efb2ea47bdd370e5870f3" category="example-title">Trident Protect 24.10</block>
+  <block id="98d3ce5c789124fc9207b48d4d1e8fc7" category="paragraph">Trident Protect 24.10は、データ保護処理中にKubeVirt VMファイルシステムの整合性のある状態を自動的に保証するものではありません。KubeVirt VMデータをTrident Protect 24.10を使用して保護する場合は、データ保護処理の前に、ファイルシステムのフリーズ/アンフリーズ機能を手動で有効にする必要があります。これにより、ファイルシステムが整合性のある状態になることが保証されます。</block>
+  <block id="acb14ba5b70eb330a1d4de9c6b7a325d" category="inline-link-macro">仮想化の設定</block>
+  <block id="5ea5c247812e1dca5ff02ca853f05032" category="paragraph">Trident Protect 24.10を設定して、<block ref="e0dd4c4b8aa16596df6c3f5cb36d3cdc" category="inline-link-macro-rx"></block>を使用し、次のコマンドを実行することで、データ保護操作中にVMファイルシステムの凍結と解凍を管理できます：</block>
+  <block id="cedf2576eebff15fc6b30d5a7109eb6b" category="doc">リストアおよびフェイルオーバー処理中のネームスペースのアノテーションとラベル</block>
+  <block id="131ff34387be167411ffda7d60b577e7" category="paragraph">復元およびフェイルオーバー処理中に、デスティネーションネームスペースのラベルとアノテーションは、ソースネームスペースのラベルとアノテーションと一致するように作成されます。デスティネーションネームスペースに存在しないソースネームスペースのラベルまたはアノテーションが追加され、既存のラベルまたはアノテーションはソースネームスペースの値と一致するように上書きされます。デスティネーションネームスペースにのみ存在するラベルまたはアノテーションは変更されません。</block>
+  <block id="20f40e0b9308901dac07ce8a8efb3350" category="inline-link-macro">OpenShiftセキュリティコンテキスト制約ドキュメント</block>
+  <block id="80aabc2f42a52376f3d884d3b02360f4" category="admonition">Red Hat OpenShiftを使用する場合は、OpenShift環境における名前空間アノテーションの重要な役割に注意することが重要です。名前空間アノテーションにより、リストアされたポッドがOpenShiftセキュリティコンテキスト制約（SCC）で定義された適切な権限とセキュリティ設定に準拠し、権限の問題なくボリュームにアクセスできるようになります。詳細については、<block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6c83555d4261acb08ebbc5f24823dc7b" category="paragraph">リストアまたはフェイルオーバー処理を実行する前にKubernetes環境変数<block ref="1580ff61f204e9d56cd5324c7e9221ba" prefix=" " category="inline-code"></block>を設定することで、デスティネーションネームスペース内の特定のアノテーションが上書きされるのを防ぐことができます。例：</block>
+  <block id="59f713e31282fe744caf06335d891f9a" category="inline-link-macro">追加のTrident Protectヘルムチャート設定を構成する</block>
+  <block id="98b806d92f2e28da541021a181de980f" category="admonition">復元またはフェイルオーバー操作を実行する場合、<block ref="22416353aff9ef4322e1ee858f418ae4" prefix=" " category="inline-code"></block>および<block ref="8028cf835d9b72ff2d6f835934c25568" prefix=" " category="inline-code"></block>で指定されたネームスペースのアノテーションとラベルは、復元またはフェイルオーバー操作から除外されます。これらの設定がHelmの初期インストール時に構成されていることを確認してください。詳細については、<block ref="647ed99900e7ff1307ad7b7cec525a2c" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="d65eac563b898cb7e41b8853a4fe1a3c" category="paragraph">Helm を使用して<block ref="cc1f5c1d16e33b8463c9ee27295cd5df" prefix=" " category="inline-code"></block>フラグを指定してソースアプリケーションをインストールした場合、<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block>ラベルキーには特別な処理が適用されます。リストアまたはフェイルオーバープロセス中に、 Trident Protect はこのラベルをデスティネーションネームスペースにコピーしますが、ソースからの値がソースネームスペースと一致する場合は、値をデスティネーションネームスペースの値に更新します。この値がソースネームスペースと一致しない場合は、変更されずにデスティネーションネームスペースにコピーされます。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">例</block>
+  <block id="1280c48f074ec68fd2281266662c9a3f" category="paragraph">次の例は、それぞれ異なる注釈とラベルを持つソース名前空間と宛先名前空間を示しています。操作の前後の宛先名前空間の状態や、宛先名前空間で注釈とラベルがどのように結合または上書きされるかを確認できます。</block>
+  <block id="2cfe257f724ed59a07ab01918c828fb5" category="section-title">リストアまたはフェイルオーバー処理の前に</block>
+  <block id="c972cd959174c84d137520d91c011446" category="paragraph">次の表は、リストアまたはフェイルオーバー処理前のサンプルのソースネームスペースとデスティネーションネームスペースの状態を示しています：</block>
+  <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="cell">ネームスペース</block>
+  <block id="933e469cb306a0ea9faabd3e4235d3be" category="cell">アノテーション</block>
+  <block id="3ad6cb6100190c8f81e99fd52debf7ef" category="cell">ラベル</block>
+  <block id="86a2c974d76e381c7efd2206939722b7" category="cell">ネームスペースns-1（ソース）</block>
+  <block id="278dbe8403d8ebf0d4ec8f723ca24aa6" category="list-text">annotation.one/key："updatedvalue"</block>
+  <block id="7217e7166d38adddcd72b9b1c9359148" category="list-text">annotation.two/key："true"</block>
+  <block id="a03c56a353af6ece3297a5fcad5250f2" category="list-text">environment=production</block>
+  <block id="d1642f369aa9d43205cf91975f1359d4" category="list-text">コンプライアンス＝hipaa</block>
+  <block id="fc10b995e3d1c13cbae652922eba0bb6" category="list-text">name=ns-1</block>
+  <block id="58e6b4eeb688a71c985d2593769d2fda" category="cell">ネームスペースns-2（宛先）</block>
+  <block id="f0e6f2ec2d0d1aa7012e3b32889c034c" category="list-text">annotation.one/key："true"</block>
+  <block id="1e678090acf06eb2bf74c38dee9d3317" category="list-text">annotation.three/key："false"</block>
+  <block id="ebbaf450aa5330e33917a8de9157e099" category="list-text">ロール＝database</block>
+  <block id="46c40b68ab6fcc817f5134602b1985e3" category="section-title">リストア処理後</block>
+  <block id="15d6567aa33ad00e352de9164a741b8b" category="paragraph">次の表は、復元またはフェイルオーバー操作後の宛先名前空間の例の状態を示しています。いくつかのキーが追加され、いくつかは上書きされ、<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block>ラベルは宛先名前空間と一致するように更新されました：</block>
+  <block id="a8306d4d1af4239dba9a6bcfd799eba7" category="list-text">name=ns-2</block>
+  <block id="a5085953f7b15a312b4e12827abc66e5" category="list-text">（_オプション_）復元するアプリケーションの特定のリソースのみを選択する必要がある場合は、特定のラベルでマークされたリソースを含めるか除外するフィルタリングを追加します：</block>
+  <block id="2cb1c3616d5b69db8670e7040d8b858f" category="admonition">Trident Protect は、選択したリソースとの関係に基づいて、一部のリソースを自動的に選択します。たとえば、永続ボリュームクレームリソースを選択し、それに関連付けられたポッドがある場合、Trident Protect は関連付けられているポッドも復元します。</block>
+  <block id="4a0207b6a74b63dcaaa4d58fe75ec431" category="list-text">*resourceFilter.resourceSelectionCriteria*：（フィルタリングに必須）<block ref="f4d72a64acd8929c0cc9ed96a7a336cc" prefix=" " category="inline-code"></block>または<block ref="843f2812f595e7ec7c5036e89fde02d6" prefix=" " category="inline-code"></block>を使用して、resourceMatchersで定義されたリソースを含めるか除外します。含めるまたは除外するリソースを定義するには、以下のresourceMatchersパラメータを追加します：</block>
+  <block id="1eb6c79d30a4cb086ad406cb25fec350" category="list-text">*resourceFilter.resourceMatchers*：resourceMatcherオブジェクトの配列。この配列に複数の要素を定義すると、それらはOR演算として一致し、各要素内のフィールド（グループ、種類、バージョン）はAND演算として一致します。</block>
+  <block id="be16b6e14200639734fb9694e3c0f655" category="list-text">*resourceMatchers[].group*：（_オプション_）フィルタリングするリソースのグループ。</block>
+  <block id="2162d9f0c97d87c37f838ea27ecb393a" category="list-text">*resourceMatchers[].kind*：（_オプション_）フィルタリングするリソースの種類。</block>
+  <block id="862dca1a77422225d13abda4b7bf539b" category="list-text">*resourceMatchers[].version*：（_オプション_）フィルタリングするリソースのバージョン。</block>
+  <block id="f5d1dcaf86934b4541162f010db1d3e1" category="list-text">*resourceMatchers[].names*：（_オプション_）フィルタリングするリソースの Kubernetes metadata.name フィールド内の名前。</block>
+  <block id="19c69b04e9f9adb29979cc0ff90625b2" category="list-text">*resourceMatchers[].namespaces*：（_オプション_）フィルタリングするリソースの Kubernetes metadata.name フィールド内の名前空間。</block>
+  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link">Kubernetesドキュメント</block>
+  <block id="cb4354b08a6a88b3c12671390a85c520" category="list-text">*resourceMatchers[].labelSelectors*：（_オプション_）<block ref="d4ce3da8407a7d8e148bb1287288e778" category="inline-link-rx"></block>で定義されているリソースのKubernetesメタデータ.nameフィールドのラベルセレクタ文字列。例：<block ref="6ea45baf659f1f35e51c8dc9005eac03" prefix=" " category="inline-code"></block>。</block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例：</block>
+  <block id="00d3f03654bed141c3478449f1760762" category="paragraph">AWS セッショントークンの有効期限が、長時間実行される s3 復元処理に十分であることを確認します。復元処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。</block>
+  <block id="89a7d3742e536d3e468bf485545ed9fb" category="paragraph">Oracle Databaseワークロードの保護の詳細については、<block ref="dca8e6f6588b72be45d0f60d74204461" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="37c785778d2185acbba38fa4b6624392" category="paragraph"><block ref="b49343ccc7da9738bd595bd89e3d39db" category="inline-link-macro-rx"></block>.</block>
+  <block id="27f6ebf60d74cce9ba572615629e4416" category="doc">Kubernetes ワークロードの機能強化</block>
+  <block id="de8616724d177017abdd720d7365feff" category="paragraph">この Kubernetes ワークロードのリリースでは、次の拡張機能が導入されています：</block>
+  <block id="e83849cb5376223ea17f24fcaf9756e4" category="list-text">*CR ワークフローのサポート*：NetApp Backup and Recovery の Web UI だけでなく、CR を使用して一般的な保護タスクを実行できるようになりました。</block>
+  <block id="e572a091207dcc253fde964cd9d716cb" category="list-text">*クラスタの移行*：Trident Protectで保護されている既存のKubernetesクラスタをBackup and Recoveryに追加できるようになりました。</block>
+  <block id="9674b909ef82dfe8331f77d84e878c04" category="list-text">*アラートフレームワークのサポート*：特定の Kubernetes ワークロードイベントに関する E メールと UI アラートを受信できるようになりました。</block>
+  <block id="ea6aa972206a8b460e06b79e84a9211b" category="list-text">*復元タブの統合*：復元メニューから Kubernetes ワークロードの復元アクションにアクセスできるようになりました。</block>
+  <block id="bf72fb868ac644263293cb0c5ccc59c1" category="list-text">*3-2-1ファンアウトバックアップアーキテクチャのサポート*：Kubernetesワークロードを保護する際に、保護ポリシーで3-2-1ファンアウトアーキテクチャを使用できるようになりました。</block>
+  <block id="3338619eac8377287ea3a8f33c958b54" category="section-title">Oracle Databaseワークロードの機能強化</block>
+  <block id="b663bfd2f714b44e458d15bb1e6002bc" category="paragraph">このリリースの Oracle Database ワークロードでは、次の拡張機能が導入されています：</block>
+  <block id="c1cb9a739430571a50b81bf3a48a1ab8" category="list-text">*非ルートユーザーのサポート*：非ルートユーザーがバックアップ、復元、クローン操作を実行できるようになり、セキュリティとコンプライアンスが向上しました。</block>
+  <block id="2b8a690a9b9248405fb6bba05b997f16" category="list-text">*クローンのサポート*：ASM ライブラリ v2 を使用するプライマリおよびセカンダリ NAS、SAN、および ASM 環境全体でクローン機能がサポートされるようになり、調整された保護ワークフローが可能になります。</block>
+  <block id="8ff8833aaf25d3ffbe1942bc11221a77" category="list-text">*クローン分割のサポート*：書き込み可能なスナップショット（クローン）を親ボリュームから分割して、ストレージを解放し、独立した操作を行うことができるようになりました。</block>
+  <block id="de315feba3cc97f871a801444cebe8a8" category="list-text">*オブジェクトストアのバックアップとリストア*：オブジェクトベースのS3互換ストレージターゲットに対して、ネイティブのバックアップおよびリストア機能がサポートされるようになりました。</block>
+  <block id="ffb4de355aa6d4aa7e8805128e9c2860" category="list-text">*クローン ライフサイクル管理（CLM）*：クローン更新操作はプライマリ ストレージでサポートされます。</block>
+  <block id="bb34df9f9d35ad561edcc8780a11b63c" category="list-text">*代替ホストへのクローン作成*：プライマリストレージとセカンダリストレージの両方から、データベースを別のホスト（テストまたは分析用）にクローン作成できるようになりました。</block>
+  <block id="ec76c85c764d367b1028b426d5aaa897" category="list-text">*ONTAP整合性グループのサポート*：ONTAP整合性グループがサポートされるようになり、複数のボリュームにわたってアプリケーションの整合性のあるスナップショットが保証されます。</block>
+  <block id="07bac542633034a121251f74bf3c7880" category="list-text">Backup and Recovery で、 Oracle Database ワークロードの次の保護ポリシーアーキテクチャがサポートされるようになりました：</block>
+  <block id="8f8f2fbe982fd62b69f6aa2faf0d46da" category="list-text">3-2-1ファンアウト</block>
+  <block id="55cf8812c6c22803ddfa5fd41279187d" category="list-text">ディスクツーディスク</block>
+  <block id="0f6d38819f95da81f8bc80258fee7071" category="list-text">ディスクからオブジェクトストレージへ</block>
+  <block id="e3b858c29172bddae0dbb7e461b2f7df" category="list-text">カスケード</block>
+  <block id="cc5d8c9d6668803b438b03567e08b611" category="section-title">その他の機能強化</block>
+  <block id="6ec61dc6a9b7787975d159ba164424f9" category="paragraph">Hyper-Vワークロード、KVMワークロード、VMwareワークロードがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。</block>
+  <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。</block>
+  <block id="36f1a2626b3ec6834b4eb361bac96c37" category="doc">Kubernetesワークロード向けNetApp Backup and Recoveryの既知の制限事項</block>
+  <block id="36c070b302c08836d912ffb6841bb46e" category="section-title">アプリケーションの保護ポリシーの変更</block>
+  <block id="ad4e872c3df8cab19a9d649f27b25605" category="paragraph">アプリケーションに関連付けられた保護ポリシーを変更して別のバケットまたはセカンダリレプリケーションターゲットを使用する場合、保護ポリシーが失敗する可能性があります。</block>
+  <block id="c21b208a187eea104dc2c97a887a8d44" category="paragraph">*回避策*：アプリケーションを削除して再度追加します。</block>
+  <block id="bbe3b273a032bd3c8a5d28ca2ed8a114" category="section-title">3-2-1保護ポリシー設定の制限</block>
+  <block id="9f0dc4af8fb867cc1d90bc96a3df9976" category="paragraph">オブジェクトストレージのバックアップがセカンダリストレージへのレプリケーションと同時に行われない3-2-1保護ポリシーを作成すると、アプリケーションを保護するときに保護ポリシーがハングします。</block>
+  <block id="7a9541e3e0859a3bc7198878ae12b9bd" category="paragraph">*回避策*：アプリケーションを削除して再度追加し、別の保護ポリシーで保護します。</block>
+  <block id="3f21300a12c48d2767fb3e5b7f83112b" category="doc">Oracle データベース ワークロードの NetApp Backup and Recovery に関する既知の制限事項</block>
+  <block id="b295452d4036457162f0388dddf070da" category="paragraph">次のアクションは、NetApp Backup and RecoveryのOracle Databaseワークロードのプライベートプレビューバージョンではサポートされていません：</block>
+  <block id="bc757dcd5d14a5f50685dfc481e61eb9" category="paragraph">Oracle Database は、Oracle Database ワークロードのプライベートプレビューバージョンで NFS、SAN、または ASM SAN を使用したスタンドアロン デプロイメントとしてのみサポートされます。</block>
+  <block id="92342f1ac80ff519b37da9a3148cbbd9" category="summary">セキュリティを強化するために、NetApp Backup and Recovery で特定のロールのアクセスを設定してください。</block>
+  <block id="42481383ace46d9a4716cce3ab760979" category="doc">NetApp Backup and Recovery でロールベースのアクセス制御を設定</block>
+  <block id="c43786d5855026fcdf77809fb14618c9" category="paragraph">セキュリティを強化し、リソースへのアクセスを制御するには、NetApp Backup and Recoveryのロールベースアクセスを設定します。NetApp Consoleは、一部のBackup and Recoveryワークロードに対してロールベースアクセス制御（RBAC）をサポートしています。これらのワークロードに固有の管理者ロールまたは閲覧者ロールを割り当てることができます。ロールベースアクセス制御をまだサポートしていない他のワークロードは、プロジェクトレベルの関連付けがサポートされるまで、Backup and Recoveryロールを持つすべてのユーザーがアクセスできます。</block>
+  <block id="0095575f49738915ec4332a4cab3f770" category="paragraph">組織内のリソースへのアクセスを制御するには、次の手順に従います。NetApp Console メニューの *管理 &gt; ID とアクセス* ページで変更を行います。</block>
+  <block id="4ce081445a8183fac4f9d6fc6a51691e" category="admonition">これらの手順では、NetApp Consoleで組織管理者のロールが割り当てられていることを前提としています。</block>
+  <block id="c9b674f0a38b83f43d155669dc9e1dae" category="list-text">IDおよびアクセスプロジェクト構造を作成します。</block>
+  <block id="4b146c004809dfbb48c225acceabf595" category="paragraph">組織管理者として、ワークロードが存在する Identity and access フォルダーおよびプロジェクト構造を設定します。</block>
+  <block id="26564786bd7b3b623f0d304e50e4b2c4" category="list-text">ユーザーロールを割り当てます。</block>
+  <block id="bc84f44819baf4c2067c740895559760" category="list-text">主なオプション：</block>
+  <block id="5bbec3994efca5a72e64608daaa37c96" category="paragraph">ワークロード用に指定された各プロジェクトにユーザーを追加し、適切なロールを付与します。例：</block>
+  <block id="a69e66fc51befba55c7c820be12ca0f1" category="list-text">*組織管理者* および *Backup and Recovery スーパー管理者*：これらのロールを持つユーザーは、すべての組織内のすべてのリソースを表示し、Backup and Recovery ワークロードを検出してプロジェクト（米国東部や米国西部など）に割り当てることができます。</block>
+  <block id="44ed33b9e7e797c038285a37d20e899a" category="list-text">*フォルダーまたはプロジェクト管理者* および *NetApp Backup and Recovery スーパー管理者*：これらのロールを持つユーザーは、権限を持つフォルダーまたはプロジェクト内のリソースのみを表示できますが、NetApp Backup and Recovery のワークロードを検出し、そのプロジェクトに割り当てることができます。</block>
+  <block id="67703f80cd44bf597b333f1cc2a34901" category="list-text">代替オプション：</block>
+  <block id="6d2d1e1d6a9a3cf3960bdb349373c649" category="paragraph">ユーザーに完全な NetApp Backup and Recovery の管理者アクセス権を付与する代わりに、自分自身に NetApp Backup and Recovery のスーパー管理者ロールを割り当てて、ワークロードを直接検出することができます。</block>
+  <block id="da57866549888e8bceaf30a4db33bfc5" category="list-text">Backup and Recoveryでワークロードを検出します。</block>
+  <block id="63e4e660d97fd26bbffa7cb3968c22c4" category="paragraph">組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（US East や US West など）を選択します。各ワークロードは、選択したプロジェクトに自動的に関連付けられます。</block>
+  <block id="0e8d553f80f80eac9e99c265bf9f4d72" category="list-text">プロジェクトにユーザーを追加します。</block>
+  <block id="0da282e170c520798099314d27620ed4" category="paragraph">組織管理者またはフォルダ/プロジェクト管理者は、ワークロードのあるプロジェクトにNetApp Consoleユーザーを追加します。アクセスのニーズに基づいて、ユーザーに組織閲覧者ロールとNetApp Backup and Recoveryロールを割り当てます。適切なNetApp Backup and Recoveryロールを持つユーザーは、これらのプロジェクト内の新しいワークロードへのアクセス権を自動的に取得します。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="section-title">関連情報</block>
+  <block id="728d17e7146dcd6218a24c46a1de8943" category="inline-link-macro">NetApp Console の ID とアクセス管理について説明します</block>
+  <block id="d612358528f4a89a703f161a8c3e4a9e" category="list-text"><block ref="22de56c086dedbed6837db4613efda62" category="inline-link-macro-rx"></block>.</block>
+  <block id="aedba1ff218d6d25f9aefebf5dfdff4f" category="list-text"><block ref="8432e361253dad22d74ca5fd3ad3c136" category="inline-link-macro-rx"></block>.</block>
+  <block id="509c51772921c8ab860f75456880683f" category="list-text"><block ref="a16a606232229e0e62a5010aaabec2ae" category="inline-xref-macro-rx"></block>バックアップ ジョブの前後にスクリプトを実行します。（Kubernetes ワークロードのみ）</block>
+  <block id="1d74d204f5274b499e41d2e0238b7bdd" category="inline-link-macro">新しい保護ポリシーを作成する</block>
+  <block id="c7a4eea6d62999931e3442bac0f23c29" category="paragraph">現在Trident Protectで保護されているクラスタを検出すると、Trident Protectで使用されていたバックアップスケジュールは検出プロセス中に無効になります（Trident Protectのバックアップスケジュールはバックアップおよびリカバリと互換性がありません）。クラスタのアプリケーションを保護するには、<block ref="f0814d3538b9ea88d5e27855ca8d3a8e" category="inline-link-macro-rx"></block>または、アプリケーションを既存のポリシーに関連付けます。その後、必要に応じてTrident Protectのバックアップスケジュールを削除できます。</block>
+  <block id="a44ad7bb8f2123fa1919c8eb91adac29" category="list-text">Trident Protect ネームスペースを作成する</block>
+  <block id="75457b35c4c6b70a7664a43e080563ca" category="list-text">Trident Protectおよび Trident Protect コネクタのインストールまたはアップグレード</block>
+  <block id="dff3994b6daee1be81638e1c4964af92" category="doc">NetApp Backup and RecoveryでOracle Databaseワークロードを検出</block>
+  <block id="e242e6f8581d6d11d04b2c80d7a16519" category="inline-link-macro">Oracle Databaseワークロードを検出</block>
+  <block id="ec9157f5af288c671e8006da3677d9c3" category="list-text">Oracleデータベースのワークロードについては、<block ref="c9b387ac576fa007292bb17c9c97e163" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="72581b2d72c5eaf924f3612a1d930c1f" category="summary">NetApp Backup and Recovery では、カスタムリソース（CR）を使用して Kubernetes アプリケーションを手動でバックアップできます。</block>
+  <block id="81c6902865980301c496fb545daf563f" category="doc">Backup and Recoveryのカスタム リソースを使用して、Kubernetesアプリケーションを今すぐバックアップ</block>
+  <block id="98059fcd3ca40facbefb17e9841439ff" category="section-title">カスタムリソースを使用してKubernetesアプリケーションを今すぐバックアップ</block>
+  <block id="c2c21ce64dd4770c44c8642d322a5424" category="admonition">クラスタを対象としたリソースは、アプリケーション定義で明示的に参照されている場合、またはいずれかのアプリケーション名前空間への参照がある場合、バックアップ、Snapshot、またはクローンに含まれます。</block>
+  <block id="fe52ac2568977e4c3fd2c94c3daa5a5a" category="section-title">カスタムリソースを使用してローカルスナップショットを作成する</block>
+  <block id="27c1841c409fd90a4c17d9725071d73b" category="paragraph">Kubernetes アプリケーションのスナップショットを作成してローカルに保存するには、特定の属性を持つ Snapshot カスタム リソースを使用します。</block>
+  <block id="dde7632642eb239d814cdb58f6e7c1a7" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を付けます<block ref="f2a957d477f28333fe5340abcdba5f6d" prefix=" " category="inline-code"></block>。</block>
+  <block id="3585700696abe40ccc0973202ddace0a" category="list-text">作成したファイルで、次の属性を設定します：</block>
+  <block id="3dbbdf39618ebec771728a10e75c52f9" category="list-text">*metadata.name*：（_必須_）このカスタム リソースの名前。環境に合わせて一意かつ適切な名前を選択してください。</block>
+  <block id="14c5017706ef7ba38dbfced0b670f7e4" category="list-text">*spec.applicationRef*：スナップショットを作成するアプリケーションの Kubernetes 名。</block>
+  <block id="92c5bebe15e018e9b60ed9fa2a5d7736" category="list-text">*spec.appVaultRef*：（_必須_）スナップショットの内容（メタデータ）を保存するAppVaultの名前。</block>
+  <block id="a9860c462819471295facd0a13fc4275" category="list-text">*spec.reclaimPolicy*：（_オプション_）スナップショット CR が削除されたときに、スナップショットの AppArchive に対して何が起こるかを定義します。つまり、<block ref="afece4245269582cb2f1009d4fb52047" prefix=" " category="inline-code"></block>に設定されている場合でも、スナップショットは削除されます。有効なオプション：</block>
+  <block id="ff5ca6a0665c8d286d507fe36b867e1c" category="list-text"><block ref="afece4245269582cb2f1009d4fb52047" prefix="" category="inline-code"></block>（デフォルト）</block>
+  <block id="c009f85498c5a7a2db78e1874e6dd4b1" category="list-text"><block ref="f2a6c498fb90ee345d997f888fce3b18" prefix="" category="inline-code"></block></block>
+  <block id="7e1f6887e34df6926f4857dbe55cd426" category="list-text"><block ref="f2a957d477f28333fe5340abcdba5f6d" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="094b4f1f6b9b3e907c7b81b6cb1aa90b" category="section-title">カスタム リソースを使用してアプリケーションをオブジェクト ストアにバックアップする</block>
+  <block id="e66dcb518f5eed46d29f1bce6d1165b8" category="paragraph">アプリケーションをオブジェクト ストアにバックアップするには、特定の属性を持つバックアップ CR を作成します。</block>
+  <block id="b8bcd9ef37f1224eaa43c22793dbfc80" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を<block ref="3cc60d6081fbcccb7d8da4092a47553e" prefix=" " category="inline-code"></block>とします。</block>
+  <block id="888ea90f9844794ae90f13cbee8b341f" category="list-text">*spec.applicationRef*：（_必須_）バックアップするアプリケーションの Kubernetes 名。</block>
+  <block id="e2092d1675b7aaf32ee37c20adf69a32" category="list-text">*spec.appVaultRef*：（_必須、spec.appVaultTargetsRefとは相互排他_）スナップショットとバックアップの保存に同じバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。</block>
+  <block id="90acb6b1767d94f7c9ad46c817f6a296" category="list-text">*spec.appVaultTargetsRef*：（_必須、spec.appVaultRefとは相互排他_）スナップショットとバックアップを保存するために別のバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。</block>
+  <block id="c3556f7361ca71ac227ebd903de664ed" category="list-text">*spec.dataMover*：（_オプション_）バックアップ操作に使用するバックアップツールを示す文字列。値は大文字と小文字が区別され、<block ref="250c51527f347066847969f002be67a2" prefix=" " category="inline-code"></block>である必要があります。</block>
+  <block id="300fad6a76be12ae227fb48393c4df0c" category="list-text">*spec.reclaimPolicy*：（_オプション_）Backup CR が削除されたときにバックアップコンテンツ（メタデータ / ボリュームデータ）に何が起こるかを定義します。使用可能な値：</block>
+  <block id="0353a7a44a8c62ed98420560f469ae63" category="list-text">*spec.cleanupSnapshot*：（_必須_）バックアップ CR によって作成された一時スナップショットが、バックアップ処理の完了後に削除されないようにします。推奨値：<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>。</block>
+  <block id="c4c1ca05ef023287f122a753e2bf09e2" category="paragraph">同じバケットを使用してスナップショットとバックアップを保存する場合の YAML の例：</block>
+  <block id="4955d31336096d0bf7fe94f34e2ec86b" category="paragraph">スナップショットとバックアップを保存するために異なるバケットを使用する場合の YAML の例：</block>
+  <block id="49fca1eefbaadffc82d25ddcf6f70227" category="list-text"><block ref="3cc60d6081fbcccb7d8da4092a47553e" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="5ecfe1f399971241c89c85a832e8eb34" category="section-title">カスタムリソースを使用して 3-2-1 ファンアウト バックアップを作成する</block>
+  <block id="5062f68e28a097921937f2397947ef97" category="paragraph">3-2-1 ファンアウト アーキテクチャを使用してバックアップすると、バックアップがオブジェクト ストアだけでなくセカンダリ ストレージにもコピーされます。3-2-1 ファンアウト バックアップを作成するには、特定の属性を持つバックアップ CR を作成します。</block>
+  <block id="a4f79e3a595e7199f93e7fc4eee66aad" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を付けます<block ref="5d14f6fbcd2faed4273ed95afe88d782" prefix=" " category="inline-code"></block>。</block>
+  <block id="8a1eea1b8ed14b7d1a7a0f6ac5a52124" category="list-text">*spec.appVaultTargetsRef*：（_必須_）バックアップコンテンツを保存するAppVaultの名前。</block>
+  <block id="f13a97e3ca838cd3b17d6f7d093dac64" category="list-text">*spec.replicateSnapshot*：（_必須_）NetApp Backup and Recoveryにスナップショットをセカンダリストレージにレプリケートするように指示します。必要な値：<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
+  <block id="8b59df0e684df8c88e38a7fccd0b3e1c" category="list-text">*spec.replicateSnapshotReclaimPolicy*：（_オプション_）レプリケートされたSnapshotが削除されたときの動作を定義します。使用可能な値：</block>
+  <block id="139f344cca23a89c521bc7cc6c7100b8" category="paragraph">YAMLの例：</block>
+  <block id="743d24f676c4a718096faa6e2308b198" category="list-text"><block ref="5d14f6fbcd2faed4273ed95afe88d782" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="3f09cbddd61fbee1ddfdf268eb77431c" category="section-title">サポートされているバックアップアノテーション</block>
+  <block id="7f2c724042753cc2a998724f90cd367b" category="paragraph">次の表では、バックアップ CR を作成するときに使用できる注釈について説明します。</block>
+  <block id="55f6611cb342565cf0f5002400f53a95" category="cell">注釈</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">タイプ</block>
+  <block id="31ce3cdcd67850870b616f75b555bbc5" category="cell">デフォルト値</block>
+  <block id="27f412d00b6f20d8bd151bc0355eae9a" category="cell">protect.trident.netapp.io/full-backup</block>
+  <block id="b45cffe084dd3d20d928bee85e7b0f21" category="cell">string</block>
+  <block id="ff6493b4c08e9896ced760eabb2513ed" category="cell">バックアップを非増分にするかどうかを指定します。<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>に設定すると、非増分バックアップが作成されます。ベストプラクティスとしては、定期的にフル バックアップを実行し、フル バックアップの間に増分バックアップを実行して、リストアに伴うリスクを最小限に抑えることです。</block>
+  <block id="c07fbc0b2a1a865fe9e3a55c05b4f690" category="cell">"false"</block>
+  <block id="59177e9fd24a996fe7acc348af54e912" category="cell">protect.trident.netapp.io/snapshot-completion-timeout</block>
+  <block id="c464fe04226687fa8c814ba8a8690384" category="cell">スナップショット処理全体が完了するまでに許容される最大時間。</block>
+  <block id="435bbfd1496ab991e2a7530d2c7273b1" category="cell">"60m"</block>
+  <block id="a3f0891bded2c705ab3b29833481ffcf" category="cell">protect.trident.netapp.io/volume-snapshots-ready-to-use-timeout</block>
+  <block id="67c844e70c6f5fd7910ea8f4358464b6" category="cell">ボリューム スナップショットが使用可能状態になるまでに許容される最大時間。</block>
+  <block id="38986de1c1221cb10e5c108c3ad55e0e" category="cell">"30分"</block>
+  <block id="af978cfba15392673bcd27f4c22e2926" category="cell">protect.trident.netapp.io/ボリュームスナップショット作成タイムアウト</block>
+  <block id="c748817d9411064cf0b0b7cc203fc5be" category="cell">ボリューム スナップショットの作成に許可される最大時間。</block>
+  <block id="e36568406cce6542af248eed6ec657e2" category="cell">「5m」</block>
+  <block id="728633ade1403bcbcd881fc22ec19596" category="cell">protect.trident.netapp.io/pvc-bind-timeout-sec</block>
+  <block id="fc7da248a2f7c60cc6dde87d2093c48e" category="cell">新しく作成されたPersistentVolumeClaims（PVC）が<block ref="685d1f2146dd079015e81918414e8971" prefix=" " category="inline-code"></block>フェーズに到達するまで待機する最大時間（秒単位）。この時間を超えると操作は失敗します。</block>
+  <block id="d396afb1bbf01f546690ad93f3524626" category="cell">「1200」（20分）</block>
+  <block id="4255dda5f5998cbad65847ed764b4130" category="doc">Backup and Recovery Web UIを使用してKubernetesアプリケーションを今すぐバックアップ</block>
+  <block id="55ebd262da946bfda89bdb99e1367f0f" category="paragraph">NetApp Backup and Recovery を使用すると、Web インターフェースを使用して Kubernetes アプリケーションを手動でバックアップできます。</block>
+  <block id="8b9e73cb622150ff43b7f7777e74619a" category="section-title">Web UI を使用して Kubernetes アプリケーションを今すぐバックアップする</block>
+  <block id="b7d8dcf9545dd644dca99859290097ab" category="summary">注釈、名前空間設定、およびストレージ オプションを使用して、CR リストア操作をカスタマイズできます。</block>
+  <block id="a38e36651b4997072578f6107bf75c77" category="doc">高度なカスタムリソースのリストア設定を使用する</block>
+  <block id="3fbccf21ba46fe754417d45e7396e0e4" category="paragraph">注釈、名前空間設定、ストレージ オプションなどの詳細設定を使用して、特定の要件を満たすように復元操作をカスタマイズできます。</block>
+  <block id="52391deb129507aac52d6fb22aaf137c" category="section-title">サポートされているフィールド</block>
+  <block id="c87f7398b288400e3d2c984a3d997d7b" category="paragraph">このセクションでは、復元操作に使用できる追加のフィールドについて説明します。</block>
+  <block id="11162de38772a3876602bb4d9d213f43" category="section-title">ストレージクラスのマッピング</block>
+  <block id="b48c8c7ca3eb5e63afdfe6bbd74a35c9" category="paragraph"><block ref="b57d666629acffb30cc697faadc136b5" prefix=" " category="inline-code"></block>属性は、ソース アプリケーションに存在するストレージ クラスからターゲット クラスタ上の新しいストレージ クラスへのマッピングを定義します。異なるストレージ クラスを持つクラスタ間でアプリケーションを移行する場合や、BackupRestore操作のストレージ バックエンドを変更する場合にこれを使用できます。</block>
+  <block id="c26fe677a830587ef1c141567a86c86a" category="paragraph">*例：*</block>
+  <block id="ffbfa7c1456b1cb991affd8a76d54fd1" category="section-title">サポートされているアノテーション</block>
+  <block id="738d4e5947ef1239f584cd47619cf356" category="paragraph">このセクションでは、システム内のさまざまな動作を構成するためにサポートされているアノテーションを一覧表示します。ユーザーがアノテーションを明示的に設定しない場合、システムはデフォルト値を使用します。</block>
+  <block id="f49fa3f76b2a4fcdf04dff369d417d84" category="cell">protect.trident.netapp.io/data-mover-timeout-sec</block>
+  <block id="a666ad37acca2b6a0ee400d7b2acf088" category="cell">データ ムーバー処理が停止する最大時間（秒単位）。</block>
+  <block id="aff5adfa33a9913ad2ab5d578c3f08c8" category="cell">"300"</block>
+  <block id="3b2f6f0bb673ee02e8aafe624e2e971f" category="cell">protect.trident.netapp.io/kopia-content-cache-size-limit-mb</block>
+  <block id="f044e4dc5e5fdde631180451c25a973c" category="cell">Kopia コンテンツ キャッシュの最大サイズ制限（メガバイト単位）。</block>
+  <block id="9d397fb20eca1ebda087637e32a30a7b" category="cell">"1000"</block>
+  <block id="b5e51a86f312c3ccd69b085ad9c3dbe0" category="cell">新しく作成されたPersistentVolumeClaims（PVC）が<block ref="685d1f2146dd079015e81918414e8971" prefix=" " category="inline-code"></block>フェーズに到達するまで待機する最大時間（秒単位）。この時間を超えると処理は失敗します。環境：すべてのリストアCRタイプ（BackupRestore、BackupInplaceRestore、SnapshotRestore、SnapshotInplaceRestore）。ストレージバックエンドまたはクラスターで処理に時間がかかることが多い場合は、より大きい値を使用してください。</block>
+  <block id="2151f194894ed39bed85837028624418" category="paragraph">NetApp Backup and Recoveryは、データ保護中にKubeVirtなどのアプリケーションのファイルシステムをフリーズおよびアンフリーズします。Trident Protectのドキュメントを使用して、この動作をグローバルに無効にすることも、特定のアプリケーションに対して無効にすることもできます：</block>
+  <block id="3dcec4402177c92a041652b5ddf0e042" category="inline-xref">リストアポイントを削除する</block>
+  <block id="87cab9bb9101d164be91b209013585fb" category="admonition">保護操作が実行中の間は、アプリケーションの保護を解除することはできません。操作が完了するまで待つか、回避策として、実行中の保護操作が使用している<block ref="d905f53d4bafd83a40adfdb447e3be41" category="inline-xref-macro-rx"></block>を削除します。その後、アプリケーションの保護を解除できます。</block>
+  <block id="03b9ad9ea568f0b46cb903165e845c91" category="section-title">Kubernetes アプリケーションの復元ポイントを削除する</block>
+  <block id="dd9c36f28cc9f5f12040d95ba4f5de93" category="paragraph">アプリケーションの保護を解除する必要があり、現在保護操作が実行中の場合は、アプリケーションの復元ポイントを削除する必要がある場合があります。</block>
+  <block id="2b1b69f5a5491f8a48a1c6b1ab95e069" category="list-text">NetApp Backup and Recoveryメニューで、*リストア*を選択します。</block>
+  <block id="c37993406f0db941d92735ab7dd5749d" category="list-text">リストから Kubernetes アプリケーションを選択し、そのアプリケーションの * 表示と復元 * を選択します。</block>
+  <block id="be2e1ce690d729ac69efe2ac639971e5" category="list-text">削除するリカバリポイントを選択し、アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt;*リカバリポイントの削除*を選択して削除します。</block>
+  <block id="a4f1667d52f920bc11608f8119eb8eaa" category="summary">NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。</block>
+  <block id="9081ff61e0c05d14dc1b7c6045823a83" category="doc">NetApp Backup and Recoveryを使用したOracle Databaseワークロードのバックアップ</block>
+  <block id="3b395fe1694016ad90a832d1d28d54a9" category="inline-link-macro">NetApp Backup and Recoveryを使用したOracle Databaseワークロードの保護グループの作成と管理</block>
+  <block id="3c8155ed06e836b39ff46c4fa1cc3c91" category="list-text">保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。<block ref="11b8e0fbdcb5cec8e8ac558aea655522" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6fe6342988793dfab1cd728ba40b7b6d" category="summary">NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。</block>
+  <block id="172dcc67f8b871ecd3a6df9cfe1f753f" category="paragraph">NetApp Backup and Recoveryを使用してOracleデータベースとログを保護します。高速でスペース効率に優れた「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびデータベース整合性のあるバックアップとリストアを実現します。Oracle DatabaseワークロードをAWS S3、NetApp StorageGRID、Azure Blob Storage、またはONTAP S3にバックアップします。バックアップをオンプレミスのOracleホストにリストアします。</block>
+  <block id="62a3e51100215ef17a24383d5729e00e" category="paragraph">NetApp Backup and Recoveryを使用して、Oracleデータベースワークロードに関連する次のタスクを実行できます：</block>
+  <block id="c9b387ac576fa007292bb17c9c97e163" category="list-text"><block ref="c9b387ac576fa007292bb17c9c97e163" category="inline-link-macro-rx"></block></block>
+  <block id="0c455356b172e0f15e2d62ca94bfa5c6" category="inline-link-macro">Oracle Database ワークロードの保護グループの作成と管理</block>
+  <block id="ce4ef45ffb0bf8da9fa1877ae859c0e3" category="list-text"><block ref="ce4ef45ffb0bf8da9fa1877ae859c0e3" category="inline-link-macro-rx"></block></block>
+  <block id="88ed72683238588c2440ec4dd0ab3eca" category="inline-link-macro">Oracle Databaseワークロードのバックアップ</block>
+  <block id="0d34b4ba574939ced489d0243500c926" category="list-text"><block ref="0d34b4ba574939ced489d0243500c926" category="inline-link-macro-rx"></block></block>
+  <block id="7e96e8e02dab57292bff1e9f31e0c7df" category="inline-link-macro">Oracle Database ワークロードのリストア</block>
+  <block id="ce74d754b7d458e8a3f95ad96eaea826" category="list-text"><block ref="ce74d754b7d458e8a3f95ad96eaea826" category="inline-link-macro-rx"></block></block>
+  <block id="90549b69fb71fa7637e6a760ce45293c" category="summary">NetApp Backup and RecoveryでOracle Databaseワークロードの保護グループを作成および管理します。</block>
+  <block id="d07e8f6398c66f7d79a80768d3aa858b" category="inline-link-macro">Oracle Databaseのワークロードを今すぐバックアップ</block>
+  <block id="5361440c8196cc52ba89e8281bc2ef22" category="list-text">今すぐ保護グループをバックアップします。<block ref="0b07e2abdc1829709878f1d54c90a7ab" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="ecd7b1e39a181dfd260b4d2201a85373" category="paragraph">Oracle Database ワークロード プレビューでは使用できません。</block>
+  <block id="930da9bc61f880bd2f19e2938c5376f6" category="list-text">*ワークロード*：Microsoft SQL Server、ボリューム、VMware、KVM、Hyper-V、Oracle Database、Kubernetes などがあります。</block>
+  <block id="a1b57f3367efea5ba168ebc1b00dfb09" category="list-text">*3-2-1 ファンアウト*：プライマリ ストレージ（ディスク）からセカンダリ ストレージ（ディスク）、クラウド（オブジェクト ストア）へ。ONTAP から ONTAP、ONTAP からオブジェクト ストアへの構成など、異なるストレージ システム間でデータの複数のコピーを作成します。これは、クラウド ハイパースケーラー オブジェクト ストアまたはプライベート オブジェクト ストアになります。これらの構成は、最適なデータ保護と災害復旧の実現に役立ちます。</block>
+  <block id="7257ebd350ec9dc53fbb407575e942c9" category="open-title">Web UI を使用してアプリケーションを追加する</block>
+  <block id="7eb786201a1068df31c2a8d7805c50bf" category="open-title">CRを使用してアプリケーションを追加する</block>
+  <block id="b4b10aa7102ef4de9ba1d5672445c895" category="list-text">デスティネーション アプリケーションの CR ファイルを作成します：</block>
+  <block id="17131e6f435088e2e03c7280ff7da690" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を付けます（例：<block ref="52c90dc70fe5cbabbc6872aba835befa" prefix=" " category="inline-code"></block>）。</block>
+  <block id="18924d9e76d2dc9a88bddb772904461d" category="list-text">次の属性を設定します：</block>
+  <block id="3b96edf2a12486fc5d9dfaf7e692cdfc" category="list-text">*metadata.name*：（_必須_）アプリケーションのカスタム リソースの名前。保護操作に必要な他の CR ファイルはこの値を参照するため、選択した名前を書き留めておいてください。</block>
+  <block id="244fede3edf8f2ab57f281d777777961" category="list-text">*spec.includedNamespaces*：（_必須_）ネームスペースとラベルセレクタを使用して、アプリケーションが使用するネームスペースとリソースを指定します。アプリケーションネームスペースはこのリストに含まれている必要があります。ラベルセレクタはオプションであり、指定された各ネームスペース内のリソースをフィルタリングするために使用できます。</block>
+  <block id="cc8aa03bb88101c1901ab425b29a1901" category="list-text">*spec.includedClusterScopedResources*：（_オプション_）この属性を使用して、アプリケーション定義に含めるクラスタスコープのリソースを指定します。この属性を使用すると、グループ、バージョン、種類、ラベルに基づいてこれらのリソースを選択できます。</block>
+  <block id="eba6898a839f426c3106a97f94614eb9" category="list-text">*groupVersionKind*：（_必須_）クラスタースコープのリソースの API グループ、バージョン、および種類を指定します。</block>
+  <block id="8d8a8010684a930aa7760c829cad4141" category="list-text">*labelSelector*：（_オプション_）ラベルに基づいてクラスタースコープのリソースをフィルタリングします。</block>
+  <block id="5f47e505a6f61f7f97fe140353dc6594" category="list-text">必要に応じて、次のアノテーションを設定します：</block>
+  <block id="57320d49ea044bfa493c42beb1df6cfe" category="inline-link-macro">グローバル ファイルシステム フリーズ設定</block>
+  <block id="2d4560ac7467fc580503e1a2ec64edbc" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_オプション_）このアノテーションは、KubeVirt環境など、スナップショットの前にファイルシステムのフリーズが発生する仮想マシンから定義されたアプリケーションにのみ適用されます。スナップショット中にこのアプリケーションがファイルシステムに書き込むことができるかどうかを指定します。trueに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムに書き込むことができます。falseに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムがフリーズされます。指定されていても、アプリケーション定義にアプリケーションの仮想マシンがない場合、アノテーションは無視されます。指定されていない場合、アプリケーションは<block ref="a6fb49ce3deb125e56649f63b2a21282" category="inline-link-macro-rx"></block>に従います。</block>
+  <block id="8f13f2f073acc52149f6e8567d13e534" category="list-text">*protect.trident.netapp.io/protection-command*：（_オプション_）この注釈を使用して、NetApp Backup and Recoveryにアプリケーションの保護または保護の停止を指示します。指定可能な値は<block ref="124c16e5bae30d956b37ef14c9a00ab4" prefix=" " category="inline-code"></block>または<block ref="354492320803067b5a2cd287e209154d" prefix=" " category="inline-code"></block>です。</block>
+  <block id="f0d0a63fd9731679f5ea79603dba4d1f" category="list-text">*protect.trident.netapp.io/protection-policy-name*：（_オプション_）このアノテーションを使用して、このアプリケーションを保護するために使用するNetApp Backup and Recovery保護ポリシーの名前を指定します。この保護ポリシーは、NetApp Backup and Recoveryにすでに存在している必要があります。</block>
+  <block id="1fdb8b98325df025bfd256fc475c0986" category="paragraph">アプリケーションがすでに作成された後にこのアノテーションを適用する必要がある場合は、次のコマンドを使用できます：</block>
+  <block id="2508b93e69f47b3a094284dbdc9a09de" category="list-text">（_オプション_）特定のラベルでマークされたリソースを含めるか除外するかを指定するフィルタリングを追加します：</block>
+  <block id="b4d332d25d8164d8387707934254781d" category="admonition"><block ref="a25777d0a6883efb33950a7cd7a8f9b9" prefix=" " category="inline-code"></block>と<block ref="2021b5ec814a388ca04af6c6d6c2d16f" prefix=" " category="inline-code"></block>の両方が使用される場合、<block ref="a25777d0a6883efb33950a7cd7a8f9b9" prefix=" " category="inline-code"></block>が最初に実行され、次に<block ref="2021b5ec814a388ca04af6c6d6c2d16f" prefix=" " category="inline-code"></block>が結果のリソースに適用されます。</block>
+  <block id="964ba319e15e38c5b0f3ee2a3dd4a8f8" category="list-text">環境に合わせてアプリケーション CR を作成したら、CR を適用します。例：</block>
+  <block id="a23759db2139aa9e17de9cb47110d6d5" category="doc">カスタムリソースを使用した Kubernetes アプリケーションのリストア</block>
+  <block id="415a07ca472058e76674945c8c1ccdb3" category="paragraph">カスタム リソースを使用して、スナップショットまたはバックアップからアプリケーションを復元できます。アプリケーションを同じクラスタに復元する場合、既存のスナップショットからの復元の方が高速になります。</block>
+  <block id="f346d32ba5d9c332bf8577bf1bacda07" category="list-text">アプリケーションを復元すると、アプリケーションに対して設定されているすべての実行フックもアプリとともに復元されます。復元後の実行フックが存在する場合、復元操作の一部として自動的に実行されます。</block>
+  <block id="961ce5b35a999d2dc3f7e386f74eb614" category="list-text">バックアップから別の名前空間または元の名前空間への復元は、qtree ボリュームでサポートされています。ただし、スナップショットから別の名前空間または元の名前空間への復元は、qtree ボリュームではサポートされていません。</block>
+  <block id="57367d979fb9d476b127b8b1c0e64004" category="list-text">詳細設定を使用して復元操作をカスタマイズできます。詳細については、<block ref="de6b60e125121f4190b8e2b41a7ccad4" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="d46abb8b08b9cabb804a375e086762ef" category="section-title">バックアップを別の名前空間に復元する</block>
+  <block id="6b76c2e4af7a396193495c80e698179e" category="paragraph">BackupRestore CR を使用して異なる名前空間にバックアップを復元すると、NetApp Backup and Recovery はアプリケーションを新しい名前空間に復元し、復元されたアプリケーションのアプリケーション CR を作成します。復元されたアプリケーションを保護するには、オンデマンドバックアップまたはスナップショットを作成するか、保護スケジュールを確立します。</block>
+  <block id="cff063350a0daf1b0ee4c6c97eb2e2de" category="list-text">既存のリソースを含む別の名前空間にバックアップをリストアしても、バックアップ内のリソースと名前を共有するリソースは変更されません。バックアップ内のすべてのリソースをリストアするには、ターゲット名前空間を削除して再作成するか、バックアップを新しい名前空間にリストアします。</block>
+  <block id="8220f502d7a1609266e7dd4c63b34dc3" category="list-text">CR を使用して新しい名前空間に復元する場合は、CR を適用する前に、デスティネーション名前空間を手動で作成する必要があります。NetApp Backup and Recovery では、CLI を使用する場合にのみ名前空間が自動的に作成されます。</block>
+  <block id="d110d36251c4dd04b7da5ef237ac6063" category="inline-link">Kopiaのドキュメント</block>
+  <block id="3a5aee390b39f0e0c8e4c0cc152c72f6" category="admonition">Kopia をデータ ムーバーとして使用してバックアップを復元する場合、オプションで CR に注釈を指定して、Kopia が使用する一時ストレージの動作を制御できます。<block ref="08f67cdc0555f043586a8a4182d9187b" category="inline-link-rx"></block>設定できるオプションの詳細については、こちらを参照してください。</block>
+  <block id="0334c5d881452d9144d4edf93d44ff85" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を付けます<block ref="aa3356b96c40153ef83fe9854ede7a70" prefix=" " category="inline-code"></block>。</block>
+  <block id="8ebefb3e84a05b2e3bf54824870d776d" category="list-text">*spec.appArchivePath*：AppVault内でバックアップコンテンツが保存されるパス。このパスを見つけるには、次のコマンドを使用できます：</block>
+  <block id="3f1db1c30ba33e5d04499f000ed77f97" category="list-text">*spec.appVaultRef*：（_必須_）バックアップコンテンツが保存されるAppVaultの名前。</block>
+  <block id="33dc1feba43183f93ade318576611f4a" category="list-text">*spec.namespaceMapping*：リストア処理のソースネームスペースからデスティネーションネームスペースへのマッピング。<block ref="a6f7f0a873c27a67ee3194949076866b" prefix=" " category="inline-code"></block>と<block ref="2cfb071d6be7d4cf9e297100f62858fe" prefix=" " category="inline-code"></block>を環境の情報に置き換えます。</block>
+  <block id="18ad656f28db1ef6b2d76d21959ca243" category="list-text"><block ref="aa3356b96c40153ef83fe9854ede7a70" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="6d5b0033591078b013b5aae0aa8c41df" category="section-title">バックアップを元の名前空間に復元する</block>
+  <block id="7260bc412b6c22c2589f01098c1f4430" category="paragraph">いつでもバックアップを元の名前空間に復元できます。</block>
+  <block id="34653be4af07bad31b9a3775f18b1b5f" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を<block ref="59a09233aaa2a2c9e25fc46650bd6dee" prefix=" " category="inline-code"></block>とします。</block>
+  <block id="349d4c53fe9d2e740d60f7ce8094c294" category="list-text"><block ref="59a09233aaa2a2c9e25fc46650bd6dee" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="6b38457a21195fb9cff9562291b07742" category="section-title">バックアップを別のクラスタにリストアする</block>
+  <block id="7fa8874b1f645ca2af9d81b51985b8fb" category="paragraph">元のクラスタに問題がある場合は、バックアップを別のクラスタにリストアできます。</block>
+  <block id="ea67012b60407e642c3e4bbb13486738" category="list-text">CR を使用して新しいネームスペースにリストアする場合は、CR を適用する前に、デスティネーションネームスペースを手動で作成する必要があります。</block>
+  <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">次の前提条件が満たされていることを確認してください：</block>
+  <block id="e23fef665fca7137c4d6ee6b9a9ec06a" category="list-text">デスティネーション クラスタに Trident Protect がインストールされている。</block>
+  <block id="b20f8883edb9068c67a2faeb3c083d38" category="list-text">デスティネーション クラスタは、バックアップが保存されているソース クラスタと同じAppVaultのバケット パスにアクセスできます。</block>
+  <block id="2358fb4006fff416413cb9bfc04e4b73" category="list-text">AWS セッション トークンの有効期限が、長時間実行される復元操作に十分であることを確認します。復元操作中にトークンの有効期限が切れると、操作が失敗する可能性があります。</block>
+  <block id="df710f89ebb9e663bd3d66607a0bf413" category="inline-link">AWSのドキュメント</block>
+  <block id="f3aa7db516c38030a276a5895520407a" category="list-text">AWS リソースの認証情報の詳細については、<block ref="968595e57d50a64e3fbe0f06bc16cb91" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="cfb3749b52f4ce0c21dcdc3a9fce80f2" category="list-text">Trident Protect CLIプラグインを使用して、デスティネーション クラスタ上のAppVault CRの可用性を確認します：</block>
+  <block id="1ff83a5266e9e025c2984e0c10dea90e" category="admonition">アプリケーションのリストアに使用する名前空間がデスティネーション クラスタに存在することを確認します。</block>
+  <block id="8d433ae9a21c49e9e5433ebd408605c0" category="list-text">デスティネーション クラスタから利用可能なAppVaultのバックアップコンテンツを表示します：</block>
+  <block id="378e6f0ba7080535a4462b5311befb40" category="paragraph">このコマンドを実行すると、AppVault内の利用可能なバックアップが表示されます。これには、元のクラスタ、対応するアプリケーション名、タイムスタンプ、アーカイブ パスが含まれます。</block>
+  <block id="52b5830420efb96c3a91beb52bac3b23" category="paragraph">*出力例：*</block>
+  <block id="053aba80de03f3fdf626d1c858342330" category="list-text">AppVault名前とアーカイブパスを使用して、アプリケーションをデスティネーション クラスタに復元します：</block>
+  <block id="fceebbe32c1f7b24c54d6a4e8a0fa776" category="admonition">BackupRestore CR が利用できない場合は、手順 2 に記載されているコマンドを使用してバックアップの内容を表示できます。</block>
+  <block id="c4ffbcd8e0c029dda531491d6bee1c78" category="section-title">スナップショットを別のネームスペースにリストアする</block>
+  <block id="ce7cf7554a5476a82205e8d69fb3706e" category="paragraph">カスタム リソース (CR) ファイルを使用して、スナップショットからデータを別の名前空間または元のソース名前空間に復元できます。SnapshotRestore CR を使用してスナップショットを別の名前空間に復元すると、Backup and Recovery はアプリケーションを新しい名前空間に復元し、復元されたアプリケーションのアプリケーション CR を作成します。復元されたアプリケーションを保護するには、オンデマンド バックアップまたはスナップショットを作成するか、保護スケジュールを設定します。</block>
+  <block id="15910dd29963e5df5f2b5879472bcc00" category="list-text">SnapshotRestoreは<block ref="b57d666629acffb30cc697faadc136b5" prefix=" " category="inline-code"></block>属性をサポートしていますが、ソース ストレージ クラスとデスティネーション ストレージ クラスが同じストレージ バックエンドを使用する場合のみです。異なるストレージ バックエンドを使用する<block ref="e1e2a331ab1d8dccfea06fc8e04e2f5d" prefix=" " category="inline-code"></block>に復元しようとすると、復元処理は失敗します。</block>
+  <block id="a35b06511e032bee46bbed064afa12dc" category="list-text">カスタムリソース（CR）ファイルを作成し、名前を<block ref="fac6dff7f801a4983f4a536dbcbd40d7" prefix=" " category="inline-code"></block>とします。</block>
+  <block id="d2e7f59eea5f95f37b023a243745727d" category="list-text">*spec.appVaultRef*：（_必須_）スナップショットの内容が保存されるAppVaultの名前。</block>
+  <block id="ac6cdb13ccdd5d0ac3195b3301db572c" category="list-text">*spec.appArchivePath*：AppVault内のパスで、スナップショットの内容が保存される場所。このパスを見つけるには、次のコマンドを使用できます：</block>
+  <block id="bca1b1b2b1a229dc37dffa4f7012c02d" category="list-text"><block ref="fac6dff7f801a4983f4a536dbcbd40d7" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="c4c7c0b8d390ffc1225601169810e0ae" category="section-title">スナップショットを元の名前空間に復元する</block>
+  <block id="a392e5395f0751460dc460cd6ec5e89d" category="paragraph">いつでもスナップショットを元の名前空間にリストアできます。</block>
+  <block id="4d18dba9a79fbe92e2bb99f0a9300df3" category="list-text">カスタムリソース（CR）ファイルを作成し、<block ref="620b0dae36dbe6aeaae5d993f961c634" prefix=" " category="inline-code"></block>という名前を付けます。</block>
+  <block id="54625166c25afd8a6a484aaf2f346fbb" category="list-text"><block ref="620b0dae36dbe6aeaae5d993f961c634" prefix=" " category="inline-code"></block>ファイルに正しい値を入力したら、CRを適用します：</block>
+  <block id="a81b2faa73385ff60c0791d7006409d9" category="doc">Web UI を使用して Kubernetes アプリケーションをリストアする</block>
+  <block id="51621b374731a256fcdaa7e17b724680" category="paragraph">Trident Protect を使用してバックアップされたアプリケーションを復元する場合は、Trident Protect がソース クラスタとデスティネーション クラスタの両方にインストールされていることを確認してください。</block>
+  <block id="fb5dbc581e0b5b523350175d27ea83c0" category="list-text">使用する復元ポイントの*Restore*ボタンを選択します。</block>
+  <block id="98c52679a9ed385c5482f74fe44c97ae" category="list-text">復元元のソースの場所を選択します。</block>
+  <block id="d30d07971f43ce3280b143ce31154411" category="admonition">Trident Protectで作成したローカルスナップショットを別のクラスターにリストアすることは、現時点ではサポートされていません。</block>
+  <block id="6d99ca24de4c4c5c0b932cbcc18fdbbe" category="list-text">元のネームスペースに復元するか、新しいネームスペースに復元するかを選択します。</block>
+  <block id="41af3e90c2d7ebbd0ddd4e36e78220b5" category="list-text">新しいネームスペースにリストアすることを選択した場合は、使用するデスティネーションネームスペースを入力します。</block>
+  <block id="a2552d8c6714f46cdb5bfe28dbdc9b87" category="list-text">*Destination settings*セクションを展開し、デフォルトのストレージクラス、別のストレージクラスのいずれかに復元するか、別のクラスタに復元する場合は、ストレージクラスをデスティネーション クラスタにマッピングするかを選択します。</block>
+  <block id="a5e9d16a9cc07839a654d90f3a7a4b97" category="list-text">別のストレージ クラスにリストアすることを選択した場合は、各ソース ストレージ クラスに一致するデスティネーション ストレージ クラスを選択します。</block>
+  <block id="7a19603af554b25cd8b2df54b3b90a02" category="list-text">オプションで、Trident Protect を使用して作成されたバックアップまたは Snapshot をリストアする場合は、リストア処理のストレージバケットとして使用される AppVault の詳細を表示します。環境または AppVault のステータスに変更がある場合は、* App Vault を同期*を選択して詳細を更新します。</block>
+  <block id="36232457f4c28ae76f2c98b665ead40c" category="inline-link">Trident Protect AppVaultオブジェクトを使用してバケットを管理する</block>
+  <block id="8cce25f9f8aead82fb847fec859b60d7" category="admonition">Trident Protectを使用して作成されたバックアップまたはスナップショットの復元を容易にするために、Kubernetesクラスタ上にAppVaultを作成する必要がある場合は、<block ref="c0135beaf775585a3c544dba5d035e47" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="833959b645e98d6a80a20300bfd003a1" category="list-text">必要に応じて、[*復元スクリプト*] セクションを展開し、[*Postscript*] オプションを有効にして、復元操作の完了後に実行される実行フック テンプレートを選択します。必要に応じて、スクリプトに必要な引数を入力し、ラベル セレクタを追加して、リソース ラベルに基づいてリソースをフィルタします。</block>
+  <block id="ecd47ecc902c53d5808953e54e89b94f" category="list-text">*Oracle Database ワークロード（プレビュー）*：</block>
+  <block id="0e8ecb4e7677fd2e4d2af938fc466bff" category="inline-link-macro">Oracle Databaseのワークロードを保護する</block>
+  <block id="95815b21a64646ca02a4d958d053cef7" category="list-text"><block ref="840bb935154607a5be4199a217b0bf56" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="4a6440cf633ba5f9e68b3e722f3a2bdd" category="paragraph">Kubernetes ワークロードの場合、すべての永続ボリュームの合計サイズに基づいて課金されます。</block>
+  <block id="ac48592f4b6ad81597a3d86209bce635" category="section-title">Oracle Databaseワークロードを保護するための要件</block>
+  <block id="6b4dd2a26d258b058101055118ed2560" category="list-text">ホスト OS サポート：Red Hat Enterprise Linux 8 および 9</block>
+  <block id="cd992a76d620e6cac42ca61d20f93f1d" category="list-text">NetApp Trident Protect 25.07 以降（Kubernetes ワークロード検出中にインストール）</block>
+  <block id="8c703f00b817f5c9121d74efc33cdde9" category="list-text">NetApp Trident Protect Connector 25.07 以降（Kubernetes ワークロード検出時にインストール）</block>
+  <block id="5254dbe16e57a413455e2c5f7d5e70a1" category="list-text">Kubernetesクラスタ、Trident Protect Connector、およびTrident Protectプロキシ間のアウトバウンド方向でTCPポート443がフィルタリングされていないことを確認してください。</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026年2月9日</block>
+  <block id="f3effb5ce493101e0cf4cbc9e93014e1" category="sidebar">Oracle Database ワークロードの保護（プライベートプレビュー）</block>
+  <block id="e45770f83b5d2c438c00dea64c505ce7" category="sidebar">Oracle Databaseワークロードの既知の制限</block>
+  <block id="c33d3729ba9e6e1c1dd6ccc4b6c7f949" category="sidebar">Oracle Database ワークロードの保護（プレビュー）</block>
+  <block id="1e6021824e75d382885d2bb2e945f719" category="sidebar">カスタムリソースを使用してKubernetesアプリケーションを復元する</block>
 </blocks>

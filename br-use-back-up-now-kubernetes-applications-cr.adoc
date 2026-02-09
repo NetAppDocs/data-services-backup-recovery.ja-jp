@@ -1,0 +1,227 @@
+---
+sidebar: sidebar 
+permalink: br-use-back-up-now-kubernetes-applications-cr.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
+summary: NetApp Backup and Recovery では、カスタムリソース（CR）を使用して Kubernetes アプリケーションを手動でバックアップできます。 
+---
+= Backup and Recoveryのカスタム リソースを使用して、Kubernetesアプリケーションを今すぐバックアップ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery では、カスタムリソース（CR）を使用して Kubernetes アプリケーションを手動でバックアップできます。
+
+
+
+== カスタムリソースを使用してKubernetesアプリケーションを今すぐバックアップ
+
+将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。
+
+
+NOTE: クラスタを対象としたリソースは、アプリケーション定義で明示的に参照されている場合、またはいずれかのアプリケーション名前空間への参照がある場合、バックアップ、Snapshot、またはクローンに含まれます。
+
+.開始する前に
+AWS セッショントークンの有効期限が、長時間実行される s3 バックアップ処理に十分であることを確認します。バックアップ処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+
+* 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
+*  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。
+
+
+
+
+=== カスタムリソースを使用してローカルスナップショットを作成する
+
+Kubernetes アプリケーションのスナップショットを作成してローカルに保存するには、特定の属性を持つ Snapshot カスタム リソースを使用します。
+
+.手順
+. カスタムリソース（CR）ファイルを作成し、名前を付けます `local-snapshot-cr.yaml`。
+. 作成したファイルで、次の属性を設定します：
++
+** *metadata.name*：（_必須_）このカスタム リソースの名前。環境に合わせて一意かつ適切な名前を選択してください。
+** *spec.applicationRef*：スナップショットを作成するアプリケーションの Kubernetes 名。
+** *spec.appVaultRef*：（_必須_）スナップショットの内容（メタデータ）を保存するAppVaultの名前。
+** *spec.reclaimPolicy*：（_オプション_）スナップショット CR が削除されたときに、スナップショットの AppArchive に対して何が起こるかを定義します。つまり、 `Retain`に設定されている場合でも、スナップショットは削除されます。有効なオプション：
++
+*** `Retain`（デフォルト）
+*** `Delete`
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Snapshot
+metadata:
+  namespace: my-app-namespace
+  name: local-snapshot-cr
+spec:
+  applicationRef: my-application
+  appVaultRef: appvault-name
+  reclaimPolicy: Retain
+----
+
+
+
+
+.  `local-snapshot-cr.yaml`ファイルに正しい値を入力したら、CRを適用します：
++
+[source, console]
+----
+kubectl apply -f local-snapshot-cr.yaml
+----
+
+
+
+
+=== カスタム リソースを使用してアプリケーションをオブジェクト ストアにバックアップする
+
+アプリケーションをオブジェクト ストアにバックアップするには、特定の属性を持つバックアップ CR を作成します。
+
+.手順
+. カスタムリソース（CR）ファイルを作成し、名前を `object-store-backup-cr.yaml`とします。
+. 作成したファイルで、次の属性を設定します：
++
+** *metadata.name*：（_必須_）このカスタム リソースの名前。環境に合わせて一意かつ適切な名前を選択してください。
+** *spec.applicationRef*：（_必須_）バックアップするアプリケーションの Kubernetes 名。
+** *spec.appVaultRef*：（_必須、spec.appVaultTargetsRefとは相互排他_）スナップショットとバックアップの保存に同じバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。
+** *spec.appVaultTargetsRef*：（_必須、spec.appVaultRefとは相互排他_）スナップショットとバックアップを保存するために別のバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。
+** *spec.dataMover*：（_オプション_）バックアップ操作に使用するバックアップツールを示す文字列。値は大文字と小文字が区別され、 `CBS`である必要があります。
+** *spec.reclaimPolicy*：（_オプション_）Backup CR が削除されたときにバックアップコンテンツ（メタデータ / ボリュームデータ）に何が起こるかを定義します。使用可能な値：
++
+*** `Delete`
+*** `Retain`（デフォルト）
+
+
+** *spec.cleanupSnapshot*：（_必須_）バックアップ CR によって作成された一時スナップショットが、バックアップ処理の完了後に削除されないようにします。推奨値： `false`。
++
+同じバケットを使用してスナップショットとバックアップを保存する場合の YAML の例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: my-cr-name
+spec:
+  applicationRef: my-application
+  appVaultRef: appvault-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+----
++
+スナップショットとバックアップを保存するために異なるバケットを使用する場合の YAML の例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: object-store-backup-cr
+spec:
+  applicationRef: my-application
+  appVaultTargetsRef: appvault-targets-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+----
+
+
+.  `object-store-backup-cr.yaml`ファイルに正しい値を入力したら、CRを適用します：
++
+[source, console]
+----
+kubectl apply -f object-store-backup-cr.yaml
+----
+
+
+
+
+=== カスタムリソースを使用して 3-2-1 ファンアウト バックアップを作成する
+
+3-2-1 ファンアウト アーキテクチャを使用してバックアップすると、バックアップがオブジェクト ストアだけでなくセカンダリ ストレージにもコピーされます。3-2-1 ファンアウト バックアップを作成するには、特定の属性を持つバックアップ CR を作成します。
+
+.手順
+. カスタムリソース（CR）ファイルを作成し、名前を付けます `3-2-1-fanout-backup-cr.yaml`。
+. 作成したファイルで、次の属性を設定します：
++
+** *metadata.name*：（_必須_）このカスタム リソースの名前。環境に合わせて一意かつ適切な名前を選択してください。
+** *spec.applicationRef*：（_必須_）バックアップするアプリケーションの Kubernetes 名。
+** *spec.appVaultTargetsRef*：（_必須_）バックアップコンテンツを保存するAppVaultの名前。
+** *spec.dataMover*：（_オプション_）バックアップ操作に使用するバックアップツールを示す文字列。値は大文字と小文字が区別され、 `CBS`である必要があります。
+** *spec.reclaimPolicy*：（_オプション_）Backup CR が削除されたときにバックアップコンテンツ（メタデータ / ボリュームデータ）に何が起こるかを定義します。使用可能な値：
++
+*** `Delete`
+*** `Retain`（デフォルト）
+
+
+** *spec.cleanupSnapshot*：（_必須_）バックアップ CR によって作成された一時スナップショットが、バックアップ処理の完了後に削除されないようにします。推奨値： `false`。
+** *spec.replicateSnapshot*：（_必須_）NetApp Backup and Recoveryにスナップショットをセカンダリストレージにレプリケートするように指示します。必要な値： `true`。
+** *spec.replicateSnapshotReclaimPolicy*：（_オプション_）レプリケートされたSnapshotが削除されたときの動作を定義します。使用可能な値：
++
+*** `Delete`
+*** `Retain`（デフォルト）
++
+YAMLの例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: 3-2-1-fanout-backup-cr
+spec:
+  applicationRef: my-application
+  appVaultTargetsRef: appvault-targets-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+  replicateSnapshot: true
+  replicateSnapshotReclaimPolicy: Retain
+----
+
+
+
+
+.  `3-2-1-fanout-backup-cr.yaml`ファイルに正しい値を入力したら、CRを適用します：
++
+[source, console]
+----
+kubectl apply -f 3-2-1-fanout-backup-cr.yaml
+----
+
+
+
+
+== サポートされているバックアップアノテーション
+
+次の表では、バックアップ CR を作成するときに使用できる注釈について説明します。
+
+[cols="2,1,3,1"]
+|===
+| 注釈 | タイプ | 説明 | デフォルト値 
+
+
+| protect.trident.netapp.io/full-backup | string | バックアップを非増分にするかどうかを指定します。 `true`に設定すると、非増分バックアップが作成されます。ベストプラクティスとしては、定期的にフル バックアップを実行し、フル バックアップの間に増分バックアップを実行して、リストアに伴うリスクを最小限に抑えることです。 | "false" 
+
+
+| protect.trident.netapp.io/snapshot-completion-timeout | string | スナップショット処理全体が完了するまでに許容される最大時間。 | "60m" 
+
+
+| protect.trident.netapp.io/volume-snapshots-ready-to-use-timeout | string | ボリューム スナップショットが使用可能状態になるまでに許容される最大時間。 | "30分" 
+
+
+| protect.trident.netapp.io/ボリュームスナップショット作成タイムアウト | string | ボリューム スナップショットの作成に許可される最大時間。 | 「5m」 
+
+
+| protect.trident.netapp.io/pvc-bind-timeout-sec | string | 新しく作成されたPersistentVolumeClaims（PVC）が `Bound`フェーズに到達するまで待機する最大時間（秒単位）。この時間を超えると操作は失敗します。 | 「1200」（20分） 
+|===

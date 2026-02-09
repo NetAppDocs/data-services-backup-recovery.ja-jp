@@ -18,6 +18,59 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+== 2026年2月9日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+=== Kubernetes ワークロードの機能強化
+
+この Kubernetes ワークロードのリリースでは、次の拡張機能が導入されています：
+
+* *CR ワークフローのサポート*：NetApp Backup and Recovery の Web UI だけでなく、CR を使用して一般的な保護タスクを実行できるようになりました。
+* *クラスタの移行*：Trident Protectで保護されている既存のKubernetesクラスタをBackup and Recoveryに追加できるようになりました。
+* *アラートフレームワークのサポート*：特定の Kubernetes ワークロードイベントに関する E メールと UI アラートを受信できるようになりました。
+* *復元タブの統合*：復元メニューから Kubernetes ワークロードの復元アクションにアクセスできるようになりました。
+* *3-2-1ファンアウトバックアップアーキテクチャのサポート*：Kubernetesワークロードを保護する際に、保護ポリシーで3-2-1ファンアウトアーキテクチャを使用できるようになりました。
+
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+
+
+
+=== Oracle Databaseワークロードの機能強化
+
+このリリースの Oracle Database ワークロードでは、次の拡張機能が導入されています：
+
+* *非ルートユーザーのサポート*：非ルートユーザーがバックアップ、復元、クローン操作を実行できるようになり、セキュリティとコンプライアンスが向上しました。
+* *クローンのサポート*：ASM ライブラリ v2 を使用するプライマリおよびセカンダリ NAS、SAN、および ASM 環境全体でクローン機能がサポートされるようになり、調整された保護ワークフローが可能になります。
+* *クローン分割のサポート*：書き込み可能なスナップショット（クローン）を親ボリュームから分割して、ストレージを解放し、独立した操作を行うことができるようになりました。
+* *オブジェクトストアのバックアップとリストア*：オブジェクトベースのS3互換ストレージターゲットに対して、ネイティブのバックアップおよびリストア機能がサポートされるようになりました。
+* *クローン ライフサイクル管理（CLM）*：クローン更新操作はプライマリ ストレージでサポートされます。
+* *代替ホストへのクローン作成*：プライマリストレージとセカンダリストレージの両方から、データベースを別のホスト（テストまたは分析用）にクローン作成できるようになりました。
+* *ONTAP整合性グループのサポート*：ONTAP整合性グループがサポートされるようになり、複数のボリュームにわたってアプリケーションの整合性のあるスナップショットが保証されます。
+* Backup and Recovery で、 Oracle Database ワークロードの次の保護ポリシーアーキテクチャがサポートされるようになりました：
++
+** 3-2-1ファンアウト
+** ディスクツーディスク
+** ディスクからオブジェクトストレージへ
+** カスケード
+** ローカルスナップショット
+
+
+
+
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+
+
+
+=== その他の機能強化
+
+Hyper-Vワークロード、KVMワークロード、VMwareワークロードがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+
+
+
 == 2026年1月19日
 
 このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
@@ -30,7 +83,7 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 *複数のバケットのサポート*: (プライベート プレビュー) ONTAP 9.17.1 以降では、異なるクラウド プロバイダーにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。
 
-link:prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細"]。
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細"].
 
 
 
@@ -198,7 +251,7 @@ NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワー�
 * Oracleダッシュボードのサポート
 
 
-Oracle Databaseワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle ワークロードの保護の概要"] 。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
 
 
 

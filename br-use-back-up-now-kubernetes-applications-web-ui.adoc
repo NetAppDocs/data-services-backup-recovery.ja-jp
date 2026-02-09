@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: br-use-back-up-now-kubernetes-applications-web-ui.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
+summary: NetApp Backup and Recovery を使用すると、ワークロード ホスト情報、データベース情報、インスタンス情報を管理できます。インベントリの保護設定を表示、編集、削除できます。 
+---
+= Backup and Recovery Web UIを使用してKubernetesアプリケーションを今すぐバックアップ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery を使用すると、Web インターフェースを使用して Kubernetes アプリケーションを手動でバックアップできます。
+
+.必要なNetApp Consoleロール
+組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+
+
+
+== Web UI を使用して Kubernetes アプリケーションを今すぐバックアップする
+
+将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。
+
+.手順
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
+. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
+. *アプリケーション*タブを選択します。
+. アプリケーションのリストで、バックアップするアプリケーションを選択し、関連する [アクション] メニューを選択します。
+. *今すぐバックアップ*を選択します。
+. 正しいアプリケーション名が選択されていることを確認してください。
+. *バックアップ*を選択します。
+
+
+.結果
+コンソールはアプリケーションのバックアップを作成し、バックアップとリカバリの *監視* 領域に進行状況を表示します。バックアップは、アプリケーションに関連付けられた保護ポリシーに基づいて作成されます。

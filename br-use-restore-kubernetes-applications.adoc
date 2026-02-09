@@ -4,7 +4,7 @@ permalink: br-use-restore-kubernetes-applications.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。 
 ---
-= Kubernetesアプリケーションを復元する
+= Web UI を使用して Kubernetes アプリケーションをリストアする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,30 +16,32 @@ summary: NetApp Backup and Recovery を使用すると、保護ポリシーで�
 [role="lead"]
 NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。アプリケーションを復元するには、少なくとも 1 つの復元ポイントが必要です。復元ポイントは、ローカル スナップショットまたはオブジェクト ストアへのバックアップ（あるいはその両方）で構成されます。アプリケーションは、ローカル アーカイブ、セカンダリ アーカイブ、またはオブジェクト ストア アーカイブを使用して復元できます。
 
+.開始する前に
+Trident Protect を使用してバックアップされたアプリケーションを復元する場合は、Trident Protect がソース クラスタとデスティネーション クラスタの両方にインストールされていることを確認してください。
+
 .必要なNetApp Consoleロール
 組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 .手順
-. NetApp Backup and Recoveryで、*Inventory* を選択します。
-. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
-. *アプリケーション*タブを選択します。
-. アプリケーションのリストで、復元するアプリケーションを選択し、関連する [アクション] メニューを選択します。
-. *表示と復元*を選択します。
+. NetApp Backup and Recoveryメニューで、*リストア*を選択します。
+. リストから Kubernetes アプリケーションを選択し、そのアプリケーションの * 表示と復元 * を選択します。
 +
 復元ポイントのリストが表示されます。
 
-. 使用する復元ポイントの「アクション」メニューを開き、「復元」を選択します。
+. 使用する復元ポイントの*Restore*ボタンを選択します。
 
 
 [discrete]
 ===== 一般設定
 
-. 復元元のソース (ローカルまたはオブジェクト ストア) を選択します。
+. 復元元のソースの場所を選択します。
 . *クラスター* リストから宛先クラスターを選択します。
-. 復元先の名前空間を選択します。
 +
-元の名前空間に復元することも、新しい名前空間に復元することもできます。
 
+NOTE: Trident Protectで作成したローカルスナップショットを別のクラスターにリストアすることは、現時点ではサポートされていません。
+
+. 元のネームスペースに復元するか、新しいネームスペースに復元するかを選択します。
+. 新しいネームスペースにリストアすることを選択した場合は、使用するデスティネーションネームスペースを入力します。
 . *次へ*を選択します。
 
 
@@ -80,7 +82,13 @@ NOTE: 表示されるリソースは、クラスター上に現在存在する�
 [discrete]
 ===== 宛先設定
 
-. デフォルトのストレージ クラスに復元するか、別のストレージ クラスに復元するかを選択します。
-. オプションで、別のストレージ クラスに復元することを選択した場合は、各ソース ストレージ クラスに一致する宛先ストレージ クラスを選択します。
+. *Destination settings*セクションを展開し、デフォルトのストレージクラス、別のストレージクラスのいずれかに復元するか、別のクラスタに復元する場合は、ストレージクラスをデスティネーション クラスタにマッピングするかを選択します。
+. 別のストレージ クラスにリストアすることを選択した場合は、各ソース ストレージ クラスに一致するデスティネーション ストレージ クラスを選択します。
+. オプションで、Trident Protect を使用して作成されたバックアップまたは Snapshot をリストアする場合は、リストア処理のストレージバケットとして使用される AppVault の詳細を表示します。環境または AppVault のステータスに変更がある場合は、* App Vault を同期*を選択して詳細を更新します。
++
+
+NOTE: Trident Protectを使用して作成されたバックアップまたはスナップショットの復元を容易にするために、Kubernetesクラスタ上にAppVaultを作成する必要がある場合は、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-appvault-custom-resources.html["Trident Protect AppVaultオブジェクトを使用してバケットを管理する"]を参照してください。
+
+. 必要に応じて、[*復元スクリプト*] セクションを展開し、[*Postscript*] オプションを有効にして、復元操作の完了後に実行される実行フック テンプレートを選択します。必要に応じて、スクリプトに必要な引数を入力し、ラベル セレクタを追加して、リソース ラベルに基づいてリソースをフィルタします。
 . *復元*を選択します。
 

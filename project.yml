@@ -28,7 +28,7 @@ sidebar:
       url: "/br-limitations-hyperv.html"
     - title: KVMワークロードの既知の制限
       url: "/br-limitations-kvm.html"
-    - title: Oracle ワークロードの既知の制限
+    - title: Oracle Databaseワークロードの既知の制限
       url: "/br-limitations-oracle.html"
   - title: 始めましょう
     entries:
@@ -50,6 +50,8 @@ sidebar:
       url: "/br-start-switch-ui.html"
     - title: NetApp Backup and Recoveryの一般設定を構成する
       url: "/br-start-configure.html"
+    - title: NetApp Backup and Recovery でロールベースのアクセス制御を設定
+      url: "/br-rbac-setup.html"
   - title: NetApp Backup and Recoveryを使用する
     entries:
     - title: ダッシュボードで保護の状態を確認する
@@ -188,17 +190,17 @@ sidebar:
         url: "/br-use-hyperv-backup.html"
       - title: Hyper-V ワークロードを復元する
         url: "/br-use-hyperv-restore.html"
-    - title: Oracle ワークロードの保護（プレビュー）
+    - title: Oracle Database ワークロードの保護（プレビュー）
       entries:
-      - title: Oracle ワークロードの保護の概要
+      - title: Oracle Databaseワークロードの保護の概要
         url: "/br-use-oracle-protect-overview.html"
-      - title: Oracleワークロードを発見
+      - title: Oracle Databaseワークロードを検出
         url: "/br-start-discover-oracle.html"
-      - title: Oracle ワークロードの保護グループの作成と管理
+      - title: Oracle Database ワークロードの保護グループの作成と管理
         url: "/br-use-oracle-protection-groups.html"
-      - title: Oracleワークロードのバックアップ
+      - title: Oracle Databaseワークロードのバックアップ
         url: "/br-use-oracle-backup.html"
-      - title: Oracleワークロードの復元
+      - title: Oracle Database ワークロードのリストア
         url: "/br-use-oracle-restore.html"
       - title: リカバリポイントのマウントとアンマウント
         url: "/br-use-oracle-mount-unmount.html"
@@ -209,9 +211,21 @@ sidebar:
       - title: Kubernetes ワークロードを発見する
         url: "/br-start-discover-kubernetes.html"
       - title: Kubernetes アプリケーションの追加と保護
-        url: "/br-use-protect-kubernetes-applications.html"
+        entries:
+        - title: Kubernetes アプリケーションの追加と保護
+          url: "/br-use-protect-kubernetes-applications.html"
+        - title: Web UI を使用して Kubernetes アプリケーションを今すぐバックアップする
+          url: "/br-use-back-up-now-kubernetes-applications-web-ui.html"
+        - title: カスタムリソースを使用してKubernetesアプリケーションを今すぐバックアップ
+          url: "/br-use-back-up-now-kubernetes-applications-cr.html"
       - title: Kubernetesアプリケーションを復元する
-        url: "/br-use-restore-kubernetes-applications.html"
+        entries:
+        - title: Web UI を使用して Kubernetes アプリケーションをリストアする
+          url: "/br-use-restore-kubernetes-applications.html"
+        - title: カスタムリソースを使用してKubernetesアプリケーションを復元する
+          url: "/br-use-restore-kubernetes-applications-cr.html"
+        - title: 高度なカスタムリソースのリストア設定を使用する
+          url: "/br-use-kubernetes-advanced-restore-settings.html"
       - title: Kubernetes クラスターを管理する
         url: "/br-use-manage-kubernetes-clusters.html"
       - title: Kubernetes アプリケーションを管理する

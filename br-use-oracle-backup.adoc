@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: NetApp のバックアップとリカバリを使用して Oracle ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
 ---
-= NetApp Backup and Recoveryを使用してOracleワークロードをバックアップする
+= NetApp Backup and Recoveryを使用したOracle Databaseワークロードのバックアップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステ�
 
 NOTE: 保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
 
-* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。見るlink:br-use-kvm-protection-groups.html["NetApp Backup and Recoveryを使用して Oracle ワークロードの保護グループを作成および管理します"]詳細についてはこちらをご覧ください。
+* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。link:br-use-kvm-protection-groups.html["NetApp Backup and Recoveryを使用したOracle Databaseワークロードの保護グループの作成と管理"]を参照してください。
 * 保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。
 * 今すぐデータベースをバックアップします。
 

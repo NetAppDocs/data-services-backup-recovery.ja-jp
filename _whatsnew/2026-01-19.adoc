@@ -10,7 +10,7 @@
 
 *複数のバケットのサポート*: (プライベート プレビュー) ONTAP 9.17.1 以降では、異なるクラウド プロバイダーにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。
 
-link:prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細"]。
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html["NetApp Backup and Recoveryを使用したONTAPボリュームデータのバックアップの詳細"].
 
 
 

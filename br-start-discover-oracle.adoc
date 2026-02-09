@@ -4,7 +4,7 @@ permalink: br-start-discover-oracle.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
 summary: NetApp Backup and Recovery、ワークロードを保護するために、まずワークロードを検出する必要があります。 
 ---
-= NetApp Backup and Recoveryで Oracle ワークロードを発見
+= NetApp Backup and RecoveryでOracle Databaseワークロードを検出
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

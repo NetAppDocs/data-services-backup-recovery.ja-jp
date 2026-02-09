@@ -43,7 +43,7 @@ NetApp Consoleのログイン ページが表示されます。
 ** Microsoft SQL Serverのワークロードについては、以下を参照してください。link:br-start-discover.html["Microsoft SQL Server ワークロードの検出"] 。
 ** VMwareワークロードについては、link:br-use-vmware-discovery.html["VMware ワークロードを発見"] 。
 ** KVMワークロードについては、link:br-start-discover-kvm.html["KVMワークロードを発見"] 。
-** Oracleワークロードについては、以下を参照してください。link:br-start-discover-oracle.html["Oracleワークロードを発見"] 。
+** Oracleデータベースのワークロードについては、link:br-start-discover-oracle.html["Oracle Databaseワークロードを検出"]を参照してください。
 ** Hyper-Vワークロードについては、以下を参照してください。link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"] 。
 ** Kubernetesワークロードについては、以下を参照してください。link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"] 。
 

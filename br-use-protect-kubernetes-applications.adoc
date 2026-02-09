@@ -28,6 +28,10 @@ Kubernetes アプリケーションを保護するための最初のステップ
 .開始する前に
 Kubernetesアプリケーションを追加して保護する前に、link:br-start-discover.html["Kubernetesワークロードを発見する"] 。
 
+[role="tabbed-block"]
+====
+.Web UI を使用してアプリケーションを追加する
+--
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。
 . Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
@@ -58,41 +62,130 @@ NOTE: コンソールには検索パラメータや結果は保存されませ�
 .結果
 アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetApp Consoleは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。
 
-
-
-== 既存のKubernetesアプリケーションを保護する
-
-すでに追加した Kubernetes アプリケーションで保護ポリシーを有効にします。
-
+--
+.CRを使用してアプリケーションを追加する
+--
 .手順
-. NetApp Backup and Recoveryで、*Inventory* を選択します。
-. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
-. *アプリケーション*タブを選択します。
-. アプリケーションのリストで、保護するアプリケーションを選択し、関連する [アクション] メニューを選択します。
-. *保護*を選択します。
-. *ポリシー* 領域で、アプリケーションを保護するための既存の保護ポリシーを選択するか、新しいポリシーを作成します。参照link:br-use-policies-create.html#create-a-policy["ポリシーを作成します。"]保護ポリシーの作成の詳細については、こちらをご覧ください。
-. *プレスクリプトとポストスクリプト*領域で、バックアップ操作の前または後に実行するプレスクリプトまたはポストスクリプトの実行フックを有効にして構成します。実行フックのタイプ、使用するテンプレート、引数、ラベルセレクターを構成できます。
-. *完了*を選択します。
+. デスティネーション アプリケーションの CR ファイルを作成します：
++
+.. カスタムリソース（CR）ファイルを作成し、名前を付けます（例： `my-app-name.yaml`）。
+.. 次の属性を設定します：
++
+*** *metadata.name*：（_必須_）アプリケーションのカスタム リソースの名前。保護操作に必要な他の CR ファイルはこの値を参照するため、選択した名前を書き留めておいてください。
+*** *spec.includedNamespaces*：（_必須_）ネームスペースとラベルセレクタを使用して、アプリケーションが使用するネームスペースとリソースを指定します。アプリケーションネームスペースはこのリストに含まれている必要があります。ラベルセレクタはオプションであり、指定された各ネームスペース内のリソースをフィルタリングするために使用できます。
+*** *spec.includedClusterScopedResources*：（_オプション_）この属性を使用して、アプリケーション定義に含めるクラスタスコープのリソースを指定します。この属性を使用すると、グループ、バージョン、種類、ラベルに基づいてこれらのリソースを選択できます。
++
+**** *groupVersionKind*：（_必須_）クラスタースコープのリソースの API グループ、バージョン、および種類を指定します。
+**** *labelSelector*：（_オプション_）ラベルに基づいてクラスタースコープのリソースをフィルタリングします。
 
 
-.結果
-コンソールは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。アプリケーションの保護を有効にするとすぐに、コンソールはアプリケーションの完全バックアップを作成します。その後の増分バックアップは、アプリケーションに関連付けられた保護ポリシーで定義されたスケジュールに基づいて作成されます。
+
+
+.. 必要に応じて、次のアノテーションを設定します：
++
+*** *metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_オプション_）このアノテーションは、KubeVirt環境など、スナップショットの前にファイルシステムのフリーズが発生する仮想マシンから定義されたアプリケーションにのみ適用されます。スナップショット中にこのアプリケーションがファイルシステムに書き込むことができるかどうかを指定します。trueに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムに書き込むことができます。falseに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムがフリーズされます。指定されていても、アプリケーション定義にアプリケーションの仮想マシンがない場合、アノテーションは無視されます。指定されていない場合、アプリケーションはlink:trident-protect-requirements.html#protecting-data-with-kubevirt-vms["グローバル ファイルシステム フリーズ設定"]に従います。
+*** *protect.trident.netapp.io/protection-command*：（_オプション_）この注釈を使用して、NetApp Backup and Recoveryにアプリケーションの保護または保護の停止を指示します。指定可能な値は `protect`または `unprotect`です。
+*** *protect.trident.netapp.io/protection-policy-name*：（_オプション_）このアノテーションを使用して、このアプリケーションを保護するために使用するNetApp Backup and Recovery保護ポリシーの名前を指定します。この保護ポリシーは、NetApp Backup and Recoveryにすでに存在している必要があります。
++
+[NOTE]
+====
+アプリケーションがすでに作成された後にこのアノテーションを適用する必要がある場合は、次のコマンドを使用できます：
+
+[source, console]
+----
+kubectl annotate application -n <application CR namespace> <application CR name> protect.trident.netapp.io/skip-vm-freeze="true"
+----
+====
++
+YAMLの例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Application
+metadata:
+  annotations:
+    protect.trident.netapp.io/skip-vm-freeze: "false"
+    protect.trident.netapp.io/protection-command: "protect"
+    protect.trident.netapp.io/protection-policy-name: "policy-name"
+  name: my-app-name
+  namespace: my-app-namespace
+spec:
+  includedNamespaces:
+    - namespace: namespace-1
+      labelSelector:
+        matchLabels:
+          app: example-app
+    - namespace: namespace-2
+      labelSelector:
+        matchLabels:
+          app: another-example-app
+  includedClusterScopedResources:
+    - groupVersionKind:
+        group: rbac.authorization.k8s.io
+        kind: ClusterRole
+        version: v1
+      labelSelector:
+        matchLabels:
+          mylabel: test
+----
 
 
 
-== Kubernetesアプリケーションを今すぐバックアップ
 
-将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。
+. （_オプション_）特定のラベルでマークされたリソースを含めるか除外するかを指定するフィルタリングを追加します：
++
+** *resourceFilter.resourceSelectionCriteria*：（フィルタリングに必須） `Include`または `Exclude`を使用して、resourceMatchersで定義されたリソースを含めるか除外します。含めるまたは除外するリソースを定義するには、以下のresourceMatchersパラメータを追加します：
++
+*** *resourceFilter.resourceMatchers*：resourceMatcherオブジェクトの配列。この配列に複数の要素を定義すると、それらはOR演算として一致し、各要素内のフィールド（グループ、種類、バージョン）はAND演算として一致します。
++
+**** *resourceMatchers[].group*：（_オプション_）フィルタリングするリソースのグループ。
+**** *resourceMatchers[].kind*：（_オプション_）フィルタリングするリソースの種類。
+**** *resourceMatchers[].version*：（_オプション_）フィルタリングするリソースのバージョン。
+**** *resourceMatchers[].names*：（_オプション_）フィルタリングするリソースの Kubernetes metadata.name フィールド内の名前。
+**** *resourceMatchers[].namespaces*：（_オプション_）フィルタリングするリソースの Kubernetes metadata.name フィールド内の名前空間。
+**** *resourceMatchers[].labelSelectors*：（_オプション_） https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors["Kubernetesドキュメント"^]で定義されているリソースのKubernetesメタデータ.nameフィールドのラベルセレクタ文字列。例： `"trident.netapp.io/os=linux"`。
++
 
-.手順
-. NetApp Backup and Recoveryで、*Inventory* を選択します。
-. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
-. *アプリケーション*タブを選択します。
-. アプリケーションのリストで、バックアップするアプリケーションを選択し、関連する [アクション] メニューを選択します。
-. *今すぐバックアップ*を選択します。
-. 正しいアプリケーション名が選択されていることを確認してください。
-. *バックアップ*を選択します。
+NOTE:  `resourceFilter`と `labelSelector`の両方が使用される場合、 `resourceFilter`が最初に実行され、次に `labelSelector`が結果のリソースに適用されます。
+
++
+例：
+
++
+[source, yaml]
+----
+spec:
+  resourceFilter:
+    resourceSelectionCriteria: "Include"
+    resourceMatchers:
+      - group: my-resource-group-1
+        kind: my-resource-kind-1
+        version: my-resource-version-1
+        names: ["my-resource-names"]
+        namespaces: ["my-resource-namespaces"]
+        labelSelectors: ["trident.netapp.io/os=linux"]
+      - group: my-resource-group-2
+        kind: my-resource-kind-2
+        version: my-resource-version-2
+        names: ["my-resource-names"]
+        namespaces: ["my-resource-namespaces"]
+        labelSelectors: ["trident.netapp.io/os=linux"]
+----
 
 
-.結果
-コンソールはアプリケーションのバックアップを作成し、バックアップとリカバリの *監視* 領域に進行状況を表示します。バックアップは、アプリケーションに関連付けられた保護ポリシーに基づいて作成されます。
+
+
+
+
+. 環境に合わせてアプリケーション CR を作成したら、CR を適用します。例：
++
+[source, console]
+----
+kubectl apply -f my-app-name.yaml
+----
+
+
+--
+====

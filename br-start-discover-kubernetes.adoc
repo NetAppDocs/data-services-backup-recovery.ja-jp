@@ -24,6 +24,11 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 
 バックアップとリカバリのインベントリで、環境内の Kubernetes ワークロードを検出します。ワークロードを追加すると、NetApp Backup and Recoveryに Kubernetes クラスターが追加されます。その後、アプリケーションを追加し、クラスター リソースを保護できます。
 
+[NOTE]
+====
+現在Trident Protectで保護されているクラスタを検出すると、Trident Protectで使用されていたバックアップスケジュールは検出プロセス中に無効になります（Trident Protectのバックアップスケジュールはバックアップおよびリカバリと互換性がありません）。クラスタのアプリケーションを保護するには、link:br-use-policies-create.html["新しい保護ポリシーを作成する"]または、アプリケーションを既存のポリシーに関連付けます。その後、必要に応じてTrident Protectのバックアップスケジュールを削除できます。
+
+====
 .手順
 . 次のいずれかを実行します。
 +
@@ -35,10 +40,10 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 . クラスター名を入力し、クラスターで使用するコネクタを選択します。
 . 表示されるコマンド ラインの指示に従います。
 +
-** Trident保護名前空間を作成する
+** Trident Protect ネームスペースを作成する
 ** Kubernetesシークレットを作成する
 ** Helmリポジトリを追加する
-** TridentプロテクトとTridentプロテクトコネクタを取り付ける
+** Trident Protectおよび Trident Protect コネクタのインストールまたはアップグレード
 +
 これらの手順により、 NetApp Backup and Recovery がクラスターと対話できるようになります。
 
