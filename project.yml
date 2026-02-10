@@ -144,26 +144,6 @@ sidebar:
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: ゲストファイルの復元のトラブルシューティング
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
-    - title: VMware ワークロードの保護 ( SnapCenter Plug-in for VMware を使用)
-      entries:
-      - title: 仮想マシンのワークロードの保護の概要
-        url: "/prev-vmware-protect-overview.html"
-      - title: 仮想マシンのワークロードを保護するための前提条件
-        url: "/prev-vmware-prereqs.html"
-      - title: 仮想マシンのデータをバックアップするポリシーを作成する
-        url: "/prev-vmware-policy-create.html"
-      - title: データストアを Amazon Web Services にバックアップする
-        url: "/prev-vmware-backup-aws.html"
-      - title: データストアを Microsoft Azure にバックアップする
-        url: "/prev-vmware-backup-azure.html"
-      - title: データストアを Google Cloud Platform にバックアップする
-        url: "/prev-vmware-backup-gcp.html"
-      - title: データストアをStorageGRIDにバックアップする
-        url: "/prev-vmware-backup-storagegrid.html"
-      - title: データストアと仮想マシンのデータの保護を管理する
-        url: "/prev-vmware-manage.html"
-      - title: 仮想マシンのデータとデータストアを復元する
-        url: "/prev-vmware-restore.html"
     - title: KVM ワークロードを保護する（プレビュー）
       entries:
       - title: KVM ワークロードの保護の概要
