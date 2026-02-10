@@ -24,6 +24,18 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+=== 一般提供（GA）でサポートされる Microsoft Hyper-V ワークロード
+
+Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+
+
+
+=== 一般提供（GA）でサポートされる KVM ワークロード
+
+KVMワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+
+
+
 === Kubernetes ワークロードの機能強化
 
 この Kubernetes ワークロードのリリースでは、次の拡張機能が導入されています：
@@ -62,12 +74,6 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 
 
 Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
-
-
-
-=== その他の機能強化
-
-Hyper-Vワークロード、KVMワークロード、VMwareワークロードがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
 
 
 

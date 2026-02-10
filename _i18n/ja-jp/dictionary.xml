@@ -3963,17 +3963,6 @@
   <block id="2f8f18e2be23909e758abe786154b05f" category="list-text"><block ref="2f8f18e2be23909e758abe786154b05f" category="inline-link-macro-rx"></block></block>
   <block id="1f325f707555c5e4623d4ca3ed92bc14" category="inline-link-macro">VMware ワークロードの保護を管理する</block>
   <block id="6b5e78f60de50d17c6c9e6c26f183c04" category="list-text"><block ref="6b5e78f60de50d17c6c9e6c26f183c04" category="inline-link-macro-rx"></block></block>
-  <block id="450da046762e94e9e23eb94084dbc43c" category="doc">NetApp Backup and Recoveryで使用するために、 SnapCenter Plug-in for VMware vSphereを登録します。</block>
-  <block id="dbb710aaa3d97d2921c1e1444e6686e3" category="paragraph">データストアと仮想マシンを表示するには、NetApp Backup and RecoveryにSnapCenter Plug-in for VMware vSphereホストを登録する必要があります。管理アクセス権を持つユーザーのみが、SnapCenter Plug-in for VMware vSphereを登録できます。</block>
-  <block id="30ba7e7d6da357cee0df5cb67f525c81" category="list-text">* SnapCenter Plug-in for VMware vSphereの登録*を選択します。</block>
-  <block id="12f2045076b291561318e5d9855f26de" category="list-text">次の詳細を指定します。</block>
-  <block id="ebeea6bd6cc46b0c9f463f2b01659606" category="list-text">SnapCenter Plug-in for VMware vSphereフィールドで、 SnapCenter Plug-in for VMware vSphereホストの FQDN または IP アドレスを指定します。</block>
-  <block id="463d350eb6c9887e5addb9a6561a47ad" category="list-text">[ポート] フィールドで、 SnapCenter Plug-in for VMware vSphereホストが実行されているポート番号を指定します。</block>
-  <block id="618dcf671038308466415a25c2670cec" category="paragraph">デフォルトの 8144 ポートで実行されているオンプレミスの SnapCenter Plug-in for VMware vSphereと、任意のクラウド プロバイダー (Amazon Web Services、Microsoft Azure、Google Cloud Platform) またはオンプレミスで実行されている可能性のあるコンソール エージェント インスタンス間の通信が開いていることを確認する必要があります。</block>
-  <block id="eeba430c3c4e0795629fe640359a8730" category="list-text">「ユーザー名」と「パスワード」フィールドに、管理者ロールを持つ vCenter ユーザーの資格情報を指定します。</block>
-  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">*登録*を選択します。</block>
-  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*終わったら*</block>
-  <block id="b6ee3dd78c315fa7dfd1bfa66181a1c2" category="paragraph">*バックアップとリカバリ* &gt; *仮想マシン* を選択して、登録済みのSnapCenter Plug-in for VMware vSphereを使用して保護されているすべてのデータストアと仮想マシンを表示します。</block>
   <block id="4f42130e8cfb9f713223107cb029a735" category="doc">NetApp Backup and Recoveryで仮想マシンのデータを復元する</block>
   <block id="b9f7c26581cad3cbd789c6d293692814" category="admonition">データストアにまたがる仮想マシンを復元することはできません。</block>
   <block id="1c79f8653ccf267be1bce47f8ccf3d2f" category="list-text">別の場所に復元する場合:</block>
@@ -4216,9 +4205,6 @@
   <block id="4dba655852206fd33ef2ae210d0f09ea" category="sidebar">Microsoft SQL Server ワークロードのバックアップ</block>
   <block id="a86a44463f171d5cbfffdac926d2c5f7" category="sidebar">Microsoft SQL Server ワークロードを復元する</block>
   <block id="c82b8b73ed613da47a71b640f8e94c5d" category="sidebar">Microsoft SQL Server ワークロードのクローン作成</block>
-  <block id="460a4c33ada7a6581872d15b96a4344b" category="sidebar">VMware ワークロードを保護する（プレビュー）</block>
-  <block id="6a3bb59ab6ca7e1af58c7f804a58a47c" category="sidebar">KVM ワークロードの保護（プライベート プレビュー）</block>
-  <block id="d800ef02fd04e0bcce643b8bacdfd33e" category="sidebar">Hyper-V ワークロードの保護 (プライベート プレビュー)</block>
   <block id="8f12fe2d1611902de146ad61b89b8295" category="sidebar">Kubernetes ワークロードを保護する（プレビュー）</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログとコミュニティ</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
@@ -4253,11 +4239,9 @@
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">Microsoft SQL Server のインベントリを管理する</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">Microsoft SQL Server スナップショットを管理する</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">Microsoft SQL Server レポートを作成する</block>
-  <block id="f4aa5ca6921e92380246ea7a562973a9" category="sidebar">VMware ワークロードの保護 (VMware 向けSnapCenterプラグインなしのプレビュー)</block>
   <block id="b1b8c22062b7762d4a3c459e880dee3b" category="sidebar">VMware ワークロードの保護 ( SnapCenter Plug-in for VMware を使用)</block>
   <block id="7706cc052aa7120ddac8475709793258" category="sidebar">仮想マシンのワークロードの保護の概要</block>
   <block id="9ce88727019b612743000c7bcc2bfd23" category="sidebar">仮想マシンのワークロードを保護するための前提条件</block>
-  <block id="437ae89009b207d1aafce3d11e58f524" category="sidebar">SnapCenter Plug-in for VMware vSphereを登録する</block>
   <block id="776ec5ed6f61de56be98c037c8ca01c9" category="sidebar">仮想マシンのデータをバックアップするポリシーを作成する</block>
   <block id="1d5ad62b9217b4a3f085f517534f40bb" category="sidebar">データストアを Amazon Web Services にバックアップする</block>
   <block id="32d2b45dd98e36ad888d7156b4532053" category="sidebar">データストアを Microsoft Azure にバックアップする</block>
@@ -4266,7 +4250,6 @@
   <block id="9a3f2e7eb30992bb084418711e5093f2" category="sidebar">データストアと仮想マシンのデータの保護を管理する</block>
   <block id="9234f5bc35aa09673eacbf8fece508db" category="sidebar">仮想マシンのデータとデータストアを復元する</block>
   <block id="a6c93de7c03701dfba222e9072ffe5e7" category="sidebar">KVM ワークロードを保護する（プレビュー）</block>
-  <block id="1db561ecd535caff5b4a1e7b87668d89" category="sidebar">Hyper-V ワークロードを保護する (プレビュー)</block>
   <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">リカバリポイントのマウントとアンマウント</block>
   <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">Kubernetes ワークロードを保護する（プレビュー）</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">Kubernetes ワークロードの実行フック テンプレートを管理する</block>
@@ -5005,8 +4988,6 @@
   <block id="55cf8812c6c22803ddfa5fd41279187d" category="list-text">ディスクツーディスク</block>
   <block id="0f6d38819f95da81f8bc80258fee7071" category="list-text">ディスクからオブジェクトストレージへ</block>
   <block id="e3b858c29172bddae0dbb7e461b2f7df" category="list-text">カスケード</block>
-  <block id="cc5d8c9d6668803b438b03567e08b611" category="section-title">その他の機能強化</block>
-  <block id="6ec61dc6a9b7787975d159ba164424f9" category="paragraph">Hyper-Vワークロード、KVMワークロード、VMwareワークロードがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。</block>
   <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。</block>
   <block id="36f1a2626b3ec6834b4eb361bac96c37" category="doc">Kubernetesワークロード向けNetApp Backup and Recoveryの既知の制限事項</block>
   <block id="36c070b302c08836d912ffb6841bb46e" category="section-title">アプリケーションの保護ポリシーの変更</block>
@@ -5241,8 +5222,14 @@
   <block id="8c703f00b817f5c9121d74efc33cdde9" category="list-text">NetApp Trident Protect Connector 25.07 以降（Kubernetes ワークロード検出時にインストール）</block>
   <block id="5254dbe16e57a413455e2c5f7d5e70a1" category="list-text">Kubernetesクラスタ、Trident Protect Connector、およびTrident Protectプロキシ間のアウトバウンド方向でTCPポート443がフィルタリングされていないことを確認してください。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026年2月9日</block>
-  <block id="f3effb5ce493101e0cf4cbc9e93014e1" category="sidebar">Oracle Database ワークロードの保護（プライベートプレビュー）</block>
   <block id="e45770f83b5d2c438c00dea64c505ce7" category="sidebar">Oracle Databaseワークロードの既知の制限</block>
   <block id="c33d3729ba9e6e1c1dd6ccc4b6c7f949" category="sidebar">Oracle Database ワークロードの保護（プレビュー）</block>
   <block id="1e6021824e75d382885d2bb2e945f719" category="sidebar">カスタムリソースを使用してKubernetesアプリケーションを復元する</block>
+  <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">一般提供（GA）でサポートされる Microsoft Hyper-V ワークロード</block>
+  <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。</block>
+  <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="section-title">一般提供（GA）でサポートされる KVM ワークロード</block>
+  <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">KVMワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。</block>
+  <block id="a4af15d338a93411ae3eacbe3e9d1c5e" category="sidebar">KVM ワークロードを保護する（プレビュー）</block>
+  <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">Oracle Database ワークロードの保護（プレビュー）</block>
+  <block id="72f656ffc88a48ec4092d869ae05c4e6" category="sidebar">VMwareワークロードを保護する（SnapCenter Plug-in for VMware不使用）</block>
 </blocks>
