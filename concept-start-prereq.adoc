@@ -88,7 +88,7 @@ VMware ワークロードを検出して保護するには、特定の要件が�
 
 *ソフトウェアサポート*
 
-* NFS および VMFS データストアがサポートされています。vVolsはサポートされていません。
+* NFS および VMFS データストアがサポートされています。
 * サポートされている NFS バージョン: NFS 3 および NFS 4.1
 * サポートされている VMware ESXi Server バージョン: 7.0U1 以上
 * サポートされている VMware vCenter vSphere バージョン: 7.0U1 以上
@@ -106,11 +106,6 @@ VMware ワークロードを検出して保護するには、特定の要件が�
 
 | VMware ESXi Serverのポート  a| 
 443 (HTTPS)、双方向。ゲスト ファイルのリストア機能では、このポートが使用されます。
-
-
-
-| VMware vSphere vCenter Serverのポート  a| 
-vVol VM を保護する場合は、ポート 443 を使用する必要があります。
 
 
 
