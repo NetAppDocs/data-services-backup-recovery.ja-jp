@@ -30,9 +30,9 @@ Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで�
 
 
 
-=== 一般提供（GA）でサポートされる KVM ワークロード
+=== 一般提供（GA）でサポートされる VMware ワークロード
 
-KVMワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+VMware ワークロード サポートが、NetApp Backup and Recovery で一般提供（GA）されました。
 
 
 
