@@ -78,9 +78,6 @@ NetApp Backup and Recovery を使用すると、Microsoft SQL Server インス�
 
 
 | StorageGRID | Cloud Volumes ONTAPオンプレミスONTAPシステム | オンプレミスのONTAPシステムONTAP S3 
-
-
-| Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | NA 
 |===
 
 NOTE: 「オンプレミスのONTAPシステム」への参照には、 FASとAFFシステムが含まれます。
