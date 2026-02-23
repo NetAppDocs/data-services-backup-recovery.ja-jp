@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: br-use-kubernetes-reports.html 
+keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
+summary: Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップのタイプ、クラスタの健全性情報など、保護ステータスと詳細を表示します。 
+---
+= NetApp Backup and RecoveryでKubernetesワークロードの保護レポートを作成および管理する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、クラスターの正常性情報など、保護の状態と詳細を表示します。
+
+*必須NetApp Console ロール* Backup and Recovery super admin、Backup and Recovery backup admin、または Backup and Recovery restore admin。link:reference-roles.html["バックアップとリカバリの役割と権限"]について説明します https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+
+
+
+== 保護レポートを作成する
+
+保護レポートを作成して、クラスタの保護ステータスを表示します。
+
+.手順
+. NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。
+. *レポートの作成*を選択します。
+. レポート範囲の詳細を入力します:
++
+** *レポート名*: レポートの一意の名前を入力します。
+** *レポート タイプ*：アカウント別またはワークロード別のレポートのどちらが必要かを選択します（リストから Kubernetes を選択します）。
+** *クラスタを選択*：ワークロード別に選択した場合は、レポートを生成するクラスタをリストから選択し、*Accept*を選択します。すべてのクラスタのレポートを生成するには、*Select all*を選択します。
+
+
+. レポート範囲を入力：レポートに過去 1 日、過去 7 日間、過去 30 日間、前四半期、または前年度のデータを含めるかどうかを選択します。
+. レポート設定の詳細を入力します：レポートを 1 回だけ実行するか、定期的なレポート生成をスケジュールするかを選択します。スケジュールされたレポートの場合は、繰り返しの頻度を選択し、開始日を選択します。
++
+.. 電子メール配信の詳細を入力します：（スケジュールされたレポートの場合のみ）レポートを電子メールで配信する場合は、スケジュールされたレポートを受信する1つ以上の電子メールアドレスを入力します。
+
+
++
+設定ページで電子メール通知を構成します。電子メール通知の設定の詳細については、link:br-start-configure.html["設定を構成する"] 。
+
+. *作成*を選択します。
+
+
+
+
+== 保護レポートをダウンロードする
+
+生成された保護レポートを JSON ファイルまたは PDF ドキュメントとしてダウンロードして、表示および共有できます。
+
+.手順
+. NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。
+. *レポート*ページで、*レポート*メニューを選択して、生成された保護レポートのリストを表示します。
+. ダウンロードするレポートで、Actionsアイコンimage:../media/icon-action.png["アクションオプション"]>*Download*を選択します。
++
+** レポートを JSON 形式でダウンロードするには、*Download JSON* を選択します。
+** レポートを PDF ドキュメントとしてダウンロードするには、* Download PDF * を選択します。
+
+
+
+
+
+
+== 保護レポートを表示する
+
+NetApp Backup and Recovery内で保護レポートのインタラクティブな詳細を素早く表示できます。ジョブの概要情報、データ保護ステータス、構成の詳細などを確認できます。
+
+.手順
+. NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。
+. *レポート*ページで、*レポート*メニューを選択して、生成された保護レポートのリストを表示します。
+. 表示するレポートについて、アクションアイコンimage:../media/icon-action.png["アクションオプション"]> *レポートを表示*を選択します。
++
+レポートの詳細が表示されます。
+
+
+
+
+
+== 保護レポートを削除する
+
+不要になった保護レポートを削除します。
+
+.手順
+. NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。
+. *レポート*ページで、*レポート*メニューを選択して、生成された保護レポートのリストを表示します。
+. 削除するレポートについて、アクションアイコンimage:../media/icon-action.png["アクションオプション"]> *削除*を選択します。
+. *削除*を選択して操作を確認します。
+

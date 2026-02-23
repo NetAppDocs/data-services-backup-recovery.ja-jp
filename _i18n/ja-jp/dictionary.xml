@@ -354,7 +354,6 @@
   <block id="e2b26238e3aec34978fbb465dfd6baff" category="list-text">VMを別の場所に復元する</block>
   <block id="fe8e9fc813c1e8a639c0cadb6115589f" category="list-text">SANに保存されたVMを保護する</block>
   <block id="ca73b42f56baa81e1c83e31ee5c53d42" category="list-text">アプリケーションを保護する</block>
-  <block id="d5598f128bb28f962fcd8574013f2a43" category="list-text">複数の KVM ホストの VM を使用して保護グループを作成する</block>
   <block id="2fbb28a0f1560254b88f56b3632cf88b" category="list-text">ユーザー定義のバックアップを作成します（ NetApp Consoleから開始されたバックアップのみがサポートされます）</block>
   <block id="b26873df0260bdc332a7511f6823cf63" category="section-title">サポートされない構成</block>
   <block id="f19c49e2c5af4fdef9d76da8243928b8" category="paragraph">次の構成はサポートされていません。</block>
@@ -1698,8 +1697,6 @@
   <block id="793c79d603a2a6eb42272304c6135f12" category="list-text">正しいアプリケーション名が選択されていることを確認してください。</block>
   <block id="408156cb89b56d3b746dba5ade40b0e4" category="paragraph">コンソールはアプリケーションのバックアップを作成し、バックアップとリカバリの *監視* 領域に進行状況を表示します。バックアップは、アプリケーションに関連付けられた保護ポリシーに基づいて作成されます。</block>
   <block id="2f2fda22f167ad6c7dcc0ac3f92cd945" category="summary">NetApp Backup and Recoveryでは、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。</block>
-  <block id="8e6f4a9d7c64e35859548854a52b145a" category="doc">NetApp Backup and Recoveryで Microsoft SQL Server ワークロードのレポートを作成する</block>
-  <block id="df63e1970b7cb20512cb62b542bcd3f8" category="section-title">レポートを作成する</block>
   <block id="391ccda3039974f5c4561d91d157e4be" category="paragraph">*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。詳細はこちら<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a75db1c6ad7a6018f4076429dcb47fd8" category="list-text">NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。</block>
   <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">*レポートの作成*を選択します。</block>
@@ -4525,10 +4522,7 @@
   <block id="432d122bca6b826d0ff8b770008cb6da" category="list-text">Hyper-Vの「プロセッサ互換性」設定に関わらず、異なるCPUベンダー（IntelからAMD、またはその逆）のシステム間でVMまたはVMデータを復元することはできません。この設定は、同一ベンダーの異なる世代間（例：IntelからIntel、AMDからAMD）の互換性のみをサポートします。</block>
   <block id="cbf60595828cc0c9aea61a13478c0526" category="admonition">2026 年 1 月 19 日のリリースでは、[アクション] メニューの [アップグレード] オプションを使用して、Hyper-V または Windows 用のNetAppプラグインをアップグレードすることはできません。代わりに、各 Hyper-V ホストを削除し、再度追加してプラグインを更新します。</block>
   <block id="fa1b7fd0ad5ec372cdf9f907c6fbf709" category="section-title">トラブルシューティングの注意事項</block>
-  <block id="9bd2877d70202ee3498597fbe9e5cc2f" category="paragraph">NetApp Backup and Recoveryで KVM ワークロードのプライベート プレビューを使用する場合は、次の点に注意してください。</block>
   <block id="ac034a836e482984e927ce7aef3a7bcc" category="list-text">KVM ワークロードの復元が正常に完了するようにするには、KVM バックアップに使用する保護ポリシーで *VM 整合性スナップショットを有効にする* 設定がアクティブになっていることを確認します。</block>
-  <block id="a9f8d95d40be1c757e5dddec176f49aa" category="list-text">すべての管理対象ホストをNetApp Backup and Recoveryに追加しない限り、Apache CloudStack によって管理される KVM ホストを含​​むストレージ プールをバックアップすることはできません。回避策として、すべての CloudStack 管理 KVM ホストをNetApp Backup and Recoveryに追加します。</block>
-  <block id="a08807a7feb533e9af18670f44dd0184" category="list-text">保護グループに属する停止された VM をバックアップすることはできません。回避策として、バックアップを開始する前に、停止した VM を保護グループから削除します。</block>
   <block id="caf127224717f7d5605f4155b3a36376" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block> NetApp Backup and Recovery が認証する必要がある Windows、 Microsoft SQL Server 、Oracle Database、または Linux ホストの場合。これには、ゲスト ファイルまたはフォルダーを復元するときに使用される Windows ゲスト OS の資格情報が含まれます。</block>
   <block id="a22707a596fa8306e8d6a5944e2eda1e" category="list-text"><block ref="89ad28258fc3723b5b08e269206e91aa" category="inline-xref-macro-rx"></block>。(KVM ワークロードのみ)</block>
   <block id="e0981966cb393b67a49dfbe74acbcaa9" category="paragraph">ホスト リソースの資格情報を追加します。NetApp Backup and Recovery はこれらの資格情報を使用してワークロードを検出し、バックアップ ポリシーを適用します。</block>
@@ -5052,4 +5046,46 @@
   <block id="b9c809d8faa35e3cecf28c39b12a0890" category="list-text">ASP.NET Core Runtime 8.0.23 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
   <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
   <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13以降</block>
+  <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">一般提供（GA）でサポートされる KVM ワークロード</block>
+  <block id="e58f3c7a76cad4e6c2c7f515b3171f76" category="section-title">Kubernetes が一般提供（GA）でサポートされました</block>
+  <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">KubernetesワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されました。このKubernetesワークロードのリリースでは、次の拡張機能も導入されています：</block>
+  <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*レポートのサポート*：NetApp Backup and Recoveryで保護されているKubernetesクラスタとアプリケーションの保護アクティビティレポートを生成できるようになりました。</block>
+  <block id="2b9a71c68fa2528dcd54a63d6e7b908d" category="paragraph">KVMワークロードのプライベートプレビューをNetApp Backup and Recoveryで使用する場合は、次の点に注意してください。</block>
+  <block id="bc077e67c7216de25b87f90d5ec28ac0" category="list-text">保護された VM で QEMU ゲストエージェントが実行されていない場合、バックアップは失敗する可能性があります。回避策として、バックアップを開始する前に VM 上で<block ref="c17d9742912ea08e0cfecda90a08c954" prefix=" " category="inline-code"></block>デーモンが実行されていることを確認してください。</block>
+  <block id="66330fd6b5a015d85e0b01e96c040005" category="summary">Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップのタイプ、クラスタの健全性情報など、保護ステータスと詳細を表示します。</block>
+  <block id="7e9944e42087b52e398e40511794ab10" category="doc">NetApp Backup and RecoveryでKubernetesワークロードの保護レポートを作成および管理する</block>
+  <block id="59db8c9d0215fa2a51b2a35609aa5bbd" category="paragraph">NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、クラスターの正常性情報など、保護の状態と詳細を表示します。</block>
+  <block id="6f0eb8b8a8ac47dbe395a0547f6dba8d" category="paragraph">*必須NetApp Console ロール* Backup and Recovery super admin、Backup and Recovery backup admin、または Backup and Recovery restore admin。<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>について説明します<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="d45ba014e75a2424453d999d1ec1584d" category="section-title">保護レポートを作成する</block>
+  <block id="cf9569ff04e8697d933d86bb055b6753" category="paragraph">保護レポートを作成して、クラスタの保護ステータスを表示します。</block>
+  <block id="764cb0718c60ad28fec23c72e06cd3eb" category="list-text">*レポート タイプ*：アカウント別またはワークロード別のレポートのどちらが必要かを選択します（リストから Kubernetes を選択します）。</block>
+  <block id="32e7d2bef37709329417fce15d4ef70a" category="list-text">*クラスタを選択*：ワークロード別に選択した場合は、レポートを生成するクラスタをリストから選択し、*Accept*を選択します。すべてのクラスタのレポートを生成するには、*Select all*を選択します。</block>
+  <block id="4aa69b04f720d9cf28bddc129bdda982" category="list-text">レポート範囲を入力：レポートに過去 1 日、過去 7 日間、過去 30 日間、前四半期、または前年度のデータを含めるかどうかを選択します。</block>
+  <block id="8b1d3f0d4147e569670599b2074a9453" category="list-text">レポート設定の詳細を入力します：レポートを 1 回だけ実行するか、定期的なレポート生成をスケジュールするかを選択します。スケジュールされたレポートの場合は、繰り返しの頻度を選択し、開始日を選択します。</block>
+  <block id="cf5d0c81e1ff395be07be7ab39b273a2" category="list-text">電子メール配信の詳細を入力します：（スケジュールされたレポートの場合のみ）レポートを電子メールで配信する場合は、スケジュールされたレポートを受信する1つ以上の電子メールアドレスを入力します。</block>
+  <block id="6966f88ce9330f288d2ff468e8f1bf31" category="section-title">保護レポートをダウンロードする</block>
+  <block id="ca0fab6dece474777af6f27a9ab6f7bf" category="paragraph">生成された保護レポートを JSON ファイルまたは PDF ドキュメントとしてダウンロードして、表示および共有できます。</block>
+  <block id="16d046f9df08fac82032019de67dd111" category="list-text">*レポート*ページで、*レポート*メニューを選択して、生成された保護レポートのリストを表示します。</block>
+  <block id="46d0b33f9602910da192296aa16047c8" category="list-text">ダウンロードするレポートで、Actionsアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt;*Download*を選択します。</block>
+  <block id="3e67afef1e2a25129f8131a465c1f233" category="list-text">レポートを JSON 形式でダウンロードするには、*Download JSON* を選択します。</block>
+  <block id="6a6e83b2656cc80c95ff1d51721fdfdf" category="list-text">レポートを PDF ドキュメントとしてダウンロードするには、* Download PDF * を選択します。</block>
+  <block id="907ad6bf80ead0c498e1b96eeac0931b" category="section-title">保護レポートを表示する</block>
+  <block id="5ec71cd773423bccb3eb37e7ca0de834" category="paragraph">NetApp Backup and Recovery内で保護レポートのインタラクティブな詳細を素早く表示できます。ジョブの概要情報、データ保護ステータス、構成の詳細などを確認できます。</block>
+  <block id="4282f8fe4c83ccf233576c6529acd9cf" category="list-text">表示するレポートについて、アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *レポートを表示*を選択します。</block>
+  <block id="ba033453bbd04ac2ce08fa3e831d97b0" category="paragraph">レポートの詳細が表示されます。</block>
+  <block id="a1c5f902308b29e3dc37ca9471a1016c" category="section-title">保護レポートを削除する</block>
+  <block id="ba71a8f948ce2ac60c238f470758a980" category="paragraph">不要になった保護レポートを削除します。</block>
+  <block id="583b019e08073df7e3a4598861ee7567" category="list-text">削除するレポートについて、アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *削除*を選択します。</block>
+  <block id="ea78509096df982db8c5234ed6ea3e7c" category="list-text">*削除*を選択して操作を確認します。</block>
+  <block id="9c7a2480e98d69e7a466d0b0fd60ac07" category="list-text">保護グループを編集します。</block>
+  <block id="3b8d8ee10228976bdc630252832886f7" category="list-text">ホストを選択すると、そのホスト上で使用可能な VM が一覧表示されます。検出されたすべてのホストの VM を含めるには、ホストリストで *All* を選択します。</block>
+  <block id="fc20073811aa1e335ccc2bd9d99eebc7" category="list-text">保護グループに含める個々の VM を選択するか、* すべて * を選択してリスト内のすべての VM を含めます。</block>
+  <block id="b40b521f6bdf32a177d77954a599ae27" category="paragraph">選択した VM は、*Added virtual machines* 領域に表示されます。リストから個々の VM を削除したり、リスト全体を空にしたりすることができます。複数の KVM ホストからの VM をリストに追加できます。</block>
+  <block id="a9e57cec2c8ac57d718acff237fa31e8" category="list-text">保護グループに適用する保護ポリシーを選択するか、*新しいポリシーの作成*を選択して新しいポリシーを作成します。</block>
+  <block id="7e6254a3c499887f0d500958fc6584ed" category="paragraph">保護グループを削除して再作成せずに、保護グループの詳細を変更する必要がある場合は、保護グループを編集します。</block>
+  <block id="78fa67c28bf09a9555618080f725243c" category="list-text">保護グループの一般的な詳細と VM に必要な変更を加えます。</block>
+  <block id="3573adc4fce66bc7bb13c8f35b9d7e90" category="list-text">必要に応じて、保護グループに関連付けられている保護ポリシーを変更します。</block>
+  <block id="64599804111c69e57052c204fb880b42" category="doc">NetApp Backup and RecoveryでMicrosoft SQL Serverワークロードの保護レポートを作成する</block>
+  <block id="8b3c75a910501c009c7e86f190f1825d" category="section-title">2026年2月23日</block>
+  <block id="175ddb68a640ea3daeb84c25a2402e6f" category="sidebar">保護レポートの作成と管理</block>
 </blocks>

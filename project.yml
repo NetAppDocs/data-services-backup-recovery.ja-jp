@@ -210,6 +210,8 @@ sidebar:
         url: "/br-use-manage-kubernetes-applications.html"
       - title: Kubernetes ワークロードの実行フック テンプレートを管理する
         url: "/br-use-manage-execution-hook-templates.html"
+      - title: 保護レポートの作成と管理
+        url: "/br-use-kubernetes-reports.html"
     - title: ジョブの監視
       url: "/br-use-monitor-tasks.html"
     - title: NetApp Backup and Recoveryを再起動します

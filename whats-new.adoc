@@ -18,6 +18,30 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+== 2026年2月23日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+=== 一般提供（GA）でサポートされる KVM ワークロード
+
+Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+
+KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+
+
+
+=== Kubernetes が一般提供（GA）でサポートされました
+
+KubernetesワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されました。このKubernetesワークロードのリリースでは、次の拡張機能も導入されています：
+
+*レポートのサポート*：NetApp Backup and Recoveryで保護されているKubernetesクラスタとアプリケーションの保護アクティビティレポートを生成できるようになりました。
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+
+
+
 == 2026年2月9日
 
 このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
