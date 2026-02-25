@@ -6,13 +6,13 @@
 
 === 一般提供（GA）でサポートされる KVM ワークロード
 
-Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
+KVMワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
 
 KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
 
 
 
-=== Kubernetes が一般提供（GA）でサポートされました
+=== 一般提供（GA）でサポートされる Kubernetes ワークロード
 
 KubernetesワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されました。このKubernetesワークロードのリリースでは、次の拡張機能も導入されています：
 
