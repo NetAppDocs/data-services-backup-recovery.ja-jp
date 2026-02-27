@@ -56,7 +56,7 @@ indexpage:
       url: br-use-vmware-backup.html
     - title: VMwareワークロードを復元する
       url: br-use-vmware-restore.html
-  - title: KVM ワークロードを保護する（プレビュー）
+  - title: KVMワークロードを保護する
     links:
     - title: KVM ワークロードの保護の概要
       url: "/br-use-kvm-protect-overview.html"
@@ -92,7 +92,7 @@ indexpage:
       url: "/br-use-oracle-backup.html"
     - title: Oracle Database ワークロードのリストア
       url: "/br-use-oracle-restore.html"
-  - title: Kubernetes ワークロードを保護する（プレビュー）
+  - title: Kubernetesワークロードを保護する
     links:
     - title: Kubernetes ワークロードの保護の概要
       url: br-use-kubernetes-protect-overview.html

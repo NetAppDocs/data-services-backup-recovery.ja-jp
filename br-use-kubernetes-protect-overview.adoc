@@ -27,9 +27,6 @@ NetApp Backup and Recovery は、 Kubernetes ワークロードの管理に次�
 * Kubernetes アプリケーションの永久増分バックアップにより、復旧ポイント目標 (RPO) と復旧時間目標 (RTO) が低下します。
 
 
-
-NOTE: このドキュメントはテクノロジープレビューとして提供されています。プレビュー期間中は、Kubernetes 機能は本番環境のワークロードには推奨されません。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
-
 Kubernetes ワークロードの管理に関連する次のタスクを実行できます。
 
 * link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]。

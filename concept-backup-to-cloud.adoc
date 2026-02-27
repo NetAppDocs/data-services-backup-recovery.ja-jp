@@ -19,9 +19,6 @@ NetApp Backup and Recovery は、ボリューム、データベース、仮想�
 バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。NetApp Consoleでは、3-2-1ルールに基づく幅広いバックアップ戦略を含め、あらゆるバックアップ戦略を簡単に実装でき、複数のリソースマネージャーや専門の担当者を必要としません。
 
 
-NOTE: VMware、KVM、Hyper-V、Kubernetes ワークロードの保護に関するドキュメントは、テクノロジー プレビューとして提供されます。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
-
-
 
 == NetApp Backup and Recoveryでできること
 
@@ -44,25 +41,17 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** 参照link:br-use-mssql-protect-overview.html["Microsoft SQL Server ワークロードを保護する"]。
 
 
-* *VMware ワークロード ( SnapCenter Plug-in for VMware vSphereなしの新しい UI のプレビュー)*:
+* *VMwareワークロード（SnapCenter Plug-in for VMware vSphereを使用しない新しいUI）*：
 +
 ** NetApp Backup and Recoveryを使用して VMware VM とデータストアを保護します。
-** VMware ワークロードを Amazon Web Services S3 またはStorageGRID (プレビュー用) にバックアップします。
+** VMwareワークロードをAmazon Web Services S3またはStorageGRIDにバックアップします。
 ** クラウドから VMware データをオンプレミスの vCenter に復元します。
 ** VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。
 ** SnapCenter Plug-in for VMware vSphere を使用せずにNetApp Backup and Recoveryを使用します。
 ** 参照link:br-use-vmware-protect-overview.html["VMwareワークロードを保護する"]。
 
 
-* *VMware ワークロード ( SnapCenter Plug-in for VMware vSphereを使用)*:
-+
-** VM とデータストアを Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform、 StorageGRIDにバックアップし、VM をオンプレミスのSnapCenter Plug-in for VMware vSphereに復元します。
-** NetApp Backup and Recoveryを使用して、クラウドからオンプレミスの vCenter に VM データを復元します。VM を、バックアップが作成された場所とまったく同じ場所に復元することも、別の場所に復元することもできます。
-** NetApp Backup and Recovery をSnapCenter Plug-in for VMware vSphereと併用します。
-** 参照link:prev-vmware-protect-overview.html["VMwareワークロードを保護する"]。
-
-
-* *KVM ワークロード (プレビュー)*:
+* *KVM ワークロード*：
 +
 ** 仮想マシンのバックアップと復元
 ** KVMストレージプールのバックアップ
@@ -70,7 +59,7 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** 参照link:br-use-kvm-protect-overview.html["KVMワークロードを保護する"]。
 
 
-* *Hyper-V ワークロード (プレビュー)*:
+* *Hyper-V ワークロード*：
 +
 ** 仮想マシンのバックアップと復元
 ** 保護グループを使用してバックアップタスクを管理する
@@ -88,7 +77,7 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** link:br-use-oracle-protect-overview.html["Oracle Databaseのワークロードを保護する"]を参照してください。
 
 
-* *Kubernetes ワークロード (プレビュー)*:
+* *Kubernetes ワークロード*：
 +
 ** Kubernetes アプリケーションとリソースをすべて 1 か所で管理および保護します。
 ** 保護ポリシーを使用して増分バックアップを構成します。
@@ -203,10 +192,10 @@ NetApp Backup and Recovery は、次の種類のワークロードを保護し�
 * ONTAPボリューム
 * VMFS または NFS 上の物理ディスクおよび VMware 仮想マシン ディスク (VMDK) に保存されたMicrosoft SQL Serverインスタンスとデータベース
 * VMware VM とデータストア
-* KVM ワークロード (プレビュー)
-* Hyper-V ワークロード (プレビュー)
+* KVMワークロード
+* Hyper-V ワークロード
 * Oracle データベース ワークロード (プレビュー)
-* Kubernetes ワークロード (プレビュー)
+* Kubernetes ワークロード
 
 
 .サポートされているシステム
@@ -220,9 +209,9 @@ NetApp Backup and Recovery は、次の種類のワークロードを保護し�
 .サポートされているバックアップ対象
 * Amazon Web Services（AWS）S3
 * Google Cloud Storage
-* Microsoft Azure Blob (プレビューでは VMware ワークロードでは利用できません)
+* Microsoft Azure Blob（VMware ワークロードでは利用できません）
 * StorageGRID
-* ONTAP S3 (プレビューでは VMware ワークロードでは利用できません)
+* ONTAP S3（VMware ワークロードでは利用できません）
 
 
 

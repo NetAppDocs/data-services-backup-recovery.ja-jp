@@ -144,7 +144,7 @@ sidebar:
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: ゲストファイルの復元のトラブルシューティング
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
-    - title: KVM ワークロードを保護する（プレビュー）
+    - title: KVMワークロードを保護する
       entries:
       - title: KVM ワークロードの保護の概要
         url: "/br-use-kvm-protect-overview.html"
@@ -182,7 +182,7 @@ sidebar:
         url: "/br-use-oracle-restore.html"
       - title: リカバリポイントのマウントとアンマウント
         url: "/br-use-oracle-mount-unmount.html"
-    - title: Kubernetes ワークロードを保護する（プレビュー）
+    - title: Kubernetesワークロードを保護する
       entries:
       - title: Kubernetes ワークロードの保護の概要
         url: "/br-use-kubernetes-protect-overview.html"
