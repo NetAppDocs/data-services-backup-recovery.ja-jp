@@ -670,13 +670,7 @@
   <block id="acaaf9de0e4071fe117da04dbbe9565d" category="list-text">KVM タイルで、[検出と管理] を選択します。</block>
   <block id="12d8eeba7e97739f6035cbec50bd2369" category="list-text">*ワークロード タイプ*: *KVM* を選択します。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM ワークロードは、インベントリ ページのワークロード リストに表示されます。</block>
-  <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery、まず Oracle データベースを検出して保護する必要があります。</block>
-  <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">Oracleホストを追加してリソースを検出する</block>
   <block id="8160dc72c9473d18119ea3e52fe65572" category="paragraph">Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロードを検出できるようにします。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。</block>
-  <block id="bdd8003feffb3131de98b744d8d7e952" category="list-text">*ワークロード タイプ*: *Oracle* を選択します。</block>
-  <block id="c758c27facd2d09f2ccc8fc60719f412" category="list-text">この Oracle ホストの資格情報をまだ保存していない場合は、「資格情報の追加」を選択します。</block>
-  <block id="8bd91057b53c6035123596e5f2ba38ab" category="list-text">*ホスト登録*: 新しい Oracle ホストを追加します。ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力します。</block>
-  <block id="5ea9a0faddd392a3b490b6e503bc42b2" category="paragraph">Oracle ワークロードは、インベントリ ページのワークロード リストに表示されます。</block>
   <block id="5b9d0f0da934c7776ba30ad3c1fe47b2" category="doc">Microsoft SQL Server ワークロードを検出し、オプションでNetApp Backup and RecoveryのSnapCenterからインポートします。</block>
   <block id="cd6726508604886a0b7b678ad4f6a2b8" category="paragraph">NetApp Backup and Recovery、サービスを使用するために、まず Microsoft SQL Server ワークロードを検出する必要があります。  SnapCenterがすでにインストールされている場合は、オプションでSnapCenterからバックアップ データとポリシーをインポートできます。</block>
   <block id="da39a7712232603b7b60f32ff70cea25" category="section-title">Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします</block>
@@ -1364,7 +1358,6 @@
   <block id="81397f7503542040ff1aa87c847e281b" category="list-text">続行するには、[スキップ] を選択します。</block>
   <block id="67728477667cd78a4cb8ac8a3336c7ef" category="paragraph">Microsoft SQL Server ワークロードのクローンを分割できます。クローンを分割すると、クローンから新しいバックアップが作成されます。新しいバックアップを使用してワークロードを復元できます。</block>
   <block id="f4ed3104414bb69a5dfac99135ef72f2" category="paragraph">クローンを独立したクローンまたは長期クローンとして分割することを選択できます。ウィザードには、SVM の一部であるアグリゲートのリスト、それらのサイズ、およびクローン ボリュームが存在する場所が表示されます。 NetApp Backup and Recovery は、クローンを分割するのに十分なスペースがあるかどうかも示します。クローンを分割すると、クローンはその保護のために独立したデータベースになります。</block>
-  <block id="fc54fcad59dc4a5ea9c76bbb98303c4a" category="paragraph">クローンジョブは削除されず、他のクローンに再度再利用できます。</block>
   <block id="3cc3bf063b3735dfee9852891c6d4ef6" category="list-text">クローンを選択します。</block>
   <block id="42db557ffc18279f75ced7531cb65db0" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *分割クローン*。</block>
   <block id="91a9421f27cf61e52bea5d9c90e7f79e" category="list-text">分割クローンの詳細を確認し、「分割」を選択します。</block>
@@ -1478,7 +1471,6 @@
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">バックアップするデータベースを選択します。</block>
   <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">NetApp Backup and Recoveryを使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする</block>
   <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">リカバリ操作を実行するために制御された状態でデータベースにアクセスする必要がある場合は、Oracle データベースのリカバリ ポイントをマウントすることをお勧めします。</block>
-  <block id="079a3f8ec0bb95d8f0ae5d36f04de7c4" category="section-title">Oracle データベースの復元ポイントをマウントする</block>
   <block id="027d1aa00ef27e7ff911f7a3ecb49c5d" category="list-text">Oracle タイルを選択します。</block>
   <block id="3fe9c6f0345265378a65d07de3e0456f" category="list-text">[バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。</block>
   <block id="872dd4524336673d42ecaa46bc8eb4a9" category="list-text">リスト内の Oracle Database ワークロードについては、「*表示*」を選択します。</block>
@@ -1492,7 +1484,6 @@
   <block id="96a0bc8738e149cc2c970e821cab7d08" category="paragraph">バックアップとリカバリで使用するマウント パスが表示されます。</block>
   <block id="da4155d1cceea0707c4abe61465647f3" category="list-text">*マウント*を選択します。</block>
   <block id="87f1df33c9d0ca12a7396f2e8f264291" category="paragraph">リカバリ ポイントは Oracle ホストにマウントされます。</block>
-  <block id="ce5c6f3695f2913abcf739f0f30f1067" category="section-title">Oracleデータベースの復元ポイントをアンマウントする</block>
   <block id="078e01c25936988332a6694f6b3c4157" category="paragraph">データベースに加えられた変更を表示する必要がなくなった場合は、回復ポイントをマウント解除します。</block>
   <block id="a8e9d9645fc4e43a4a7ce0324acee062" category="list-text">リスト内の Oracle ワークロードについては、「*表示*」を選択します。</block>
   <block id="6f951d1c709837901904521a57b0a9f4" category="list-text">リストから回復ポイントを選択し、アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *アンマウント*。</block>
@@ -4912,7 +4903,6 @@
   <block id="d07e8f6398c66f7d79a80768d3aa858b" category="inline-link-macro">Oracle Databaseのワークロードを今すぐバックアップ</block>
   <block id="5361440c8196cc52ba89e8281bc2ef22" category="list-text">今すぐ保護グループをバックアップします。<block ref="0b07e2abdc1829709878f1d54c90a7ab" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ecd7b1e39a181dfd260b4d2201a85373" category="paragraph">Oracle Database ワークロード プレビューでは使用できません。</block>
-  <block id="930da9bc61f880bd2f19e2938c5376f6" category="list-text">*ワークロード*：Microsoft SQL Server、ボリューム、VMware、KVM、Hyper-V、Oracle Database、Kubernetes などがあります。</block>
   <block id="a1b57f3367efea5ba168ebc1b00dfb09" category="list-text">*3-2-1 ファンアウト*：プライマリ ストレージ（ディスク）からセカンダリ ストレージ（ディスク）、クラウド（オブジェクト ストア）へ。ONTAP から ONTAP、ONTAP からオブジェクト ストアへの構成など、異なるストレージ システム間でデータの複数のコピーを作成します。これは、クラウド ハイパースケーラー オブジェクト ストアまたはプライベート オブジェクト ストアになります。これらの構成は、最適なデータ保護と災害復旧の実現に役立ちます。</block>
   <block id="7257ebd350ec9dc53fbb407575e942c9" category="open-title">Web UI を使用してアプリケーションを追加する</block>
   <block id="7eb786201a1068df31c2a8d7805c50bf" category="open-title">CRを使用してアプリケーションを追加する</block>
@@ -5078,4 +5068,46 @@
   <block id="2432a396f38937322a4e606bf0aa7f0a" category="list-text">Microsoft Azure Blob（VMware ワークロードでは利用できません）</block>
   <block id="ab95f28db65589c3a2b5f277f324e60b" category="list-text">ONTAP S3（VMware ワークロードでは利用できません）</block>
   <block id="1d57820923cf47d0bb8ab74db80344ab" category="list-text">ONTAP 9.15.1では、「参照して復元」オプションを使用してFlexGroupフォルダを復元できます。</block>
+  <block id="5bc860fb25e08cbdf4fb6e1eb9fa16c9" category="paragraph">Oracleデータベースを検出すると、NetApp Backup and Recoveryでバックアップとスナップショットを作成およびリストアして保護できるようになります。</block>
+  <block id="e82e6b5a702d1fc223d9ea698359376e" category="section-title">Oracle Databaseホストを追加してリソースを検出する</block>
+  <block id="b5476a384252538238d37795b3f8f5a1" category="list-text">*ワークロード タイプ* フィールドで *Oracle* を選択します。</block>
+  <block id="3dcf508963e6fe907e0ca3a4c9693fd9" category="list-text">この Oracle Database ホストの資格情報をまだ保存していない場合は、*資格情報の追加*を選択します。</block>
+  <block id="19c33f5bda8d2b67e3f14b642d95e9ec" category="list-text">*ホスト登録*：新しい Oracle Database ホストを追加します。ホストの FQDN または IP アドレス、クレデンシャル、Console エージェント、およびポート番号を入力します。</block>
+  <block id="2e9227201c87c406d2477a129cc51bf0" category="list-text">（オプション）非ルート ユーザーの資格情報を選択する場合は、次の手順を実行します：</block>
+  <block id="a70d5c13d6b7f41208490c29f59e3063" category="list-text">選択した非 root ユーザーを Oracle Database ホストの sudoers ファイルに追加する方法については、*sudoers の構成*を選択してください。</block>
+  <block id="bf8e3c6752e8047e150b1ede213faaf5" category="list-text">ダイアログの指示に従い、完了したらチェックボックスを有効にして、*Done* を選択します。</block>
+  <block id="4388b2b0f034ea64ddb691069cae7e62" category="list-text">*詳細設定*：次の操作を行います。</block>
+  <block id="c9bc8bea020f64d04a5acca88723ddfd" category="list-text">使用するポートとインストールパスを入力しますNetAppプラグイン。このプラグインは、Oracle Database ホストとNetApp Backup and Recovery 間の通信を可能にします。</block>
+  <block id="d24f4a3688f3efcb4c012c56b0cbe72b" category="list-text">NetApp Backup and Recovery でプラグインを自動的にインストールするか、インストールをスキップするか（ホスト上でプラグインを手動でインストールする必要があります）を選択します。</block>
+  <block id="7ed97ae916d37ed8443606f5c8ac4fbb" category="list-text">インストール前のチェックを実行するか、スキップするかを選択します。</block>
+  <block id="25f9ab167417178f57bb91f475e3b1b1" category="paragraph">Oracle Database ワークロードは、インベントリ ページのワークロード リストに表示されます。</block>
+  <block id="30000add7aaf9253676b4000b4de34d5" category="paragraph">クローン ジョブは削除されず、他のクローンに再利用できます。</block>
+  <block id="cd988024594d1879c00a0562b6e05d11" category="summary">NetApp Backup and Recoveryを使用してOracle Databaseワークロードのクローンを作成します。</block>
+  <block id="0a2540edb55d3589a778219595c0a236" category="doc">NetApp Backup and Recoveryを使用したOracle Databaseワークロードのクローン作成</block>
+  <block id="4c35109db8b6bd097c28381279b0921a" category="paragraph">NetApp Backup and Recoveryを使用して、オンプレミスONTAPシステムからプライマリまたはセカンダリストレージへのOracleデータベースの書き込み可能なクローンを作成します。クローンのライフサイクルを管理し、スケジュールに従って定期的に更新されるようにします。</block>
+  <block id="6762b8756c91b8a3858e4cd8e6c3fd13" category="section-title">Oracle データベースのクローンを作成する</block>
+  <block id="45f1217ea429824adb8728761976bdd4" category="paragraph">既存のスナップショットからすぐにクローンを作成します。この方法を使用して、スナップショットから継続的に更新されない 1 回限りのクローンを作成します。</block>
+  <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">*Clone*を選択します。</block>
+  <block id="217a3032cd4179f2b9c8e8c54e28dc5f" category="list-text">*Database source* セクションで、リストからソース ホストとデータベースを選択します。</block>
+  <block id="a34f2c4ba7ebd928bc52c6458240ba79" category="list-text">*データベース ターゲット* セクションで、リストからターゲット ホストとデータベースを選択します。宛先ホストとデータベースはソースとは異なる場合があります。</block>
+  <block id="98e04edfb16ae23e37276c1b10bb37f5" category="list-text">*復元ポイントの選択*ページの*クローン元*セクションで、*既存のスナップショット*を選択します。</block>
+  <block id="624f61dd9e5f153789e0f1474e3af02a" category="list-text">クローンのベースとして使用する既存のスナップショット（復元ポイント）をリストから選択し、*次へ*を選択します。</block>
+  <block id="250bd2e0fd20f197756f90da65d7b032" category="paragraph">スナップショットが複数の場所に保存されている場合は、*Select snapshot location* が表示されます。</block>
+  <block id="59b1d9c0faeccb050b2ae82254459fd3" category="list-text">使用するスナップショットの場所を選択し、*次へ*を選択します。</block>
+  <block id="b2fe9cdb3dfb44588722f86420682e65" category="list-text">*詳細オプション*ページで、次の操作を行います：</block>
+  <block id="20decfe57e54a87359cea95bba79c274" category="list-text">以前に仕様ファイルを保存している場合は、それをアップロードして、複製されたデータベースの設定をカスタマイズできます。データベース スナップショットのデフォルトの仕様ファイルをダウンロードすることもできます。</block>
+  <block id="3c7b24476512ff19d3887cbbaf0c549e" category="list-text">*Recovery scope*セクションで、クローンを作成するために復元する内容を制限する方法を選択し、選択したオプションに必要な情報を入力します。*None*を選択すると、すべてのデータが復元されます。</block>
+  <block id="3360c6db4a303d4e7db0bf74d740c00f" category="list-text">*プレスクリプトとポストスクリプト*セクションで、*プレスクリプト*と*ポストスクリプト*のオプションの 1 つまたは両方を有効にして、クローン操作の開始前または完了後にスクリプトを実行します。各オプションについて、完全なスクリプト パスと必要な引数を入力します。</block>
+  <block id="50059824044533f44d3ae954c21388e4" category="section-title">Oracle データベースのクローンをスケジュールする</block>
+  <block id="15e0124ddc742fcfe98d5dda893c46e7" category="paragraph">即時クローンの作成とクローンの継続的な更新をスケジュールします。これにより、データベースの可能な限り最新のクローンが作成されます。選択したスケジュールに従って、データベースの最新の状態からクローンを継続的に更新する場合は、この方法を使用します。</block>
+  <block id="beed2b8d7c8943c45007114d3902e342" category="list-text">*復元ポイントの選択*ページの*クローン元*セクションで、*インスタント Snapshot とクローン*を選択します。</block>
+  <block id="5eb27b07ac88ccc12c3c2eee2489d1df" category="list-text">作成時にスナップショットを保存する場所を選択します。</block>
+  <block id="3be58c81d9fd861bc0413b8f72e39d9c" category="list-text">クローンされたデータベース設定をカスタマイズするには、*ターゲット データベース パラメータのカスタマイズ*オプションを有効にします。以前に仕様ファイルを保存している場合は、このオプションを使用してそれをアップロードし、クローンされたデータベース設定をカスタマイズできます。現在の設定を反映したデータベースのデフォルトの仕様ファイルをダウンロードすることもできます。</block>
+  <block id="12955fb7f90e9645025713968aacbab9" category="list-text">*クローン更新スケジュール*セクションで、クローンを更新するタイミングと頻度を選択します。クローンを更新すると、インスタント スナップショットが再作成され、既存のクローンが新しいクローンによって上書きされます。</block>
+  <block id="39705154f7358a24581822dc4f6d05f2" category="paragraph">Oracle Database ワークロードのクローンを分割できます。クローンを分割すると、クローンから新しいバックアップが作成されます。新しいバックアップを使用してデータベースを復元できます。</block>
+  <block id="20794590d8be25afeadb46ebb7aac87d" category="paragraph">Oracle Database ワークロードのクローンを削除できます。クローンを削除すると、オブジェクト ストアから削除され、ストレージ領域が解放されます。</block>
+  <block id="9584ee8db3d24be1a3a6e4d94ece5c2e" category="section-title">Oracle Database のリカバリポイントをマウントする</block>
+  <block id="8616a450958f68321bde3e8f34b8c9c5" category="section-title">Oracle データベース リカバリ ポイントをアンマウントする</block>
+  <block id="df197f1a2e9f772f8de9983ed94d9541" category="list-text">*ワークロード*：例：Microsoft SQL Server、ONTAP ボリューム、VMware、KVM、Hyper-V、Oracle Database、または Kubernetes。</block>
+  <block id="e1589447f05ccd92a0e9ade876573b81" category="sidebar">Oracle Database ワークロードのクローン作成</block>
 </blocks>

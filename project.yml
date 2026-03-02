@@ -178,6 +178,8 @@ sidebar:
         url: "/br-use-oracle-protection-groups.html"
       - title: Oracle Databaseワークロードのバックアップ
         url: "/br-use-oracle-backup.html"
+      - title: Oracle Database ワークロードのクローン作成
+        url: "/br-use-oracle-clone.html"
       - title: Oracle Database ワークロードのリストア
         url: "/br-use-oracle-restore.html"
       - title: リカバリポイントのマウントとアンマウント

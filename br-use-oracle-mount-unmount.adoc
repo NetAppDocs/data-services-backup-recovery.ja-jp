@@ -18,7 +18,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 
-== Oracle データベースの復元ポイントをマウントする
+== Oracle Database のリカバリポイントをマウントする
 
 データベースの保護ポリシーを構成してアーカイブ ログを保持すると、回復ポイントをマウントしてデータベースの変更履歴を表示できます。
 
@@ -50,7 +50,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 
-== Oracleデータベースの復元ポイントをアンマウントする
+== Oracle データベース リカバリ ポイントをアンマウントする
 
 データベースに加えられた変更を表示する必要がなくなった場合は、回復ポイントをマウント解除します。
 
