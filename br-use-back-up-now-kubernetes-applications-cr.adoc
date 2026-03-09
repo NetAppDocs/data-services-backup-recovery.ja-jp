@@ -88,7 +88,7 @@ kubectl apply -f local-snapshot-cr.yaml
 ** *spec.applicationRef*：（_必須_）バックアップするアプリケーションの Kubernetes 名。
 ** *spec.appVaultRef*：（_必須、spec.appVaultTargetsRefとは相互排他_）スナップショットとバックアップの保存に同じバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。
 ** *spec.appVaultTargetsRef*：（_必須、spec.appVaultRefとは相互排他_）スナップショットとバックアップを保存するために別のバケットを使用する場合、これはバックアップコンテンツを保存するAppVaultの名前です。
-** *spec.dataMover*：（_オプション_）バックアップ操作に使用するバックアップツールを示す文字列。値は大文字と小文字が区別され、 `CBS`である必要があります。
+** *spec.dataMover*：（_オプション、Trident Protectから移行したクラスタの場合は必須_）バックアップ処理に使用するバックアップツールを示す文字列。このクラスタがTrident ProtectからBackup and Recoveryに移行されている場合、値は大文字と小文字が区別され、 `CBS`である必要があります。
 ** *spec.reclaimPolicy*：（_オプション_）Backup CR が削除されたときにバックアップコンテンツ（メタデータ / ボリュームデータ）に何が起こるかを定義します。使用可能な値：
 +
 *** `Delete`

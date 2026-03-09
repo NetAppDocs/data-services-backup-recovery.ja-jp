@@ -1,0 +1,32 @@
+= ONTAP ボリュームワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+=== ONTAP ボリュームワークロードの機能強化
+
+このリリースでは、ONTAP Volumes ワークロードで次の拡張機能が導入されています：
+
+* *ソースの場所への復元*：ローカル スナップショットおよび複製されたスナップショットから、ソースの場所だけでなく別の場所にもファイルを復元できるようになりました。
+* *1 時間ごとのボリューム検出*：Dashboard は新しいボリュームをより迅速に検出して更新するようになりました。
+* *ダークサイトのサポート*：ダークサイト用の Backup and Recovery を https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab/download/61906/4.4.0/downloads["NetAppサポート サイト"]からダウンロードできるようになりました。現時点では、NetApp Backup and Recovery for dark sites は ONTAP Volumes ワークロードのみをサポートしています。
+* *Unicode 互換性の向上*：カタログのインデックス作成で Unicode 文字の処理が改善されました。
+* * FlexGroup 互換性の向上*：ONTAP FlexVol ボリュームを FlexGroup ボリュームに変換する場合、変換前に作成したバックアップを復元できるようになりました。
+* *マルチバケットのサポート*：異なるクラウド プロバイダにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。
+
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["ONTAP ボリュームワークロードの保護の概要"]を参照してください。
+
+
+
+=== VMwareワークロードの機能強化
+
+このリリースでは、VMware ワークロードに次の拡張機能が導入されています：
+
+* *オブジェクト ストアからゲスト データを復元*：オブジェクト ストレージからゲスト ファイルとフォルダーを復元できるようになりました。
+* *VMFS/NFS のクイック リストア*：別の場所にリストアするときに、クイック リストア オプションを有効にできるようになりました。有効にすると、VM メタデータ（ファイル、LUN、名前空間）のみがオブジェクト ストアから取得され、完全な復元よりも速くボリュームが使用できるようになります。
+* *Amazon FSx for NetApp ONTAP のサポート*：VMware ワークロードで、バージョン 9.13.1 以降を実行している Amazon FSx for NetApp ONTAP ストレージ システムがサポートされるようになりました。
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。

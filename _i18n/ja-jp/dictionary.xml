@@ -364,8 +364,6 @@
   <block id="eace16d66cdd93ad876c620db7456077" category="list-text">マウント</block>
   <block id="1281764038ea27ade56d7d2b8be22798" category="list-text">アンマウント</block>
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">別の場所へのリストア</block>
-  <block id="00c5709c4d9ca9f8035d5d0e33f2421e" category="list-text">VMDKをアタッチする</block>
-  <block id="097b06a0d5de05867037a2fdc678ef17" category="list-text">VMDKのデタッチ</block>
   <block id="ef18d76ed6c710e78abb28c0e09b3e30" category="list-text">vVol サポート</block>
   <block id="2cc658d562a11cd1528c2219f2d25da7" category="list-text">NVMeサポート</block>
   <block id="98dc7ecfe4c87955d5fb8b98b895eac7" category="list-text">メール統合</block>
@@ -452,7 +450,6 @@
   <block id="ff65f252d2a0aa40e634cf2ad7eaa2d3" category="list-text">*今すぐバックアップ* ボタンを使用したアドホック ボリューム バックアップは、データ保護ボリュームではサポートされていません。</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">SM-BC 構成はサポートされていません。</block>
   <block id="28014e4f484f0639d9b0151965328912" category="list-text">ONTAP は、単一のボリュームから複数のオブジェクト ストアへのSnapMirror関係のファンアウトをサポートしていません。そのため、この構成はNetApp Backup and Recoveryではサポートされていません。</block>
-  <block id="139c263dc37495a1365dde941627eb32" category="list-text">現在、オブジェクト ストアの WORM/コンプライアンス モードは、Amazon S3、Azure、 StorageGRIDでサポートされています。これは DataLock 機能と呼ばれ、クラウド プロバイダー インターフェイスではなく、 NetApp Backup and Recoveryの設定を使用して管理する必要があります。</block>
   <block id="3e6e24d49c1e2a7357bbe49c1cf7e682" category="section-title">ONTAPボリュームのリストア制限</block>
   <block id="79ec871c574dbe9adf17973bdb4bf029" category="paragraph">これらの制限は、特に明記されていない限り、ファイルとフォルダーを復元する検索と復元、および参照と復元の両方の方法に適用されます。</block>
   <block id="03a5b9815bb473e6f4be8d24abee633a" category="list-text">参照と復元では、一度に最大 100 個の個別のファイルを復元できます。</block>
@@ -462,8 +459,6 @@
   <block id="118a57e2fb1b730b4d9702fc0590ed48" category="paragraph">ONTAP 9.11.1 より前のバージョンを使用する場合、フォルダの復元はサポートされません。</block>
   <block id="caac6b6b759dd099323676db10be1564" category="list-text">ディレクトリ/フォルダの復元は、クラスタがONTAP 9.13.1 以降を実行している場合にのみ、アーカイブ ストレージに存在するデータに対してサポートされます。</block>
   <block id="e8573f3934d023dbb0b6cea67803d326" category="list-text">ディレクトリ/フォルダの復元は、クラスタがONTAP 9.13.1 以降を実行している場合にのみ、DataLock を使用して保護されているデータに対してサポートされます。</block>
-  <block id="2ad2934a6b663d3e1150684467ab796f" category="list-text">ディレクトリ/フォルダーの復元は、現在、レプリケーションやローカル スナップショットからはサポートされていません。</block>
-  <block id="b2ff0fb046b03e40e599f1561ed5ebd3" category="list-text">FlexGroupボリュームからFlexVolボリュームへのリストア、またはFlexVolボリュームからFlexGroupボリュームへのリストアはサポートされていません。</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">復元するファイルは、宛先ボリュームの言語と同じ言語を使用する必要があります。言語が同じでない場合はエラー メッセージが表示されます。</block>
   <block id="0bfb7259f1f6626c1cdf5b3afe490baa" category="list-text">Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、_高_ 復元優先度はサポートされません。</block>
   <block id="baa1235434f9122bbcf4cd93c72c3ed3" category="list-text">DP ボリュームをバックアップした後で、そのボリュームとのSnapMirror関係を解除することにした場合、 SnapMirror関係も削除するか、 SnapMirror の方向を逆にしない限り、そのボリュームにファイルを復元することはできません。</block>
@@ -1995,7 +1990,6 @@
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">VMware ワークロードを保護するための要件</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">VMware ワークロードを検出して保護するには、特定の要件が必要です。</block>
   <block id="1269e07e6a9265be5844ea32a0494a7f" category="paragraph">*ソフトウェアサポート*</block>
-  <block id="2d5a6b46412544fb6ac242fbc736934e" category="list-text">サポートされている NFS バージョン: NFS 3 および NFS 4.1</block>
   <block id="40f1a54f3602033103d74e381708e352" category="list-text">サポートされている VMware ESXi Server バージョン: 7.0U1 以上</block>
   <block id="c7d133a7d1fcc4fc9f8bf51535dc3ef0" category="list-text">サポートされている VMware vCenter vSphere バージョン: 7.0U1 以上</block>
   <block id="f3c396a6341d422a1f0e7a503896ed29" category="list-text">IPアドレス: IPv4およびIPv6</block>
@@ -4341,7 +4335,6 @@
   <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">検索と復元を有効にする前に、環境が次の要件を満たしていることを確認してください。</block>
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">従来のインデックスを使用する場合の検索と復元の要件は次のとおりです。</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">NetApp NFSボリュームを使用する</block>
-  <block id="459af9b852bd375bac17fb30c8c1b979" category="list-text">NetApp Backup &amp; Recovery では、クラウド バックアップ機能を維持しながら、アクティブなクラウド バックアップ関係を持つFlexVol volumeをFlexGroupボリュームに変換することはサポートされていません。</block>
   <block id="063090df0880212c0ba8eec878096a21" category="doc">VMware ワークロードのプレビュー機能強化</block>
   <block id="24936fb650df7af8295e75a3667becef" category="list-text">バックアップとスナップショットを別の場所に復元できるようになりました。これは、異なる VMware vCenter 展開、VMware ESXi ホスト、または VMware データストア上の VM のバージョンを管理する場合に便利です。</block>
   <block id="99ee61e75520f174d08caa35e0ad294d" category="list-text">特定の VMware 仮想ディスク (VMDK イメージ) をプライマリまたはセカンダリの場所から復元できるようになり、VM データの復元をより細かく制御できるようになりました。</block>
@@ -4999,8 +4992,6 @@
   <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">一般提供（GA）でサポートされる Microsoft Hyper-V ワークロード</block>
   <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">Microsoft Hyper-VワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。</block>
   <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">Oracle Database ワークロードの保護（プレビュー）</block>
-  <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">サポートされている接続ストレージ：ONTAP 9.13以降</block>
-  <block id="a58576b20da9581ef64dc73d9299ba68" category="list-text">NFS および VMFS データストアがサポートされています。</block>
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">一般提供（GA）でサポートされる VMware ワークロード</block>
   <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">ライセンス容量の超過</block>
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">ライセンス容量を超えると PAYGO 料金が発生します。PAYGO サブスクリプションがない場合、新しいバックアップを作成することはできませんが、既存のバックアップはサービス保証なしで復元可能です。ライセンスは期限が切れる前に必ず更新してください。ライセンスの期限が切れると、新しいバックアップが実行できなくなり、サービスが中断されます。</block>
@@ -5110,4 +5101,29 @@
   <block id="8616a450958f68321bde3e8f34b8c9c5" category="section-title">Oracle データベース リカバリ ポイントをアンマウントする</block>
   <block id="df197f1a2e9f772f8de9983ed94d9541" category="list-text">*ワークロード*：例：Microsoft SQL Server、ONTAP ボリューム、VMware、KVM、Hyper-V、Oracle Database、または Kubernetes。</block>
   <block id="e1589447f05ccd92a0e9ade876573b81" category="sidebar">Oracle Database ワークロードのクローン作成</block>
+  <block id="76c3536921b70f0616becde2e9340a54" category="doc">ONTAP ボリュームワークロードの機能強化</block>
+  <block id="78b068f24da5a7e17080acceea02e506" category="paragraph">このリリースでは、ONTAP Volumes ワークロードで次の拡張機能が導入されています：</block>
+  <block id="61f251cc47dddbc52bddd098d342b6d5" category="list-text">*ソースの場所への復元*：ローカル スナップショットおよび複製されたスナップショットから、ソースの場所だけでなく別の場所にもファイルを復元できるようになりました。</block>
+  <block id="b64975edc0e1d4d2b77bbc09821fe6c1" category="list-text">*1 時間ごとのボリューム検出*：Dashboard は新しいボリュームをより迅速に検出して更新するようになりました。</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetAppサポート サイト</block>
+  <block id="8f504b1c826d739819c7ea02c4fd893f" category="list-text">*ダークサイトのサポート*：ダークサイト用の Backup and Recovery を<block ref="e2fed6b5af5d107fdef5614adaedfcef" category="inline-link-rx"></block>からダウンロードできるようになりました。現時点では、NetApp Backup and Recovery for dark sites は ONTAP Volumes ワークロードのみをサポートしています。</block>
+  <block id="ccf9e1de6190057c9e2e1a10c6b8f07f" category="list-text">*Unicode 互換性の向上*：カタログのインデックス作成で Unicode 文字の処理が改善されました。</block>
+  <block id="a173f0fc9f4786dd11c96099dd446ec8" category="list-text">* FlexGroup 互換性の向上*：ONTAP FlexVol ボリュームを FlexGroup ボリュームに変換する場合、変換前に作成したバックアップを復元できるようになりました。</block>
+  <block id="f32d4e838dfc925da7a940c6e55acf8c" category="list-text">*マルチバケットのサポート*：異なるクラウド プロバイダにまたがるシステムごとに最大 6 つのバケットを使用して、システム内のボリュームを保護できるようになりました。</block>
+  <block id="e32587f34260a350a3a49e3604fb2a4c" category="inline-link">ONTAP ボリュームワークロードの保護の概要</block>
+  <block id="db44a854b206d5d90008224f3bb5b2da" category="paragraph">ONTAP ボリュームワークロードの保護の詳細については、<block ref="660ec036763d30562702201a56aaa402" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="f154c542c430b30dc73d2d3e87fd6f65" category="paragraph">このリリースでは、VMware ワークロードに次の拡張機能が導入されています：</block>
+  <block id="63eb1b3f5c128e6460c85c7b6e5d2bb9" category="list-text">*オブジェクト ストアからゲスト データを復元*：オブジェクト ストレージからゲスト ファイルとフォルダーを復元できるようになりました。</block>
+  <block id="7d88c93c0ec65e1bcc3564692a490a5b" category="list-text">*VMFS/NFS のクイック リストア*：別の場所にリストアするときに、クイック リストア オプションを有効にできるようになりました。有効にすると、VM メタデータ（ファイル、LUN、名前空間）のみがオブジェクト ストアから取得され、完全な復元よりも速くボリュームが使用できるようになります。</block>
+  <block id="ba95b1986315d65e4bb0f2dcb924f870" category="list-text">*Amazon FSx for NetApp ONTAP のサポート*：VMware ワークロードで、バージョン 9.13.1 以降を実行している Amazon FSx for NetApp ONTAP ストレージ システムがサポートされるようになりました。</block>
+  <block id="4313ef91d0af92358d4bfc05358d4692" category="list-text">FlexVolボリュームをFlexGroupボリュームに変換する場合、またはその逆の場合、変換されたボリュームは新しいボリュームとみなされます。変換後に、変換されたボリュームの保護を設定する必要があります。変換前に作成されたバックアップを別のボリュームに復元できます。</block>
+  <block id="d88c13a12326a1a581751edb0a83ae1b" category="list-text">オブジェクトストアのWORM/コンプライアンスモードは、現時点ではAmazon S3、Google Cloud Platform（GCP）、Azure、およびStorageGRIDでサポートされています。これはDataLock機能と呼ばれ、クラウド プロバイダインターフェイスではなく、NetApp Backup and Recovery設定を使用して管理する必要があります。</block>
+  <block id="106839ddc74bb36d184d46f6f8d5016f" category="list-text">*spec.dataMover*：（_オプション、Trident Protectから移行したクラスタの場合は必須_）バックアップ処理に使用するバックアップツールを示す文字列。このクラスタがTrident ProtectからBackup and Recoveryに移行されている場合、値は大文字と小文字が区別され、<block ref="250c51527f347066847969f002be67a2" prefix=" " category="inline-code"></block>である必要があります。</block>
+  <block id="06e1026570d8a901d8b6dedf9e5d6f66" category="list-text">*クイック リストア*：このオプションを有効にすると、Backup and Recoveryはオブジェクト ストアからVMメタデータ（ファイル、LUN、および名前空間）のみをリストアするように指示されます。これにより、フル リストアよりも速くボリュームを利用できるようになります。</block>
+  <block id="5b6eae3d36833d14f04c696b7a2e75a9" category="list-text">NFSv3、NFSv4.1、および VMFS データストアがサポートされています。</block>
+  <block id="eff24131b4bb3e0f34de9a437296c19b" category="list-text">サポートされている接続ストレージ：</block>
+  <block id="9e2d6035ec7a18aa99db06aab17683c8" category="list-text">ONTAP 9.13.1 以降</block>
+  <block id="84926f15fa96e5fbcf319691a6c909e3" category="list-text">Amazon FSx for NetApp ONTAP バージョン 9.13.1 以降を実行しているストレージ システム</block>
+  <block id="d683472bc4b099b7787d3a9d8df4673e" category="admonition">*独自のバケットを使用する* を選択した場合は、バックアップ先として作成するコンテナーの名前が Azure ストレージ アカウントと同じであることを確認してください。</block>
+  <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026年3月9日</block>
 </blocks>

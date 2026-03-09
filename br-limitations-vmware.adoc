@@ -20,8 +20,6 @@ NetApp Backup and Recovery の VMware ワークロードでは、以下のアク
 
 * マウント
 * アンマウント
-* VMDKをアタッチする
-* VMDKのデタッチ
 * vVol サポート
 * NVMeサポート
 * メール統合
