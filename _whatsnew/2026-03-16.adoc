@@ -1,0 +1,13 @@
+= VMwareワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました：
+
+*スケジュール階層ごとのVM整合性サポート*：VMwareワークロードの保護ポリシーを設定する際に、特定のスケジュール階層に対してVM整合性バックアップとアプリケーション整合性バックアップを有効にできるようになりました。年間、月間、週間の各階層に対応しています。
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。

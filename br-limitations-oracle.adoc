@@ -20,5 +20,3 @@ NetApp Backup and RecoveryのOracle Databaseワークロードのプレビュー
 
 * オフライン バックアップ
 
-
-Oracle Database は、Oracle Database ワークロードのプライベートプレビューバージョンで NFS、SAN、または ASM SAN を使用したスタンドアロン デプロイメントとしてのみサポートされます。
