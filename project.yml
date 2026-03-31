@@ -172,6 +172,8 @@ sidebar:
         url: "/br-use-oracle-protect-overview.html"
       - title: Oracle Databaseワークロードを検出
         url: "/br-start-discover-oracle.html"
+      - title: Oracleデータベースを設定する
+        url: "/br-start-configure-oracle-database.html"
       - title: Oracle Database ワークロードの保護グループの作成と管理
         url: "/br-use-oracle-protection-groups.html"
       - title: Oracle Databaseワークロードのバックアップ
@@ -180,7 +182,7 @@ sidebar:
         url: "/br-use-oracle-clone.html"
       - title: Oracle Database ワークロードのリストア
         url: "/br-use-oracle-restore.html"
-      - title: リカバリポイントのマウントとアンマウント
+      - title: リカバリ ポイントのマウント、アンマウント、およびカタログ化
         url: "/br-use-oracle-mount-unmount.html"
     - title: Kubernetesワークロードを保護する
       entries:

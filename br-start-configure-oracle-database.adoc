@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: br-start-configure-oracle-database.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle, configure 
+summary: NetApp Backup and Recoveryで Oracle データベースを設定します。 
+---
+= NetApp Backup and RecoveryでOracleデータベースを設定する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+新規のスタンドアロンまたはクラスタ化されたOracleデータベースの認証設定とノード設定を変更できます。NetApp Backup and Recoveryは、これらの変更なしにデータベースを保護します。検出後に環境が変更された場合は、データベース設定を更新する必要があるかもしれません。
+
+*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+
+
+
+== Oracleデータベースを設定する
+
+スタンドアロンまたはクラスタ化されたOracleデータベースの構成を変更します。
+
+.手順
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
+. *ワークロード*の下で、*Oracle*タイルを選択します。
+. Oracle インベントリで、* Databases * メニューを選択します。
+. データベースの一覧から、構成するデータベースに対して*データベースの構成*（スタンドアロンデータベース）または*RACデータベースの構成*（クラスタデータベース）を選択します。
+. *データベース設定の構成*：スタンドアロンまたはクラスタ化されたデータベースの認証設定を構成します。
++
+** ホストオペレーティングシステムのみで認証を行うには、*OS認証*を選択してください。NetApp Backup and Recoveryでは、検出時に指定したホスト認証情報が使用されます。
+** データベースに認証情報が必要な場合は、*Database authentication*を選択します。次に、既存の認証情報を選択するか新しい認証情報を追加し、接続に使用するポートを選択します。
+
+
+. *RMANカタログの構成*：保護ポリシーで自動カタログ作成が有効になっている場合、または手動でリカバリポイントをカタログ化する場合に、このデータベースまたはクラスタのバックアップおよびリカバリ操作のメタデータを保存する場所を選択します。
++
+** *ターゲット制御ファイル*を選択して、メタデータをデータベースのターゲット制御ファイルに保存します。
+** RMANリカバリカタログにメタデータを格納するには、*カタログデータベース*を選択します。リカバリカタログに接続するためのクレデンシャルとTransparent Network Substrate（TNS）名を選択します。
++
+RMANリカバリカタログは、RMANユーティリティが登録済みデータベースのバックアップおよびリカバリ操作に関するメタデータを格納するために使用する、独立したデータベーススキーマです。ターゲットの制御ファイルが失われた場合や履歴データが必要な場合に、冗長性と長期保持を提供します。このオプションを有効にすると、データファイルとアーカイブログのコピーがRMANリポジトリに登録され、RMANがレポート作成やリカバリのためにこれらのコピーを追跡および管理できるようになります。
+
+
+
+. *ノードの設定*（クラスタ化されたデータベースのみ）：矢印ボタンを使用して、保護対象からノードを追加または削除したり、ノードの優先順位を変更したりします。
++
+優先度の高いノードが優先的に保護されます。優先度の低いノードは、優先度の高いノードに到達できない場合、または異常な状態にある場合にのみ保護されます。
+
+. 完了したら、*Done*を選択します。
+
+
+.結果
+Backup and Recoveryは、新しい設定を使用してデータベースに接続します。

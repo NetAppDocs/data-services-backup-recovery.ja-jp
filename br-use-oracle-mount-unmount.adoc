@@ -4,7 +4,7 @@ permalink: br-use-oracle-mount-unmount.html
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
 ---
-= NetApp Backup and Recoveryを使用して Oracle データベースのリカバリ ポイントをマウントおよびアンマウントする
+= NetApp Backup and RecoveryによるOracle Databaseリカバリポイントのマウント、アンマウント、カタログ化
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 [role="lead"]
-リカバリ操作を実行するために制御された状態でデータベースにアクセスする必要がある場合は、Oracle データベースのリカバリ ポイントをマウントすることをお勧めします。
+リカバリ操作を実行するために、制御された状態でデータベースにアクセスする必要がある場合は、Oracle Databaseリカバリポイントをマウントすることを推奨します。バックアップおよびリカバリ操作のメタデータをRMANリカバリカタログに保存する必要があり、メタデータを自動的にカタログ化するオプションが有効になっていない場合は、リカバリポイントを手動でカタログ化します。
 
 
 
@@ -66,4 +66,24 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 . リストから回復ポイントを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *アンマウント*。
 . *アンマウント*を選択してアクションを確認します。
+
+
+
+
+== Oracle データベース リカバリ ポイントをカタログ化する
+
+バックアップおよびリカバリ操作のメタデータを保持する必要がある場合は、リカバリポイントを手動でカタログ化してください。メタデータは、データベース用に選択した *RMAN カタログの構成* 設定に従って保存されます（デフォルトではターゲット制御ファイル）。関連する保護ポリシーで自動カタログ作成が無効になっている場合にのみ、手動でカタログを作成する必要があります。
+
+.手順
+. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
+. Oracle タイルを選択します。
+. [バックアップとリカバリ] メニューで、[*インベントリ*] を選択します。
+. リスト内の Oracle ワークロードについては、「*表示*」を選択します。
+. *データベース*メニューを選択します。
+. リストからデータベースを選択し、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護の詳細を表示*。
++
+そのデータベースの回復ポイントのリストが表示されます。
+
+. リストからリカバリポイントを選択し、アクションアイコンimage:../media/icon-action.png["アクションオプション"] > *カタログ*を選択します。
+. *Catalog* を選択して操作を確定します。
 
