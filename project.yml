@@ -42,8 +42,6 @@ sidebar:
       url: "/task-setup-ca-certificates.html"
     - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
       url: "/br-start-setup.html"
-    - title: NetApp Backup and Recoveryにログイン
-      url: "/br-start-login.html"
     - title: バックアップターゲットの検出
       url: "/br-start-discover-backup-targets.html"
     - title: さまざまなNetApp Backup and Recoveryワークロードに切り替える
@@ -54,6 +52,8 @@ sidebar:
       url: "/br-rbac-setup.html"
   - title: NetApp Backup and Recoveryを使用する
     entries:
+    - title: NetApp Backup and Recoveryにログイン
+      url: "/br-start-login.html"
     - title: ダッシュボードで保護の状態を確認する
       url: "/br-use-dashboard.html"
     - title: バックアップと復元を管理するポリシーを作成する
@@ -134,13 +134,13 @@ sidebar:
           url: "/br-use-vmware-restore.html"
         - title: 特定の仮想ディスクを復元する
           url: "/br-use-vmware-restore-vmdks-from-backups.html"
-        - title: ゲストファイルとフォルダを復元する
+        - title: ファイルとフォルダを復元する
           entries:
           - title: ワークフロー、前提条件、制限事項
             url: "/br-use-vmware-restore-guest-files-and-folders-overview.html"
-          - title: VMDKからのゲスト ファイルとフォルダのリストア
+          - title: VMDKからファイルとフォルダを復元する
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
-          - title: ゲストファイルの復元のトラブルシューティング
+          - title: ファイルとフォルダのリストアのトラブルシューティング
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
     - title: KVMワークロードを保護する
       entries:

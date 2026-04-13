@@ -1,0 +1,68 @@
+= ONTAP ボリュームワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+=== ONTAP ボリュームワークロードの機能強化
+
+今回のリリースでは、ONTAP Volumes ワークロードに以下の機能強化が導入されました：
+
+*NetApp MetroCluster アクティブ / アクティブ構成のサポート*：NetApp Backup and Recovery for Volumes ワークロードで、アクティブ / アクティブ構成の MetroCluster がサポートされるようになりました。
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["ONTAP ボリュームワークロードの保護の概要"]を参照してください。
+
+
+
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、Kubernetes ワークロードに次の保護ポリシーの機能強化が導入されます：
+
+* *保護ポリシーの編集*：Kubernetesワークロードの保護ポリシーを変更する必要がある場合は、編集できるようになりました
+* *ディスク間サポート*：ディスク間バックアップアーキテクチャを使用して Kubernetes 保護ポリシーを設定できるようになりました。
+* *Google Cloud Platform ストレージ バケットのサポート*：Kubernetes の保護ポリシーを設定して、Google Cloud Platform ストレージ バケットにバックアップできるようになりました。
+
+
+保護ポリシーの詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["NetApp Backup and Recoveryでの保護ポリシーの作成と管理"]を参照してください。
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。
+
+
+
+=== Hyper-V ワークロードの機能強化
+
+今回のリリースでは、Hyper-V ワークロードに以下の機能強化が導入されました。
+
+* *ジョブ処理の改善*：NetApp Backup and Recoveryで、複数の同時実行ジョブをより効率的に処理できるようになりました。
+* *SAN サポート（プレビュー）*：NetApp Backup and Recovery で、SAN ストレージに保存されている Hyper-V VM の保護がサポートされるようになりました。
+
+
+Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+
+
+
+=== KVMワークロードの機能強化
+
+今回のリリースでは、KVMワークロードに以下の機能強化が導入されました。
+
+* *ジョブ処理の改善*：NetApp Backup and Recoveryで、複数の同時実行ジョブをより効率的に処理できるようになりました。
+* *代替場所への復元（プレビュー）*: KVM VMを代替の場所に復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-restore.html["NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する"]を参照してください。
+
+
+KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+
+
+
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました：
+
+* *タグベースの保護*：VMwareワークロード向けのNetApp Backup and Recoveryは、NFSおよびVMFSボリュームに保存されているVMのタグベースの保護をサポートするようになり、個々のVMやデータストアではなくvCenterタグから保護グループを構築できるようになりました。vCenterでVMとデータストアにタグを付けると、NetApp Backup and Recoveryは手動でのグループ管理なしに、それらを自動的に検出して今後のバックアップに含めます。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protection-groups.html["保護グループの作成と管理"]を参照してください。
+* *代替ストレージシステムへの復元*：元の（プライマリ）ストレージシステムが完全に利用できない場合でも、仮想マシンを代替ストレージシステムに復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore.html["VMwareワークロードを復元する"]を参照してください。
+* *Linux VMへのファイルの復元*：Linux VMにVMファイルとフォルダを復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html["ファイルとフォルダを復元する"]を参照してください。
+* *ファイルとフォルダの復元時のプロキシVMサポート* - ソースvCenterでホストされている他のVMにファイルとフォルダを復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore.html["VMwareワークロードを復元する"]を参照してください。
+* *再帰的なファイルおよびフォルダ検索* - VMDK 全体から特定のファイルまたはフォルダを検索できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore.html["VMwareワークロードを復元する"]を参照してください。
+* *ジョブ処理の改善*：NetApp Backup and Recoveryで、複数の同時実行ジョブをより効率的に処理できるようになりました。
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。

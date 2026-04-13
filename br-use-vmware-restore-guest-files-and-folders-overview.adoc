@@ -14,7 +14,7 @@ summary: WindowsゲストOSの仮想マシン ディスク（VMDK）からファ
 
 
 [role="lead"]
-WindowsゲストOSの仮想マシン ディスク（VMDK）からファイルやフォルダをリストアできます。
+WindowsまたはLinuxゲストOS上で、仮想マシンディスク（VMDK）からファイルやフォルダを復元できます。
 
 
 
@@ -44,25 +44,13 @@ VMDK ファイルを参照し、復元する 1 つ以上のファイルまたは
 
 == ゲスト ファイルとフォルダをリストアするための前提条件
 
-Windows ゲスト OS 上の VMDK からファイルまたはフォルダーを復元する前に、すべての要件を確認してください。
+VMDKからファイルやフォルダをリストアする前に、すべての要件を確認してください。
 
 * VMware Toolsがインストールされ、実行されている必要があります。
 +
-NetApp Backup and Recovery は、VMware ツールからの情報を使用して、VMware ゲスト OS への接続を確立します。
-
-* Windows ゲスト OS は Windows Server 2008 R2 以降を実行している必要があります。
-+
-サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^] 。
-
-* ターゲット VM の資格情報には、ユーザー名が「Administrator」の組み込みドメインまたはローカル管理者アカウントが使用されます。復元操作を開始する前に、仮想ディスクを接続する VM の資格情報を構成します。アタッチ操作と復元操作の両方に資格情報が必要です。ワークグループ ユーザーは、組み込みのローカル管理者アカウントを使用できます。
-+
-
-IMPORTANT: 組み込みの管理者アカウントではなく、VM内の管理者権限を持つアカウントを使用する必要がある場合は、ゲストVMのUACを無効にする必要があります。
+NetApp Backup and Recoveryは、VMwareツールの情報を使用して、VMwareゲストOSへの接続を確立します。
 
 * 復元元のバックアップ スナップショットと VMDK を知っておく必要があります。
-+
-NetApp Backup and Recovery、復元するファイルまたはフォルダの検索はサポートされていません。始める前に、スナップショット内のファイルまたはフォルダーと対応する VMDK の場所を知っておく必要があります。
-
 * 接続する仮想ディスクは、NetApp Backup and Recoveryバックアップに含まれている必要があります。
 +
 復元するファイルまたはフォルダを含む仮想ディスクは、NetApp Backup and Recoveryを使用して実行された VM バックアップに含まれている必要があります。
@@ -75,6 +63,38 @@ NetApp Backup and Recovery、復元するファイルまたはフォルダの検
 
 
 
+ゲストOSのサポートに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^]を参照してください。
+
+
+
+=== Windowsゲスト
+
+* Windows ゲスト OS は Windows Server 2008 R2 以降を実行している必要があります。
++
+サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^] 。
+
+* ターゲット VM の資格情報には、ユーザー名が「Administrator」の組み込みドメインまたはローカル管理者アカウントが使用されます。復元操作を開始する前に、仮想ディスクを接続する VM の資格情報を構成します。アタッチ操作と復元操作の両方に資格情報が必要です。ワークグループ ユーザーは、組み込みのローカル管理者アカウントを使用できます。
++
+
+IMPORTANT: 組み込みの管理者アカウントではなく、VM内の管理者権限を持つアカウントを使用する必要がある場合は、ゲストVMのUACを無効にする必要があります。
+
+
+
+
+
+=== Linuxゲスト
+
+* 以下のゲストOSディストリビューションがサポートされています：
++
+** Red Hat Enterprise Linux
+** Ubuntu
+** Debian
+
+
+* 実行アカウントにはroot権限またはsudo権限が必要です。
+* クロスVM復元（異なるLinux VMへの復元）を行う場合、ターゲットVMでSSHが実行されている必要があります。
+
+
 
 
 == ゲスト ファイル リストアに関する制限事項
@@ -85,10 +105,7 @@ NetApp Backup and Recovery、復元するファイルまたはフォルダの検
 * 暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。
 * ファイルまたはフォルダを暗号化されたフォルダにリストアすることはできません。
 * 隠しファイルとフォルダーはファイル参照ページに表示されますが、フィルタリングすることはできません。
-* LinuxゲストOSからはリストアできません。
-+
-LinuxゲストOSを実行しているVMからファイルやフォルダをリストアすることはできません。ただし、VMDKを接続し、ファイルとフォルダを手動でリストアすることもできます。サポートされているゲストOSの最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool（IMT）"^] 。
-
+* 異なるオペレーティングシステムを搭載したゲスト間では、ファイルやフォルダを復元することはできません（別のVMに復元する場合、デスティネーションのOSタイプはソースのOSタイプと同じである必要があります）。
 * NTFSファイルシステムからFATファイルシステムにリストアすることはできません。
 +
 NTFS形式からFAT形式にリストアしようとした場合、FATファイルシステムはWindowsセキュリティ属性をサポートしていないため、NTFSセキュリティ記述子はコピーされません。
