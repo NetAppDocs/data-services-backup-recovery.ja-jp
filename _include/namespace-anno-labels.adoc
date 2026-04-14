@@ -20,7 +20,7 @@ helm upgrade trident-protect -n trident-protect netapp-trident-protect/trident-p
   --reuse-values
 ----
 
-NOTE: 復元またはフェイルオーバー操作を実行する場合、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定されたネームスペースのアノテーションとラベルは、復元またはフェイルオーバー操作から除外されます。これらの設定がHelmの初期インストール時に構成されていることを確認してください。詳細については、link:../trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
+NOTE: リストアまたはフェイルオーバー操作を実行すると、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー操作から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
 
 Helm を使用して `--create-namespace`フラグを指定してソースアプリケーションをインストールした場合、 `name`ラベルキーには特別な処理が適用されます。リストアまたはフェイルオーバープロセス中に、 Trident Protect はこのラベルをデスティネーションネームスペースにコピーしますが、ソースからの値がソースネームスペースと一致する場合は、値をデスティネーションネームスペースの値に更新します。この値がソースネームスペースと一致しない場合は、変更されずにデスティネーションネームスペースにコピーされます。
 
