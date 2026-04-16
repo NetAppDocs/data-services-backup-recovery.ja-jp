@@ -2461,12 +2461,8 @@
   <block id="22f12d99e813b34048e25ac4a5f568f3" category="section-title">ボリュームのすべてのバックアップファイルを削除する</block>
   <block id="a8ba6304562632a6eb4762aebfe0d175" category="paragraph">ボリュームのすべてのバックアップを削除すると、そのボリュームの今後のバックアップも無効になります。</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">その他のアイコン</block>
-  <block id="fac3794c7ab19ecf79400a46e7b334b1" category="list-text">*ボリューム*タブから、<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>ソースボリュームの[詳細とバックアップリスト]を選択します。</block>
   <block id="782b223a2a5766a12495d35a0f0fc4a1" category="paragraph">すべてのバックアップ ファイルのリストが表示されます。</block>
-  <block id="2c9220461da540ceac8b243e96929a74" category="list-text">*アクション* &gt; *すべてのバックアップを削除*を選択します。</block>
-  <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">ボリューム名を入力します。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">ボリュームの単一のバックアップファイルを削除する</block>
-  <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">複製されたボリューム (データ保護ボリューム) は削除できません。</block>
   <block id="c6f11bef049f9978b6acc052d17daf5a" category="list-text">*ボリューム*タブから、<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>ソースボリュームの[ボリュームの詳細を表示]を選択します。</block>
   <block id="f92abbb1e1dd381a84bc092e3bc1232f" category="list-text">削除するバックアップ ファイルの種類を確認するには、[*スナップショット*] または [*バックアップ*] を選択します。</block>
   <block id="8dac01775d5cf014de7509d0b8b228e4" category="list-text">選択<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>削除するボリューム バックアップ ファイルを選択し、[削除] を選択します。</block>
@@ -2477,10 +2473,8 @@
   <block id="495f64bce7d9d754a435527baf769353" category="paragraph">この機能は、システムでONTAP 9.12.1 以降を実行している場合にのみ使用できます。</block>
   <block id="1173c80b35af26bafcc4b74670bfa9c8" category="inline-link">そこからボリュームを削除します</block>
   <block id="8e219be71b8bc390ef2ad2ec3a99ccae" category="paragraph">NetApp Backup and Recoveryユーザー インターフェイスからソース ボリュームを削除することはできません。ただし、コンソールの*システム*ページでボリュームの詳細ページを開いて、<block ref="65a826e779230e29e5ca1795b6b89aba" category="inline-link-rx"></block> 。</block>
-  <block id="ccabb5f58c34ffd48f5d3b3d41985f1a" category="admonition">関係が削除されると、個々のボリュームのバックアップ ファイルを削除することはできません。ただし、ボリュームのすべてのバックアップを削除することは可能です。</block>
   <block id="07351083dae4540a45ff30e023e217c2" category="list-text">*ボリューム*タブから、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ソースボリュームの*バックアップ* &gt; *関係の削除*を選択します。</block>
   <block id="97966562c30303c0bc168db1ef4e82e6" category="section-title">システムのNetApp Backup and Recoveryを非アクティブ化する</block>
-  <block id="0f6ffb20cbd2ef0bd7c4d4ab751ef397" category="paragraph">システムに対してNetApp Backup and Recoveryを非アクティブ化すると、システム上の各ボリュームのバックアップが無効になり、ボリュームを復元する機能も無効になります。既存のバックアップは削除されません。これにより、このシステムからバックアップ サービスの登録が解除されるわけではありません。基本的には、すべてのバックアップおよび復元アクティビティを一定期間一時停止できるようになります。</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">バックアップを削除する</block>
   <block id="150316ac807c8abc9de05ff5720178a5" category="paragraph">バックアップに使用する容量については、クラウドプロバイダーからオブジェクトストレージの料金が引き続き請求されます。<block ref="f0fba6094ff5354e1300b0446d643e3c" category="inline-xref-macro-rx"></block> 。</block>
   <block id="a0fb50abe315f82d405a6dfa5e9af373" category="list-text">_バックアップ設定ページ_から、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>バックアップを無効にするシステムで、[*バックアップの無効化*] を選択します。</block>
@@ -4138,7 +4132,6 @@
   <block id="44b2c63b1441a7eef6175bc2818c45c0" category="paragraph">ボリュームの詳細とスナップショットのリストが表示されます。</block>
   <block id="2e3f296276fc537735df961d32dd7d12" category="cell">スナップショットの増分転送を一時停止して、宛先ボリュームを更新します。増分更新を再開したい場合は、後で再開できます。</block>
   <block id="695fbf9213e2d5d1e929e9356fa04c37" category="paragraph">このアクションはスナップショットや複製されたボリュームには影響しないことに注意してください。これらの種類のバックアップ ファイルは削除されません。</block>
-  <block id="241f8ce89369b1ae16481599cd708881" category="paragraph">不要になったバックアップ ファイルを 1 つ削除できます。これには、ボリューム スナップショットの単一のバックアップまたはオブジェクト ストレージ内のバックアップの単一のバックアップの削除が含まれます。</block>
   <block id="9c01aed76561204d094a863f38d38ad2" category="paragraph">ボリュームの詳細が表示され、*スナップショット*、*レプリケーション*、または*バックアップ*を選択して、ボリュームのすべてのバックアップ ファイルのリストを表示できます。デフォルトでは、利用可能なスナップショットが表示されます。</block>
   <block id="d525060e9ad215c3aa2a00862d266e25" category="list-text">*既存のスナップショットをバックアップ コピーとしてオブジェクト ストレージにエクスポートする*: このシステムで選択したバックアップ スケジュール ラベル (たとえば、毎日、毎週など) に一致する、このシステムのボリュームのローカル スナップショットがある場合は、この追加プロンプトが表示されます。このボックスをオンにすると、すべての履歴スナップショットがバックアップ ファイルとしてオブジェクト ストレージにコピーされ、ボリュームの保護が最も完全になります。</block>
   <block id="7c5de50c41f0a8634817597808c6df4b" category="paragraph">NetApp Backup and Recovery はボリュームの初期バックアップを開始します。複製されたボリュームとバックアップ ファイルのベースライン転送には、プライマリ ストレージ システム データの完全なコピーが含まれます。後続の転送には、スナップショットに含まれるプライマリ データの差分コピーが含まれます。</block>
@@ -5275,4 +5268,17 @@
   <block id="cc306461c288d34376cc4d746276d7cd" category="paragraph">仮想ディスクファイルを参照または検索し、復元するファイルまたはフォルダを1つ以上選択します。</block>
   <block id="3277407828b8713b5f9be81275930144" category="list-text">プロキシVMを使用するには、プロキシVMを設定する必要があります。</block>
   <block id="2770d470ed8c5f3c1a3f955553de9580" category="paragraph">仮想ディスクをプロキシVMに接続する場合は、接続およびリストア処理を開始する前にプロキシVMを設定しておく必要があります。</block>
+  <block id="af2c1f489f4f9d807eced3ce9373d494" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。ボリュームのバックアップ関係を削除する前に、そのボリュームのバックアップファイルを削除してください。</block>
+  <block id="cfa2bf6d634376c1523db558d932eaf5" category="list-text">* Volumes * メニューから、ソースボリュームの <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> をクリックし、* Manage backups &gt; View backup * を選択します。</block>
+  <block id="f74e6d79341b7e46d6c52bdcd8276a98" category="list-text">リストからバックアップを選択し、*Actions &gt; Delete all Backups* を選択します。</block>
+  <block id="4ca052e900c34762a65354caedd304de" category="list-text">ボリューム名を入力して削除を確定します。</block>
+  <block id="a8bb7b9012738cd41e48f167d1714196" category="list-text">*詳細設定*エリアを展開します。</block>
+  <block id="afdbab0392d56d54bcc63c43d76d3df9" category="list-text">*Force delete backups* で、すべてのバックアップを強制削除するかどうかを選択します。</block>
+  <block id="90c8ee9391c34f8b5ae2ca133a2fcc2f" category="paragraph">まれに、バックアップに対するNetApp Backup and Recoveryのアクセスを取り消す必要がある場合があります。たとえば、Backup and Recoveryがバックアップバケットへのアクセスを失った場合や、バックアップがDataLockで保護されているが不要になった場合などです。ボリュームおよびシステムレベルでバックアップを強制削除するには、このオプションを使用します。</block>
+  <block id="13f46cde2a09e7db91e4561b9c4a0cd6" category="admonition">このオプションは、徹底的なクリーンアップが必要な場合にのみ使用してください。有効にすると、NetApp Backup and Recoveryは、これらのバックアップにアクセスしなくなります（オブジェクトがクラウドストレージに残っている場合でも）。クラウド プロバイダから手動で削除する必要があります。</block>
+  <block id="2e3d3d23fe0a12335b64a112f20e2924" category="paragraph">不要になった個々のバックアップを削除します。レプリケートされたボリューム（データ保護ボリューム）は削除できません。</block>
+  <block id="24a354b4e93e0d1659baa023a11ddcda" category="inline-xref">ボリュームのすべてのバックアップファイルを削除します</block>
+  <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。ただし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。しかし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。ボリュームのバックアップ関係を削除する必要がある場合は、まずそのボリュームのバックアップを削除してから、バックアップ関係を削除してください。</block>
+  <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">システムのNetApp Backup and Recoveryを無効化すると、既存のバックアップを削除せずに、すべてのボリュームのバックアップとリストアが一時停止されます。これにより、このシステムからバックアップサービスの登録を解除することなく、一定期間すべてのバックアップおよびリストアアクティビティを一時停止できます。</block>
 </blocks>
