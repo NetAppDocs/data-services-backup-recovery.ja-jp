@@ -4779,7 +4779,6 @@
   <block id="8d8a8010684a930aa7760c829cad4141" category="list-text">*labelSelector*：（_オプション_）ラベルに基づいてクラスタースコープのリソースをフィルタリングします。</block>
   <block id="5f47e505a6f61f7f97fe140353dc6594" category="list-text">必要に応じて、次のアノテーションを設定します：</block>
   <block id="57320d49ea044bfa493c42beb1df6cfe" category="inline-link-macro">グローバル ファイルシステム フリーズ設定</block>
-  <block id="2d4560ac7467fc580503e1a2ec64edbc" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_オプション_）このアノテーションは、KubeVirt環境など、スナップショットの前にファイルシステムのフリーズが発生する仮想マシンから定義されたアプリケーションにのみ適用されます。スナップショット中にこのアプリケーションがファイルシステムに書き込むことができるかどうかを指定します。trueに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムに書き込むことができます。falseに設定すると、アプリケーションはグローバル設定を無視し、スナップショット中にファイルシステムがフリーズされます。指定されていても、アプリケーション定義にアプリケーションの仮想マシンがない場合、アノテーションは無視されます。指定されていない場合、アプリケーションは<block ref="a6fb49ce3deb125e56649f63b2a21282" category="inline-link-macro-rx"></block>に従います。</block>
   <block id="8f13f2f073acc52149f6e8567d13e534" category="list-text">*protect.trident.netapp.io/protection-command*：（_オプション_）この注釈を使用して、NetApp Backup and Recoveryにアプリケーションの保護または保護の停止を指示します。指定可能な値は<block ref="124c16e5bae30d956b37ef14c9a00ab4" prefix=" " category="inline-code"></block>または<block ref="354492320803067b5a2cd287e209154d" prefix=" " category="inline-code"></block>です。</block>
   <block id="f0d0a63fd9731679f5ea79603dba4d1f" category="list-text">*protect.trident.netapp.io/protection-policy-name*：（_オプション_）このアノテーションを使用して、このアプリケーションを保護するために使用するNetApp Backup and Recovery保護ポリシーの名前を指定します。この保護ポリシーは、NetApp Backup and Recoveryにすでに存在している必要があります。</block>
   <block id="1fdb8b98325df025bfd256fc475c0986" category="paragraph">アプリケーションがすでに作成された後にこのアノテーションを適用する必要がある場合は、次のコマンドを使用できます：</block>
@@ -5286,4 +5285,5 @@
   <block id="4f06e500210ecec059ecf486106df9e6" category="list-text">*ASA r2 SANサポート*：VMwareワークロードは、NetApp ASA r2 SAN専用環境でホストされているVMFSデータストア上のVMの保護をサポートするようになりました。</block>
   <block id="fe6a65d4e5dee2ab8e25b78186c2fa25" category="list-text">ASA r2 SAN専用システム（ONTAP 9.17.1以降が必要）</block>
   <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026年4月20日</block>
+  <block id="15c76b732e7da21111f18374ed2e9ae6" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_オプション_）このアノテーションは、KubeVirt環境など、スナップショットの前にファイルシステムのフリーズが発生する仮想マシンから定義されたアプリケーションにのみ適用されます。スナップショット作成中にこのアプリケーションがファイルシステムに書き込みできるかどうかを指定します。trueに設定すると、アプリケーションはグローバル設定を無視し、スナップショット作成中にファイルシステムへの書き込みが可能になります。falseに設定すると、アプリケーションはグローバル設定を無視し、スナップショット作成中はファイルシステムがフリーズします。指定されていても、アプリケーション定義に仮想マシンが含まれていない場合、このアノテーションは無視されます。指定されていない場合、アプリケーションは<block ref="3047941e3fa7c2760a995edc5fae820b" category="inline-link-rx"></block>に従います。</block>
 </blocks>
