@@ -6,12 +6,18 @@
 
 == リストアおよびフェイルオーバー処理中のネームスペースのアノテーションとラベル
 
-復元およびフェイルオーバー処理中に、デスティネーションネームスペースのラベルとアノテーションは、ソースネームスペースのラベルとアノテーションと一致するように作成されます。デスティネーションネームスペースに存在しないソースネームスペースのラベルまたはアノテーションが追加され、既存のラベルまたはアノテーションはソースネームスペースの値と一致するように上書きされます。デスティネーションネームスペースにのみ存在するラベルまたはアノテーションは変更されません。
+リストアおよびフェイルオーバー時には、宛先の名前空間ラベルと注釈がソースに合わせて更新されます（ソースのキーは宛先のキーに追加または上書きされますが、宛先にのみ存在するキーは変更されません）。
 
 
-NOTE: Red Hat OpenShiftを使用する場合は、OpenShift環境における名前空間アノテーションの重要な役割に注意することが重要です。名前空間アノテーションにより、リストアされたポッドがOpenShiftセキュリティコンテキスト制約（SCC）で定義された適切な権限とセキュリティ設定に準拠し、権限の問題なくボリュームにアクセスできるようになります。詳細については、link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/authentication_and_authorization/managing-pod-security-policies["OpenShiftセキュリティコンテキスト制約ドキュメント"^]を参照してください。
+NOTE: Red Hat OpenShiftでは、ネームスペースアノテーションは、リストアされたポッドが正しいセキュリティコンテキスト制約と権限を受け取ることを保証し、ボリュームへのアクセスや権限エラーなしでの実行を可能にするため重要です。詳細については、link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/authentication_and_authorization/managing-pod-security-policies["OpenShiftセキュリティコンテキスト制約ドキュメント"^]を参照してください。
 
-リストアまたはフェイルオーバー処理を実行する前にKubernetes環境変数 `RESTORE_SKIP_NAMESPACE_ANNOTATIONS`を設定することで、デスティネーションネームスペース内の特定のアノテーションが上書きされるのを防ぐことができます。例：
+Kubernetes環境変数を設定する
+
+[listing]
+----
+RESTORE_SKIP_NAMESPACE_ANNOTATIONS
+----
+復元またはフェイルオーバーの前に、特定の宛先ネームスペースの注釈が上書きされないようにします。例：
 
 [source, console]
 ----
@@ -20,15 +26,15 @@ helm upgrade trident-protect -n trident-protect netapp-trident-protect/trident-p
   --reuse-values
 ----
 
-NOTE: リストアまたはフェイルオーバー操作を実行すると、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー操作から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
+NOTE: リストアまたはフェイルオーバー中に、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー処理から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
 
-Helm を使用して `--create-namespace`フラグを指定してソースアプリケーションをインストールした場合、 `name`ラベルキーには特別な処理が適用されます。リストアまたはフェイルオーバープロセス中に、 Trident Protect はこのラベルをデスティネーションネームスペースにコピーしますが、ソースからの値がソースネームスペースと一致する場合は、値をデスティネーションネームスペースの値に更新します。この値がソースネームスペースと一致しない場合は、変更されずにデスティネーションネームスペースにコピーされます。
+Helm を `--create-namespace`フラグとともに使用してソースアプリケーションをインストールした場合、Trident Protect は名前ラベルをデスティネーションネームスペースにコピーします。ラベルの値がソースネームスペース名と一致する場合は、デスティネーションネームスペース名に置き換えられます。一致しない場合は、そのまま残されます。
 
 
 
 === 例
 
-次の例は、それぞれ異なる注釈とラベルを持つソース名前空間と宛先名前空間を示しています。操作の前後の宛先名前空間の状態や、宛先名前空間で注釈とラベルがどのように結合または上書きされるかを確認できます。
+次の例では、異なるラベルと注釈を持つソースネームスペースと宛先ネームスペースを示し、操作の前後の宛先ネームスペースを表示することで、キーがどのように追加、マージ、または上書きされるかを説明しています。
 
 
 

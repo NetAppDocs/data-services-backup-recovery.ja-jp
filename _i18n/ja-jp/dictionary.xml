@@ -4555,7 +4555,6 @@
   <block id="40a9530583ad3747ca30675858b0a6cd" category="list-text"><block ref="101809cc7793764f39e2d5fc223ea04c" category="inline-link-rx"></block>AWS リソースの認証情報の詳細については、こちらを参照してください。</block>
   <block id="40a81a4873df306bd0d241dc6c5f81ba" category="admonition">ここで作成するテンプレートは、Kubernetes ワークロードを保護する場合にのみ使用できます。</block>
   <block id="782b4a6bf31d7d564f002ed80e56a970" category="doc">データムーバータイムアウトアノテーション</block>
-  <block id="2cf4114566459ea3b3a5ac507cb86fd9" category="paragraph">バックアップおよびリストア処理中に、アノテーション<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>を使用して、データ移動処理のタイムアウトを設定できます。このアノテーションは、データムーバーが特定の処理の完了を待機してからタイムアウトするまでの最大時間（秒単位）を指定します。これは、ネットワークの問題やその他の要因によってデータ移動処理が停止する可能性がある状況で特に役立ちます。プロセス全体に一般的なタイムアウトを設定するのではなく、停止した処理を検出して処理するのに役立ちます。たとえば、ネットワークの問題によりボリュームデータのリストアが進行しない場合、指定された期間に基づいて処理がタイムアウトします。</block>
   <block id="c2b7f24f4ddbaedb4e3d9e19f77eebac" category="paragraph">以下のように、このアノテーションを YAML ファイルで使用できます：</block>
   <block id="14a0e26cbe187a4754f8b523ffba6073" category="paragraph">この例では、リストア処理で 2 秒以内に進行が見られない場合、アノテーションは<block ref="ec2a2895b09b6030ec8cc1b3c43ddc4d" prefix=" " category="inline-code"></block>処理を中止します。</block>
   <block id="c49aaf233c16f1193a8d683c17866eea" category="admonition">注釈値が 0 以下の場合、操作は直ちに失敗します。</block>
@@ -4570,14 +4569,9 @@
   <block id="acb14ba5b70eb330a1d4de9c6b7a325d" category="inline-link-macro">仮想化の設定</block>
   <block id="5ea5c247812e1dca5ff02ca853f05032" category="paragraph">Trident Protect 24.10を設定して、<block ref="e0dd4c4b8aa16596df6c3f5cb36d3cdc" category="inline-link-macro-rx"></block>を使用し、次のコマンドを実行することで、データ保護操作中にVMファイルシステムの凍結と解凍を管理できます：</block>
   <block id="cedf2576eebff15fc6b30d5a7109eb6b" category="doc">リストアおよびフェイルオーバー処理中のネームスペースのアノテーションとラベル</block>
-  <block id="131ff34387be167411ffda7d60b577e7" category="paragraph">復元およびフェイルオーバー処理中に、デスティネーションネームスペースのラベルとアノテーションは、ソースネームスペースのラベルとアノテーションと一致するように作成されます。デスティネーションネームスペースに存在しないソースネームスペースのラベルまたはアノテーションが追加され、既存のラベルまたはアノテーションはソースネームスペースの値と一致するように上書きされます。デスティネーションネームスペースにのみ存在するラベルまたはアノテーションは変更されません。</block>
   <block id="20f40e0b9308901dac07ce8a8efb3350" category="inline-link-macro">OpenShiftセキュリティコンテキスト制約ドキュメント</block>
-  <block id="80aabc2f42a52376f3d884d3b02360f4" category="admonition">Red Hat OpenShiftを使用する場合は、OpenShift環境における名前空間アノテーションの重要な役割に注意することが重要です。名前空間アノテーションにより、リストアされたポッドがOpenShiftセキュリティコンテキスト制約（SCC）で定義された適切な権限とセキュリティ設定に準拠し、権限の問題なくボリュームにアクセスできるようになります。詳細については、<block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="6c83555d4261acb08ebbc5f24823dc7b" category="paragraph">リストアまたはフェイルオーバー処理を実行する前にKubernetes環境変数<block ref="1580ff61f204e9d56cd5324c7e9221ba" prefix=" " category="inline-code"></block>を設定することで、デスティネーションネームスペース内の特定のアノテーションが上書きされるのを防ぐことができます。例：</block>
   <block id="59f713e31282fe744caf06335d891f9a" category="inline-link-macro">追加のTrident Protectヘルムチャート設定を構成する</block>
-  <block id="d65eac563b898cb7e41b8853a4fe1a3c" category="paragraph">Helm を使用して<block ref="cc1f5c1d16e33b8463c9ee27295cd5df" prefix=" " category="inline-code"></block>フラグを指定してソースアプリケーションをインストールした場合、<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block>ラベルキーには特別な処理が適用されます。リストアまたはフェイルオーバープロセス中に、 Trident Protect はこのラベルをデスティネーションネームスペースにコピーしますが、ソースからの値がソースネームスペースと一致する場合は、値をデスティネーションネームスペースの値に更新します。この値がソースネームスペースと一致しない場合は、変更されずにデスティネーションネームスペースにコピーされます。</block>
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">例</block>
-  <block id="1280c48f074ec68fd2281266662c9a3f" category="paragraph">次の例は、それぞれ異なる注釈とラベルを持つソース名前空間と宛先名前空間を示しています。操作の前後の宛先名前空間の状態や、宛先名前空間で注釈とラベルがどのように結合または上書きされるかを確認できます。</block>
   <block id="2cfe257f724ed59a07ab01918c828fb5" category="section-title">リストアまたはフェイルオーバー処理の前に</block>
   <block id="c972cd959174c84d137520d91c011446" category="paragraph">次の表は、リストアまたはフェイルオーバー処理前のサンプルのソースネームスペースとデスティネーションネームスペースの状態を示しています：</block>
   <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="cell">ネームスペース</block>
@@ -5243,7 +5237,6 @@
   <block id="13805175d1bc9d9656654bec32406f98" category="admonition">Backup and Recoveryでは、作成タイムスタンプが同じボリューム内の別のスナップショットと完全に一致するスナップショットはインデックス化されません。</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026年4月13日</block>
   <block id="462fcd2b84c5fc16f3d89522a2068baa" category="sidebar">ファイルとフォルダのリストアのトラブルシューティング</block>
-  <block id="44c66f240c569e9a6734099280701e88" category="admonition">リストアまたはフェイルオーバー操作を実行すると、<block ref="22416353aff9ef4322e1ee858f418ae4" prefix=" " category="inline-code"></block>および<block ref="8028cf835d9b72ff2d6f835934c25568" prefix=" " category="inline-code"></block>で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー操作から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、<block ref="b9fc3066a0a1e2a32e2c8ea860fac505" category="inline-link-rx"></block>を参照してください。</block>
   <block id="12dc36f8332118bd4fe7f1b4633c0a17" category="list-text">*ファイルとフォルダの復元時のプロキシVMのサポート* - 仮想ディスクを元のVMに接続したくない場合は、プロキシVMを使用して仮想ディスクからファイルとフォルダを復元できるようになりました。詳細については、<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>を参照してください。</block>
   <block id="ddd4881e88c799f792de41fafe0a11d7" category="list-text">*再帰的なファイルおよびフォルダ検索* - 仮想ディスク全体から特定のファイルまたはフォルダを検索できるようになりました。詳細については、<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>を参照してください。</block>
   <block id="d07a2c33b1ba6b58e2a1a775e9fc5aa7" category="doc">仮想ディスクからファイルとフォルダを復元する</block>
@@ -5281,4 +5274,16 @@
   <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。ただし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
   <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。しかし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。ボリュームのバックアップ関係を削除する必要がある場合は、まずそのボリュームのバックアップを削除してから、バックアップ関係を削除してください。</block>
   <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">システムのNetApp Backup and Recoveryを無効化すると、既存のバックアップを削除せずに、すべてのボリュームのバックアップとリストアが一時停止されます。これにより、このシステムからバックアップサービスの登録を解除することなく、一定期間すべてのバックアップおよびリストアアクティビティを一時停止できます。</block>
+  <block id="ac702e35e5d377649ce818c63f8cb9d6" category="paragraph">注釈<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>を使用して、バックアップおよびリストア中に操作ごとのデータムーバータイムアウト（秒）を設定します。これは、データムーバーがタイムアウトするまでに操作の進行を待機する時間を指定します。これは、停止した転送を検出して処理する場合（たとえば、ネットワークの問題によってボリュームデータのリストアが進行しない場合）に役立ちます。</block>
+  <block id="aaaf3fb2db80e20e6d50218f16d99f4f" category="paragraph">リストアおよびフェイルオーバー時には、宛先の名前空間ラベルと注釈がソースに合わせて更新されます（ソースのキーは宛先のキーに追加または上書きされますが、宛先にのみ存在するキーは変更されません）。</block>
+  <block id="a0c960e39999d3e07d43b18aadea4f7e" category="admonition">Red Hat OpenShiftでは、ネームスペースアノテーションは、リストアされたポッドが正しいセキュリティコンテキスト制約と権限を受け取ることを保証し、ボリュームへのアクセスや権限エラーなしでの実行を可能にするため重要です。詳細については、<block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="96cd9f82d7fe1a044069b8c1e88870d3" category="paragraph">Kubernetes環境変数を設定する</block>
+  <block id="6e18bf7adc407522d3adc14c25f83f28" category="paragraph">復元またはフェイルオーバーの前に、特定の宛先ネームスペースの注釈が上書きされないようにします。例：</block>
+  <block id="67f7d0d1a6c01cbe0e09404d53ae8fac" category="admonition">リストアまたはフェイルオーバー中に、<block ref="22416353aff9ef4322e1ee858f418ae4" prefix=" " category="inline-code"></block>および<block ref="8028cf835d9b72ff2d6f835934c25568" prefix=" " category="inline-code"></block>で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー処理から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、<block ref="b9fc3066a0a1e2a32e2c8ea860fac505" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="3e3fc64dca0b9c44d365fc5635e23463" category="paragraph">Helm を<block ref="cc1f5c1d16e33b8463c9ee27295cd5df" prefix=" " category="inline-code"></block>フラグとともに使用してソースアプリケーションをインストールした場合、Trident Protect は名前ラベルをデスティネーションネームスペースにコピーします。ラベルの値がソースネームスペース名と一致する場合は、デスティネーションネームスペース名に置き換えられます。一致しない場合は、そのまま残されます。</block>
+  <block id="5ac7bbd26db92893a2f8bcca7d6084a4" category="paragraph">次の例では、異なるラベルと注釈を持つソースネームスペースと宛先ネームスペースを示し、操作の前後の宛先ネームスペースを表示することで、キーがどのように追加、マージ、または上書きされるかを説明しています。</block>
+  <block id="c7ac12b44e81f24dcab5d6e8675df0a1" category="paragraph">今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました。</block>
+  <block id="4f06e500210ecec059ecf486106df9e6" category="list-text">*ASA r2 SANサポート*：VMwareワークロードは、NetApp ASA r2 SAN専用環境でホストされているVMFSデータストア上のVMの保護をサポートするようになりました。</block>
+  <block id="fe6a65d4e5dee2ab8e25b78186c2fa25" category="list-text">ASA r2 SAN専用システム（ONTAP 9.17.1以降が必要）</block>
+  <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026年4月20日</block>
 </blocks>

@@ -1,0 +1,14 @@
+= VMwareワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました。
+
+* *ASA r2 SANサポート*：VMwareワークロードは、NetApp ASA r2 SAN専用環境でホストされているVMFSデータストア上のVMの保護をサポートするようになりました。
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。
