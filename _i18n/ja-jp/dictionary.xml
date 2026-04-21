@@ -4338,7 +4338,6 @@
   <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。</block>
   <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、ストレージ システム、タイムスタンプなどのバックアップの状態と詳細を表示します。</block>
   <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">バックアップとリカバリのサポートはすべてのONTAPシステムにすでに組み込まれているため、追加のハードウェア、ソフトウェア ライセンス、またはメディア ゲートウェイは必要ありません。これにより、バックアップ操作がシンプルになり、コスト効率が向上します。NetApp Consoleでは、3-2-1ルールに基づく幅広いバックアップ戦略を含め、あらゆるバックアップ戦略を簡単に実装でき、複数のリソースマネージャーや専門の担当者を必要としません。</block>
-  <block id="41bda454559167e0de7967190676c8d0" category="list-text">3 番目のオプションは、 NetAppから直接ライセンスを購入することです。参照 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳細についてはセクションをご覧ください。</block>
   <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">ONTAPボリューム ワークロードの場合、オブジェクト ストレージに保護されているボリュームに対してのみ課金されます。料金は、効率化が適用される前のソースONTAPボリュームの論理使用容量（フロントエンド テラバイト (FETB) とも呼ばれます）に基づいて計算されます。</block>
   <block id="2e122fa1e06865f6dee3fd6d67ea1488" category="paragraph">その他すべてのワークロードについては、少なくとも 1 つのセカンダリ ストレージ ターゲットまたはオブジェクト ストレージ ターゲットに保護されているリソースに対して課金されます。料金は、ソース ワークロードの論理サイズを使用して計算されます。データベースの場合、これはデータベースのサイズを意味し、VM の場合、VM のサイズを意味します。</block>
   <block id="0d3a443ca8a1a321c3c002699cfc04c3" category="section-title">サポートされているワークロード、システム、バックアップターゲット</block>
@@ -4923,7 +4922,6 @@
   <block id="5c4a8ce913e27612e0af180d6ef12ee6" category="list-text">Hyper-V ワークロード</block>
   <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="list-text">Kubernetes ワークロード</block>
   <block id="2432a396f38937322a4e606bf0aa7f0a" category="list-text">Microsoft Azure Blob（VMware ワークロードでは利用できません）</block>
-  <block id="ab95f28db65589c3a2b5f277f324e60b" category="list-text">ONTAP S3（VMware ワークロードでは利用できません）</block>
   <block id="1d57820923cf47d0bb8ab74db80344ab" category="list-text">ONTAP 9.15.1では、「参照して復元」オプションを使用してFlexGroupフォルダを復元できます。</block>
   <block id="5bc860fb25e08cbdf4fb6e1eb9fa16c9" category="paragraph">Oracleデータベースを検出すると、NetApp Backup and Recoveryでバックアップとスナップショットを作成およびリストアして保護できるようになります。</block>
   <block id="e82e6b5a702d1fc223d9ea698359376e" category="section-title">Oracle Databaseホストを追加してリソースを検出する</block>
@@ -5286,4 +5284,8 @@
   <block id="fe6a65d4e5dee2ab8e25b78186c2fa25" category="list-text">ASA r2 SAN専用システム（ONTAP 9.17.1以降が必要）</block>
   <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026年4月20日</block>
   <block id="15c76b732e7da21111f18374ed2e9ae6" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_オプション_）このアノテーションは、KubeVirt環境など、スナップショットの前にファイルシステムのフリーズが発生する仮想マシンから定義されたアプリケーションにのみ適用されます。スナップショット作成中にこのアプリケーションがファイルシステムに書き込みできるかどうかを指定します。trueに設定すると、アプリケーションはグローバル設定を無視し、スナップショット作成中にファイルシステムへの書き込みが可能になります。falseに設定すると、アプリケーションはグローバル設定を無視し、スナップショット作成中はファイルシステムがフリーズします。指定されていても、アプリケーション定義に仮想マシンが含まれていない場合、このアノテーションは無視されます。指定されていない場合、アプリケーションは<block ref="3047941e3fa7c2760a995edc5fae820b" category="inline-link-rx"></block>に従います。</block>
+  <block id="238d7a2bebc2cf898422ec1dbda4a73b" category="paragraph">ワークロードとは、システム内のリソースを論理的にグループ化したものであり、保護、ガバナンス、検出、および復旧のために単一の単位として管理されます。Backup and Recoveryにおいて、ワークロードとは保護対象となる単位のことです。その意味はデータソースによって異なります：Kubernetesの場合、ワークロードはアプリケーションであり、VM環境の場合は仮想マシンであり、データベース環境の場合はデータベースです。</block>
+  <block id="eb0aff97ddec7b6894c0ea9cc7a6b66c" category="list-text">Google Cloud では、新しいバケットがデプロイされ、<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>はアカウント/プロジェクトレベルでプロビジョニングされます。</block>
+  <block id="3addfc338787d5dc6d9709962161e00d" category="list-text">3つ目の選択肢は、NetAppから直接ライセンスを購入することです。詳細については、<block ref="ba0ccbd18ea5b5cc8b06635e1ea19aa1" category="inline-xref-macro-rx"></block>セクションを参照してください。</block>
+  <block id="09e249805f01ac51656bbbc88c3f5e37" category="list-text">ONTAP S3（VMware ワークロードでは利用できません）</block>
 </blocks>
