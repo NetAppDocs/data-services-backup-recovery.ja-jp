@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: enable-preview-features.html 
+keywords: preview features, preview, Backup and Recovery, configuration, NetApp Backup and Recovery 
+summary: NetApp Backup and Recoveryのプレビュー機能と非表示機能を有効にします。 
+---
+= NetApp Backup and Recoveryのプレビュー機能と非表示機能を有効にする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recoveryのプレビュー機能と非表示機能を有効にします。
+
+*必要なNetApp Consoleロール* バックアップおよびリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+
+
+
+== 利用可能なプレビュー機能
+
+NetApp Backup and Recovery では、以下のプレビュー機能を有効にすることができます。
+
+[cols="50,50"]
+|===
+| 機能フラグ | 機能の説明 
+
+
+| `"folder-restore-from-local": true` | ローカルONTAPボリュームスナップショットからのフォルダレベルの復元を有効にします。デフォルトでは、ONTAPはオブジェクトストレージのバックアップからのフォルダの復元のみをサポートしています。このフラグを有効にすると、ローカルおよびレプリケートされたスナップショットからディレクトリ全体を復元することもできます。 
+
+
+| `"prioritize-restore": true` | Backup and Recovery Web UIにおける復元ワークフロー中に、*既存のジョブキューよりも復元を優先する*オプションを選択できるようにします。復元ワークフロー中にこのオプションを選択すると、復元操作は他のキューに登録されたジョブよりも優先され、キューがビジー状態の場合でも実行されます。 
+|===
+
+
+== プレビュー機能を有にする
+
+プレビュー機能フラグオプションを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。
+
+.手順
+. SSH を使用して Console エージェントにログインします。
+. ルートユーザーに変更します：
++
+[source, console]
+----
+sudo su
+----
+. Docker で NetApp Backup and Recovery ボリュームを見つけます。
++
+[source, console]
+----
+docker volume ls | grep cbs
+----
++
+次のような出力が表示されます。
+
++
+[listing]
+----
+local service-manager-2_cloudmanager_cbs_volume
+----
+. ボリュームのマウントポイントを見つけます：
++
+[source, console]
+----
+docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
+----
++
+クラウド環境とプライベート環境では、マウントポイントが異なります。この出力例は、クラウドへのデプロイを示しています：
+
++
+[listing]
+----
+/var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. マウントポイントディレクトリ内にある、docker volume config ディレクトリに移動してください。例：
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_config
+----
+. 以下のJSON構造と、有効にする各機能フラグのキー/値のペアを含むファイルを作成します。デプロイメントタイプに基づいてファイルに名前を付けます：
++
+** クラウド導入： `production-customer.json`
+** プライベート／ダークサイトへの展開： `darksite-customer.json`
++
+機能フラグ情報については、<<anchor-flags,利用可能なフラグ>>を参照してください。例：
+
++
+[source, json]
+----
+{
+  "feature-flags": {
+    "folder-restore-from-local": true,
+    "prioritize-restore": true
+  }
+}
+----
+
+
+. Backup and Recovery コンテナを再起動します：
++
+[source, console]
+----
+docker restart cloudmanager_cbs
+----
+. ウェブブラウザでNetApp Backup and RecoveryのUIを再読み込みしてください。
++
+
+NOTE: プレビュー機能を無効にするには、同じ手順に従いますが、機能フラグの値を `false`に設定します。
+
+
+
+
+
+== ストレージVMに属するすべてのボリュームのインデックス作成を無効にする
+
+個々のボリュームごとにインデックス作成を無効にするのではなく、特定のストレージ VM に属するすべてのボリュームのインデックス作成を無効にするには、次の手順を実行します。
+
+.手順
+. SSH を使用して Console エージェントにログインします。
+. ルートユーザーに変更します：
++
+[source, console]
+----
+sudo su
+----
+. Docker で NetApp Backup and Recovery ボリュームを見つけます。
++
+[source, console]
+----
+docker volume ls | grep cbs
+----
++
+次のような出力が表示されます。
+
++
+[listing]
+----
+local service-manager-2_cloudmanager_cbs_volume
+----
+. ボリュームのマウントポイントを見つけます：
++
+[source, console]
+----
+docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
+----
++
+クラウド環境とプライベート環境では、マウントポイントが異なります。この出力例は、クラウドへのデプロイを示しています：
+
++
+[listing]
+----
+/var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
+----
+. マウントポイントディレクトリ内にある、docker volume config ディレクトリに移動してください。例：
++
+[source, console]
+----
+cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_catalog_config
+----
+.  `production-customer.json`という名前のファイルを作成し、以下の内容を記述します。例中のストレージVM名を、ご使用の環境におけるストレージVM名に置き換えてください：
++
+[source, json]
+----
+{
+  "indexing": {
+    "svms-not-to-index": "storage_vm_1,storage_vm_2,storage_vm_3"
+  }
+}
+----
+. Backup and Recovery のインデックス作成カタログコンテナを再起動します：
++
+[source, console]
+----
+docker restart cloudmanager_cbs_catalog
+----
+
