@@ -185,12 +185,12 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 
 StorageGRID は次の要件を満たしている必要があります。参照 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRIDドキュメント"^]詳細についてはこちらをご覧ください。
 
-StorageGRIDのDataLockおよびランサムウェア耐性要件の詳細については、以下を参照してください。link:prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシーオプション"] 。
+StorageGRID の Datalock およびランサムウェア対策の要件の詳細については、link:prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシーオプション"]を参照してください。
 
 サポートされているStorageGRIDバージョン:: StorageGRID 10.3 以降がサポートされています。
 +
 --
-バックアップに DataLock & Ransomware Resilience を使用するには、 StorageGRIDシステムでバージョン 11.6.0.3 以上を実行している必要があります。
+バックアップに DataLock およびランサムウェア対策を使用するには、StorageGRID システムがバージョン 11.6.0.3 以降を実行している必要があります。
 
 古いバックアップをクラウド アーカイブ ストレージに階層化するには、 StorageGRIDシステムでバージョン 11.3 以降を実行している必要があります。さらに、 StorageGRIDシステムがコンソールの *システム* ページで検出される必要があります。
 
@@ -430,9 +430,9 @@ TIP: カスタムポリシーを作成するには、link:br-use-policies-create
 +
 *** ポリシーの名前を入力します。
 *** 通常は異なる頻度のスケジュールを最大 5 つ選択します。
-*** オブジェクトへのバックアップ ポリシーの場合は、DataLock と Ransomware Resilience の設定を行います。  DataLockとランサムウェア耐性の詳細については、以下を参照してください。link:prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシー設定"] 。
+*** オブジェクトへのバックアップ ポリシーについては、Datalock とランサムウェアの保護設定を行います。Datalock とランサムウェア対策の詳細については、link:prev-ontap-policy-object-options.html["オブジェクトへのバックアップポリシー設定"]を参照してください。
 +
-クラスターでONTAP 9.11.1 以降を使用している場合は、_DataLock と Ransomware Resilience_ を構成することで、バックアップを削除やランサムウェア攻撃から保護することができます。  _DataLock_ はバックアップ ファイルが変更されたり削除されたりするのを防ぎ、_Ransomware Resilience_ はバックアップ ファイルをスキャンして、バックアップ ファイル内のランサムウェア攻撃の証拠を探します。
+クラスタで ONTAP 9.11.1 以降を使用している場合は、_Datalock and Ransomware protection_ を設定することで、バックアップを削除やランサムウェア攻撃から保護できます。_DataLock_ はバックアップ ファイルの変更や削除を防ぎ、_ransomware protection_ はバックアップ ファイルをスキャンしてランサムウェア攻撃の痕跡を検出します。
 
 *** *作成*を選択します。
 

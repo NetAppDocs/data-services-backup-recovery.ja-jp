@@ -937,7 +937,6 @@
   <block id="6e32536aeb87365f67ba5a96c664e861" category="paragraph-title">これらのポイントに復元する</block>
   <block id="4acf582ba1791858c42c901e8d64f664" category="paragraph">データを元の場所に復元することはできますが、このプライベート プレビュー リリースでは別の場所に復元することはできません。</block>
   <block id="485775104c27dcbdf8d49f22f897f823" category="paragraph-title">オブジェクトストレージからの復元に関する考慮事項</block>
-  <block id="88e3d91fca73ce1aaac6067b9552277d" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対してランサムウェア保護がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にしている場合)、データを復元する前に、バックアップ ファイルに対して追加の整合性チェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
   <block id="fb1b557500e8d14608e76a0b93711e4c" category="admonition">バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。</block>
   <block id="10f4565a78ebd1822c60902cbb077e98" category="section-title">ワークロードの復元の仕組み</block>
   <block id="68976f4a60a7e436e5b5aff0b5dabf41" category="paragraph">ワークロードを復元すると、次のことが起こります。</block>
@@ -1401,7 +1400,6 @@
   <block id="66b1424fe6641f4697268af9ed07b5e0" category="list-text">スナップショットからの復元</block>
   <block id="c1f62c4a8bd3bfc797c0a4be8f29b273" category="list-text">最新のバックアップに復元する</block>
   <block id="4a2c019e4f44d11b6cc64ba3161fb171" category="doc">NetApp Backup and Recoveryを使用して Microsoft SQL Server のワークロードを復元する</block>
-  <block id="42ace45b519d448bedf9ce14d8cc4c23" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加の整合性チェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
   <block id="52386b1f1b11ed7ab3350096c7964c69" category="list-text">バックアップ ファイルからワークロードを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。</block>
   <block id="b70369c3c6532f77755358e7ea82a3d2" category="inline-image-macro">リソースを復元する流れを示す図</block>
   <block id="2ce2b4590446a5b67b1664d9a59c0e14" category="paragraph"><block ref="2ce2b4590446a5b67b1664d9a59c0e14" category="inline-image-macro-rx" type="image"></block></block>
@@ -1811,7 +1809,6 @@
   <block id="82ba9e045163c7c72098c50671704351" category="list-text">Azureでは、<block ref="a3ff4de37e7a195a145416e9f02577ac" category="inline-link-rx"></block>そして<block ref="47b506e6a2508a9b210c02fa89bbdc24" category="inline-link-rx"></block>データを保存および分析するためにストレージ アカウントにプロビジョニングされます。</block>
   <block id="9fece9ac1c7d50fbf1a1498b93cbeb15" category="inline-link">Google Cloud BigQuery サービス</block>
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。</block>
-  <block id="e44d61516574d94ce56af3468723e18a" category="list-text">ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*サービス料*</block>
   <block id="032820ef020ebdcb4972d36db7394681" category="list-text">最初のオプションは、クラウド プロバイダーにサブスクライブすることです。これにより、月ごとに支払いが可能になります。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">ライセンス</block>
@@ -2153,7 +2150,6 @@
   <block id="ec32f8eb7058323c02b13f59dd447a40" category="admonition">既存のバケットを選択した場合は、暗号化情報がすでに利用可能であるため、ここで入力する必要はありません。</block>
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">*バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択するか、新しいポリシーを作成します。</block>
   <block id="37c981be270bef0d7503a46e3ee55d35" category="admonition">バックアップをアクティブ化する前にカスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
-  <block id="72c9277e73379a7669bea5aea529fe2e" category="list-text">オブジェクトへのバックアップ ポリシーの場合は、DataLock と Ransomware Resilience の設定を行います。  DataLockとランサムウェア耐性の詳細については、以下を参照してください。<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block> 。</block>
   <block id="1637762bf8b62862e92c5779dd292872" category="section-title">選択内容を確認する</block>
   <block id="6ff9dd41947ac05f6484a120fb4310b2" category="paragraph">ここで選択内容を確認し、必要に応じて調整を行うことができます。</block>
   <block id="5e60167ed1d8120de85b8b38a5697af4" category="list-text">「レビュー」ページで選択内容を確認します。</block>
@@ -2343,7 +2339,6 @@
   <block id="0b7010c12f32f5c43b68db881b80db60" category="paragraph">バックアップの GCP 保存先がコンソールの *システム* ページにシステムとして存在する場合は、 ONTAPクラスターを GCP オブジェクト ストレージにドラッグできます。</block>
   <block id="cc54d40dc91fd9f2adf463d5e6a20e64" category="paragraph">選択したボリュームにすでにスナップショットまたはレプリケーション ポリシーが適用されている場合は、後で選択したポリシーによって既存のポリシーが上書きされることに注意してください。</block>
   <block id="1605cf9a721d88df92a0b71e1a8b76fe" category="admonition">選択したボリュームのスナップショットおよびレプリケーション ポリシーがこの手順で選択したポリシーと異なる場合、既存のポリシーが上書きされます。</block>
-  <block id="87a6427c4107d7090d449e6c8d7aa59e" category="list-text">オブジェクトへのバックアップ ポリシーの場合は、Datalock と Ransomware Resilience を構成します。データロックとランサムウェア耐性の詳細については、以下を参照してください。<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block> 。</block>
   <block id="ce182ee406d8f3ee95a365ecbd21b287" category="list-text">*プロバイダー*: *Google Cloud* を選択します。</block>
   <block id="da0548d3a8553d8564284dcd029706f5" category="list-text">*暗号化キー*: 新しい Google バケットを作成した場合は、プロバイダから提供された暗号化キー情報を入力します。データの暗号化を管理するために、デフォルトの Google Cloud 暗号化キーを使用するか、Google アカウントから独自の顧客管理キーを選択するかを選択します。</block>
   <block id="b3aa83b2922f617a64fa1875bdb6aad9" category="admonition">既存の Google Cloud バケットを選択した場合は、暗号化情報がすでに利用可能であるため、今すぐ入力する必要はありません。</block>
@@ -2364,7 +2359,6 @@
   <block id="40a7b9f9f8520270d9a6a6f8c3b155e3" category="list-text">このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。</block>
   <block id="617bf089a60793ed8197f15849023ab0" category="section-title">既存のボリュームに割り当てられたバックアップ設定を変更する</block>
   <block id="6c143468a72ae48b392ccaf6bfdab3dd" category="section-title">単一ボリュームのバックアップ設定を編集する</block>
-  <block id="28d4180de7948c969ad2c178ab5ac2ba" category="paragraph">このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期バックアップ ポリシーでクラウド バックアップに対して _DataLock と Ransomware Resilience_ を有効にした場合は、DataLock で構成された他のポリシーのみが表示されます。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock が設定されていない他のクラウド バックアップ ポリシーのみが表示されます。</block>
   <block id="ed3685aa06ca7db640e77339c669a75e" category="section-title">複数のボリュームのバックアップ設定を編集する</block>
   <block id="90d35772fb2c0d1903fd5cb179fca792" category="paragraph">複数のボリュームで同じバックアップ設定を使用する場合は、複数のボリュームで同時にバックアップ設定をアクティブ化または編集できます。バックアップ設定がないボリューム、スナップショット設定のみがあるボリューム、クラウドへのバックアップ設定のみがあるボリュームなどを選択し、さまざまなバックアップ設定を持つこれらすべてのボリュームに対して一括変更を行うことができます。</block>
   <block id="254b8ee80daf8cdfb1e85c4784ce11e4" category="paragraph">複数のボリュームを操作する場合、すべてのボリュームに次の共通の特性が必要です。</block>
@@ -2388,7 +2382,6 @@
   <block id="2df585918dfe79cb1c0f8dfb403b8933" category="paragraph">いつでもオンデマンド バックアップを作成して、ボリュームの現在の状態をキャプチャできます。これは、ボリュームに非常に重要な変更が加えられ、そのデータを保護するために次回のスケジュールされたバックアップまで待ちたくない場合に役立ちます。この機能を使用すると、現在バックアップされていないボリュームのバックアップを作成し、その現在の状態をキャプチャすることもできます。</block>
   <block id="75f0ab2aa06321fc5a92c205273b43b6" category="paragraph">バックアップ名にはタイムスタンプが含まれるため、オンデマンド バックアップを他のスケジュールされたバックアップと区別できます。</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">DataLockとランサムウェア対策について詳しくはこちら</block>
-  <block id="b6488996839d3ef81eaf4ab204a7cf5a" category="paragraph">このクラスターのNetApp Backup and Recovery をアクティブ化するときに _DataLock と Ransomware Resilience_ を有効にした場合、オンデマンド バックアップも DataLock で構成され、保持期間は 30 日間になります。アドホック バックアップではランサムウェア スキャンはサポートされていません。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block>。</block>
   <block id="34654042ecfc4226d89a0eec5901d43e" category="inline-link">ONTAP CLIを使用してスナップショットを削除する方法をご覧ください</block>
   <block id="4786401e865ef261720869019898fa6c" category="paragraph">アドホック バックアップを作成すると、ソース ボリュームにスナップショットが作成されます。このスナップショットは通常のスナップショット スケジュールの一部ではないため、オフにはなりません。バックアップが完了したら、ソース ボリュームからこのスナップショットを手動で削除することをお勧めします。これにより、このスナップショットに関連するブロックが解放されます。スナップショットの名前は<block ref="3fbd2a9ee3863b8841029b21d6bf8e89" prefix=" " category="inline-code"></block>。<block ref="7e565776b86561f26a3208af24c76dc9" category="inline-link-rx"></block> 。</block>
   <block id="a7ddc69bf51887dfb9d3f72e57328bff" category="admonition">オンデマンド ボリューム バックアップは、データ保護ボリュームではサポートされていません。</block>
@@ -2400,11 +2393,9 @@
   <block id="b1cb92c2a23b4cbaa76face717d899cf" category="list-text">*スナップショット*、*レプリケーション*、または*バックアップ*を選択すると、各バックアップ タイプのすべてのバックアップ ファイルのリストが表示されます。</block>
   <block id="c3da5f4c5e9e366bce0761355a7a32b9" category="section-title">オブジェクトストレージ内のボリュームバックアップでランサムウェアスキャンを実行する</block>
   <block id="76d4ec74983530f8007b9dfb9961f585" category="paragraph">NetApp Backup and Recovery は、オブジェクト ファイルへのバックアップが作成される際、およびバックアップ ファイルからデータが復元される際に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。また、いつでもオンデマンド スキャンを実行して、オブジェクト ストレージ内の特定のバックアップ ファイルの使用可能かどうかを確認することもできます。これは、特定のボリュームでランサムウェアの問題が発生し、そのボリュームのバックアップが影響を受けていないことを確認したい場合に役立ちます。</block>
-  <block id="cf2a8b330499d1a7ec5ed6bef1f8ed38" category="paragraph">この機能は、ボリューム バックアップがONTAP 9.11.1 以降のシステムから作成され、オブジェクトへのバックアップ ポリシーで _DataLock および Ransomware Resilience_ が有効になっている場合にのみ使用できます。</block>
   <block id="5f10de94b506d8ff164c981c019bd24a" category="paragraph">ボリュームの詳細が表示されます。</block>
   <block id="aa132131d3096dd036d6592cccc8f815" category="list-text">*バックアップ* を選択すると、オブジェクト ストレージ内のバックアップ ファイルのリストが表示されます。</block>
   <block id="faaa44db37f803e5f9607b2a2e619de9" category="list-text">選択<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ランサムウェアをスキャンするボリューム バックアップ ファイルを選択し、[*ランサムウェアのスキャン*] をクリックします。</block>
-  <block id="7fc99b18054450dcbf8338f8ee8c67db" category="paragraph">ランサムウェア耐性列には、スキャンが進行中であることが示されます。</block>
   <block id="7ce389d951938726d9655f7501c33bfb" category="section-title">ソースボリュームとのレプリケーション関係を管理する</block>
   <block id="b75f2bb92b2f898b4d1052fdc12c5b0d" category="paragraph">2 つのシステム間のデータ レプリケーションを設定したら、データ レプリケーションの関係を管理できます。</block>
   <block id="552d9d27b17eb9bf973d8bf7569a67d7" category="list-text">*ボリューム*タブから、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ソースボリュームに対して*レプリケーション*オプションを選択します。利用可能なオプションをすべて確認できます。</block>
@@ -2429,7 +2420,6 @@
   <block id="333d93ae30f96072d9533be9257871fc" category="paragraph">アクションを選択すると、コンソールは関係を更新します。</block>
   <block id="e5c31b44cc452f945aec38b328ab97da" category="section-title">既存のクラウドへのバックアップ ポリシーを編集する</block>
   <block id="27adbc6c374272e79f9592a18fa6b31c" category="paragraph">システム内のボリュームに現在適用されているバックアップ ポリシーの属性を変更できます。バックアップ ポリシーを変更すると、そのポリシーを使用している既存のすべてのボリュームに影響します。</block>
-  <block id="f84b10497d58e1c905bec8056b6bd2f3" category="list-text">このクラスターのNetApp Backup and Recovery をアクティブ化するときに、初期ポリシーで _DataLock と Ransomware Resilience_ を有効にした場合、編集するポリシーはすべて同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、現在 DataLock を有効にすることはできません。</block>
   <block id="393cdac7e3ba811fae25e3e3bbfa2f9e" category="list-text">AWS でバックアップを作成するときに、 NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、バックアップポリシーを編集するときに使用できるアーカイブ層はその層のみになります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、ポリシーを編集するときに、_S3 Glacier_ が唯一のアーカイブ オプションになります。</block>
   <block id="fb74ece6972051de48e476af9e1e3b61" category="list-text">*ボリューム*タブから*バックアップ設定*を選択します。</block>
   <block id="03e9f860a103616b43466e85b0aa6489" category="list-text">_バックアップ設定_ページで、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ポリシー設定を変更するシステムを選択し、[ポリシーの管理] を選択します。</block>
@@ -2443,7 +2433,6 @@
   <block id="704cbb6a4b98702a1ff1e784b08e0bc1" category="paragraph">システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、定義したデフォルトのバックアップ ポリシーを使用してバックアップされます。異なる復旧ポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、それらのポリシーを他のボリュームに割り当てることができます。</block>
   <block id="ebef09b04d71dbdf490084193f232a2f" category="inline-xref">そのシステム内のボリュームにポリシーを適用する</block>
   <block id="49411695d7d9015ad07ddd38f74e331d" category="paragraph">システム内の特定のボリュームに新しいバックアップ ポリシーを適用する場合は、まずそのバックアップ ポリシーをシステムに追加する必要があります。そうすると<block ref="e642665ab169685987c0c09bf6eca490" category="inline-xref-macro-rx"></block>。</block>
-  <block id="fce77d9eed9f09cf06c385de40bc0a13" category="list-text">このクラスターのNetApp Backup and Recovery をアクティブ化するときに初期ポリシーで _DataLock and Ransomware Resilience_ を有効にした場合、作成する追加ポリシーは同じ DataLock 設定 (ガバナンスまたはコンプライアンス) で構成する必要があります。また、 NetApp Backup and Recoveryをアクティブ化するときに _DataLock and Ransomware Resilience_ を有効にしなかった場合は、DataLock を使用する新しいポリシーを作成することはできません。</block>
   <block id="33728a43a58c6c49f30ad0f6afe6cb1a" category="list-text">AWS でバックアップを作成するときに、 NetApp Backup and Recoveryをアクティブ化するときに最初のバックアップポリシーで _S3 Glacier_ または _S3 Glacier Deep Archive_ を選択した場合、その層がそのクラスターの将来のバックアップポリシーで使用できる唯一のアーカイブ層になります。また、最初のバックアップ ポリシーでアーカイブ層を選択しなかった場合は、将来のポリシーでは _S3 Glacier_ が唯一のアーカイブ オプションになります。</block>
   <block id="32c508c6d8137a2e6d45fe3a47abfd20" category="list-text">_バックアップ設定_ページで、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>新しいポリシーを追加するシステムの [ポリシーの管理] を選択します。</block>
   <block id="424f2e0883bc9947bd7d3e3b3a3981a1" category="list-text">[ポリシーの管理] ページで、[新しいポリシーの追加] を選択します。</block>
@@ -2786,10 +2775,8 @@
   <block id="08cdeb7ce64fda06111111c8fea66510" category="section-title">StorageGRIDをバックアップターゲットとして準備する</block>
   <block id="ef58a6d55100435043d388bfdf72c624" category="paragraph">StorageGRID は次の要件を満たしている必要があります。参照<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="45167bc71bd7fe459b6a35c45730024a" category="inline-link-macro">オブジェクトへのバックアップポリシーオプション</block>
-  <block id="dc4fb298a2d915a967ad75e9e4604270" category="paragraph">StorageGRIDのDataLockおよびランサムウェア耐性要件の詳細については、以下を参照してください。<block ref="bbc9f622da531392bbcdbdc340d647a2" category="inline-link-macro-rx"></block> 。</block>
   <block id="793640ee72b7150dff71a288a821c67c" category="list-text">サポートされているStorageGRIDバージョン</block>
   <block id="8a456872aea50fd247449bd552854586" category="list-text">StorageGRID 10.3 以降がサポートされています。</block>
-  <block id="fa622700003f81750a23f422e28a7076" category="paragraph">バックアップに DataLock &amp; Ransomware Resilience を使用するには、 StorageGRIDシステムでバージョン 11.6.0.3 以上を実行している必要があります。</block>
   <block id="a3c3d46eb7dece1ea66293e26e27c747" category="paragraph">古いバックアップをクラウド アーカイブ ストレージに階層化するには、 StorageGRIDシステムでバージョン 11.3 以降を実行している必要があります。さらに、 StorageGRIDシステムがコンソールの *システム* ページで検出される必要があります。</block>
   <block id="de84af939f41492b1264ce8c3df573a9" category="paragraph">アーカイブ ストレージを使用するには、管理ノードの IP アクセスが必要です。</block>
   <block id="a99287c7990930f58a55c1e2dba88d64" category="paragraph">ゲートウェイ IP アクセスは常に必要です。</block>
@@ -2838,7 +2825,6 @@
   <block id="cde236f353f324c0446bb3b8cfb426fc" category="list-text">*ネットワーク*: バックアップするボリュームが存在するONTAPクラスター内の IPspace を選択します。この IPspace のクラスタ間 LIF には、アウトバウンド インターネット アクセスが必要です (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。</block>
   <block id="7f62bdecf08bb9ff2fd358b915cc37e0" category="admonition">適切な IPspace を選択すると、 NetApp Backup and Recovery がONTAPからStorageGRIDオブジェクト ストレージへの接続を確立できるようになります。</block>
   <block id="29ec9eea05a4e021ec0af54e27e66224" category="list-text">*バックアップ ポリシー*: 既存のオブジェクト ストレージへのバックアップ ポリシーを選択するか、新しいポリシーを作成します。</block>
-  <block id="8c306f494c349b42fe04266c23f46cd1" category="paragraph">クラスターでONTAP 9.11.1 以降を使用している場合は、_DataLock と Ransomware Resilience_ を構成することで、バックアップを削除やランサムウェア攻撃から保護することができます。  _DataLock_ はバックアップ ファイルが変更されたり削除されたりするのを防ぎ、_Ransomware Resilience_ はバックアップ ファイルをスキャンして、バックアップ ファイル内のランサムウェア攻撃の証拠を探します。</block>
   <block id="b1e78dfdd8adc3005cff56ffd24b2af1" category="inline-xref">この機能を使用するためにシステムを構成する方法をご覧ください</block>
   <block id="43f4c1811765abf291168aea7f16a205" category="paragraph">クラスターがONTAP 9.12.1 以上を使用しており、 StorageGRIDシステムがバージョン 11.4 以上を使用している場合は、一定の日数後に古いバックアップをパブ​​リック クラウド アーカイブ層に階層化することを選択できます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。<block ref="bf8884094e353a761ed88341de6eaf54" category="inline-xref-macro-rx"></block>。</block>
   <block id="1f56b8f69150cdfb9829cf942c51a8d3" category="list-text">*パブリック クラウドへの階層化バックアップ*: バックアップを階層化するクラウド プロバイダーを選択し、プロバイダーの詳細を入力します。</block>
@@ -3013,8 +2999,6 @@
   <block id="69ef3b07789885abe39838d3bdd565ae" category="list-text">[詳細設定] ページで、[*年次スナップショットの削除*] セクションを展開します。</block>
   <block id="906f0c83e11579cff84ef8bb2602e8ee" category="list-text">ソース システムに年次スナップショットを保持するには、[無効] を選択します。</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">ランサムウェアスキャンを有効または無効にする</block>
-  <block id="4451065c28f2079aa69e4b099c64d39a" category="inline-link-macro">DataLockとランサムウェア耐性オプション</block>
-  <block id="653a7bec9106146215db26707b6bc097" category="paragraph">DataLockとランサムウェア耐性オプションの詳細については、以下を参照してください。<block ref="9598f959fcd7486a6e0c3ffa9bbb6de9" category="inline-link-macro-rx"></block> 。</block>
   <block id="823af9cc6541e49164fb4b1c88f90a63" category="paragraph">スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。</block>
   <block id="c000460328529e6cc52a2a89e3a697dc" category="admonition">ランサムウェアスキャンを有効にすると、クラウドプロバイダーに応じて追加料金が発生します。</block>
   <block id="753626f8e1f5bd64d141de3a2128da9a" category="paragraph">スケジュールされたランサムウェア スキャンが無効になっている場合でも、オンデマンド スキャンを実行することはでき、復元操作中にスキャンが実行されます。</block>
@@ -3043,7 +3027,6 @@
   <block id="182fb5e3aa2936674fedf15788f2264b" category="paragraph">年間バックアップは、オブジェクト ストレージに転送された後、ソース システムから自動的に削除されます。このデフォルトの動作は、システムの「詳細設定」ページで変更できます。</block>
   <block id="051658be4ba182ab30138c3d0fa07f2b" category="section-title">DataLockとランサムウェア保護オプション</block>
   <block id="7dc66b1cfd01d4c00dc9fb5720da9bd7" category="paragraph">NetApp Backup and Recovery は、ボリューム バックアップに対する DataLock およびランサムウェア保護のサポートを提供します。これらの機能を使用すると、バックアップ ファイルをロックしてスキャンし、バックアップ ファイル上のランサムウェアの可能性を検出できます。これは、クラスターのボリューム バックアップをさらに保護したい場合に、バックアップ ポリシーで定義できるオプションの設定です。</block>
-  <block id="9e66cd34efdf210b196fd63e7561d89b" category="paragraph">これら 2 つの機能はバックアップ ファイルを保護するため、バックアップに対してランサムウェア攻撃が試みられた場合でも、常に有効なバックアップ ファイルがあり、そこからデータを回復することができます。また、バックアップをロックして一定期間保持する必要がある特定の規制要件を満たすのにも役立ちます。  DataLock および Ransomware Resilience オプションを有効にすると、 NetApp Backup and Recoveryアクティベーションの一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。</block>
   <block id="86fef274eb09e789513af0922e579b5a" category="inline-link">ONTAPが提供するランサムウェア対策</block>
   <block id="ff76fcf5a77bc3d2d6fcc0bc89e691e8" category="paragraph">この機能はソース ボリュームを保護するものではなく、ソース ボリュームのバックアップのみを保護します。いくつかの<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block>ソースボリュームを保護します。</block>
   <block id="9d6ba5ad698127fccb9f60a35f6f12bc" category="list-text">DataLock とランサムウェア保護を使用する予定の場合は、最初のバックアップ ポリシーを作成し、そのクラスターに対してNetApp Backup and Recovery をアクティブ化するときに、これを有効にできます。後で、 NetApp Backup and Recovery の詳細設定を使用して、ランサムウェア スキャンを有効または無効にすることができます。</block>
@@ -3071,11 +3054,7 @@
   <block id="b31b5b22923a2871f33f5a4b77d6be83" category="paragraph">DataLock の保持設定は、バックアップ ポリシーのポリシー保持設定よりも優先されます。バックアップ ファイルがオブジェクト ストアに長期間保存されるため、ストレージ コストに影響する可能性があります。</block>
   <block id="010f0e105bcb6f73ab6c815fef84dd1c" category="section-title">DataLockとランサムウェア保護を有効にする</block>
   <block id="9f2f26447f0350dee8acbf4adae7b4e0" category="paragraph">ポリシーを作成するときに、DataLock とランサムウェア保護を有効にできます。ポリシーの作成後は、これを有効化、変更、無効化することはできません。</block>
-  <block id="96c619118e08abc143b6b640fdb4e7f2" category="list-text">ポリシーを作成するときは、*DataLock および Ransomware Resilience* セクションを展開します。</block>
   <block id="a7a08622ee5c8019b57354b99b7693b2" category="list-text">次のいずれかを選択します。</block>
-  <block id="3f15918939b0d7ada1ed6774a4499a87" category="list-text">*なし*: DataLock 保護とランサムウェア耐性は無効になっています。</block>
-  <block id="7acb96413bf2eea8adc563517b923bc2" category="list-text">*ロック解除*: DataLock 保護とランサムウェア耐性が有効になっています。特定の権限を持つユーザーは、保持期間中に保護されたバックアップ ファイルを上書きまたは削除できます。</block>
-  <block id="d984b99ff22b79acc66b9407e7e42ff0" category="list-text">*ロック済み*: DataLock 保護とランサムウェア耐性が有効になっています。保持期間中、ユーザーは保護されたバックアップ ファイルを上書きまたは削除することはできません。これにより、完全な規制遵守が実現します。</block>
   <block id="76b58aa0d11cd1d400e558a828802ece" category="inline-link-macro">詳細設定ページでランサムウェア保護オプションを更新する方法</block>
   <block id="889bdea355a306913d8f15b2cc991732" category="paragraph">参照<block ref="e041470535c4f2089ff7e958a066947f" category="inline-link-macro-rx"></block>。</block>
   <block id="57f10edfffe2adcbce7ee7a76dc7702f" category="section-title">ランサムウェア対策とは</block>
@@ -3191,7 +3170,6 @@
   <block id="72d6d7225fde1dafbc05317df9f5b442" category="paragraph">*さまざまなバックアップ方法の比較*</block>
   <block id="8d4622541c56b47641b741cdbe4f8ddf" category="paragraph">次の表は、3 つのバックアップ方法の一般的な比較を示しています。オブジェクト ストレージ スペースは通常、オンプレミスのディスク ストレージよりも安価ですが、クラウドからデータを頻繁に復元する可能性があると予想される場合は、クラウド プロバイダーからの送信料金によって節約額がいくらか減る可能性があります。クラウド内のバックアップ ファイルからデータを復元する必要がある頻度を特定する必要があります。</block>
   <block id="15d3cc7c4c3352d19d2b3b84f9c0fc46" category="inline-link-macro">DataLockとランサムウェア対策およびアーカイブストレージ設定の詳細</block>
-  <block id="e69519c6174a5664192ef13628b25053" category="paragraph">この基準に加えて、クラウド ストレージでは、DataLock および Ransomware Resilience 機能を使用する場合、追加のセキュリティ オプションが提供され、古いバックアップ ファイルにアーカイブ ストレージ クラスを選択することで、さらにコストを節約できます。<block ref="0c861116d28daa1fe6085df5c3fb8bde" category="inline-link-macro-rx"></block>。</block>
   <block id="ddb99ca7cced831bad7ef70c4a866fbf" category="cell">バックアップ速度</block>
   <block id="e1cc17541eaf2c504e414ddff25f2eab" category="cell">バックアップコスト</block>
   <block id="ffe53eb9663918ea5038c796f2cb2f26" category="cell">速度を回復する</block>
@@ -3365,7 +3343,6 @@
   <block id="9b228e8142c1f49c9a7b1365505bc5d5" category="paragraph">ONTAPシステムでNetApp Backup and Recoveryを使用する場合、リソース料金とサービス料金の 2 種類のコストが発生します。これら両方の料金は、サービスのオブジェクト部分へのバックアップに対して発生します。</block>
   <block id="dd49bc28723be22ffdd3f04630c122df" category="paragraph">NetApp Backup and Recovery はソース ボリュームのストレージ効率を維持するため、 ONTAP効率化後のデータ (重複排除と圧縮が適用された後の少量のデータ) に対してクラウド プロバイダーのオブジェクト ストレージ コストを支払います。</block>
   <block id="fedaab8c05c476a14c09d3ad41bf9a22" category="list-text">Googleでは新しいバケットがデプロイされ、<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>アカウント/プロジェクト レベルでプロビジョニングされます。</block>
-  <block id="1cd41d0d05820bca7b344cb3376a61e1" category="list-text">ボリューム データの復元プロセス中にバックアップ ファイルをランサムウェアに対してスキャンする予定がある場合 (クラウド バックアップに対して DataLock と Ransomware Resilience を有効にしている場合)、クラウド プロバイダーから追加の送信コストも発生します。</block>
   <block id="060b6e252a88502e803f6fdc3115b5d9" category="paragraph">サービス料金はNetAppに支払われ、オブジェクト ストレージへのバックアップを _作成_ するコストと、それらのバックアップからボリュームまたはファイルを _復元_ するコストの両方をカバーします。オブジェクト ストレージにバックアップされるONTAPボリュームのソース論理使用容量 ( ONTAP効率前) によって計算された、オブジェクト ストレージで保護するデータに対してのみ料金を支払います。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。</block>
   <block id="e71616090dfab7da8f9d13556cae146a" category="paragraph">バックアップ サービスの支払い方法は 3 つあります。最初のオプションは、クラウド プロバイダーにサブスクライブすることです。これにより、月ごとに支払いが可能になります。  2 番目のオプションは、年間契約を結ぶことです。  3 番目のオプションは、 NetAppから直接ライセンスを購入することです。</block>
   <block id="38692e39e588de5b1294ee4cca656080" category="list-text">*BYOL*: NetAppから購入したライセンスで、どのクラウド プロバイダーでも使用できます。</block>
@@ -3401,7 +3378,6 @@
   <block id="27f4e7945442348457ec28cf1aa6eefd" category="paragraph">カテゴリまたは間隔のバックアップの最大数に達すると、古いバックアップが削除されるため、常に最新のバックアップが保持されます (そのため、古いバックアップがスペースを占有し続けることはありません)。</block>
   <block id="c1855e2778d4090a158417283de29dbc" category="admonition">データ保護ボリュームのバックアップの保持期間は、ソースSnapMirror関係で定義されている期間と同じです。必要に応じて、API を使用してこれを変更できます。</block>
   <block id="01ec9d3adb6b85775aeeda0d6d533e54" category="section-title">バックアップファイルの保護設定</block>
-  <block id="03159d4daf48846363441f62acc89b17" category="paragraph">クラスターでONTAP 9.11.1 以降を使用している場合は、オブジェクト ストレージ内のバックアップを削除やランサムウェア攻撃から保護できます。各バックアップ ポリシーには、特定の期間 (_保持期間_) にわたってバックアップ ファイルに適用できる _DataLock および Ransomware Resilience_ のセクションが用意されています。</block>
   <block id="8756c7c925830c8c39d9804961d7d40b" category="list-text">_DataLock_ は、バックアップ ファイルが変更されたり削除されたりするのを防ぎます。</block>
   <block id="c73b2d161daabc3a9a53d6dd0c4df263" category="list-text">_ランサムウェア保護_ は、バックアップ ファイルの作成時とバックアップ ファイルからのデータの復元時に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。</block>
   <block id="78505512ebd89d20931322ac265d9153" category="paragraph">バックアップの保持期間は、バックアップ スケジュールの保持期間に最大 31 日間のバッファを加えた期間と同じです。たとえば、_5_ 個のコピーが保持される _毎週_ のバックアップでは、各バックアップ ファイルが 5 週間ロックされます。  _6_ 個のコピーが保持される _月次_ バックアップでは、各バックアップ ファイルが 6 か月間ロックされます。</block>
@@ -3486,7 +3462,6 @@
   <block id="97df4568ca8321a997d9ed32ea75ab0a" category="list-text">*復元*タブを選択すると、復元ダッシュボードが表示されます。</block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">[参照と復元] セクションから、[ボリュームの復元] を選択します。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">[_ソースの選択_] ページで、復元するボリュームのバックアップ ファイルに移動します。復元する日付/タイムスタンプを持つ *システム*、*ボリューム*、および *バックアップ* ファイルを選択します。</block>
-  <block id="2dbe24936b99777ea029c253c6887625" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルを選択し、そのバックアップに対してランサムウェア耐性がアクティブになっている場合 (バックアップ ポリシーで DataLock とランサムウェア耐性を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。  (バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">[_宛先の選択_] ページで、ボリュームを復元する *システム* を選択します。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">オブジェクト ストレージからバックアップ ファイルを復元するときに、オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。</block>
   <block id="8e494bd03a27f49a3a42559fa89f035a" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。</block>
@@ -3524,7 +3499,6 @@
   <block id="a4d28c95dc9a398dc52d0e10b7e6526a" category="list-text">[次へ] を選択すると、ボリューム バックアップのフォルダーとファイルのリストが表示されます。</block>
   <block id="cbb08f72335795850ccfc691c171d12b" category="paragraph">アーカイブ ストレージ層にあるバックアップ ファイルからフォルダーまたはファイルを復元する場合は、復元の優先順位を選択できます。</block>
   <block id="85a7bc53afc77150588eb7e96fff336f" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。Google アーカイブ ストレージ層のバックアップ ファイルはほぼ即座に復元されるため、復元の優先順位は必要ありません。</block>
-  <block id="f6c5eba49b66c3e5c7068b19b8b149fe" category="paragraph">また、バックアップ ファイルに対して Ransomware Resilience がアクティブになっている場合 (バックアップ ポリシーで DataLock と Ransomware Resilience を有効にした場合)、データを復元する前に、バックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルをランサムウェアのスキャン対象とすることをお勧めします。  (バックアップ ファイルの内容にアクセスするには、クラウド プロバイダーから追加の送信コストが発生します。)</block>
   <block id="fa7edcf4876f70f9cdbd4ded39683873" category="list-text">[_アイテムの選択_] ページで、復元するフォルダーまたはファイルを選択し、[続行] を選択します。アイテムを見つける際に役立つ情報:</block>
   <block id="7a08363d26933e1e3210eaeb8dcd46e6" category="list-text">フォルダーまたはファイル名が表示されている場合はそれを選択できます。</block>
   <block id="660646010d4764a96991255190b6923f" category="list-text">検索アイコンを選択し、フォルダーまたはファイルの名前を入力すると、アイテムに直接移動できます。</block>
@@ -3975,7 +3949,6 @@
   <block id="a08a1e6a1f964b7941dd14205238bfcb" category="paragraph">データをすぐに保護するために今すぐバックアップしてください。</block>
   <block id="b4ae20208d5c757b694d673276341786" category="paragraph">データを保護するためにデータベースを復元します。</block>
   <block id="3f6fab6bedfff19150a3d6ab054b0391" category="paragraph">今すぐ Microsoft SQL Server インスタンスとデータベースをバックアップして、データを保護できます。</block>
-  <block id="fc7c1a6c328c3622bdd68b73c548bb4f" category="paragraph">オブジェクト ストレージ内のバックアップ ファイルに対して Ransomware Resilience が有効になっている場合は、復元する前に追加のチェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
   <block id="2b2261b532e949e52edc443eb38fcb1c" category="admonition">バックアップ ファイルにアクセスするには、クラウド プロバイダーに追加料金を支払う必要がある場合があります。</block>
   <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">[復元] ページ (検索と復元) では、正確な名前、場所、または最終日付を覚えていなくても、フィルターを使用してスナップショットを検索することでリソースを復元できます。</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">復元操作が完了しない場合は、ジョブ モニターに「失敗」と表示されるまで待ってから、復元操作を再試行してください。</block>
@@ -5320,4 +5293,30 @@
   <block id="8dff4fed8a1d5381eb2f6576f3f06b7d" category="list-text"><block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>という名前のファイルを作成し、以下の内容を記述します。例中のストレージVM名を、ご使用の環境におけるストレージVM名に置き換えてください：</block>
   <block id="7577767aaa58a8a7950977e3a65ee191" category="list-text">Backup and Recovery のインデックス作成カタログコンテナを再起動します：</block>
   <block id="e6cce919f01af0ea557dc3414a5f3d13" category="sidebar">プレビューと隠し機能を有効にする</block>
+  <block id="a66cf4720f5d5d39ed0b714a10c544b8" category="paragraph">オブジェクト ストレージでバックアップ ファイルを選択し、そのバックアップに対してランサムウェア保護がアクティブになっている場合（バックアップ ポリシーで Datalock とランサムウェア保護を有効にした場合）、データのリストア前にバックアップ ファイルに対して追加の整合性チェックを実行するように求められます。スキャンを実行することを推奨します。</block>
+  <block id="244ec7a150e9351c3fc76e657044f42c" category="paragraph">オブジェクトストレージ内のバックアップファイルに対してランサムウェア対策が有効になっている場合、復元前に追加のチェックを実行するように求められます。スキャンを実行することをお勧めします。</block>
+  <block id="04d519be10632791c717b79e98c10651" category="list-text">ボリュームデータのリストアプロセス中にランサムウェアのバックアップファイルをスキャンする場合（クラウドバックアップでDatalockとランサムウェア対策を有効にしている場合）、クラウド プロバイダからの追加のegress コストも発生します。</block>
+  <block id="1ca7dcaeea297c00bd40d178b2115682" category="list-text">オブジェクトへのバックアップ ポリシーについては、Datalock とランサムウェアの保護設定を行います。Datalock とランサムウェア対策の詳細については、<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6561c6e3caa260f1bdb6d3649d38be46" category="list-text">オブジェクトへのバックアップ ポリシーについては、Datalock と Ransomware protection を設定してください。Datalock と Ransomware protection の詳細については、<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="103c7334307f719a470f3172605a3edc" category="paragraph">このクラスタに対してNetApp Backup and Recoveryをアクティブ化する際の初期バックアップ ポリシーでクラウドバックアップに対して_Datalockとランサムウェア対策_を有効にした場合、DataLockが設定された他のポリシーのみが表示されます。NetApp Backup and Recoveryのアクティブ化時に_Datalockとランサムウェア対策_を有効にしなかった場合、DataLockが設定されていない他のクラウドバックアップ ポリシーのみが表示されます。</block>
+  <block id="ebca7a02fb232e1d7aeb6ae091d6ab26" category="paragraph">このクラスタに対してNetApp Backup and Recoveryをアクティブ化する際に_Datalockとランサムウェア保護_を有効にした場合、オンデマンドバックアップもDataLockで構成され、保持期間は30日になります。ランサムウェアスキャンは、アドホックバックアップではサポートされていません。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block>。</block>
+  <block id="90b54eef4622c06e289761aabac1fdae" category="paragraph">この機能は、ボリューム バックアップが ONTAP 9.11.1 以降のシステムから作成され、バックアップ to Object ポリシーで _Datalock and Ransomware protection_ を有効にしている場合にのみ使用できます。</block>
+  <block id="62fe09f51891d84daa25048262b9784e" category="paragraph">ランサムウェア対策の列には、スキャンが進行中であることが示されています。</block>
+  <block id="9c21e5de2077bd6b91b7d39f7b0ffc44" category="list-text">このクラスタでNetApp Backup and Recoveryをアクティブ化するときに初期ポリシーで_Datalockとランサムウェア保護_を有効にした場合、編集するすべてのポリシーは同じDataLock設定（ガバナンスまたはコンプライアンス）で構成する必要があります。NetApp Backup and Recoveryをアクティブ化するときに_Datalockとランサムウェア保護_を有効にしなかった場合、現在DataLockを有効にすることはできません。</block>
+  <block id="87c88da4757cbf0be58b4080cd9a5671" category="list-text">このクラスタでNetApp Backup and Recoveryをアクティブ化する際に初期ポリシーで_Datalockとランサムウェア保護_を有効にした場合、作成する追加のポリシーはすべて同じDataLock設定（ガバナンスまたはコンプライアンス）で構成する必要があります。NetApp Backup and Recoveryをアクティブ化する際に_Datalockとランサムウェア保護_を有効にしなかった場合、DataLockを使用する新しいポリシーを作成することはできません。</block>
+  <block id="b7e1023dddb526d0820d1e7544ac67e0" category="paragraph">StorageGRID の Datalock およびランサムウェア対策の要件の詳細については、<block ref="bbc9f622da531392bbcdbdc340d647a2" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="31ae6e5d2e23d698ed4b4cddb30323f6" category="paragraph">バックアップに DataLock およびランサムウェア対策を使用するには、StorageGRID システムがバージョン 11.6.0.3 以降を実行している必要があります。</block>
+  <block id="aa0c387c2ebbcc0a1d666f326c80c9a9" category="paragraph">クラスタで ONTAP 9.11.1 以降を使用している場合は、_Datalock and Ransomware protection_ を設定することで、バックアップを削除やランサムウェア攻撃から保護できます。_DataLock_ はバックアップ ファイルの変更や削除を防ぎ、_ransomware protection_ はバックアップ ファイルをスキャンしてランサムウェア攻撃の痕跡を検出します。</block>
+  <block id="6840e12b66031c15136d328122561a9b" category="inline-link-macro">Datalock およびランサムウェア対策オプション</block>
+  <block id="45d934ae623f3901db2701ce1288ced6" category="paragraph">Datalockとランサムウェア対策オプションの詳細については、<block ref="5df7ef8295177adf3f7534eb40e8a229" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="129af5be2558be9e6958d9dd7be03e2f" category="paragraph">これらの機能はどちらもバックアップファイルを保護するため、バックアップがランサムウェア攻撃を受けた場合でも、常に有効なバックアップファイルからデータを復元できます。また、バックアップを一定期間ロックして保管する必要があるといった、特定の規制要件を満たす上でも役立ちます。*Datalock およびランサムウェア保護*オプションが有効になっている場合、NetApp Backup and Recovery のアクティブ化の一部としてプロビジョニングされるクラウド バケットで、オブジェクトのロックとオブジェクトのバージョン管理が有効になります。</block>
+  <block id="08bc3d60d9cfe6d536c5f5f872dd11f5" category="list-text">ポリシーを作成する際は、*Datalock and Ransomware protection* セクションを展開してください。</block>
+  <block id="e8145252a24c7b875d1308baca22078f" category="list-text">*なし*：DataLock 保護機能とランサムウェア対策機能は無効になっています。</block>
+  <block id="4ffacb9062f3a8dc8d0afee0a9baa13c" category="list-text">*ロック解除済み*：DataLock保護機能とランサムウェア対策機能が有効になっています。特定の権限を持つユーザーは、保存期間中に保護されたバックアップファイルを上書きまたは削除できます。</block>
+  <block id="9d5c4b9e1cb1933717aca7e5b1cea2b4" category="list-text">*ロック済み*：DataLock保護機能とランサムウェア対策機能が有効になっています。保存期間中は、ユーザーは保護されたバックアップファイルを上書きしたり削除したりすることはできません。これは規制要件を完全に満たしています。</block>
+  <block id="59d35a98a25ac407c3c2871937dd7dc2" category="paragraph">これらの基準に加えて、クラウドストレージでは、*Datalock and Ransomware protection*機能を使用することで追加のセキュリティオプションが利用でき、古いバックアップファイル用にアーカイブストレージクラスを選択することでコスト削減も実現できます。<block ref="0c861116d28daa1fe6085df5c3fb8bde" category="inline-link-macro-rx"></block>。</block>
+  <block id="d195ddcd2f3d984477faa5a1a97516bf" category="list-text">ボリュームデータのリストアプロセス中にランサムウェアのバックアップファイルをスキャンする場合（クラウドバックアップでDatalockとランサムウェア保護を有効にしている場合）、クラウド プロバイダからの追加のegress コストも発生します。</block>
+  <block id="fb71a072e6e449316b8305b9767a4e9e" category="paragraph">クラスタで ONTAP 9.11.1 以降を使用している場合は、オブジェクト ストレージ内のバックアップを削除やランサムウェア攻撃から保護できます。各バックアップ ポリシーには、特定の期間（_保持期間_）にバックアップ ファイルに適用できる _Datalock とランサムウェアの保護_ のセクションが用意されています。</block>
+  <block id="fe096dc1f619b5ae2f454275962bf893" category="paragraph">オブジェクトストレージでバックアップ ファイルを選択し、そのバックアップに対してランサムウェア保護が有効になっている場合（バックアップ ポリシーでDatalock とランサムウェア保護を有効にした場合）、データを復元する前にバックアップファイルに対して追加のランサムウェアスキャンを実行するように求められます。バックアップファイルにランサムウェアが含まれていないかスキャンすることをお勧めします。（バックアップファイルの内容にアクセスするため、クラウド プロバイダから追加の下りコストが発生します。）</block>
+  <block id="a38244f145eb7bb81ea84601f169276b" category="paragraph">また、バックアップ ファイルに対してランサムウェア保護が有効になっている場合（バックアップ ポリシーで Datalock とランサムウェア保護を有効にした場合）、データを復元する前にバックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルにランサムウェアが含まれていないかスキャンすることをお勧めします。（バックアップ ファイルの内容にアクセスするため、クラウド プロバイダから追加の下りコストが発生します。）</block>
 </blocks>

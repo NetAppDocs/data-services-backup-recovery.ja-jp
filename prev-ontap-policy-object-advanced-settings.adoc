@@ -102,7 +102,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 
 ランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショットに対してのみ実行されます。
 
-DataLockとランサムウェア耐性オプションの詳細については、以下を参照してください。link:prev-ontap-policy-object-options.html["DataLockとランサムウェア耐性オプション"] 。
+Datalockとランサムウェア対策オプションの詳細については、link:prev-ontap-policy-object-options.html["Datalock およびランサムウェア対策オプション"]を参照してください。
 
 スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。
 
