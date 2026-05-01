@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータを Amazon S3 にバックアップする
 :hardbreaks:
@@ -165,7 +165,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。これらの LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
 
 +
-「デフォルト」とは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。
+「Default」以外のIPspaceを使用している場合は、オブジェクトストレージにアクセスするための静的ルートの作成が必要になることがあります。
 
 +
 IPspace 内のすべてのクラスタ間 LIF はオブジェクト ストアにアクセスできる必要があります。現在の IPspace に対してこれを構成できない場合は、すべてのクラスタ間 LIF がオブジェクト ストアにアクセスできる専用の IPspace を作成する必要があります。
@@ -369,7 +369,7 @@ openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vp
 [source, text]
 ----
 Certificate chain
-0 s:/CN=s3.us-west-2.amazonaws.com`
+0 s:/CN=s3.us-west-2.amazonaws.com
    i:/C=US/O=Amazon/OU=Server CA 1B/CN=Amazon
 -----BEGIN CERTIFICATE-----
 MIIM6zCCC9OgAwIBAgIQA7MGJ4FaDBR8uL0KR3oltTANBgkqhkiG9w0BAQsFADBG

@@ -30,7 +30,7 @@ summary: ゲスト ファイルを復元しようとすると、ゲスト ファ
 
 この問題は、ゲスト ファイルの復元操作を開始したときに、VMware ツールが実行されていてゲスト OS の資格情報が正しいにもかかわらず、ディスクの接続操作が失敗した場合に発生します。これが発生すると、次のエラーが返されます。
 
-`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
+`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMware Tools is running properly on the system and that the account used is an Administrator account. Error is SystemError vix error codes = (3016, 0).`
 
 この問題を修正するには、ゲストOSでVMware Tools Windowsサービスを再起動してから、ゲスト ファイル リストア処理を再試行します。
 

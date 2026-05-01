@@ -41,27 +41,18 @@
   <block id="cd4619af82dfe7627dc934e29e85a6e9" category="paragraph">このリリースでは、 FlexGroupフォルダーの復元のサポートはテクノロジー プレビューです。</block>
   <block id="abbf2484b45da9fd7be677fe96c511eb" category="inline-link">参照と復元を使用してフォルダとファイルを復元する</block>
   <block id="20a9fe231d3378f3b995e621821a5fb1" category="paragraph">詳細については、<block ref="eb7fa071b1afec4a727e847897c52430" category="inline-link-rx"></block> 。</block>
-  <block id="da9489b6abd27b653b6c28d99ae2ac6b" category="paragraph">手動で有効にする方法の詳細については、<block ref="cb48ac5d5b1e506c1ce232053a519e6a" category="inline-link-rx"></block> 。</block>
   <block id="aa6a53998d98bae73a6913ff1c2eecbc" category="doc">RHEL 8 または 9 での参照と復元による Podman サポート</block>
   <block id="adc0925d00b7b860ba010d483035a38d" category="paragraph">NetApp Backup and Recovery は、Podman エンジンを使用して Red Hat Enterprise Linux (RHEL) バージョン 8 および 9 でのファイルとフォルダーの復元をサポートするようになりました。これは、NetApp Backup and Recoveryの参照および復元方法に適用されます。</block>
   <block id="5462103113dfca7582cf43f266db09a2" category="inline-link">ホスト要件</block>
-  <block id="6be4e0f7143419aee9499b2a2505b0ab" category="paragraph">コンソールエージェントバージョン3.9.40は、RHEL 8または9ホストへのコンソールエージェントソフトウェアの手動インストールにおいて、場所に関係なく、Red Hat Enterprise Linuxバージョン8および9の特定のバージョンをサポートします。<block ref="10c1911da0601c7d780b4af72d11f3ab" category="inline-link-rx"></block> 。これらの新しい RHEL バージョンでは、Docker エンジンではなく Podman エンジンが必要です。以前は、 NetApp Backup and Recovery には、Podman エンジンの使用時に 2 つの制限がありました。これらの制限は削除されました。</block>
   <block id="6111aa812639d5e432842ceca200ea78" category="inline-link">バックアップファイルからONTAPデータを復元する方法の詳細</block>
   <block id="f807d2e87806a64e8251db4daa8c0686" category="paragraph"><block ref="a417ea89f701f9bc0a6d7405552ab71a" category="inline-link-rx"></block>。</block>
   <block id="3abe4a789c1c33e285d9452cca8c493b" category="section-title">カタログのインデックス作成が高速化され、検索と復元が向上</block>
   <block id="9353e94049314c6236b51712848f2572" category="paragraph">このリリースには、ベースライン インデックス作成をより高速に完了する、改良されたカタログ インデックスが含まれています。インデックス作成が高速化されると、検索と復元機能をより迅速に使用できるようになります。</block>
   <block id="517624d736bd2a385ee8cda71584112f" category="doc">SnapLock ComplianceとSnapLock Enterpriseの保護モード</block>
-  <block id="c9c56efcf255aca32ed492e84095d7c2" category="paragraph">NetApp Backup and Recoveryでは、SnapLock ComplianceまたはSnapLock Enterprise保護モードのいずれかを使用して構成されたFlexVolとFlexGroup の両方のオンプレミス ボリュームをバックアップできるようになりました。このサポートを受けるには、クラスタでONTAP 9.14 以降を実行している必要があります。SnapLock Enterpriseモードを使用したFlexVolボリュームのバックアップは、 ONTAPバージョン 9.11.1 以降でサポートされています。以前のONTAPリリースでは、 SnapLock保護ボリュームのバックアップはサポートされていません。</block>
   <block id="d41c5b540be0c3c679bd7d5c99b06670" category="inline-link">NetApp Backup and Recoveryについて学ぶ</block>
-  <block id="97b3d65b7c467100f6712b88b990af6d" category="paragraph">サポートされているボリュームの完全なリストについては、<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block> 。</block>
   <block id="fec92c3dfb6a0b3db498488c7f4d2f29" category="section-title">ボリュームページでの検索と復元プロセスのインデックス作成</block>
   <block id="15400d9962ba34aa5fdf096b27ab90a3" category="paragraph">検索と復元を使用する前に、ボリューム データを復元する各ソース システムで「インデックス作成」を有効にする必要があります。これにより、インデックス カタログは各ボリュームのバックアップ ファイルを追跡できるようになります。ボリューム ページにインデックスのステータスが表示されるようになりました。</block>
   <block id="cd9b31737e78e0a0a755acc12151f766" category="list-text">インデックス作成済み: ボリュームにインデックスが作成されました。</block>
-  <block id="02e4eb80c967f3b9add2ba16a690eef2" category="list-text">進行中</block>
-  <block id="838534d879f74e7af515a7de57e72b71" category="list-text">インデックスなし</block>
-  <block id="73d4d0de3c5f56849f3c1a290a6681f2" category="list-text">インデックス作成を一時停止しました</block>
-  <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="list-text">エラー</block>
-  <block id="cb48cbf342305a9ae53e02e21fcb644c" category="list-text">有効になっていません</block>
   <block id="1ef2d1ba8a2963702ac1e5240f81ffde" category="doc">NetApp Backup and Recoveryプレビュー リリース</block>
   <block id="501af319d8923aa4758190eb4fbada30" category="paragraph">NetApp Backup and Recoveryのこのプレビュー リリースでは、NetApp Backup and Recoveryでお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。</block>
   <block id="a2e3a30df706bb24099d5e00888df71a" category="admonition">このドキュメントはテクノロジープレビューとして提供されています。このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。</block>
@@ -152,7 +143,6 @@
   <block id="2a42543b31a44385d9801b2e6d715417" category="list-text">ポリシーで DataLock を有効にすることはサポートされていません。</block>
   <block id="bd38f0d8ed5d82f6a34eef6f60e82afc" category="list-text">ポリシーでアーカイブ モードを有効にすることはサポートされていません。</block>
   <block id="7f4d22b3de45045172408ddd711a85a1" category="paragraph">*はじめる*</block>
-  <block id="532a003570e90a57b7965cafcf69d336" category="paragraph">このプレビュー機能の使用を開始するには、コンソール エージェントでフラグを有効にする必要があります。次に、バックアップ セクションで *サードパーティ互換* オブジェクト ストアを選択して、保護ワークフローに MinIO サードパーティ オブジェクト ストアの接続詳細を入力できます。</block>
   <block id="c65f3468fbd84ca6a3ed5c4f86c93ec8" category="doc">強化されたONTAPボリュームダッシュボード</block>
   <block id="4fd717f9bf23502f14b97a4e0dd209e6" category="paragraph">2025 年 4 月には、はるかに高速で効率的な、強化されたONTAPボリューム ダッシュボードのプレビューをリリースしました。</block>
   <block id="24c045ea49f5ec7c22662da2305601e6" category="paragraph">このダッシュボードは、多数のワークロードを抱えるエンタープライズ顧客を支援するために設計されました。20,000 ボリュームを持つお客様の場合でも、新しいダッシュボードは 10 秒未満で読み込まれます。</block>
@@ -187,13 +177,11 @@
   <block id="2211c8a4939111428200ceec5f271f42" category="paragraph">保護を有効にするとき、または復元プロセスを開始するときに、このオプションを有効または無効にすることができます。</block>
   <block id="e642532444d0db4591ce8b9d729f92b3" category="paragraph">この設定を無効にした場合、 NetApp Backup and Recovery が適切に機能するには、プライベート エンドポイントを手動で作成する必要があります。適切な接続がないと、バックアップおよびリカバリ タスクを正常に実行できない可能性があります。</block>
   <block id="fad4c67d1d97874133e7a367fe5038fd" category="section-title">ONTAP S3 でのSnapMirrorからクラウドへの再同期のサポート</block>
-  <block id="8e0a943cdbcd7f9c7f29128489119715" category="paragraph">以前のリリースでは、 SnapMirror to Cloud Resync (SM-C Resync) のサポートが導入されました。この機能により、 NetApp環境でのボリューム移行時のデータ保護が効率化されます。このリリースでは、 ONTAP S3 の SM-C 再同期のサポートに加え、Wasabi や MinIO などの他の S3 互換プロバイダーのサポートも追加されました。</block>
   <block id="fa551b5810fe894fcd21bf7c8ffc98d1" category="section-title">StorageGRID用の独自のバケットを用意する</block>
   <block id="4b2511d38450982bde4f504e80a44028" category="paragraph">作業環境のオブジェクト ストレージにバックアップ ファイルを作成すると、デフォルトでは、 NetApp Backup and Recoveryによって、設定したオブジェクト ストレージ アカウントにバックアップ ファイル用のコンテナ (バケットまたはストレージ アカウント) が作成されます。以前は、これをオーバーライドして、Amazon S3、Azure Blob Storage、Google Cloud Storage に独自のコンテナを指定できました。このリリースでは、独自のStorageGRIDオブジェクト ストレージ コンテナーを導入できるようになりました。</block>
   <block id="e6e5a011626c6db86099687e0a358c1f" category="inline-link">独自のオブジェクトストレージコンテナを作成する</block>
   <block id="51c4ba7436895c5fa861c805e1caee68" category="paragraph">見る<block ref="63f7d9c65b21d9a782eb05b351422f54" category="inline-link-rx"></block>。</block>
   <block id="5d8fc779baf0d068c296ee5013b2224f" category="doc">Kubernetes ワークロードのサポート (プレビュー)</block>
-  <block id="3544c31b5491dc7ecb73e28d6e25a1e8" category="paragraph">NetApp Backup and Recoveryのこのリリースでは、Kubernetes ワークロードの検出と管理のサポートが導入されています。</block>
   <block id="200a1ca96330b8c7561607ba3e8efa76" category="list-text">kubeconfig ファイルを共有せずに、 NetApp ONTAPを搭載した Red Hat OpenShift とオープンソースの Kubernetes クラスターを発見します。</block>
   <block id="bc97cde5f3a6fe336563401fb4b522a7" category="list-text">統合されたコントロール プレーンを使用して、複数の Kubernetes クラスターにわたるアプリケーションを検出、管理、保護します。</block>
   <block id="8671fb87efe354c05f9373edb6889d96" category="list-text">Kubernetes アプリケーションのバックアップとリカバリのためのデータ移動操作をNetApp ONTAPにオフロードします。</block>
@@ -252,7 +240,6 @@
   <block id="387c71fcb2fb7fdf9038db9d12137530" category="inline-link-macro">NetApp Consoleのリリース ノート。</block>
   <block id="3a1e37eecca95e81d9e509646022ffda" category="paragraph">変更内容の詳細については、<block ref="019a5c722618673de9fa5ca0cf2abddb" category="inline-link-macro-rx"></block></block>
   <block id="86df852f08da7feceb910d31327e83d7" category="section-title">プライベートプレビューとしての Hyper-V ワークロード サポート</block>
-  <block id="9fb98f9a29d9d72ef6008750be44e084" category="paragraph">NetApp Backup and Recoveryのこのリリースでは、Hyper-V ワークロードの検出と管理のサポートが導入されています。</block>
   <block id="bd0905239cb012ebf878ac40c3981660" category="list-text">スタンドアロン インスタンスとフェールオーバー クラスター インスタンス (FCI) 上の VM のバックアップと復元</block>
   <block id="cb861f226468f5c5741c826734953432" category="list-text">SMB3共有に保存されたVMを保護する</block>
   <block id="165a3a57ae6cbe2ce8d382109a648112" category="list-text">仮想マシンレベルでの一括保護</block>
@@ -262,7 +249,6 @@
   <block id="57a29df96f4bdf53f80c56b739785313" category="inline-link">Hyper-V ワークロードの保護の概要</block>
   <block id="f7bc6e5577bf047a5f192d548391185c" category="paragraph">Hyper-Vワークロードの保護の詳細については、以下を参照してください。<block ref="8b99e6e4e6dfd30b0b16292fe5edfbd4" category="inline-link-rx"></block> 。</block>
   <block id="ade0d83a8d5df6524dcf5bc339bf6236" category="section-title">プライベートプレビューとしての KVM ワークロード サポート</block>
-  <block id="c42adba211239f644f4ee6954d8a909e" category="paragraph">NetApp Backup and Recoveryのこのリリースでは、KVM ワークロードの検出と管理のサポートが導入されています。</block>
   <block id="99803398691d47a569fe2e0eeaf8a74c" category="list-text">NFS共有に保存されたqcow2 VMイメージのバックアップと復元</block>
   <block id="81e3905959a6e11107e52c1db1aa927a" category="list-text">ストレージプールのバックアップ</block>
   <block id="be660bd29054ec196c26b5d7ab12eca9" category="list-text">保護グループを使用した VM およびストレージ プールの一括保護</block>
@@ -324,8 +310,6 @@
   <block id="a0d08a35ff701967dbc1c996dc96b450" category="paragraph">API 呼び出しを行うときは、Authorization ヘッダーにユーザー トークンを追加し、x-agent-id ヘッダーにコンソール エージェント ID を追加します。  API ではNetApp Consoleアカウント ID を使用する必要があります。</block>
   <block id="92ab15f0eb1b97b8c4bdb14a10948af8" category="inline-link">サービスアクセストークンを作成する</block>
   <block id="e5f2b8ab19b544e0e970070da0ef345c" category="admonition">サービス アカウントを使用している場合は、ユーザー トークンの代わりにサービス アクセス トークンを使用する必要があります。「client_id」の値 (「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」) は固定値であり、変更できません。この場合は、次の手順に従ってください。<block ref="ad1a67426fea429db40073e48bac82e2" category="inline-link-rx"></block> 。</block>
-  <block id="cb27bd3cf10a5c5ee3ef77ed62b4ec63" category="list-text">NetApp NetApp ConsoleWeb サイトからユーザー トークンを取得します。</block>
-  <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">次のリンクからリフレッシュトークンを生成してください: https://services.cloud.netapp.com/refresh-token/.リフレッシュ トークンは、ユーザー トークンを生成するために使用する英数字の文字列です。</block>
   <block id="4130aadba8d01957d2f7bc7a8826bbc7" category="admonition">NetApp ConsoleWeb サイトのユーザー トークンには有効期限があります。API レスポンスには、トークンの有効期限を示す「expires_in」フィールドが含まれています。トークンを更新するには、この API を再度呼び出す必要があります。</block>
   <block id="354fecdc1c1045cf24231c0bec3c74cd" category="list-text">NetApp Consoleアカウント ID を取得します。</block>
   <block id="8249fee34290d25027be632b8f27da68" category="paragraph">この API は次のような応答を返します。*[0].[ accountPublicId]* からの出力を解析することでアカウント ID を取得できます。</block>
@@ -520,7 +504,6 @@
   <block id="5b67703bc7ab6a4716dda43c544c9f7d" category="list-text">*既存の資格情報*: このオプションを選択すると、すでに追加されている既存の資格情報を使用できます。資格情報の名前を入力します。</block>
   <block id="29c1c21dae903f81a5ce83243375ad66" category="list-text">*新しい資格情報の追加*: 既存のSnapCenterホスト資格情報がない場合は、新しい資格情報を追加できます。資格情報名、認証モード、ユーザー名、およびパスワードを入力します。</block>
   <block id="d9f0e4ad58dd91513c083d85b8d9abac" category="list-text">*インポート* を選択してエントリを検証し、 SnapCenterサーバーを登録します。</block>
-  <block id="e2aca1a90b2505bdbd8989fd67da5b73" category="admonition">SnapCenterサーバーがすでに登録されている場合は、既存の登録詳細を更新できます。</block>
   <block id="1a2fd2144a03d5f7da4895a769c5f322" category="paragraph">インベントリ ページには、インポートされたSnapCenterリソースが表示されます。</block>
   <block id="c836a45d41f4d6fac973334982e0121b" category="section-title">SnapCenterホストリソースの管理</block>
   <block id="8a44019232b730c71ae86feed08e1f3a" category="paragraph">SnapCenterリソースをインポートした後、 NetApp Backup and Recoveryでそれらのホスト リソースを管理します。インポートしたリソースを管理することを選択すると、 NetApp Backup and Recovery はSnapCenterからインポートしたリソースをバックアップおよびリカバリできるようになります。  SnapCenter Server でこれらのリソースを管理する必要がなくなります。</block>
@@ -529,7 +512,6 @@
   <block id="1fb988937b21c00da1e824876b010dc1" category="list-text">* NetApp Consoleで管理*を選択します。</block>
   <block id="67c5a09051e18a795b9e554ac46c53fc" category="paragraph">インベントリ ページで、ホスト名の下に *管理対象* と表示され、選択したホスト リソースがNetApp Backup and Recoveryによって管理されていることを示します。</block>
   <block id="dd65b1fcdfdbfc9273253615b14bdeb7" category="section-title">インポートしたSnapCenterリソースを編集する</block>
-  <block id="34cc7187d0a3d7c2dd259f99b254962d" category="paragraph">後でSnapCenterリソースを再インポートしたり、インポートしたSnapCenterリソースを編集して登録の詳細を更新したりできます。</block>
   <block id="2dadcaeef8b607b311c6e42ed35272c1" category="paragraph">SnapCenter Server のポートとパスワードの詳細のみを変更できます。</block>
   <block id="0f9066b0f9e42b12f45badda9e9c8254" category="list-text">* SnapCenterからのインポート *の下矢印を選択します。</block>
   <block id="88b324247ad56ee6b822b2ad7363ece8" category="paragraph">SnapCenterからのインポート ページには、以前のすべてのインポートが表示されます。</block>
@@ -1662,7 +1644,6 @@
   <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">デフォルトのストレージ クラスに復元するか、別のストレージ クラスに復元するかを選択します。</block>
   <block id="12c3c958b266fff57134abb1c9649419" category="list-text">オプションで、別のストレージ クラスに復元することを選択した場合は、各ソース ストレージ クラスに一致する宛先ストレージ クラスを選択します。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">バックアップの削除</block>
-  <block id="f34f3b4d83a98c1f03d57b6ce4176300" category="summary">NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">NetApp Backup and Recoveryで VMware ワークロードをバックアップする</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">データが確実に保護されるように、オンプレミスのONTAPシステムから VMware VM とデータストアを Amazon Web Services、 Azure NetApp Files、またはStorageGRIDにバックアップします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。</block>
   <block id="f941928782d55bd3ba649990c808fcbd" category="inline-link-macro">NetApp Backup and Recoveryを使用して VMware ワークロードの保護グループを作成および管理します</block>
@@ -2530,7 +2511,6 @@
   <block id="15791d531460b4c275e03017399fcd1a" category="inline-link">IPspacesについて詳しくはこちら</block>
   <block id="c96f0b5929f61d63c7ae3512d00fb22b" category="list-text">クラスタ間 LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。<block ref="0edb32ced43734581c082142ee8a87a9" category="inline-link-rx"></block> 。</block>
   <block id="d23d9fa8bc8aada34e7bfaf673a1e1d7" category="paragraph">NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。これらの LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。</block>
-  <block id="f2d23bc0f0e4ec1066fdf58d41ab19ab" category="paragraph">「デフォルト」とは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。</block>
   <block id="187b50ee8f2351a69b8fa6b8b42687d5" category="paragraph">IPspace 内のすべてのクラスタ間 LIF はオブジェクト ストアにアクセスできる必要があります。現在の IPspace に対してこれを構成できない場合は、すべてのクラスタ間 LIF がオブジェクト ストアにアクセスできる専用の IPspace を作成する必要があります。</block>
   <block id="16b737dd94da3821905b2064f8068f45" category="inline-link">SVMのDNSサービスを構成する</block>
   <block id="e30347a67bfdcb246f056cfd9aa4efbd" category="list-text">ボリュームが配置されているストレージ VM に対して DNS サーバーが設定されている必要があります。方法を見る<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
@@ -2621,7 +2601,6 @@
   <block id="352e593026b22ecd240cab27c36a6aa8" category="paragraph">NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。</block>
   <block id="4ac800b4e5d934f314da963c023ec8e3" category="list-text">ノードおよびクラスタ間 LIF はオブジェクト ストアにアクセスできます。</block>
   <block id="cf4f978809886b33abb134b8d95a53fa" category="list-text">ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
-  <block id="113b5e7186c305ad07d9c9c046e30198" category="list-text">デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。</block>
   <block id="c6ab18cd48dd0f412dee7654780c4eef" category="list-text">必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recoveryサービス接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。</block>
   <block id="dc6287483bb6663eb24a6b4a97292566" category="section-title">Azure Blob をバックアップ先として準備する</block>
   <block id="7c6c6d3f55cf70ec4e78761174989411" category="list-text">アクティベーション ウィザードでは、既定の Microsoft 管理の暗号化キーを使用する代わりに、独自のカスタム管理キーを使用してデータを暗号化することができます。この場合、Azure サブスクリプション、Key Vault 名、およびキーが必要になります。<block ref="5499082d3ade4f2b56fcc95816a14476" category="inline-link-rx"></block> 。</block>
@@ -2667,7 +2646,6 @@
   <block id="12b49f489ea72468724070c09fc7f45d" category="list-text">ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。コンソール エージェントは、Google Cloud Platform VPC に配置できます。</block>
   <block id="8bdfdad72ee7298056198e1b5d8fb704" category="list-text">ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます。</block>
   <block id="7dfd82301201229d10d2b7f30a3a9e1e" category="paragraph">プライベートGoogleアクセスまたはプライベートサービス接続を使用している場合は、DNSサーバーが次のように設定されていることを確認してください。<block ref="3f4ca1d8ed90e1a3c0451eb42e58e5ef" prefix=" " category="inline-code"></block>正しい内部 (プライベート) IP アドレスに設定します。</block>
-  <block id="6f10fb0bdda82988a0fa6dcc2515c346" category="list-text">デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要があることに注意してください。</block>
   <block id="a62451f46dc42982cf209550cb11486e" category="list-text">必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。</block>
   <block id="496645a84a32070fadbf91b2c575e751" category="paragraph">コンソールの [システム] ページにバックアップの Google Cloud Storage 保存先が存在する場合は、 ONTAPクラスターを Google Cloud オブジェクト ストレージにドラッグできます。</block>
   <block id="8b7d5c44d9577dfc1c061905392bd3f1" category="list-text">*ローカル スナップショット*: オブジェクト ストレージへのレプリケーションまたはバックアップを実行する場合は、ローカル スナップショットを作成する必要があります。</block>
@@ -2718,7 +2696,6 @@
   <block id="cfb67c066deff155999e8b4bab9d5bd1" category="list-text">ONTAPクラスタは、バックアップおよびリストア操作のために、クラスタ間 LIF からONTAP S3 サーバへのユーザ指定ポートを介して HTTPS 接続を開始します。ポートはバックアップのセットアップ中に構成可能です。</block>
   <block id="da21bd86fb59a4ebcb3e9faa287bbb0d" category="list-text">ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。</block>
   <block id="13af414a6c38f36f8a15bdef0358f5c4" category="list-text">ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。</block>
-  <block id="a82a5bb2727df3f1958829955576a139" category="list-text">デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。</block>
   <block id="b470d5270f42332102265af5da8e545a" category="list-text">必要に応じてファイアウォール ルールを更新し、指定したポート (通常はポート 443) を介してONTAPからオブジェクト ストレージへのNetApp Backup and Recoveryサービス接続と、ポート 53 (TCP/UDP) を介してストレージ VM から DNS サーバーへの名前解決トラフィックを許可します。</block>
   <block id="6da2ce1a0bc0894620f6c533f7a2f2b4" category="section-title">ONTAP S3をバックアップターゲットとして準備する</block>
   <block id="c3bf5d608f066a6b405a40012a2fc10c" category="inline-link">ONTAP S3 ドキュメント</block>
@@ -2778,7 +2755,6 @@
   <block id="793640ee72b7150dff71a288a821c67c" category="list-text">サポートされているStorageGRIDバージョン</block>
   <block id="8a456872aea50fd247449bd552854586" category="list-text">StorageGRID 10.3 以降がサポートされています。</block>
   <block id="a3c3d46eb7dece1ea66293e26e27c747" category="paragraph">古いバックアップをクラウド アーカイブ ストレージに階層化するには、 StorageGRIDシステムでバージョン 11.3 以降を実行している必要があります。さらに、 StorageGRIDシステムがコンソールの *システム* ページで検出される必要があります。</block>
-  <block id="de84af939f41492b1264ce8c3df573a9" category="paragraph">アーカイブ ストレージを使用するには、管理ノードの IP アクセスが必要です。</block>
   <block id="a99287c7990930f58a55c1e2dba88d64" category="paragraph">ゲートウェイ IP アクセスは常に必要です。</block>
   <block id="5a7e671d36e7ddbd948f2001988ffe33" category="inline-link">詳細についてはStorageGRIDのドキュメントを参照してください。</block>
   <block id="c794a55c739e453d58e6bcd42293fda2" category="list-text">StorageGRIDストレージへのアクセスを制御するには、S3 テナント アカウントを作成する必要があります。<block ref="71eb6cc3bcb687d271a4ec87759d7b9d" category="inline-link-rx"></block> 。</block>
@@ -3073,7 +3049,6 @@
   <block id="b3f1b65a3c7ad581029671863ce84f3e" category="section-title">サポートされているシステムとオブジェクトストレージプロバイダー</block>
   <block id="04caa6fde87b21be8738fc7aac2130d5" category="paragraph">次のパブリックおよびプライベート クラウド プロバイダーのオブジェクト ストレージを使用する場合、次のシステムのONTAPボリュームで DataLock およびランサムウェア保護を有効にできます。</block>
   <block id="155ec659cc4e13b84e26ac8a60d0983e" category="cell">Google Cloud のCloud Volumes ONTAP</block>
-  <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">クラスタはONTAP 9.11.1以降を実行している必要があります</block>
   <block id="6eccb1b4300ae9587c674c0708c7ee79" category="list-text">コンソールエージェントはクラウドまたはオンプレミスに導入できます</block>
   <block id="685a143757efe250c8c69c08616cbe33" category="list-text">次の S3 権限は、コンソール エージェントに権限を提供する IAM ロールの一部である必要があります。これらは、リソース「arn:aws:s3:::netapp-backup-*」の「backupS3Policy」セクションにあります。</block>
   <block id="28393e8d0c5d4d42b764689c3d805dd0" category="example-title">AWS S3 の権限</block>
@@ -3105,7 +3080,6 @@
   <block id="2575b79b2cd768a027306db8b9e8614a" category="list-text">s3:GetObjectVersion</block>
   <block id="7b2b7c08da06dd437ae98c50b4ace20f" category="inline-link">必要な権限をコピーして貼り付けることができるポリシーの完全なJSON形式を表示します。</block>
   <block id="14fe833125ea1176d7706671e8ef16cc" category="paragraph"><block ref="44b6ea42a3069db8220a474116b68855" category="inline-link-rx"></block>。</block>
-  <block id="4f411ed71b5f872404c482a3c45285e2" category="list-text">クラスタはONTAP 9.12.1以降を実行している必要があります</block>
   <block id="8dcc4563f1d723683eb1d9c883e3a1eb" category="list-text">Google Cloud の場合:</block>
   <block id="f17f73c90517746e41e59ce4e6a2072f" category="list-text">クラスタはONTAP 9.17.1以降を実行している必要があります</block>
   <block id="43757ece62940efe206ed418c8c8f76b" category="list-text">StorageGRIDシステムは11.6.0.3以降を実行している必要があります</block>
@@ -3198,7 +3172,6 @@
   <block id="307fac06deb7cfd0fa48e676ffc86224" category="paragraph">レプリケーションまたはバックアップ用のカスタム ポリシーを作成する場合、ポリシー ラベル (「毎日」や「毎週」など) がスナップショット ポリシーに存在するラベルと一致している必要があります。一致していないと、レプリケートされたボリュームとバックアップ ファイルが作成されません。</block>
   <block id="8cb2e913decbf9b532c186901104e076" category="inline-link-macro">新しいバックアップポリシーの追加</block>
   <block id="ee49cee7c44ccb04a139f40fb9f4a214" category="paragraph">NetApp Backup and Recovery UI で、スナップショット、レプリケーション、およびオブジェクト ストレージ ポリシーへのバックアップを作成できます。セクションを参照してください<block ref="0559f444e8f88edb894615ec30a1d00b" category="inline-link-macro-rx"></block>詳細については。</block>
-  <block id="4cbdf0f70d1e657d5de76d924cb80f7c" category="paragraph">NetApp Backup and Recoveryを使用してカスタム ポリシーを作成するだけでなく、System Manager またはONTAPコマンド ライン インターフェイス (CLI) を使用することもできます。</block>
   <block id="c2fc643b815b9305bcbcfd94e340a3cc" category="inline-link">System ManagerまたはONTAP CLIを使用してスナップショットポリシーを作成します</block>
   <block id="fc3b34c5669f34396b08c49ba3f73599" category="list-text"><block ref="fc3b34c5669f34396b08c49ba3f73599" category="inline-link-rx"></block></block>
   <block id="e722bdc21722d564815561c634007199" category="inline-link">System ManagerまたはONTAP CLIを使用してレプリケーションポリシーを作成します。</block>
@@ -3742,11 +3715,9 @@
   <block id="ff6cbd3287f545a89d1e5e58f0d17bd4" category="section-title">インポートされたSnapCenterの毎日のスケジュール</block>
   <block id="61ed4c8e3ffbc53bcf1724532421e782" category="paragraph">NetApp Backup and Recovery は、 SnapCenter のスケジュールを次のように調整します。</block>
   <block id="c08c2154284f4af8503c116de1e73d16" category="paragraph">*例*: 月曜日から始まり 3 日ごとに繰り返す間隔を持つSnapCenter の日次ポリシーがある場合、 NetApp Backup and Recovery は月曜日、木曜日、日曜日にスケジュールを毎週設定します。正確に 3 日ごとではないため、一部の日がスキップされます。</block>
-  <block id="9f6a1fee7b57b18f64bf8bca4ad36e30" category="list-text">SnapCenter のスケジュールが 7 日以上に設定されている場合、 NetApp Backup and Recovery はスケジュールを月単位に設定します。月中は一部のスナップショットがスキップされます。</block>
   <block id="9430705db67f982f601f840df3cc16d6" category="section-title">インポートされたSnapCenterの時間別スケジュール</block>
   <block id="3002d82ef196f81026a4e21905803959" category="paragraph">繰り返し間隔が 1 時間を超えるSnapCenter の時間別ポリシーは、NetApp Backup and Recoveryの日次ポリシーに変換されます。</block>
   <block id="a3e76bcb5e859bfa4430da805976f2bd" category="paragraph">繰り返し間隔が 24 の倍数ではない (たとえば 5、7 など) 時間単位のポリシーでは、1 日にいくつかのスナップショットがスキップされます。</block>
-  <block id="9ffb5bf344108bbac86816e15898f943" category="paragraph">*例*: 午前 1 時から 5 時間ごとに繰り返す間隔を持つSnapCenter の時間単位ポリシーがある場合、 NetApp Backup and Recovery (移行後) は、スケジュールを毎日、午前 1 時、午前 6 時、午前 11 時、午後 4 時、午後 9 時に 5 時間間隔で設定します。いくつかの時間はスキップされます。午後 9:00 以降は 5 時間ごとに繰り返すために午前 2:00 になるはずですが、常に午前 1:00 になります。</block>
   <block id="6a7a60343b8fa701471b08effbb43285" category="section-title">SnapCenterポリシーからのログ保持</block>
   <block id="26d5fd5ccf3209caaffe340f43009814" category="paragraph">SnapCenterに複数のポリシーを持つリソースがある場合、 NetApp Backup and Recovery は次の優先順位を使用してログ保持値を割り当てます。</block>
   <block id="e38f6416749d06acffe55900ce6dfec5" category="list-text">SnapCenterの「ログ バックアップ ポリシーによる完全バックアップ」と「ログのみ」ポリシーの場合、 NetApp Backup and Recovery はログのみポリシーの保持値を使用します。</block>
@@ -3786,7 +3757,6 @@
   <block id="cbeefab9985d18cf649d85c32d79d188" category="summary">NetApp Backup and RecoveryとStorageGRIDまたはONTAP間の通信を可能にするセキュリティ証明書を作成します。</block>
   <block id="63b31af683f5a728cbf36267c289589f" category="doc">NetApp Backup and RecoveryでStorageGRIDとONTAPのセキュリティ証明書を設定する</block>
   <block id="67fc617cb862496da73f0d13f68e5e84" category="section-title">StorageGRIDのセキュリティ証明書を作成する</block>
-  <block id="f4ea80cc019b2160c012d4312934a08a" category="paragraph">NetApp Backup and RecoveryコンテナとStorageGRID間の通信でStorageGRID証明書を検証する必要がある場合は、次の手順を実行します。</block>
   <block id="66474d54a0b8e88b5463c446c79940ef" category="paragraph">生成された証明書には、バックアップをアクティブ化したときにNetApp Backup and Recoveryで指定した名前と同じ CN と Subject Alternative Name が含まれている必要があります。</block>
   <block id="04fad0ac16d7f2deb1987a5510c738a1" category="list-text">StorageGRIDドキュメントの手順に従って、 StorageGRID証明書を作成します。</block>
   <block id="3b513e24628a82f33115f07ebd442378" category="inline-link">証明書の設定に関するStorageGRIDの情報</block>
@@ -3798,7 +3768,6 @@
   <block id="cdff415187609f29944bf1c630161ca7" category="admonition">ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では標準モードを使用します。参照<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
   <block id="8e7afc71bbbdb7a90d5effeee846b799" category="list-text">NetApp Backup and Recoveryボリュームのマウント ポイントを見つけます。以下を実行します。</block>
   <block id="e97115c3e90314c60ded3b359ea70498" category="admonition">マウント ポイントは、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
-  <block id="16a11dc8e42e07e3f4167ea593dc06be" category="list-text">MountPoint ディレクトリに変更します。以下を実行します。</block>
   <block id="096c73b5512780e3a3a1510cb1d77009" category="list-text">StorageGRIDの証明書がルートCAと中間CAによって署名されている場合は、<block ref="8921ffd638d5e5fd424e4c197e829486" prefix=" " category="inline-code"></block>両方のファイルを1つのファイルにまとめ、<block ref="0cf87cdc35b35ebc25d6a3bf7c9a3198" prefix=" " category="inline-code"></block>現在の場所にあります。このファイルにリーフ証明書を追加しないでください。</block>
   <block id="22945d914abe20d687b81ff6fbc05c67" category="section-title">cloudmanager_cbsコンテナの手順</block>
   <block id="f96abe500d7acb97552081ca537d4b46" category="paragraph">NetApp Backup and Recovery (Cloud Backup Service) でStorageGRID Server 証明書の検証を有効にする必要があります。</block>
@@ -3836,7 +3805,6 @@
   <block id="70e79bc1dae40cb4d65ff9311b208121" category="list-text"><block ref="70e79bc1dae40cb4d65ff9311b208121" category="inline-link-rx"></block></block>
   <block id="94127ba5494a8ba1866437839940b777" category="inline-link">System ManagerでONTAP SSL証明書を管理する方法</block>
   <block id="490355a668be7c4c18c41a966a22c161" category="list-text"><block ref="490355a668be7c4c18c41a966a22c161" category="inline-link-rx"></block></block>
-  <block id="b5864db94d8bb2d25b7f4630a16f599e" category="list-text">コンソール エージェントに root としてログインします。以下を実行します。</block>
   <block id="94a9166a0ff55136e38b559d3099942f" category="list-text">NetApp Backup and RecoveryDocker ボリュームを取得します。以下を実行します。</block>
   <block id="d09a6e67f757bf6ab00dd35df5db31cb" category="admonition">ボリューム名は、標準、プライベート、および制限付き展開モードによって異なります。この例では、標準のクラウド展開を示します。参照<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
   <block id="3e964e8f45e1fd19df3c5413fcbd6674" category="list-text">ボリュームのマウントを取得します。以下を実行します。</block>
@@ -3955,7 +3923,6 @@
   <block id="361cc78877d7de2ea952f510e7626ad4" category="paragraph">このデータは 1 日に 1 回深夜にバックアップされ、各ファイルの最大 7 つのコピーが保持されます。コンソール エージェントが複数のオンプレミスのONTAPシステムを管理している場合、 NetApp Backup and Recoveryファイルは、最初にアクティブ化されたシステムのバケットに保存されます。</block>
   <block id="2be5ff28599e1447ad26486d058560b3" category="paragraph">オンプレミスのコンソール エージェントが動作を停止した場合は、新しいコンソール エージェントをインストールし、 NetApp Backup and Recoveryデータを新しいコンソール エージェントに復元する必要があります。</block>
   <block id="af0d8358ca0559646ed05a1f70fb056c" category="paragraph">システムが動作していることを確認したら、新しいバックアップ ファイルを作成します。</block>
-  <block id="05eb9ffbcd3a4a40092374a3d60d7ac2" category="paragraph">新しいコンソール エージェントをインストールするときは、元のエージェントと同じソフトウェア バージョンをダウンロードします。 NetApp Backup and Recoveryデータベースを変更すると、新しいソフトウェア バージョンが古いデータベース バックアップで動作しなくなる可能性があります。あなたはできる<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>。</block>
   <block id="5d1e43ba5c03c383925fef923fa745db" category="paragraph">ボリュームに対して作成されたすべてのバックアップが表示されます。</block>
   <block id="6e16e42b061f3ee3519b7b870fdcf125" category="list-text">*毎日*: 設定した日数ごとに繰り返すオプション (例: 3 日ごと)。</block>
   <block id="e8aab330f851827afe9d27b0aec63d26" category="list-text">*毎月*: 1 月から 12 月まで。毎月特定の日または複数の日 (例: 7 日) に実行するオプションがあります。</block>
@@ -4070,7 +4037,6 @@
   <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。</block>
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">表示されるボリュームが元の環境に存在していたボリュームと同じであることを確認します。</block>
   <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。</block>
-  <block id="1bf1acc6c6a3e3af639e9ae129364ba0" category="paragraph">この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recoveryによって管理されていません。</block>
   <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS:<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
   <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">アズール:<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
   <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google クラウド:<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
@@ -4428,7 +4394,6 @@
   <block id="efdc15efa02d496331c0b53a11beab72" category="paragraph">この問題を修正するには、ゲストOSでVMDKを手動でオンラインに戻します。VMDKがオンラインになると、ゲスト ファイル リストア セッションに正しい内容が表示されます。</block>
   <block id="f9364c3689e8fa9d558080e005772cd1" category="section-title">ゲスト ファイル リストアのディスク接続処理が失敗する</block>
   <block id="95c259e43559e78a13dbc7969fdef7cf" category="paragraph">この問題は、ゲスト ファイルの復元操作を開始したときに、VMware ツールが実行されていてゲスト OS の資格情報が正しいにもかかわらず、ディスクの接続操作が失敗した場合に発生します。これが発生すると、次のエラーが返されます。</block>
-  <block id="9b71c1817815e7cd4130bed94e2ea447" category="paragraph"><block ref="294cedeefde97d4fb81e2aaa200cfe43" prefix="" category="inline-code"></block></block>
   <block id="359361098bd32a62519f56fcb0c584b3" category="paragraph">この問題を修正するには、ゲストOSでVMware Tools Windowsサービスを再起動してから、ゲスト ファイル リストア処理を再試行します。</block>
   <block id="e2b253374500e2e93f1c334a2bb7ddd4" category="section-title">ゲスト ファイル リストア セッションを中断してもバックアップが切断されない</block>
   <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">この問題は、VM整合性バックアップからゲスト ファイル リストア処理を実行した場合に発生します。ゲスト ファイル リストア セッションがアクティブな間に、同じVMに対して別のVM整合性バックアップが実行されます。ゲスト ファイル リストア セッションが手動または24時間後に自動的に切断されても、セッションのバックアップは切断されません。</block>
@@ -4595,7 +4560,6 @@
   <block id="55cf8812c6c22803ddfa5fd41279187d" category="list-text">ディスクツーディスク</block>
   <block id="0f6d38819f95da81f8bc80258fee7071" category="list-text">ディスクからオブジェクトストレージへ</block>
   <block id="e3b858c29172bddae0dbb7e461b2f7df" category="list-text">カスケード</block>
-  <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。</block>
   <block id="36f1a2626b3ec6834b4eb361bac96c37" category="doc">Kubernetesワークロード向けNetApp Backup and Recoveryの既知の制限事項</block>
   <block id="36c070b302c08836d912ffb6841bb46e" category="section-title">アプリケーションの保護ポリシーの変更</block>
   <block id="ad4e872c3df8cab19a9d649f27b25605" category="paragraph">アプリケーションに関連付けられた保護ポリシーを変更して別のバケットまたはセカンダリレプリケーションターゲットを使用する場合、保護ポリシーが失敗する可能性があります。</block>
@@ -4621,7 +4585,6 @@
   <block id="da57866549888e8bceaf30a4db33bfc5" category="list-text">Backup and Recoveryでワークロードを検出します。</block>
   <block id="63e4e660d97fd26bbffa7cb3968c22c4" category="paragraph">組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（US East や US West など）を選択します。各ワークロードは、選択したプロジェクトに自動的に関連付けられます。</block>
   <block id="0e8d553f80f80eac9e99c265bf9f4d72" category="list-text">プロジェクトにユーザーを追加します。</block>
-  <block id="0da282e170c520798099314d27620ed4" category="paragraph">組織管理者またはフォルダ/プロジェクト管理者は、ワークロードのあるプロジェクトにNetApp Consoleユーザーを追加します。アクセスのニーズに基づいて、ユーザーに組織閲覧者ロールとNetApp Backup and Recoveryロールを割り当てます。適切なNetApp Backup and Recoveryロールを持つユーザーは、これらのプロジェクト内の新しいワークロードへのアクセス権を自動的に取得します。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">関連情報</block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="inline-link-macro">NetApp Console の ID とアクセス管理について説明します</block>
   <block id="d612358528f4a89a703f161a8c3e4a9e" category="list-text"><block ref="22de56c086dedbed6837db4613efda62" category="inline-link-macro-rx"></block>.</block>
@@ -5057,7 +5020,6 @@
   <block id="cd11b988c9f7b5a4f534d244c8f742a8" category="inline-link">ONTAP ボリュームワークロードの保護の概要</block>
   <block id="cb64e7530a451b6a29edd3427495ec90" category="paragraph">ONTAP ボリュームワークロードの保護の詳細については、<block ref="c12abefe1b46a590752410462324e2ee" category="inline-link-rx"></block>を参照してください。</block>
   <block id="19455401d550e37f86235df1de2da367" category="paragraph">今回のリリースでは、Kubernetes ワークロードに次の保護ポリシーの機能強化が導入されます：</block>
-  <block id="8832a3317e409faa663d5b3be7a37383" category="list-text">*保護ポリシーの編集*：Kubernetesワークロードの保護ポリシーを変更する必要がある場合は、編集できるようになりました</block>
   <block id="67c0c04b74d317df3fb38678dfce9d57" category="list-text">*ディスク間サポート*：ディスク間バックアップアーキテクチャを使用して Kubernetes 保護ポリシーを設定できるようになりました。</block>
   <block id="1f22edbdac095058ea8301cd1b0fa03f" category="list-text">*Google Cloud Platform ストレージ バケットのサポート*：Kubernetes の保護ポリシーを設定して、Google Cloud Platform ストレージ バケットにバックアップできるようになりました。</block>
   <block id="55dcb475c806e158ae812c3e721ff829" category="inline-link">NetApp Backup and Recoveryでの保護ポリシーの作成と管理</block>
@@ -5318,4 +5280,41 @@
   <block id="a38244f145eb7bb81ea84601f169276b" category="paragraph">また、バックアップ ファイルに対してランサムウェア保護が有効になっている場合（バックアップ ポリシーで Datalock とランサムウェア保護を有効にした場合）、データを復元する前にバックアップ ファイルに対して追加のランサムウェア スキャンを実行するように求められます。バックアップ ファイルにランサムウェアが含まれていないかスキャンすることをお勧めします。（バックアップ ファイルの内容にアクセスするため、クラウド プロバイダから追加の下りコストが発生します。）</block>
   <block id="936866268a423c45b2ef9ad24698c8e0" category="paragraph">バックアップとリカバリのサポートは、すべての ONTAP システムにすでに組み込まれているため、追加のハードウェアやメディアゲートウェイは不要です。これにより、バックアップ作業がシンプルになり、コスト効率も向上します。NetApp Console を使用すると、複数のリソースマネージャや専門の担当者を必要とせずに、3-2-1 バックアップのすべてのバリエーションを含む、あらゆるバックアップ戦略の実装を簡素化できます。</block>
   <block id="eb93c206074e97dfb7bf08b81a6c72c1" category="list-text">ストレージVM上にIPv4 NFSデータLIFを設定し、ボリュームのNFSエクスポートを設定する必要があります。Search &amp; Restoreは、NFSボリュームとSMB/CIFSボリュームの両方をサポートしています。</block>
+  <block id="a2d15c88cd74ef2c07cf5a883fe0b88d" category="paragraph">手動で有効にする方法の詳細については、<block ref="cb48ac5d5b1e506c1ce232053a519e6a" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="b61dac5f94b9ddeb94321e1a35a17efe" category="paragraph">コンソールエージェントバージョン3.9.40は、<block ref="10c1911da0601c7d780b4af72d11f3ab" category="inline-link-rx"></block>に記載されているオペレーティングシステムに加えて、RHELホストへのコンソールエージェントの手動インストールに関して、特定のRed Hat Enterprise Linux 8および9リリースをサポートしています。これらの新しいRHELバージョンでは、DockerエンジンではなくPodmanエンジンが必要です。以前、NetApp Backup and RecoveryでPodmanエンジンを使用した場合には2つの制限がありましたが、それらの制限は解消されました。</block>
+  <block id="28afb94b906782446ccfc717207cf806" category="paragraph">NetApp Backup and Recoveryは、SnapLock ComplianceまたはSnapLock Enterprise保護モードを使用して構成されたFlexVolおよびFlexGroupのオンプレミスボリュームをバックアップできるようになりました。このサポートを利用するには、クラスタでONTAP 9.14以降を実行している必要があります。SnapLock EnterpriseモードでのFlexVolボリュームのバックアップは、ONTAP 9.11.1以降でサポートされています。以前のONTAPリリースでは、SnapLockで保護されたボリュームのバックアップはサポートされていません。</block>
+  <block id="6a8ed4de7ab1aa813fb6d9a4e2939ec1" category="paragraph">サポートされているボリュームの完全なリストについては、<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="dc8f8e2a17149271a7db8586e1cda422" category="list-text">進行中：インデックス作成が進行中です。</block>
+  <block id="769d056387975f8dc9019bf628646aa9" category="list-text">インデックス未作成：インデックス作成が開始されていません。</block>
+  <block id="feee87f6c7abb4d53e4a9b94fb0dfb31" category="list-text">インデックス作成が一時停止されました：インデックス作成は一時停止されています。</block>
+  <block id="a25aee605a3e2d5a74f5276d624b0f5b" category="list-text">エラー：インデックス作成エラーが発生しました。</block>
+  <block id="ab7c98eb7b63bf725490a49407c4e35b" category="list-text">無効：このソースではインデックス作成が有効になっていません。</block>
+  <block id="42f50deda405c659127ecb5cd695b30b" category="paragraph">このプレビュー機能の使用を開始するには、Console エージェントでフラグを有効にする必要があります。その後、バックアップセクションで *Third party Compatible* オブジェクトストアを選択することで、保護ワークフローに MinIO サードパーティオブジェクトストアの接続詳細を入力できます。</block>
+  <block id="472faf2431c49adc0b2536c0b6dd5f8d" category="paragraph">前回のリリースでは、SnapMirror to Cloud Resync（SM-C Resync）のサポートが導入されました。この機能は、NetApp環境におけるボリューム移行中のデータ保護を効率化します。このリリースでは、ONTAP S3およびWasabiやMinIOなどの他のS3互換プロバイダーでのSM-C Resyncのサポートが追加されました。</block>
+  <block id="adbe969e927a15ae116084381be98d67" category="paragraph">このリリースのNetApp Backup and Recoveryでは、Kubernetesワークロードの検出と管理がサポートされるようになりました。</block>
+  <block id="26afd870812fc0397b60acfa7ed436c0" category="paragraph">このリリースのNetApp Backup and Recoveryでは、Hyper-Vワークロードの検出と管理のサポートが導入されています：</block>
+  <block id="9961d7a185cfa9d439cc427ed38dc48f" category="paragraph">このリリースのNetApp Backup and Recoveryでは、KVMワークロードの検出と管理のサポートが導入されました：</block>
+  <block id="b8b08cc8479793cbf90cf90739d5d44a" category="list-text">*保護ポリシーの編集*：Kubernetesワークロードの保護ポリシーを変更する必要がある場合は、編集できるようになりました。</block>
+  <block id="756c384ea097ecc82b23f490eb2208a9" category="list-text">NetApp Console の Web サイトからユーザートークンを取得します。</block>
+  <block id="0aebe097f5e5955c53107ce221189235" category="paragraph">以下のリンクから必ずリフレッシュトークンを生成してください：https://services.cloud.netapp.com/refresh-token/.リフレッシュトークンは、ユーザートークンを生成するために使用する英数字の文字列です。</block>
+  <block id="00971dcc6a1f39c384a02f00d3e60974" category="summary">環境で Backup and Recovery を使用する前に、これらの NetApp Backup and Recovery の制限事項を確認してください。</block>
+  <block id="4897b8cd591825888a626536927740b9" category="paragraph">組織管理者またはフォルダ/プロジェクト管理者は、ワークロードのあるプロジェクトにConsoleユーザーを追加します。ユーザーのアクセス要件に基づいて、組織閲覧者ロールとBackup and Recoveryロールを割り当ててください。適切なBackup and Recoveryロールを持つユーザーは、これらのプロジェクト内の新しいワークロードに自動的にアクセスできるようになります。</block>
+  <block id="3325ba2bc09d36a530988abb840fc8c2" category="admonition">SnapCenter Server がすでに登録されている場合は、既存の登録情報を更新できます。</block>
+  <block id="0a73bc800936bebcd3c8b8e4898bf3e3" category="paragraph">後でSnapCenterリソースを再インポートするか、インポートしたSnapCenterリソースを編集して登録情報を更新できます。</block>
+  <block id="00c16ea9dbe4f4e4a298cb14dbc7bf03" category="summary">NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。</block>
+  <block id="3e843348ced3f9e4c35fbe2e1319ecf5" category="paragraph"><block ref="b167760d93d5326c0be83a7248a528cb" prefix="" category="inline-code"></block></block>
+  <block id="18925d044201253060ba6dfa01ea5700" category="paragraph">「Default」以外のIPspaceを使用している場合は、オブジェクトストレージにアクセスするための静的ルートの作成が必要になることがあります。</block>
+  <block id="fb7c7bf4cc7539dceb5fac958b277143" category="list-text">デフォルトとは異なるIPspaceを使用している場合は、オブジェクトストレージにアクセスするために静的ルートを作成する必要があるかもしれません。</block>
+  <block id="611a454ad0b8d9c9bf65b6315d891435" category="list-text">デフォルトとは異なるIPspaceを使用している場合は、オブジェクトストレージにアクセスするために静的ルートを作成する必要がある場合があることに注意してください。</block>
+  <block id="2947f85112e3c257c3ac83e6fbdafb4e" category="list-text">デフォルト以外のIPspaceを使用している場合は、オブジェクトストレージにアクセスするための静的ルートの作成が必要になることがあります。</block>
+  <block id="fcfda8ebf2d138d3fcac111b9373c707" category="paragraph">アーカイブストレージを使用するには、管理ノードのIPアクセスが必要です。</block>
+  <block id="432eebe4a7604b59dce3cc920c1188ae" category="list-text">クラスタで ONTAP 9.11.1 以降が実行されている必要があります</block>
+  <block id="39e9a2df2a2b2ec0f86c3e48b198f446" category="list-text">クラスタでONTAP 9.12.1以降が実行されている必要があります</block>
+  <block id="75ff6d4c7d81cf2bce3cb6709b5f2544" category="paragraph">カスタムポリシーを作成するには、NetApp Backup and Recoveryを使用するだけでなく、System ManagerやONTAPコマンドラインインターフェイス（CLI）を使用することもできます：</block>
+  <block id="2b8bfee882b822ee5f16bca77595ab0f" category="paragraph">新しいコンソールエージェントをインストールする際は、元のエージェントと同じソフトウェアバージョンをダウンロードしてください。NetApp Backup and Recoveryデータベースへの変更により、新しいソフトウェアバージョンが古いデータベースバックアップで動作しなくなる可能性があります。<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>できます。</block>
+  <block id="e85a7923d13a33ad929302f3f0390a8b" category="list-text">SnapCenterのスケジュールが7日より長く設定されている場合、NetApp Backup and Recoveryはスケジュールを月次に設定します。その月の一部のスナップショットはスキップされます。</block>
+  <block id="5854806eb7a037bac498023782dd080f" category="paragraph">*Example*：1：00 AMから5時間ごとの繰り返し間隔を持つSnapCenterの毎時ポリシーがある場合、NetApp Backup and Recovery（移行後）は、1：00 AM、6：00 AM、11：00 AM、4：00 PM、および9：00 PMの5時間間隔で毎日スケジュールを設定します。一部の時間はスキップされます。9：00 PMの後は、5時間ごとに繰り返すために2：00 AMになるはずですが、常に1：00 AMになります。</block>
+  <block id="1f4f4cafd8d76357721d91da817797be" category="paragraph">NetApp Backup and RecoveryコンテナとStorageGRID間の通信でStorageGRID証明書を検証する必要がある場合は、次の手順を実行します。</block>
+  <block id="c2ced4c78e453bfc0c402989d4c4a226" category="list-text">マウントポイントのディレクトリに移動します。実行：</block>
+  <block id="287ce13946349495fddc07c65c39c410" category="list-text">コンソールエージェントにrootユーザーとしてログインします。次のコマンドを実行します：</block>
 </blocks>

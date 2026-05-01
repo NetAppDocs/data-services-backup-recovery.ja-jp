@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-overview.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryを使用してONTAPボリューム データを保護します
 :hardbreaks:

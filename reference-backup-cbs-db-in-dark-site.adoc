@@ -67,7 +67,7 @@ NetApp Backup and Recoveryシステムを動作状態に戻すには、次のタ
 
 === 新しいオンプレミス Linux ホストに新しいコンソール エージェントをインストールする
 
-新しいコンソール エージェントをインストールするときは、元のエージェントと同じソフトウェア バージョンをダウンロードします。 NetApp Backup and Recoveryデータベースを変更すると、新しいソフトウェア バージョンが古いデータベース バックアップで動作しなくなる可能性があります。あなたはできる https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["バックアップデータベースを復元した後、コンソールエージェントソフトウェアを最新バージョンにアップグレードします。"^]。
+新しいコンソールエージェントをインストールする際は、元のエージェントと同じソフトウェアバージョンをダウンロードしてください。NetApp Backup and Recoveryデータベースへの変更により、新しいソフトウェアバージョンが古いデータベースバックアップで動作しなくなる可能性があります。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["バックアップデータベースを復元した後、コンソールエージェントソフトウェアを最新バージョンにアップグレードします。"^]できます。
 
 . https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["新しいオンプレミス Linux ホストにコンソール エージェントをインストールする"^]
 . 先ほど作成した管理者ユーザーの資格情報を使用してコンソールにログインします。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp NetApp Backup and Recoveryを使用して VMware ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする
 :hardbreaks:
@@ -244,7 +244,7 @@ NetApp Backup and Recoveryをセットアップするときに、使用する IP
 
 * ノードおよびクラスタ間 LIF はオブジェクト ストアにアクセスできます。
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
-* デフォルトとは異なる IPspace を使用している場合は、オブジェクト ストレージにアクセスするために静的ルートを作成する必要がある場合があります。
+* デフォルトとは異なるIPspaceを使用している場合は、オブジェクトストレージにアクセスするために静的ルートを作成する必要があるかもしれません。
 * 必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recoveryサービス接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。
 
 

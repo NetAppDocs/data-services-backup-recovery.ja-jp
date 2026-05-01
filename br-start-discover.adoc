@@ -86,7 +86,7 @@ TIP: SnapCenterホスト リソースをインポートした後、 NetApp Backu
 . *インポート* を選択してエントリを検証し、 SnapCenterサーバーを登録します。
 +
 
-NOTE: SnapCenterサーバーがすでに登録されている場合は、既存の登録詳細を更新できます。
+NOTE: SnapCenter Server がすでに登録されている場合は、既存の登録情報を更新できます。
 
 
 

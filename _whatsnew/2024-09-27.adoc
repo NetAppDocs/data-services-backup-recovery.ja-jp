@@ -8,7 +8,7 @@
 
 NetApp Backup and Recovery は、Podman エンジンを使用して Red Hat Enterprise Linux (RHEL) バージョン 8 および 9 でのファイルとフォルダーの復元をサポートするようになりました。これは、NetApp Backup and Recoveryの参照および復元方法に適用されます。
 
-コンソールエージェントバージョン3.9.40は、RHEL 8または9ホストへのコンソールエージェントソフトウェアの手動インストールにおいて、場所に関係なく、Red Hat Enterprise Linuxバージョン8および9の特定のバージョンをサポートします。 https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["ホスト要件"^] 。これらの新しい RHEL バージョンでは、Docker エンジンではなく Podman エンジンが必要です。以前は、 NetApp Backup and Recovery には、Podman エンジンの使用時に 2 つの制限がありました。これらの制限は削除されました。
+コンソールエージェントバージョン3.9.40は、 https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["ホスト要件"^]に記載されているオペレーティングシステムに加えて、RHELホストへのコンソールエージェントの手動インストールに関して、特定のRed Hat Enterprise Linux 8および9リリースをサポートしています。これらの新しいRHELバージョンでは、DockerエンジンではなくPodmanエンジンが必要です。以前、NetApp Backup and RecoveryでPodmanエンジンを使用した場合には2つの制限がありましたが、それらの制限は解消されました。
 
 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["バックアップファイルからONTAPデータを復元する方法の詳細"]。
 

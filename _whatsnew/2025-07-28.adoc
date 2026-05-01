@@ -6,7 +6,7 @@
 
 === Kubernetes ワークロードのサポート (プレビュー)
 
-NetApp Backup and Recoveryのこのリリースでは、Kubernetes ワークロードの検出と管理のサポートが導入されています。
+このリリースのNetApp Backup and Recoveryでは、Kubernetesワークロードの検出と管理がサポートされるようになりました。
 
 * kubeconfig ファイルを共有せずに、 NetApp ONTAPを搭載した Red Hat OpenShift とオープンソースの Kubernetes クラスターを発見します。
 * 統合されたコントロール プレーンを使用して、複数の Kubernetes クラスターにわたるアプリケーションを検出、管理、保護します。
