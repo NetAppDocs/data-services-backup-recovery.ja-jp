@@ -235,19 +235,10 @@ NetApp Consoleの要件については、<<NetApp Console>> 。
 
 NOTE: NetApp では、Kubernetes ワークロードに使用するコンソールエージェントには、エージェントの IP アドレスが変更された場合に発生する問題を回避するため、静的 IP アドレスを割り当てることを強くお勧めします。
 
-* プライマリONTAPシステム（ONTAP 9.16.1 以降）
-* Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンは次のとおりです。
-+
-** Anthos On-Prem (VMware) とベアメタル版 Anthos 1.16
-** Kubernetes 1.27 - 1.33
-** オープンシフト 4.10 - 4.18
-** Rancher Kubernetes Engine 2 (RKE2) v1.26.7+rke2r1、v1.28.5+rke2r1
-** Suseランチャー
-
-
-* NetApp Trident 24.10 以降
-* NetApp Trident Protect 25.07 以降（Kubernetes ワークロード検出中にインストール）
-* NetApp Trident Protect Connector 25.07 以降（Kubernetes ワークロード検出時にインストール）
+* プライマリONTAPシステム（ASA r2システムはサポートされていません）
+* NetApp Trident 25.02以降
+* NetApp Trident Protect 26.05以降（検出時にKubernetesクラスタにインストール済み）
+* Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンには、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"]でサポートされているものが含まれます。
 +
 ** Kubernetesクラスタ、Trident Protect Connector、およびTrident Protectプロキシ間のアウトバウンド方向でTCPポート443がフィルタリングされていないことを確認してください。
 

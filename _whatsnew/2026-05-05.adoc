@@ -1,0 +1,17 @@
+= Kubernetes ワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。
+
+* *VM保護のネイティブサポート*：VMベースのアプリケーションを作成できるようになり、他のアプリケーションを保護するのと同じ方法で仮想マシンを保護できるようになりました。
+* *リソース変換*：リソース変換とリソース変換テンプレートを使用して、復元プロセス中にリソース属性を追加、削除、および変更できるようになりました。
+* *Backup and RecoveryからTrident Protectをアップグレード*：Backup and Recoveryから直接、KubernetesクラスターのTrident Protectをアップグレードできるようになりました。
+* *保護されたリソースの表示*：アプリケーションの各復旧ポイントに含まれるリソースを表示し、詳細な JSON レポートをダウンロードできるようになりました。これにより、復旧ポイントを完全に把握でき、監査への対応が簡素化されます。
+
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。

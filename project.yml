@@ -206,6 +206,8 @@ sidebar:
           url: "/br-use-restore-kubernetes-applications-cr.html"
         - title: 高度なカスタムリソースのリストア設定を使用する
           url: "/br-use-kubernetes-advanced-restore-settings.html"
+        - title: カスタムリソースを使用して復元操作中にリソースを変更する
+          url: "/br-use-modify-resources-kubernetes-cr.html"
       - title: Kubernetes クラスターを管理する
         url: "/br-use-manage-kubernetes-clusters.html"
       - title: Kubernetes アプリケーションを管理する

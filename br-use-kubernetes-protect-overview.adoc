@@ -14,7 +14,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-NetApp Backup and Recoveryで Kubernetes ワークロードを管理することで、Kubernetes クラスターとアプリケーションをすべて 1 か所で検出、管理、保護できるようになります。クラスタでホストされているリソースとアプリケーションを管理できます。また、単一のインターフェースを使用して、Kubernetesワークロードに保護ポリシーを作成し、関連付けることもできます。
+NetApp Backup and RecoveryでKubernetesワークロードを管理すると、Kubernetesクラスタとアプリケーションを1か所で検出、管理、保護できます。Kubernetesクラスタでホストされているリソースとアプリケーションを管理できます。また、単一のインターフェイスを使用して、Kubernetesアプリケーションの保護ポリシーを作成して関連付けることもできます。
 
 次の図は、Kubernetes ワークロードのバックアップとリカバリのコンポーネントと基本アーキテクチャ、およびデータの異なるコピーを異なる場所に保存する方法を示しています。
 
