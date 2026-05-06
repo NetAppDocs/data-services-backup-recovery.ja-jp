@@ -5323,7 +5323,6 @@
   <block id="0d4860fe632e2ecc84a5e441d9141855" category="list-text">このテンプレートに別の操作を追加するには、*操作の追加*を選択します。</block>
   <block id="fb016800c976cb584670a469fb67aa08" category="paragraph">NetApp Backup and RecoveryでKubernetesワークロードを管理すると、Kubernetesクラスタとアプリケーションを1か所で検出、管理、保護できます。Kubernetesクラスタでホストされているリソースとアプリケーションを管理できます。また、単一のインターフェイスを使用して、Kubernetesアプリケーションの保護ポリシーを作成して関連付けることもできます。</block>
   <block id="516ee22feede3bac94e552d7d7d47c7a" category="section-title">Trident Protectのアップグレード</block>
-  <block id="8f81884d10e6a9d5bed6dc6c7f7e7ad7" category="paragraph">Trident Protect 26.04以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。</block>
   <block id="5bcc55e1f344c64b73b8980050b81310" category="list-text">アップグレードするKubernetesクラスタを選択し、アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *クラスタのアップグレード*を選択します。</block>
   <block id="51e9423c87c0e6f2111dce27096c87eb" category="list-text">アップグレードダイアログで、以下の操作を行います：</block>
   <block id="50382ab9fb7cc5b5cb9eb0c9d8ba6663" category="list-text">リストから、アップグレードするバージョンを選択します。</block>
@@ -5431,4 +5430,5 @@
   <block id="d02c2883bbfa212e02daa2b45bd11760" category="list-text">Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンには、<block ref="f56ec4bb79bf67d191baea2a353be3ab" category="inline-link-rx"></block>でサポートされているものが含まれます。</block>
   <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026年5月5日</block>
   <block id="bfddb9cc303489a14cbf9520a59e6d1b" category="sidebar">カスタムリソースを使用して復元操作中にリソースを変更する</block>
+  <block id="dd95d3f26c14232d5637a6e4d3472711" category="paragraph">Trident Protect 26.05以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。</block>
 </blocks>

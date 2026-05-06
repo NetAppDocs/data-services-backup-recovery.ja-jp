@@ -53,7 +53,7 @@ Kubernetes クラスターの保護を停止するには、保護を無効にし
 
 == Trident Protectのアップグレード
 
-Trident Protect 26.04以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。
+Trident Protect 26.05以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。
 
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
