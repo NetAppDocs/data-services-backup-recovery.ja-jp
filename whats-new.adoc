@@ -18,6 +18,59 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+== 2026年5月11日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+=== Hyper-V ワークロードの機能強化
+
+今回のリリースでは、Hyper-V ワークロードに以下の機能強化が導入されました。
+
+* *SANストレージ上のVMを保護する*：SANオブジェクトストレージ上のVMを保護できるようになりました。
+* *代替場所への復元機能の強化*：SANストレージ上のVMについて、プライマリおよびセカンダリの場所から代替場所に復元できるようになりました。
+* *ゲストVMへのファイルとフォルダの復元*：プライマリストレージのスナップショットから、ゲストWindows VMにファイルとフォルダを復元できるようになりました。この機能はCIFS仮想マシンでのみサポートされています。
+
+
+Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+
+
+
+=== KVMワークロードの機能強化
+
+今回のリリースでは、KVMワークロードに以下の機能強化が導入されました。
+
+*代替場所への復元*：KVM VMを代替の場所に復元できるようになりました（この機能は現在一般提供されています）。
+
+KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+
+
+
+=== Oracle Databaseワークロードの機能強化
+
+今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：
+
+* *Oracle AI Database 26ai のサポート*：NetApp Backup and Recovery が Oracle AI Database 26ai をサポートするようになりました。
+* *バックアップ検証のサポート*：Oracleデータベースのバックアップの整合性を自動的に検証するようにバックアップ ポリシーを設定できるようになりました。
+
+
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+
+
+
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました：
+
+* *保護グループにおけるデータストアの拡張サポート*：仮想ディスクが複数のデータストアにまたがる仮想マシンを保護する際に、保護グループの動作を選択できるようになりました。
+* *クローン サポート*：プライマリ ストレージとセカンダリ ストレージから仮想マシン スナップショットのクローンを作成できるようになりました。
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。
+
+
+
 == 2026年5月5日
 
 このNetApp Backup and Recoveryリリースには、次の更新が含まれています。

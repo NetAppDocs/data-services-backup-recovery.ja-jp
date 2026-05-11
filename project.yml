@@ -56,8 +56,6 @@ sidebar:
       url: "/br-start-login.html"
     - title: ダッシュボードで保護の状態を確認する
       url: "/br-use-dashboard.html"
-    - title: バックアップと復元を管理するポリシーを作成する
-      url: "/br-use-policies-create.html"
     - title: ONTAPボリュームのワークロードを保護する
       entries:
       - title: ONTAPボリュームワークロードの保護の概要
@@ -106,6 +104,8 @@ sidebar:
         url: "/concept-start-prereq-snapcenter-import.html"
       - title: Microsoft SQL Server ワークロードの検出
         url: "/br-start-discover.html"
+      - title: Microsoft SQL Serverのワークロードバックアップポリシーを作成および管理する
+        url: "/br-use-policies-mssql-create.html"
       - title: Microsoft SQL Server ワークロードのバックアップ
         url: "/br-use-mssql-backup.html"
       - title: Microsoft SQL Server ワークロードを復元する
@@ -126,8 +126,12 @@ sidebar:
         url: "/br-use-vmware-discovery.html"
       - title: VMware ワークロードの保護グループの作成と管理
         url: "/br-use-vmware-protection-groups.html"
+      - title: VMwareワークロードのバックアップポリシーを作成および管理する
+        url: "/br-use-policies-vmware-create.html"
       - title: VMwareワークロードのバックアップ
         url: "/br-use-vmware-backup.html"
+      - title: VMwareワークロードをクローンする
+        url: "/br-use-vmware-clone.html"
       - title: VMwareワークロードを復元する
         entries:
         - title: VMware仮想マシンを復元する
@@ -150,6 +154,8 @@ sidebar:
         url: "/br-start-discover-kvm.html"
       - title: KVM ワークロードの保護グループの作成と管理
         url: "/br-use-kvm-protection-groups.html"
+      - title: KVMワークロードのバックアップポリシーを作成および管理する
+        url: "/br-use-policies-kvm-create.html"
       - title: KVMワークロードのバックアップ
         url: "/br-use-kvm-backup.html"
       - title: KVMワークロードを復元する
@@ -162,10 +168,16 @@ sidebar:
         url: "/br-start-discover-hyperv.html"
       - title: Hyper-V ワークロードの保護グループの作成と管理
         url: "/br-use-hyperv-protection-groups.html"
+      - title: Hyper-Vワークロードのバックアップポリシーを作成および管理する
+        url: "/br-use-policies-hyper-v-create.html"
       - title: Hyper-V ワークロードのバックアップ
         url: "/br-use-hyperv-backup.html"
       - title: Hyper-V ワークロードを復元する
-        url: "/br-use-hyperv-restore.html"
+        entries:
+        - title: Hyper-V ワークロードを復元する
+          url: "/br-use-hyperv-restore.html"
+        - title: ファイルとフォルダを復元する
+          url: "/br-use-hyper-v-restore-guest-files-and-folders.html"
     - title: Oracle Database ワークロードの保護（プレビュー）
       entries:
       - title: Oracle Databaseワークロードの保護の概要
@@ -176,6 +188,8 @@ sidebar:
         url: "/br-start-configure-oracle-database.html"
       - title: Oracle Database ワークロードの保護グループの作成と管理
         url: "/br-use-oracle-protection-groups.html"
+      - title: Oracle Databaseワークロードのバックアップポリシーを作成および管理する
+        url: "/br-use-policies-oracle-create.html"
       - title: Oracle Databaseワークロードのバックアップ
         url: "/br-use-oracle-backup.html"
       - title: Oracle Database ワークロードのクローン作成
@@ -194,6 +208,8 @@ sidebar:
         entries:
         - title: Kubernetes アプリケーションの追加と保護
           url: "/br-use-protect-kubernetes-applications.html"
+        - title: Kubernetesワークロードのバックアップポリシーを作成および管理する
+          url: "/br-use-policies-kubernetes-create.html"
         - title: Web UI を使用して Kubernetes アプリケーションを今すぐバックアップする
           url: "/br-use-back-up-now-kubernetes-applications-web-ui.html"
         - title: カスタムリソースを使用してKubernetesアプリケーションを今すぐバックアップ

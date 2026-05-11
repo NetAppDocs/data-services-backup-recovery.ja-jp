@@ -1486,8 +1486,6 @@
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*Postscript*: 必要に応じて、このオプションを有効にし、復元操作後に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
   <block id="f8b53e55e8c6663dd48cecfd73eac0aa" category="list-text">*リカバリ後にデータベースまたはコンテナ データベースを読み取り/書き込みモードで開きます*: 復元操作が完了すると、バックアップとリカバリによってデータベースの読み取り/書き込みモードが有効になります。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
-  <block id="94b302da41c06e07da50582e09e11a6f" category="doc">NetApp Backup and Recoveryでバックアップを管理するポリシーを作成および管理します</block>
-  <block id="014eafc4485f15b25db30025cd8b8df2" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
   <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">これらのオプションと構成セクションの一部は、すべてのワークロードで使用できるわけではありません。</block>
   <block id="f32ce25b9d7e6b0f57abe3fec295f863" category="inline-link-macro">SnapCenterとNetApp Backup and Recoveryのポリシーの違い</block>
   <block id="5ccfa6adf604407ae2c4559222331c92" category="paragraph">SnapCenterからリソースをインポートする場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーとの間に若干の違いが生じる可能性があります。見る<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block>。</block>
@@ -1510,7 +1508,6 @@
   <block id="5bb208fd69907e30f2098ede81682a03" category="inline-link">ONTAPのスナップショットロック</block>
   <block id="e0b5eb9f9d2446a8058c07e393201d73" category="paragraph">スナップショットロック全般については、以下を参照してください。<block ref="8b0c087cbf38ba7d67f735ef687ec456" category="inline-link-rx"></block> 。</block>
   <block id="678bf77479fcbfef4dc290f0d62e98ff" category="list-text">[ポリシー] ページで、[新しいポリシーの作成] を選択します。</block>
-  <block id="9f2195b22f953bea34bcee5f51d4c405" category="list-text">ワークロード タイプ: ポリシーを使用するワークロードを選択します。</block>
   <block id="c6dc8fc5264ca3745831ad65554a2b72" category="list-text">ポリシー名を入力します。</block>
   <block id="6fd5c80899312e5732b24f0d6a48f05a" category="list-text">*エージェント* リストからコンソール エージェントを選択します。</block>
   <block id="dd3964688f448cf4c53372241aa29860" category="paragraph">VMware ワークロードの場合、これにより、プライマリ上のデータストアまたは VM 上のローカル スナップショットが構成され、プライマリ ディスク ストレージからセカンダリ ディスク ストレージにレプリケートされるとともに、プライマリからクラウド オブジェクト ストレージにレプリケートされます。</block>
@@ -1523,8 +1520,6 @@
   <block id="ea26bb825f76fc9d9f25830201533996" category="list-text">*スナップショットの頻度*: 時間ごと、日ごと、週ごと、月ごと、または年ごとの頻度を選択します。年間頻度は Kubernetes ワークロードでは利用できません。</block>
   <block id="b144c9152bc25d1fc7d07fee5de2ecc6" category="list-text">*スナップショットの保持*: 保持するスナップショットの数を入力します。</block>
   <block id="5e4be38dc556e235a6420a92a206702f" category="inline-link-macro">ログディレクトリを構成する</block>
-  <block id="e9d92be9485a424b4d9ade8388ba97d8" category="list-text">*ログ バックアップを有効にする*: (Microsoft SQL Server ワークロードと Oracle Database ワークロードにのみ適用されます。)このオプションを有効にすると、ログをバックアップし、ログ バックアップの頻度と保持期間を設定できます。これを行うには、ログ バックアップをあらかじめ構成しておく必要があります。見る<block ref="c4a2a21123ec8dd6e71a040e68355146" category="inline-link-macro-rx"></block>。</block>
-  <block id="bb61fc1ad01698b21c5e6cc50604eb7f" category="list-text">*バックアップ後にアーカイブ ログを削除する*: (Oracle データベース ワークロードのみ) ログ バックアップが有効になっている場合は、オプションでこの機能を有効にして、バックアップとリカバリが Oracle アーカイブ ログを保持する期間を制限できます。保持期間と、バックアップとリカバリでアーカイブ ログを削除する場所を選択できます。</block>
   <block id="334741c071e30fd510f26dae69ca8081" category="list-text">*バックアップ*: 時間ごと、日ごと、週ごと、月ごと、または年ごとの頻度を選択します。</block>
   <block id="25dc47e7051f405808b9f9bda4500952" category="list-text">*バックアップ対象*: バックアップの対象となるセカンダリ ストレージ上のターゲット システムを選択します。</block>
   <block id="a14908893407f655cc108e2629a2bb98" category="list-text">*保持*: 保持するスナップショットの数を入力します。</block>
@@ -1546,20 +1541,10 @@
   <block id="5a0e602c662c4aadb0e187c46db2f1be" category="list-text">*ポリシー &gt; 詳細*設定セクションで、*詳細アクションの選択*メニューを選択して、詳細設定のリストから選択します。</block>
   <block id="e9dbaabb96bed2c8d241fb55527037d6" category="list-text">表示または変更したい設定を有効にして、[承認] を選択します。</block>
   <block id="13c1455885d16af64f1bb96c4e48680a" category="list-text">次の情報を入力します。</block>
-  <block id="2d3225fe5eb535adc15ef1f21e507c5f" category="list-text">*コピーのみのバックアップ*: (Microsoft SQL Server ワークロードにのみ適用) 別のバックアップ アプリケーションを使用してリソースをバックアップする必要がある場合は、コピーのみのバックアップ (Microsoft SQL Server バックアップの一種) を選択します。</block>
-  <block id="f9c3e66c40db24d227563cfba061a4ea" category="list-text">*可用性グループの設定*: (Microsoft SQL Server ワークロードにのみ適用) 優先バックアップ レプリカを選択するか、特定のレプリカを指定します。この設定は、SQL Server 可用性グループがあり、バックアップに使用するレプリカを制御する場合に役立ちます。</block>
   <block id="ebc38593846bd56262189cdea41159c0" category="admonition">スナップショット頻度が 1 時間に設定されている場合、再試行回数と合わせた最大遅延は 45 分を超えてはなりません。</block>
   <block id="febcf1de845ae5c111f7fe2fdf9a0023" category="list-text">*ランサムウェア スキャン*: 各バケットでランサムウェア スキャンを有効にするかどうかを選択します。これには、オブジェクト ストレージに対する DataLock ロックが必要です。スキャンの頻度を日単位で入力します。このオプションは、AWS および Microsoft Azure オブジェクト ストレージに適用されます。このオプションは、クラウド プロバイダーによっては追加料金が発生する場合があることに注意してください。</block>
-  <block id="a276106fc685cb5d2acecf05047b555c" category="list-text">*バックアップ検証*: (VMware ワークロードには適用されません) バックアップ検証を有効にするかどうか、また、すぐに実行するか後で行うかを選択します。この機能により、バックアップが有効であり、正常に復元できることが保証されます。バックアップの整合性を確保するには、このオプションを有効にすることをお勧めします。デフォルトでは、セカンダリ ストレージが構成されている場合、バックアップ検証はセカンダリ ストレージから実行されます。セカンダリ ストレージが構成されていない場合、バックアップ検証はプライマリ ストレージから実行されます。</block>
   <block id="5c9b86ff3ed09d60fd7e04707b95622a" category="paragraph">さらに、次のオプションを構成します。</block>
   <block id="73abde911f425febebd71ee70b614dd9" category="list-text">*毎日*、*毎週*、*毎月*、または*毎年*の検証: バックアップ検証として*後で*を選択した場合は、バックアップ検証の頻度を選択します。これにより、バックアップの整合性が定期的にチェックされ、正常に復元できるようになります。</block>
-  <block id="f1d2410a944bd4992da0594068ed18a8" category="list-text">*バックアップ ラベル*: バックアップのラベルを入力します。このラベルはシステム内のバックアップを識別するために使用され、バックアップの追跡と管理に役立ちます。</block>
-  <block id="1aa324c7ecb00456b1431f1e1238db83" category="list-text">*データベース整合性チェック*: (VMware ワークロードには適用されません) データベース整合性チェックを有効にするかどうかを選択します。このオプションにより、バックアップが取られる前にデータベースが一貫した状態であることが保証されます。これは、データの整合性を確保するために重要です。</block>
-  <block id="b492bedb772a344ab75250c8ceac0ab4" category="list-text">*ログ バックアップの検証*: (VMware ワークロードには適用されません) ログ バックアップを検証するかどうかを選択します。検証サーバを選択します。ディスクツーディスクまたは 3-2-1 を選択した場合は、検証の保存場所も選択します。このオプションにより、ログ バックアップが有効であり、正常に復元できることが保証されます。これは、データベースの整合性を維持するために重要です。</block>
-  <block id="5974a63c4cecc4432e5393e90081c541" category="list-text">*ネットワーク*: バックアップ操作に使用するネットワーク インターフェイスを選択します。これは、複数のネットワーク インターフェイスがあり、どれをバックアップに使用するかを制御したい場合に便利です。</block>
-  <block id="72d60858fb2b96d58274c5434a6b3440" category="list-text">*プライベート エンドポイント構成*: オブジェクト ストレージにプライベート エンドポイントを使用している場合は、バックアップ操作に使用するプライベート エンドポイント構成を選択します。これは、バックアップがプライベート ネットワーク接続を介して安全に転送されることを確認したい場合に便利です。</block>
-  <block id="b993cc2cb4bdad71390267cbdbd3dbad" category="list-text">*通知*: バックアップ操作に関する電子メール通知を有効にするかどうかを選択します。これは、バックアップ操作が開始、完了、または失敗したときに通知を受け取りたい場合に便利です。</block>
-  <block id="6eacc1b39140cb9cd360bd817c16a00f" category="list-text">*独立ディスク*: (VMware ワークロードにのみ適用) 一時データを含む独立ディスクを持つすべてのデータストアをバックアップに含めるには、これをチェックします。独立ディスクは、VMware スナップショットに含まれない VM ディスクです。</block>
   <block id="87bf438f6aafcccba8118644c7f4ed8b" category="list-text">* SnapMirrorボリュームとスナップショット形式*: 必要に応じて、Microsoft SQL Server ワークロードのバックアップを管理するポリシーに独自のスナップショット名を入力します。フォーマットとカスタムテキストを入力します。セカンダリ ストレージにバックアップすることを選択した場合は、 SnapMirrorボリュームのプレフィックスとサフィックスを追加することもできます。</block>
   <block id="fb6e9d876191a4c0c156e739e377be59" category="section-title">ポリシーを編集する</block>
   <block id="f985f1951686384a15ea5ddf855b3cab" category="paragraph">ポリシーを編集するときに別の保護レベルを追加することはできますが、保護レベルを削除することはできません。たとえば、ポリシーがローカル スナップショットのみを保護する場合は、セカンダリ ストレージへのレプリケーションやオブジェクト ストレージへのバックアップを追加できます。ローカル スナップショットとレプリケーションがある場合は、オブジェクト ストレージを追加できます。ただし、ローカル スナップショット、レプリケーション、およびオブジェクト ストレージがある場合は、これらのレベルのいずれかを削除することはできません。</block>
@@ -1706,7 +1691,6 @@
   <block id="dfadb287a92482d24b34b55bed0b6dac" category="paragraph">一連のワークロードのバックアップおよび復元操作を管理するための保護グループを作成します。保護グループとは、一緒に保護する VM やデータストアなどのリソースの論理的なグループです。</block>
   <block id="f710d48f4e4bcee1159eb8476c761956" category="inline-link-macro">VMwareワークロードを今すぐバックアップ</block>
   <block id="29881d0b044ceba86593dcfef30e0573" category="list-text">保護グループのバックアップ スケジュールを一時停止および再開します。</block>
-  <block id="99ea4945ef61f5a29b7463a5d1480fe7" category="list-text">保護グループに含める VM またはデータベースを選択します。</block>
   <block id="224efd4fdb5f19c474ab2b6ea6b4132b" category="section-title">保護グループのバックアップスケジュールを一時停止する</block>
   <block id="67671aa34b0789a08ab7d6954bfb7122" category="paragraph">保護グループを一時停止すると、保護ステータスが「メンテナンス中」に変わります。バックアップ スケジュールはいつでも再開できます。</block>
   <block id="e18d539be2570002127583bafd748cad" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *保護グループを一時停止します*。</block>
@@ -3850,7 +3834,6 @@
   <block id="ad4016cac47a83a6e1446b1b38d42180" category="sidebar">ONTAPおよびStorageGRIDのセキュリティ証明書を設定する</block>
   <block id="302152c28a081827c4d7c5eeb2372c70" category="sidebar">NetApp Backup and Recoveryの一般設定を構成する</block>
   <block id="9108ac44c023ea7b20fce0b4ae303134" category="sidebar">NetApp Backup and Recoveryを使用する</block>
-  <block id="4cd511c4b46eedfc6c0c344f09eba377" category="sidebar">バックアップと復元を管理するポリシーを作成する</block>
   <block id="0302e61ffbf31edbbbd1fc59ebe8483a" category="sidebar">ONTAPボリュームのワークロードを保護する</block>
   <block id="8589e10f754e309eea1413339cac0722" category="sidebar">ONTAPボリュームワークロードの保護の概要</block>
   <block id="9af25233c7173e28a0f37d630f8fbe09" category="sidebar">ONTAPボリュームの保護を計画する</block>
@@ -3976,7 +3959,6 @@
   <block id="26bbb7b442740e80ed850d884bef0605" category="paragraph">システムを変更する前にオンデマンド バックアップを実行して、データが保護されていることを確認します。</block>
   <block id="0dd484dd2e82385c156b95d98fd2f3fa" category="admonition">NetApp Backup and Recovery、バックアップと保護グループの両方に同じポリシーが使用されます。</block>
   <block id="b5ba243769c03b5476a2b6c06b8c5b5a" category="paragraph">データベースの保護ポリシーを構成してアーカイブ ログを保持すると、回復ポイントをマウントしてデータベースの変更履歴を表示できます。</block>
-  <block id="21214671e7222d24ea30444729853d36" category="paragraph">保護するワークロードを保護グループにグループ化し、まとめてバックアップおよび復元します。</block>
   <block id="e1a8b67cb61fcb0e0a3b88e66f93f4cd" category="paragraph">保護グループを一時停止して、スケジュールされたバックアップを一時停止します。</block>
   <block id="2efbc86f2f62c8819af426f268c543d5" category="paragraph">保護グループを削除すると、保護グループとグループのすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除します。</block>
   <block id="d0be562abb07ac98b80cbaa51990f79d" category="paragraph">極端なケースでは、 NetApp Backup and Recovery がバックアップにアクセスできないようにする必要がある場合もあります。これは、たとえば、サービスがバックアップ バケットにアクセスできなくなった場合や、バックアップが DataLock で保護されているが不要になった場合に発生する可能性があります。以前は、これらを自分で削除することはできず、 NetAppサポートに連絡する必要がありました。このリリースでは、バックアップを強制的に削除するオプション (ボリューム レベルとシステム レベル) を使用できるようになりました。</block>
@@ -4382,7 +4364,6 @@
   <block id="e2b253374500e2e93f1c334a2bb7ddd4" category="section-title">ゲスト ファイル リストア セッションを中断してもバックアップが切断されない</block>
   <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">この問題は、VM整合性バックアップからゲスト ファイル リストア処理を実行した場合に発生します。ゲスト ファイル リストア セッションがアクティブな間に、同じVMに対して別のVM整合性バックアップが実行されます。ゲスト ファイル リストア セッションが手動または24時間後に自動的に切断されても、セッションのバックアップは切断されません。</block>
   <block id="5857a2699c75798b2ae21bc0b06aff95" category="paragraph">この問題を修正するには、アクティブ ゲスト ファイル リストア セッションから接続されていたVMDKを手動で切断します。</block>
-  <block id="0bf794e2b090829c5f342b426fa04d5c" category="summary">WindowsゲストOSのVMDKから1つ以上のファイルまたはフォルダをリストアできます。</block>
   <block id="851e8e79b33ecfa430d9ed62957e5cad" category="admonition">1つのVMで一度に実行できる接続処理またはリストア処理は1つだけです。同じVMに対して並行して接続処理またはリストア処理を実行することはできません。</block>
   <block id="c0bb93c6bec67d2385d257bd2f31eeb2" category="list-text">*ファイルとフォルダの復元*を選択します。</block>
   <block id="08cc4acec34cca35a8c76fb3d615326d" category="list-text">復元するスナップショットを選択し、[次へ] を選択します。</block>
@@ -4774,7 +4755,6 @@
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">一般提供（GA）でサポートされる VMware ワークロード</block>
   <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">ライセンス容量の超過</block>
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">ライセンス容量を超えると PAYGO 料金が発生します。PAYGO サブスクリプションがない場合、新しいバックアップを作成することはできませんが、既存のバックアップはサービス保証なしで復元可能です。ライセンスは期限が切れる前に必ず更新してください。ライセンスの期限が切れると、新しいバックアップが実行できなくなり、サービスが中断されます。</block>
-  <block id="b9c809d8faa35e3cecf28c39b12a0890" category="list-text">ASP.NET Core Runtime 8.0.23 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
   <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">一般提供（GA）でサポートされる KVM ワークロード</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">KubernetesワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されました。このKubernetesワークロードのリリースでは、次の拡張機能も導入されています：</block>
@@ -4931,7 +4911,6 @@
   <block id="bbc2d665b02dc421c5c756db4b973610" category="cell">Microsoft Hyper-V</block>
   <block id="49c1cfb8defeea7149e31b4d5c722668" category="cell">2019、2022、2025年版</block>
   <block id="d5fda164bdd74f6422bd307aaf09a590" category="cell">ASP.NET Core ランタイム</block>
-  <block id="96572d20b8522157aeea52d45e4fa8da" category="cell">8.0.23 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="cell">PowerShell</block>
   <block id="f46b5f975abd397286a477bc6d707be0" category="cell">管理者以外のユーザーが Hyper-V VM を保護する場合は、ユーザーに以下の権限が付与されていることを確認してください</block>
   <block id="cdbbb0285100c9f92a2552ccfefd99ab" category="list-text">ローカル管理者グループのメンバー</block>
@@ -4980,7 +4959,6 @@
   <block id="e5e6317c83585d62864b24ca930be15e" category="paragraph">バックアップおよびリカバリ操作のメタデータを保持する必要がある場合は、リカバリポイントを手動でカタログ化してください。メタデータは、データベース用に選択した *RMAN カタログの構成* 設定に従って保存されます（デフォルトではターゲット制御ファイル）。関連する保護ポリシーで自動カタログ作成が無効になっている場合にのみ、手動でカタログを作成する必要があります。</block>
   <block id="022a8430e553de21aa98279f3f834824" category="list-text">リストからリカバリポイントを選択し、アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *カタログ*を選択します。</block>
   <block id="c11c35cc7a1e267ff6b33d9873e74d29" category="list-text">*Catalog* を選択して操作を確定します。</block>
-  <block id="7d138ec0174da03337ca77a53e9b93da" category="list-text">*RMANカタログ設定*：（環境Oracle Databaseワークロードのみ）*Oracle Recovery Manager（RMAN）を使用したカタログバックアップ*オプションを有効にすると、Oracleデータベースのバックアップおよびリカバリ操作のメタデータが自動的にカタログ化されます。メタデータは、データベース用に選択した*RMANカタログの構成*設定に従って保存されます（デフォルトではターゲット制御ファイル）。<block ref="a332d34c6239f7cac0220ece667896af" category="inline-link-macro-rx"></block>を参照して、データベースのこれらの設定を変更してください。</block>
   <block id="37fa73b86d98c87a23aa1c4614e46436" category="list-text">*SnapMirrorボリュームとSnapshotのフォーマット*：次のいずれかのオプションを選択します。</block>
   <block id="219160b0f165dc42c8baf48fef44eff1" category="list-text">*スナップショットのコピーにカスタム名形式を使用する*：スナップショットの命名規則を選択します。空欄のままにした場合、各スナップショット名の末尾にタイムスタンプが追加されます。</block>
   <block id="80c4384169191d80244c3f0757ddce7a" category="list-text">*SnapMirrorボリューム形式の指定*：デフォルトのSnapMirrorボリューム名を変更するには、プレフィックス、サフィックス、またはその両方を指定します。デフォルトでは、SnapMirrorボリュームはソースボリュームの名前を継承します。</block>
@@ -5052,20 +5030,14 @@
   <block id="a367939b0516b53b9b7a6ee95913db71" category="list-text">* 詳細 * セクションに情報を入力します。</block>
   <block id="3e292ccda5c971a4b3e12f28c1896c96" category="list-text">* Backup architecture * セクションに情報を入力します。リストからバックアップのデータフローを選択します：</block>
   <block id="882709ae2f159dd4483f21419cc1577a" category="list-text">*3-2-1 ファンアウト*：プライマリストレージ（ディスク）からセカンダリストレージ（ディスク）を経てクラウド（オブジェクトストア）へ。ONTAP to ONTAP や ONTAP to オブジェクトストア構成など、異なるストレージシステム間でデータの複数のコピーを作成します。これは、クラウドハイパースケーラーのオブジェクトストア、またはプライベートオブジェクトストアのいずれかです。最適なデータ保護と災害復旧に最適です。このオプションは Amazon FSx for NetApp ONTAP では利用できません。</block>
-  <block id="9fee15229aeafc04f7f5ecc1bcbadb28" category="list-text">*3-2-1 カスケード*：（Kubernetes ワークロードでは利用できません）プライマリ ストレージ（ディスク）からセカンダリ ストレージ（ディスク）へ、およびプライマリ ストレージ（ディスク）からクラウド ストレージ（オブジェクト ストア）へ。これは、クラウド ハイパースケーラー オブジェクト ストアまたは StorageGRID などのプライベート オブジェクト ストアです。これにより、複数のシステム間でデータ レプリケーションのチェーンが作成され、冗長性と信頼性が確保されます。このオプションは、Amazon FSx for NetApp ONTAP では使用できません。</block>
   <block id="be84ac32aad421d6a1cb46ce683e66b6" category="list-text">*ディスク間*：プライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ。ONTAP to ONTAP データ保護戦略は、2つのONTAPシステム間でデータをレプリケートし、高可用性とディザスタリカバリを確保します。これは通常、SnapMirrorを使用して実現され、同期レプリケーションと非同期レプリケーションの両方をサポートします。この方法により、データは最新の状態に保たれ、複数の場所で利用可能になり、強力なデータ保護が実現します。</block>
   <block id="81c8b39fe11eaceb3d9d1d404c6fcabd" category="list-text">*ディスクからオブジェクトストレージ*：プライマリストレージ（ディスク）からクラウド（オブジェクトストア）へ。ONTAP システムからオブジェクトストレージシステムにデータをレプリケートします。クラウドハイパースケーラーオブジェクトストアまたは StorageGRID などのプライベートオブジェクトストアを使用できます。この方法は、長期的なデータ保持とアーカイブに最適です。</block>
-  <block id="00e3096d7681cc99d56e85ff2b1840d4" category="list-text">*ディスク間ファンアウト*：（Kubernetesワークロードでは利用できません）プライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ、およびプライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ。ディスク間ファンアウトオプションには、複数のセカンダリ設定を構成できます。</block>
   <block id="851135c947a89fc1b09d7dcc201469ab" category="list-text">*ローカルスナップショット*：選択したボリューム上のローカルスナップショット。これにより、ワークロードが実行されている本番環境ボリュームの読み取り専用のポイントインタイムコピーが作成されます。ローカルスナップショットを使用すると、データの損失や破損から復旧できるだけでなく、ディザスタリカバリのためのバックアップを作成することもできます。</block>
   <block id="fbdef52c241b79ead35478ff22576f90" category="list-text">* ローカルスナップショット設定 * セクションの情報を入力します：</block>
-  <block id="ce58b9a7f0f2d4c7c52770bc83100166" category="list-text">*プロバイダー*：（Kubernetes ワークロードのみ）Kubernetes アプリケーションリソースをホストするストレージプロバイダーを選択し、プロバイダーで認証するための認証情報を入力します。</block>
   <block id="090b970b75ee26b50d8123db3db2ba55" category="list-text">*セカンダリ設定*セクション（セカンダリストレージへのレプリケーション）の情報を入力します：</block>
   <block id="8eae3d632795cead3b5b2a2b7e7f2062" category="list-text">* Object store settings * セクション（オブジェクトストレージへのバックアップ）の情報を入力します。</block>
   <block id="a296e85150d178100dae6943b3a33304" category="list-text">*プロバイダー*：オブジェクトストアのプロバイダーを選択し、適切なフィールドに認証情報を入力します（認証情報フィールドはプロバイダーによって異なります）。</block>
-  <block id="294ac024c56ddf3b6d099615e93da940" category="list-text">* 整合性スキャンを有効にする *：（ Kubernetes ワークロードでは使用できません）オブジェクトストレージで整合性スキャン（スナップショットロック）を有効にするかどうかを選択します。これにより、バックアップが有効でリストア可能であることが保証されます。整合性スキャンの頻度は、デフォルトで 7 日に設定されています。バックアップが変更または削除されないように保護するには、 * 整合性スキャン * オプションを選択します。スキャンは最新の Snapshot に対してのみ実行されます。最新の Snapshot で整合性スキャンを有効または無効にできます。</block>
-  <block id="cfb3db612527a3fd28e835844ac13303" category="paragraph">ポリシー内で、必要に応じて詳細設定を行うことができます。これらのオプションは、あらゆるバックアップアーキテクチャとストレージ保存先で使用できます。利用可能な詳細オプションは、ページ上部で選択したワークロードによって異なります。そのため、ここで説明するオプションの中には、すべてのワークロードに適用されないものもあります。Kubernetesワークロードに対して高度なオプションを設定することはできません。</block>
   <block id="d286fd76908ab2d585d6d23d6ad9c32b" category="list-text">*最大転送速度*：帯域幅の使用制限を設定しない場合は、*無制限*を選択してください。転送速度を制限する場合は、*制限付き*を選択し、オブジェクトストレージへのバックアップのアップロードに割り当てるネットワーク帯域幅を1～1,000Mbpsの間で選択します。デフォルトでは、ONTAPはシステム内のボリュームからオブジェクトストレージへバックアップデータを転送するために、無制限の帯域幅を使用できます。バックアップトラフィックがワークロードに影響を与える場合は、転送用のネットワーク帯域幅を削減してください。</block>
-  <block id="a0c908f43c331f6fa08951ed4bc367bd" category="list-text">*バックアップの再試行*：（VMwareワークロードには適用されません）障害または中断が発生した場合にジョブを再試行するには、*障害発生時にジョブの再試行を有効にする*を選択します。スナップショットおよびバックアップジョブの最大再試行回数と再試行間隔を入力してください。再試行回数は10未満にする必要があります。</block>
   <block id="7fae0c750c285630f201343267804d41" category="paragraph">バックアップアーキテクチャ、バックアップ頻度、保持ポリシー、およびポリシーに関するその他の設定を編集できます。Kubernetesワークロードポリシーについては、スケジュールと保持設定のみを編集できます。</block>
   <block id="4eb58c82c9f0b1e3d063fbbfbb010e19" category="inline-link-macro">保護ポリシーを作成する</block>
   <block id="ea067fa7b1bc3f8c8350fa0bceb0595c" category="list-text">ワークロードをスケジュールに基づいてバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。手順については<block ref="4bb5b2bd7c04f7593085f04d6e04e3c7" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -5076,32 +5048,13 @@
   <block id="698cac04635d0523df894d166b3d5497" category="list-text">VMをグループに手動で追加するか、VMware vSphereタグを使用して保護グループを作成します。</block>
   <block id="f2f817e0b92f9a198cdaec2b19163257" category="list-text">今すぐ保護グループをバックアップします。<block ref="887743b22b352bdbc6f2d55fc0901200" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="d74e019c0ba8fa4728a1554302380c0e" category="list-text">保護グループに適用する保護ポリシーを選択します。</block>
-  <block id="37d0f4b5d8724cc7201cc446873e04d6" category="section-title">vSphereタグを使用して保護グループを作成</block>
-  <block id="8b3f160f535442c6fa67e2f7b5b5218c" category="paragraph">タグベースの保護機能を使用すると、NetApp Backup and Recoveryにおける保護グループの管理が簡素化されます。</block>
-  <block id="d9c948c9e617e8b36f4e9f8ebc4a7793" category="paragraph">タグベースの保護を使用するメリットは以下のとおりです：</block>
   <block id="dbcf47b066ee50d07327870e08c02459" category="list-text">VMまたはデータストアにvSphereタグをvCenterで追加すると、そのタグを参照するすべてのBackup and Recovery保護グループの次のバックアップに、そのオブジェクトが自動的に含められます。</block>
   <block id="3ee9fae4ef781d4c9014ac642352ae4a" category="list-text">VM またはデータストアから vSphere タグを削除すると、そのオブジェクトは、そのタグベースの保護グループの以降のバックアップから自動的に除外されます。</block>
   <block id="9c31f9bafac8cffb5f02640267d721d9" category="list-text">vCenterでvSphereタグが削除された場合、今後のバックアップではそのタグがスキップされ、警告が報告されます。</block>
   <block id="bd747bb8eef35887261b9982676b40a0" category="list-text">VMが別のデータストアに移行された場合でも、タグベースの保護グループに属するタグが付与されている限り、保護された状態は維持されます。</block>
   <block id="6cbd33d5e36fc1cca8f70b65396de2b0" category="admonition">リソースタイプを混在させること（たとえば、同じ保護グループ内でタグと個々の VM やデータストアを組み合わせること）はサポートされていません。</block>
   <block id="6ad4cf5fcdb7c67f52ade5e3f8eeb6ad" category="list-text">ご使用の環境で、サポートされているバージョンのVMware vSphereが使用されていることを確認してください。</block>
-  <block id="a27119a291cfccb589b86846392873b4" category="list-text">vCenterで、保護する仮想マシンとデータストアが、すでに 1 つ以上のvSphereタグに関連付けられていることを確認します。</block>
   <block id="735df7f2e37c9dd264e94c878ea7d619" category="admonition">タグメンバーシップは、バックアップ時に vCenter から解決されます。vCenter でタグに加えた変更（タグの追加 / 削除、タグの削除、VM の追加 / 削除）は、次回のバックアップに自動的に反映されます。</block>
-  <block id="78f5b108a98a534559a6cf92a45c2217" category="list-text">NetApp Backup and Recoveryに Sign in します。</block>
-  <block id="18fb5ad2d600be360bf3764f9f3ecde0" category="list-text">* Protection Groups * ビューに移動します。</block>
-  <block id="cd3a16077759ca894aa916f1ea83ff7d" category="list-text">* Create Protection Group * を選択します。</block>
-  <block id="62f284e1a3d11fed54a40973514efa1c" category="list-text">*General details &gt; Protection group name* で、保護グループの名前を入力します。</block>
-  <block id="2f53c8083ddbdd3400114aae9665b5bf" category="list-text">* General details &gt; Protection group resources * セクションで、 * Tags * を選択します。</block>
-  <block id="7c1b4c1e439306457293167fe1af03c9" category="list-text">複数のvCentersが構成されている場合は、リストから適切なvCenterを選択して、そのvCenterで使用可能なタグを表示します。</block>
-  <block id="1a3c34cef3f6ab3008d2418bb5560afe" category="list-text">*タグを選択*セクションで：</block>
-  <block id="cb935c3c84220062774fc03b78d0d1d8" category="list-text">左側：</block>
-  <block id="c75b80af3b6c8be91412f6db0cfef092" category="list-text">リストからvCenterを選択します。</block>
-  <block id="9b2449abfee053f106944314550a4fb9" category="list-text">そのvCenter内の1つ以上のタグのチェックボックスを選択します。</block>
-  <block id="f3e54e3fd8ea8b3a0c648874c68324ed" category="list-text">右側：</block>
-  <block id="325c135a9bba8c7f6e551af758c71fe4" category="list-text">選択されたタグのリストをvCenterでグループ化して確認します。</block>
-  <block id="de001ae1700794f3bd2f6447c9750cbe" category="list-text">保護グループに不要なタグはすべて削除してください。</block>
-  <block id="6a6c8216e6380fa87d23abc6456110a7" category="list-text">* Review * ステップでタグの設定を確認します。</block>
-  <block id="cef2f01b5a9d6194b30ee87880a2501f" category="paragraph">新しいタグベースの保護グループがリストに表示され、タグアイコンで示されます。</block>
   <block id="a22504a40a8afdfa908ab0544ecc4178" category="doc">VMDKからファイルとフォルダを復元する</block>
   <block id="32de0b1da4ab4b8f52bfe3ce1811b043" category="list-text"><block ref="538cee55729c515ab8aab7ca0ccd040a" category="inline-link-macro-rx"></block>の前提条件と制限事項を確認してください。</block>
   <block id="7b7824cad48305f033e7a7b04105000a" category="paragraph">ファイルまたはフォルダの復元パフォーマンスは、復元対象のファイルまたはフォルダのサイズと、復元対象のファイルまたはフォルダの数という2つの要因に依存します。復元対象のデータセットのサイズが同じ場合、多数の小さなファイルを復元するには、少数の大きなファイルを復元する場合と比べて、予想以上に時間がかかる可能性があります。</block>
@@ -5137,7 +5090,6 @@
   <block id="dbbb5df4d99995be20065b232a8370ff" category="list-text">*保存先ストレージ*セクション（オブジェクトストアから復元する場合のみ表示されます）：</block>
   <block id="60dda7eb5d8d89865794c9953a4b00ab" category="list-text">*デフォルトのストレージ場所を変更する*：このオプションを有効にすると、ソースストレージの場所にアクセスできない場合や、ストレージがいっぱいになった場合に、オブジェクトストアのバックアップを別のStorage VMに復元できます。別のクラスタ、Storage VM、またはアグリゲートを選択してください。</block>
   <block id="b07f4d391521e556166d0e8a85f249d6" category="admonition">NetApp では、Kubernetes ワークロードに使用するコンソールエージェントには、エージェントの IP アドレスが変更された場合に発生する問題を回避するため、静的 IP アドレスを割り当てることを強くお勧めします。</block>
-  <block id="8633711cbf80a219cb9603b1e0c09dcf" category="list-text">SANストレージ（プレビュー版）（プライマリストレージおよびセカンダリストレージからのバックアップと元の場所への復元に対応）</block>
   <block id="1873f6028647ed72cee9a7bccf68c491" category="summary">NetApp Backup and Recoveryを使用して、参照と復元を使用してONTAPデータを復元します。</block>
   <block id="9b0b495cd3a28a2977dbab61bc1cbce8" category="summary">検索と復元を使用して、ONTAPバックアップファイルからボリューム、フォルダー、またはファイルを復元できます。</block>
   <block id="153309581b8b7324fe069ec2701fe5ca" category="doc">検索と復元を使用したONTAPバックアップからの復元</block>
@@ -5431,4 +5383,170 @@
   <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026年5月5日</block>
   <block id="bfddb9cc303489a14cbf9520a59e6d1b" category="sidebar">カスタムリソースを使用して復元操作中にリソースを変更する</block>
   <block id="dd95d3f26c14232d5637a6e4d3472711" category="paragraph">Trident Protect 26.05以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。</block>
+  <block id="2177f4b8385663763a55092409fcf96d" category="list-text">*SANストレージ上のVMを保護する*：SANオブジェクトストレージ上のVMを保護できるようになりました。</block>
+  <block id="b4f11c5e52133c7c24d1d06bed289da5" category="list-text">*代替場所への復元機能の強化*：SANストレージ上のVMについて、プライマリおよびセカンダリの場所から代替場所に復元できるようになりました。</block>
+  <block id="c79dba5399648f390585db72c4aefa97" category="list-text">*ゲストVMへのファイルとフォルダの復元*：プライマリストレージのスナップショットから、ゲストWindows VMにファイルとフォルダを復元できるようになりました。この機能はCIFS仮想マシンでのみサポートされています。</block>
+  <block id="b1eace1ceffef99bf891142b0bcdbbe8" category="paragraph">今回のリリースでは、KVMワークロードに以下の機能強化が導入されました。</block>
+  <block id="1c663519b8e9745bde2b09d483acf65f" category="paragraph">*代替場所への復元*：KVM VMを代替の場所に復元できるようになりました（この機能は現在一般提供されています）。</block>
+  <block id="1cab61c7413f41fbca96243cd9ae0d06" category="paragraph">今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：</block>
+  <block id="25b535a4c68470b09e1b9748b7ec9c31" category="list-text">*Oracle AI Database 26ai のサポート*：NetApp Backup and Recovery が Oracle AI Database 26ai をサポートするようになりました。</block>
+  <block id="366ff97a6ee8b3b75ea30b7561cfe3ca" category="list-text">*バックアップ検証のサポート*：Oracleデータベースのバックアップの整合性を自動的に検証するようにバックアップ ポリシーを設定できるようになりました。</block>
+  <block id="fe5aa0dbf25e183784fa7cd2b595be46" category="list-text">*保護グループにおけるデータストアの拡張サポート*：仮想ディスクが複数のデータストアにまたがる仮想マシンを保護する際に、保護グループの動作を選択できるようになりました。</block>
+  <block id="ab186862b28de3aad826b26d80e3eb96" category="list-text">*クローン サポート*：プライマリ ストレージとセカンダリ ストレージから仮想マシン スナップショットのクローンを作成できるようになりました。</block>
+  <block id="87e187714ad3406b822e2c0bf109240b" category="summary">Hyper-V VMのスナップショットから、1つまたは複数のファイルやフォルダーをWindowsゲストVMに復元できます。</block>
+  <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">Hyper-V VMバックアップからファイルとフォルダをリストアする</block>
+  <block id="640c4dc490a389b9c6997266e8a71a44" category="paragraph">プライマリ ストレージ上のHyper-V仮想マシンのバックアップから、ファイルとフォルダをWindowsゲスト仮想マシンにリストアします。</block>
+  <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">スナップショットから仮想ディスクをマウントし、そこからファイルとフォルダを元の（ソース）Windows VMに復元します。</block>
+  <block id="d4bb35603ef1e4c4f849336d35413c6f" category="paragraph">ファイルとフォルダーを復元する前に、NetApp Backup and Recoveryでソース VM の資格情報を作成する必要があります。この資格情報は、復元プロセス中に VM との認証を行うために使用されます。</block>
+  <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">仮想ディスクをマウントしてファイルとフォルダの復元セッションを開くと、そのセッションは48時間アクティブな状態を維持します。</block>
+  <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">復元パフォーマンスは、復元するファイルまたはフォルダのサイズと数の両方に依存します。データセットのサイズが同じ場合、多数の小さなファイルを復元する方が、少数の大きなファイルを復元するよりも一般的に時間がかかります。</block>
+  <block id="0c1d8f103b8f05dc9e681f213a4140ed" category="paragraph">ファイルやフォルダを復元する際は、以下の点に注意してください：</block>
+  <block id="a705938172beea0cbb274379316dd157" category="list-text">現時点では、LinuxゲストVMにファイルやフォルダを復元することはできません。</block>
+  <block id="93ef85ccd89fa47a0fcea649f6297cef" category="list-text">二次ストレージまたはオブジェクトストレージに保存されたバックアップからのファイルやフォルダの復元はサポートされていません。</block>
+  <block id="1c4499f1d98b1704724086469c122c63" category="list-text">SANストレージ上に存在するVMには、ファイルやフォルダをリストアすることはできません。</block>
+  <block id="dcf405acd6661cbfd046dd011bf0a242" category="list-text">予約済みパーティションを表示または参照すると、エラーが発生する可能性があります。</block>
+  <block id="d2c522c65144e52bf2492965958bd437" category="list-text">復元操作中、ゲストファイルの隠し属性、システム属性、および暗号化属性は復元されたファイルには保持されません。</block>
+  <block id="c1eecde3ab58a34da7f6aa03449b4f8c" category="list-text">システムファイルや隠しファイルを表示・復元したり、暗号化されたファイルを表示したりできます。</block>
+  <block id="56a194a765864647b2f396bddd1b4a98" category="list-text">既存のシステムファイルを上書きしたり、暗号化されたファイルを暗号化されたフォルダに復元したりしないでください。</block>
+  <block id="64795adc23ad742b961660730aeecf1d" category="list-text">ページ右上のワークロード一覧から*Hyper-V*を選択してください。</block>
+  <block id="4ce9ba76a51ccd41187089fcf9453aca" category="list-text">仮想マシンのリストで、復元するファイルまたはフォルダを含むVMの*復元*アクションを選択します。</block>
+  <block id="d50199c3c85a7557227fb519ea120c77" category="list-text">*ファイルとフォルダ*を選択します。</block>
+  <block id="87ac0b57021ca53dfe6ba31ad849c862" category="list-text">*Restore from snapshots*ページで、次の操作を実行します：</block>
+  <block id="10ea713b9cd4dda55a5d80fdf7a9f540" category="list-text">必要に応じて、作成時間でSnapshotのリストを絞り込む期間を選択します。</block>
+  <block id="438a6c1066c8a98f8894daf9e98f7ab5" category="list-text">プライマリ ストレージ上の復元元となるスナップショットを選択し、*次へ*をクリックします。</block>
+  <block id="3edc266f3a91667d89f538f69793db00" category="list-text">オプションとして、*ゲスト仮想マシンの資格情報*セクションで、ソース仮想ディスクと宛先VMの資格情報をまだ保存していない場合は、*資格情報の追加*を選択し、Windows資格情報を入力して、*追加*を選択します。</block>
+  <block id="25e60e91201040d5c93090ccf9df68c8" category="paragraph">NetApp Backup and Recoveryは、仮想ディスクを元のVMに接続し、隠しファイルや隠しフォルダを含むすべてのファイルとフォルダを表示します。システムで予約済みのパーティションを含む、すべてのパーティションにドライブ文字を割り当てます。</block>
+  <block id="bc3ab34e28906290dc143fb28934f931" category="list-text">_復元するファイルまたはフォルダーを選択してください_ページで、次の操作を行います：</block>
+  <block id="05bad9644e83aac17866c98cede491f0" category="paragraph">復元対象として選択したファイルとフォルダーは、*選択したファイルとフォルダー*エリアに表示されます。</block>
+  <block id="0ae9531f24baea417e2b9b29633067dc" category="list-text">_Guest file restore - destination_ ページで、以下の操作を行います：</block>
+  <block id="ce8bab93756ea08a2e5a9866d77c6e78" category="list-text">「復元先パス」セクションで、選択したファイルを復元する宛先VMとファイルシステムの場所へのUNCパスを入力します：</block>
+  <block id="74ce534b8e4c395c24329c4f526a2347" category="section-title">アクティブなライブディスクマウントセッションを管理する</block>
+  <block id="19671e4c5c3b61b02ccade1e4c44c41c" category="paragraph">NetApp Backup and Recovery内から、アクティブなHyper-Vファイルおよびフォルダのリストアセッションを表示、使用、および削除できます。</block>
+  <block id="3b42423aac904bb78adc7da68cd9ba53" category="list-text">*Live disk mount sessions*メニューを選択します。</block>
+  <block id="f21c672ce008bffc75e9cebaa985c8b8" category="paragraph">開いている仮想ディスクのマウント セッションの一覧が表示されます。</block>
+  <block id="da51d3c21777acf76b87932de6839d64" category="list-text">オプションとして、セッションを使用してファイルとフォルダーをゲストVMに復元するには、セッションの[アクション]メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*ファイルとフォルダーを復元*を選択します。</block>
+  <block id="57c9526981addf2ea70c6ad409673cb5" category="list-text">必要に応じて、セッションを削除するには、セッションの [アクション] メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*削除*を選択します。</block>
+  <block id="970e7dbe358429eacf37bb0e37943138" category="list-text">オブジェクト ストレージのバックアップからリストアする（元の場所にのみ）</block>
+  <block id="6d1557ca399dc5f147a2d09028ab2c97" category="admonition">SANストレージ上に存在するVMについては、オブジェクト ストア バックアップからのリストアはサポートされていません。</block>
+  <block id="4b59b9c80f0f0e40294e53eb75b4e004" category="list-text">元の場所に復元します（プライマリストレージ、セカンダリストレージ、オブジェクトストレージから）</block>
+  <block id="a6f964fecafa0484fc07f1b47496f82c" category="list-text">別の場所に復元する（プライマリ ストレージとセカンダリ ストレージの両方から）</block>
+  <block id="bff6f5877ada2718589866425ae83e38" category="doc">NetApp Backup and RecoveryでのHyper-Vバックアップ ポリシーの作成と管理</block>
+  <block id="7c54de5e880bd010125642ffb949ccad" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、および保持するバックアップファイルの数を制御する独自のHyper-Vバックアップ ポリシーを作成できます。</block>
+  <block id="110202b139c8c8a25346f036c902b4c8" category="list-text">ポリシーを編集する</block>
+  <block id="ebc9edf6617716b07fb8be0b5f0c9b1e" category="list-text">ワークロードの種類：*Hyper-V*を選択してください。</block>
+  <block id="aae027c40950af2399e544adb1fb6340" category="list-text">*3-2-1 カスケード*：プライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ、およびプライマリストレージ（ディスク）からクラウドストレージ（オブジェクトストア）へ。これは、クラウド ハイパースケーラー オブジェクト ストアまたは StorageGRID などのプライベート オブジェクト ストアです。これにより、複数のシステム間でデータレプリケーションのチェーンが作成され、冗長性と信頼性が確保されます。このオプションは、Amazon FSx for NetApp ONTAP では使用できません。</block>
+  <block id="a165191cb2cf570b65bac33ecad3a664" category="list-text">*ディスク間ファンアウト*：プライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ、およびプライマリストレージ（ディスク）からセカンダリストレージ（ディスク）へ。ディスク間ファンアウトオプションには、複数のセカンダリ設定を構成できます。</block>
+  <block id="f7b0b716a4d4de499a271912b85547c3" category="list-text">*バックアップ後にアーカイブ ログを削除する*：ログ バックアップが有効になっている場合、この機能をオプションで有効にして、NetApp Backup and RecoveryがOracleアーカイブ ログを保持する期間を制限できます。保持期間と、NetApp Backup and Recoveryがアーカイブ ログを削除する場所を選択できます。</block>
+  <block id="588a429e835850f3df8205535e7b98e2" category="list-text">*プロバイダー*：Kubernetesアプリケーションリソースをホストするストレージプロバイダーを選択し、プロバイダーへの認証に必要な認証情報を入力します。</block>
+  <block id="5f635536567962115552d73c6587c483" category="list-text">*整合性スキャンを有効にする*：オブジェクト ストレージで整合性スキャン（Snapshotロック）を有効にするかどうかを選択します。これにより、バックアップが有効かつリストア可能であることが保証されます。整合性スキャンの頻度は、デフォルトでは7日に設定されています。バックアップが変更または削除されないように保護するには、*整合性スキャン*オプションを選択します。スキャンは最新のSnapshotに対してのみ実行されます。最新のSnapshotに対して、整合性スキャンを有効または無効にすることができます。</block>
+  <block id="c0801323bf0a74b01c384bdda3518dd5" category="paragraph">ポリシー内で、必要に応じて詳細設定を行うことができます。これらのオプションは、あらゆるバックアップアーキテクチャとストレージ保存先で使用できます。利用可能な詳細オプションは、ページ上部で選択したワークロードによって異なります。そのため、ここで説明するオプションの中には、すべてのワークロードに適用されないものもあります。</block>
+  <block id="6a4ad7a285f68160638ebf2d62693e0b" category="list-text">*VM設定*：</block>
+  <block id="3000cf6903596d6eddfc672177a67f40" category="list-text">*アプリケーション整合性スナップショットを有効にする*：このオプションを有効にすると、アプリケーション整合性スナップショットが作成されます。これには、仮想マシン上でHyper-V統合サービスとVSSの両方が実行されている必要があります。どちらかのサービスが実行されていない場合、代わりにcrash-consistentバックアップが取得されます。アプリケーション整合性を有効にすると、バックアップ時間とストレージ使用量の両方が増加する可能性があります。さらに、VMのゲストメモリ（RAM）は、アプリケーション整合性スナップショットには含まれません。</block>
+  <block id="250dc6eb1ac44efaa2d588f670d05490" category="list-text">*バックアップ再試行*：障害や中断が発生した場合にジョブを再試行するには、*障害発生時にジョブの再試行を有効にする*を選択します。スナップショットおよびバックアップ ジョブの最大再試行回数と再試行間隔を入力してください。再試行回数は10未満である必要があります。</block>
+  <block id="07ee21dcafe995bd8db639b81ad754af" category="list-text">*ランサムウェアスキャン*：各バケットでランサムウェアスキャンを有効にするかどうかを選択します。これには、オブジェクトストレージでのDataLockロックが必要です。スキャンの頻度を日数で入力します。このオプションはオブジェクトストレージに適用されます。このオプションでは、クラウド プロバイダによっては追加料金が発生する場合があります。</block>
+  <block id="0601ff1169ab7261b645a7dc3ce0b39c" category="list-text">*通知*：バックアップ操作に関するメール通知を有効にするかどうかを選択してください。通知をトリガーするイベントを選択できます。たとえば、バックアップが成功したとき、失敗したとき、または警告付きで完了したときなどです。</block>
+  <block id="1f5ec7f8a8c15e5d3277be8ae844a249" category="paragraph">バックアップアーキテクチャ、バックアップ頻度、保持ポリシー、およびポリシーに関するその他の設定を編集できます。</block>
+  <block id="ae4951a992a8d5e6e6132772ba1d8a9e" category="doc">NetApp Backup and RecoveryでのKubernetesバックアップ ポリシーの作成と管理</block>
+  <block id="bfc94c33428f722edc6b6dee6ffe488e" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、保持するバックアップファイルの数などを制御する独自のKubernetesバックアップポリシーを作成できます。</block>
+  <block id="3dec304d2293613879fb31b92ded23c1" category="list-text">ワークロードの種類：*Kubernetes*を選択します。</block>
+  <block id="b5fe5c5dd9f53264f558cff661e22ba4" category="doc">NetApp Backup and RecoveryでのKVMバックアップ ポリシーの作成と管理</block>
+  <block id="2439bcabe2d407db409db98c7f746861" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、保持するバックアップファイルの数などを制御する独自のKVMバックアップポリシーを作成できます。</block>
+  <block id="5b100fb373fdb454cc5a6d3751463de0" category="list-text">ワークロードのタイプ：*KVM*を選択します。</block>
+  <block id="b29508886a3184a9a62be8ff52a0dc60" category="list-text">*VM整合性スナップショットとアプリケーション整合性スナップショットを有効にする*：このオプションを有効にすると、VM整合性スナップショットとアプリケーション整合性スナップショットが作成されます。これには、VM上でKVM QEMUゲストエージェントが実行されている必要があります。ゲストエージェントが実行されていない場合、スナップショットは「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態になります。このオプションを有効にすると、バックアップ時間が長くなり、より多くのストレージ容量を使用する可能性があります。さらに、VMのアクティブなRAMは、整合性のあるスナップショットには含まれません。</block>
+  <block id="b0163e4ea659a79d4d2b9602ec51bf63" category="doc">NetApp Backup and RecoveryでのMicrosoft SQL Serverバックアップ ポリシーの作成と管理</block>
+  <block id="472e9f7d1853d10d040466f508610ae0" category="paragraph">NetApp Backup and Recoveryで、バックアップ頻度、バックアップの実施時間、および保持するバックアップ ファイルの数を規定する独自のMicrosoft SQL Serverバックアップ ポリシーを作成します。</block>
+  <block id="ea122b82c02949f36e308926ac28ee13" category="list-text">ワークロードの種類：*Microsoft SQL Server* を選択します。</block>
+  <block id="8ba0e09e2c574bf705f8fff3b3ab5a08" category="list-text">*ログバックアップを有効にする*：このオプションを有効にすると、ログがバックアップされ、ログバックアップの頻度と保持期間を設定できます。これを行うには、ログバックアップを事前に設定しておく必要があります。<block ref="c4a2a21123ec8dd6e71a040e68355146" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="5f7f906819a04838e06c2dfd2fecb234" category="list-text">*スナップショットのロック期間*：改ざん防止スナップショットを有効にするかどうかを選択します。有効にした場合は、スナップショットをロックする日数、月数、または年数を入力します。</block>
+  <block id="3b439f1026d46921f052de87189315cd" category="list-text">*セカンダリへの転送*：スナップショットをセカンダリ ストレージに転送するタイミングを選択します。</block>
+  <block id="41e70efe7c53a12d2908e8aa47a11bcc" category="list-text">*バックアップターゲット*：登録済みのオブジェクトストレージターゲットを選択し、バックアップ環境内でアクセス可能であることを確認します。</block>
+  <block id="910ab99764876f4363765ee3b7e8ce0b" category="list-text">*保持コピー数*：各スケジュールごとに保持するスナップショットの数を入力してください。</block>
+  <block id="3365ea4ef2e1de65ab8186d70c9dfe12" category="list-text">*オブジェクト ストアの転送スケジュール*：ONTAP 転送スケジュールを選択して、データをオブジェクト ストレージにバックアップします。</block>
+  <block id="b183399cfd56f47591cd389c4d397604" category="list-text">*コピーのみのバックアップ*：別のバックアップ アプリケーションを使用してリソースをバックアップする必要がある場合は、コピーのみのバックアップ（Microsoft SQL Serverバックアップの一種）を選択します。</block>
+  <block id="10c4d775a10f9f702a7cc573a8b32f48" category="list-text">*可用性グループ設定*：優先バックアップレプリカを選択するか、特定のレプリカを指定します。この設定は、Microsoft SQL Server可用性グループがあり、バックアップに使用するレプリカを制御したい場合に便利です。</block>
+  <block id="aac8fe9a7b8c3de675f0a551b63cabd1" category="list-text">*バックアップ検証*：バックアップ検証を有効にするかどうか、また、すぐに有効にするか後で有効にするかを選択してください。この機能により、バックアップが有効であり、正常に復元できることが保証されます。バックアップの整合性を確保するため、このオプションを有効にすることをお勧めします。デフォルトでは、セカンダリストレージが設定されている場合、バックアップ検証はセカンダリストレージから実行されます。セカンダリストレージが設定されていない場合、バックアップ検証はプライマリストレージから実行されます。</block>
+  <block id="84e38259bca82ba0d07fdfd71d6e76cb" category="list-text">*バックアップラベル*：ポリシー内で、検証対象のバックアップが含まれるバックアップ階層を選択します。*Verify on secondary*設定に応じて、階層リストはプライマリスケジュールまたはセカンダリスケジュールのいずれかから取得されます。時間単位のバックアップとログバックアップは、検証の対象外であるため表示されません。</block>
+  <block id="f4dbeb1c6a1307ba295a6e53373aa5f9" category="list-text">*データベースの一貫性チェック*：必要に応じて、バックアップ前にデータベースの一貫性チェックに適用する制限を選択します。</block>
+  <block id="5a13905fc9bfcb4b9f290d8f7c1f2023" category="list-text">*ログバックアップの検証*：ログバックアップが有効で復元可能であることを確認するために、ログバックアップを検証するかどうかを選択します。1つ以上の検証サーバを選択してください。ディスク間転送または3-2-1転送を選択した場合は、検証用ストレージの場所も選択してください。</block>
+  <block id="6cf59a082585d45c42fb9f38d9def9ef" category="doc">NetApp Backup and Recovery で Oracle Database のバックアップ ポリシーを作成して管理します</block>
+  <block id="f111858b27a97a9e2ec3cf803192db36" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、および保持するバックアップファイルの数を制御する独自のOracle Databaseバックアップポリシーを作成できます。</block>
+  <block id="4b56fd2102e7f646aa06d48bd521f4e4" category="list-text">ワークロードの種類：*Oracle Database*を選択してください。</block>
+  <block id="c9259f21aebca2d9b5529b6105d4d58a" category="list-text">*RMANカタログ設定*：*Oracle Recovery Manager（RMAN）を使用したカタログバックアップ*オプションを有効にすると、Oracleデータベースのバックアップおよびリカバリ操作のメタデータが自動的にカタログ化されます。メタデータは、データベース用に選択した*RMANカタログの構成*設定に従って保存されます（デフォルトではターゲット制御ファイル）。データベースのこれらの設定を変更するには、<block ref="a332d34c6239f7cac0220ece667896af" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="1abdf8895308b3e33314baf35742906f" category="list-text">バックアップ検証を実行するタイミングを選択してください：</block>
+  <block id="10649cad4f0f4127d89dc9da304acc66" category="list-text">*即時*：各バックアップ ジョブの最終ステップとして検証を実行します。これを使用して、バックアップが作成されたらすぐにすべてのバックアップを検証してください。なお、これによりバックアップ期間に時間とリソースが追加されることに注意してください。</block>
+  <block id="2a4860d84019943eafda20434788658f" category="list-text">*Later*：バックアップ ジョブとは別に、作成した個別のスケジュールで検証を実行します。これを使用すると、営業時間外に検証を実行することでバックアップ時間を短縮したり、特定の階層のみを検証したりできます（たとえば、週次と月次の検証は行うが、日次の検証は行わないなど）。</block>
+  <block id="253aecce8bc95f8005b484a7f84aaed2" category="list-text">*セカンダリで検証*：このオプションを有効にすると、プライマリ コピーではなく、セカンダリ（複製）バックアップ コピーを検証します。これは、オフサイト コピーが復元可能であることを確認したい場合や、プライマリ ストレージのI/O負荷を軽減したい場合に役立ちます。</block>
+  <block id="ed4cd97b008873984b3613c4bf9668a5" category="admonition">このポリシーで*ローカルスナップショット*または*ディスクからオブジェクトストレージへの変換*を使用する場合、これらのバックアップアーキテクチャにはセカンダリ層がないため、このオプションは自動的に無効になります。</block>
+  <block id="043489c423b847f51bf49a27ded2364d" category="list-text">*検証スケジュール*：バックアップ検証として *後日* を選択した場合、選択した各バックアップラベル（階層）ごとに、バックアップ検証の頻度を選択します。</block>
+  <block id="96cd77faff8587f3ee978f6d738fc506" category="list-text">*検証サーバー*：必要に応じて、リストから登録済みのOracleホストを1つ以上選択し、オフホスト検証サーバーとして使用します。サーバーが選択されていない場合、検証はソース データベース サーバ上で直接実行されます。それ以外の場合は、NetApp Backup and Recoveryはスナップショットクローンを選択されたホストのいずれかにマウントし、そこでバックアップを検証し、検証I/Oを本番環境の データベース サーバから分離します。検証サーバーは以下の要件を満たす必要があります：</block>
+  <block id="a96c5b49f0e2679b8f6884c399905c08" category="list-text">NetAppプラグインがインストールされていること</block>
+  <block id="aa525d522adb224988fcdcd6f1e78c30" category="list-text">Oracle Databaseバイナリがインストールされている</block>
+  <block id="7ed52864c10e2ddd715752fb3ab3a33f" category="list-text">ソースデータベースと同じOracle Databaseバージョンを使用する</block>
+  <block id="ed72ca5994ca086c703a8fad4669ac29" category="list-text">スナップショットを保持しているストレージ（プライマリまたはセカンダリ）へのネットワーク アクセスがあること</block>
+  <block id="a6b9c0ae442c5226d495a5c8fcbaec6c" category="list-text">クローンしたボリュームをマウントし、Oracle Database DBVERIFY ユーティリティを実行できること。</block>
+  <block id="ee722f1985ae6abb41cf3cea75ae2afd" category="list-text">*最大転送速度*：*最大転送速度を有効にする*を有効にして、選択したホストの最大転送速度を設定します。帯域幅の使用量に制限を設けない場合は、*無制限*を選択します。転送速度を制限する場合は、*制限*を選択し、オブジェクト ストレージへのバックアップのアップロードに割り当てられる1～1,000Mbpsのネットワーク帯域幅を選択します。デフォルトでは、ONTAPは、システム内のボリュームからオブジェクト ストレージへバックアップ データを転送する際に、無制限の帯域幅を使用できます。バックアップ トラフィックがワークロードに影響を与える場合は、転送用のネットワーク帯域幅を削減してください。</block>
+  <block id="1faeee1d873138488abd11b6860dcd58" category="list-text">*バックアップ再試行*：障害や中断が発生した場合にジョブを再試行するには、*障害発生時にジョブの再試行を有効にする*を選択します。スナップショットおよびバックアップ ジョブの最大再試行回数と再試行間隔を入力してください。再試行回数は10回未満でなければなりません。</block>
+  <block id="dfb30ee6dcf1326157d3fe675aadaeb9" category="list-text">*ランサムウェアスキャン*：各バケットでランサムウェアスキャンを有効にするかどうかを選択します。これには、オブジェクトストレージでのDataLockロックが必要です。スキャンの頻度を日数で入力します。このオプションはAWSおよびMicrosoft Azureオブジェクトストレージに適用され、クラウド プロバイダによっては追加料金が発生する場合があります。</block>
+  <block id="1ea951b80bc9d396fd1d298403d6693d" category="doc">NetApp Backup and Recovery での VMware バックアップ ポリシーの作成と管理</block>
+  <block id="a9a8e3951bfcd0474dd8e92d481eea39" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、および保持するバックアップファイルの数を制御する独自のVMwareバックアップポリシーを作成できます。</block>
+  <block id="3062e5113da5566cfc920ce24085f5f7" category="list-text">ワークロードのタイプ：*VMware*を選択します。</block>
+  <block id="c135f02725036fbf76177af7fba3fa74" category="list-text">*VM整合性スナップショットとアプリケーション整合性スナップショットを有効にする*：このオプションを有効にすると、VM整合性スナップショットとアプリケーション整合性スナップショットが作成されます。これには、VMware Toolsが仮想マシン上で実行されている必要があります。VMware Toolsが実行されていない場合、スナップショットは「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態になります。このオプションを有効にすると、バックアップ時間が長くなり、より多くのストレージ容量を使用する可能性があることに注意してください。さらに、VMのアクティブなRAMは、整合性のあるスナップショットには含まれません。</block>
+  <block id="f4b49bc75e36ee47abf57c3874ece424" category="summary">NetApp Backup and Recoveryを使用してVMware仮想マシンのワークロードをクローニングします。</block>
+  <block id="1982041fad810d65fa747c756667e5bf" category="doc">NetApp Backup and Recoveryを使用したVMwareワークロードのクローニング</block>
+  <block id="78607c9a00df1885a0ae61cde40931a9" category="paragraph">NetApp Backup and Recoveryを使用して、プライマリまたはセカンダリのスナップショットからVMware仮想マシンの書き込み可能なクローンを作成します。VMクローンを使用すると、本番データに影響を与えることなく、テスト、統合、トレーニング用の仮想マシンを作成および管理できます。</block>
+  <block id="8eea3e635160d36b50e303a229a5e5a9" category="paragraph">スナップショットをクローンする仮想マシンが保護グループに追加され、バックアップされていることを確認してください。</block>
+  <block id="ee916739e8105b0aeae4dac7bbdd9b6b" category="section-title">VMware VMのクローンを作成する</block>
+  <block id="3c953ff4588789651a63730a4153caab" category="paragraph">既存のスナップショットからすぐにクローンを作成します。</block>
+  <block id="39a323e547f69fa0d612890231ccc2a1" category="admonition">VMクローンを作成した後、元のVMとのIPアドレスの競合を防ぐため、クローンした仮想マシンのIPアドレスを更新する必要があります。</block>
+  <block id="7e116cfe6c0f9e521bd63a587c3879df" category="list-text">*ワークロード*で、*VMware*タイルを選択します。</block>
+  <block id="b9bac8471f959afe6f7f64395e0ed7ff" category="list-text">*Select virtual machines*セクションで、保護グループを選択します。保護グループ内のVMが選択リストに表示されます。</block>
+  <block id="eaaa318a62aa90e0c99f47c910c8ae57" category="list-text">クローンする仮想マシンをリストから1つ以上選択してください。選択した仮想マシンは、右側の選択済み仮想マシン一覧に表示されます。</block>
+  <block id="396bf6fedc59febaace04d282455000f" category="list-text">「スナップショットを選択」ページの「スナップショット」セクションで、作成日でスナップショットを絞り込むための期間を選択します。</block>
+  <block id="b2c6eb1a04dd62280a6a68c2cf2a78e1" category="list-text">クローン作成のベースとして使用する既存のスナップショットをリストから選択し、*次へ*を選択します。</block>
+  <block id="fab465b62006d3607659bc08ba8a182e" category="list-text">*Destination settings* ページで、以下の操作を行います：</block>
+  <block id="f28602e2fd37c1f9914cc71eeb5d80f1" category="list-text">VMクローンを作成する宛先のvCenterサーバーのFQDNまたはIPアドレスを選択してください。</block>
+  <block id="ae94732fa207de568502efa66ed0b129" category="list-text">クローンをホストするESXiホストを選択してください。</block>
+  <block id="198a66e436e55b86c9dd812cf25c18fa" category="list-text">クローンのネットワーク環境を選択します。</block>
+  <block id="c887a006a4c2467e8acd0cf0287164e0" category="list-text">*Virtual machine name* フィールドに、新しくクローンした仮想マシンの接尾辞を入力します。</block>
+  <block id="bc0fc362c9b7050bcbb776ce6a010805" category="paragraph">VMware VMのクローンを分割することで、親ボリュームから切り離すことができます。分割されると、クローンは親ボリュームに依存しない独立したボリュームになります。</block>
+  <block id="8f379684395bb1a92a36b320800104a5" category="paragraph">分割後、クローンされた仮想マシンに関連付けられていたデータストアは、新しい独立したデータストアになります。クローンされた仮想マシン自体は保持されます。</block>
+  <block id="32ae981d8a5ef88a80693f08e5da1c9f" category="list-text">ダイアログの詳細を確認し、*Split*を選択します。</block>
+  <block id="c82c2b7d03e7c2c07088e1452f1ff086" category="list-text">新しい独立した VM が作成されると、* Inventory * ページで確認できます。</block>
+  <block id="07be3f18584f7d2199198c4d5579521f" category="section-title">クローンを削除する</block>
+  <block id="e106e302c1877d4276a720980ccd8ffc" category="paragraph">VMware VMクローンを削除できます。VMクローンを削除すると、クローンはvCenterから削除され、VMに関連付けられたデータストアはマウント解除され、ストレージシステムから削除されます。</block>
+  <block id="f00f6d1236330340e8c03e0eda199faf" category="paragraph">ポリシーによってクローンが保護されている場合、クローンとそのジョブの両方が削除されます。</block>
+  <block id="604a5d023b29298d1b99404a9ef14f49" category="list-text">アクションアイコン<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を選択し、*削除*を選択します。</block>
+  <block id="6acf911ce48e96597b5f0e17e3e365be" category="list-text">削除確認ダイアログボックスで、削除の詳細を確認します。</block>
+  <block id="6f99fa9b2e1f4893851a8aeb82d171f9" category="list-text">*削除*を選択します。</block>
+  <block id="ec779f9e2bd28b4335680927f843ab91" category="section-title">タグベースの保護グループ</block>
+  <block id="d05e4a2b9c5cc887bff6cef85887af55" category="paragraph">保護グループに追加するリソースを選択するときは、データストア、仮想マシン、またはvSphereタグで整理できます。</block>
+  <block id="e1cb91d6e83e158f640aa4b3709a0a44" category="paragraph">タグベースの保護（vSphereタグを使用）により、NetApp Backup and Recoveryにおける保護グループの管理が簡素化されます。</block>
+  <block id="6d72edd66dbfa27041f4959e35491a31" category="paragraph">タグベースの保護にはいくつかの利点があります：</block>
+  <block id="47ea9c123f0cc2751923b1582a594ad0" category="paragraph">バックアップと復元をまとめて行いたいリソースを整理するために、保護グループを作成します。</block>
+  <block id="6c3967fc85addfd3e3e8b1aeb4b0aeca" category="list-text">タグベースの保護グループを作成する場合は、保護する仮想マシンとデータストアがvCenterで1つ以上のvSphereタグにすでに関連付けられていることを確認してください。</block>
+  <block id="556ab19ca92cb12809a437a14cc10144" category="list-text">保護グループの名前を指定し、保護グループにリソースを追加する方法を選択してください。*データストア*、*仮想マシン*、または*タグ*ごとに整理されたリソースを追加できます。</block>
+  <block id="544879da980c779ff71009aed047a7de" category="list-text">表示されたリストから、保護グループに含めるリソースを選択します。</block>
+  <block id="315d3e34a48e6fb27cea5db5885a0c91" category="paragraph">リスト内の利用可能なリソースを絞り込むには、特定のvCenterまたはデータセンターを選択します。選択されたリソースは右側のリストに表示されます。</block>
+  <block id="112cf60a9306f46625dcb13bdcaa1efa" category="list-text">保護グループが、仮想ディスクが複数のデータストアにまたがる仮想マシンをどのように処理するかを選択します：</block>
+  <block id="db8b39c1eec33c3dc6b04fbbade7d202" category="list-text">*常にすべてのスパンニングデータストアを除外します*：保護グループには、直接追加されたデータストアと、保護グループに直接追加されたVMのプライマリデータストアのみが含まれます。</block>
+  <block id="d262a6e9f91d203e39fcb0cf252960b1" category="list-text">*常にすべてのスパンニングデータストアを含める*：保護グループには、含まれる VM によってスパンニングされるすべてのデータストアが含まれます。</block>
+  <block id="9c58f033cdbae8ba45a2b0103a2e5518" category="list-text">*含めるスパンニングデータストアを手動で選択*：このオプションを選択した場合、表示されるリストから保護グループに含めるスパンニングデータストアを手動で選択する必要があります。この選択は静的なものです。グループに新しい仮想マシンが追加されるたびに、スパンニングデータストアのリストを更新する必要があります。</block>
+  <block id="b7d604b43f0fc242f0174cdc9661e0a3" category="paragraph">新しいポリシーを作成するには、*Create new policy*を選択し、画面の指示に従ってください。詳細については、<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="46e1fa64f1bfb1ca3e084c4697ac1766" category="summary">VMDK から 1 つ以上のファイルまたはフォルダをゲスト VM にリストアできます。</block>
+  <block id="31dddac5d658322f1aec3f71f15ff154" category="paragraph">仮想ディスクから個々のファイルまたはフォルダを、元の仮想マシンまたは別の仮想マシンに復元します。これは、仮想マシン全体を復元する必要はなく、特定のファイルやフォルダだけが必要な場合に便利です。</block>
+  <block id="aefd2cbeb423f608e4e14dc18e7cda38" category="section-title">アクティブな VMDK マウントセッションを表示する</block>
+  <block id="a2c3693f6f1b657d3365bb6121bebfc1" category="paragraph">ファイルやフォルダを復元する際に、アクティブなゲストセッションを表示します。これは、現在開いているセッションに接続されているVMDKを表示します。</block>
+  <block id="29760f5766da0c4d6a0ac770b454e9d0" category="paragraph">開いているVMDKマウントセッションの一覧が表示されます。関連するバックアップ、ソースVM、マウントパス、その他の情報を確認できます。</block>
+  <block id="e77e2a03d88f40058869e1cc3d680930" category="list-text">ASP.NET Core Runtime 8.0.24 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
+  <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
+  <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
+  <block id="55c7dc18349be92e97f9965c696cb850" category="list-text">SANストレージ（バックアップおよびプライマリストレージまたはセカンダリストレージからの元の場所へのリストアに対応）</block>
+  <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026年5月11日</block>
+  <block id="a37ef823bf93d8b834512d7ddfdf36cd" category="sidebar">Microsoft SQL Serverのワークロードバックアップポリシーを作成および管理する</block>
+  <block id="2287427b367a426395bab449f1e777dc" category="sidebar">VMwareワークロードのバックアップポリシーを作成および管理する</block>
+  <block id="5b94860a42a3f19b0fba83e9b7d762f3" category="sidebar">VMwareワークロードをクローンする</block>
+  <block id="beb76bddbaec1f03042fdde3ce87a100" category="sidebar">KVMワークロードのバックアップポリシーを作成および管理する</block>
+  <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">Hyper-Vワークロードのバックアップポリシーを作成および管理する</block>
+  <block id="4cd8801cdee679bb024e188753022546" category="sidebar">Oracle Databaseワークロードのバックアップポリシーを作成および管理する</block>
+  <block id="9bb7a57e0f15167076e59ed085570cb6" category="sidebar">Kubernetesワークロードのバックアップポリシーを作成および管理する</block>
 </blocks>
