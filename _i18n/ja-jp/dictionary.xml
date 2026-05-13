@@ -415,7 +415,6 @@
   <block id="baab0bf328a764b384d4ecab2375f4fa" category="list-text">データをバックアップする場合、 NetApp Backup and Recovery はNetApp Volume Encryption (NVE) を維持しません。つまり、NVE ボリューム上の暗号化されたデータは、データが宛先に転送されている間に復号化され、暗号化は維持されません。</block>
   <block id="c638f77e97a62d0d11f775816222d62a" category="inline-link">NetApp Volume Encryptionの設定 - 概要</block>
   <block id="3553f96cf9281793975488d9cea2ab17" category="paragraph">これらの暗号化の種類についての説明については、<block ref="4e5be28408ee7dfd001133bf87f0a28f" category="inline-link-rx"></block> 。</block>
-  <block id="d13da1ef1c5dbdc58b74265b9363e815" category="list-text">SnapMirrorポリシーのスケジュールを使用してSnapMirror宛先ボリュームで長期保存スナップショットが有効になっている場合、スナップショットは宛先ボリュームに直接作成されます。この場合、これらのスナップショットはオブジェクト ストレージに移動されないため、 NetApp Backup and Recoveryを使用してこれらのボリュームをバックアップしないでください。</block>
   <block id="3a3d9f6ee5fa05f3aa042e0258eebf58" category="list-text">ボリュームがポリシーに割り当てられていない状態でバックアップ ポリシーを作成または編集すると、保持されるバックアップの数は最大 1018 になります。ボリュームをポリシーに割り当てた後、ポリシーを編集して最大 4000 個のバックアップを作成できます。</block>
   <block id="dd717dd6a5197fd72bf9aae1e454dd3e" category="list-text">データ保護 (DP) ボリュームをバックアップする場合:</block>
   <block id="c73aeadbe74d06b3eebf4d0a5f283344" category="list-text">SnapMirrorラベルとの関係<block ref="b17c9a947d4e38d7975718380fab6b7a" prefix=" " category="inline-code"></block>そして<block ref="02d69a40f5f4cdc817176fabd085b511" prefix=" " category="inline-code"></block>クラウドにバックアップされません。</block>
@@ -4436,7 +4435,6 @@
   <block id="9255ea030351a8ee8402a7708baf0223" category="list-text">*ランサムウェアスキャン*セクションを展開します。</block>
   <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">2026年1月19日</block>
   <block id="88009dbb638181324526010a9eff3c19" category="sidebar">VMware仮想マシンを復元する</block>
-  <block id="9b7e5fddcf3e2a7a93fe6669de87fbc2" category="sidebar">特定の仮想ディスクを復元する</block>
   <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">ワークフロー、前提条件、制限事項</block>
   <block id="b2c5a3b35bd8f72bf653aa42e54cc06c" category="list-text">Windows ゲスト OS は Windows Server 2008 R2 以降を実行している必要があります。</block>
   <block id="367aa9be05b109b226ffbefe3981ac88" category="list-text">暗号化されたファイルまたはフォルダをリストアした場合、暗号化属性は保持されません。</block>
@@ -5055,7 +5053,6 @@
   <block id="6cbd33d5e36fc1cca8f70b65396de2b0" category="admonition">リソースタイプを混在させること（たとえば、同じ保護グループ内でタグと個々の VM やデータストアを組み合わせること）はサポートされていません。</block>
   <block id="6ad4cf5fcdb7c67f52ade5e3f8eeb6ad" category="list-text">ご使用の環境で、サポートされているバージョンのVMware vSphereが使用されていることを確認してください。</block>
   <block id="735df7f2e37c9dd264e94c878ea7d619" category="admonition">タグメンバーシップは、バックアップ時に vCenter から解決されます。vCenter でタグに加えた変更（タグの追加 / 削除、タグの削除、VM の追加 / 削除）は、次回のバックアップに自動的に反映されます。</block>
-  <block id="a22504a40a8afdfa908ab0544ecc4178" category="doc">VMDKからファイルとフォルダを復元する</block>
   <block id="32de0b1da4ab4b8f52bfe3ce1811b043" category="list-text"><block ref="538cee55729c515ab8aab7ca0ccd040a" category="inline-link-macro-rx"></block>の前提条件と制限事項を確認してください。</block>
   <block id="7b7824cad48305f033e7a7b04105000a" category="paragraph">ファイルまたはフォルダの復元パフォーマンスは、復元対象のファイルまたはフォルダのサイズと、復元対象のファイルまたはフォルダの数という2つの要因に依存します。復元対象のデータセットのサイズが同じ場合、多数の小さなファイルを復元するには、少数の大きなファイルを復元する場合と比べて、予想以上に時間がかかる可能性があります。</block>
   <block id="ec4a88c3778360f79e6ff325a92a3d17" category="paragraph">リモートの仮想マシンに復元することは可能ですが（これはクロスVM復元と呼ばれます）、復元元と復元先のオペレーティングシステムは同じである必要があります。</block>
@@ -5549,4 +5546,10 @@
   <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">Hyper-Vワークロードのバックアップポリシーを作成および管理する</block>
   <block id="4cd8801cdee679bb024e188753022546" category="sidebar">Oracle Databaseワークロードのバックアップポリシーを作成および管理する</block>
   <block id="9bb7a57e0f15167076e59ed085570cb6" category="sidebar">Kubernetesワークロードのバックアップポリシーを作成および管理する</block>
+  <block id="2a09eaa4306f964591fbfdee1bad3329" category="list-text">長期保持Snapshotが有効になっているSnapMirrorデスティネーションボリュームはバックアップしないでください。これらのSnapshotはデスティネーションに直接作成され、オブジェクトストレージには移動されません。この制限は、SnapMirrorポリシーが後で変更されて長期保持が無効になった場合でも適用されます。</block>
+  <block id="cb7e1594adc03f9d88413ab9198e9c43" category="admonition">Azureでバックアップ先として使用するコンテナを作成する場合は、作成するコンテナの名前がAzureストレージアカウントの名前と同じであることを確認してください。</block>
+  <block id="76382b5bdb7a0a65db2779738439703c" category="sidebar">VMware仮想ディスクを復元する</block>
+  <block id="160bf2703f3a2319b3965b541340256a" category="sidebar">VMwareのファイルとフォルダをリストアする</block>
+  <block id="b5c91904decad9b84ae436053f327229" category="sidebar">VMDKからVMwareファイルとフォルダをリストアする</block>
+  <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">Hyper-Vのファイルとフォルダをリストアする</block>
 </blocks>

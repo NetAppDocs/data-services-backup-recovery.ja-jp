@@ -136,13 +136,13 @@ sidebar:
         entries:
         - title: VMware仮想マシンを復元する
           url: "/br-use-vmware-restore.html"
-        - title: 特定の仮想ディスクを復元する
+        - title: VMware仮想ディスクを復元する
           url: "/br-use-vmware-restore-vmdks-from-backups.html"
-        - title: ファイルとフォルダを復元する
+        - title: VMwareのファイルとフォルダをリストアする
           entries:
           - title: ワークフロー、前提条件、制限事項
             url: "/br-use-vmware-restore-guest-files-and-folders-overview.html"
-          - title: VMDKからファイルとフォルダを復元する
+          - title: VMDKからVMwareファイルとフォルダをリストアする
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: ファイルとフォルダのリストアのトラブルシューティング
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
@@ -176,7 +176,7 @@ sidebar:
         entries:
         - title: Hyper-V ワークロードを復元する
           url: "/br-use-hyperv-restore.html"
-        - title: ファイルとフォルダを復元する
+        - title: Hyper-Vのファイルとフォルダをリストアする
           url: "/br-use-hyper-v-restore-guest-files-and-folders.html"
     - title: Oracle Database ワークロードの保護（プレビュー）
       entries:
