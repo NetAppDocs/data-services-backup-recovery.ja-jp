@@ -2775,7 +2775,6 @@
   <block id="e2a74f20d433c85025a6f5807d74682d" category="paragraph">新しいStorageGRIDクラスターを選択または作成します。コンソールが検出できるStorageGRIDクラスタの作成の詳細については、<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block> 。</block>
   <block id="85ffdbd09ff5b2ecfdcbea6cb8697013" category="summary">NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。</block>
   <block id="254385f2eec62c0f2399c9da13dde7f6" category="doc">NetApp Backup and RecoveryでSnapMirrorを使用してボリュームを Cloud Resync に移行する</block>
-  <block id="ee9ee6fb5d3eb14594205c52636211ec" category="admonition">この機能は、2025 年 5 月にリリースされたNetApp Backup and Recoveryバージョン 4.0.3 以降で利用できます。</block>
   <block id="64d100d00b61364f5c3f3456b1dbbc90" category="paragraph">次の前提条件が満たされていることを確認してください。</block>
   <block id="c8f1c31ff80f86ac3f0e5c6f159fae6e" category="list-text">宛先ONTAPクラスタでは、 ONTAPバージョン 9.16.1 以降が実行されている必要があります。</block>
   <block id="5baace87d48cf58cc80858703e408f10" category="list-text">古いソースONTAPクラスターは、NetApp Backup and Recoveryを使用して保護する必要があります。</block>
@@ -5552,4 +5551,7 @@
   <block id="b5c91904decad9b84ae436053f327229" category="sidebar">VMDKからVMwareファイルとフォルダをリストアする</block>
   <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">Hyper-Vのファイルとフォルダをリストアする</block>
   <block id="e193e26700d466b0349ce7e559d96967" category="list-text">*ディスクからオブジェクトストレージ*：プライマリストレージ（ディスク）からクラウド（オブジェクトストア）へ。ONTAP システムからオブジェクトストレージシステムにデータをレプリケートします。これは、クラウド ハイパースケーラー オブジェクト ストアまたは StorageGRID などのプライベート オブジェクト ストアです。この方法は、長期的なデータ保持とアーカイブに最適です。このオプションは、Amazon FSx for NetApp ONTAP では使用できません。</block>
+  <block id="be3cd190a86975f6f424dc4b62841598" category="section-title">災害復旧構成でインデックス作成を有効にする</block>
+  <block id="07df367027530700215f6c0b89225a68" category="paragraph">ディザスターリカバリー（DR）構成のストレージVMクラスタでインデックス作成を有効にすると、Vserver DRの宛先として構成されているVserverでは操作が許可されていないというエラーが表示されます。エラーにもかかわらず、バックエンドプロセスはソースストレージVMの<block ref="f97a37281422aa65185ec69709f5c22b" prefix=" " category="inline-code"></block>ステータスを「オン」に設定します。ストレージVM DRポリシースケジュールが実行されると、このステータスは宛先ストレージVMに伝播されます。</block>
+  <block id="f3a85d41d14b1d81bc48b863a2e8b370" category="paragraph">*回避策*：初期エラー発生後、ストレージVMのDRポリシースケジュールが実行されるまで待ってから、インデックス作成を再度有効にしてみてください。</block>
 </blocks>
