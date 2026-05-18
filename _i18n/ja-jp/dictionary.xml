@@ -3344,7 +3344,6 @@
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">割り当てる前にバックアップの影響を考慮してください<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>ボリュームへの階層化ポリシー。データは即座に階層化されるため、 NetApp Backup and Recovery はローカル層ではなくクラウド層からデータを読み取ります。同時バックアップ操作ではクラウド オブジェクト ストアへのネットワーク リンクが共有されるため、ネットワーク リソースが飽和状態になるとパフォーマンスが低下する可能性があります。この場合、このタイプのネットワーク飽和を減らすために、複数のネットワーク インターフェイス (LIF) を事前に構成する必要がある場合があります。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">NetApp Backup and Recoveryを使用してバックアップファイルからONTAPデータを復元する</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">*ボリューム* (新しいボリュームとして) を元のシステム、同じクラウド アカウントを使用している別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
-  <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">*フォルダー* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">*ファイル* を元のシステムのボリューム、同じクラウド アカウントを使用している別のシステムのボリューム、またはオンプレミスのONTAPシステム上のボリュームに復元できます。</block>
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">要約すると、ボリューム データをONTAPシステムに復元するために使用できる有効なフローは次のとおりです。</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">バックアップファイル -&gt; 復元されたボリューム</block>
@@ -5556,4 +5555,6 @@
   <block id="99d6bb7f841b0ddd33dd9e23fe42b4e8" category="list-text"><block ref="2f0729ea8ff63f23144ca016d097072b" prefix="" category="inline-code"></block>：ボリュームをインデックス化しないストレージVMのカンマ区切りリスト</block>
   <block id="a4c2ad915aa7ffe7e12eaa0ec56e0fcb" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：索引付けしない個々のボリュームをカンマで区切ったリスト</block>
   <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text"><block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>という名前のファイルを作成し、ストレージVMとボリューム名を環境に合わせてカスタマイズします。</block>
+  <block id="48be46e5153e88189d804da13793e42d" category="list-text">ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
+  <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">レプリケートされたスナップショットまたはオブジェクトストレージのスナップショットから*フォルダ*を元のシステムのボリューム、同じクラウドアカウントを使用している別のシステムのボリューム、またはオンプレミスONTAPシステムのボリュームに復元できます。ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
 </blocks>
