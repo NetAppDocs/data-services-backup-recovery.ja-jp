@@ -3606,9 +3606,7 @@
   <block id="fd161debce2c53100b7c61aa8b2d7c6b" category="list-text">Google アーカイブにアーカイブされたオブジェクトの復元にはどのくらいの時間がかかりますか?</block>
   <block id="efce98c74b9fc5fb1711b2f3d4da8f34" category="list-text">*取得時間*: アーカイブからバックアップ ファイルを取得して標準ストレージに配置する時間。これは「再水和」時間と呼ばれることもあります。他のクラウド プロバイダーが提供する「最も冷たい」ストレージ ソリューションとは異なり、データには数ミリ秒以内にアクセスできます。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスク概要</block>
-  <block id="b92e6028af16604f3b6fd4eade9dfec6" category="summary">「プライベート モード」と呼ばれる、インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、 NetApp Backup and Recovery の構成データは、バックアップが保存されているStorageGRIDまたはONTAP S3 バケットにバックアップされます。将来、コンソール エージェント ホスト システムに問題が発生した場合、新しいコンソール エージェントを展開して、重要なNetApp Backup and Recoveryデータを復元できます。</block>
   <block id="a215e32a572a4f73138eb57df3fb494d" category="doc">ダークサイトでのNetApp Backup and Recovery構成データの復元</block>
-  <block id="e49ea1690cc473e646cdffd861381cbc" category="paragraph">インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合 (_プライベート モード_ と呼ばれます)、 NetApp Backup and Recovery の構成データは、バックアップが保存されているStorageGRIDまたはONTAP S3 バケットにバックアップされます。コンソール エージェント ホスト システムに問題がある場合は、新しいコンソール エージェントを展開して、重要なNetApp Backup and Recoveryデータを復元できます。</block>
   <block id="701ba6e125e8ce791098165f107eb472" category="admonition">この手順はONTAPボリューム データにのみ適用されます。</block>
   <block id="28f81c5bbd7730901f36546c0e51e06f" category="paragraph">バックアップされるデータには 2 種類あります。</block>
   <block id="8ad7c680cb0d9e95e7294cf3e192be1f" category="list-text">NetApp Backup and Recoveryデータベース - すべてのボリューム、バックアップ ファイル、バックアップ ポリシー、および構成情報のリストが含まれています。</block>
@@ -3843,7 +3841,6 @@
   <block id="f5b61ddaf24256f9a32421bae22a1e21" category="sidebar">オンプレミスのONTAPを Azure Blob にバックアップする</block>
   <block id="e8f201c141a8ad9fbe4ea92510b4ca30" category="sidebar">オンプレミスのONTAPを Google Cloud にバックアップする</block>
   <block id="6a2941303bd6f981e2724af76bf3da2e" category="sidebar">オンプレミスのONTAPをStorageGRIDにバックアップ</block>
-  <block id="14873f48c9db88415c7c75e61a0ddd00" category="sidebar">ダークサイトで構成データを復元する</block>
   <block id="5ee1bd11e1cae9e48854c491affa72a6" category="sidebar">ONTAPバックアップの管理</block>
   <block id="0f18ca4c27c34246c6bc09d2bbf775c6" category="sidebar">ONTAPバックアップからの復元</block>
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">Microsoft SQL Server のインベントリを管理する</block>
@@ -5557,4 +5554,6 @@
   <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text"><block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>という名前のファイルを作成し、ストレージVMとボリューム名を環境に合わせてカスタマイズします。</block>
   <block id="48be46e5153e88189d804da13793e42d" category="list-text">ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
   <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">レプリケートされたスナップショットまたはオブジェクトストレージのスナップショットから*フォルダ*を元のシステムのボリューム、同じクラウドアカウントを使用している別のシステムのボリューム、またはオンプレミスONTAPシステムのボリュームに復元できます。ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
+  <block id="637d209786fc6476ac3ed36c800de343" category="summary">プライベートモード（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。コンソールエージェントのホストシステムに障害が発生した場合は、新しいコンソールエージェントをデプロイしてこのデータを復元できます。</block>
+  <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">_プライベートモード_（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。Consoleエージェントのホストシステムに障害が発生した場合、新しいConsoleエージェントを導入して、このデータをリストアできます。</block>
 </blocks>

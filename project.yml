@@ -254,8 +254,6 @@ sidebar:
       url: "/prev-reference-azure-archive-storage-tiers.html"
     - title: サポートされている Google Cloud アーカイブ ストレージ層
       url: "/prev-reference-gcp-archive-storage-tiers.html"
-    - title: ダークサイトで構成データを復元する
-      url: "/reference-backup-cbs-db-in-dark-site.html"
   - title: 法律上の表示
     url: "/legal-notices.html"
 product-family:
