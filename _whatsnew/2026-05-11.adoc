@@ -48,3 +48,15 @@ Oracle Databaseワークロードの保護の詳細については、 https://do
 
 
 VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。
+
+
+
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。
+
+* *Trident Protect 26.05.1*: このリリースには Trident Protect 26.05.1 が含まれます。
+* *VMベースのアプリケーションのインプレース復元*：VMベースのアプリケーションを元の名前空間と元のクラスタに復元できるようになりました。
+
+
+Kubernetesワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes ワークロードの保護の概要"] 。

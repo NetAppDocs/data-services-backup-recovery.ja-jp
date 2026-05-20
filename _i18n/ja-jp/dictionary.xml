@@ -5239,10 +5239,8 @@
   <block id="23a8c2c2f00449fb258432bb555df792" category="paragraph">今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。</block>
   <block id="fa4bdb2a7b9d92b88314f56020b6233b" category="list-text">*VM保護のネイティブサポート*：VMベースのアプリケーションを作成できるようになり、他のアプリケーションを保護するのと同じ方法で仮想マシンを保護できるようになりました。</block>
   <block id="26941edb78c4dbe9ef9eecfa96d0effe" category="list-text">*リソース変換*：リソース変換とリソース変換テンプレートを使用して、復元プロセス中にリソース属性を追加、削除、および変更できるようになりました。</block>
-  <block id="283ac99a03bae81366bef44dc5d0e7d7" category="list-text">*Backup and RecoveryからTrident Protectをアップグレード*：Backup and Recoveryから直接、KubernetesクラスターのTrident Protectをアップグレードできるようになりました。</block>
   <block id="2473cfa7d58a8b216d39f3987c07594f" category="list-text">*保護されたリソースの表示*：アプリケーションの各復旧ポイントに含まれるリソースを表示し、詳細な JSON レポートをダウンロードできるようになりました。これにより、復旧ポイントを完全に把握でき、監査への対応が簡素化されます。</block>
   <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。</block>
-  <block id="a53f9fc03c44857823108d186061d746" category="section-title">ローカルスナップショットからのVMベースアプリのインプレース復元はサポートされていません</block>
   <block id="3e204d8b8cd27fb138dc9f8b97e831ad" category="paragraph">ローカルスナップショットからのVMベースのアプリケーションのインプレース復元（元の名前空間および元のクラスタへの復元）は、現在サポートされていません。</block>
   <block id="930dce8dab04ce68bb76e7e3616a93a1" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block>Windows、Microsoft SQL Server、Oracle Database、またはLinuxホストでNetApp Backup and Recoveryが認証する必要があるもの。これには、ファイルやフォルダをリストアする際に使用されるゲストOSのクレデンシャルが含まれます。</block>
   <block id="9d07cf053c6372eed523592068e90499" category="list-text"><block ref="9bcb031751ebe08f6f5c4f1caa70f94f" category="inline-xref-macro-rx"></block>リソースを復元する際に、リソースを変更します。</block>
@@ -5556,4 +5554,8 @@
   <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">レプリケートされたスナップショットまたはオブジェクトストレージのスナップショットから*フォルダ*を元のシステムのボリューム、同じクラウドアカウントを使用している別のシステムのボリューム、またはオンプレミスONTAPシステムのボリュームに復元できます。ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
   <block id="637d209786fc6476ac3ed36c800de343" category="summary">プライベートモード（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。コンソールエージェントのホストシステムに障害が発生した場合は、新しいコンソールエージェントをデプロイしてこのデータを復元できます。</block>
   <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">_プライベートモード_（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。Consoleエージェントのホストシステムに障害が発生した場合、新しいConsoleエージェントを導入して、このデータをリストアできます。</block>
+  <block id="529ee13269734b9af20d3b6447ab6b9f" category="list-text">*Trident Protect 26.05*：このリリースには Trident Protect 26.05 が含まれます。</block>
+  <block id="54f8a7826ae5101b3374158dadb22dbe" category="list-text">*バックアップとリカバリからTrident Protectをアップグレード*：KubernetesクラスタでTrident Protect 26.05以降が実行されている場合、バックアップとリカバリから直接Trident Protectをアップグレードできるようになりました。</block>
+  <block id="482d8dda04ea30da4fa480c529cb09b0" category="list-text">*Trident Protect 26.05.1*: このリリースには Trident Protect 26.05.1 が含まれます。</block>
+  <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*VMベースのアプリケーションのインプレース復元*：VMベースのアプリケーションを元の名前空間と元のクラスタに復元できるようになりました。</block>
 </blocks>
