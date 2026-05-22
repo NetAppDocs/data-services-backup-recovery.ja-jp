@@ -16,12 +16,6 @@ summary: NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレ
 [role="lead"]
 NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
 
-[]
-====
-
-NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
-
-====
 
 
 == NetApp Backup and Recoveryでサポートされている S3 アーカイブ ストレージ クラス

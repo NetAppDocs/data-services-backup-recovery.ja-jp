@@ -16,12 +16,6 @@ summary: NetApp Backup and Recovery は、 1 つの Azure アーカイブ アク
 [role="lead"]
 NetApp Backup and Recovery は、 1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。
 
-[]
-====
-
-NOTE: NetApp Backup and Recovery UIのバージョンを切り替えるには、link:br-start-switch-ui.html["以前のNetApp Backup and RecoveryUIに切り替える"] 。
-
-====
 
 
 == NetApp Backup and Recoveryでサポートされている Azure BLOB アクセス層
