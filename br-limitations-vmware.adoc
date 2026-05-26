@@ -18,12 +18,7 @@ summary: 環境で Backup and Recovery を使用する前に、これらの NetA
 
 NetApp Backup and Recovery の VMware ワークロードでは、以下のアクションはサポートされていません。
 
-* マウント
-* アンマウント
 * vVol サポート
-* NVMeサポート
 * メール統合
-* 編集ポリシー
-* 保護グループを編集する
 * ロールベースアクセス制御（RBAC）のサポート
 
