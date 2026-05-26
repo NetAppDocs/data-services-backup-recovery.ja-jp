@@ -343,14 +343,9 @@
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS以外のストレージプールタイプ（NetFSのみがサポートされます）</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">オフライン バックアップ</block>
   <block id="11750133b5aeccdb05ec0c5b1027ace4" category="doc">VMware ワークロード向けNetApp Backup and Recoveryの既知の制限</block>
-  <block id="eace16d66cdd93ad876c620db7456077" category="list-text">マウント</block>
-  <block id="1281764038ea27ade56d7d2b8be22798" category="list-text">アンマウント</block>
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">別の場所へのリストア</block>
   <block id="ef18d76ed6c710e78abb28c0e09b3e30" category="list-text">vVol サポート</block>
-  <block id="2cc658d562a11cd1528c2219f2d25da7" category="list-text">NVMeサポート</block>
   <block id="98dc7ecfe4c87955d5fb8b98b895eac7" category="list-text">メール統合</block>
-  <block id="7c007efb4505aa1063c750565e9e0eac" category="list-text">編集ポリシー</block>
-  <block id="2af86af91c3987a4d2353d4ec7912d76" category="list-text">保護グループを編集する</block>
   <block id="eaaed5c467c733cb37141573cd1396cf" category="doc">Microsoft SQL Server ワークロードに対するNetApp Backup and Recoveryの既知の制限</block>
   <block id="84c88b39fd4f46203da512886dfca56b" category="section-title">クローンライフサイクルのサポート</block>
   <block id="3c068270aa0287f7c64a3c9c3a4f89a7" category="list-text">オブジェクト ストレージからのクローン作成はサポートされていません。</block>
@@ -877,8 +872,6 @@
   <block id="9772979b1b90e72fc3981d222d55243a" category="paragraph">Hyper-V ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、Hyper-V ワークロードをオンプレミスの Hyper-V ホストに復元できます。</block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。</block>
-  <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">以前のNetApp Backup and RecoveryUIに切り替える</block>
-  <block id="9847581c7ebe97c62f71ab1d90ed1696" category="admonition">NetApp Backup and Recovery UIのバージョンを切り替えるには、<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block> 。</block>
   <block id="124a0ee1a6efcb80b27fc999fe308e62" category="paragraph">NetApp Backup and Recoveryを使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。</block>
   <block id="e853aa4eb98908dd4b95a8cc80d9972f" category="list-text"><block ref="e853aa4eb98908dd4b95a8cc80d9972f" category="inline-link-macro-rx"></block></block>
   <block id="17eed7efdf891efe01a3f9078fc5227d" category="inline-link-macro">Hyper-V ワークロードの保護グループの作成と管理</block>
@@ -1573,7 +1566,6 @@
   <block id="812f9cbafb4aa2378e7470b20baa1fef" category="list-text">必要に応じて、「*検索*」を選択し、検索条件に基づいてリソースを検索します。</block>
   <block id="aa49cc3a36d2c16ec191533800daa634" category="list-text">保護するリソースがリストに含まれている場合は、[次へ] を選択します。</block>
   <block id="4d3ca3588667d04ddbd4f318cdd7677e" category="inline-link-macro">保護ポリシーを追加する</block>
-  <block id="2769be0838f5e6f63e01200eeeec1910" category="list-text">必要に応じて、「*ポリシー*」領域で、アプリケーションを保護するための既存の保護ポリシーを選択するか、新しいポリシーを作成します。ポリシーを選択しない場合、アプリケーションは保護ポリシーなしで作成されます。あなたはできる<block ref="99c823f28a98717f81cda4eb0c448db5" category="inline-link-macro-rx"></block>後で。</block>
   <block id="4049c9e3b9c424f5991c5f917ad92c40" category="inline-link-macro">実行フックテンプレート</block>
   <block id="5e97a71c79e2f24deabf91daa3d20cd1" category="list-text">*プレスクリプトとポストスクリプト*領域で、バックアップ操作の前または後に実行するプレスクリプトまたはポストスクリプトの実行フックを有効にして構成します。プレスクリプトまたはポストスクリプトを有効にするには、少なくとも1つ作成しておく必要があります。<block ref="3059f3d40a47ddab4d322199b8601d95" category="inline-link-macro-rx"></block> 。</block>
   <block id="9f77aac915c7dddb04d022bff72e881d" category="paragraph">アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetApp Consoleは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。</block>
@@ -5354,7 +5346,6 @@
   <block id="4068d5ec1a7b4b267d864b4ad09e26cf" category="list-text">修飾子を変更するには、*リソース変換*オプションを有効にしてください。</block>
   <block id="58277b3a38eb38eb305ae4faa19d846d" category="list-text">よく使う修飾子設定をすばやく適用するには、*テンプレート*リストからテンプレートを選択してください。このリストには、一般的なシナリオに対応した定義済みテンプレートと、ユーザーが作成したカスタムテンプレートが含まれています。</block>
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="inline-link-macro">設定</block>
-  <block id="632317b2bb237c1d7d24b46218476569" category="admonition">グローバル<block ref="676a0eaa3ab155e3d0da7696107f049f" category="inline-link-macro-rx"></block>エリアでリソース変換テンプレートを作成します。</block>
   <block id="4f92a8032a0def18d5e7cfbe7fc6b465" category="list-text">変更するリソースを指定するには、リソースグループ、バージョン、種類、および名前を入力してください。</block>
   <block id="0be96bf87a216fa4424d9b22e1624c4c" category="list-text">*操作*リストから操作を選択して、リソースに対して実行する操作を指定します。</block>
   <block id="526aad7c01abce8bd37b72aea1adf9a2" category="list-text">変更する特定のキーのJSONパスを入力します。</block>
@@ -5558,4 +5549,6 @@
   <block id="54f8a7826ae5101b3374158dadb22dbe" category="list-text">*バックアップとリカバリからTrident Protectをアップグレード*：KubernetesクラスタでTrident Protect 26.05以降が実行されている場合、バックアップとリカバリから直接Trident Protectをアップグレードできるようになりました。</block>
   <block id="482d8dda04ea30da4fa480c529cb09b0" category="list-text">*Trident Protect 26.05.1*: このリリースには Trident Protect 26.05.1 が含まれます。</block>
   <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*VMベースのアプリケーションのインプレース復元*：VMベースのアプリケーションを元の名前空間と元のクラスタに復元できるようになりました。</block>
+  <block id="b53801e3c4b30277c5f2975ffed7720c" category="list-text">オプションで、*ポリシー*領域で、既存の保護ポリシーを選択してアプリケーションを保護するか、新しいポリシーを作成します。ポリシーを選択しない場合、アプリケーションは保護ポリシーなしで作成されます。後で<block ref="ee6916d2984f9ce63f3c3b8b1b4f14f9" category="inline-link-macro-rx"></block>できます。</block>
+  <block id="fefcfa5dbc8a28e96b9d098440cd7d4a" category="admonition">グローバル<block ref="3ce10431a19a41e956e68fb70b49b83e" category="inline-link-macro-rx"></block>エリアでリソース変換テンプレートを作成します。</block>
 </blocks>
