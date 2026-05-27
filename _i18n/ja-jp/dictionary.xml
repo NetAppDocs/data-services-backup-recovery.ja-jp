@@ -5551,4 +5551,5 @@
   <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*VMベースのアプリケーションのインプレース復元*：VMベースのアプリケーションを元の名前空間と元のクラスタに復元できるようになりました。</block>
   <block id="b53801e3c4b30277c5f2975ffed7720c" category="list-text">オプションで、*ポリシー*領域で、既存の保護ポリシーを選択してアプリケーションを保護するか、新しいポリシーを作成します。ポリシーを選択しない場合、アプリケーションは保護ポリシーなしで作成されます。後で<block ref="ee6916d2984f9ce63f3c3b8b1b4f14f9" category="inline-link-macro-rx"></block>できます。</block>
   <block id="fefcfa5dbc8a28e96b9d098440cd7d4a" category="admonition">グローバル<block ref="3ce10431a19a41e956e68fb70b49b83e" category="inline-link-macro-rx"></block>エリアでリソース変換テンプレートを作成します。</block>
+  <block id="40ccff053be8d0d5d48c09ba075b58e5" category="admonition">SnapLock対応ボリュームを復元する場合、復元されたボリュームは、デスティネーションストレージがWORM対応の場合にのみSnapLock保護を保持します。WORM対応でないデスティネーションに復元する場合、復元されたボリュームからSnapLockステータスが削除されます。</block>
 </blocks>
