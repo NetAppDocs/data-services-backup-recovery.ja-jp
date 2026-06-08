@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: reference-audit-actions.html 
+keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
+summary: NetApp Console監査でサポートされるバックアップおよびリカバリ処理のリファレンス。 
+---
+= 監査済みのNetApp Backup and Recovery操作
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console の監査ページでは、監査機能の一環として、ユーザーが Backup and Recovery で実行した以下の操作が記録されます。監査イベントの表示方法とフィルタリング方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]Console のドキュメントを参照してください。
+
+監査対象となる各アクションについて、NetApp Consoleはサービス名、エージェント、リソース、ユーザー、およびアクションのステータスを記録します。
+
+.監査済みのNetApp Backup and Recovery操作
+* バックアップからボリュームまたはファイルを復元する
+* ボリュームをスナップショットに戻す
+* ファイル エクスプローラーを起動
+* スナップショットからファイルを復元する
+* クラウド クレデンシャルを登録
+* クラウド クレデンシャルを更新
+* クラウド クレデンシャルを削除
+* オブジェクトストレージバケットを作成する
+* オブジェクトストレージバケットを変更する
+* バックアップ移行の検証
+* ONTAPシステム間でバックアップを移行する
+* ソース保護を初期化する
+* 保護のためのピアクラスタ
+* ターゲット保護を初期化します
+* ボリュームレプリケーションを開始します
+* Cyber Vaultシステムを作成する
+* Cyber Vault システムを削除する
+* Cyber Vaultアクセスを有効にする
+* Cyber Vaultへのアクセスを無効にする
+* アドホック Snapshot を作成する
+* ボリュームと関係を検出
+* アプリケーション構成を更新する
+* ボリュームのパノラマ保護を有効にする
+* ボリュームのパノラマ保護を変更する
+* システムのオブジェクトストレージを変更する
+* アドホッククラウドバックアップを作成
+* システムの保護を初期化します
+* ボリュームのパノラマ保護を有効にする
+* ボリュームのパノラマ保護を変更する
+* ボリュームバックアップメタデータの更新（スケジュール済み）
+* ボリュームのバックアップを有効にする
+* ボリュームのパノラマ保護を変更する
+* ANFスナップショットポリシーを削除する
+* システムでパノラマ保護を有効にする
+* システムのパノラマ保護を変更する
+
+
+
+
+== 詳細情報
+
+* https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]
+

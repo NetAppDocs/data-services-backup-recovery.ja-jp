@@ -1147,12 +1147,7 @@
   <block id="f23e3ed54ae928c06add368fe4fe5a66" category="section-title">Kubernetes クラスターを削除する</block>
   <block id="884dae5f1c15db330f66f8e2866510c1" category="list-text">*クラスターの削除*を選択します。</block>
   <block id="19ce5318fcc2968a80a3d2213a7120af" category="list-text">確認ダイアログボックスの情報を確認し、「削除」を選択します。</block>
-  <block id="6e464deab83d8eb0500f0c27ef47c58b" category="doc">NetApp Backup and Recoveryの概要によるリソース管理</block>
-  <block id="1391797a0b30576f1f116202d3da3a46" category="paragraph">リソースの管理に関連する次のタスクを実行できます。</block>
-  <block id="ccc9658d0f980f24634bf5ef6aaceb3d" category="inline-link-macro">在庫管理</block>
-  <block id="9517c8b5ba697f22d1982a7a6950dbce" category="list-text"><block ref="84e97f55697cdae80cb35f3f0e373346" category="inline-link-macro-rx"></block>。</block>
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="inline-link-macro">スナップショットを管理する</block>
-  <block id="ccfc47004ad0ab207533113156514c4a" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block>。</block>
   <block id="5cb859488fba0d173df5045c81e5ee2f" category="doc">NetApp Backup and Recoveryで Microsoft SQL Server スナップショットを管理する</block>
   <block id="56baceb052a5efa89c30115707384440" category="paragraph">Microsoft SQL Server スナップショットは、NetApp Backup and Recoveryから削除することで管理できます。</block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">スナップショットを削除する</block>
@@ -1587,31 +1582,16 @@
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">設定を構成する</block>
   <block id="e1fb45ea82cb12d1d1dbdee887e2850a" category="summary">NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。</block>
   <block id="c75d148fe813178c4a53664110efe289" category="paragraph">NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。アプリケーションを復元するには、少なくとも 1 つの復元ポイントが必要です。復元ポイントは、ローカル スナップショットまたはオブジェクト ストアへのバックアップ（あるいはその両方）で構成されます。アプリケーションは、ローカル アーカイブ、セカンダリ アーカイブ、またはオブジェクト ストア アーカイブを使用して復元できます。</block>
-  <block id="b2c71ce0eb7f82adff3580d86f20d76d" category="list-text">アプリケーションのリストで、復元するアプリケーションを選択し、関連する [アクション] メニューを選択します。</block>
-  <block id="553b5cd5dac97c088cf126dd86d0a9fb" category="list-text">*表示と復元*を選択します。</block>
   <block id="5a870c22146ba310e89eaf52f510bdc8" category="paragraph">復元ポイントのリストが表示されます。</block>
-  <block id="c42e645eedd858c3f07be6b12b14117e" category="list-text">使用する復元ポイントの「アクション」メニューを開き、「復元」を選択します。</block>
-  <block id="de62775a71fc2bf7a13d7530ae24a7ed" category="floating-title">一般設定</block>
-  <block id="0b829a26d220bb63e030d1042081a086" category="list-text">復元元のソース (ローカルまたはオブジェクト ストア) を選択します。</block>
   <block id="d7560bb34437cec51e7e4319ee098f83" category="list-text">*クラスター* リストから宛先クラスターを選択します。</block>
-  <block id="f01f0a18d4bc038c4ed2929f4450ed7d" category="list-text">復元先の名前空間を選択します。</block>
-  <block id="75e31fe436b541e95871c54827070e6e" category="paragraph">元の名前空間に復元することも、新しい名前空間に復元することもできます。</block>
-  <block id="0ea90fe06c37ce54f4695cefd1980f66" category="floating-title">リソースの選択</block>
   <block id="74f41c06ce4ca2bd3dc7e2b83148072b" category="list-text">アプリケーションに関連付けられているすべてのリソースを復元するか、フィルターを使用して復元する特定のリソースを選択するかを選択します。</block>
-  <block id="6ead82e0fb87f1d2639b05d1f514c487" category="open-title">すべてのリソースを復元する</block>
   <block id="7247b0618202329b2ab0af353626c9ab" category="list-text">*すべてのリソースを復元*を選択します。</block>
-  <block id="a4929640d434e06c32c659a99d0b8163" category="open-title">特定のリソースを復元する</block>
   <block id="d236d20849d5bad669774260f1bf4c47" category="list-text">*選択的リソース*を選択します。</block>
   <block id="f6fab4c7c8e2fbb724cb732a6f96f2c2" category="list-text">リソース フィルターの動作を選択します。  *含める*を選択すると、選択したリソースが復元されます。  *除外*を選択した場合、選択したリソースは復元されません。</block>
   <block id="edd2fb2dbd2bec448d4fb4f7596eb159" category="list-text">リソースを選択するためのフィルターを定義するルールを追加するには、[*ルールの追加*] を選択します。リソースをフィルタリングするには、少なくとも 1 つのルールが必要です。</block>
   <block id="97eef9e67660a5a91cc028dff60a130f" category="paragraph">各ルールは、リソースの名前空間、ラベル、グループ、バージョン、種類などの基準でフィルタリングできます。</block>
   <block id="7d2b12877c8289521dfc37e1a4ce6681" category="list-text">各ルールを保存するには、[*保存*] を選択します。</block>
-  <block id="f5c8e073cfadb44db550fdd37a2fcc8e" category="list-text">必要なルールをすべて追加したら、「*検索*」を選択して、フィルター条件に一致するバックアップ アーカイブ内の利用可能なリソースを表示します。</block>
   <block id="a9f292136fbf924f6d8d675318db6235" category="admonition">表示されるリソースは、クラスター上に現在存在するリソースです。</block>
-  <block id="b5c9051aafb85384e02d47693c3be179" category="list-text">結果に満足したら、[次へ] を選択します。</block>
-  <block id="8d7c9cf5b15032c441cad2d538d90368" category="floating-title">宛先設定</block>
-  <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">デフォルトのストレージ クラスに復元するか、別のストレージ クラスに復元するかを選択します。</block>
-  <block id="12c3c958b266fff57134abb1c9649419" category="list-text">オプションで、別のストレージ クラスに復元することを選択した場合は、各ソース ストレージ クラスに一致する宛先ストレージ クラスを選択します。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">バックアップの削除</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">NetApp Backup and Recoveryで VMware ワークロードをバックアップする</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">データが確実に保護されるように、オンプレミスのONTAPシステムから VMware VM とデータストアを Amazon Web Services、 Azure NetApp Files、またはStorageGRIDにバックアップします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。</block>
@@ -1852,13 +1832,7 @@
   <block id="4c62e57751652d4b577a25756cfdab04" category="list-text">変更を適用するには、コンピューターを再起動してください。</block>
   <block id="3a3942a17def38d9bd0471e0ef50fc54" category="paragraph-title">UAC リモート制限を無効にする PowerShell 7 コマンドの例:</block>
   <block id="5af774cd9735f1047d099584c2782535" category="paragraph">値が「1」に設定されているこの例は、UAC リモート制限が無効になっていることを示します。</block>
-  <block id="22167e870f6d93e553b43fc2deb69861" category="paragraph">運用環境、 NetApp Consoleエージェント、およびNetApp Consoleアカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。</block>
-  <block id="a46da293e3099636eab1ab8a656acc6a" category="section-title">ONTAP 9.8以降の前提条件</block>
-  <block id="e3f0159851c2ac10a4f0d46840e5a66e" category="paragraph">オンプレミスのONTAPインスタンスでONTAP One ライセンスを有効にする必要があります。</block>
-  <block id="05e7a5201131047cf35d26a62e1a0a4d" category="section-title">オブジェクトストレージへのバックアップの前提条件</block>
-  <block id="439fbbae0adc9211b89c4a70f01d1a33" category="paragraph">オブジェクト ストレージをバックアップ ターゲットとして使用するには、AWS S3、Microsoft Azure Blob、 StorageGRID、またはONTAPのアカウントと、適切なアクセス権限が設定されている必要があります。</block>
   <block id="7126662a353f79c46a7ccefe46dc4c0a" category="inline-link-macro">ONTAPボリュームデータを保護する</block>
-  <block id="1d638e05920fe33426fac4dc6285a639" category="list-text"><block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block></block>
   <block id="ef53d2e08e79af10a2e451632255842d" category="section-title">Microsoft SQL Server ワークロードを保護するための要件</block>
   <block id="0acd3a555d2cc1f83c65dc743cf15408" category="paragraph">NetApp Backup and Recovery for Microsoft SQL Server ワークロードを使用するには、次のホスト システム、スペース、およびサイズの前提条件が必要です。</block>
   <block id="7d74f3b92b19da5e606d737d339a9679" category="cell">項目</block>
@@ -1880,13 +1854,10 @@
   <block id="fdd736f6cacce38b5102696f59ea433a" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="c2340f294ea0edd3eaa143337cddb591" category="inline-link-rx"></block> 。</block>
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">VMware ワークロードを保護するための要件</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">VMware ワークロードを検出して保護するには、特定の要件が必要です。</block>
-  <block id="1269e07e6a9265be5844ea32a0494a7f" category="paragraph">*ソフトウェアサポート*</block>
-  <block id="dc735211c86b33a749d2c86bb8b39e80" category="paragraph">*VMware ワークロードを保護するための接続とポートの要件*</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">ポートのタイプ</block>
   <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">事前設定されたポート</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi Serverのポート</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">ストレージ クラスタまたはStorage VMのポート</block>
-  <block id="6def2be93b1fef441b3ca8a2641cc837" category="paragraph">*VMware ワークロードを保護するためのロールベース アクセス制御 (RBAC) の要件*</block>
   <block id="82ede2f1cf5c1f154c5f0ccbd08838b2" category="section-title">KVMワークロードを保護するための要件</block>
   <block id="64bef292bab71a21d8b1fdfdc5e220aa" category="paragraph">KVM 仮想マシンを検出して保護するには、特定の要件が必要です。</block>
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">カーネルバージョン 5.14.0-503.22.1.el9_5.x86_64 (長期) 以降を実行している最新の Linux ディストリビューション</block>
@@ -1908,31 +1879,7 @@
   <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">プライマリONTAPシステム（ONTAP 9.14.1 以降）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAPのドキュメント</block>
   <block id="0a2b6c395fc07f332dac7e7046c239c4" category="list-text">CIFS 共有を使用して仮想マシン データを保存する Hyper-V 展開の場合、 ONTAPシステムで継続的な可用性の共有プロパティが有効になっていることを確認します。参照<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>手順についてはこちらをご覧ください。</block>
-  <block id="0811b88847f846fb265d219dc4238de2" category="section-title">NetApp Console</block>
-  <block id="155fcb205d15e054986b2632ea1cd854" category="paragraph">NetApp Consoleが次の要件を満たしていることを確認します。</block>
-  <block id="5cc1bd5a248543034a550e50bf5aa001" category="inline-link-macro">NetApp Backup and Recovery機能へのロールベースのアクセス</block>
-  <block id="c850782e660a82e43396b6f00fc156a9" category="list-text">コンソール ユーザーには、Microsoft SQL Server および Kubernetes ワークロードで操作を実行するために必要なロールと権限が必要です。リソースを検出するには、 NetApp Backup and Recoveryのスーパー管理者のロールが必要です。見る<block ref="3ea538d610f9c38c4e9027f82ccc13f0" category="inline-link-macro-rx"></block>NetApp Backup and Recoveryで操作を実行するために必要なロールと権限の詳細については、 を参照してください。</block>
-  <block id="6119abf359d82ff3e20728a6c3d8f6ca" category="list-text">オンプレミスのONTAPクラスターまたはCloud Volumes ONTAPに接続するアクティブなコンソール エージェントが少なくとも 1 つあるコンソール組織。</block>
-  <block id="f3ac1f83c98111c361c8cb45aee2f272" category="list-text">NetAppオンプレミスONTAPまたはCloud Volumes ONTAPクラスターを備えた少なくとも 1 つのコンソール システム。</block>
-  <block id="e73e7287ad2b8e179dae88b6eebada6c" category="list-text">コンソールエージェント</block>
-  <block id="04f679e072129c7e87e077dc95e5e73e" category="inline-link">コンソールエージェントの設定方法を学ぶ</block>
-  <block id="67a50452f70d09a4796d712935acce40" category="inline-link">標準のNetApp Consoleの要件</block>
-  <block id="9cf0324010f5d39596c98416e19929c6" category="paragraph">参照<block ref="f26f3bdec25207bfa60c6d1f2da2fd25" category="inline-link-rx"></block>そして<block ref="0f2cc189841820bbf400fd90cf6cb8ee" category="inline-link-rx"></block>。</block>
-  <block id="3b554f93911a798d0765c792e57bafca" category="list-text">プレビュー バージョンでは、コンソール エージェントに Ubuntu 22.04 LTS オペレーティング システムが必要です。</block>
-  <block id="3398d1a4d0a2aea999eac34931a1d998" category="section-title">NetApp Consoleのセットアップ</block>
-  <block id="16d9ecdb498025063dae8f97b5c73400" category="paragraph">次のステップは、コンソールとNetApp Backup and Recovery をセットアップすることです。</block>
-  <block id="10d5c90fc807b2c9968a61c35be570c9" category="paragraph">レビュー<block ref="0f2cc189841820bbf400fd90cf6cb8ee" category="inline-link-rx"></block>。</block>
-  <block id="f3aee30a3a487c746572616e3f53dc9d" category="section-title">コンソールエージェントを作成する</block>
-  <block id="62cc32537e8fdfb6d3282291f4042bb4" category="paragraph">バックアップとリカバリを試すには、 NetApp製品チームに問い合わせてください。その後、コンソール エージェントを使用すると、サービスに適切な機能が含まれるようになります。</block>
-  <block id="039a0f51fabaf695c33b745ebbd147bf" category="inline-link">コンソールエージェントを作成する方法</block>
-  <block id="80cb602f4ec24fce408434bc7c65f694" category="paragraph">サービスを使用する前にNetApp Consoleでコンソールエージェントを作成するには、コンソールのドキュメントを参照してください。<block ref="a747c66fa3a9e5a767b0d1460e988f0c" category="inline-link-rx"></block> 。</block>
-  <block id="92f0c45157f4a06638de9514d90f06ae" category="paragraph-title">コンソールエージェントをインストールする場所</block>
-  <block id="4ad96aae78a2caccba56b457927512be" category="paragraph">復元操作を完了するには、コンソール エージェントを次の場所にインストールできます。</block>
-  <block id="4a1a570f7927f6e76005a28d1f766677" category="list-text">Amazon S3 の場合、コンソールエージェントをオンプレミスにデプロイできます。</block>
-  <block id="a10afc87a656ad40aea2fd4081fa15dd" category="list-text">Azure Blob の場合、コンソール エージェントをオンプレミスでデプロイできます。</block>
-  <block id="299fc3aa5fad549c858e325b2098ebfc" category="list-text">StorageGRIDの場合、インターネット アクセスの有無にかかわらず、コンソール エージェントを社内に展開する必要があります。</block>
   <block id="f6e9a28cc6109da66451b7ed0caaea35" category="list-text">ONTAP S3の場合、コンソールエージェントは、オンプレミス（インターネットアクセスの有無にかかわらず）またはクラウドプロバイダー環境に導入できます。</block>
-  <block id="f11d659b2497c3836db933d95773f939" category="admonition">「オンプレミスのONTAPシステム」への参照には、 FASとAFFシステムが含まれます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律上の表示</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法的通知から、著作権情報、商標、特許などを確認できます。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
@@ -3894,8 +3841,6 @@
   <block id="e7a5ac87e73475a462d4dc0b02fe041a" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベース、インスタンスの管理に役立ちます。インベントリの保護設定を表示、変更、または削除できます。</block>
   <block id="cfdfd7a1b72e8e723d4b5a0b7e6afbf5" category="paragraph">不要になったアプリケーションを削除します。  NetApp Backup and Recovery は保護を停止し、削除されたアプリケーションのバックアップとスナップショットをすべて削除します。</block>
   <block id="f211d824587f775c16c5bded7ee65614" category="paragraph">Kubernetes クラスターの保護を停止するには、保護を無効にして関連付けられているアプリケーションを削除し、 NetApp Backup and Recoveryからクラスターを削除します。  NetApp Backup and Recovery、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。</block>
-  <block id="2bba4a20b069f20b81f5d7e00bb55ee1" category="summary">NetApp Backup and Recoveryのリソースを管理してデータを保護します。</block>
-  <block id="5a32edb5240e680dd91847bce7538e99" category="paragraph">NetApp Backup and Recoveryのリソースを管理してデータを保護します。バックアップ、データベース、インスタンス、アプリケーション ホスト、およびシステムを制御します。リソース保護設定を表示、編集、または削除します。</block>
   <block id="76be0aa5e848bc95ef63cb71a62a4a8c" category="admonition">その行の *場所* 列のローカル スナップショット アイコンが青色で表示されていることを確認します。</block>
   <block id="c9ba59160e2a933914b5eb21420c64e0" category="summary">NetApp Backup and Recoveryを使用すると、ローカル スナップショット、レプリケーション、および開始したバックアップ ジョブを監視します。</block>
   <block id="e10e8c5d47314e650f29f8a9e66e579f" category="paragraph">NetApp Backup and Recoveryを使用すると、ローカル スナップショット、レプリケーション、および開始したバックアップ ジョブを監視します。開始した復元ジョブを追跡します。完了したジョブ、進行中のジョブ、失敗したジョブを表示して、問題の診断に役立ちます。  NetApp Console通知センターで電子メール通知を有効にすると、ログインしていないときでもシステム アクティビティに関する最新情報を入手できます。コンソール タイムラインを使用して、UI または API から開始されたすべてのアクションの詳細を表示します。</block>
@@ -4246,7 +4191,6 @@
   <block id="31c25778a66dd9ff2087fb25f9f003e3" category="list-text">AWS の場合、AWS _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージにバックアップを階層化できます。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
   <block id="cf79bdcd3a75ca2aaf153bfbee77f91f" category="list-text">Azure の場合、古いバックアップを _Azure Archive_ ストレージに階層化できます。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
   <block id="55746a30fb9b4c5182484dec9b3600d3" category="list-text">ローカルのオンプレミスONTAPシステムから、ローカルのオンプレミスONTAPシステムまたは S3 オブジェクト ストレージ用に構成されたCloud Volumes ONTAPシステムにデータをバックアップできます。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block>。</block>
-  <block id="a99979a95e2c9dcb0b5768f80898dd11" category="cell">Amazon S3 Azure Blob Google Cloud Storage NetApp StorageGRID ONTAP S3</block>
   <block id="5cbc97866d11e9b3160156a597fbd5bf" category="list-text">AWSでは、コンソールで<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 バケット上。</block>
   <block id="108d25df82fe933520bf967ad1d14b85" category="list-text">Azure では、コンソールは、Blob コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> デフォルトです。</block>
   <block id="fc2c90af4df4de3a15611b7cf431a683" category="list-text">GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。</block>
@@ -4890,7 +4834,6 @@
   <block id="5508505cbdbe4c572010783025a1150d" category="list-text">Red Hat Enterprise Linux 8</block>
   <block id="79a35fb717e5fb1f7054fc94c597e2d2" category="list-text">Red Hat Enterprise Linux 9</block>
   <block id="014ba561f219ba053a41bf54f3ce33b4" category="cell">オブジェクトストレージ（バックアップターゲット）</block>
-  <block id="3e0bb972fc7b38e6cd0262fb76265e80" category="paragraph">*Hyper-V Windows Serverホストのソフトウェア要件*</block>
   <block id="bbc2d665b02dc421c5c756db4b973610" category="cell">Microsoft Hyper-V</block>
   <block id="49c1cfb8defeea7149e31b4d5c722668" category="cell">2019、2022、2025年版</block>
   <block id="d5fda164bdd74f6422bd307aaf09a590" category="cell">ASP.NET Core ランタイム</block>
@@ -4901,8 +4844,6 @@
   <block id="4698b69bed4ee276f187d88f25644b08" category="cell">Windows ファイアウォールの設定で、以下のポートに対して双方向 HTTPS トラフィックが許可されていることを確認してください</block>
   <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
   <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
-  <block id="1fb4fe8a0be6159013de38bbdffbcab3" category="paragraph">*Hyper-Vホストのハードウェア要件*</block>
-  <block id="7f32d94ab622f0820b5ea4312baa0d74" category="paragraph">*NetApp ONTAP 構成要件*</block>
   <block id="86a1075e6640849bd364878900fd5412" category="paragraph">標準モードでオンプレミスでバックアップとリカバリを使用している場合（クラウドアカウントが関与しない場合、たとえばNetApp StorageGridをバックアップ先として使用する場合）、以下の手順に従ってコンソールエージェントを交換し、そこに保存されていた構成データを復元することもできます。</block>
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">*ls* コマンドを実行して、「catalogdb1」フォルダが作成され、そのフォルダ内にサブフォルダ<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>、および<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>が含まれていることを確認してください。</block>
   <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026年3月16日</block>
@@ -5370,15 +5311,12 @@
   <block id="ab186862b28de3aad826b26d80e3eb96" category="list-text">*クローン サポート*：プライマリ ストレージとセカンダリ ストレージから仮想マシン スナップショットのクローンを作成できるようになりました。</block>
   <block id="87e187714ad3406b822e2c0bf109240b" category="summary">Hyper-V VMのスナップショットから、1つまたは複数のファイルやフォルダーをWindowsゲストVMに復元できます。</block>
   <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">Hyper-V VMバックアップからファイルとフォルダをリストアする</block>
-  <block id="640c4dc490a389b9c6997266e8a71a44" category="paragraph">プライマリ ストレージ上のHyper-V仮想マシンのバックアップから、ファイルとフォルダをWindowsゲスト仮想マシンにリストアします。</block>
   <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">スナップショットから仮想ディスクをマウントし、そこからファイルとフォルダを元の（ソース）Windows VMに復元します。</block>
   <block id="d4bb35603ef1e4c4f849336d35413c6f" category="paragraph">ファイルとフォルダーを復元する前に、NetApp Backup and Recoveryでソース VM の資格情報を作成する必要があります。この資格情報は、復元プロセス中に VM との認証を行うために使用されます。</block>
   <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">仮想ディスクをマウントしてファイルとフォルダの復元セッションを開くと、そのセッションは48時間アクティブな状態を維持します。</block>
   <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">復元パフォーマンスは、復元するファイルまたはフォルダのサイズと数の両方に依存します。データセットのサイズが同じ場合、多数の小さなファイルを復元する方が、少数の大きなファイルを復元するよりも一般的に時間がかかります。</block>
   <block id="0c1d8f103b8f05dc9e681f213a4140ed" category="paragraph">ファイルやフォルダを復元する際は、以下の点に注意してください：</block>
   <block id="a705938172beea0cbb274379316dd157" category="list-text">現時点では、LinuxゲストVMにファイルやフォルダを復元することはできません。</block>
-  <block id="93ef85ccd89fa47a0fcea649f6297cef" category="list-text">二次ストレージまたはオブジェクトストレージに保存されたバックアップからのファイルやフォルダの復元はサポートされていません。</block>
-  <block id="1c4499f1d98b1704724086469c122c63" category="list-text">SANストレージ上に存在するVMには、ファイルやフォルダをリストアすることはできません。</block>
   <block id="dcf405acd6661cbfd046dd011bf0a242" category="list-text">予約済みパーティションを表示または参照すると、エラーが発生する可能性があります。</block>
   <block id="d2c522c65144e52bf2492965958bd437" category="list-text">復元操作中、ゲストファイルの隠し属性、システム属性、および暗号化属性は復元されたファイルには保持されません。</block>
   <block id="c1eecde3ab58a34da7f6aa03449b4f8c" category="list-text">システムファイルや隠しファイルを表示・復元したり、暗号化されたファイルを表示したりできます。</block>
@@ -5388,7 +5326,6 @@
   <block id="d50199c3c85a7557227fb519ea120c77" category="list-text">*ファイルとフォルダ*を選択します。</block>
   <block id="87ac0b57021ca53dfe6ba31ad849c862" category="list-text">*Restore from snapshots*ページで、次の操作を実行します：</block>
   <block id="10ea713b9cd4dda55a5d80fdf7a9f540" category="list-text">必要に応じて、作成時間でSnapshotのリストを絞り込む期間を選択します。</block>
-  <block id="438a6c1066c8a98f8894daf9e98f7ab5" category="list-text">プライマリ ストレージ上の復元元となるスナップショットを選択し、*次へ*をクリックします。</block>
   <block id="3edc266f3a91667d89f538f69793db00" category="list-text">オプションとして、*ゲスト仮想マシンの資格情報*セクションで、ソース仮想ディスクと宛先VMの資格情報をまだ保存していない場合は、*資格情報の追加*を選択し、Windows資格情報を入力して、*追加*を選択します。</block>
   <block id="25e60e91201040d5c93090ccf9df68c8" category="paragraph">NetApp Backup and Recoveryは、仮想ディスクを元のVMに接続し、隠しファイルや隠しフォルダを含むすべてのファイルとフォルダを表示します。システムで予約済みのパーティションを含む、すべてのパーティションにドライブ文字を割り当てます。</block>
   <block id="bc3ab34e28906290dc143fb28934f931" category="list-text">_復元するファイルまたはフォルダーを選択してください_ページで、次の操作を行います：</block>
@@ -5402,7 +5339,6 @@
   <block id="da51d3c21777acf76b87932de6839d64" category="list-text">オプションとして、セッションを使用してファイルとフォルダーをゲストVMに復元するには、セッションの[アクション]メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*ファイルとフォルダーを復元*を選択します。</block>
   <block id="57c9526981addf2ea70c6ad409673cb5" category="list-text">必要に応じて、セッションを削除するには、セッションの [アクション] メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*削除*を選択します。</block>
   <block id="970e7dbe358429eacf37bb0e37943138" category="list-text">オブジェクト ストレージのバックアップからリストアする（元の場所にのみ）</block>
-  <block id="6d1557ca399dc5f147a2d09028ab2c97" category="admonition">SANストレージ上に存在するVMについては、オブジェクト ストア バックアップからのリストアはサポートされていません。</block>
   <block id="4b59b9c80f0f0e40294e53eb75b4e004" category="list-text">元の場所に復元します（プライマリストレージ、セカンダリストレージ、オブジェクトストレージから）</block>
   <block id="a6f964fecafa0484fc07f1b47496f82c" category="list-text">別の場所に復元する（プライマリ ストレージとセカンダリ ストレージの両方から）</block>
   <block id="bff6f5877ada2718589866425ae83e38" category="doc">NetApp Backup and RecoveryでのHyper-Vバックアップ ポリシーの作成と管理</block>
@@ -5553,4 +5489,130 @@
   <block id="ae560942cdf67d205fbeeda3a63a14a3" category="admonition">古い ONTAP クラスタから新しい ONTAP クラスタへのボリュームのクローン作成、またはカスケードアーキテクチャ設定では、「Vault」タイプの SnapMirror ポリシーを使用しないでください。Vault ポリシーは、転送中にスナップショットのバージョン UUID を変更します。スナップショットのバージョン UUID は、ソースとデスティネーションの間に共通のスナップショットが存在するかどうかを判断するために使用されます。</block>
   <block id="eccb056c811f6da5d84262d7dd856d5c" category="paragraph">NetApp Backup and Recoveryは、再同期のために選択された各ボリュームが、オブジェクトストアと共通のスナップショットを共有していることを検証します。具体的には、オブジェクトストアに保存されている最新のスナップショットは、新しくクローンされたボリュームのローカルスナップショットにも存在している必要があります。このチェックにより、ボリュームがSnapMirror to Cloud再同期操作の準備ができていることが保証されます。</block>
   <block id="4869420875f3291b832867e066be6b05" category="list-text">ボリュームの適格性を確認します。システムは、ボリュームが再同期の対象であるかどうかを確認します。ボリュームが対象外の場合は、共通Snapshotの条件が確立されていないことを意味します。</block>
+  <block id="6a46064fa3e0cc88fd5d8f1799eb5b66" category="paragraph">*S3互換クラウドストレージのサポート*：NetApp Backup and Recovery for Volumesワークロードが、S3互換のクラウドストレージへのバックアップをサポートするようになりました。</block>
+  <block id="860b17c21dae4758109cd6109bb92be4" category="list-text">*ゲストVMへのファイルとフォルダのリストアの改善*：プライマリストレージまたはセカンダリストレージのSnapshotから、ゲストWindows VMにファイルとフォルダをリストアできるようになりました。この機能は、CIFSおよびSAN VMでサポートされるようになりました。</block>
+  <block id="3e96e50a62c2cc112989ccd5d4d264aa" category="list-text">ディザスタリカバリ（DR）構成でのファイルとフォルダのリストア：フェイルオーバー後、DR用に構成されたStorage VMのボリュームは、既存のSnapMirror関係を解除された状態で保持します。一時的なSnapMirror RST関係を作成するファイルまたはフォルダのリストアは、デスティネーションボリュームにすでに関係が存在するため、ONTAPによってブロックされます。</block>
+  <block id="d98b87c41bd7151a94b3271b45bd340f" category="paragraph">プライマリストレージまたはセカンダリストレージ上のHyper-V VMバックアップから、ファイルとフォルダをWindowsゲストVMにリストアします。</block>
+  <block id="7438f70a76f855b704ba892f9c003542" category="list-text">オブジェクトストレージに保存されたバックアップからのファイルやフォルダの復元はサポートされていません。</block>
+  <block id="7d3d3c20273081b66e3ecec1f0d07f51" category="list-text">復元するプライマリストレージまたはセカンダリストレージ上のスナップショットを選択し、*次へ*を選択します。</block>
+  <block id="3808991f408e2ffd90ae953886ec1e79" category="doc">NetApp Backup and Recoveryの要件</block>
+  <block id="44b68849dd3e2689fb41242f736a140f" category="paragraph">NetApp Backup and Recoveryの使用を開始する前に、NetApp Consoleおよび運用環境が以下の要件を満たしていることを確認してください。</block>
+  <block id="b4d91981598471b84bcf3da4e96f7970" category="section-title">NetApp Console を準備</block>
+  <block id="64450efd5ca18cf6cebe654b9c7c05f3" category="paragraph">NetApp Backup and Recoveryには、NetApp Console経由でアクセスします。Backup and Recovery用にConsoleを準備するには、次の操作を行う必要があります：</block>
+  <block id="37326d6fc2dae8eb70c8e5c6290c961a" category="list-text">Console エージェントを追加する</block>
+  <block id="f7738f6711f0ef1fb3f5a4464e7fcfb4" category="list-text">少なくとも1つのストレージシステムを追加する</block>
+  <block id="5fc19bba732118fb6de20131945d3a1f" category="list-text">Console組織とユーザーロールの設定</block>
+  <block id="be07c7874107215b35f4cb23114fdba4" category="paragraph">この準備を完了するには、NetApp Console で組織管理者またはスーパー管理者ロールが必要です。</block>
+  <block id="166d58641d71e8f7701618924f6e0230" category="inline-link">NetApp Console：統合ストレージ管理</block>
+  <block id="4422b0b5b9637937564bf621f2610c7a" category="paragraph">NetApp Consoleの詳細については、<block ref="26a35b83e5712f1703b96c54f1ac11b8" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="a859e03fa525c25dee858dad62f9aec0" category="section-title">初期NetApp Consoleセットアップを完了する</block>
+  <block id="d1a0bf528dab9557b3add986fac96df8" category="paragraph">まだ完了していない場合は、NetApp Console の初期設定を完了します。</block>
+  <block id="91edb8869565e8b84d0bb89e65038d3a" category="inline-link">NetApp Console（SaaSアプリケーション）の使用を開始するためのワークフロー</block>
+  <block id="19de064230f9802ad2a46adc704c00c1" category="paragraph"><block ref="19de064230f9802ad2a46adc704c00c1" category="inline-link-rx"></block></block>
+  <block id="4cdcdd6cc684e8847f57a8c461306706" category="section-title">Console エージェントをデプロイする</block>
+  <block id="41f59680b33ea7227eb6c7e09010d262" category="paragraph">コンソール エージェントは、ストレージ インフラをネットワークに接続するためにネットワークにインストールする軽量ソフトウェア コンポーネントですNetApp Console。高度なストレージ オーケストレーション、データ サービス、セキュアなクラウド統合を実現します。</block>
+  <block id="413f5c2acfdfdb1a561ffc22afe211b9" category="paragraph"><block ref="4818e913b60896a6e56bad9a383343fa" category="inline-link-rx"></block> <block ref="e0b8910c1bc5f58f6e1bc7ed243fa39c" category="inline-link-rx"></block></block>
+  <block id="737a87ab95be88819eceb25188f58963" category="section-title">ストレージシステムを追加する</block>
+  <block id="12e59e4e00969f08c2cb1af893e9ba7a" category="paragraph">NetApp Backup and Recoveryでワークロードを保護するには、まずONTAPストレージシステムをNetApp Consoleに追加する必要があります。</block>
+  <block id="d1b29fc7b35be872f620d5d931e8766c" category="inline-link">NetApp Console でオンプレミス ONTAP クラスタを検出</block>
+  <block id="7a9a5755110e2914f0ad288a141356cb" category="paragraph"><block ref="7a9a5755110e2914f0ad288a141356cb" category="inline-link-rx"></block></block>
+  <block id="e17c2185b4352c73f48a1a8e84f1a8ed" category="section-title">組織とユーザーロールを設定する</block>
+  <block id="9104b82e5e7be42a60370d0e13b27403" category="paragraph">組織、プロジェクト、ユーザロールについて理解し、ユーザがタスクを実行するために必要な適切な権限を設定します。</block>
+  <block id="692fa8c1472b3f5b389ae8b229a03338" category="inline-link">NetApp Console組織にユーザーを追加</block>
+  <block id="6a66c8d307ddd017849b5680e53c609c" category="paragraph">リソースへのアクセスを制御するための組織やプロジェクトの利用方法については、<block ref="04f37aa952e829e9448a7d043a30911e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph"><block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>を参照して、NetApp Backup and Recoveryで操作を実行するために必要なロールと権限の詳細を確認してください。</block>
+  <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">オブジェクト ストレージへのバックアップの要件</block>
+  <block id="fbb5639a46ec6a30ce9e9021778a91a2" category="paragraph">オブジェクトストレージをバックアップターゲットとして使用するには、AWS S3、Google Cloud Storage、Microsoft Azure Blob、StorageGRID、またはONTAPのアカウントと適切なアクセス権限が設定されている必要があります。</block>
+  <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">ONTAP ボリューム ワークロードを保護するための要件</block>
+  <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用するには、以下のホスト システム、容量、およびサイジングに関する前提条件が必要です。</block>
+  <block id="f17da14a026a5974537cf1303ac53974" category="list-text">ONTAP 9.8以降が必要です。</block>
+  <block id="45b096193f4470968c1063df19d1c253" category="list-text">オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。</block>
+  <block id="9cf387a6f708f4467810768eb8e4d31f" category="list-text">S3互換オブジェクトストレージへのバックアップまたは復元には、ONTAP 9.17.1以降が必要です。</block>
+  <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、<block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">データベース ホスト</block>
+  <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">サポートされているストレージ</block>
+  <block id="e042e676706d93b3b14ce12e4d00a002" category="cell">物理サーバ</block>
+  <block id="0bff41cfbe96737aa6b09f610961f5c9" category="list-text">Fibre Channel経由で提供されるLUN</block>
+  <block id="e490b6a60f5d5f84da2872552117d35a" category="list-text">iSCSI経由で提供されるLUN</block>
+  <block id="86cbd38e0939fb9a14eea3387d05d7b4" category="cell">VMware VM</block>
+  <block id="681eb44a9cbd6da8f7c3f918a64f2c6c" category="list-text">iSCSIイニシエータでゲスト システムに直接接続されたiSCSI LUN</block>
+  <block id="6199cc7348edc37d513caecf899a6870" category="list-text">仮想マシンファイルシステム（VMFS）</block>
+  <block id="1f25f9cc2f9e277c0318faa6969f3552" category="list-text">NFSデータストア</block>
+  <block id="8389b191652a37792de566d96af881d9" category="cell">Hyper-V VM</block>
+  <block id="76a076e542cbd2e8238bb0e9b956194e" category="admonition">パススルーディスクまたはNetAppストレージにプロビジョニングされたVHD/VHDXファイルに保存されているデータベースの保護はサポートされていません。</block>
+  <block id="59f5ce8a3e5f9160e855499a4f229823" category="paragraph-title">VMwareワークロードを保護するためのロールベースアクセス制御（RBAC）の要件</block>
+  <block id="1f3be67622d50eb9ea62feda9571af13" category="list-title">Hyper-V ホストのハードウェア要件</block>
+  <block id="b263d5ca79e3126d53a51eb3fd03ecac" category="list-title">NetApp ONTAP 構成要件</block>
+  <block id="5d5680a7be3d76408ed6363c1640e7fc" category="doc">NetApp Backup and RecoveryでCloud Volumes ONTAPデータをS3互換ストレージにバックアップ</block>
+  <block id="2e7a981f8c415a4fe96294fd71792a0b" category="paragraph">NetApp Backup and Recoveryでいくつかの手順を実行して、Cloud Volumes ONTAPシステムからS3へのボリュームデータのバックアップを開始します。</block>
+  <block id="9336086de56f2232c24135493cbf6bda" category="paragraph">S3互換ストレージへのボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認するために、以下の要件をお読みください。</block>
+  <block id="b7d0815f0ec0cd041cfc786c3cfad8b3" category="list-text">ONTAP バージョン 9.17.1 以降が必要です。</block>
+  <block id="75f4d0076c7eca9a1d297d2060c6cb45" category="list-text">アクティベーションウィザードでは、デフォルトのS3暗号化キーを使用する代わりに、お客様自身が管理するデータ暗号化キーを選択できます。この場合、暗号化管理キーが既に設定されている必要があります<block ref="bfab1fe336406f519c233add80b595e0" category="inline-link-rx"></block>。</block>
+  <block id="9e3bfb50997093a7d84dc23aa0af7c64" category="section-title">サポートされているアクション</block>
+  <block id="9a6bb04c2b277b55faab469f2d04692b" category="paragraph">S3互換ストレージへのバックアップ時にサポートされている操作は以下のとおりです：</block>
+  <block id="1588002f4465aee8a1e35fc95dbebabd" category="list-text">オンプレミス ONTAP から サードパーティの S3 互換オブジェクトストアへの「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびアプリケーション整合性スナップショットのバックアップ</block>
+  <block id="00de0e91b8bfb37d4831f3333b8df9fa" category="list-text">コアデータ保護ワークフロー：バックアップ、リストア、およびバックアップ削除</block>
+  <block id="0a7a61be3bd51e21631c884f7d8de9ef" category="list-text">Wasabi、MinIO、IBM Object Store、Apple Object StoreなどのS3互換プロバイダに対して検証済み</block>
+  <block id="21e1cea657da329388848ff59f3eea5d" category="list-text">NetAppサポート部門は、サードパーティ製のS3互換オブジェクトストアに関するすべてのサポートリクエストを受け付け、優先順位付けを行います。</block>
+  <block id="a368c9277e64abd2f91bd6fdc8cafbda" category="section-title">サポートされていない機能と構成</block>
+  <block id="ad8f08e5de0a588e08fde1c710915292" category="paragraph">S3互換ストレージへのバックアップ時には、以下の機能および構成はサポートされません：</block>
+  <block id="14c4b12c16f639eb6666730b4697ce83" category="list-text">Bring Your Own Bucket（BYOB）はサポートされていません</block>
+  <block id="8aece3bac78e537459c41a699e7accbf" category="list-text">バックアップポリシーでのDataLockの有効化はサポートされていません</block>
+  <block id="ad5d6d9517bd22f4e85d3889ae15dfbc" category="list-text">バックアップポリシーでのアーカイブモードの有効化はサポートされていません</block>
+  <block id="f979e7b6fe15329deb889203ed84ef53" category="list-text">バケットレベルの暗号化オプションはサポートされていません</block>
+  <block id="f24ed73a450b9830eed5bd72f8f99e5d" category="list-text">MetroCluster 構成はサポートされていません</block>
+  <block id="9190a06f227ac08e35f52b77ca071df6" category="list-text">クラウドベースの ONTAP 環境はサポートされていません。オンプレミスの ONTAP のみがサポートされています</block>
+  <block id="b22e25eb401508f6e5d8658dc96e1743" category="section-title">注意事項</block>
+  <block id="fa7023792107a645d43e3fe6b861b948" category="paragraph">S3互換ストレージにバックアップを行う際は、以下の点に注意してください：</block>
+  <block id="0d73a47a2cdaa77e5fe1479284fcc8ba" category="list-text">*パフォーマンスは保証されません*：NetApp製品はS3 APIのレイテンシとIOPSに影響を受けやすいです。サードパーティ製のオブジェクトストアは、同等のパフォーマンスを実現するために、AWS S3と同等のレイテンシとIOPSを提供する必要があります。NetAppは、オブジェクトストアのパフォーマンスに関するトラブルシューティングは行いません。</block>
+  <block id="4ac196401fdad84265362b1b0e047ea0" category="list-text">*データ破損または損失に対する責任の免責*：NetAppは、サードパーティのS3オブジェクトストアの問題によって発生したデータ損失やサービス停止については、一切責任を負いません。</block>
+  <block id="f8e460b636103f574efa0d2b39500fdc" category="list-text">*限定的な機能サポート*：サードパーティの S3 互換ターゲットでサポートされている機能セットは、ネイティブターゲット（AWS S3、Azure Blob、GCP、ONTAP S3、StorageGRID）で使用可能な機能のサブセットです。</block>
+  <block id="9c8180fab30cdf8105c99bb565100576" category="list-text">Cloud Volumes ONTAPシステムがONTAP 9.12.1以降のソフトウェアを実行している場合、そのシステムに権限を提供するIAMロールには、最新の<block ref="7599ab7904564916c5665aaaf7f92943" category="inline-link-rx"></block>からNetApp Backup and Recovery専用の新しいS3互換権限セットを含める必要があります。</block>
+  <block id="13ca93dfb9b89bc63ebd2a7dcdb6b677" category="paragraph">バックアップ用の S3 互換の宛先が *システム* ページにクラスターとして存在する場合は、クラスターを S3 互換システムにドラッグしてセットアップ ウィザードを開始できます。</block>
+  <block id="47d7a1c349dd710c7b70de2cc5f8bef1" category="admonition">Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
+  <block id="811a794fc3af22bb5e0566f56adc0406" category="list-text">S3互換ストレージ</block>
+  <block id="d0a6d4081b2093e4e5a535bdce1e44c0" category="cell">S3互換オブジェクトストレージ内のCloud Volumes ONTAP</block>
+  <block id="29fc78ad7b30ceab82a6fad5327f5e05" category="cell">S3 互換オブジェクトストレージ</block>
+  <block id="d0eb32456912dd737e495d1233503746" category="summary">NetApp Console監査でサポートされるバックアップおよびリカバリ処理のリファレンス。</block>
+  <block id="a29588ca393407a53992df452b4d7451" category="doc">監査済みのNetApp Backup and Recovery操作</block>
+  <block id="da8be55f3871d0a372174a9f477823f0" category="inline-link">監査ページからユーザーアクティビティを監査する</block>
+  <block id="d122b9f2dec13890c9d50cc911e6ced4" category="paragraph">NetApp Console の監査ページでは、監査機能の一環として、ユーザーが Backup and Recovery で実行した以下の操作が記録されます。監査イベントの表示方法とフィルタリング方法の詳細については、<block ref="778a97bb392d8d7bffbb44bcc5f130f5" category="inline-link-rx"></block>Console のドキュメントを参照してください。</block>
+  <block id="efce8f189df834368b2d049d5a7c64af" category="paragraph">監査対象となる各アクションについて、NetApp Consoleはサービス名、エージェント、リソース、ユーザー、およびアクションのステータスを記録します。</block>
+  <block id="199370791c099a5f1bca782c3d1d470c" category="list-text">バックアップからボリュームまたはファイルを復元する</block>
+  <block id="732e9096426149869bf78ef0e9e94714" category="list-text">ボリュームをスナップショットに戻す</block>
+  <block id="197e6976a273829f09fdce7c55317492" category="list-text">ファイル エクスプローラーを起動</block>
+  <block id="61e4e908c7741cbd71a41c6aae9e6e0b" category="list-text">スナップショットからファイルを復元する</block>
+  <block id="42ce1f85d31d3dfe79ed524689b0f9d3" category="list-text">クラウド クレデンシャルを登録</block>
+  <block id="320df6f9283ca2b818a461d2e1f6e7d4" category="list-text">クラウド クレデンシャルを更新</block>
+  <block id="8a663d18b4fa22a73e1e8f7df3df725e" category="list-text">クラウド クレデンシャルを削除</block>
+  <block id="6fdec704e98ca0f3864c8ccd6ea73703" category="list-text">オブジェクトストレージバケットを作成する</block>
+  <block id="b3d7067b3bb19bac9f09d0230727dc76" category="list-text">オブジェクトストレージバケットを変更する</block>
+  <block id="e827a8086cf17a1365d856e1cb32423d" category="list-text">バックアップ移行の検証</block>
+  <block id="bbd999bf19db9750ffac6db4ed4b9b76" category="list-text">ONTAPシステム間でバックアップを移行する</block>
+  <block id="9855b90f9781e228ca2fc1b38dfbe068" category="list-text">ソース保護を初期化する</block>
+  <block id="8f5300563e036a0e0dd4466fcf2d4d14" category="list-text">保護のためのピアクラスタ</block>
+  <block id="3516904f26cb1d151f9f00fd268af5bb" category="list-text">ターゲット保護を初期化します</block>
+  <block id="70329a173c2df4fc2e113b7d732fee8a" category="list-text">ボリュームレプリケーションを開始します</block>
+  <block id="e7604539ca2bc0f8a25657b1c4d49403" category="list-text">Cyber Vaultシステムを作成する</block>
+  <block id="33d25341884ae4ede29885448acf07d3" category="list-text">Cyber Vault システムを削除する</block>
+  <block id="fbbce4affcaff35c8cb69b1b21b7fcf9" category="list-text">Cyber Vaultアクセスを有効にする</block>
+  <block id="dff58383e88f614806e0546be77f57cf" category="list-text">Cyber Vaultへのアクセスを無効にする</block>
+  <block id="a8a02fb6103bbf5f6b59d547875601d4" category="list-text">アドホック Snapshot を作成する</block>
+  <block id="09e08263ee4fee96bf89af82dadb038e" category="list-text">ボリュームと関係を検出</block>
+  <block id="a6d76416e9366d5acf874ba181b85e8d" category="list-text">アプリケーション構成を更新する</block>
+  <block id="643d173783cc450c90cddb496ad47f46" category="list-text">ボリュームのパノラマ保護を有効にする</block>
+  <block id="95a9f5676628d7064eb4ced4825b0462" category="list-text">ボリュームのパノラマ保護を変更する</block>
+  <block id="578537c537d4e1e20a8451ca31f907db" category="list-text">システムのオブジェクトストレージを変更する</block>
+  <block id="d4c6bb4fa3bc21a894bd3ecb1727be38" category="list-text">アドホッククラウドバックアップを作成</block>
+  <block id="67ddca6cd047644d2e1c3f3346bf654b" category="list-text">システムの保護を初期化します</block>
+  <block id="2f7e188563796edaa051f5c504c41194" category="list-text">ボリュームバックアップメタデータの更新（スケジュール済み）</block>
+  <block id="1bba399ba8ca257955b82abe9b77a1c8" category="list-text">ボリュームのバックアップを有効にする</block>
+  <block id="6b379ae81008ca1fdc4a1bee622b4b94" category="list-text">ANFスナップショットポリシーを削除する</block>
+  <block id="ceb742da8b5f49c43e25068bf4ebfec4" category="list-text">システムでパノラマ保護を有効にする</block>
+  <block id="796522f5baf9f759608770ab7ad25640" category="list-text">システムのパノラマ保護を変更する</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">詳細情報</block>
+  <block id="0714572f5e60fbb935fc53015369f585" category="list-text"><block ref="0714572f5e60fbb935fc53015369f585" category="inline-link-rx"></block></block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026年6月8日</block>
+  <block id="83600b516c30dfc55e0311442c5d9002" category="sidebar">Cloud Volumes ONTAP を S3 互換ストレージにバックアップ</block>
 </blocks>
