@@ -147,13 +147,6 @@ NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクト
 * ONTAP S3
 
 
-
-
-| S3互換オブジェクトストレージ内のCloud Volumes ONTAP  a| 
-* S3互換オブジェクトストレージ内のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-| S3 互換オブジェクトストレージ 
 |===
 
 
@@ -219,17 +212,10 @@ NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクト
 | オンプレミスのONTAPシステム 
 
 
-| S3 互換オブジェクトストレージ  a| 
-* S3互換オブジェクトストレージ内のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
- a| 
-* S3互換オブジェクトストレージ内のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-
+| S3 互換オブジェクトストレージ | オンプレミスのONTAPシステム | オンプレミスのONTAPシステム 
 |===
-「オンプレミスのONTAPシステム」への参照には、 FAS、 AFF、およびONTAP Selectシステムが含まれることに注意してください。
+
+NOTE: 「オンプレミス ONTAP システム」には、FAS、AFF、ONTAP Select の各システムが含まれます。
 
 
 
