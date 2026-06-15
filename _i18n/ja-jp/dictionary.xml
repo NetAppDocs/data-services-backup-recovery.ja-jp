@@ -4265,8 +4265,6 @@
   <block id="d866b8b94a3e8b940c5c063a7cf79472" category="paragraph">保護グループを編集して、名前または設定を変更します。グループ内のリソースが変更された場合は、保護グループを編集する必要がある場合があります。</block>
   <block id="2028d26ecaf3fcd5b07a86fe6beca923" category="list-text">編集する保護グループを選択します。</block>
   <block id="712a9492193e1ef0b35be30256c2d566" category="list-text">アクションアイコンを選択します <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *編集*。</block>
-  <block id="08483165aa1f33d41b512e87d0481649" category="list-text">保護グループの名前やグループ内の仮想マシンなどの設定を変更します。</block>
-  <block id="ad41a0253f0fa950ebd266549a680870" category="list-text">必要に応じて保護ポリシーを変更します。完了したら、[次へ] を選択します。</block>
   <block id="c3db3d5055385cdff6f17b6bf22a7152" category="list-text">設定を確認し、「送信」を選択します。</block>
   <block id="90f68f3e2b7c1b2173cf20adbaecd7aa" category="list-text">別の場所に復元する</block>
   <block id="20ca6e882fe3b588e30201e762f2131d" category="list-text">*仮想マシンを起動*: このオプションを有効にすると、復元後に新しい仮想マシンを起動できます。</block>
@@ -5626,4 +5624,21 @@
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026年6月15日</block>
   <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">NetApp Console の要件については、<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>を参照してください。</block>
   <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">Wasabiオブジェクトストレージでテストおよび検証済み。顧客からは、MinIO、IBM Cloud Object Storage、およびApple Object Storeでの導入成功の報告も寄せられています。</block>
+  <block id="11cb5552207ff0aa19a1682353b76f93" category="list-text">*保護グループがホストのタイムゾーンのスケジュールを使用するようになりました*：保護グループがHyper-Vホストのタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定された時刻（通常はUTC）を引き続き使用します。これらの保護グループを更新してHyper-Vホストのタイムゾーンを使用するようにするには、スケジュールを再作成する必要があります。詳細については、<block ref="d7b709a60ba856948f2de1f387e47906" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="327e5e3e392a7cf832926cb52870097c" category="list-text">*保護グループがホストのタイムゾーンスケジューリングを使用するようになりました*：保護グループは、ホスティング VMware vCenter Server のタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定されたタイムゾーン（通常は UTC）で引き続き実行されます。vCenter のタイムゾーンを使用するには、スケジュールを再作成する必要があります。詳細については、<block ref="5181f9a713551c0880da1b785cb2e8f3" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="d041f642a2d3785a0e94ba8db99dbb87" category="list-text">Hyper-V ワークロードの場合、スケジュールされたバックアップ時間は管理ホストのタイムゾーンで解釈されます。詳細については、<block ref="6abbe22a47895e202e8193141aa3411e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="2c1cd28b4c922c58abcbcf35e3928c82" category="paragraph">保護グループの編集ウィザードは、保護グループの設定手順を案内します。</block>
+  <block id="099b64c43a578b47f6704f18b87a7a7f" category="list-text">ウィザードの各画面で必要な変更を行ってください。</block>
+  <block id="ee50c8cd836b2085ab8f01315cef077a" category="list-text">完了したら、*送信*を選択します。</block>
+  <block id="1aeeb7dce233dd15c02742ecac270391" category="section-title">更新されたホストタイムゾーンを既存の保護グループに適用する</block>
+  <block id="3d7dc123777dfed33a5f55d552bfa333" category="paragraph">スケジュールされたバックアップは、保護グループのスケジュールが作成された際に記録されたHyper-Vホストのタイムゾーンを使用します。ホストのタイムゾーンを変更した場合、既存の保護グループは、スケジュールを更新するまで元のタイムゾーン（通常はUTC）で実行され続けます。</block>
+  <block id="b691fa63eb388ff83c950ba41d60f083" category="admonition">スケジュールは、保護グループ名を変更した場合、VMを追加または削除した場合、割り当てられたポリシーを変更した場合、またはプリスクリプト/ポストスクリプトを更新した場合にのみ再作成されます。変更を加えず保存しても、スケジュールは更新されません。このスケジュール更新は、保護グループごとに一度だけ実行される処理であり、即座にバックアップを開始するものではありません。</block>
+  <block id="1d9b7a2cf50c0d4395425719e90736b9" category="list-text">Hyper-V ホストを更新して、現在のタイムゾーンを取得します。</block>
+  <block id="dbff8d173c910d8884b39289ba861aec" category="list-text">保護グループを編集し、名前を別の値に変更してから保存してください。</block>
+  <block id="075bcf42a67adc33e136e805e5049090" category="admonition">Hyper-Vワークロードの場合、バックアップスケジュールはUTCやブラウザのローカルタイムではなく、Hyper-Vホストのタイムゾーンを使用します。このタイムゾーンは、スケジュールを作成する際に設定されます。ホストのタイムゾーンが変更された場合は、ホストを更新し、新しいタイムゾーンが有効になるようにスケジュールを再作成する必要があります。詳細については、<block ref="25003dd775b8cc60c4948243bfa5b95f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6d55b984a1a7d79f913f0cf893df29e2" category="admonition">VMwareワークロードの場合、バックアップスケジュールはUTCやブラウザのローカル時刻ではなく、VMware vCenter Serverのタイムゾーンを使用します。このタイムゾーンは、スケジュールを作成する際に設定されます。ホストのタイムゾーンが変更された場合は、ホストを更新し、新しいタイムゾーンが有効になるようにスケジュールを再作成する必要があります。詳細については、<block ref="d56582b18b2c53315e597c8a39e49a92" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0acbc3c15cbb4ede69f094274dea781f" category="list-text">VMwareワークロードの場合、スケジュールされたバックアップ時間は管理ホストのタイムゾーンで解釈されることに注意してください。詳細については、<block ref="5e4c8524c39497e064cba735f55e2d8d" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="fab4e94712a0410b3069e33d1470fe7c" category="section-title">更新された vCenter タイムゾーンを既存の保護グループに適用する</block>
+  <block id="ee19d16e1df2ea16cdf0906f9c62e70b" category="paragraph">スケジュールされたバックアップは、保護グループのスケジュールが作成された際に記録されるvCenter Serverのタイムゾーンを使用します。vCenter Serverのタイムゾーンを変更した場合、既存の保護グループは、スケジュールを更新するまで元のタイムゾーン（通常はUTC）で実行され続けます。</block>
+  <block id="2b33678c8eba4dacaa294cad350a79f8" category="list-text">vCenter サーバーを更新して、現在のタイムゾーンを取得します。</block>
 </blocks>

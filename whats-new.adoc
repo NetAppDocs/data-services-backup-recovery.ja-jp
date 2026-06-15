@@ -59,9 +59,21 @@ ONTAP ボリュームワークロードの保護の詳細については、 http
 今回のリリースでは、Hyper-V ワークロードに以下の機能強化が導入されました。
 
 * *ゲストVMへのファイルとフォルダのリストアの改善*：プライマリストレージまたはセカンダリストレージのSnapshotから、ゲストWindows VMにファイルとフォルダをリストアできるようになりました。この機能は、CIFSおよびSAN VMでサポートされるようになりました。
+* *保護グループがホストのタイムゾーンのスケジュールを使用するようになりました*：保護グループがHyper-Vホストのタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定された時刻（通常はUTC）を引き続き使用します。これらの保護グループを更新してHyper-Vホストのタイムゾーンを使用するようにするには、スケジュールを再作成する必要があります。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protection-groups.html["Hyper-V ワークロードの保護グループの作成と管理"]を参照してください。
 
 
 Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+
+
+
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました。
+
+* *保護グループがホストのタイムゾーンスケジューリングを使用するようになりました*：保護グループは、ホスティング VMware vCenter Server のタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定されたタイムゾーン（通常は UTC）で引き続き実行されます。vCenter のタイムゾーンを使用するには、スケジュールを再作成する必要があります。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protection-groups.html["VMware ワークロードの保護グループの作成と管理"]を参照してください。
+
+
+VMwareワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMware ワークロードの保護の概要"] 。
 
 
 
