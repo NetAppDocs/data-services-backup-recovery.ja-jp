@@ -4659,7 +4659,6 @@
   <block id="fb5dbc581e0b5b523350175d27ea83c0" category="list-text">使用する復元ポイントの*Restore*ボタンを選択します。</block>
   <block id="98c52679a9ed385c5482f74fe44c97ae" category="list-text">復元元のソースの場所を選択します。</block>
   <block id="6d99ca24de4c4c5c0b932cbcc18fdbbe" category="list-text">元のネームスペースに復元するか、新しいネームスペースに復元するかを選択します。</block>
-  <block id="41af3e90c2d7ebbd0ddd4e36e78220b5" category="list-text">新しいネームスペースにリストアすることを選択した場合は、使用するデスティネーションネームスペースを入力します。</block>
   <block id="a2552d8c6714f46cdb5bfe28dbdc9b87" category="list-text">*Destination settings*セクションを展開し、デフォルトのストレージクラス、別のストレージクラスのいずれかに復元するか、別のクラスタに復元する場合は、ストレージクラスをデスティネーション クラスタにマッピングするかを選択します。</block>
   <block id="a5e9d16a9cc07839a654d90f3a7a4b97" category="list-text">別のストレージ クラスにリストアすることを選択した場合は、各ソース ストレージ クラスに一致するデスティネーション ストレージ クラスを選択します。</block>
   <block id="7a19603af554b25cd8b2df54b3b90a02" category="list-text">オプションで、Trident Protect を使用して作成されたバックアップまたは Snapshot をリストアする場合は、リストア処理のストレージバケットとして使用される AppVault の詳細を表示します。環境または AppVault のステータスに変更がある場合は、* App Vault を同期*を選択して詳細を更新します。</block>
@@ -5615,4 +5614,16 @@
   <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026年6月8日</block>
   <block id="83600b516c30dfc55e0311442c5d9002" category="sidebar">Cloud Volumes ONTAP を S3 互換ストレージにバックアップ</block>
   <block id="3a6182405315948a2b482f267396231c" category="admonition">「オンプレミス ONTAP システム」には、FAS、AFF、ONTAP Select の各システムが含まれます。</block>
+  <block id="248bbbcb51ef3ddd3bd9dc8e6ef8b5a1" category="list-text">*Trident Protect 26.06*：このリリースには Trident Protect 26.06 が含まれます。</block>
+  <block id="a322829a7429e3dce13d41945775197c" category="list-text">*復元時のアプリケーション作成をスキップ*：復元操作中に、アプリケーションのカスタムリソースオブジェクトの自動作成をスキップできるようになりました。これにより、アプリケーションインベントリにおける不要なエントリが削減されます。</block>
+  <block id="b6e7f9bbbf3d504dc4f264292161745a" category="list-text">*VM の永続ボリューム要求の復元*：VM ベースのアプリケーションを復元する際に、仮想マシン全体を復元することなく、個々の永続ボリューム要求を復元できるようになりました。これにより、特定のディスクやボリュームが破損またはデータ損失の影響を受けている場合の復旧が迅速化されます。</block>
+  <block id="bf6f998632908219ca091b00cfa53117" category="list-text">*ジョブモニターの改善*：ジョブモニターにより、Kubernetes 保護ジョブの可視性が向上しました。ジョブとサブジョブに関する詳細なステータス情報を表示したり、それぞれが使用するターゲットストレージを確認したりできます。</block>
+  <block id="2fa234e4bf58407b9116597669532c73" category="list-text">新しい名前空間に復元することを選択した場合は、以下の手順を実行してください。</block>
+  <block id="b74045bc4ba6e80e41145047c07e7187" category="list-text">使用する宛先ネームスペースを入力してください。</block>
+  <block id="d99b2f4ce740b964bfc13369bafa70b1" category="list-text">宛先アプリケーション名を入力してください。</block>
+  <block id="5639f1fbdf481a03dd07036133bb85db" category="list-text">必要に応じて、*復元されたリソースのアプリケーションを作成しない*オプションを選択すると、アプリケーションのカスタムリソースオブジェクトを作成せずにリソースを復元できます。これにより、アプリケーションインベントリにおける不要なエントリが削減されます。</block>
+  <block id="928e9cbce0c62c73be1d4bd0799f3a7a" category="list-text">仮想マシン全体を復元するには、「仮想マシン」タブを選択します。</block>
+  <block id="d7b53b986ac236d7156eb62ccb254f74" category="list-text">個々の永続ボリューム要求を復元するには、「永続ボリューム要求」タブを選択します。</block>
+  <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">バックアップとリカバリでは、リカバリポイント内のすべての永続ボリューム要求が一覧表示されます。復元操作に含める永続ボリューム要求を選択できます。</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026年6月15日</block>
 </blocks>
