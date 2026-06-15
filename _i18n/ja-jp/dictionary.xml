@@ -1869,7 +1869,6 @@
   <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
   <block id="d3cbd09d6a0974ee6a694826a8598eb6" category="section-title">Kubernetes アプリケーションを保護するための要件</block>
   <block id="35efe147e51e11d3e82b92163214c36a" category="paragraph">Kubernetes リソースを検出し、Kubernetes アプリケーションを保護するには、特定の要件が必要です。</block>
-  <block id="b4223a9285b846e8b6c959752c4aef73" category="paragraph">NetApp Consoleの要件については、<block ref="7a97fc65ea04291b3564618ee6e90325" category="inline-xref-macro-rx"></block> 。</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">Hyper-V ワークロードを保護するための要件</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">Hyper-V インスタンスが仮想マシンを検出して保護するための特定の要件を満たしていることを確認します。</block>
   <block id="e8ab74a683c73fd7edd0ea5adc16b2b6" category="list-text">スタンドアロンおよびFCIクラスタホストがサポートされています</block>
@@ -5551,7 +5550,6 @@
   <block id="9a6bb04c2b277b55faab469f2d04692b" category="paragraph">S3互換ストレージへのバックアップ時にサポートされている操作は以下のとおりです：</block>
   <block id="1588002f4465aee8a1e35fc95dbebabd" category="list-text">オンプレミス ONTAP から サードパーティの S3 互換オブジェクトストアへの「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびアプリケーション整合性スナップショットのバックアップ</block>
   <block id="00de0e91b8bfb37d4831f3333b8df9fa" category="list-text">コアデータ保護ワークフロー：バックアップ、リストア、およびバックアップ削除</block>
-  <block id="0a7a61be3bd51e21631c884f7d8de9ef" category="list-text">Wasabi、MinIO、IBM Object Store、Apple Object StoreなどのS3互換プロバイダに対して検証済み</block>
   <block id="21e1cea657da329388848ff59f3eea5d" category="list-text">NetAppサポート部門は、サードパーティ製のS3互換オブジェクトストアに関するすべてのサポートリクエストを受け付け、優先順位付けを行います。</block>
   <block id="a368c9277e64abd2f91bd6fdc8cafbda" category="section-title">サポートされていない機能と構成</block>
   <block id="ad8f08e5de0a588e08fde1c710915292" category="paragraph">S3互換ストレージへのバックアップ時には、以下の機能および構成はサポートされません：</block>
@@ -5626,4 +5624,6 @@
   <block id="d7b53b986ac236d7156eb62ccb254f74" category="list-text">個々の永続ボリューム要求を復元するには、「永続ボリューム要求」タブを選択します。</block>
   <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">バックアップとリカバリでは、リカバリポイント内のすべての永続ボリューム要求が一覧表示されます。復元操作に含める永続ボリューム要求を選択できます。</block>
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026年6月15日</block>
+  <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">NetApp Console の要件については、<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">Wasabiオブジェクトストレージでテストおよび検証済み。顧客からは、MinIO、IBM Cloud Object Storage、およびApple Object Storeでの導入成功の報告も寄せられています。</block>
 </blocks>
