@@ -5623,7 +5623,6 @@
   <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">バックアップとリカバリでは、リカバリポイント内のすべての永続ボリューム要求が一覧表示されます。復元操作に含める永続ボリューム要求を選択できます。</block>
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026年6月15日</block>
   <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">NetApp Console の要件については、<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>を参照してください。</block>
-  <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">Wasabiオブジェクトストレージでテストおよび検証済み。顧客からは、MinIO、IBM Cloud Object Storage、およびApple Object Storeでの導入成功の報告も寄せられています。</block>
   <block id="11cb5552207ff0aa19a1682353b76f93" category="list-text">*保護グループがホストのタイムゾーンのスケジュールを使用するようになりました*：保護グループがHyper-Vホストのタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定された時刻（通常はUTC）を引き続き使用します。これらの保護グループを更新してHyper-Vホストのタイムゾーンを使用するようにするには、スケジュールを再作成する必要があります。詳細については、<block ref="d7b709a60ba856948f2de1f387e47906" category="inline-link-rx"></block>を参照してください。</block>
   <block id="327e5e3e392a7cf832926cb52870097c" category="list-text">*保護グループがホストのタイムゾーンスケジューリングを使用するようになりました*：保護グループは、ホスティング VMware vCenter Server のタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定されたタイムゾーン（通常は UTC）で引き続き実行されます。vCenter のタイムゾーンを使用するには、スケジュールを再作成する必要があります。詳細については、<block ref="5181f9a713551c0880da1b785cb2e8f3" category="inline-link-rx"></block>を参照してください。</block>
   <block id="d041f642a2d3785a0e94ba8db99dbb87" category="list-text">Hyper-V ワークロードの場合、スケジュールされたバックアップ時間は管理ホストのタイムゾーンで解釈されます。詳細については、<block ref="6abbe22a47895e202e8193141aa3411e" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -5641,4 +5640,6 @@
   <block id="fab4e94712a0410b3069e33d1470fe7c" category="section-title">更新された vCenter タイムゾーンを既存の保護グループに適用する</block>
   <block id="ee19d16e1df2ea16cdf0906f9c62e70b" category="paragraph">スケジュールされたバックアップは、保護グループのスケジュールが作成された際に記録されるvCenter Serverのタイムゾーンを使用します。vCenter Serverのタイムゾーンを変更した場合、既存の保護グループは、スケジュールを更新するまで元のタイムゾーン（通常はUTC）で実行され続けます。</block>
   <block id="2b33678c8eba4dacaa294cad350a79f8" category="list-text">vCenter サーバーを更新して、現在のタイムゾーンを取得します。</block>
+  <block id="9044dfb75ff38841e5c3112d327e52cf" category="admonition">Verda GitHub リポジトリ内のスクリプトは現状のまま提供されており、NetApp による公式サポートの対象外です。Trident Protect および Backup and Recovery 内の実行フックフレームワークのみが、NetApp によって公式にサポートされています。</block>
+  <block id="746c4e9758e4e986d2c5f289c1d7e4ed" category="list-text">Wasabiオブジェクトストレージでテストおよび検証済み。また、MinIOおよびIBM Cloud Object Storageを使用した導入の成功事例もお客様から報告されています。</block>
 </blocks>
