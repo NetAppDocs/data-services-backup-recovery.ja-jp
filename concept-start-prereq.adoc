@@ -78,8 +78,9 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用するには、以下のホスト システム、容量、およびサイジングに関する前提条件が必要です。
 
 * ONTAP 9.8以降が必要です。
+* FlexGroup ボリューム保護には ONTAP 9.12.1 以降が必要です。詳細については、link:br-reference-limitations.html["ONTAPボリュームのNetApp Backup and Recoveryの既知の制限"] を参照してください。
+* ONTAP 9.17.1以降は、S3互換オブジェクトストレージへのバックアップまたはリストアに必要です。
 * オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。
-* S3互換オブジェクトストレージへのバックアップまたは復元には、ONTAP 9.17.1以降が必要です。
 
 
 サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、link:prev-ontap-protect-overview.html["ONTAPボリュームデータを保護する"]を参照してください。

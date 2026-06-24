@@ -1990,7 +1990,6 @@
   <block id="bade104de773419f0c559bd71478cc40" category="inline-link-macro">システム内の追加ボリュームのバックアップを有効にする</block>
   <block id="7b58ae9806fd4e9bf78fdc8568395ab6" category="paragraph">FlexVolまたはFlexGroupボリュームを保護することを選択できますが、システムのバックアップをアクティブ化するときにこれらのボリュームを混在して選択することはできません。方法を見る<block ref="7239f8ae1ce8c5a40d4003de7480554a" category="inline-link-macro-rx"></block>(FlexVolまたはFlexGroup) 初期ボリュームのバックアップを構成した後。</block>
   <block id="e9dfd7a5bc1d9c55d3cafeb50c863440" category="list-text">一度に 1 つのFlexGroupボリューム上でのみバックアップをアクティブ化できます。</block>
-  <block id="8678ec2b63284b1fce3f9da35c37df05" category="list-text">選択するボリュームには同じSnapLock設定が必要です。すべてのボリュームでSnapLock Enterpriseを有効にするか、 SnapLock を無効にする必要があります。</block>
   <block id="8a6e28d635ac6cca84e8efc5d0dd4b54" category="paragraph">選択したボリュームにスナップショットまたはレプリケーション ポリシーがすでに適用されている場合は、後で選択したポリシーによって既存のポリシーが上書きされます。</block>
   <block id="60956fee8c3d9f3ef0f2f7652f27143f" category="list-text">「ボリュームの選択」ページで、保護するボリュームを選択します。</block>
   <block id="faf9e3428a892363316a8c1e34a4551b" category="list-text">必要に応じて、行をフィルタリングして、特定のボリューム タイプ、スタイルなどを持つボリュームのみを表示し、選択を容易にします。</block>
@@ -5518,7 +5517,6 @@
   <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用するには、以下のホスト システム、容量、およびサイジングに関する前提条件が必要です。</block>
   <block id="f17da14a026a5974537cf1303ac53974" category="list-text">ONTAP 9.8以降が必要です。</block>
   <block id="45b096193f4470968c1063df19d1c253" category="list-text">オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。</block>
-  <block id="9cf387a6f708f4467810768eb8e4d31f" category="list-text">S3互換オブジェクトストレージへのバックアップまたは復元には、ONTAP 9.17.1以降が必要です。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、<block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">データベース ホスト</block>
   <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">サポートされているストレージ</block>
@@ -5642,4 +5640,7 @@
   <block id="9a6733678bfc1a6a630c61271f174949" category="paragraph">NetApp Backup and RecoveryでVMwareのVMおよびデータストアを保護します。NetApp Backup and Recoveryは、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態の、およびVM整合性のあるバックアップとリストアの操作を提供します。サポートされているバックアップターゲットにVMwareワークロードをバックアップし、オンプレミスのVMwareホストにVMwareワークロードをリストアできます。</block>
   <block id="a7ffc4809e4a33a20f30769fc3e62703" category="list-text">S3互換ストレージ（ONTAP Volumesワークロードのみ）</block>
   <block id="7229e78ecf33d07a5618d54695f22e2b" category="list-text">Microsoft Azure Blob ストレージ</block>
+  <block id="df9ce829d97bcaaccefd13ad9443c5fe" category="list-text">FlexGroup ボリューム保護には ONTAP 9.12.1 以降が必要です。詳細については、<block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="bc75b0ab08d9eba6d835f75a9dc3780f" category="list-text">ONTAP 9.17.1以降は、S3互換オブジェクトストレージへのバックアップまたはリストアに必要です。</block>
+  <block id="6e61da6259c2e5766003325feb7a477a" category="list-text">保護するソースボリュームを選択する際は、一致するSnapLock設定を持つボリュームのみを選択できます。選択するボリュームは、すべてSnapLock機能が有効になっているか、すべてSnapLock機能が無効になっている必要があります。</block>
 </blocks>
