@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して VMware VM とデータストアを保護します。 NetApp Backup and Recovery は、高速でスペース効率が高く、クラッシュ整合性と VM 整合性を備えたバックアップおよび復元操作を提供します。VMware ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、VMware ワークロードをオンプレミスの VMware ホストに復元できます。
+NetApp Backup and RecoveryでVMwareのVMおよびデータストアを保護します。NetApp Backup and Recoveryは、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態の、およびVM整合性のあるバックアップとリストアの操作を提供します。サポートされているバックアップターゲットにVMwareワークロードをバックアップし、オンプレミスのVMwareホストにVMwareワークロードをリストアできます。
 
 
 NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。
