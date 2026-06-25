@@ -123,7 +123,7 @@ VMware ワークロードの場合、これにより、プライマリ ストレ
 *** その他のオプション: 延期転送を選択した場合、転送は即時に行われず、スケジュールを設定できます。
 
 
-** * SnapMirrorとSnapVault SMAS セカンダリ リレーションシップ*: SQL Server ワークロードにSnapMirrorとSnapVault SMAS セカンダリ リレーションシップを使用します。
+** *既存の SnapMirror および SyncMirror セカンダリ関係を使用する*：このオプションを有効にすると、既存の SnapMirror または SyncMirror 関係を使用して、指定されたデスティネーション クラスタにスナップショットを転送します。
 
 
 . * Object store settings * セクション（オブジェクトストレージへのバックアップ）の情報を入力します。
