@@ -778,7 +778,6 @@
   <block id="e5dd8794e7e239a004607625309c03bb" category="list-text">Kubernetesワークロードについては、以下を参照してください。<block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block> 。</block>
   <block id="47531513e36377c6a5c78be39708d962" category="summary">NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。</block>
   <block id="e902bc2010ef35580633bf1114aee5b3" category="doc">NetApp Backup and Recoveryを使用する前にバックアップ先を設定する</block>
-  <block id="8a0933307f827fb9f8c7b526a219880b" category="paragraph">NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="1ee0b624eb9dbd226bf2ec0c999c84a7" category="paragraph">始める前に、<block ref="2eebb303c5f465d9ddee1afb9c070240" category="inline-link-macro-rx"></block>環境の準備ができていることを確認します。</block>
   <block id="7fada33e4007d6c45f21f39f8f564f62" category="section-title">バックアップ先を準備する</block>
@@ -5298,7 +5297,6 @@
   <block id="87e187714ad3406b822e2c0bf109240b" category="summary">Hyper-V VMのスナップショットから、1つまたは複数のファイルやフォルダーをWindowsゲストVMに復元できます。</block>
   <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">Hyper-V VMバックアップからファイルとフォルダをリストアする</block>
   <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">スナップショットから仮想ディスクをマウントし、そこからファイルとフォルダを元の（ソース）Windows VMに復元します。</block>
-  <block id="d4bb35603ef1e4c4f849336d35413c6f" category="paragraph">ファイルとフォルダーを復元する前に、NetApp Backup and Recoveryでソース VM の資格情報を作成する必要があります。この資格情報は、復元プロセス中に VM との認証を行うために使用されます。</block>
   <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">仮想ディスクをマウントしてファイルとフォルダの復元セッションを開くと、そのセッションは48時間アクティブな状態を維持します。</block>
   <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">復元パフォーマンスは、復元するファイルまたはフォルダのサイズと数の両方に依存します。データセットのサイズが同じ場合、多数の小さなファイルを復元する方が、少数の大きなファイルを復元するよりも一般的に時間がかかります。</block>
   <block id="0c1d8f103b8f05dc9e681f213a4140ed" category="paragraph">ファイルやフォルダを復元する際は、以下の点に注意してください：</block>
@@ -5378,7 +5376,6 @@
   <block id="96cd77faff8587f3ee978f6d738fc506" category="list-text">*検証サーバー*：必要に応じて、リストから登録済みのOracleホストを1つ以上選択し、オフホスト検証サーバーとして使用します。サーバーが選択されていない場合、検証はソース データベース サーバ上で直接実行されます。それ以外の場合は、NetApp Backup and Recoveryはスナップショットクローンを選択されたホストのいずれかにマウントし、そこでバックアップを検証し、検証I/Oを本番環境の データベース サーバから分離します。検証サーバーは以下の要件を満たす必要があります：</block>
   <block id="a96c5b49f0e2679b8f6884c399905c08" category="list-text">NetAppプラグインがインストールされていること</block>
   <block id="aa525d522adb224988fcdcd6f1e78c30" category="list-text">Oracle Databaseバイナリがインストールされている</block>
-  <block id="7ed52864c10e2ddd715752fb3ab3a33f" category="list-text">ソースデータベースと同じOracle Databaseバージョンを使用する</block>
   <block id="ed72ca5994ca086c703a8fad4669ac29" category="list-text">スナップショットを保持しているストレージ（プライマリまたはセカンダリ）へのネットワーク アクセスがあること</block>
   <block id="a6b9c0ae442c5226d495a5c8fcbaec6c" category="list-text">クローンしたボリュームをマウントし、Oracle Database DBVERIFY ユーティリティを実行できること。</block>
   <block id="ee722f1985ae6abb41cf3cea75ae2afd" category="list-text">*最大転送速度*：*最大転送速度を有効にする*を有効にして、選択したホストの最大転送速度を設定します。帯域幅の使用量に制限を設けない場合は、*無制限*を選択します。転送速度を制限する場合は、*制限*を選択し、オブジェクト ストレージへのバックアップのアップロードに割り当てられる1～1,000Mbpsのネットワーク帯域幅を選択します。デフォルトでは、ONTAPは、システム内のボリュームからオブジェクト ストレージへバックアップ データを転送する際に、無制限の帯域幅を使用できます。バックアップ トラフィックがワークロードに影響を与える場合は、転送用のネットワーク帯域幅を削減してください。</block>
@@ -5644,4 +5641,6 @@
   <block id="2b4ccece5f6493a03ab0eed818dd5e54" category="list-text">VMwareワークロードを、サポートされているストレージプロバイダーにバックアップします。</block>
   <block id="947289c8d4497907d6f4aedc1502dce8" category="list-text">Google Cloud Storage （ONTAPボリュームとKubernetesワークロードのみ）</block>
   <block id="0692ea49da3133a6dc624be3e9654369" category="paragraph">クラウドアカウントが関与しない場合のオンプレミスでの_標準モード_でのバックアップとリカバリの使用時に（たとえば、バックアップ先として NetApp StorageGRID を使用する場合）、以下の手順に従ってコンソールエージェントを交換し、そこに保存されていた構成データを復元することもできます。</block>
+  <block id="2be7e1093c386d54e43c7fc0e8de4a1f" category="paragraph">ファイルとフォルダーを復元する前に、NetApp Backup and Recovery でソース VM の資格情報を作成する必要があります。この認証情報は、復元プロセス中に仮想マシンとの認証を行うために使用されます。</block>
+  <block id="9f5917bbc05d835882ed9022aa56ac20" category="list-text">ソースデータベースと同じOracle Databaseバージョンであること</block>
 </blocks>
