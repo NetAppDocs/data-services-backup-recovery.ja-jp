@@ -2426,10 +2426,6 @@
   <block id="868fb9c55d4ddac7523d9c4697eb9d9f" category="section-title">データ暗号化用の顧客管理 AWS キーを設定する</block>
   <block id="72828ef5ab3d5aa027bfcdd1a9224f67" category="paragraph">デフォルトの Amazon S3 暗号化キーを使用してオンプレミスのクラスターと S3 バケット間で渡されるデータを暗号化する場合は、デフォルトのインストールでそのタイプの暗号化が使用されるため、すべて準備完了です。</block>
   <block id="aa9f769e3ac07b6605a7c510f6467b0d" category="paragraph">代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetApp Backup and Recoveryウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。</block>
-  <block id="81d60e20c02d2dc4f1f049ef17d9c0f3" category="inline-link">Cloud Volumes ONTAPで独自のAmazon暗号化キーを使用する方法を参照してください。</block>
-  <block id="eb3f4e9630751efd3957882fa3339f53" category="paragraph"><block ref="a7e77aaf059fb9a4b638710225357142" category="inline-link-rx"></block>。</block>
-  <block id="8ceec43667de81f25c5ddfbde5549946" category="inline-link">NetApp Backup and Recoveryで独自のAmazon暗号化キーを使用する方法を参照してください。</block>
-  <block id="3869dda903236d84654e6efafcb9d188" category="paragraph"><block ref="8fe101e295f009741416862cf90e3f6c" category="inline-link-rx"></block>。</block>
   <block id="486567bdd60f21beefa59174661f6d52" category="section-title">VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する</block>
   <block id="f50abdb59982020e158a4a180050f908" category="paragraph">標準のパブリック インターネット接続を使用する場合は、すべての権限がコンソール エージェントによって設定されるため、他に何もする必要はありません。</block>
   <block id="26dcafbb92de47e3c098da4f6dfb38ae" category="paragraph">オンプレミスのデータセンターから VPC へのインターネット経由のより安全な接続を確立したい場合は、バックアップアクティベーションウィザードで AWS PrivateLink 接続を選択するオプションがあります。プライベート IP アドレスを使用する VPC エンドポイント インターフェイスを介してオンプレミス システムに接続するために VPN または AWS Direct Connect を使用する予定の場合は、これが必要です。</block>
@@ -5643,4 +5639,7 @@
   <block id="0692ea49da3133a6dc624be3e9654369" category="paragraph">クラウドアカウントが関与しない場合のオンプレミスでの_標準モード_でのバックアップとリカバリの使用時に（たとえば、バックアップ先として NetApp StorageGRID を使用する場合）、以下の手順に従ってコンソールエージェントを交換し、そこに保存されていた構成データを復元することもできます。</block>
   <block id="2be7e1093c386d54e43c7fc0e8de4a1f" category="paragraph">ファイルとフォルダーを復元する前に、NetApp Backup and Recovery でソース VM の資格情報を作成する必要があります。この認証情報は、復元プロセス中に仮想マシンとの認証を行うために使用されます。</block>
   <block id="9f5917bbc05d835882ed9022aa56ac20" category="list-text">ソースデータベースと同じOracle Databaseバージョンであること</block>
+  <block id="6b181f9b8f3365a62a308265f446f30b" category="admonition">顧客管理キー暗号化は、Amazon FSx for NetApp ONTAP でのみサポートされています。AWS向け Cloud Volumes ONTAP ではサポートされていません。</block>
+  <block id="e46ce594d7f94f0d680627c5f9150ad6" category="inline-link">AWSで顧客管理キー暗号化を設定する</block>
+  <block id="fe921914a3a58bce833cfd4d4785fb2b" category="paragraph">参照<block ref="445e5997f02f6fbbedcd2ff2bda158c4" category="inline-link-rx"></block>。</block>
 </blocks>

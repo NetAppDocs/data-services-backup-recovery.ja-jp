@@ -336,9 +336,10 @@ link:prev-ontap-protect-journey.html["独自のバケットの作成について
 
 代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetApp Backup and Recoveryウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。
 
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["Cloud Volumes ONTAPで独自のAmazon暗号化キーを使用する方法を参照してください。"^]。
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html#configure-encryption-settings["NetApp Backup and Recoveryで独自のAmazon暗号化キーを使用する方法を参照してください。"^]。
+NOTE: 顧客管理キー暗号化は、Amazon FSx for NetApp ONTAP でのみサポートされています。AWS向け Cloud Volumes ONTAP ではサポートされていません。
+
+参照 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["AWSで顧客管理キー暗号化を設定する"^]。
 
 
 
