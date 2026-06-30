@@ -1867,7 +1867,6 @@
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">Hyper-V ホストにログ フォルダー用の十分なディスク領域を割り当て、その使用状況を定期的に監視するようにしてください。必要なスペースは、バックアップとデータ保護操作の実行頻度によって異なります。十分なスペースがない場合、ログは生成されません。</block>
   <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">プライマリONTAPシステム（ONTAP 9.14.1 以降）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAPのドキュメント</block>
-  <block id="0a2b6c395fc07f332dac7e7046c239c4" category="list-text">CIFS 共有を使用して仮想マシン データを保存する Hyper-V 展開の場合、 ONTAPシステムで継続的な可用性の共有プロパティが有効になっていることを確認します。参照<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>手順についてはこちらをご覧ください。</block>
   <block id="f6e9a28cc6109da66451b7ed0caaea35" category="list-text">ONTAP S3の場合、コンソールエージェントは、オンプレミス（インターネットアクセスの有無にかかわらず）またはクラウドプロバイダー環境に導入できます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律上の表示</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法的通知から、著作権情報、商標、特許などを確認できます。</block>
@@ -5423,7 +5422,6 @@
   <block id="e77e2a03d88f40058869e1cc3d680930" category="list-text">ASP.NET Core Runtime 8.0.24 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
   <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
   <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
-  <block id="55c7dc18349be92e97f9965c696cb850" category="list-text">SANストレージ（バックアップおよびプライマリストレージまたはセカンダリストレージからの元の場所へのリストアに対応）</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026年5月11日</block>
   <block id="a37ef823bf93d8b834512d7ddfdf36cd" category="sidebar">Microsoft SQL Serverのワークロードバックアップポリシーを作成および管理する</block>
   <block id="2287427b367a426395bab449f1e777dc" category="sidebar">VMwareワークロードのバックアップポリシーを作成および管理する</block>
@@ -5643,4 +5641,7 @@
   <block id="633255f387c732126e8cdceb4ac9fceb" category="cell">NetApp Backup and Recovery レプリケーション関係の逆再同期ジョブの失敗</block>
   <block id="d59074181d2dab51d18ca27cb4fc47d8" category="cell">NetApp Backup and Recovery レプリケーション関係の削除ジョブの失敗</block>
   <block id="5df069a4ec3b3f8731b57ed05f942930" category="cell">ボリュームバックアップのインデックス作成に失敗しました</block>
+  <block id="9823593ea29f31b6d988e92cd15483f6" category="list-text">SMB 共有</block>
+  <block id="e3438f0f5d63a3c8de989b98d3095c8d" category="list-text">iSCSIまたはファイバーチャネル経由で接続されたSANストレージ</block>
+  <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">SMB共有を使用して仮想マシンデータを保存するHyper-V展開の場合、ONTAPシステムで継続的可用性共有プロパティが有効になっていることを確認してください。手順については、<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>を参照してください。</block>
 </blocks>
