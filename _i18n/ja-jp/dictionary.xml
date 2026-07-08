@@ -617,7 +617,6 @@
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">次のいずれかを実行します。</block>
   <block id="6226950d1b144f972ce9b5d3caea9b42" category="list-text">Kubernetes ワークロードをすでに検出している場合は、 NetApp Backup and Recoveryで *インベントリ* &gt; *ワークロード* を選択し、*リソースの検出* を選択します。</block>
   <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">*Kubernetes* ワークロード タイプを選択します。</block>
-  <block id="96c35fcba67cbf6710845bcca4668cc2" category="list-text">クラスター名を入力し、クラスターで使用するコネクタを選択します。</block>
   <block id="39b0136210d9abd099b81781cc0a17db" category="list-text">表示されるコマンド ラインの指示に従います。</block>
   <block id="ed6eabebedff09350cdabab556887c62" category="list-text">Kubernetesシークレットを作成する</block>
   <block id="6c27e11d1144953d7877449d5adc966d" category="list-text">Helmリポジトリを追加する</block>
@@ -5644,4 +5643,5 @@
   <block id="e3438f0f5d63a3c8de989b98d3095c8d" category="list-text">iSCSIまたはファイバーチャネル経由で接続されたSANストレージ</block>
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">SMB共有を使用して仮想マシンデータを保存するHyper-V展開の場合、ONTAPシステムで継続的可用性共有プロパティが有効になっていることを確認してください。手順については、<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>を参照してください。</block>
   <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">マーケットプレイスから年間契約を結んでいる場合、NetApp Backup and Recovery の利用料金は、当該契約に基づいて課金されます。</block>
+  <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">クラスター名を入力し、クラスターで使用するコンソールエージェントを選択してください。</block>
 </blocks>
