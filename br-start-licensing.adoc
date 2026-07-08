@@ -86,7 +86,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 年間契約を購入して、 NetApp Backup and Recoveryを毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。
 
-マーケットプレイスから年間契約を結んでいる場合、 NetApp Backup and Recoveryのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。
+マーケットプレイスから年間契約を結んでいる場合、NetApp Backup and Recovery の利用料金は、当該契約に基づいて課金されます。
 
 AWSを使用する場合、2つの年間契約から選択できます。 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWSマーケットプレイスページ"^] Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:
 

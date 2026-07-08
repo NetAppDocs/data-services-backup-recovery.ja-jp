@@ -729,7 +729,6 @@
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">年間契約を利用する</block>
   <block id="e8081693b5a02447f0b48df91b9f65d8" category="paragraph">年間契約を購入して、 NetApp Backup and Recoveryを毎年支払います。期間は 1 年、2 年、または 3 年からお選びいただけます。</block>
-  <block id="ba3a3b81b7867cbfec5cb03d1bbc6d9a" category="paragraph">マーケットプレイスから年間契約を結んでいる場合、 NetApp Backup and Recoveryのすべての消費量はその契約に対して課金されます。年間マーケットプレイス契約と BYOL を組み合わせることはできません。</block>
   <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWSマーケットプレイスページ</block>
   <block id="dda622e647d2d5d64503c046c508cc10" category="paragraph">AWSを使用する場合、2つの年間契約から選択できます。<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block> Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:</block>
   <block id="c776759ca58ab152a9abc5e0b4f7ae66" category="list-text">Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。</block>
@@ -5644,4 +5643,5 @@
   <block id="9823593ea29f31b6d988e92cd15483f6" category="list-text">SMB 共有</block>
   <block id="e3438f0f5d63a3c8de989b98d3095c8d" category="list-text">iSCSIまたはファイバーチャネル経由で接続されたSANストレージ</block>
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">SMB共有を使用して仮想マシンデータを保存するHyper-V展開の場合、ONTAPシステムで継続的可用性共有プロパティが有効になっていることを確認してください。手順については、<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">マーケットプレイスから年間契約を結んでいる場合、NetApp Backup and Recovery の利用料金は、当該契約に基づいて課金されます。</block>
 </blocks>
