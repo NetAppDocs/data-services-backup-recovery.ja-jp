@@ -20,6 +20,7 @@ summary: NetApp Backup and Recoveryのこのリリースには、次の既知の
 
 
 
+[[unsupported-actions]]
 == サポートされていないアクション
 
 次のアクションはサポートされていません：
@@ -32,6 +33,7 @@ summary: NetApp Backup and Recoveryのこのリリースには、次の既知の
 
 
 
+[[unsupported-configurations]]
 == サポートされない構成
 
 次の構成はサポートされていません。
@@ -45,6 +47,7 @@ summary: NetApp Backup and Recoveryのこのリリースには、次の既知の
 
 
 
+[[troubleshooting-notes]]
 == トラブルシューティングの注意事項
 
 KVMワークロードをNetApp Backup and Recoveryで使用する場合は、次の点に注意してください。

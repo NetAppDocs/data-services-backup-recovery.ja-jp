@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-workloads-enhancements]]
 === Kubernetes ワークロードの機能強化
 
 今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。

@@ -21,6 +21,7 @@ NetApp Backup and Recoveryを使用すると、Web UIを介して、またはカ
 
 
 
+[[add-and-protect-a-new-kubernetes-application]]
 == 新しいKubernetesアプリケーションを追加して保護する
 
 Kubernetesアプリケーションを保護する最初のステップは、NetApp Backup and Recovery内でアプリケーションを作成することです。アプリケーションを作成すると、Kubernetesクラスター上で実行されているアプリケーションがBackup and Recoveryに認識されるようになります。

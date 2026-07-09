@@ -18,6 +18,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 
+[[mount-an-oracle-database-recovery-point]]
 == Oracle Database のリカバリポイントをマウントする
 
 データベースの保護ポリシーを構成してアーカイブ ログを保持すると、回復ポイントをマウントしてデータベースの変更履歴を表示できます。
@@ -50,6 +51,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 
+[[unmount-an-oracle-database-recovery-point]]
 == Oracle データベース リカバリ ポイントをアンマウントする
 
 データベースに加えられた変更を表示する必要がなくなった場合は、回復ポイントをマウント解除します。
@@ -70,6 +72,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 
+[[catalog-an-oracle-database-recovery-point]]
 == Oracle データベース リカバリ ポイントをカタログ化する
 
 バックアップおよびリカバリ操作のメタデータを保持する必要がある場合は、リカバリポイントを手動でカタログ化してください。メタデータは、データベース用に選択した *RMAN カタログの構成* 設定に従って保存されます（デフォルトではターゲット制御ファイル）。関連する保護ポリシーで自動カタログ作成が無効になっている場合にのみ、手動でカタログを作成する必要があります。

@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-workload-support-as-a-preview]]
 === Kubernetes ワークロードのサポート (プレビュー)
 
 このリリースのNetApp Backup and Recoveryでは、Kubernetesワークロードの検出と管理がサポートされるようになりました。

@@ -14,6 +14,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === NetApp ConsoleでONTAPシステムを検出する
 
 ソースのオンプレミスONTAPシステムとセカンダリのオンプレミスONTAPまたはCloud Volumes ONTAPシステムの両方が、 NetApp Consoleの*システム* ページで利用できる必要があります。
@@ -22,6 +23,7 @@ ONTAPクラスタを準備するには、次の手順を実行します。
 
 
 
+[[verify-ontap-system-requirements]]
 === ONTAPのシステム要件を確認する
 
 ONTAPシステムが次の要件を満たしていることを確認してください。

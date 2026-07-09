@@ -18,6 +18,7 @@ NetApp Backup and Recovery は、 1 つの Azure アーカイブ アクセス層
 
 
 
+[[supported-azure-blob-access-tiers-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recoveryでサポートされている Azure BLOB アクセス層
 
 バックアップ ファイルは最初に作成されると、_Cool_ アクセス層に保存されます。この層は、アクセス頻度は低いが、必要なときにすぐにアクセスできるデータを保存するように最適化されています。
@@ -30,6 +31,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azur
 
 
 
+[[restore-data-from-archival-storage]]
 == アーカイブストレージからデータを復元する
 
 古いバックアップ ファイルをアーカイブ ストレージに保存するとクール ストレージよりもはるかに安価になりますが、復元操作のために Azure アーカイブ内のバックアップ ファイルのデータにアクセスすると、時間がかかり、コストも高くなります。

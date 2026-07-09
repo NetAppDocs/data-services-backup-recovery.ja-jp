@@ -18,6 +18,7 @@ NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポ
 
 
 
+[[create-a-protection-report]]
 == 保護レポートを作成する
 
 保護レポートを作成して、クラスタの保護ステータスを表示します。
@@ -46,6 +47,7 @@ NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポ
 
 
 
+[[download-a-protection-report]]
 == 保護レポートをダウンロードする
 
 生成された保護レポートを JSON ファイルまたは PDF ドキュメントとしてダウンロードして、表示および共有できます。
@@ -63,6 +65,7 @@ NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポ
 
 
 
+[[view-a-protection-report]]
 == 保護レポートを表示する
 
 NetApp Backup and Recovery内で保護レポートのインタラクティブな詳細を素早く表示できます。ジョブの概要情報、データ保護ステータス、構成の詳細などを確認できます。
@@ -78,6 +81,7 @@ NetApp Backup and Recovery内で保護レポートのインタラクティブな
 
 
 
+[[delete-a-protection-report]]
 == 保護レポートを削除する
 
 不要になった保護レポートを削除します。

@@ -36,6 +36,7 @@ TIP: NetApp Backup and Recoveryデータベースまたはインデックス カ
 
 
 
+[[restore-netapp-backup-and-recovery-data-to-a-new-console-agent]]
 == NetApp Backup and Recoveryデータを新しいコンソール エージェントに復元します
 
 オンプレミスのコンソール エージェントが動作を停止した場合は、新しいコンソール エージェントをインストールし、 NetApp Backup and Recoveryデータを新しいコンソール エージェントに復元する必要があります。
@@ -65,6 +66,7 @@ NetApp Backup and Recoveryシステムを動作状態に戻すには、次のタ
 
 
 
+[[install-a-new-console-agent-on-a-new-on-premises-linux-host]]
 === 新しいオンプレミス Linux ホストに新しいコンソール エージェントをインストールする
 
 新しいコンソールエージェントをインストールする際は、元のエージェントと同じソフトウェアバージョンをダウンロードしてください。NetApp Backup and Recoveryデータベースへの変更により、新しいソフトウェアバージョンが古いデータベースバックアップで動作しなくなる可能性があります。 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["バックアップデータベースを復元した後、コンソールエージェントソフトウェアを最新バージョンにアップグレードします。"^]できます。
@@ -75,6 +77,7 @@ NetApp Backup and Recoveryシステムを動作状態に戻すには、次のタ
 
 
 
+[[restore-the-netapp-backup-and-recovery-database]]
 === NetApp Backup and Recoveryデータベースを復元する
 
 . バックアップ場所から新しいコンソール エージェント ホストに MySQL バックアップをコピーします。以下では、サンプルファイル名「CBS_DB_Backup_23_05_2023.sql」を使用します。
@@ -126,6 +129,7 @@ mysql> select * from volume;
 
 
 
+[[restore-the-indexed-catalog-files]]
 === インデックスカタログファイルを復元する
 
 . インデックス付きカタログのバックアップ zip ファイル (サンプル ファイル名は「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」を使用します) を、バックアップ場所から「/opt/application/netapp/cbs」フォルダー内の新しいコンソール エージェント ホストにコピーします。
@@ -140,6 +144,7 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 
 
 
+[[discover-your-ontap-clusters-and-storagegrid-systems]]
 === ONTAPクラスタとStorageGRIDシステムを発見
 
 . https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#discover-clusters-using-a-connector["オンプレミスのONTAPシステムをすべて見る"^]以前の環境で利用可能でした。これには、S3 サーバーとして使用したONTAPシステムが含まれます。
@@ -148,6 +153,7 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 
 
 
+[[set-up-the-storagegrid-environment-details]]
 === StorageGRID環境の詳細を設定する
 
 元のコンソールエージェントセットアップで設定されたとおりに、 ONTAPシステムに関連付けられたStorageGRIDシステムの詳細を追加します。 https://docs.netapp.com/us-en/console-automation/index.html["NetApp ConsoleAPI"^] 。
@@ -202,6 +208,7 @@ curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudman
 
 
 
+[[verify-netapp-backup-and-recovery-settings]]
 === NetApp Backup and Recovery設定を確認する
 
 . 各ONTAPシステムを選択し、右側のパネルのバックアップおよびリカバリ サービスの横にある [*バックアップの表示*] をクリックします。

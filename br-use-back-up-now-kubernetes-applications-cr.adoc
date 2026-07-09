@@ -18,6 +18,7 @@ NetApp Backup and Recovery では、カスタムリソース（CR）を使用し
 
 
 
+[[back-up-a-kubernetes-application-now-using-custom-resources]]
 == カスタムリソースを使用してKubernetesアプリケーションを今すぐバックアップ
 
 将来のバックアップとスナップショットのベースラインを確立するため、または最新のデータが保護されていることを確認するために、Kubernetes アプリケーションのバックアップを手動で作成します。
@@ -34,6 +35,7 @@ AWS セッショントークンの有効期限が、長時間実行される s3 
 
 
 
+[[create-a-local-snapshot-using-a-custom-resource]]
 === カスタムリソースを使用してローカルスナップショットを作成する
 
 Kubernetes アプリケーションのスナップショットを作成してローカルに保存するには、特定の属性を持つ Snapshot カスタム リソースを使用します。
@@ -76,6 +78,7 @@ kubectl apply -f local-snapshot-cr.yaml
 
 
 
+[[back-up-an-application-to-an-object-store-using-a-custom-resource]]
 === カスタム リソースを使用してアプリケーションをオブジェクト ストアにバックアップする
 
 アプリケーションをオブジェクト ストアにバックアップするには、特定の属性を持つバックアップ CR を作成します。
@@ -144,6 +147,7 @@ kubectl apply -f object-store-backup-cr.yaml
 
 
 
+[[create-a-3-2-1-fanout-backup-using-a-custom-resource]]
 === カスタムリソースを使用して 3-2-1 ファンアウト バックアップを作成する
 
 3-2-1 ファンアウト アーキテクチャを使用してバックアップすると、バックアップがオブジェクト ストアだけでなくセカンダリ ストレージにもコピーされます。3-2-1 ファンアウト バックアップを作成するには、特定の属性を持つバックアップ CR を作成します。
@@ -202,6 +206,7 @@ kubectl apply -f 3-2-1-fanout-backup-cr.yaml
 
 
 
+[[supported-backup-annotations]]
 == サポートされているバックアップアノテーション
 
 次の表では、バックアップ CR を作成するときに使用できる注釈について説明します。

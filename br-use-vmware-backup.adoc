@@ -23,6 +23,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 
+[[back-up-workloads-now-with-an-on-demand-backup]]
 == オンデマンドバックアップでワークロードを今すぐバックアップ
 
 オンデマンド バックアップをすぐに作成します。システムに変更を加える予定があり、開始する前にバックアップがあることを確認したい場合は、オンデマンド バックアップを実行することをお勧めします。

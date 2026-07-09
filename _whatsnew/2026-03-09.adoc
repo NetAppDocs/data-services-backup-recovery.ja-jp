@@ -4,6 +4,7 @@
 
 
 
+[[ontap-volumes-workloads-enhancements]]
 === ONTAP ボリュームワークロードの機能強化
 
 このリリースでは、ONTAP Volumes ワークロードで次の拡張機能が導入されています：
@@ -20,6 +21,7 @@ ONTAP ボリュームワークロードの保護の詳細については、 http
 
 
 
+[[vmware-workloads-enhancements]]
 === VMwareワークロードの機能強化
 
 このリリースでは、VMware ワークロードに次の拡張機能が導入されています：

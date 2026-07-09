@@ -53,6 +53,7 @@ NOTE: これらの手順では、NetApp Consoleで組織管理者のロールが
 
 
 
+[[related-information]]
 == 関連情報
 
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetApp Console の ID とアクセス管理について説明します"^].

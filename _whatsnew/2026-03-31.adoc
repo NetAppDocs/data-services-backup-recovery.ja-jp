@@ -4,6 +4,7 @@
 
 
 
+[[oracle-database-workloads-enhancements]]
 === Oracle Databaseワークロードの機能強化
 
 今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：

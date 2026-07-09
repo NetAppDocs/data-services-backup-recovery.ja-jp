@@ -20,6 +20,7 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 
 
 
+[[discover-kubernetes-workloads]]
 == Kubernetes ワークロードを発見する
 
 バックアップとリカバリのインベントリで、環境内の Kubernetes ワークロードを検出します。ワークロードを追加すると、NetApp Backup and Recoveryに Kubernetes クラスターが追加されます。その後、アプリケーションを追加し、クラスター リソースを保護できます。
@@ -58,6 +59,7 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 
 
 
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == NetApp Backup and Recoveryダッシュボードに進みます
 
 NetApp Backup and Recoveryダッシュボードを表示するには、次の手順に従います。

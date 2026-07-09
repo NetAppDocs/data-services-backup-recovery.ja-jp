@@ -4,6 +4,7 @@
 
 
 
+[[vmware-workloads-preview-enhancements]]
 === VMware ワークロードのプレビュー機能強化
 
 VMware ワークロードのプレビュー リリースでは、次の拡張機能が導入されています。

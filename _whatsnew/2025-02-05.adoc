@@ -4,6 +4,7 @@
 
 
 
+[[netapp-backup-and-recovery-preview-release]]
 === NetApp Backup and Recoveryプレビュー リリース
 
 NetApp Backup and Recoveryのこのプレビュー リリースでは、NetApp Backup and Recoveryでお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。

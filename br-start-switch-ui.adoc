@@ -18,6 +18,7 @@ summary: さまざまなNetApp Backup and Recoveryワークロードを切り替
 
 
 
+[[switch-to-a-different-workload]]
 == 別のワークロードに切り替える
 
 NetApp Backup and Recovery UI で別のワークロードに切り替えることができます。

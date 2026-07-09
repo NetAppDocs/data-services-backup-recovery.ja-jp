@@ -4,6 +4,7 @@
 
 
 
+[[vmware-workloads-enhancements]]
 === VMwareワークロードの機能強化
 
 今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました。

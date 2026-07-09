@@ -4,6 +4,7 @@
 
 
 
+[[ontap-volume-workloads-enhancements]]
 === ONTAPボリュームワークロードの機能強化
 
 このリリースのONTAPボリューム ワークロードでは、次の拡張機能が導入されています。
@@ -14,6 +15,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-back
 
 
 
+[[vmware-workloads-enhancements]]
 === VMwareワークロードの機能強化
 
 この VMware ワークロードのリリースでは、次の拡張機能が導入されています。
@@ -26,6 +28,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restor
 
 
 
+[[hyper-v-workloads-preview-enhancements]]
 === Hyper-V ワークロードのプレビュー機能強化
 
 このリリースの Hyper-V ワークロードでは、次の拡張機能が導入されています。
@@ -42,6 +45,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restor
 
 
 
+[[kvm-workloads-preview-enhancements]]
 === KVM ワークロードのプレビュー機能強化
 
 KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。

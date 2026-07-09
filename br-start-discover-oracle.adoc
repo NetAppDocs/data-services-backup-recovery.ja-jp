@@ -20,6 +20,7 @@ Oracleデータベースを検出すると、NetApp Backup and Recoveryでバッ
 
 
 
+[[add-an-oracle-database-host-and-discover-resources]]
 == Oracle Databaseホストを追加してリソースを検出する
 
 Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロードを検出できるようにします。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。
@@ -75,6 +76,7 @@ Oracle Database ワークロードは、インベントリ ページのワーク
 
 
 
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == NetApp Backup and Recoveryダッシュボードに進みます
 
 . NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。

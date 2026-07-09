@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-ontap-volume-dashboard]]
 === 強化されたONTAPボリュームダッシュボード
 
 2025 年 4 月には、はるかに高速で効率的な、強化されたONTAPボリューム ダッシュボードのプレビューをリリースしました。
@@ -16,6 +17,7 @@
 
 
 
+[[microsoft-sql-server-workload-support-as-a-public-technology-preview]]
 === パブリック テクノロジー プレビューとしての Microsoft SQL Server ワークロード サポート
 
 NetApp Backup and Recoveryのこのリリースでは、NetApp Backup and Recoveryでお馴染みの 3-2-1 保護戦略を使用して Microsoft SQL Server ワークロードを管理できる更新されたユーザー インターフェイスが提供されます。この新しいバージョンでは、これらのワークロードをプライマリ ストレージにバックアップし、セカンダリ ストレージに複製し、クラウド オブジェクト ストレージにバックアップできます。
