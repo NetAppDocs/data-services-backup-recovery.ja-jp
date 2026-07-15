@@ -18,6 +18,24 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+[[13-july-2026]]
+== 2026年7月13日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP ボリュームワークロードの機能強化
+
+今回のリリースでは、ONTAP Volumes ワークロードに以下の機能強化が導入されました：
+
+*強化されたマルチバケットサポート*：ONTAP 9.19.1以降では、異なるクラウドプロバイダーにまたがるシステムごとに最大100個のバケットを使用して、システム内のボリュームを保護できるようになりました。
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["ONTAP ボリュームワークロードの保護の概要"]を参照してください。
+
+
+
 [[15-june-2026]]
 == 2026年6月15日
 

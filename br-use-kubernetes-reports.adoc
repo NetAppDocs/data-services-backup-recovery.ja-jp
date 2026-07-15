@@ -14,7 +14,7 @@ summary: Kubernetes ワークロードの保護レポートを作成して、成
 [role="lead"]
 NetApp Backup and Recovery では、Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップの種類、クラスターの正常性情報など、保護の状態と詳細を表示します。
 
-*必須NetApp Console ロール* Backup and Recovery super admin、Backup and Recovery backup admin、または Backup and Recovery restore admin。link:reference-roles.html["バックアップとリカバリの役割と権限"]について説明します https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp Console ロール* バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、またはバックアップとリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 

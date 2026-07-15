@@ -28,7 +28,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 オンデマンド バックアップをすぐに作成します。システムに変更を加える予定があり、開始する前にバックアップがあることを確認したい場合は、オンデマンド バックアップを実行することをお勧めします。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
 . [バックアップとリカバリ] メニューから、[*インベントリ*] を選択します。

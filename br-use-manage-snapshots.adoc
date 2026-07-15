@@ -23,7 +23,7 @@ Microsoft SQL Server スナップショットは、NetApp Backup and Recoveryか
 
 削除できるのはローカル スナップショットのみです。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。

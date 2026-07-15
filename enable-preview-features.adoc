@@ -16,7 +16,7 @@ summary: NetApp Backup and Recoveryのプレビュー機能と非表示機能を
 [role="lead"]
 NetApp Backup and Recoveryのプレビュー機能と非表示機能を有効にします。
 
-*必要なNetApp Consoleロール* バックアップおよびリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 

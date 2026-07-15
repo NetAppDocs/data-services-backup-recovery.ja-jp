@@ -19,7 +19,7 @@ NetApp Backup and Recoveryでは、Microsoft SQL Server ワークロードのレ
 [[create-a-protection-report]]
 == 保護レポートを作成する
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者、バックアップおよびリカバリ クローン管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者、バックアップとリカバリのクローン管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*レポート* オプションを選択します。

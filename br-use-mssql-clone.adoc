@@ -30,7 +30,7 @@ NetApp Backup and Recoveryを使用して、開発、テスト、または保護
 * クローンを削除する
 
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 
 

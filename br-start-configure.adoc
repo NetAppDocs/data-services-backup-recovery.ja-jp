@@ -25,7 +25,7 @@ NetApp Consoleをセットアップした後、バックアップとリカバリ
 * <<リソース変換テンプレートを作成する>>リソースを復元する際に、リソースを変更します。
 
 
-*必要なNetApp Consoleロール* バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者、バックアップおよびリカバリ リストア管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 
