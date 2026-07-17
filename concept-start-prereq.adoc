@@ -87,6 +87,7 @@ ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用
 * ONTAP 9.8以降が必要です。
 * FlexGroup ボリューム保護には ONTAP 9.12.1 以降が必要です。詳細については、link:br-reference-limitations.html["ONTAPボリュームのNetApp Backup and Recoveryの既知の制限"] を参照してください。
 * ONTAP 9.17.1以降は、S3互換オブジェクトストレージへのバックアップまたはリストアに必要です。
+* 異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットを使用するには、ONTAP 9.19.1以降が必要です（最大100個のバケットがサポートされています）。
 * オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。
 
 

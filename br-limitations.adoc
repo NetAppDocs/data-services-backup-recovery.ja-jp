@@ -109,7 +109,7 @@ NetApp Backup and Recovery は、 SnapCenterからログのみのバックアッ
 [[host-mapping]]
 === ホストマッピング
 
-SnapCenter には、リソースをホストにマップするストレージ クラスターや SVM がありませんが、 NetApp Backup and Recovery にはあります。オンプレミスのONTAPクラスターまたは SVM は、NetApp Backup and Recoveryプレビュー バージョンではホストにマッピングされません。さらに、 NetApp ConsoleはSVM をサポートしていません。
+SnapCenter にはリソースをホストにマッピングするためのストレージクラスタやストレージ VM はありませんが、NetApp Backup and Recovery にはその機能があります。オンプレミス ONTAP クラスターまたはストレージ VM は、NetApp Backup and Recovery のプレビュー版ではホストにマッピングされません。また、NetApp Console はストレージ VM をサポートしていません。
 
 *回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recoveryで作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recoveryにインポートします。
 

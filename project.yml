@@ -70,8 +70,6 @@ sidebar:
         url: "/prev-ontap-policy-object-advanced-settings.html"
       - title: Cloud Volumes ONTAP をAmazon S3 にバックアップする
         url: "/prev-ontap-backup-cvo-aws.html"
-      - title: Cloud Volumes ONTAP を S3 互換ストレージにバックアップ
-        url: "/prev-ontap-backup-cvo-s3-compatible.html"
       - title: Cloud Volumes ONTAPを Azure Blob にバックアップする
         url: "/prev-ontap-backup-cvo-azure.html"
       - title: Cloud Volumes ONTAPをGoogle Cloudにバックアップする
@@ -84,6 +82,8 @@ sidebar:
         url: "/prev-ontap-backup-onprem-gcp.html"
       - title: オンプレミスのONTAPをONTAP S3 にバックアップする
         url: "/prev-ontap-backup-onprem-ontaps3.html"
+      - title: オンプレミス ONTAP を S3 互換ストレージにバックアップする
+        url: "/prev-ontap-backup-onprem-s3-compatible.html"
       - title: オンプレミスのONTAPをStorageGRIDにバックアップ
         url: "/prev-ontap-backup-onprem-storagegrid.html"
       - title: SnapMirrorを使用してボリュームをCloud Resyncに移行する

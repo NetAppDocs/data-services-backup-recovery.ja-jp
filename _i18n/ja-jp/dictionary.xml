@@ -379,7 +379,6 @@
   <block id="57b1247e7f03d92db03014c3eccb187b" category="paragraph">NetApp Backup and Recovery は、 SnapCenterからログのみのバックアップ ポリシーをインポートしません。  SnapCenterポリシーにログのみのバックアップが含まれている場合、 NetApp Backup and Recovery はリソースをインポートしません。</block>
   <block id="3e198374294563ab1ca9095cfbe697f4" category="paragraph">*回避策*: ログのみのバックアップ以外のバックアップを使用するSnapCenterのポリシーを使用します。</block>
   <block id="1ccf75762b2e153de8560735dcafec7b" category="section-title">ホストマッピング</block>
-  <block id="72988ee77cb813fdfc748963123982d0" category="paragraph">SnapCenter には、リソースをホストにマップするストレージ クラスターや SVM がありませんが、 NetApp Backup and Recovery にはあります。オンプレミスのONTAPクラスターまたは SVM は、NetApp Backup and Recoveryプレビュー バージョンではホストにマッピングされません。さらに、 NetApp ConsoleはSVM をサポートしていません。</block>
   <block id="a22e73b13b82cd076838f09dbdaca099" category="paragraph">*回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recoveryで作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recoveryにインポートします。</block>
   <block id="b76fe15e5efb181107a884a8a169710c" category="section-title">15分間隔ではないスケジュール</block>
   <block id="150bc9b32553d2cdbf1033715f83d268" category="paragraph">特定の時間に開始され、15 分間隔以外の間隔で繰り返されるSnapCenterポリシー スケジュールがある場合、 NetApp Backup and Recoveryそのスケジュールはインポートされません。</block>
@@ -417,7 +416,6 @@
   <block id="09f886550e235192e436c0e4a062288b" category="list-text">SVM-DR ボリュームのバックアップは、次の制限付きでサポートされます。</block>
   <block id="ed09c1b67736709db40a3664c46e855a" category="list-text">バックアップはONTAPセカンダリからのみサポートされます。</block>
   <block id="d587577f2a166dd11688b6c30c3d3cf9" category="list-text">ボリュームに適用されるスナップショット ポリシーは、毎日、毎週、毎月など、 NetApp Backup and Recoveryで認識されるポリシーのいずれかである必要があります。デフォルトの「sm_created」ポリシー (すべてのスナップショットのミラーリングに使用される) は認識されず、DP ボリュームはバックアップ可能なボリュームのリストに表示されません。</block>
-  <block id="757ec8d082a1a9becacdf32c01678f5b" category="list-text">SVM-DR とボリュームのバックアップおよびリカバリは、バックアップがソースまたは宛先のいずれかから取得される場合、完全に独立して動作します。唯一の制限は、SVM-DR がSnapMirrorクラウド関係を複製しないことです。  DR シナリオでは、SVM がセカンダリ ロケーションでオンラインになったときに、 SnapMirrorクラウド関係を手動で更新する必要があります。</block>
   <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroClusterサポート:</block>
   <block id="fa5ec1bbbde705a6b3fbd36d5f35b9f9" category="list-text">ONTAP 9.12.1 GA 以上を使用する場合、プライマリ システムに接続しているときにバックアップがサポートされます。バックアップ構成全体がセカンダリ システムに転送されるため、切り替え後もクラウドへのバックアップが自動的に継続されます。セカンダリ システムにバックアップを設定する必要はありません (実際、設定することは制限されています)。</block>
   <block id="a1e9108dbd21ffa07a61d3c3e7ecf506" category="list-text">ONTAP 9.12.0 以前を使用する場合、バックアップはONTAPセカンダリ システムからのみサポートされます。</block>
@@ -692,7 +690,6 @@
   <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから従量課金制または年間マーケットプレイス サブスクリプションを購入するか、 NetAppから個人ラ​​イセンスを購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。</block>
   <block id="d44c500b8ff5c565a7d3b02d14def6a3" category="paragraph">NetApp Backup and Recoveryのライセンスを取得するには、クラウド プロバイダーから * NetApp Intelligent Services* の従量課金制 (PAYGO) または年間マーケットプレイス サブスクリプションを購入するか、 NetAppからライセンス持ち込み (BYOL) を購入します。システム上でNetApp Backup and Recoveryをアクティブ化し、実稼働データのバックアップを作成し、バックアップ データを実稼働システムに復元するには、有効なライセンスが必要です。</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">読み進める前にいくつか注意事項があります。</block>
-  <block id="02ce7de51e9d88d5d9e2278150758f8b" category="list-text">クラウド プロバイダーのマーケットプレイスでCloud Volumes ONTAPシステムの従量課金制 (PAYGO) サブスクリプションにすでに加入している場合は、 NetApp Backup and Recoveryにも自動的に加入されます。再度登録する必要はありません。</block>
   <block id="0afafddaf42e76b83acff428b8613a7e" category="list-text">NetApp Backup and Recovery のBring Your Own License (BYOL) は、 NetApp Console組織またはアカウントに関連付けられているすべてのシステムで使用できるフローティング ライセンスです。したがって、既存の BYOL ライセンスから十分なバックアップ容量を利用できる場合は、別の BYOL ライセンスを購入する必要はありません。</block>
   <block id="98ed4c44ab8a3c8a5b08f8e91a585c40" category="list-text">BYOL ライセンスを使用している場合は、PAYGO サブスクリプションにも加入することをお勧めします。  BYOL ライセンスで許可されている量よりも多くのデータをバックアップした場合、またはライセンスの有効期限が切れた場合でも、従量課金制サブスクリプションを通じてバックアップは継続され、サービスが中断されることはありません。</block>
   <block id="31f730de563a8876975a231ee55bc4d7" category="list-text">オンプレミスのONTAPデータをStorageGRIDにバックアップする場合は BYOL ライセンスが必要ですが、クラウド プロバイダーのストレージ スペースにはコストはかかりません。</block>
@@ -1159,7 +1156,6 @@
   <block id="f5c50f0f405ba073846066df149c9150" category="paragraph">NetApp Backup and Recovery UI および API から開始したスナップショット、レプリケーション、オブジェクト ストレージへのバックアップ、および復元操作は、[ジョブ監視] タブで利用できます。</block>
   <block id="d263c7d70394e4465e07f91a7cda636c" category="inline-link-macro">NetApp Backup and Recoveryを再起動する方法を学ぶ</block>
   <block id="f12cc055f626f9974e07168ee36fc2b6" category="list-text">NetApp Backup and Recoveryメニューから、*監視* を選択します。</block>
-  <block id="e81a8bad1be4be12a837fcfb49f51617" category="list-text">追加の列 (システム、SVM、ユーザー名、ワークロード、ポリシー名、スナップショット ラベル) を表示するには、プラス記号を選択します。</block>
   <block id="87aa191eff82d3ce3518c07577f209bd" category="section-title">求人リストを検索してフィルタリングする</block>
   <block id="7f8ba7d41d11ab3b1061dbce2eeadb52" category="paragraph">デフォルトでは、ジョブ監視ページには過去 24 時間の保護ジョブと回復ジョブが表示されます。タイムフレーム フィルターを使用してタイムフレームを変更できます。</block>
   <block id="a466bc110c2ee16333fcf19f4e7b5dc2" category="list-text">結果を異なる方法で並べ替えるには、各列見出しを選択し、ステータス、開始時刻、リソース名などで並べ替えます。</block>
@@ -1169,14 +1165,12 @@
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
   <block id="76b0fa668c1cd016096eb9bc1bfde44a" category="list-text">仮想マシン</block>
   <block id="30136395f01879792198317c11831ea4" category="list-text">Kubernetes</block>
-  <block id="72c66d8bb214415b4829ddc521a1d9cf" category="list-text">最初にシステムを選択した場合にのみ、特定の「SVM」内のデータを検索できます。</block>
   <block id="17b4d0b2054bd5ed8d8b6430dc8f6936" category="list-text">「タイプ」で「保護」を選択した場合のみ、「保護タイプ」フィルターを使用して検索できます。</block>
   <block id="63a6a88c066880c5ac42394a22803ca6" category="inline-image-macro">リフレッシュ</block>
   <block id="81651a87dc9c981a87ea4cbde8b47b8b" category="list-text">ページをすぐに更新するには、<block ref="26403496cb9a151e9afeeb59244dd01b" category="inline-image-macro-rx" type="image"></block>ボタン。それ以外の場合、このページは 15 分ごとに更新され、常に最新のジョブ ステータスの結果が表示されます。</block>
   <block id="ec7d92235d0dc6e0acfa017dfe7f1dbd" category="section-title">求人の詳細を見る</block>
   <block id="ee3f8d79ef4be283abca6676023d9d44" category="paragraph">特定の完了したジョブに対応する詳細を表示できます。特定のジョブの詳細を JSON 形式でエクスポートできます。</block>
   <block id="cd9a2b6f2b025e6e8e644553495fcb38" category="paragraph">ジョブ タイプ (スケジュールまたはオンデマンド)、 SnapMirrorバックアップ タイプ (初期または定期) の開始時刻と終了時刻、期間、システムからオブジェクト ストレージに転送されたデータの量、平均転送速度、ポリシー名、有効な保持ロック、実行されたランサムウェア スキャン、保護ソースの詳細、保護ターゲットの詳細などの詳細を表示できます。</block>
-  <block id="0a69ea19b47193a98acb95f75e5f4cd7" category="paragraph">復元ジョブでは、バックアップ ターゲット プロバイダー (Amazon Web Services、Microsoft Azure、Google Cloud、オンプレミス)、S3 バケット名、SVM 名、ソース ボリューム名、宛先ボリューム、スナップショット ラベル、復元されたオブジェクトの数、ファイル名、ファイル サイズ、最終変更日、完全なファイル パスなどの詳細が表示されます。</block>
   <block id="18ace58a9d18e3907eb7cd150e193461" category="list-text">ジョブの名前を選択します。</block>
   <block id="a338f0236c9cd90b94c866169e207597" category="list-text">アクションメニューを選択します<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>[詳細を表示]を選択します。</block>
   <block id="a2f820f1e803ccce8bb7aecd68c2172d" category="list-text">各セクションを展開すると詳細が表示されます。</block>
@@ -1290,7 +1284,6 @@
   <block id="6987bed2ad146152ae0908d4028df162" category="list-text">次の更新スケジュールのみをスキップするには、[*次の更新スケジュールのみをスキップ*] を選択します。</block>
   <block id="81397f7503542040ff1aa87c847e281b" category="list-text">続行するには、[スキップ] を選択します。</block>
   <block id="67728477667cd78a4cb8ac8a3336c7ef" category="paragraph">Microsoft SQL Server ワークロードのクローンを分割できます。クローンを分割すると、クローンから新しいバックアップが作成されます。新しいバックアップを使用してワークロードを復元できます。</block>
-  <block id="f4ed3104414bb69a5dfac99135ef72f2" category="paragraph">クローンを独立したクローンまたは長期クローンとして分割することを選択できます。ウィザードには、SVM の一部であるアグリゲートのリスト、それらのサイズ、およびクローン ボリュームが存在する場所が表示されます。 NetApp Backup and Recovery は、クローンを分割するのに十分なスペースがあるかどうかも示します。クローンを分割すると、クローンはその保護のために独立したデータベースになります。</block>
   <block id="3cc3bf063b3735dfee9852891c6d4ef6" category="list-text">クローンを選択します。</block>
   <block id="42db557ffc18279f75ced7531cb65db0" category="list-text">アクションアイコンを選択します<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *分割クローン*。</block>
   <block id="91a9421f27cf61e52bea5d9c90e7f79e" category="list-text">分割クローンの詳細を確認し、「分割」を選択します。</block>
@@ -1998,7 +1991,6 @@
   <block id="b9ebe3d0d7df348b69f3c32d402c98f6" category="list-text">ポリシーの名前を入力します。</block>
   <block id="45615060bd87b8eea27fbb07754a6988" category="list-text">通常は異なる頻度のスケジュールを最大 5 つ選択します。</block>
   <block id="213a83a67c5e44c90f0095122508333a" category="list-text">*レプリケーション*: 次のオプションを設定します。</block>
-  <block id="38366116579199b8bf119ce514ba9f64" category="list-text">*レプリケーション ターゲット*: 宛先システムと SVM を選択します。必要に応じて、複製先のアグリゲート (複数可) と、複製されたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。</block>
   <block id="e55e33fb51399237a97d05cee7b9666a" category="list-text">*レプリケーション ポリシー*: 既存のレプリケーション ポリシーを選択するか、新しいレプリケーション ポリシーを作成します。</block>
   <block id="d95cbe59cace91277e059a544fd1205f" category="admonition">カスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
   <block id="4664a31b832c67aff8eca0b294275b24" category="list-text">*オブジェクトにバックアップ*: *バックアップ*を選択した場合は、次のオプションを設定します。</block>
@@ -2602,7 +2594,6 @@
   <block id="1a9240d843443385061b2272dcfbfff0" category="admonition">スナップショットをアクティブ化する前にカスタムポリシーを作成する場合は、System ManagerまたはONTAP CLIを使用できます。<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>指示。参照<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block>。</block>
   <block id="ee885caa95dc922f4f4ba9860f7342f6" category="admonition">バックアップとリカバリを使用してカスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
   <block id="18fca8639648ce6584848958e6930ab7" category="list-text">*レプリケーション*: *レプリケーション* を選択した場合は、次のオプションを設定します。</block>
-  <block id="a561f9f7d6518cf18c51a3dd5f3463f7" category="list-text">*レプリケーション ターゲット*: 宛先システムと SVM を選択します。必要に応じて、宛先アグリゲート ( FlexGroupボリュームの場合はアグリゲート) と、複製されたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。</block>
   <block id="f7a5b18ef1b37d992674325263d195c7" category="list-text">*プロバイダー*: * ONTAP S3* を選択します。</block>
   <block id="cb982feddc979c2188ec92e5523339cc" category="list-text">*プロバイダー設定*: S3 サーバーの FQDN の詳細、ポート、ユーザーのアクセス キーとシークレット キーを入力します。</block>
   <block id="dcbc25cc465b9549adcce973442d2b9b" category="paragraph">アクセス キーとシークレット キーは、作成したユーザーがONTAPクラスターに S3 バケットへのアクセス権を付与するためのものです。</block>
@@ -3983,7 +3974,6 @@
   <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。</block>
   <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">*場所* 列には、バックアップ ファイル (スナップショット) が *ローカル* (ソース システム上のスナップショット)、*セカンダリ* (セカンダリONTAPシステム上の複製されたボリューム)、または *オブジェクト ストレージ* (オブジェクト ストレージ内のバックアップ ファイル) のいずれであるかが表示されます。復元するファイルを選択します。</block>
   <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">現時点では、オブジェクト ストレージ内のバックアップ ファイルからのみフォルダーまたは個々のファイルを復元できます。現在、ローカル スナップショットまたはセカンダリ システム (複製されたボリューム) にあるバックアップ ファイルからのファイルとフォルダーの復元はサポートされていません。</block>
-  <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">SnapDiff RPC サーバを SVM 上でアクティブ化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。(SnapDiff は、スナップショット間のファイルとディレクトリの違いをすばやく識別するテクノロジーです。)</block>
   <block id="dff115c532ece3121746427a98f68318" category="list-text">[フィルター条件] 領域で、フィルター条件を選択します。たとえば、データが存在するシステムとファイルの種類（.JPEG ファイルなど）を選択できます。または、オブジェクト ストレージ内の利用可能なスナップショットまたはバックアップ ファイル内のみで結果を検索する場合は、バックアップの場所のタイプを選択できます。</block>
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">結果には、検索したファイルを含むローカル ボリュームのスナップショットとリモートの複製ボリュームが識別されることに注意してください。クラウド バックアップ ファイル、スナップショット、または複製されたボリュームから復元することを選択できます。</block>
   <block id="8cb59bcb28ab4d28eff3f32b41c1619f" category="paragraph">まず、カタログ ファイルを保持するための別のボリュームをマウントする必要があります。これにより、スナップショットを保持するファイルのサイズが大きくなりすぎた場合にデータが失われるのを防ぎます。これはすべてのクラスターで必要なわけではなく、環境内の任意のクラスターから任意の 1 つのボリュームをマウントできます。これを行わないと、インデックスが正しく機能しない可能性があります。</block>
@@ -4015,7 +4005,6 @@
   <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">複数の Hyper-V ホストの VM を使用してリソース グループを作成する</block>
   <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*ホスト登録*: ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力して、新しい Hyper-V ホストを追加します。FQDN がコンソール エージェントによって解決できない場合は、代わりに IP アドレスを使用します。FCI クラスターの場合は、FCI クラスター管理 IP アドレスを入力します。</block>
   <block id="6d397139779cf4483cf1c4693e7f6cfc" category="paragraph">独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>既存のCVOのIAMRoleを作成し、次のJSONブロックをS3権限に追加します。<block ref="2af6fd9ec72aee193ee7ffe09638e08f" prefix=" " category="inline-code"></block>配列。含める必要がある<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>バケットに関連付ける必要のあるすべての必要な権限を割り当てます。</block>
-  <block id="a9069e9a58042b9bc7056398756845ee" category="paragraph">NetApp Backup and Recoveryでは、Browse &amp; Restore を使用してONTAPデータを復元します。復元する前に、ソース ボリューム名、ソース システムと SVM、およびバックアップ ファイルの日付をメモします。スナップショット、複製されたボリューム、またはオブジェクト ストレージに保存されたバックアップからONTAPデータを復元できます。</block>
   <block id="05347845672273f3cffd76e4077cdb51" category="paragraph">復元機能はONTAP のバージョンによって異なります。</block>
   <block id="a03a5900281bf25c93cb811180bba191" category="list-text">*フォルダ:* ONTAP 9.13.0 以降を使用すると、すべてのファイルとサブフォルダを含むフォルダを復元できます。それ以前のバージョンでは、フォルダ内のファイルのみを復元できます。</block>
   <block id="781858cefae9b60efaca9b16a3878de8" category="list-text">*アーカイブ ストレージ:* アーカイブ ストレージ ( ONTAP 9.10.1 以降で利用可能) からの復元は遅くなり、追加コストが発生する可能性があります。</block>
@@ -5497,11 +5486,8 @@
   <block id="59f5ce8a3e5f9160e855499a4f229823" category="paragraph-title">VMwareワークロードを保護するためのロールベースアクセス制御（RBAC）の要件</block>
   <block id="1f3be67622d50eb9ea62feda9571af13" category="list-title">Hyper-V ホストのハードウェア要件</block>
   <block id="b263d5ca79e3126d53a51eb3fd03ecac" category="list-title">NetApp ONTAP 構成要件</block>
-  <block id="5d5680a7be3d76408ed6363c1640e7fc" category="doc">NetApp Backup and RecoveryでCloud Volumes ONTAPデータをS3互換ストレージにバックアップ</block>
-  <block id="2e7a981f8c415a4fe96294fd71792a0b" category="paragraph">NetApp Backup and Recoveryでいくつかの手順を実行して、Cloud Volumes ONTAPシステムからS3へのボリュームデータのバックアップを開始します。</block>
   <block id="9336086de56f2232c24135493cbf6bda" category="paragraph">S3互換ストレージへのボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認するために、以下の要件をお読みください。</block>
   <block id="b7d0815f0ec0cd041cfc786c3cfad8b3" category="list-text">ONTAP バージョン 9.17.1 以降が必要です。</block>
-  <block id="75f4d0076c7eca9a1d297d2060c6cb45" category="list-text">アクティベーションウィザードでは、デフォルトのS3暗号化キーを使用する代わりに、お客様自身が管理するデータ暗号化キーを選択できます。この場合、暗号化管理キーが既に設定されている必要があります<block ref="bfab1fe336406f519c233add80b595e0" category="inline-link-rx"></block>。</block>
   <block id="9e3bfb50997093a7d84dc23aa0af7c64" category="section-title">サポートされているアクション</block>
   <block id="9a6bb04c2b277b55faab469f2d04692b" category="paragraph">S3互換ストレージへのバックアップ時にサポートされている操作は以下のとおりです：</block>
   <block id="1588002f4465aee8a1e35fc95dbebabd" category="list-text">オンプレミス ONTAP から サードパーティの S3 互換オブジェクトストアへの「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびアプリケーション整合性スナップショットのバックアップ</block>
@@ -5520,8 +5506,6 @@
   <block id="0d73a47a2cdaa77e5fe1479284fcc8ba" category="list-text">*パフォーマンスは保証されません*：NetApp製品はS3 APIのレイテンシとIOPSに影響を受けやすいです。サードパーティ製のオブジェクトストアは、同等のパフォーマンスを実現するために、AWS S3と同等のレイテンシとIOPSを提供する必要があります。NetAppは、オブジェクトストアのパフォーマンスに関するトラブルシューティングは行いません。</block>
   <block id="4ac196401fdad84265362b1b0e047ea0" category="list-text">*データ破損または損失に対する責任の免責*：NetAppは、サードパーティのS3オブジェクトストアの問題によって発生したデータ損失やサービス停止については、一切責任を負いません。</block>
   <block id="f8e460b636103f574efa0d2b39500fdc" category="list-text">*限定的な機能サポート*：サードパーティの S3 互換ターゲットでサポートされている機能セットは、ネイティブターゲット（AWS S3、Azure Blob、GCP、ONTAP S3、StorageGRID）で使用可能な機能のサブセットです。</block>
-  <block id="9c8180fab30cdf8105c99bb565100576" category="list-text">Cloud Volumes ONTAPシステムがONTAP 9.12.1以降のソフトウェアを実行している場合、そのシステムに権限を提供するIAMロールには、最新の<block ref="7599ab7904564916c5665aaaf7f92943" category="inline-link-rx"></block>からNetApp Backup and Recovery専用の新しいS3互換権限セットを含める必要があります。</block>
-  <block id="13ca93dfb9b89bc63ebd2a7dcdb6b677" category="paragraph">バックアップ用の S3 互換の宛先が *システム* ページにクラスターとして存在する場合は、クラスターを S3 互換システムにドラッグしてセットアップ ウィザードを開始できます。</block>
   <block id="47d7a1c349dd710c7b70de2cc5f8bef1" category="admonition">Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="811a794fc3af22bb5e0566f56adc0406" category="list-text">S3互換ストレージ</block>
@@ -5566,7 +5550,6 @@
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">詳細情報</block>
   <block id="0714572f5e60fbb935fc53015369f585" category="list-text"><block ref="0714572f5e60fbb935fc53015369f585" category="inline-link-rx"></block></block>
   <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026年6月8日</block>
-  <block id="83600b516c30dfc55e0311442c5d9002" category="sidebar">Cloud Volumes ONTAP を S3 互換ストレージにバックアップ</block>
   <block id="3a6182405315948a2b482f267396231c" category="admonition">「オンプレミス ONTAP システム」には、FAS、AFF、ONTAP Select の各システムが含まれます。</block>
   <block id="248bbbcb51ef3ddd3bd9dc8e6ef8b5a1" category="list-text">*Trident Protect 26.06*：このリリースには Trident Protect 26.06 が含まれます。</block>
   <block id="a322829a7429e3dce13d41945775197c" category="list-text">*復元時のアプリケーション作成をスキップ*：復元操作中に、アプリケーションのカスタムリソースオブジェクトの自動作成をスキップできるようになりました。これにより、アプリケーションインベントリにおける不要なエントリが削減されます。</block>
@@ -5631,7 +5614,6 @@
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">SMB共有を使用して仮想マシンデータを保存するHyper-V展開の場合、ONTAPシステムで継続的可用性共有プロパティが有効になっていることを確認してください。手順については、<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>を参照してください。</block>
   <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">マーケットプレイスから年間契約を結んでいる場合、NetApp Backup and Recovery の利用料金は、当該契約に基づいて課金されます。</block>
   <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">クラスター名を入力し、クラスターで使用するコンソールエージェントを選択してください。</block>
-  <block id="59ff3234d92baf85ab9719aa478962eb" category="paragraph">*強化されたマルチバケットサポート*：ONTAP 9.19.1以降では、異なるクラウドプロバイダーにまたがるシステムごとに最大100個のバケットを使用して、システム内のボリュームを保護できるようになりました。</block>
   <block id="c1ec49703505f57531225059c7c36779" category="paragraph">*必須 NetApp コンソールロール* バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>を参照してください。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block></block>
   <block id="6dd3c7c1ba8e65da85c3e2fe08fa8a94" category="paragraph">*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>を参照してください。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block></block>
   <block id="48581c2684fab807e94bda181c201389" category="paragraph">*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block></block>
@@ -5649,4 +5631,26 @@
   <block id="e5b682be117d99f07d8f1223cbe827ea" category="paragraph">*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
   <block id="6077c15fad6f07f1de9a676f2c04e33a" category="paragraph">*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
+  <block id="66591c0e71be05bd24e1869944b92db6" category="doc">すべてのワークロードに対するマルチバケットサポートの強化</block>
+  <block id="fca26b0431792befd32dc54e69c74dc4" category="paragraph">今回のバックアップおよびリカバリのリリースでは、異なるクラウドプロバイダーにまたがるシステムごとに最大100個のバケットを使用して、システム内のワークロードを保護できるようになりました。</block>
+  <block id="9bf2c1ebc9be74ae2e995a0a4dab1fec" category="paragraph">NetApp Backup and Recovery の詳細については、<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="d29362a340bc3ab282b7ab00a7a252e8" category="paragraph">SnapCenter にはリソースをホストにマッピングするためのストレージクラスタやストレージ VM はありませんが、NetApp Backup and Recovery にはその機能があります。オンプレミス ONTAP クラスターまたはストレージ VM は、NetApp Backup and Recovery のプレビュー版ではホストにマッピングされません。また、NetApp Console はストレージ VM をサポートしていません。</block>
+  <block id="528479df4d34d5d63a688250da8bc886" category="list-text">SVM-DRとボリュームのバックアップおよびリカバリは、バックアップがソースまたは宛先のどちらから取得された場合でも、完全に独立して動作します。唯一の制限は、SVM-DRがSnapMirrorクラウドリレーションシップをレプリケートしないことです。DRシナリオでストレージVMがセカンダリロケーションでオンラインになった場合、SnapMirrorクラウドリレーションシップを手動で更新する必要があります。</block>
+  <block id="40fa5b4c3e42391728efc3c4f6c26f09" category="list-text">追加の列（System、ストレージVM、ユーザー名、ワークロード、ポリシー名、Snapshot ラベル）を表示するには、プラス記号を選択します。</block>
+  <block id="ba92b1a20870ba2e4e62480d0f546f50" category="list-text">特定のストレージVM内のデータを検索するには、まずシステムを選択する必要があります。</block>
+  <block id="e3474dde8545c53e3274ed9c9b64005c" category="paragraph">リストアジョブには、バックアップターゲットプロバイダー （Amazon Web Services、Microsoft Azure、Google Cloud、オンプレミス）、S3バケット名、ストレージVM名、ソースボリューム名、宛先ボリューム、スナップショットラベル、復元されたオブジェクト数、ファイル名、ファイルサイズ、最終更新日、および完全なファイルパスなどの詳細が表示されます。</block>
+  <block id="f9740f6d9a7b17271d0bd9c950beb364" category="paragraph">クローンを独立したクローンまたは長期クローンとして分割することを選択できます。ウィザードには、ストレージVMに含まれるアグリゲートの一覧、それぞれのサイズ、およびクローンされたボリュームの保存場所が表示されます。NetApp Backup and Recoveryは、クローンを分割するのに十分な空き容量があるかどうかも示します。クローンが分割されると、そのクローンは保護のための独立したデータベースになります。</block>
+  <block id="f8a8c54321528bdfeaace1c0344da0e3" category="list-text">異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットを使用するには、ONTAP 9.19.1以降が必要です（最大100個のバケットがサポートされています）。</block>
+  <block id="5f215f7c34f6e7e676381bc568270c08" category="list-text">*レプリケーション対象*：宛先システムとストレージVMを選択します。必要に応じて、宛先アグリゲート（または FlexGroup ボリュームの場合は複数のアグリゲート）と、レプリケートされたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。</block>
+  <block id="84894d14ff1ffc8ca882274f258dab82" category="doc">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPデータをS3互換ストレージにバックアップします</block>
+  <block id="b4e544c2a798b61cb8be540d9a98bdd7" category="paragraph">いくつかの手順を実行して、NetApp Backup and Recovery を使用して、プライマリオンプレミス ONTAP システムからボリュームデータのバックアップを開始します。バックアップをセカンダリ ONTAP ストレージシステム（レプリケートされたボリューム）、S3 互換ストレージシステムのバケット、またはその両方に送信できます。</block>
+  <block id="c311735fe85134dfe51a4a6cdafb11de" category="paragraph">S3互換ストレージにデータをバックアップする場合、コンソールエージェントがオンプレミスまたはクラウド上に用意されている必要があります。新しいコンソールエージェントをインストールするか、現在選択されているコンソールエージェントが以下のいずれかの場所に存在することを確認する必要があります。オンプレミスのコンソールエージェントは、インターネット接続の有無にかかわらず、サイトにインストールできます。</block>
+  <block id="5fde041a1aeca3ef763d357a8d17b51c" category="list-text">S3互換サーバーへのポート443経由のHTTPS接続</block>
+  <block id="1d7082d9ae189f004a6b8cc9231126d2" category="paragraph">標準的なSaaS環境でNetApp Backup and Recoveryを使用する場合、NetApp Backup and Recoveryの設定データはクラウドにバックアップされます。インターネットにアクセスできないサイトでNetApp Backup and Recoveryを使用する場合、NetApp Backup and Recoveryの設定データは、バックアップが保存されているS3互換バケットにバックアップされます。</block>
+  <block id="ca97e74b4b30d744f09e1f3ab3ea2335" category="admonition">S3互換ストレージへのファイルバックアップ時には、PAYGOライセンスはサポートされていません。</block>
+  <block id="5f4ed6aee4f9190d719afb22dbc9b46f" category="list-text">ONTAP クラスターは、バックアップおよびリストア操作のために、クラスター間 LIF から S3 互換サーバーへのユーザー指定ポートを介した HTTPS 接続を開始します。ポートはバックアップのセットアップ時に設定できます。</block>
+  <block id="844fc7abbe7e8885979a95956cae4413" category="list-text">*レプリケーション対象*：宛先システムとストレージVMを選択します。必要に応じて、宛先アグリゲート（FlexGroupボリュームの場合は複数のアグリゲート）と、レプリケートされたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。</block>
+  <block id="77b3f26262e74232411c4a9845e78dd4" category="paragraph">NetApp Backup and Recovery を使用して、Browse &amp; Restore で ONTAP データを復元します。復元する前に、ソースボリューム名、ソースシステムとストレージ VM、およびバックアップファイルの日付をメモしておいてください。ONTAP データは、スナップショット、レプリケートされたボリューム、またはオブジェクトストレージに保存されているバックアップから復元できます。</block>
+  <block id="ddba76f3680bcef2d5a8170c73d395e7" category="list-text">SnapDiff RPC サーバーをストレージ VM 上で有効化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。（SnapDiff は、スナップショット間のファイルとディレクトリの差異を迅速に識別するテクノロジーです。）</block>
+  <block id="e6932ee3628baaf132027b16f688c205" category="sidebar">オンプレミス ONTAP を S3 互換ストレージにバックアップする</block>
 </blocks>
