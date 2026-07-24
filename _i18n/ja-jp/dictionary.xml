@@ -1846,7 +1846,6 @@
   <block id="6106f73de41b0409a6e5dd18d2f2baf3" category="list-text">Hyper-V ホスト上のNetApp Hyper-V プラグインには最低 1 GB の RAM が必要です</block>
   <block id="6736478116770d132993185ee55b6baf" category="list-text">Hyper-Vホスト上のプラグイン用に最低5GBのインストールおよびログ領域が必要</block>
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">Hyper-V ホストにログ フォルダー用の十分なディスク領域を割り当て、その使用状況を定期的に監視するようにしてください。必要なスペースは、バックアップとデータ保護操作の実行頻度によって異なります。十分なスペースがない場合、ログは生成されません。</block>
-  <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">プライマリONTAPシステム（ONTAP 9.14.1 以降）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAPのドキュメント</block>
   <block id="f6e9a28cc6109da66451b7ed0caaea35" category="list-text">ONTAP S3の場合、コンソールエージェントは、オンプレミス（インターネットアクセスの有無にかかわらず）またはクラウドプロバイダー環境に導入できます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律上の表示</block>
@@ -5640,7 +5639,6 @@
   <block id="ba92b1a20870ba2e4e62480d0f546f50" category="list-text">特定のストレージVM内のデータを検索するには、まずシステムを選択する必要があります。</block>
   <block id="e3474dde8545c53e3274ed9c9b64005c" category="paragraph">リストアジョブには、バックアップターゲットプロバイダー （Amazon Web Services、Microsoft Azure、Google Cloud、オンプレミス）、S3バケット名、ストレージVM名、ソースボリューム名、宛先ボリューム、スナップショットラベル、復元されたオブジェクト数、ファイル名、ファイルサイズ、最終更新日、および完全なファイルパスなどの詳細が表示されます。</block>
   <block id="f9740f6d9a7b17271d0bd9c950beb364" category="paragraph">クローンを独立したクローンまたは長期クローンとして分割することを選択できます。ウィザードには、ストレージVMに含まれるアグリゲートの一覧、それぞれのサイズ、およびクローンされたボリュームの保存場所が表示されます。NetApp Backup and Recoveryは、クローンを分割するのに十分な空き容量があるかどうかも示します。クローンが分割されると、そのクローンは保護のための独立したデータベースになります。</block>
-  <block id="f8a8c54321528bdfeaace1c0344da0e3" category="list-text">異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットを使用するには、ONTAP 9.19.1以降が必要です（最大100個のバケットがサポートされています）。</block>
   <block id="5f215f7c34f6e7e676381bc568270c08" category="list-text">*レプリケーション対象*：宛先システムとストレージVMを選択します。必要に応じて、宛先アグリゲート（または FlexGroup ボリュームの場合は複数のアグリゲート）と、レプリケートされたボリューム名に追加されるプレフィックスまたはサフィックスを選択します。</block>
   <block id="84894d14ff1ffc8ca882274f258dab82" category="doc">NetApp Backup and Recoveryを使用して、オンプレミスのONTAPデータをS3互換ストレージにバックアップします</block>
   <block id="b4e544c2a798b61cb8be540d9a98bdd7" category="paragraph">いくつかの手順を実行して、NetApp Backup and Recovery を使用して、プライマリオンプレミス ONTAP システムからボリュームデータのバックアップを開始します。バックアップをセカンダリ ONTAP ストレージシステム（レプリケートされたボリューム）、S3 互換ストレージシステムのバケット、またはその両方に送信できます。</block>
@@ -5653,4 +5651,7 @@
   <block id="77b3f26262e74232411c4a9845e78dd4" category="paragraph">NetApp Backup and Recovery を使用して、Browse &amp; Restore で ONTAP データを復元します。復元する前に、ソースボリューム名、ソースシステムとストレージ VM、およびバックアップファイルの日付をメモしておいてください。ONTAP データは、スナップショット、レプリケートされたボリューム、またはオブジェクトストレージに保存されているバックアップから復元できます。</block>
   <block id="ddba76f3680bcef2d5a8170c73d395e7" category="list-text">SnapDiff RPC サーバーをストレージ VM 上で有効化する必要があります。システムでインデックス作成を有効にすると、コンソールはこれを自動的に実行します。（SnapDiff は、スナップショット間のファイルとディレクトリの差異を迅速に識別するテクノロジーです。）</block>
   <block id="e6932ee3628baaf132027b16f688c205" category="sidebar">オンプレミス ONTAP を S3 互換ストレージにバックアップする</block>
+  <block id="4ad36f854b6d4d49c94081fec1b29de2" category="list-text">異なるクラウドプロバイダー間でシステムごとに6つ以上のバケット（最大100バケットまで）をサポートするには、ONTAP 9.19.1以降が必要です。</block>
+  <block id="59ebd83b4c20d2b24ac46c96525c37fc" category="list-text">ONTAP 9.13.1以降（異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットをサポートするにはONTAP 9.19.1以降が必要です。最大100バケットまで）</block>
+  <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">プライマリONTAPシステム（ONTAP 9.14.1以降 - 異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットをサポートするにはONTAP 9.19.1以降が必要です。最大100バケットまで）</block>
 </blocks>
