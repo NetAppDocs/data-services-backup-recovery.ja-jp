@@ -7,6 +7,6 @@
 [[enhanced-multi-bucket-support-for-all-workloads]]
 === すべてのワークロードに対するマルチバケットサポートの強化
 
-今回のバックアップおよびリカバリのリリースでは、異なるクラウドプロバイダーにまたがるシステムごとに最大100個のバケットを使用して、システム内のワークロードを保護できるようになりました。
+NetApp Backup and Recovery は、異なるクラウドプロバイダーにまたがる最大 100 個のバケットを使用して、システム内のワークロードを保護する機能をサポートするようになりました。システムあたり 6 つを超えるバケットをサポートするには、ONTAP 9.19.1 以降が必要です。
 
 NetApp Backup and Recovery の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recoveryについて学ぶ"]を参照してください。
