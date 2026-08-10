@@ -2,7 +2,7 @@
 settings:
   name: NetApp Backup and Recovery
   release_notes_autogen:
-    release_notes_repo: console-relnotes
+    release_notes_repo: console-local-relnotes, console-relnotes
   internal:
     pdf_enabled: true
   prod:
@@ -60,8 +60,14 @@ sidebar:
       entries:
       - title: ONTAPボリュームワークロードの保護の概要
         url: "/prev-ontap-protect-overview.html"
+      - title: ボリュームを保護するためにバックアップとリカバリを有効にする
+        url: "/br-start-enable.html"
+      - title: ボリューム検索とリストアのパフォーマンスを向上（NetApp Console ローカル展開向け）
+        url: "/prev-ontap-protect-migrate-pvc.html"
       - title: ONTAPボリュームの保護を計画する
         url: "/prev-ontap-protect-journey.html"
+      - title: アクティベーションなしで ONTAP システムとボリュームを検出する
+        url: "/prev-ontap-discover-no-activate.html"
       - title: ONTAPボリュームのポリシーを管理する
         url: "/prev-ontap-policy-manage.html"
       - title: ONTAPボリュームのオブジェクトへのバックアップポリシーオプション

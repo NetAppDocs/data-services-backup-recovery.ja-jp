@@ -376,7 +376,7 @@ NOTE: 顧客管理キー暗号化は、Amazon FSx for NetApp ONTAP でのみサ�
 . AWS コンソールからエンドポイントの DNS 名を取得します。
 . VPC S3 エンドポイントから証明書を取得します。これを実行するには https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["コンソールエージェントをホストするVMにログインする"^]次のコマンドを実行します。エンドポイントの DNS 名を入力するときは、先頭に「*」を置き換えて「bucket」を追加します。
 +
-[source, console]
+[source, shell]
 ----
 openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vpce.amazonaws.com:443 -showcerts
 ----
@@ -396,9 +396,9 @@ GqvbOz/oO2NWLLFCqI+xmkLcMiPrZy+/6Af+HH2mLCM4EsI2b+IpBmPkriWnnxo=
 ----
 . ONTAPクラスタ CLI にログインし、次のコマンドを使用してコピーした証明書を適用します (独自のストレージ VM 名に置き換えます)。
 +
-[source, console]
+[source, shell]
 ----
-cluster1::> security certificate install -vserver cluster1 -type server-ca
+security certificate install -vserver cluster1 -type server-ca
 Please enter Certificate: Press <Enter> when done
 ----
 

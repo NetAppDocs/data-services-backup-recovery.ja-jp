@@ -23,7 +23,7 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 [[discover-kubernetes-workloads]]
 == Kubernetes ワークロードを発見する
 
-バックアップとリカバリのインベントリで、環境内の Kubernetes ワークロードを検出します。ワークロードを追加すると、NetApp Backup and Recoveryに Kubernetes クラスターが追加されます。その後、アプリケーションを追加し、クラスター リソースを保護できます。
+NetApp Backup and Recoveryのインベントリで、環境内のKubernetesワークロードを検出します。ワークロードを追加すると、KubernetesクラスターがNetApp Backup and Recoveryに追加されます。その後、アプリケーションを追加してクラスターリソースを保護できます。必要に応じて、NetApp Consoleのローカル展開を使用して、エアギャップされたローカルのKubernetesリソースを検出することもできます。
 
 [NOTE]
 ====
@@ -39,18 +39,45 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 
 . *Kubernetes* ワークロード タイプを選択します。
 . クラスター名を入力し、クラスターで使用するコンソールエージェントを選択してください。
-. 表示されるコマンド ラインの指示に従います。
 +
-** Trident Protect ネームスペースを作成する
-** Kubernetesシークレットを作成する
-** Helmリポジトリを追加する
-** Trident Protectおよび Trident Protect コネクタのインストールまたはアップグレード
+Backup and Recoveryでは、選択したインストール タイプの選択に応じて異なる手順が提供されます。NetApp Consoleのローカル展開を使用する場合は、外部ネットワークに接続されていないエアギャップ環境のリソースを検出できる手順を選択できます。
+
+. Kubernetes クラスターに Trident Protect をインストールする手順を確認するには、インストール タイプの選択を選択してください：
 +
-これらの手順により、 NetApp Backup and Recovery がクラスターと対話できるようになります。
+** 外部ネットワーク接続を持つクラスターを検出するには、*接続済み*を選択してください。
+** 外部ネットワークに接続されていないクラスターを検出するには、*エアギャップ*を選択してください。
++
+[role="tabbed-block"]
+====
+.接続済みの検出
+--
+... Backup and Recovery に表示されるコマンドラインの手順に従ってください。これらの手順により、Backup and Recovery がクラスターと連携できるようになります。
 
 
+--
+.エアギャップ検出
+--
+... プライベート Docker コンテナレジストリの URL を入力してください。このレジストリは、インストール中に Trident Protect および Trident Protect Connector イメージをダウンロードするために使用されます。
+... プライベートコンテナレジストリで認証が必要な場合は、以下のいずれかの方法を使用してレジストリの認証情報を設定してください。
++
+**** *ノードレベル認証*：各ノードのコンテナランタイムでレジストリ認証情報を設定します。設定が完了すると、すべてのポッドは追加の Helm 設定を必要とせずにイメージをプルできます。
+**** *Kubernetes image pull secret*: Kubernetes image pull secret を `trident-protect`名前空間に作成し、Trident Protect のインストール手順の Helm アップグレード手順中にそれを参照します：
++
+[source, console]
+----
+--set trident-protect.imagePullSecrets[0].name=<pull-secret-name>
+--set connector.imagePullSecrets[0].name=<pull-secret-name>
+----
 
-. 手順を完了したら、[*検出*] を選択します。
+
+... Backup and Recovery に表示されるコマンドラインの手順に従い、必要に応じて Helm ステップ中にイメージプルシークレット情報を追加してください。これらの手順により、Backup and Recovery がクラスターと連携できるようになります。
+
+
+--
+====
+
+
+. Trident Protect のインストール手順が完了したら、「検出」を選択します。
 +
 クラスターがインベントリに追加されます。
 
@@ -65,7 +92,7 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 NetApp Backup and Recoveryダッシュボードを表示するには、次の手順に従います。
 
 . NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
-. ワークロード タイル (Microsoft SQL Server など) を選択します。
+. Kubernetesワークロードタイルを選択します。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 +

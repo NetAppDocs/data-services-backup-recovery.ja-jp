@@ -247,6 +247,8 @@ NetApp Backup and Recovery の電子メールアラートを受信するには�
 
 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["バックアップおよび復元ジョブのアラートメールを送信する方法を学びます"^]。
 
+https://docs.netapp.com/us-en/console-local/task-alert-rules-manage.html["NetApp Console ローカル展開でアラートの通知ルールを設定する"^]。
+
 .手順
 . コンソールメニューから（image:icon_bell.png["通知ベル"] ）。
 . 通知を確認します。

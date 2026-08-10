@@ -126,7 +126,7 @@ NOTE: リストから仮想マシンを選択した場合、アプリケーシ�
 ====
 アプリケーションがすでに作成された後にこのアノテーションを適用する必要がある場合は、次のコマンドを使用できます：
 
-[source, console]
+[source, shell]
 ----
 kubectl annotate application -n <application CR namespace> <application CR name> protect.trident.netapp.io/skip-vm-freeze="true"
 ----
@@ -216,7 +216,7 @@ spec:
 
 . 環境に合わせてアプリケーション CR を作成したら、CR を適用します。例：
 +
-[source, console]
+[source, shell]
 ----
 kubectl apply -f my-app-name.yaml
 ----

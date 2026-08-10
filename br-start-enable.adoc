@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: br-start-enable.html 
+keywords: backup, Backup and Recovery, enable backup, Console, service, local deployment 
+summary: NetApp Console またはローカル展開の NetApp Console でシステムのバックアップとリカバリを有効にします。 
+---
+= ボリュームを保護するためにバックアップとリカバリを有効にする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP ボリュームのワークロードを保護する前に、NetApp Console または NetApp Console のローカル展開でストレージシステムの NetApp Backup and Recovery を有効にする必要があります。バックアップとリカバリ機能は、システムを追加する際に有効にすることも、後から有効にすることもできます。
+
+
+
+[[enable-backup-and-recovery-in-netapp-console]]
+== NetApp ConsoleでBackup and Recoveryを有効にする
+
+NetApp Console でバックアップとリカバリサービスを有効にします。
+
+.手順
+. 「ボリューム」メニューを選択します。
+. ボリューム保護の概要ページから、*バックアップ設定*を選択します。
+. バックアップを有効にするシステムを特定し、*バックアップを有効にする* ボタンを選択してください。
+. *次へ*を選択します。
+. 保護するソースボリュームを選択し、*次へ*を選択します。
+. 「バックアップ戦略の定義」ページで、バックアップアーキテクチャを選択し、ローカルスナップショット、レプリケートボリューム、およびバックアップファイルに関するポリシーやその他の詳細を定義します。このシステムで最初に有効化したボリュームのバックアップオプションの詳細を確認します。次に「次へ」を選択します。
+. オプションとして、Backup and Recovery で、不一致のバックアップ、スナップショット、およびレプリケーションのラベルを自動的に修正するように設定できます。
+. このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。
+. 保護したボリュームは、「ボリュームの概要」ページに表示されます。
+
+
+
+
+[[enable-backup-and-recovery-in-netapp-console-local-deployment]]
+== NetApp Consoleのローカルデプロイでバックアップとリカバリを有効にする
+
+NetApp Console のローカル展開でバックアップとリカバリサービスを有効にします。
+
+.開始する前に
+NetApp Backup and Recovery のライセンスを取得していることを確認してください。詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["ライセンスを取得する"^]を参照してください。
+
+.手順
+. NetApp Console メニューから、*ストレージ > フリート* を選択します。
+. 必要に応じて、*Add fleet* を選択してフリートの詳細を追加してください。
+. *「管理」>「ライセンス」*を選択してください。
+. バックアップとリカバリのライセンスを追加するには、*ライセンスの追加*を選択してください。ライセンスの追加に関する詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#add-a-license["ライセンスの追加"^]を参照してください。
+. *ストレージ*＞*フリート*を選択し、*システム*メニューを開きます。
+. システムを追加するには「追加」を選択し、システムの詳細を入力して、「追加」を選択して新しいシステムを保存します。
+. システムを選択し、クラスターを選択してください。ページ右側の情報パネルで、Backup and Recoveryサービスの「有効にする」ボタンを選択してください。
+. 「バックアップボリューム」を選択します。
+. *次へ*を選択します。
+. 保護するソースボリュームを選択し、*次へ*を選択します。
+. 「バックアップ戦略の定義」ページで、バックアップアーキテクチャを選択し、ローカルスナップショット、レプリケートボリューム、およびバックアップファイルに関するポリシーやその他の詳細を定義します。このシステムで最初に有効化したボリュームのバックアップオプションの詳細を確認します。次に「次へ」を選択します。
+. オプションとして、Backup and Recovery で、不一致のバックアップ、スナップショット、およびレプリケーションのラベルを自動的に修正するように設定できます。
+. このボリュームのバックアップ設定を確認し、「バックアップのアクティブ化」を選択します。
+. 保護したボリュームは、「ボリュームの概要」ページに表示されます。
+

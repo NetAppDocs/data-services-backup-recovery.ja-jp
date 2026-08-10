@@ -20,6 +20,113 @@ NetApp Backup and Recovery、サービスを使用するために、まず Micro
 
 
 
+[[configure-dns-for-air-gapped-host-discovery-in-netapp-console-local-deployment]]
+== NetApp Console ローカル展開におけるエアギャップホスト検出のための DNS の設定
+
+NetApp Console のローカル展開をエアギャップ環境で使用しており、標準の DNS を介してデータベース ホストにアクセスできない場合は、RKE2 CoreDNS の内部構成を一時的に変更する必要があります。これにより、ポッドはクラスター内の特定のホスト名を IP アドレスに解決できるようになります。これは、ノード上の `/etc/hosts`にエントリを追加するのと似ています。
+
+
+IMPORTANT: 変更を加える前に、既存のCoreDNS設定を確認し、既存のカスタマイズ設定を上書きしないようにしてください。この変更を適用するには、RKE2マニフェストを使用してください。これにより、RKE2オペレーターとランタイムによって変更が一貫して管理されるようになります。
+
+.開始する前に
+* 可能な限り、HelmChartConfig ファイルを変更管理下に置いてください。
+* CoreDNSの上書きの目的が明確になるように、分かりやすいファイル名を使用してください。
+* 想定される DNS レコードが Corefile に表示されない場合は、RKE2 サーバーのログを確認し、マニフェスト ファイルの構文を確認してください。
+
+
+.手順
+. 既存の CoreDNS 設定を確認して、既存の変更を上書きしていないことを確認してください：
++
+[source, shell]
+----
+kubectl -n kube-system get cm rke2-coredns-rke2-coredns -o jsonpath='{.data.Corefile}'
+----
+. 以下のコマンドブロックをコピーし、 `configBlock`エリアを編集して静的DNSレコードを追加してください。これにより、RKE2のマニフェストフォルダにHelmChartConfig YAMLファイルが作成され、RKE2はこれを自動的に適用してCoreDNSの設定を上書きします。
++
+[source, shell]
+----
+sudo tee /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml >/dev/null <<'YAML'
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rke2-coredns
+  namespace: kube-system
+spec:
+  # NOTE: This is a HelmChartConfig that *overlays* values onto the rke2-coredns
+  # HelmChart already managed by RKE2. RKE2 watches /var/lib/rancher/rke2/server/manifests
+  # and will re-render the rke2-coredns Helm release whenever this file changes.
+  #
+  # The `servers:` list below REPLACES the chart's default server definition,
+  # so every plugin that was in the stock Corefile must be present here.
+  # Do NOT delete plugins you don't recognize -- they are required for cluster DNS.
+  valuesContent: |-
+    servers:
+    - zones:
+      - zone: .
+      port: 53
+      plugins:
+      - name: errors
+      - name: health
+        configBlock: |-
+          lameduck 10s
+      - name: ready
+      - name: kubernetes
+        parameters: cluster.local in-addr.arpa ip6.arpa
+        configBlock: |-
+          pods insecure
+          fallthrough in-addr.arpa ip6.arpa
+          ttl 30
+      # ───────────────────────── EDIT BELOW ─────────────────────────
+      # Static DNS records for hosts the corporate DNS cannot resolve.
+      # Format:  <IP>  <FQDN>  [optional aliases...]
+      # `fallthrough` MUST stay as the last line -- it lets every other
+      # name go to the upstream resolver via the `forward` plugin below.
+      - name: hosts
+        configBlock: |-
+          1.2.3.4 example.domain.com exampleshortname
+          fallthrough
+      # ───────────────────────── EDIT ABOVE ─────────────────────────
+      - name: prometheus
+        parameters: 0.0.0.0:9153
+      - name: forward
+        parameters: . /etc/resolv.conf
+      - name: cache
+        parameters: 30
+      - name: loop
+      - name: reload
+      - name: loadbalance
+YAML
+sudo chmod 600 /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
+. CoreDNS が変更を認識したことを確認します。
++
+[source, shell]
+----
+kubectl -n kube-system get cm rke2-coredns-rke2-coredns -o jsonpath='{.data.Corefile}'
+----
++
+数分経っても変更が反映されない場合は、CoreDNS のデプロイメントを再起動し、Corefile を再度確認してください：
+
++
+[source, shell]
+----
+kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
+----
+. データベースホストを検出した後にエントリを削除する必要がある場合は、次の手順を実行してください。
++
+.. マニフェストフォルダから HelmChartConfig ファイルを削除します。
+.. CoreDNS のデプロイメントを再起動します。
++
+[source, shell]
+----
+kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
+----
+
+
+
+
+
+
 [[discover-microsoft-sql-server-workloads-and-optionally-import-snapcenter-resources]]
 == Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします
 

@@ -34,7 +34,7 @@ RESTORE_SKIP_NAMESPACE_ANNOTATIONS
 ----
 復元またはフェイルオーバーの前に、特定の宛先ネームスペースの注釈が上書きされないようにします。例：
 
-[source, console]
+[source, shell]
 ----
 helm upgrade trident-protect -n trident-protect netapp-trident-protect/trident-protect \
   --set-string restoreSkipNamespaceAnnotations="{<annotation_key_to_skip_1>,<annotation_key_to_skip_2>}" \

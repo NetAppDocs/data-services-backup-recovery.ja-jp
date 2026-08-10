@@ -27,9 +27,14 @@ NetApp Consoleにログインするには、 NetAppサポート サイトの認�
 コンソール エージェントを追加するには、バックアップとリカバリのスーパー管理者ロールが必要です。
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com/["NetApp Console"^] 。
+. 次のいずれかを実行します。
++
+** NetApp Console を使用している場合は、Web ブラウザーを開いて、 https://console.netapp.com/["NetApp Console"^]にアクセスしてください。
+** NetApp Console のローカル展開を使用している場合は、Web ブラウザを開き、ローカル Console 展開の Web UI の IP アドレスにアクセスしてください。
 +
 NetApp Consoleのログイン ページが表示されます。
+
+
 
 . コンソールにログインします。
 . コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。

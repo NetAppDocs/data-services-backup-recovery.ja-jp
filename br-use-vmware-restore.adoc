@@ -52,8 +52,6 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元する流�
 * オブジェクト ストレージからバックアップを復元する場合、データを元のシステムまたはオンプレミスのONTAPシステムに復元できます。
 
 
-[復元] ページ (検索と復元) では、正確な名前、場所、または最終日付を覚えていなくても、フィルターを使用してスナップショットを検索することでリソースを復元できます。
-
 
 
 [[restore-workload-data-from-the-restore-option-search-restore]]

@@ -229,7 +229,7 @@ NetApp Backup and Recovery、インデックス カタログを使用する場�
 ** `volume name` カタログファイルが保存されるクラスタ上のボリュームです
 ** `/opt/application/netapp/cbs` マウントされているパスです
 +
-[source, console]
+[source, shell]
 ----
 mount <cluster IP address>:/<volume name> /opt/application/netapp/cbs
 ----
@@ -237,7 +237,7 @@ mount <cluster IP address>:/<volume name> /opt/application/netapp/cbs
 例：
 
 +
-[source, console]
+[source, shell]
 ----
 mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 ----

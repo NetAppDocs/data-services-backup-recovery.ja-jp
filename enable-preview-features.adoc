@@ -47,13 +47,13 @@ NetApp Backup and Recovery では、以下のプレビュー機能を有効に�
 . SSH を使用して Console エージェントにログインします。
 . ルートユーザーに変更します：
 +
-[source, console]
+[source, shell]
 ----
 sudo su
 ----
 . Docker で NetApp Backup and Recovery ボリュームを見つけます。
 +
-[source, console]
+[source, shell]
 ----
 docker volume ls | grep cbs
 ----
@@ -67,7 +67,7 @@ local service-manager-2_cloudmanager_cbs_volume
 ----
 . ボリュームのマウントポイントを見つけます：
 +
-[source, console]
+[source, shell]
 ----
 docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
 ----
@@ -81,7 +81,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 . マウントポイントディレクトリ内にある、docker volume config ディレクトリに移動してください。例：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_config
 ----
@@ -106,7 +106,7 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_c
 
 . Backup and Recovery コンテナを再起動します：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs
 ----
@@ -132,13 +132,13 @@ NOTE: プレビュー機能を無効にするには、同じ手順に従いま�
 . SSH を使用して Console エージェントにログインします。
 . ルートユーザーに変更します：
 +
-[source, console]
+[source, shell]
 ----
 sudo su
 ----
 . Docker で NetApp Backup and Recovery ボリュームを見つけます。
 +
-[source, console]
+[source, shell]
 ----
 docker volume ls | grep cbs
 ----
@@ -152,7 +152,7 @@ local service-manager-2_cloudmanager_cbs_volume
 ----
 . ボリュームのマウントポイントを見つけます：
 +
-[source, console]
+[source, shell]
 ----
 docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
 ----
@@ -166,7 +166,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 . マウントポイントディレクトリ内にある、docker volume config ディレクトリに移動してください。例：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_catalog_config
 ----
@@ -183,7 +183,7 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_c
 ----
 . Backup and Recovery のインデックス作成カタログコンテナを再起動します：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs_catalog
 ----

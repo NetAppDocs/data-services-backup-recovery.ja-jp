@@ -1,0 +1,209 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-protect-migrate-pvc.html 
+keywords: migrate, pvc, nfs, storage, performance, persistence 
+summary: NetApp Console のローカル展開環境におけるカタログインデックスのパフォーマンスを向上させます。 
+---
+= ボリューム検索とリストアのパフォーマンスを向上（NetApp Console ローカル展開を使用する場合）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+カタログインデックスストレージをクラスターのデフォルトストレージクラスから ONTAP ベースの NFS 共有に移行することで、NetApp Console ローカル展開のカタログパフォーマンスを大幅に向上させることができます。インデックスカタログは、検索および復元機能に使用されます。カタログはデフォルトのストレージでも機能しますが、ONTAP を基盤とした NFS を使用すると、検索と復元において測定可能なパフォーマンス向上が得られます。
+
+.開始する前に
+始める前に、以下のものを用意してください。
+
+* クラスター内に設定済みの ONTAP NFS StorageClass と、ONTAP システム上の十分な容量。
+* リソースの取得、作成、適用、実行、パッチ適用、スケーリング、および削除を行う権限を持つクラスタ管理者認証情報。
+* ソースPVC内のデータの検証済みバックアップ（移行前にスナップショットを作成するか、別の場所にコピーしてください）。
+
+
+[discrete]
+===== ワーカー数をスケールダウンする
+
+ワーカーのデプロイメントを一覧表示し、それぞれをレプリカ数ゼロにスケールダウンします。
+
+. カタログワーカーのデプロイメントをすべて一覧表示します。
++
+[source, shell]
+----
+kubectl get deploy -n cbs -o name | grep '/cloudmanager-cbs-catalog-worker-'
+----
+. すべてのワーカーデプロイメントをゼロレプリカにスケールダウンします：
++
+[source, shell]
+----
+for d in $(kubectl get deploy -n cbs -o name | grep '/cloudmanager-cbs-catalog-worker-'); do
+  kubectl scale "$d" --replicas=0 -n cbs
+done
+----
+. ワーカーポッドが残っていないことを確認します。
++
+[source, shell]
+----
+kubectl get pods -n cbs | grep cloudmanager-cbs-catalog-worker- || echo "no worker pods running"
+----
+
+
+[discrete]
+===== ONTAP ボリュームを NetApp Console のローカルデプロイメントにマウントし、Pod からコピーする
+
+. ONTAP NFS エクスポートを、NetApp Console ローカル展開 OVA のデプロイ時に作成された VM のローカルマウントポイントにマウントします。
+. 実行中のコーディネーターポッドからデータを、中間ディレクトリなしで ONTAP マウントにコピーします。コーディネーターはまだ実行中である必要があります。
++
+
+NOTE: 内容をボリュームのルートにコピーしてください。サブディレクトリにはコピーしないでください。ONTAPボリュームが新しい `/opt/netapp/cbs/catalog/shared`ディレクトリです。データはボリュームのルートに配置する必要があります。そうすることで、アプリは同じパス（例：/opt/netapp/cbs/catalog/shared/cbs/<DATASET_NAME>/…）でデータを見つけることができます。以下のコマンドのtarコマンド形式は、ディレクトリの内容（ドットファイルを含む）をマウントルートにストリームし、ネストされた `shared`フォルダを回避します。
+
+. NetApp Console ローカル展開のローカルマウントポイントに ONTAP NFS エクスポートをマウントします。後で pv.yaml で使用するのと同じサーバー/パスを使用してください：
++
+[source, shell]
+----
+sudo mkdir -p /mnt/ontap_nfs_vol
+sudo mount -t nfs 10.x.x.x:/my_nfs_vol /mnt/ontap_nfs_vol   # ONTAP SVM data LIF IP : junction path
+----
+. ポッドの共有ボリュームを ONTAP マウント場所にコピーします：
++
+[source, shell]
+----
+POD=$(kubectl get pod -n cbs -l app=cloudmanager-cbs-catalog -o jsonpath='{.items[0].metadata.name}')
+kubectl exec -n cbs "$POD" -- tar cf - -C /opt/netapp/cbs/catalog/shared . \
+  | sudo tar xf - -C /mnt/ontap_nfs_vol
+----
+. 所有権をポッドのIDと一致するように設定します。
++
+[source, shell]
+----
+sudo chown -R 10001:10001 /mnt/ontap_nfs_vol
+----
+. データがボリュームのルートにコピーされたことを確認します（マウントポイント直下に「cbs」フォルダが表示され、ネストされた「shared/」フォルダが表示されていないことを確認してください）：
++
+[source, shell]
+----
+ls -la /mnt/ontap_nfs_vol
+----
+. コピーを確認してからアンマウントしてください（ポッドは後でPVC経由でマウントします）：
++
+[source, shell]
+----
+sudo umount /mnt/ontap_nfs_vol
+----
+. コーディネーターをスケールダウンします。例：
++
+[source, shell]
+----
+kubectl scale deployment cloudmanager-cbs-catalog --replicas=0 -n cbs
+kubectl rollout status deployment/cloudmanager-cbs-catalog -n cbs
+----
+
+
+[discrete]
+===== 古いPVCとPVを削除します
+
+. バインドされたPVに関する情報を取得し、古いPVCとPVを削除します。
++
+[source, shell]
+----
+PV=$(kubectl get pvc cloudmanager-cbs-catalog-shared-pvc -n cbs -o jsonpath='{.spec.volumeName}')
+kubectl delete pvc cloudmanager-cbs-catalog-shared-pvc -n cbs
+kubectl delete pv "$PV"
+----
+
+
+[discrete]
+===== 静的 ONTAP PV と PVC を作成する
+
+. 以下のPVおよびPVCのYAMLオブジェクトを作成します：
++
+**`pv.yaml`**
+
++
+[source, yaml]
+----
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ontap-manual-pv
+  labels:
+    volume: ontap-nfs-share # Used by the PVC selector to find this exact volume
+spec:
+  capacity:
+    storage: 50Gi # Match or remain under the actual ONTAP volume size
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany # Allows multiple Pods to share the NFS mount
+  persistentVolumeReclaimPolicy: Retain # Retains ONTAP data if the PVC is deleted
+  storageClassName: "" # Leave blank for manual/static provisioning
+  nfs:
+    server: 10.x.x.x # Replace with your ONTAP SVM data LIF IP address
+    path: /my_nfs_vol # Replace with your ONTAP junction path
+----
++
+**`pvc.yaml`**
+
++
+[source, yaml]
+----
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cloudmanager-cbs-catalog-shared-pvc
+  annotations:
+    "helm.sh/resource-policy": keep
+spec:
+  accessModes:
+    - ReadWriteMany # Must match the PV's access mode
+  resources:
+    requests:
+      storage: 50Gi # Must be <= the PV capacity (50Gi)
+  storageClassName: "" # Explicitly matches the empty StorageClass on the PV
+  selector:
+    matchLabels:
+      volume: ontap-nfs-share # Forces binding to the specific PV above
+----
+. YAMLオブジェクトを適用する際は、まずPVを適用し、次にPVCを適用します（PVCのラベルセレクターがバインドされるためには、PVが存在している必要があります）。次に、PVCクレームがバインドされていることを確認します。
++
+[source, shell]
+----
+kubectl apply -f pv.yaml
+kubectl apply -f pvc.yaml -n cbs
+kubectl get pvc cloudmanager-cbs-catalog-shared-pvc -n cbs   # expect STATUS: Bound
+----
+. コーディネーターを1つのレプリカにスケールアップします。
++
+[source, shell]
+----
+kubectl scale deployment cloudmanager-cbs-catalog --replicas=1 -n cbs
+kubectl rollout status deployment/cloudmanager-cbs-catalog -n cbs
+----
+. ワーカーを手動でスケールダウンしたにもかかわらず、自動的に削除されなかった場合、手動でスケールアップしてください（ワーカーは通常自動的にプロビジョニングされるため、この操作は不要な場合があります）：
++
+[source, shell]
+----
+for d in $(kubectl get deploy -n cbs -o name | grep '/cloudmanager-cbs-catalog-worker-'); do
+  kubectl scale "$d" --replicas=1 -n cbs
+done
+----
+. マウント状態とデータ状態を確認してください。データが存在し、ユーザーとグループ 10001:10001 によって所有されていることを確認してください：
++
+[source, shell]
+----
+POD=$(kubectl get pod -n cbs -l app=cloudmanager-cbs-catalog -o jsonpath='{.items[0].metadata.name}')
+kubectl exec -n cbs "$POD" -- mount | grep /opt/netapp/cbs/catalog/shared
+kubectl exec -n cbs "$POD" -- ls -la /opt/netapp/cbs/catalog/shared
+----
+
+
+[NOTE]
+====
+* *再利用ポリシー `Retain`：* PVC を削除しても ONTAP データは消去されません。再プロビジョンする場合は、解放された PV を手動でクリーンアップする必要があります。
+* *Helm を同期させてください：* PVC は通常チャートによってレンダリングされるため、将来の `helm upgrade`がそれを再作成または変更しようとする可能性があります。この手動の ONTAP PVC を維持するには、チャートを同じ値(`storageClass: ""`（サイズ/アクセスモードを一致させる）に設定するか、共有 PVC をリリースから除外してください。
+* 手動で `helm uninstall`を実行してから再インストールを試みると、PVは同じ名前でインストールされ、名前の競合が発生します。
+
+
+====

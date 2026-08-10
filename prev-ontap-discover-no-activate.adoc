@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-discover-no-activate.html 
+keywords: activate, backup and recovery, volumes, back up, discover 
+summary: NetApp Backup and Recovery をアクティベートせずにシステムとボリュームを検出します。 
+---
+= アクティベーションなしで ONTAP システムとボリュームを検出する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+システムとボリュームは、ボリュームの NetApp Backup and Recovery を有効にするときか、有効にする前に検出できます。アクティベーションなしでボリュームを検出した場合、Backup and Recovery を有効にするまで、そのボリュームを保護することはできません。
+
+.手順
+. 「保護」＞「バックアップと復元」に移動します。
+. 「ボリューム」タイルを選択します。
++
+ボリュームダッシュボードが表示されます。
+
+. 「システムを検索」を選択します。
+. リストから、ボリュームを検出するシステムをすべて選択してください。
+. *Discover*を選択します。
+. NetApp Backup and Recoveryで、*Inventory* を選択します。
++
+検出プロセスが開始されます。ジョブモニターで、検出のステータスと結果を確認できます。
+
+
