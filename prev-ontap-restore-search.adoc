@@ -126,7 +126,7 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 
 * Azure の要件:
 +
-** Azure Synapse Analytics リソース プロバイダー (「Microsoft.Synapse」と呼ばれます) をサブスクリプションに登録する必要があります。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["このリソースプロバイダーをサブスクリプションに登録する方法をご覧ください"^] 。リソース プロバイダーを登録するには、サブスクリプションの *所有者* または *投稿者* である必要があります。
+** Azure Synapse Analytics リソース プロバイダー（「Microsoft.Synapse」という名前）をサブスクリプションに登録する必要があります。 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["このリソースプロバイダーをサブスクリプションに登録する方法をご覧ください"^]。リソース プロバイダーを登録するには、サブスクリプションの *Owner* または *Contributor* である必要があります。
 ** コンソールに権限を付与するユーザー ロールに、特定の Azure Synapse ワークスペースおよび Data Lake Storage アカウントの権限を追加する必要があります。link:prev-ontap-backup-onprem-azure.html["すべての権限が正しく設定されていることを確認してください"]。
 +
 以前に構成したコンソール エージェントでNetApp Backup and Recovery を既に使用していた場合は、Azure Synapse ワークスペースと Data Lake ストレージ アカウントのアクセス許可をコンソール ユーザー ロールに追加する必要があることに注意してください。これらは検索と復元に必要です。

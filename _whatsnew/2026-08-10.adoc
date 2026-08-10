@@ -26,18 +26,6 @@ VMwareワークロードの保護の詳細については、以下を参照し�
 
 
 
-[[oracle-database-workloads-enhancements]]
-=== Oracle Databaseワークロードの機能強化
-
-今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：
-
-* *プラガブルデータベース（PDB）の復元とクローン*：NetApp Console のバックアップとリカバリサービスで、プラガブルデータベースの復元とクローン作成がサポートされるようになりました。
-
-
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
-
-
-
 [[kubernetes-workloads-enhancements]]
 === Kubernetes ワークロードの機能強化
 
