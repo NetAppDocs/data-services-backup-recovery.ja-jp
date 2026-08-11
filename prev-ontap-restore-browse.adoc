@@ -40,25 +40,77 @@ NOTE: Azure アーカイブ ストレージからStorageGRIDシステムにデ�
 [[browse-restore-supported-systems-and-object-storage-providers]]
 == サポートされているシステムとオブジェクト ストレージ プロバイダーを参照および復元する
 
-セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。
-
-*注:* ボリュームはどのタイプのバックアップ ファイルからでも復元できますが、現時点では、フォルダーまたは個々のファイルはオブジェクト ストレージ内のバックアップ ファイルからのみ復元できます。
+ONTAP データは、セカンダリ システム（レプリケートされたボリューム）またはオブジェクトストレージ（バックアップファイル）に保存されているバックアップファイルから、以下のシステムに復元できます。
 
 [cols="25,25,25,25"]
 |===
 | *オブジェクトストアから（バックアップ）* | *プライマリから（スナップショット）* | *セカンダリシステムから（レプリケーション）* | 宛先システムへ 
 
 
-| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Azure ブロブ 
+| Amazon S3  a| 
+* AWS のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* AWS のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
 
 
-| Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Google Cloud Storage | Google オンプレミスONTAPシステムのCloud Volumes ONTAP 
 
 
-| Google オンプレミスONTAPシステムのCloud Volumes ONTAP | NetAppStorageGRID | オンプレミスのONTAPシステム | オンプレミスのONTAPシステムCloud Volumes ONTAP 
+| Azure ブロブ  a| 
+* Azure のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* Azure のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
 
 
-| オンプレミスのONTAPシステムへ | ONTAP S3 | オンプレミスのONTAPシステム | オンプレミスのONTAPシステムCloud Volumes ONTAP 
+
+
+| Google Cloud Storage  a| 
+* Google のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* Google のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+
+
+
+| NetAppStorageGRID | オンプレミスのONTAPシステム  a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+| オンプレミスのONTAPシステム 
+
+
+| ONTAP S3 | オンプレミスのONTAPシステム  a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+| オンプレミスのONTAPシステム 
+
+
+| S3互換オブジェクトストア | オンプレミスのONTAPシステム  a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+| オンプレミスのONTAPシステム 
 |===
 参照と復元の場合、コンソール エージェントは次の場所にインストールできます。
 

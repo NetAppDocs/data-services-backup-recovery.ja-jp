@@ -19,7 +19,7 @@ summary: 環境で Backup and Recovery を使用する前に、これらの NetA
 
 
 [[backup-and-recovery-preview-for-netapp-console-local-deployment-limitation]]
-=== NetApp Console ローカル展開のバックアップとリカバリのプレビューの制限
+== NetApp Console ローカル展開のバックアップとリカバリのプレビューの制限
 
 NetApp Console ローカル展開のバックアップとリカバリのプレビューリリースでは、オブジェクトストレージへのバックアップは ONTAP S3 と StorageGRID の宛先のみサポートされています。バックアップのアーカイブは、このプレビューリリースではサポートされていません。
 

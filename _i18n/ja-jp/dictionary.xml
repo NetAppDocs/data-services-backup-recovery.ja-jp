@@ -3267,11 +3267,9 @@
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">Google アーカイブ ストレージからの復元の詳細</block>
   <block id="e429a3dcdf9ca5d36834b72490aae784" category="admonition">Azure アーカイブ ストレージからStorageGRIDシステムにデータを復元する場合、高優先度はサポートされません。</block>
   <block id="598e51a2b37024d5f553af642c739db8" category="section-title">サポートされているシステムとオブジェクト ストレージ プロバイダーを参照および復元する</block>
-  <block id="bc6bfb0b14fd7cced8ee62c645d8aa17" category="paragraph">*注:* ボリュームはどのタイプのバックアップ ファイルからでも復元できますが、現時点では、フォルダーまたは個々のファイルはオブジェクト ストレージ内のバックアップ ファイルからのみ復元できます。</block>
   <block id="4392d15c8884c7cc66b17ff794eb41d2" category="cell">*オブジェクトストアから（バックアップ）*</block>
   <block id="a4e7ccecf7c1ff2d3e2de88d9f7559d4" category="cell">*プライマリから（スナップショット）*</block>
   <block id="c1ad4111606308626e152e2bc5089a8b" category="cell">*セカンダリシステムから（レプリケーション）*</block>
-  <block id="f6bc09197fbc5599ccf48032f3ead672" category="cell">オンプレミスのONTAPシステムへ</block>
   <block id="56a66e1fc15e989f40186eb5d1841f59" category="paragraph">参照と復元の場合、コンソール エージェントは次の場所にインストールできます。</block>
   <block id="26b66b8e6541c0f2e46ee638955dab17" category="list-text">Amazon S3の場合、コンソールエージェントはAWSまたはオンプレミスに導入できます。</block>
   <block id="ead25fef0ccdffb4daf4bbf7bcb1dfb5" category="list-text">Azure Blobの場合、コンソールエージェントはAzureまたはオンプレミスに展開できます。</block>
@@ -5804,4 +5802,6 @@
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
   <block id="874b4474de89858c50d77a501e5764e2" category="sidebar">ボリューム検索とリストアのパフォーマンスを向上（NetApp Console ローカル展開向け）</block>
   <block id="4d92224f9798401488621039f9e4cfa9" category="list-text">Azure Synapse Analytics リソース プロバイダー（「Microsoft.Synapse」という名前）をサブスクリプションに登録する必要があります。<block ref="c0f87c4b35b6d93246175aae02f70afd" category="inline-link-rx"></block>。リソース プロバイダーを登録するには、サブスクリプションの *Owner* または *Contributor* である必要があります。</block>
+  <block id="309ab91ccf975daed364d3636f21792a" category="paragraph">ONTAP データは、セカンダリ システム（レプリケートされたボリューム）またはオブジェクトストレージ（バックアップファイル）に保存されているバックアップファイルから、以下のシステムに復元できます。</block>
+  <block id="e9a171dcb6f5a1441f086b12be8cbc6b" category="cell">S3互換オブジェクトストア</block>
 </blocks>
