@@ -4,7 +4,7 @@ permalink: br-use-kubernetes-reports.html
 keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
 summary: Kubernetes ワークロードの保護レポートを作成して、成功したバックアップと失敗したバックアップの数、バックアップのタイプ、クラスタの健全性情報など、保護ステータスと詳細を表示します。 
 ---
-= NetApp Backup and RecoveryでKubernetesワークロードの保護レポートを作成および管理する
+= NetApp Backup and RecoveryでKubernetes保護レポートを管理する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

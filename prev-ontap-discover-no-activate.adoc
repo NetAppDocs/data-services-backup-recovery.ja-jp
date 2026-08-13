@@ -4,7 +4,7 @@ permalink: prev-ontap-discover-no-activate.html
 keywords: activate, backup and recovery, volumes, back up, discover 
 summary: NetApp Backup and Recovery をアクティベートせずにシステムとボリュームを検出します。 
 ---
-= アクティベーションなしで ONTAP システムとボリュームを検出する
+= NetApp Backup and Recoveryでアクティベーションを行わずにONTAPシステムとボリュームを検出します
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

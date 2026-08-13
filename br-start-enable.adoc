@@ -4,7 +4,7 @@ permalink: br-start-enable.html
 keywords: backup, Backup and Recovery, enable backup, Console, service, local deployment 
 summary: NetApp Console またはローカル展開の NetApp Console でシステムのバックアップとリカバリを有効にします。 
 ---
-= ボリュームを保護するためにバックアップとリカバリを有効にする
+= NetApp Backup and Recovery を有効にしてボリュームを保護する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -40,7 +40,7 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 * *SAN サポート（プレビュー）*：NetApp Backup and Recovery で、SAN ストレージに保存されている Hyper-V VM の保護がサポートされるようになりました。
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -53,7 +53,7 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 * *代替場所への復元（プレビュー）*: KVM VMを代替の場所に復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-restore.html["NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する"]を参照してください。
 
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 

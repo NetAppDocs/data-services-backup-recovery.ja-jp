@@ -4,7 +4,7 @@ permalink: br-use-vmware-restore-guest-files-and-folders-from-vmdks.html
 keywords: restore, guest, files, folders, files and folders, guest VM, windows, linux, VMDK, attach 
 summary: VMDK から 1 つ以上のファイルまたはフォルダをゲスト VM にリストアできます。 
 ---
-= 仮想ディスクからファイルとフォルダを復元する
+= NetApp Backup and Recovery で VMware ゲストファイルとフォルダをリストアする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ summary: VMDK から 1 つ以上のファイルまたはフォルダをゲスト
 仮想ディスクからファイルやフォルダを元の仮想マシン、または別の仮想マシンに復元します。仮想ディスクを元の仮想マシンに接続したくない場合は、代わりにプロキシ仮想マシンに接続することもできます。
 
 .開始する前に
-* link:br-use-vmware-restore-guest-files-and-folders-overview.html["ゲストファイルとフォルダを復元する際の要件と制限"]の前提条件と制限事項を確認してください。
+* link:br-use-vmware-restore-guest-files-and-folders-overview.html["NetApp Backup and RecoveryにおけるVMwareゲスト ファイルのリストア要件"]の前提条件と制限事項を確認してください。
 * プロキシVMを使用してファイルとフォルダを復元するには、ファイルとフォルダの復元プロセスを開始する前に、プロキシVMが既に構成されていることを確認してください。
 * ファイルやフォルダを復元する前に、NetApp Backup and Recoveryでソース仮想ディスクと宛先VMの認証情報を作成する必要があります。NetApp Backup and Recoveryでは、ファイルやフォルダを復元する際に、これらの認証情報を使用して仮想ディスクと宛先VMに対して認証を行います。
 

@@ -4,7 +4,7 @@ permalink: br-use-kubernetes-advanced-restore-settings.html
 keywords: cr, custom resource, restore, data, backup, advanced, settings 
 summary: 注釈、名前空間設定、およびストレージ オプションを使用して、CR リストア操作をカスタマイズできます。 
 ---
-= 高度なカスタムリソースのリストア設定を使用する
+= Kubernetes の高度なリストア設定（NetApp Backup and Recovery）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

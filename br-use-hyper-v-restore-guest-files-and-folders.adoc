@@ -4,7 +4,7 @@ permalink: br-use-hyper-v-restore-guest-files-and-folders.html
 keywords: restore, guest, files, folders, files and folders, Windows, VM, virtual machine, browse, mount, virtual disk, session, snapshot, backup 
 summary: Hyper-V VMのスナップショットから、1つまたは複数のファイルやフォルダーをWindowsゲストVMに復元できます。 
 ---
-= Hyper-V VMバックアップからファイルとフォルダをリストアする
+= NetApp Backup and Recoveryを使用してHyper-V VMのバックアップからファイルとフォルダーをリストアします
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

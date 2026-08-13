@@ -4,7 +4,7 @@ permalink: br-use-vmware-restore-vmdks-from-backups.html
 keywords:  
 summary: 従来のVMまたはvVol VMのプライマリ バックアップまたはセカンダリ バックアップから、既存のVMDKのほか、削除や切断したVMDKをリストアできます。 
 ---
-= バックアップから特定の仮想ディスクを復元する
+= NetApp Backup and RecoveryのバックアップからVMware仮想ディスクをリストアする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

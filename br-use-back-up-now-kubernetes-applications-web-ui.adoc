@@ -4,7 +4,7 @@ permalink: br-use-back-up-now-kubernetes-applications-web-ui.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
 summary: NetApp Backup and Recovery を使用すると、ワークロード ホスト情報、データベース情報、インスタンス情報を管理できます。インベントリの保護設定を表示、編集、削除できます。 
 ---
-= Backup and Recovery Web UIを使用してKubernetesアプリケーションを今すぐバックアップ
+= 今すぐ NetApp Backup and Recovery の Web UI を使用して Kubernetes アプリケーションをバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

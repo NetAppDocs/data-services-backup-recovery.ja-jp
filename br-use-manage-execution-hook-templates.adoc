@@ -4,7 +4,7 @@ permalink: br-use-manage-execution-hook-templates.html
 keywords: hooks, execution hooks, exec hooks, hook, execution, script, postscript, prescript, post, pre, run, backup, snapshot, freeze 
 summary: NetApp Backup and Recovery を使用すると、実行フックを管理して、アプリケーション保護操作の前後にアクションを実行できます。 
 ---
-= Kubernetes ワークロード用のNetApp Backup and Recovery実行フック テンプレートを管理する
+= NetApp Backup and RecoveryでKubernetes実行フックテンプレートを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

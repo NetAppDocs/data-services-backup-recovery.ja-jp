@@ -33,7 +33,7 @@ NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され
 * VMバックアップの検索と復元
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -50,7 +50,7 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 * KVM ベースの VM と VM データをバックアップおよび復元するためのガイド付きプロセス
 
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -111,7 +111,7 @@ NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワー�
 * Oracleダッシュボードのサポート
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
 
 
 

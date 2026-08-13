@@ -4,7 +4,7 @@ permalink: br-use-reports.html
 keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
 summary: NetApp Backup and Recoveryでは、バックアップの数、成功したバックアップの数、失敗したバックアップの数など、バックアップのステータスを表示するレポートを作成します。バックアップの種類、バックアップに使用されたストレージ システム、バックアップの時間など、各バックアップの詳細を表示することもできます。 
 ---
-= NetApp Backup and RecoveryでMicrosoft SQL Serverワークロードの保護レポートを作成する
+= NetApp Backup and Recovery で Microsoft SQL Server 保護レポートを作成する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

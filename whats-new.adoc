@@ -137,7 +137,7 @@ ONTAP ボリュームワークロードの保護の詳細については、 http
 * *保護グループがホストのタイムゾーンのスケジュールを使用するようになりました*：保護グループがHyper-Vホストのタイムゾーンを使用するようになりました。ホストタイムゾーンスケジューリングが導入される前に作成された保護グループは、以前に設定された時刻（通常はUTC）を引き続き使用します。これらの保護グループを更新してHyper-Vホストのタイムゾーンを使用するようにするには、スケジュールを再作成する必要があります。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protection-groups.html["Hyper-V ワークロードの保護グループの作成と管理"]を参照してください。
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -170,7 +170,7 @@ VMwareワークロードの保護の詳細については、以下を参照し�
 * *ゲストVMへのファイルとフォルダの復元*：プライマリストレージのスナップショットから、ゲストWindows VMにファイルとフォルダを復元できるようになりました。この機能はCIFS仮想マシンでのみサポートされています。
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -181,7 +181,7 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 
 *代替場所への復元*：KVM VMを代替の場所に復元できるようになりました（この機能は現在一般提供されています）。
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -194,7 +194,7 @@ KVMワークロードの保護の詳細については、以下を参照して�
 * *バックアップ検証のサポート*：Oracleデータベースのバックアップの整合性を自動的に検証するようにバックアップ ポリシーを設定できるようになりました。
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
 
 
 
@@ -308,7 +308,7 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 * *SAN サポート（プレビュー）*：NetApp Backup and Recovery で、SAN ストレージに保存されている Hyper-V VM の保護がサポートされるようになりました。
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -321,7 +321,7 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 * *代替場所への復元（プレビュー）*: KVM VMを代替の場所に復元できるようになりました。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-restore.html["NetApp Backup and Recoveryを使用して KVM 仮想マシンを復元する"]を参照してください。
 
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -358,7 +358,7 @@ VMwareワークロードの保護の詳細については、以下を参照し�
 * *RMANカタログのサポート*：バックアップとリカバリを設定して、保護メタデータをRMANリカバリカタログに保存できるようになりました。これにより、ターゲット制御ファイルが失われた場合に備えて冗長性と長期保持が実現します。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-configure-oracle-database.html["Oracleデータベースを設定する"]を参照してください。
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
 
 
 
@@ -430,7 +430,7 @@ VMwareワークロードの保護の詳細については、以下を参照し�
 
 KVMワークロードサポートがNetApp Backup and Recoveryで一般提供（GA）されるようになりました。
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -505,7 +505,7 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
 
 
 
@@ -562,7 +562,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restor
 
 KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -626,7 +626,7 @@ NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され
 * VMバックアップの検索と復元
 
 
-Hyper-Vワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V ワークロードの保護の概要"] 。
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-V 保護ワークフローと NetApp Backup and Recovery"]を参照してください。
 
 
 
@@ -643,7 +643,7 @@ Hyper-Vワークロードの保護の詳細については、以下を参照し�
 * KVM ベースの VM と VM データをバックアップおよび復元するためのガイド付きプロセス
 
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
 
 
 
@@ -704,7 +704,7 @@ NetApp Backup and Recoveryのこのリリースでは、Oracle Database ワー�
 * Oracleダッシュボードのサポート
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
 
 
 

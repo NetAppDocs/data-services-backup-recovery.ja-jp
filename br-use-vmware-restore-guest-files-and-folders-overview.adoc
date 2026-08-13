@@ -4,7 +4,7 @@ permalink: br-use-vmware-restore-guest-files-and-folders-overview.html
 keywords:  
 summary: WindowsゲストOSの仮想マシン ディスク（VMDK）からファイルやフォルダをリストアできます。 
 ---
-= ゲストファイルとフォルダを復元する際の要件と制限
+= NetApp Backup and RecoveryにおけるVMwareゲスト ファイルのリストア要件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

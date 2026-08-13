@@ -49,7 +49,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 
 NetApp Backup and Recovery を最初に有効にしたときに、システム内の一部のボリュームでのみバックアップをアクティブ化した場合は、後で追加のボリュームでバックアップをアクティブ化できます。
 
-手順については、link:br-start-enable.html["ボリュームを保護するためにバックアップとリカバリを有効にする"^]を参照してください。
+手順については、link:br-start-enable.html["NetApp Backup and Recovery を有効にしてボリュームを保護する"^] を参照してください。
 
 
 

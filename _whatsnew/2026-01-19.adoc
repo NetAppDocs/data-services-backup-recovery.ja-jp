@@ -50,4 +50,4 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restor
 
 KVM ワークロード プレビューでは、Apache CloudStack によって管理される KVM ホストと仮想マシンが保護されるようになりました。
 
-KVMワークロードの保護の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVM ワークロードの保護の概要"] 。
+KVMワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。

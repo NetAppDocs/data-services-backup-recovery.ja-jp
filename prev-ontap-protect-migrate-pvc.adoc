@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-migrate-pvc.html
 keywords: migrate, pvc, nfs, storage, performance, persistence 
 summary: NetApp Console のローカル展開環境におけるカタログインデックスのパフォーマンスを向上させます。 
 ---
-= ボリューム検索とリストアのパフォーマンスを向上（NetApp Console ローカル展開を使用する場合）
+= NetApp Backup and Recovery のローカル展開における検索とリストアのパフォーマンスの向上
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept-start-prereq-snapcenter-import.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
 summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。 
 ---
-= プラグイン サービスからNetApp Backup and Recoveryにインポートするための前提条件
+= SnapCenter の NetApp Backup and Recovery へのインポートの前提条件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

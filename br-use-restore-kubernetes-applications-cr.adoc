@@ -4,7 +4,7 @@ permalink: br-use-restore-kubernetes-applications-cr.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。 
 ---
-= カスタムリソースを使用した Kubernetes アプリケーションのリストア
+= カスタムリソースを使用してNetApp Backup and RecoveryでKubernetesアプリケーションをリストアする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: NetApp Backup and Recovery を使用すると、保護ポリシーで�
 ====
 * アプリケーションを復元すると、アプリケーションに対して設定されているすべての実行フックもアプリとともに復元されます。復元後の実行フックが存在する場合、復元操作の一部として自動的に実行されます。
 * バックアップから別の名前空間または元の名前空間への復元は、qtree ボリュームでサポートされています。ただし、スナップショットから別の名前空間または元の名前空間への復元は、qtree ボリュームではサポートされていません。
-* 詳細設定を使用して復元操作をカスタマイズできます。詳細については、link:br-use-kubernetes-advanced-restore-settings.html["高度なカスタムリソースのリストア設定を使用する"]を参照してください。
+* 詳細設定を使用して復元操作をカスタマイズできます。詳細については、link:br-use-kubernetes-advanced-restore-settings.html["Kubernetes の高度なリストア設定（NetApp Backup and Recovery）"] を参照してください。
 
 
 ====

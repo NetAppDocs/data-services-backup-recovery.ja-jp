@@ -16,11 +16,11 @@ sidebar:
     url: "/index.html"
   - title: リリース ノート
     entries:
-    - title: 新機能
+    - title: NetApp Backup and Recoveryの新機能
       url: "/whats-new.html"
     - title: ONTAPボリュームワークロードの既知の制限
       url: "/br-reference-limitations.html"
-    - title: Microsoft SQL Server ワークロードの既知の制限
+    - title: SQL Serverワークロードに関する既知の制限事項
       url: "/br-limitations.html"
     - title: VMware ワークロードの既知の制限
       url: "/br-limitations-vmware.html"
@@ -34,85 +34,85 @@ sidebar:
     entries:
     - title: NetApp Backup and Recoveryについて学ぶ
       url: "/concept-backup-to-cloud.html"
-    - title: NetApp Backup and Recoveryの前提条件
+    - title: NetApp Backup and Recoveryの要件
       url: "/concept-start-prereq.html"
-    - title: NetApp Backup and Recoveryのライセンスを設定する
+    - title: ライセンスの設定
       url: "/br-start-licensing.html"
-    - title: ONTAPおよびStorageGRIDのセキュリティ証明書を設定する
+    - title: セキュリティ証明書を設定する
       url: "/task-setup-ca-certificates.html"
     - title: NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
       url: "/br-start-setup.html"
-    - title: バックアップターゲットの検出
+    - title: オフサイトバックアップターゲットの検出
       url: "/br-start-discover-backup-targets.html"
     - title: さまざまなNetApp Backup and Recoveryワークロードに切り替える
       url: "/br-start-switch-ui.html"
-    - title: NetApp Backup and Recoveryの一般設定を構成する
+    - title: NetApp Backup and Recovery設定を構成する
       url: "/br-start-configure.html"
-    - title: NetApp Backup and Recovery でロールベースのアクセス制御を設定
+    - title: ロールベースアクセス制御の設定
       url: "/br-rbac-setup.html"
   - title: NetApp Backup and Recoveryを使用する
     entries:
     - title: NetApp Backup and Recoveryにログイン
       url: "/br-start-login.html"
-    - title: ダッシュボードで保護の状態を確認する
+    - title: NetApp Backup and Recoveryダッシュボードで保護の健全性を確認する
       url: "/br-use-dashboard.html"
     - title: ONTAPボリュームのワークロードを保護する
       entries:
-      - title: ONTAPボリュームワークロードの保護の概要
+      - title: NetApp Backup and Recovery for ONTAP ボリュームについて
         url: "/prev-ontap-protect-overview.html"
-      - title: ボリュームを保護するためにバックアップとリカバリを有効にする
+      - title: NetApp Backup and Recovery を有効にしてボリュームを保護する
         url: "/br-start-enable.html"
-      - title: ボリューム検索とリストアのパフォーマンスを向上（NetApp Console ローカル展開向け）
+      - title: NetApp Backup and Recovery のローカル展開における検索とリストアのパフォーマンスの向上
         url: "/prev-ontap-protect-migrate-pvc.html"
-      - title: ONTAPボリュームの保護を計画する
+      - title: NetApp Backup and Recoveryの保護ジャーニー計画オプション
         url: "/prev-ontap-protect-journey.html"
       - title: アクティベーションなしで ONTAP システムとボリュームを検出する
         url: "/prev-ontap-discover-no-activate.html"
-      - title: ONTAPボリュームのポリシーを管理する
+      - title: ONTAP ボリュームのバックアップポリシーを管理する
         url: "/prev-ontap-policy-manage.html"
       - title: ONTAPボリュームのオブジェクトへのバックアップポリシーオプション
         url: "/prev-ontap-policy-object-options.html"
-      - title: オブジェクトへのバックアップポリシーの詳細設定オプションを管理する
+      - title: オブジェクトストレージへのバックアップオプションを管理する
         url: "/prev-ontap-policy-object-advanced-settings.html"
-      - title: Cloud Volumes ONTAP をAmazon S3 にバックアップする
+      - title: Cloud Volumes ONTAPデータを Amazon S3 にバックアップする
         url: "/prev-ontap-backup-cvo-aws.html"
-      - title: Cloud Volumes ONTAPを Azure Blob にバックアップする
+      - title: Cloud Volumes ONTAP データを Azure Blob ストレージにバックアップする
         url: "/prev-ontap-backup-cvo-azure.html"
-      - title: Cloud Volumes ONTAPをGoogle Cloudにバックアップする
+      - title: Cloud Volumes ONTAP データを Google Cloud Storage にバックアップする
         url: "/prev-ontap-backup-cvo-gcp.html"
-      - title: オンプレミスのONTAPを Amazon S3 にバックアップする
+      - title: オンプレミスのONTAPデータを Amazon S3 にバックアップする
         url: "/prev-ontap-backup-onprem-aws.html"
-      - title: オンプレミスのONTAPを Azure Blob にバックアップする
+      - title: オンプレミスの ONTAP データを Azure Blob ストレージにバックアップする
         url: "/prev-ontap-backup-onprem-azure.html"
-      - title: オンプレミスのONTAPを Google Cloud にバックアップする
+      - title: オンプレミスの ONTAP データを Google Cloud Storage にバックアップする
         url: "/prev-ontap-backup-onprem-gcp.html"
-      - title: オンプレミスのONTAPをONTAP S3 にバックアップする
+      - title: オンプレミスのONTAPデータをONTAP S3 にバックアップする
         url: "/prev-ontap-backup-onprem-ontaps3.html"
-      - title: オンプレミス ONTAP を S3 互換ストレージにバックアップする
+      - title: オンプレミス ONTAP データを S3 互換ストレージにバックアップする
         url: "/prev-ontap-backup-onprem-s3-compatible.html"
-      - title: オンプレミスのONTAPをStorageGRIDにバックアップ
+      - title: オンプレミスのONTAPデータをStorageGRIDにバックアップする
         url: "/prev-ontap-backup-onprem-storagegrid.html"
-      - title: SnapMirrorを使用してボリュームをCloud Resyncに移行する
+      - title: SnapMirror を使用して ONTAP ボリュームをクラウドに移行して再同期する
         url: "/prev-ontap-migrate-resync.html"
-      - title: ONTAPバックアップの管理
+      - title: ONTAPシステムのバックアップを管理する
         url: "/prev-ontap-backup-manage.html"
       - title: ONTAPバックアップからの復元
         entries:
-        - title: リストアの概要
+        - title: ONTAP データのリストアオプション
           url: "/prev-ontap-restore.html"
-        - title: 検索と復元を使用してONTAPバックアップから復元する
+        - title: 検索とリストアを使用したONTAPデータのリストア
           url: "/prev-ontap-restore-search.html"
-        - title: 参照と復元を使用してONTAPバックアップから復元する
+        - title: Browse and Restore を使用して ONTAP データをリストアする
           url: "/prev-ontap-restore-browse.html"
     - title: Microsoft SQL Server ワークロードを保護する
       entries:
-      - title: Microsoft SQL Server ワークロードの保護の概要
+      - title: Microsoft SQL Server の保護ワークフロー（NetApp Backup and Recovery）
         url: "/br-use-mssql-protect-overview.html"
-      - title: SnapCenterからインポートする場合の追加項目を構成する
+      - title: SnapCenter の NetApp Backup and Recovery へのインポートの前提条件
         url: "/concept-start-prereq-snapcenter-import.html"
       - title: Microsoft SQL Server ワークロードの検出
         url: "/br-start-discover.html"
-      - title: Microsoft SQL Serverのワークロードバックアップポリシーを作成および管理する
+      - title: Microsoft SQL Server バックアップポリシーの作成と管理
         url: "/br-use-policies-mssql-create.html"
       - title: Microsoft SQL Server ワークロードのバックアップ
         url: "/br-use-mssql-backup.html"
@@ -128,13 +128,13 @@ sidebar:
         url: "/br-use-reports.html"
     - title: VMwareワークロードを保護する
       entries:
-      - title: VMware ワークロードの保護の概要
+      - title: VMware保護ワークフロー
         url: "/br-use-vmware-protect-overview.html"
       - title: VMware ワークロードを発見
         url: "/br-use-vmware-discovery.html"
-      - title: VMware ワークロードの保護グループの作成と管理
+      - title: VMware保護グループを管理する
         url: "/br-use-vmware-protection-groups.html"
-      - title: VMwareワークロードのバックアップポリシーを作成および管理する
+      - title: VMwareバックアップポリシーの管理
         url: "/br-use-policies-vmware-create.html"
       - title: VMwareワークロードのバックアップ
         url: "/br-use-vmware-backup.html"
@@ -142,15 +142,15 @@ sidebar:
         url: "/br-use-vmware-clone.html"
       - title: VMwareワークロードを復元する
         entries:
-        - title: VMware仮想マシンを復元する
+        - title: VMwareワークロードを復元する
           url: "/br-use-vmware-restore.html"
-        - title: VMware仮想ディスクを復元する
+        - title: VMware仮想ディスクをバックアップからリストアする
           url: "/br-use-vmware-restore-vmdks-from-backups.html"
         - title: VMwareのファイルとフォルダをリストアする
           entries:
-          - title: ワークフロー、前提条件、制限事項
+          - title: VMwareゲストファイルのリストア要件
             url: "/br-use-vmware-restore-guest-files-and-folders-overview.html"
-          - title: VMDKからVMwareファイルとフォルダをリストアする
+          - title: VMwareゲストのファイルとフォルダのリストア
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: ファイルとフォルダのリストアのトラブルシューティング
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
@@ -246,23 +246,23 @@ sidebar:
       url: "/reference-restart-backup.html"
     - title: プレビューと隠し機能を有効にする
       url: "/enable-preview-features.html"
-  - title: REST APIによる自動化
+  - title: NetApp Backup and RecoveryREST API による自動化
     url: "/br-api-backup-restore.html"
   - title: 参照
     entries:
-    - title: 監査済みのNetApp Backup and Recovery操作
+    - title: 監査済み NetApp Backup and Recovery アクション
       url: "/reference-audit-actions.html"
-    - title: SnapCenterのポリシーとNetApp Backup and Recoveryの比較
+    - title: SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較
       url: "/reference-policy-differences-snapcenter.html"
-    - title: NetApp Backup and Recoveryの役割と権限
+    - title: NetApp Backup and Recovery IAM ロール
       url: "/reference-roles.html"
-    - title: ダークサイトでのNetApp Backup and Recoveryデータの復元
+    - title: ダークサイトでのNetApp Backup and Recovery構成データの復元
       url: "/reference-backup-cbs-db-in-dark-site.html"
-    - title: サポートされているAWSアーカイブストレージ層
+    - title: NetApp Backup and Recoveryでサポートされている AWS アーカイブ ストレージ層
       url: "/prev-reference-aws-archive-storage-tiers.html"
-    - title: サポートされている Azure アーカイブ ストレージ層
+    - title: サポートされている Azure アーカイブストレージティアと NetApp Backup and Recovery
       url: "/prev-reference-azure-archive-storage-tiers.html"
-    - title: サポートされている Google Cloud アーカイブ ストレージ層
+    - title: Google Cloud アーカイブストレージ階層のサポート（NetApp Backup and Recovery）
       url: "/prev-reference-gcp-archive-storage-tiers.html"
   - title: 法律上の表示
     url: "/legal-notices.html"

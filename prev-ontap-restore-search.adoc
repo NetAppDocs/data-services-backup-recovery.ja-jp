@@ -4,7 +4,7 @@ permalink: prev-ontap-restore-search.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 検索と復元を使用して、ONTAPバックアップファイルからボリューム、フォルダー、またはファイルを復元できます。 
 ---
-= 検索と復元を使用したONTAPバックアップからの復元
+= NetApp Backup and Recoveryの「検索とリストア」を使用したONTAPデータのリストア
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

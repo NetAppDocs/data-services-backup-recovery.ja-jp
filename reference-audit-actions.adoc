@@ -4,7 +4,7 @@ permalink: reference-audit-actions.html
 keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
 summary: NetApp Console監査でサポートされるバックアップおよびリカバリ処理のリファレンス。 
 ---
-= 監査済みのNetApp Backup and Recovery操作
+= 監査済み NetApp Backup and Recovery アクション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

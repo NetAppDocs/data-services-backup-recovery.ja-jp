@@ -4,7 +4,7 @@ permalink: br-use-hyperv-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: オンプレミスのONTAPシステムからプライマリ ストレージおよびセカンダリ ストレージまで、Hyper-V 仮想マシンを保護して、データが確実に保護されるようにすることができます。 
 ---
-= Hyper-V ワークロードの保護の概要
+= Hyper-V 保護ワークフローと NetApp Backup and Recovery
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

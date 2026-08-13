@@ -4,7 +4,7 @@ permalink: br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html
 keywords:  
 summary: ゲスト ファイルを復元しようとすると、ゲスト ファイルの復元セッションが空白になったり、ゲスト ファイルの復元のディスク接続操作が失敗したり、ゲスト ファイルの復元セッションが中止された後にバックアップが切断されなかったりするシナリオが発生する可能性があります。 
 ---
-= ゲストファイルの復元のトラブルシューティング
+= NetApp Backup and Recovery におけるゲストファイルのリストアに関するトラブルシューティング
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

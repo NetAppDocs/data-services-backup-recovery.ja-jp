@@ -57,4 +57,4 @@ Kubernetesワークロードの保護の詳細については、以下を参照�
 
 
 
-Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["Oracle Databaseワークロードの保護の概要"]を参照してください。
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
