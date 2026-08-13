@@ -86,7 +86,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 次のリンクを使用して、クラウド プロバイダー マーケットプレイスからNetApp Backup and Recoveryをサブスクライブします。
 
 * AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
-* アズール: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
+* Azure： https://marketplace.microsoft.com/en-us/product/netapp.cloud-manager?tab=Overview["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^]。
 * Google クラウド: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["価格の詳細については、 NetApp Intelligent Servicesのマーケットプレイス オファリングをご覧ください。"^] 。
 
 
@@ -114,7 +114,7 @@ AWSを使用する場合、2つの年間契約から選択できます。 https:
 
 
 
-Azureを使用する場合、2つの年間契約が利用可能です。 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure Marketplace ページ"^] Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:
+Azure を使用する場合、Cloud Volumes ONTAP およびオンプレミス ONTAP システム向けに、 https://marketplace.microsoft.com/en-us/product/netapp.netapp-bluexp["Azure Marketplace ページ"^]から 2 つの年間契約を利用できます：
 
 * Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
 +

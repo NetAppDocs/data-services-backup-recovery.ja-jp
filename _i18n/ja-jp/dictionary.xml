@@ -720,7 +720,6 @@
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAPライセンスのトピック</block>
   <block id="8bf40ad9f866315020ec4fdd4f65701a" category="paragraph">参照<block ref="efcb71a951fd69a7db06309cdcce3842" category="inline-link-rx"></block>このライセンス オプションの詳細については、こちらをご覧ください。</block>
   <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure Marketplace ページ</block>
-  <block id="ba52c601f575024f72fb5f7ac8154b76" category="paragraph">Azureを使用する場合、2つの年間契約が利用可能です。<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block> Cloud Volumes ONTAPおよびオンプレミスのONTAPシステムの場合:</block>
   <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">サブスクリプションをAzure資格情報に関連付ける</block>
   <block id="bb2a4ab21c5ccf409e44b59faacde869" category="paragraph">このオプションを使用する場合は、マーケットプレイスページからサブスクリプションを設定し、<block ref="ee52880e3726e54668f91a4b65aa4b29" category="inline-link-rx"></block> 。コンソールで Azure 資格情報に割り当てることができるアクティブなサブスクリプションは 1 つだけであるため、この年間契約サブスクリプションを使用してCloud Volumes ONTAPシステムの料金も支払う必要があることに注意してください。</block>
   <block id="78cb5753f269296b8cbe81558d864e4f" category="paragraph">GCP を使用する場合は、 NetApp の営業担当者に連絡して年間契約を購入してください。この契約は、Google Cloud Marketplace でプライベート オファーとして入手できます。</block>
@@ -2433,7 +2432,6 @@
   <block id="69dbfb140f0641649e386e4fa6eb9ccc" category="paragraph">Azure とコンソールの両方のライセンス要件を確認する必要があります。</block>
   <block id="2170d0e9ec0577e343eec3fd2bc324d7" category="list-text">クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、Azure の従量課金制 (PAYGO) コンソール マーケットプレイス オファリングをサブスクライブするか、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。これらのライセンスはあなたのアカウント用であり、複数のシステムで使用できます。</block>
   <block id="99502accd75b1c001f0d4173b25e6554" category="inline-link">Azure Marketplace からのNetApp Consoleの提供</block>
-  <block id="a140b0fdf404992274b76a850ba3cc4b" category="list-text">NetApp Backup and Recovery PAYGOライセンスの場合は、<block ref="3300cb29b93693465495dcf855aee89b" category="inline-link-rx"></block> 。  NetApp Backup and Recoveryの課金は、このサブスクリプションを通じて行われます。</block>
   <block id="38b11d9697757c33227037f48357f555" category="list-text">NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの有効期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要になります。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
   <block id="39476a4d8825e098719d72ca18619ed8" category="list-text">バックアップが保存されるオブジェクト ストレージ スペース用の Azure サブスクリプションが必要です。</block>
   <block id="a2dc9a4fb704e8ca875a1a77d909ba7d" category="paragraph">Azure Government リージョンを含むすべてのリージョンで、オンプレミス システムから Azure Blob へのバックアップを作成できます。サービスを設定するときに、バックアップを保存するリージョンを指定します。</block>
@@ -3834,7 +3832,6 @@
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">表示されるボリュームが元の環境に存在していたボリュームと同じであることを確認します。</block>
   <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery は、 Microsoft SQL Server アプリケーションを評価します。このサービスは、現在のバックアップ保護ポリシー、スナップショット、バックアップおよびリカバリ オプションなどの既存の保護レベルを評価します。</block>
   <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS:<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
-  <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">アズール:<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
   <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google クラウド:<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
   <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたワークロード バックアップ、またはオブジェクト ストレージに保存されたバックアップから Hyper-V ワークロードを復元します。</block>
   <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製された保護グループ バックアップ、またはオブジェクト ストレージに保存されたバックアップから KVM 仮想マシンを復元します。</block>
@@ -5809,4 +5806,7 @@
   <block id="04a5a856cc6b493eb99f477d96256257" category="sidebar">VMwareゲストのファイルとフォルダのリストア</block>
   <block id="bd0ebd8b773f57bb68702549777a23ef" category="sidebar">サポートされている Azure アーカイブストレージティアと NetApp Backup and Recovery</block>
   <block id="8ee4602516c339cfb06e6c5907f4f918" category="sidebar">Google Cloud アーカイブストレージ階層のサポート（NetApp Backup and Recovery）</block>
+  <block id="053401f3d9ace97002dd341287d9ebb1" category="list-text">Azure：<block ref="f4515f843bc62e0cde60bea0de056fd5" category="inline-link-rx"></block>。</block>
+  <block id="a76ddbef42127fde7d9134d4314bebdd" category="paragraph">Azure を使用する場合、Cloud Volumes ONTAP およびオンプレミス ONTAP システム向けに、<block ref="25abf8f644a5c025c626f91c32f89a15" category="inline-link-rx"></block>から 2 つの年間契約を利用できます：</block>
+  <block id="55226b5c9d4512e179f5677e92c03e76" category="list-text">NetApp Backup and Recovery の PAYGO ライセンスには、<block ref="404638c3cd4ff4f928bcc623b020a5df" category="inline-link-rx"></block>へのサブスクリプションが必要です。NetApp Backup and Recovery の請求は、このサブスクリプションを通じて行われます。</block>
 </blocks>

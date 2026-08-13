@@ -173,7 +173,7 @@ Azure とコンソールの両方のライセンス要件を確認する必要�
 
 * クラスターに対してNetApp Backup and Recoveryをアクティブ化する前に、Azure の従量課金制 (PAYGO) コンソール マーケットプレイス オファリングをサブスクライブするか、 NetAppからNetApp Backup and Recovery BYOL ライセンスを購入してアクティブ化する必要があります。これらのライセンスはあなたのアカウント用であり、複数のシステムで使用できます。
 +
-** NetApp Backup and Recovery PAYGOライセンスの場合は、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace からのNetApp Consoleの提供"^] 。  NetApp Backup and Recoveryの課金は、このサブスクリプションを通じて行われます。
+** NetApp Backup and Recovery の PAYGO ライセンスには、 https://marketplace.microsoft.com/en-us/product/netapp.cloud-manager?tab=Overview["Azure Marketplace からのNetApp Consoleの提供"^]へのサブスクリプションが必要です。NetApp Backup and Recovery の請求は、このサブスクリプションを通じて行われます。
 ** NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの有効期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要になります。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
 
