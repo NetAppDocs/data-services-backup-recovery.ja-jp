@@ -57,7 +57,7 @@ ONTAP データは、セカンダリ システム（レプリケートされた�
 
  a| 
 * オンプレミスのONTAPシステム
-* Cloud Volumes ONTAP
+* AWS のCloud Volumes ONTAP
 
 
 
@@ -72,7 +72,7 @@ ONTAP データは、セカンダリ システム（レプリケートされた�
 
  a| 
 * オンプレミスのONTAPシステム
-* Cloud Volumes ONTAP
+* Azure のCloud Volumes ONTAP
 
 
 
@@ -87,7 +87,7 @@ ONTAP データは、セカンダリ システム（レプリケートされた�
 
  a| 
 * オンプレミスのONTAPシステム
-* Cloud Volumes ONTAP
+* Google のCloud Volumes ONTAP
 
 
 
