@@ -1463,10 +1463,6 @@
   <block id="3ce2a491ae98ac2e9d6b23907b1dcd27" category="list-text">*オブジェクト ストアからアーカイブ ストレージにバックアップを階層化します*: バックアップをアーカイブ ストレージ (AWS Glacier など) に階層化する場合は、階層オプションとアーカイブする日数を選択します。</block>
   <block id="a4ddb079e754d05f977f299ecb91e78e" category="list-text">*バックアップ対象*: 登録済みのオブジェクト ストレージ対象を選択します。バックアップ環境内でターゲットにアクセスできることを確認します。</block>
   <block id="749ef9bfd50fd41baeffea89c1ed7056" category="list-text">*プロバイダー*: * StorageGRID*を選択します。</block>
-  <block id="40f2be2919d2f491fc533133b0784afb" category="section-title">ポリシーの詳細設定を構成する</block>
-  <block id="5a0e602c662c4aadb0e187c46db2f1be" category="list-text">*ポリシー &gt; 詳細*設定セクションで、*詳細アクションの選択*メニューを選択して、詳細設定のリストから選択します。</block>
-  <block id="e9dbaabb96bed2c8d241fb55527037d6" category="list-text">表示または変更したい設定を有効にして、[承認] を選択します。</block>
-  <block id="13c1455885d16af64f1bb96c4e48680a" category="list-text">次の情報を入力します。</block>
   <block id="ebc38593846bd56262189cdea41159c0" category="admonition">スナップショット頻度が 1 時間に設定されている場合、再試行回数と合わせた最大遅延は 45 分を超えてはなりません。</block>
   <block id="febcf1de845ae5c111f7fe2fdf9a0023" category="list-text">*ランサムウェア スキャン*: 各バケットでランサムウェア スキャンを有効にするかどうかを選択します。これには、オブジェクト ストレージに対する DataLock ロックが必要です。スキャンの頻度を日単位で入力します。このオプションは、AWS および Microsoft Azure オブジェクト ストレージに適用されます。このオプションは、クラウド プロバイダーによっては追加料金が発生する場合があることに注意してください。</block>
   <block id="5c9b86ff3ed09d60fd7e04707b95622a" category="paragraph">さらに、次のオプションを構成します。</block>
@@ -5189,7 +5185,6 @@
   <block id="f7b0b716a4d4de499a271912b85547c3" category="list-text">*バックアップ後にアーカイブ ログを削除する*：ログ バックアップが有効になっている場合、この機能をオプションで有効にして、NetApp Backup and RecoveryがOracleアーカイブ ログを保持する期間を制限できます。保持期間と、NetApp Backup and Recoveryがアーカイブ ログを削除する場所を選択できます。</block>
   <block id="588a429e835850f3df8205535e7b98e2" category="list-text">*プロバイダー*：Kubernetesアプリケーションリソースをホストするストレージプロバイダーを選択し、プロバイダーへの認証に必要な認証情報を入力します。</block>
   <block id="5f635536567962115552d73c6587c483" category="list-text">*整合性スキャンを有効にする*：オブジェクト ストレージで整合性スキャン（Snapshotロック）を有効にするかどうかを選択します。これにより、バックアップが有効かつリストア可能であることが保証されます。整合性スキャンの頻度は、デフォルトでは7日に設定されています。バックアップが変更または削除されないように保護するには、*整合性スキャン*オプションを選択します。スキャンは最新のSnapshotに対してのみ実行されます。最新のSnapshotに対して、整合性スキャンを有効または無効にすることができます。</block>
-  <block id="c0801323bf0a74b01c384bdda3518dd5" category="paragraph">ポリシー内で、必要に応じて詳細設定を行うことができます。これらのオプションは、あらゆるバックアップアーキテクチャとストレージ保存先で使用できます。利用可能な詳細オプションは、ページ上部で選択したワークロードによって異なります。そのため、ここで説明するオプションの中には、すべてのワークロードに適用されないものもあります。</block>
   <block id="6a4ad7a285f68160638ebf2d62693e0b" category="list-text">*VM設定*：</block>
   <block id="3000cf6903596d6eddfc672177a67f40" category="list-text">*アプリケーション整合性スナップショットを有効にする*：このオプションを有効にすると、アプリケーション整合性スナップショットが作成されます。これには、仮想マシン上でHyper-V統合サービスとVSSの両方が実行されている必要があります。どちらかのサービスが実行されていない場合、代わりにcrash-consistentバックアップが取得されます。アプリケーション整合性を有効にすると、バックアップ時間とストレージ使用量の両方が増加する可能性があります。さらに、VMのゲストメモリ（RAM）は、アプリケーション整合性スナップショットには含まれません。</block>
   <block id="250dc6eb1ac44efaa2d588f670d05490" category="list-text">*バックアップ再試行*：障害や中断が発生した場合にジョブを再試行するには、*障害発生時にジョブの再試行を有効にする*を選択します。スナップショットおよびバックアップ ジョブの最大再試行回数と再試行間隔を入力してください。再試行回数は10未満である必要があります。</block>
@@ -5656,8 +5651,6 @@
   <block id="951c1419bc6678a290628918eb471078" category="paragraph">アイデンティティとアクセスに関する情報については、<block ref="ea5b8c83a53307fc473cf87abf76dc05" category="inline-link-rx"></block>を参照してください。</block>
   <block id="614c9b8c0079226ae2c76caf00bdc9d7" category="list-text">ASP.NET Core Runtime 10.0.10 Hosting Bundle</block>
   <block id="2c03c04d013cd18a2b08ffdaa3807fc6" category="list-text">PowerShell 7.6.4</block>
-  <block id="3b93068d4eec990f1969b952fef82849" category="list-text">NetApp Trident 25.06から26.02.1</block>
-  <block id="c6ee0c0b0d79479e99725d43f4f2b0f8" category="list-text">NetApp Trident Protect 26.06（検出時にKubernetesクラスタにインストール済み）</block>
   <block id="e75b3a902ee99b25571be4a98b084a31" category="summary">NetApp Backup and Recovery をアクティベートせずにシステムとボリュームを検出します。</block>
   <block id="bf768851617c703a4014233f58b31de3" category="doc">アクティベーションなしで ONTAP システムとボリュームを検出する</block>
   <block id="2887d4ffc35ab6898bed2a982c5423a2" category="paragraph">システムとボリュームは、ボリュームの NetApp Backup and Recovery を有効にするときか、有効にする前に検出できます。アクティベーションなしでボリュームを検出した場合、Backup and Recovery を有効にするまで、そのボリュームを保護することはできません。</block>
@@ -5832,4 +5825,34 @@
   <block id="c7b95907073ba49194dd07ae01b56f96" category="list-text">「宛先ストレージ」セクション（オブジェクトストアから復元する場合のみ表示されます）：</block>
   <block id="f771ab6fc3300e0b07bde061e3f606f7" category="list-text">*デフォルトの保存場所を変更する*：このオプションを有効にすると、ソースの保存場所にアクセスできない場合や、容量がいっぱいになった場合に、オブジェクトストアのバックアップを別の場所に復元できます。別のクラスター、ストレージVM、またはアグリゲートを選択してください。</block>
   <block id="7c3780c8bbc09e634d77ec9249acfb5c" category="section-title">2026年8月17日</block>
+  <block id="6319d2a187c14a056a2451e457680ac9" category="section-title">Kubernetes クラスターをコンソール エージェントに再接続する</block>
+  <block id="57f5244800d20c454a8ae6a99f0c2690" category="paragraph">ConsoleエージェントのIPアドレスが変更された場合（再起動後など）、Kubernetesクラスターとエージェントとの接続が切断されるため、再接続する必要があります。</block>
+  <block id="5be36b04c01bb2ce7d5c47828c04d62f" category="list-text">切断されたKubernetesクラスターを選択し、アクションアイコン <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *クラスターの変更* &gt; *クラスターの再接続* を選択します。</block>
+  <block id="375ee855bb819796d52335f7855a9da5" category="list-text">「クラスターの再接続」ダイアログで、コマンドラインの手順をコピーし、クラスター上で実行します。</block>
+  <block id="ba2444c182512882ef30cd6d790a989d" category="paragraph">コマンドが完了すると、クラスターは自動的に再接続されます。</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">「閉じる」を選択します。</block>
+  <block id="145531d0ec6b6e87e457833c515d18eb" category="section-title">Kubernetesクラスターを新しいコンソールエージェントに移行する</block>
+  <block id="1b486f8a72df0cfb12154c0df2fd8aeb" category="paragraph">コンソールエージェントが削除されたり、利用できなくなった場合は、アプリケーション保護の中断を避けるため、そのエージェントを使用しているすべてのクラスターを新しいエージェントに移行してください。</block>
+  <block id="71a73d38aa411b8cf3ac97aaed6598a9" category="inline-link">新しいコンソールエージェントをデプロイします。</block>
+  <block id="33a9e40bf5b5a104de590c6bff396f18" category="list-text"><block ref="33a9e40bf5b5a104de590c6bff396f18" category="inline-link-rx"></block></block>
+  <block id="d9242f3eedaff2dd2340291d99231a47" category="inline-link-macro">ポリシーを編集する</block>
+  <block id="fa3b348cc9530bb5ac015d82e4e040e1" category="list-text">新しいコンソールエージェントで使用する保護ポリシーを選択し、<block ref="76486ada0fcb46ea61a3a5b5982e0538" category="inline-link-macro-rx"></block>、保護ポリシーを新しいコンソールエージェントに関連付けます。</block>
+  <block id="c4c6fed90845c12d98d007fabe47faee" category="list-text">切断されたKubernetesクラスターを選択し、アクションアイコン <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *クラスターの変更* &gt; *エージェントの管理* を選択します。</block>
+  <block id="015618238817546f4ea79a394e3efe47" category="list-text">リストから新しいコンソールエージェントを選択してください。</block>
+  <block id="3d792ac4e0cb4d4880f9939229e42792" category="list-text">新しいコンソールエージェントが、このクラスタ上の保護対象アプリケーションが使用するシステム、バックアップターゲット、およびセカンダリターゲットにアクセスできることを確認するために、エージェント情報を確認してください。</block>
+  <block id="ee0747c1045ece83b008c6a99da98042" category="list-text">各セクションのコマンドライン手順をコピーし、クラスター上でコマンドを実行してください。</block>
+  <block id="3f4860c454843e96c570a7a7e08c6fc5" category="paragraph">これにより、Kubernetes のシークレットが再作成され、Trident Protect が新しいコンソールエージェントにリダイレクトされ、設定が再読み込みされます。コマンドの実行が完了すると、クラスターは新しいコンソールエージェントを使用するようになります。</block>
+  <block id="507751f4ca984ea347c86a3935fe5f62" category="list-text">必要に応じて、ポリシーで詳細設定を構成します。</block>
+  <block id="5cac079a880c4090fb111d3d7dc5ac2f" category="list-text">完了したら、*作成*を選択してください。</block>
+  <block id="a05902bc3173c2d2f35fa06f3fc2b475" category="list-text">編集が完了したら、*完了*を選択してください。</block>
+  <block id="83cb560a6d582d4380d5e101891dd816" category="list-text">確認ダイアログで、ポリシー名を入力して変更を確定します。</block>
+  <block id="28039d0c99b854c578ceb6eafae747f0" category="paragraph">変更を保存すると、この保護ポリシーによって保護されているすべてのアプリケーションに影響します。</block>
+  <block id="db4719fc900debc3b840d973bdd5da13" category="list-text">確定するには「完了」を選択してください。</block>
+  <block id="51f2e38f4d3b411fb5624e01d4b82ac9" category="list-text">*バックアップの再試行*：障害や中断が発生した場合にジョブを一定回数再試行するには、*バックアップの再試行*セクションを展開し、スナップショットとバックアップジョブの最大再試行回数と再試行間隔を入力します。</block>
+  <block id="684680301d935dbb141d7b78ed7ac836" category="list-text">*部分的な成功*：このオプションを有効にすると、Backup and Recoveryがすべてのリソースのバックアップに失敗した場合でも、バックアップ操作が正常に完了するようになります。</block>
+  <block id="3f0ce7e1f58d47249ae783e782637dbe" category="list-text">*VM構成*：必要なバックアップの整合性タイプを選択してください。</block>
+  <block id="159c9eb77d7689e3c9929376462e4e72" category="list-text">*「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態バックアップ*：スナップショットまたはバックアップを作成する前に仮想マシンをフリーズさせないようにするには、このオプションを選択します。スナップショットまたはバックアップは「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態になります。つまり、スナップショットまたはバックアップの時点のシステムメモリはキャプチャされません。</block>
+  <block id="e2b89730d92fc1a6537f9f1a6d260320" category="list-text">*VM整合性バックアップ*：スナップショットまたはバックアップを取得する前にVMをフリーズするには、このオプションを選択します。これにより、VMの状態全体（メモリを含む）がキャプチャされ、VM整合性のある保護が提供されます。オプションとして、*同時に処理できる仮想マシンの最大数*で、Backup and Recoveryが同時にフリーズしてバックアップできる仮想マシンの数を指定します。*すべての仮想マシンをフリーズする*オプションを有効にすると、Backup and Recoveryはすべての仮想マシンを同時にフリーズし、バックアップを開始し、すべてのバックアップ操作が完了した後にすべての仮想マシンをフリーズ解除します。</block>
+  <block id="39fb697df37b9cc018d60de1a0ca0c05" category="list-text">NetApp Trident 25.06から26.06</block>
+  <block id="b1e4f0956582086a73a58e751c8e6b5d" category="list-text">NetApp Trident Protect 26.08以降（検出時にKubernetesクラスタにインストール済み）</block>
 </blocks>
