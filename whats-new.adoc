@@ -18,6 +18,54 @@ NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+[[17-august-2026]]
+== 2026年8月17日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+[[hyper-v-workloads-enhancements]]
+=== Hyper-V ワークロードの機能強化
+
+今回のリリースでは、Hyper-Vワークロードに以下の機能強化が導入されました。
+
+*オブジェクトストレージのバックアップを別の場所に復元する*：Hyper-V の仮想マシン、ファイル、フォルダーをオブジェクトストレージから別のストレージ場所に復元できるようになりました。
+
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-VワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。
+
+* *Trident Protect 26.08*：このリリースには Trident Protect 26.08 が含まれます。
+* *バックアップの再試行*：Kubernetes 保護ポリシーの詳細設定で、バックアップの再試行を有効にし、再試行回数と再試行間隔を設定できるようになりました。
+* *部分的なバックアップの成功*：Kubernetes の保護ポリシーの詳細設定で、個々のリソースが失敗した場合でもバックアップを継続するように構成できるようになり、バックアップジョブが部分的に成功した状態として完了できるようになります。これにより、バックアップ操作中に一部のリソースが失敗した場合でも、バックアップされたリソースを復元することができます。
+* *「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびVM一貫性のバックアップ*：Backup and Recovery for NetApp Consoleサービスで、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態またはVM一貫性のバックアップやスナップショットを作成する保護ポリシーを設定できるようになりました。また、保護処理中にVMのフリーズを実行する方法をカスタマイズすることもできます。
+* *ConsoleエージェントのIPアドレス変更時のKubernetesクラスターの再接続*：Backup and Recovery for NetApp Consoleサービスでは、エージェントのIPアドレスが変更された場合に、クラスターをそのConsoleエージェントに再接続できるようになりました。
+* *クラスターを新しいコンソールエージェントに移行する*：NetApp Backup and Recovery コンソールサービスでは、元のエージェントが故障または削除された場合に、クラスターを新しいコンソールエージェントに移行できるようになり、アプリケーションの保護が中断なく継続されます。
+
+
+Kubernetesワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["NetApp Backup and Recoveryを使用したKubernetesワークロードの保護について説明します"]を参照してください。
+
+
+
+[[oracle-database-workloads-enhancement]]
+=== Oracle Databaseワークロードの強化
+
+今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：
+
+* *プラガブルデータベース（PDB）の復元*：個々のプラガブルデータベース（PDB）および PDB テーブルスペースを、ポイントインタイムリカバリを含めて復元できるようになりました。
+* *プラガブルデータベース（PDB）クローン*：既存のターゲットコンテナデータベース（CDB）に単一のPDBをクローンできるようになりました。また、コンテナデータベース全体をクローンする際に、PDBを除外することも可能です。
+
+
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
+
+
+
 [[10-august-2026]]
 == 2026年8月10日
 

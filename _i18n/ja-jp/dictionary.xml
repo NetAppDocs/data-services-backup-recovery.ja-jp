@@ -4860,7 +4860,6 @@
   <block id="a1f316919d6ee6dc4555dd8c215dd639" category="list-text">クロスVM復元（異なるLinux VMへの復元）を行う場合、ターゲットVMでSSHが実行されている必要があります。</block>
   <block id="0904d2f230fc0f0277b7da11a64a4fdb" category="list-text">異なるオペレーティングシステムを搭載したゲスト間では、ファイルやフォルダを復元することはできません（別のVMに復元する場合、デスティネーションのOSタイプはソースのOSタイプと同じである必要があります）。</block>
   <block id="dbbb5df4d99995be20065b232a8370ff" category="list-text">*保存先ストレージ*セクション（オブジェクトストアから復元する場合のみ表示されます）：</block>
-  <block id="60dda7eb5d8d89865794c9953a4b00ab" category="list-text">*デフォルトのストレージ場所を変更する*：このオプションを有効にすると、ソースストレージの場所にアクセスできない場合や、ストレージがいっぱいになった場合に、オブジェクトストアのバックアップを別のStorage VMに復元できます。別のクラスタ、Storage VM、またはアグリゲートを選択してください。</block>
   <block id="b07f4d391521e556166d0e8a85f249d6" category="admonition">NetApp では、Kubernetes ワークロードに使用するコンソールエージェントには、エージェントの IP アドレスが変更された場合に発生する問題を回避するため、静的 IP アドレスを割り当てることを強くお勧めします。</block>
   <block id="1873f6028647ed72cee9a7bccf68c491" category="summary">NetApp Backup and Recoveryを使用して、参照と復元を使用してONTAPデータを復元します。</block>
   <block id="9b0b495cd3a28a2977dbab61bc1cbce8" category="summary">検索と復元を使用して、ONTAPバックアップファイルからボリューム、フォルダー、またはファイルを復元できます。</block>
@@ -5180,7 +5179,6 @@
   <block id="f21c672ce008bffc75e9cebaa985c8b8" category="paragraph">開いている仮想ディスクのマウント セッションの一覧が表示されます。</block>
   <block id="da51d3c21777acf76b87932de6839d64" category="list-text">オプションとして、セッションを使用してファイルとフォルダーをゲストVMに復元するには、セッションの[アクション]メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*ファイルとフォルダーを復元*を選択します。</block>
   <block id="57c9526981addf2ea70c6ad409673cb5" category="list-text">必要に応じて、セッションを削除するには、セッションの [アクション] メニュー<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>を開き、*削除*を選択します。</block>
-  <block id="970e7dbe358429eacf37bb0e37943138" category="list-text">オブジェクト ストレージのバックアップからリストアする（元の場所にのみ）</block>
   <block id="4b59b9c80f0f0e40294e53eb75b4e004" category="list-text">元の場所に復元します（プライマリストレージ、セカンダリストレージ、オブジェクトストレージから）</block>
   <block id="bff6f5877ada2718589866425ae83e38" category="doc">NetApp Backup and RecoveryでのHyper-Vバックアップ ポリシーの作成と管理</block>
   <block id="7c54de5e880bd010125642ffb949ccad" category="paragraph">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの取得時間、および保持するバックアップファイルの数を制御する独自のHyper-Vバックアップ ポリシーを作成できます。</block>
@@ -5816,4 +5814,22 @@
   <block id="e925e590a02502efcacb9c27366f2977" category="list-text">データベース、仮想マシン、Kubernetesワークロードのアプリケーション整合性バックアップに関するポリシーを含め、バックアップポリシーを作成および変更します。</block>
   <block id="bd0fc1d90d95f8259fbb2a77c47166c8" category="list-text">新しいバックアップおよびリカバリ機能と強化機能をご活用ください。</block>
   <block id="f724a122832f4cd3fdfc151421f7e241" category="list-text">引き続きNetAppのテクニカルサポートを受けることができます。</block>
+  <block id="d649bc1632422c59f70f207f44b9bd46" category="paragraph">今回のリリースでは、Hyper-Vワークロードに以下の機能強化が導入されました。</block>
+  <block id="f24ced363c199d867c90ec2cb7734252" category="paragraph">*オブジェクトストレージのバックアップを別の場所に復元する*：Hyper-V の仮想マシン、ファイル、フォルダーをオブジェクトストレージから別のストレージ場所に復元できるようになりました。</block>
+  <block id="9836134eb11f1353834ea33101d25681" category="inline-link">Hyper-VワークロードをNetApp Backup and Recoveryで保護する方法について説明します</block>
+  <block id="02b4e2b0b1ffdd4b0919e2e3430f47a2" category="paragraph">Hyper-Vワークロードの保護に関する詳細は、<block ref="ff9e4811de6c06d1343d50a5a2fb4ef4" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="d7a71b14f458c01c992ae6ab1d9419fb" category="list-text">*Trident Protect 26.08*：このリリースには Trident Protect 26.08 が含まれます。</block>
+  <block id="a246bba4bc1bf6be5dbc5f0eef6fa916" category="list-text">*バックアップの再試行*：Kubernetes 保護ポリシーの詳細設定で、バックアップの再試行を有効にし、再試行回数と再試行間隔を設定できるようになりました。</block>
+  <block id="af4a914ceb04d24e26988f7034d17a6a" category="list-text">*部分的なバックアップの成功*：Kubernetes の保護ポリシーの詳細設定で、個々のリソースが失敗した場合でもバックアップを継続するように構成できるようになり、バックアップジョブが部分的に成功した状態として完了できるようになります。これにより、バックアップ操作中に一部のリソースが失敗した場合でも、バックアップされたリソースを復元することができます。</block>
+  <block id="51d0bd2fc2cb031a5bd97ec4521df850" category="list-text">*「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態およびVM一貫性のバックアップ*：Backup and Recovery for NetApp Consoleサービスで、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態またはVM一貫性のバックアップやスナップショットを作成する保護ポリシーを設定できるようになりました。また、保護処理中にVMのフリーズを実行する方法をカスタマイズすることもできます。</block>
+  <block id="f1aeeb7adfac5302d8957879854e8855" category="list-text">*ConsoleエージェントのIPアドレス変更時のKubernetesクラスターの再接続*：Backup and Recovery for NetApp Consoleサービスでは、エージェントのIPアドレスが変更された場合に、クラスターをそのConsoleエージェントに再接続できるようになりました。</block>
+  <block id="137aac5acf6a89b5f2b8d01617331ec5" category="list-text">*クラスターを新しいコンソールエージェントに移行する*：NetApp Backup and Recovery コンソールサービスでは、元のエージェントが故障または削除された場合に、クラスターを新しいコンソールエージェントに移行できるようになり、アプリケーションの保護が中断なく継続されます。</block>
+  <block id="5bac8342d3d15811fd4569a62898855c" category="inline-link">NetApp Backup and Recoveryを使用したKubernetesワークロードの保護について説明します</block>
+  <block id="9768ac88d7eeb5d6d2192e590de89bb4" category="paragraph">Kubernetesワークロードの保護の詳細については、<block ref="1288e5e7d4fc4b4cb3f5e18b91f79147" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="c85cd7cc7711f70f8bc51d35495063e2" category="section-title">Oracle Databaseワークロードの強化</block>
+  <block id="26d43fe933dfc83c3004371ec611ca0f" category="list-text">*プラガブルデータベース（PDB）の復元*：個々のプラガブルデータベース（PDB）および PDB テーブルスペースを、ポイントインタイムリカバリを含めて復元できるようになりました。</block>
+  <block id="ba1d750ea9570e1e14902f85cdd21fbd" category="list-text">*プラガブルデータベース（PDB）クローン*：既存のターゲットコンテナデータベース（CDB）に単一のPDBをクローンできるようになりました。また、コンテナデータベース全体をクローンする際に、PDBを除外することも可能です。</block>
+  <block id="c7b95907073ba49194dd07ae01b56f96" category="list-text">「宛先ストレージ」セクション（オブジェクトストアから復元する場合のみ表示されます）：</block>
+  <block id="f771ab6fc3300e0b07bde061e3f606f7" category="list-text">*デフォルトの保存場所を変更する*：このオプションを有効にすると、ソースの保存場所にアクセスできない場合や、容量がいっぱいになった場合に、オブジェクトストアのバックアップを別の場所に復元できます。別のクラスター、ストレージVM、またはアグリゲートを選択してください。</block>
+  <block id="7c3780c8bbc09e634d77ec9249acfb5c" category="section-title">2026年8月17日</block>
 </blocks>
