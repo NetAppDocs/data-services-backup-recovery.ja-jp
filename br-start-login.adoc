@@ -14,15 +14,15 @@ summary: NetApp Consoleを使用して、 NetApp Backup and Recoveryサービス
 
 
 [role="lead"]
-NetApp Consoleを使用してNetApp Backup and Recoveryにログインします。
+NetApp Console から NetApp Backup and Recovery にログインして、ワークロードを検出し、保護操作を管理します。
 
 NetApp Backup and Recovery は、アイデンティティおよびアクセス管理を使用して、各ユーザーが実行できる操作を制御します。
 
 各ロールが実行できるアクションの詳細については、link:reference-roles.html["NetApp Backup and Recoveryのユーザー ロール"] 。
 
-NetApp Consoleにログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetApp Consoleログインにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
+NetApp Console にログインするには、NetApp Support Site の認証情報を使用するか、メールアドレスとパスワードを使用して NetApp Console アカウントにサインアップすることができます。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^]。
 
-*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須 NetApp Console ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 コンソール エージェントを追加するには、バックアップとリカバリのスーパー管理者ロールが必要です。
 
@@ -39,18 +39,18 @@ NetApp Consoleのログイン ページが表示されます。
 . コンソールにログインします。
 . コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
 +
-** バックアップおよびリカバリに初めてログインし、*システム* ページにまだシステムを追加していない場合は、バックアップおよびリカバリに、システムを追加するオプションを含む「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示されます。*システム*ページにシステムを追加する方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準モードの使用開始"^]。
+** バックアップとリカバリに初めてログインする場合で、まだ *システム* ページにシステムを追加していない場合、バックアップとリカバリ サービスには「Welcome to the new NetApp Backup and Recovery」ランディング ページが表示され、システムを追加するオプションが提供されます。*システム* ページへのシステムの追加方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準モードの使用開始"^]を参照してください。
 ** 初めて Backup and Recovery にログインし、コンソールにシステムがあるがリソースが検出されていない場合は、[新しいNetApp Backup and Recovery へようこそ] ページが表示され、[リソースの検出] オプションが表示されます。
 
 
-. まだ行っていない場合は、[*検出と管理*] オプションを選択します。
+. まだ実行していない場合は、*検索と管理*を選択してください。
 +
-** Microsoft SQL Serverのワークロードについては、以下を参照してください。link:br-start-discover.html["Microsoft SQL Server ワークロードの検出"] 。
-** VMwareワークロードについては、link:br-use-vmware-discovery.html["VMware ワークロードを発見"] 。
-** KVMワークロードについては、link:br-start-discover-kvm.html["KVMワークロードを発見"] 。
-** Oracleデータベースのワークロードについては、link:br-start-discover-oracle.html["Oracle Databaseワークロードを検出"]を参照してください。
-** Hyper-Vワークロードについては、以下を参照してください。link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"] 。
-** Kubernetesワークロードについては、以下を参照してください。link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"] 。
+** Microsoft SQL Server ワークロードについては、link:br-start-discover.html["Microsoft SQL Server ワークロードの検出"]を参照してください。
+** VMwareワークロードについては、link:br-use-vmware-discovery.html["VMware ワークロードを発見"]を参照してください。
+** KVMワークロードについては、link:br-start-discover-kvm.html["KVMワークロードを発見"]を参照してください。
+** Oracle Databaseワークロードについては、link:br-start-discover-oracle.html["Oracle Databaseワークロードを検出"]を参照してください。
+** Hyper-Vワークロードについては、link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"]を参照してください。
+** Kubernetesワークロードについては、link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]を参照してください。
 
 
 

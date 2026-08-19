@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery、サービスを使用するためにまず
 
 
 [role="lead"]
-このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。
+NetApp Backup and Recovery を SQL Server ワークロードに使用する前に、これらの制限事項を確認してください。
 
 
 
@@ -71,7 +71,7 @@ SnapCenterポリシーをNetApp Backup and Recoveryポリシーに移行する�
 [[resources-with-multiple-policies-using-the-same-schedule-tier-not-supported]]
 === 同じスケジュール層を使用する複数のポリシーを持つリソースはサポートされていません
 
-同じスケジュール層 (たとえば、時間別、日別、週別など) を使用する複数のポリシーをリソースに割り当てることはできません。  NetApp Backup and Recovery は、 SnapCenterからこれらのリソースをインポートしません。
+同じスケジュール階層（例えば、時間単位、日単位、週単位）を使用する複数のポリシーを、1つのリソースに割り当てることはできません。NetApp Backup and Recoveryでは、SnapCenterからこれらのリソースはインポートされません。
 
 *回避策*: 同じスケジュール層を使用するポリシーを 1 つだけリソースにアタッチします。
 
@@ -89,18 +89,18 @@ SnapCenterポリシーをNetApp Backup and Recoveryポリシーに移行する�
 [[both-daily-and-monthly-policies-attached-to-one-resource-not-supported]]
 === 1 つのリソースに日次ポリシーと月次ポリシーの両方を適用することはサポートされていません
 
-SnapCenterポリシーが日間隔と月間隔の両方で繰り返される場合、 NetApp Backup and Recovery はポリシーをインポートしません。
+SnapCenterポリシーが日単位と月単位の両方の間隔で繰り返される場合、NetApp Backup and Recoveryはそのポリシーをインポートしません。
 
-たとえば、日次ポリシー (7 日以下または 7 日以上) をリソースにアタッチし、同じリソースに月次ポリシーもアタッチすることはできません。
+例えば、リソースに日次ポリシー（間隔が7日以下または7日を超えるもの）を関連付けると同時に、同じリソースに月次ポリシーを関連付けることはできません。
 
 *回避策*: 毎日または毎月の間隔を使用するポリシーを使用しますが、両方を使用するポリシーは使用しません。
 
 
 
 [[on-demand-backup-policies-not-migrated]]
-=== オンデマンド バックアップ ポリシーは移行されません
+=== オンデマンドバックアップポリシーは移行されませんでした
 
-NetApp Backup and Recovery は、 SnapCenterからオンデマンド バックアップ ポリシーをインポートしません。
+NetApp Backup and Recovery は、SnapCenter からオンデマンドバックアップポリシーをインポートしません。
 
 
 
@@ -116,7 +116,7 @@ NetApp Backup and Recovery は、 SnapCenterからログのみのバックアッ
 [[host-mapping]]
 === ホストマッピング
 
-SnapCenter にはリソースをホストにマッピングするためのストレージクラスタやストレージ VM はありませんが、NetApp Backup and Recovery にはその機能があります。オンプレミス ONTAP クラスターまたはストレージ VM は、NetApp Backup and Recovery のプレビュー版ではホストにマッピングされません。また、NetApp Console はストレージ VM をサポートしていません。
+SnapCenterはリソース用のストレージ クラスタまたはストレージ VMをホストにマッピングしませんが、NetApp Backup and Recoveryはマッピングします。NetApp Backup and Recoveryのプレビュー バージョンでは、オンプレミスのONTAPクラスタまたはストレージ VMはホストにマッピングされません。さらに、NetApp Consoleはストレージ VMをサポートしていません。
 
 *回避策*: SnapCenterからリソースをインポートする前に、オンプレミスのSnapCenterに登録されているすべてのオンプレミスのONTAPストレージ システム用のシステムをNetApp Backup and Recoveryで作成します。次に、そのクラスターのリソースをSnapCenterからNetApp Backup and Recoveryにインポートします。
 

@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recoveryサービスを使用するには、まずONTAPシステムで実行されている VMware データストアと VM を検出する必要があります。すでにインストールされている場合は、オプションでSnapCenter Plug-in for VMware vSphereからバックアップ データとポリシーをインポートできます。
+ONTAP システムで実行されている VMware データストアと VM を保護する前に、NetApp Backup and Recovery でそれらを検出する必要があります。すでに SnapCenter Plug-in for VMware vSphere がインストールされている場合は、そのバックアップデータとポリシーをインポートすることもできます。
 
 *必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -56,7 +56,7 @@ NOTE: SnapCenterプラグインがすでにある場合は、 SnapCenterから�
 [[if-snapcenter-plug-in-is-not-already-installed-add-a-vcenter-and-discover-resources]]
 === SnapCenterプラグインがまだインストールされていない場合は、vCenterを追加してリソースを検出します。
 
-SnapCenter Plug-in for VMware がまだインストールされていない場合は、vCenter 情報を追加し、 NetApp Backup and Recoveryでワークロードを検出します。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。
+まだ SnapCenter Plug-in for VMware vSphere がインストールされていない場合は、NetApp Backup and Recovery がワークロードを検出できるように vCenter の情報を追加します。各 Console エージェント内で、ワークロードを検出するシステムを選択します。
 
 .手順
 . NetApp Consoleの左側のナビゲーションから、*保護* > *バックアップとリカバリ* を選択します。
@@ -88,7 +88,7 @@ TIP: このプロセスには数分かかる場合があります。
 [[if-snapcenter-plug-in-is-already-installed-import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
 === SnapCenterプラグインがすでにインストールされている場合は、VMwareリソース用のSnapCenterプラグインをNetApp Backup and Recoveryにインポートします。
 
-SnapCenter Plug-in for VMware がすでにインストールされている場合は、次の手順に従ってSnapCenter Plug-in リソースをNetApp Backup and Recoveryにインポートします。コンソールは、vCenter 内の ESXi ホスト、データストア、VM を検出し、プラグインからスケジュールを設定します。すべての情報を再作成する必要はありません。
+すでに SnapCenter Plug-in for VMware がインストールされている場合は、次の手順に従って SnapCenter Plug-in のリソースを NetApp Backup and Recovery にインポートします。NetApp Console は、プラグインから ESXi ホスト、データストア、VM、およびスケジュールを検出するため、これらの情報を再作成する必要はありません。
 
 これは次の方法で実行できます。
 
@@ -134,7 +134,7 @@ TIP: SnapCenterプラグインから vCenter メタデータをインポート�
 . *インポート* を選択してエントリを検証し、 SnapCenterプラグインを登録します。
 +
 
-NOTE: SnapCenterプラグインがすでに登録されている場合は、既存の登録詳細を更新できます。
+NOTE: SnapCenter プラグインがすでに登録されている場合は、既存の登録情報を更新できます。
 
 
 
@@ -145,15 +145,15 @@ NOTE: SnapCenterプラグインがすでに登録されている場合は、既�
 
 ==== SnapCenterプラグインからインポートされたリソースを管理する
 
-SnapCenter Plug-in for VMware から vCenter メタデータをインポートした後、 NetApp Backup and Recoveryでリソースを管理します。これらのリソースを管理することを選択すると、 NetApp Backup and Recovery はインポートしたリソースをバックアップおよびリカバリできるようになります。  NetApp Backup and Recoveryで管理を開始すると、 SnapCenterプラグインでそれらのリソースを管理できなくなります。
+SnapCenter Plug-in for VMware vSphereからvCenterメタデータをインポートした後、NetApp Backup and Recoveryでリソースを管理します。これらのリソースの管理を選択すると、NetApp Backup and Recoveryはインポートされたリソースをバックアップおよびリカバリできるようになります。NetApp Backup and Recoveryで管理を開始した後は、SnapCenter Plug-inでこれらのリソースを管理することはできなくなります。
 
-リソースを管理することを選択すると、リソース、VM、およびポリシーがSnapCenter Plug-in for VMware からインポートされます。リソース グループ、ポリシー、スナップショットはプラグインから移行され、 NetApp Backup and Recoveryで管理されるようになります。
+リソースの管理を選択すると、NetApp Backup and Recoveryはリソース、VM、およびポリシーをSnapCenter Plug-in for VMwareからインポートします。リソースグループ、ポリシー、およびスナップショットがプラグインから移行され、NetApp Backup and Recoveryで管理されるようになります。
 
 .手順
-. SnapCenterプラグインから VMware リソースをインポートした後、[バックアップとリカバリ] メニューから [インベントリ] を選択します。
-. [インベントリ] ページで、今後NetApp Backup and Recoveryで管理するインポート済みの vCenter を選択します。
+. SnapCenter Plug-in から VMware リソースをインポートした後、バックアップと復元メニューから *Inventory* を選択します。
+. 「インベントリ」ページから、NetApp Backup and Recoveryで管理する、インポートされたvCenterを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示* をクリックして、ワークロードの詳細を表示します。
-. インベントリ > ワークロードページから、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理* をクリックして、vCenter の管理ページを表示します。
+. インベントリ > ワークロード ページから、アクション アイコン image:../media/icon-action.png["アクションオプション"] > *管理* を選択して、vCenter の管理ページを開きます。
 . 「移行を続行しますか？」のボックスをチェックし、「移行」を選択します。
 
 
@@ -164,7 +164,7 @@ SnapCenter Plug-in for VMware から vCenter メタデータをインポート�
 
 ==== NetApp Backup and Recoveryダッシュボードに進みます
 
-. ダッシュボードを表示するには、「バックアップとリカバリ」メニューから「ダッシュボード」を選択します。
+. ダッシュボードを表示するには、「Backup and Recovery」メニューから「Dashboard」を選択してください。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 +
 link:br-use-dashboard.html["ダッシュボードに表示される内容を学ぶ"]。

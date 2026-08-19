@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-oracle.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
-summary: NetApp Backup and Recovery、ワークロードを保護するために、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and Recovery は、ワークロードを保護する前に、まずワークロードを検出する必要があります。 
 ---
 = NetApp Backup and RecoveryでOracle Databaseワークロードを検出
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: NetApp Backup and Recovery、ワークロードを保護するために
 
 
 [role="lead"]
-Oracleデータベースを検出すると、NetApp Backup and Recoveryでバックアップとスナップショットを作成およびリストアして保護できるようになります。
+NetApp Backup and Recovery で Oracle Database ワークロードを検出し、バックアップやスナップショットで保護できます。
 
-*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 
 
@@ -130,10 +130,10 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 [[add-an-oracle-database-host-and-discover-resources]]
 == Oracle Databaseホストを追加してリソースを検出する
 
-Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロードを検出できるようにします。各コンソール エージェント内で、ワークロードを検出するシステムを選択します。
+Oracle Database ホスト情報を追加して、NetApp Backup and Recovery がワークロードを検出できるようにします。各コンソールエージェントについて、検出するシステムを選択します。
 
 .手順
-. NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
 . *ワークロード*の下で、*Oracle*タイルを選択します。
 . *リソースの検出*を選択します。
 . *ワークロード タイプ* フィールドで *Oracle* を選択します。
@@ -145,10 +145,10 @@ Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロ
 .. *完了*を選択します。
 
 
-. *ホスト登録*：新しいOracleデータベースホストを追加します。*Host FQDN or IP address*フィールドに、ホストのFQDNまたはIPアドレスを入力します。クラスタ化されたデータベースの場合は、クラスタ内の任意のノードのFQDNまたはIPを入力できます。次に、クレデンシャル、NetApp Consoleエージェント、およびポート番号を指定します。
+. *ホスト登録*：新しい Oracle データベースホストを追加します。*ホストの FQDN または IP アドレス*フィールドに、ホストの FQDN または IP アドレスを入力します。クラスタ化されたデータベースの場合、クラスタ内の任意のノードの FQDN または IP アドレスを入力できます。次に、認証情報、Console エージェント、およびポート番号を入力します。
 . （オプション）非ルート ユーザーの資格情報を選択する場合は、次の手順を実行します：
 +
-.. 選択した非 root ユーザーを Oracle Database ホストの sudoers ファイルに追加する方法については、*sudoers の構成*を選択してください。
+.. Oracle Databaseホスト上のsudoersファイルに選択した非rootユーザーを追加する手順については、*sudoersの設定*を選択してください。
 .. ダイアログの指示に従い、完了したらチェックボックスを有効にして、*Done* を選択します。
 
 
@@ -159,7 +159,7 @@ Oracle ホスト情報を追加し、 NetApp Backup and Recovery でワークロ
 +
 [NOTE]
 ====
-Backup and Recovery は、SSH を介して各ホストに接続し、プラグインを自動的にインストールします。以下のいずれかに該当する場合は、*手動インストールを使用する*を有効にしてください：
+NetApp Backup and Recovery は、SSH を介して各ホストに接続し、プラグインを自動的にインストールします。以下のいずれかに該当する場合は、*手動インストールを使用する* を有効にしてください。
 
 *** 1つ以上のホストでSSHサービスが実行されていません。
 *** どのホストにも既にNetAppプラグインがインストールされている（一部のクラスタメンバーのみにインストールされている場合を含む）。
@@ -174,20 +174,20 @@ Backup and Recovery は、SSH を介して各ホストに接続し、プラグ�
 . *Discover*を選択します。
 +
 
-TIP: リソースの追加には数分かかる場合があります。進捗状況を確認するには、Inventoryページ下部のステータスダイアログで*Track progress*を選択するか、左側のメニューから*Monitoring*を選択してください。
+TIP: リソースの追加には数分かかる場合があります。進捗状況を確認するには、インベントリページ下部のステータスダイアログで「Track progress」を選択するか、左側のナビゲーションから「Monitoring」を選択してください。
 
 
 
 .結果
-Oracle Database ワークロードは、インベントリ ページのワークロード リストに表示されます。
+Oracle Databaseワークロードは、インベントリページのワークロード一覧に表示されます。
 
 
 
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == NetApp Backup and Recoveryダッシュボードに進みます
 
-. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
-. ワークロード タイル (Microsoft SQL Server など) を選択します。
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
+. ワークロードタイルを選択します（例：Oracle Database）。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
-. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
+. データ保護の健全性を確認します。新たに検出、保護、バックアップされたワークロードに基づいて、リスクにさらされているワークロードまたは保護されているワークロードの数が増加します。
 

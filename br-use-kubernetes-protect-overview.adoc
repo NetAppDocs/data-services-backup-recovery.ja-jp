@@ -4,7 +4,7 @@ permalink: br-use-kubernetes-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Kubernetes アプリケーションとアプリケーション データを保護し、データを確実に保護できます。 
 ---
-= Kubernetesワークロードの管理について学ぶ NetApp Backup and Recovery
+= NetApp Backup and Recoveryを使用したKubernetes保護のワークフロー
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,20 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-NetApp Backup and RecoveryでKubernetesワークロードを管理すると、Kubernetesクラスタとアプリケーションを1か所で検出、管理、保護できます。Kubernetesクラスタでホストされているリソースとアプリケーションを管理できます。また、単一のインターフェイスを使用して、Kubernetesアプリケーションの保護ポリシーを作成して関連付けることもできます。
+NetApp Backup and Recovery を使用して、単一のインターフェースから Kubernetes クラスターとアプリケーションの検出、管理、保護を行うことができます。
 
-次の図は、Kubernetes ワークロードのバックアップとリカバリのコンポーネントと基本アーキテクチャ、およびデータの異なるコピーを異なる場所に保存する方法を示しています。
+次の図は、Kubernetesのバックアップとリカバリの構成要素と基本アーキテクチャ、およびデータのコピーを異なる場所に保存する方法を示しています。
 
 image:../media/backup-recovery-architecture-diagram.png["Kubernetes ワークロードのバックアップとリカバリのアーキテクチャ図"]
 
 NetApp Backup and Recovery は、 Kubernetes ワークロードの管理に次の利点をもたらします。
 
-* 複数の Kubernetes クラスターで実行されるアプリケーションを保護するための単一のコントロールプレーン。これらのアプリケーションには、Kubernetes クラスターで実行されるコンテナや仮想マシンが含まれます。
-* NetApp SnapMirrorとのネイティブ統合により、すべてのバックアップおよびリカバリ ワークフローのストレージ オフロード機能が有効になります。
+* コンテナや仮想マシンを含む、複数のKubernetesクラスタにわたるアプリケーションを保護するための単一のコントロールプレーン。
+* NetApp SnapMirrorとのネイティブ統合により、バックアップおよびリカバリのワークフローにおけるストレージのオフロードが可能になります。
 * Kubernetes アプリケーションの永久増分バックアップにより、復旧ポイント目標 (RPO) と復旧時間目標 (RTO) が低下します。
 
 
-Kubernetes ワークロードの管理に関連する次のタスクを実行できます。
+Kubernetesワークロードに対して、以下のタスクを実行できます。
 
 * link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]。
 * link:br-use-manage-kubernetes-clusters.html["NetApp Backup and Recovery で Kubernetes クラスターを管理する"]。

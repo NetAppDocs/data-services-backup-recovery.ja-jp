@@ -4,7 +4,7 @@ permalink: br-api-backup-restore.html
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
 summary: Web UI を通じて利用できるNetApp Backup and Recovery機能は、RESTful API を通じても利用できます。 
 ---
-= NetApp Backup and RecoveryREST API による自動化
+= NetApp Backup and RecoveryをREST APIで自動化する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,20 @@ summary: Web UI を通じて利用できるNetApp Backup and Recovery機能は�
 
 
 [role="lead"]
-Web UI を通じて利用できるNetApp Backup and Recovery機能は、バックアップおよびリカバリ REST API を通じても利用できます。
+NetApp Backup and Recovery REST APIを使用して、Web UIで利用可能なバックアップおよびリストアタスクを自動化します。
 
-NetApp Backup and Recoveryには、次の 10 のエンドポイント カテゴリが定義されています。
+NetApp Backup and Recoveryでは、エンドポイントのカテゴリを10種類定義しています：
 
-* `backup`- クラウドおよびオンプレミスのリソースのバックアップ操作を管理し、バックアップデータの詳細を取得します
-* `catalog`- クエリに基づいてファイルのインデックスカタログ検索を管理します (検索と復元)
+* `backup` - クラウドおよびオンプレミスリソースのバックアップ操作を管理し、バックアップデータの詳細を取得します。
+* `catalog` - クエリに基づいてファイルのインデックス付きカタログ検索を管理します（検索と復元）
 * `cloud`- NetApp Consoleからさまざまなクラウドプロバイダーリソースに関する情報を取得します
-* `job`- NetApp Consoleデータベース上のジョブ詳細エントリを管理します
-* `license`- NetApp Consoleからシステムのライセンスの有効性を取得します
+* `job` - NetApp Console データベース内のジョブ詳細エントリを管理します
+* `license` - NetApp Console からシステムライセンスステータスを取得します
 * `ransomware scan`- 特定のバックアップファイルに対してランサムウェアスキャンを開始します
 * `restore`- ボリューム、ファイル、フォルダレベルの復元操作を実行できます
 * `sfr`- 単一ファイルレベルの復元操作のためにバックアップ ファイルからファイルを取得します (参照と復元)
-* `storagegrid`- StorageGRIDサーバーの詳細を取得し、 StorageGRIDサーバーを検出できるようにします
-* `system`- バックアップポリシーを管理し、システムに関連付けられた宛先オブジェクトストアを構成します
+* `storagegrid` - StorageGRIDサーバーに関する詳細を取得し、StorageGRIDサーバーを検出できるようにします
+* `system` - バックアップポリシーを管理し、システムに関連付けられたデスティネーション オブジェクト ストアを設定します
 
 
 
@@ -42,17 +42,17 @@ NetApp Backup and RecoveryAPIのドキュメントは、以下から入手でき
 [[getting-started]]
 == 開始
 
-NetApp Backup and RecoveryAPI の使用を開始するには、ユーザー トークン、 NetApp Consoleアカウント ID、およびコンソール エージェント ID を取得する必要があります。
+NetApp Backup and Recovery API を使い始めるには、ユーザートークン、NetApp Console アカウント ID、および Console エージェント ID を取得してください。
 
-API 呼び出しを行うときは、Authorization ヘッダーにユーザー トークンを追加し、x-agent-id ヘッダーにコンソール エージェント ID を追加します。  API ではNetApp Consoleアカウント ID を使用する必要があります。
+API呼び出しを行う際は、ユーザートークンを `Authorization`ヘッダーに、コンソールエージェントIDを `x-agent-id`ヘッダーに含めてください。APIリクエストには、NetApp ConsoleアカウントIDを含めてください。
 
 
-NOTE: サービス アカウントを使用している場合は、ユーザー トークンの代わりにサービス アクセス トークンを使用する必要があります。「client_id」の値 (「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」) は固定値であり、変更できません。この場合は、次の手順に従ってください。 https://docs.netapp.com/us-en/console-automation/platform/create_service_token.html["サービスアクセストークンを作成する"^] 。
+NOTE: サービスアカウントを使用する場合は、ユーザートークンの代わりにサービスアクセストークンを使用してください。値（ `client_id` (`Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC`）は固定されており、変更できません。この場合は、こちらの手順に従ってください： https://docs.netapp.com/us-en/console-automation/platform/create_service_token.html["サービスアクセストークンを作成する"^]。
 
 .手順
-. NetApp Console の Web サイトからユーザートークンを取得します。
+. NetApp Console ウェブサイトからユーザートークンを取得します。
 +
-以下のリンクから必ずリフレッシュトークンを生成してください：https://services.cloud.netapp.com/refresh-token/.リフレッシュトークンは、ユーザートークンを生成するために使用する英数字の文字列です。
+以下のリンクからリフレッシュトークンを生成してください：https://services.cloud.netapp.com/refresh-token/.リフレッシュトークンは、ユーザートークンを生成するために使用する英数字の文字列です。
 
 +
 [source, shell]
@@ -67,7 +67,7 @@ curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/tok
 ----
 +
 
-NOTE: NetApp ConsoleWeb サイトのユーザー トークンには有効期限があります。API レスポンスには、トークンの有効期限を示す「expires_in」フィールドが含まれています。トークンを更新するには、この API を再度呼び出す必要があります。
+NOTE: NetApp Console ウェブサイトのユーザートークンの有効期限が切れました。API レスポンスには、トークンの有効期限を示す `expires_in`フィールドが含まれています。トークンを更新するには、この API を再度呼び出してください。
 
 . NetApp Consoleアカウント ID を取得します。
 +
@@ -80,7 +80,7 @@ Header:
 -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR
 ----
 +
-この API は次のような応答を返します。*[0].[ accountPublicId]* からの出力を解析することでアカウント ID を取得できます。
+このAPIは、以下のようなレスポンスを返します。*[0].[accountPublicId]*からアカウントIDを取得します。
 
 +
 [source, json]
@@ -96,7 +96,7 @@ Header:
   "userRole": "Role-1"
 }
 ----
-. コンソール エージェント ID を含む x-agent-id を取得します。
+.  `x-agent-id`ヘッダー値を取得します。このヘッダー値にはコンソールエージェントIDが含まれています。
 +
 [source, console]
 ----
@@ -108,7 +108,7 @@ Header:
   -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5…………
 ----
 +
-*occm.[0].[agent].[agentId]* からの出力を解析することにより、応答からエージェント ID を取得できます。
+*occm.[0].[agent].[agentId]* を解析して、応答からエージェント ID を取得します。
 
 
 
@@ -117,7 +117,7 @@ Header:
 [[example-using-the-apis]]
 == APIの使用例
 
-次の例は、Azure クラウドの East-US-2 リージョンで、毎日、毎時、毎週のラベルが設定され、アーカイブ日数が 180 日に設定された新しいポリシーを持つシステムでNetApp Backup and Recoveryをアクティブ化する API 呼び出しを示しています。これにより、システム上のバックアップのみが有効になり、ボリュームはバックアップされないことに注意してください。
+次の例は、新しいポリシーが適用されたシステムでNetApp Backup and Recoveryをアクティブ化するAPI呼び出しを示しています。このポリシーには日次、時間次、週次のラベルがあり、East US 2 Azureリージョンでは180日後にアーカイブされます。この要求はシステム上のバックアップを有効にしますが、ボリュームのバックアップは行いません。
 
 .API 要求
 NetApp ConsoleのアカウントIDを使用していることがわかります `account-DpTFcxN3`、コンソールエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`このコマンドでは。
@@ -156,14 +156,14 @@ curl --location --request POST 'https://api.bluexp.netapp.com/account/account-Dp
     }
   }
 ----
-.レスポンスは、監視できるジョブ ID です。
+.応答には、監視可能なジョブIDが含まれています。
 [source, json]
 ----
 {
  "job-id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a"
 }
 ----
-.応答を監視します。
+.ジョブのステータスを監視する：
 [source, shell]
 ----
 curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v1/job/1b34b6f6-8f43-40fb-9a52-485b0dfe893a' \
@@ -187,7 +187,7 @@ curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpT
   ]
 }
 ----
-.「ステータス」が「完了」になるまで監視します。
+.<code>status</code>が<code>COMPLETED</code>になるまで監視します：
 [source, json]
 ----
 {

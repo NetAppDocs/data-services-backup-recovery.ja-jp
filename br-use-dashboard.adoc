@@ -4,7 +4,7 @@ permalink: br-use-dashboard.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, backup, recovery, dashboard, view, health, status, alerts, notifications 
 summary: ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。バックアップとリストアのステータスを表示し、 NetApp Backup and Recoveryダッシュボードに表示されるアラートに応答します。保護の概要、復元の概要、システムの概要などを確認できます。 
 ---
-= NetApp Backup and Recoveryダッシュボードで保護の健全性を確認する
+= バックアップとリカバリのダッシュボードで保護の状態を確認する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,12 @@ summary: ワークロードの健全性を監視することで、ワークロ�
 
 
 [role="lead"]
-ワークロードの健全性を監視することで、ワークロード保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetApp Backup and Recoveryダッシュボードでバックアップと復元のステータスを表示します。システムの概要、保護の概要、ジョブの概要、復元の概要などを確認できます。
+ワークロードの状態を監視して、保護上の問題を特定し、アラートに対応します。バックアップと復元のステータスを表示し、NetApp Backup and Recovery ダッシュボードでシステム、保護、ジョブ、復元の概要を確認します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
-. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
 . ワークロード タイル (Microsoft SQL Server など) を選択します。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
 +
@@ -56,11 +56,11 @@ TIP: 保護されたデータベースとは、バックアップ ポリシー�
 [[view-the-job-summary]]
 == 求人概要を見る
 
-ジョブの概要で、完了したジョブ、実行中のジョブ、失敗したジョブの合計数を確認します。
+ジョブ概要で、完了済み、実行中、または失敗したジョブの総数を確認してください。
 
 .手順
-. 各ジョブの配布について、フィルターを変更して、過去 30 日間、過去 7 日間、過去 24 時間、過去 1 年間などの日数に基づいて、失敗、実行中、完了の概要を表示します。
-. *ジョブ監視の表示* を選択して、失敗したジョブ、実行中のジョブ、完了したジョブの詳細を表示します。
+. 各ジョブ分布について、フィルターを変更して、失敗したジョブ、実行中のジョブ、完了したジョブの概要を日数に基づいて表示します。たとえば、過去30日間、過去7日間、過去24時間、または過去1年間などです。
+. *ジョブ監視の表示*を選択すると、失敗したジョブ、実行中のジョブ、完了したジョブの詳細が表示されます。
 
 
 
@@ -68,7 +68,7 @@ TIP: 保護されたデータベースとは、バックアップ ポリシー�
 [[view-the-restore-summary]]
 == 復元の概要を表示する
 
-復元の概要で次の情報を確認します。
+復元概要に記載されている以下の情報を確認してください。
 
 * 実行された復元ジョブの合計数
 * 回復した容量の合計

@@ -4,7 +4,7 @@ permalink: br-use-restore-kubernetes-applications-cr.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。 
 ---
-= カスタムリソースを使用してNetApp Backup and RecoveryでKubernetesアプリケーションをリストアする
+= カスタムリソースを使用してKubernetesアプリケーションを復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: NetApp Backup and Recovery を使用すると、保護ポリシーで�
 
 
 [role="lead"]
-カスタム リソースを使用して、スナップショットまたはバックアップからアプリケーションを復元できます。アプリケーションを同じクラスタに復元する場合、既存のスナップショットからの復元の方が高速になります。
+カスタムリソースを使用して、スナップショットまたはバックアップからアプリケーションを復元します。既存のスナップショットから復元する場合、アプリケーションを同じクラスタに復元する方が通常は高速です。
 
 [NOTE]
 ====
 * アプリケーションを復元すると、アプリケーションに対して設定されているすべての実行フックもアプリとともに復元されます。復元後の実行フックが存在する場合、復元操作の一部として自動的に実行されます。
 * バックアップから別の名前空間または元の名前空間への復元は、qtree ボリュームでサポートされています。ただし、スナップショットから別の名前空間または元の名前空間への復元は、qtree ボリュームではサポートされていません。
-* 詳細設定を使用して復元操作をカスタマイズできます。詳細については、link:br-use-kubernetes-advanced-restore-settings.html["Kubernetes の高度なリストア設定（NetApp Backup and Recovery）"] を参照してください。
+* 詳細設定を使用して復元操作をカスタマイズできます。詳細については、link:br-use-kubernetes-advanced-restore-settings.html["Kubernetes の高度なリストア設定（NetApp Backup and Recovery）"]を参照してください。
 
 
 ====
@@ -34,7 +34,7 @@ BackupRestore CR を使用して異なる名前空間にバックアップを復
 [NOTE]
 ====
 * 既存のリソースを含む別の名前空間にバックアップをリストアしても、バックアップ内のリソースと名前を共有するリソースは変更されません。バックアップ内のすべてのリソースをリストアするには、ターゲット名前空間を削除して再作成するか、バックアップを新しい名前空間にリストアします。
-* CR を使用して新しい名前空間に復元する場合は、CR を適用する前に、デスティネーション名前空間を手動で作成する必要があります。NetApp Backup and Recovery では、CLI を使用する場合にのみ名前空間が自動的に作成されます。
+* CRを使用して新しい名前空間に復元する場合、CRを適用する前に、宛先の名前空間を手動で作成する必要があります。Backup and Recoveryは、CLIを使用した場合にのみ、自動的に名前空間を作成します。
 
 
 ====
@@ -307,7 +307,7 @@ kubectl get backups <BACKUP_NAME> -n my-app-namespace -o jsonpath='{.status.appA
 ----
 +
 
-NOTE: BackupRestore CR が利用できない場合は、手順 2 に記載されているコマンドを使用してバックアップの内容を表示できます。
+NOTE: BackupRestore CR が利用できない場合は、手順 2 のコマンドを使用してバックアップの内容を表示できます。
 
 ** *spec.namespaceMapping*：リストア処理のソースネームスペースからデスティネーションネームスペースへのマッピング。 `my-source-namespace`と `my-destination-namespace`を環境の情報に置き換えます。
 +

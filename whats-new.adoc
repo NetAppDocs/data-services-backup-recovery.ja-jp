@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryの新機能について説明します。
 
 
 [role="lead"]
-NetApp Backup and Recoveryの新機能について説明します。
+新機能、機能強化、および修正点については、NetApp Backup and Recovery を参照してください。
 
 
 
@@ -807,7 +807,7 @@ link:br-use-vmware-protect-overview.html["NetApp Backup and RecoveryによるVMw
 [[microsoft-sql-server-workload-supported-in-general-availability-ga]]
 === Microsoft SQL Server ワークロードが一般提供 (GA) でサポートされるようになりました
 
-Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
+Microsoft SQL Serverワークロードのサポートが、NetApp Backup and Recoveryで一般提供（GA）になりました。ONTAP、Cloud Volumes ONTAP、およびAmazon FSx for NetApp ONTAPストレージ上でMSSQL環境を使用している組織は、この新しいBackup and Recoveryサービスを活用してデータを保護できるようになりました。
 
 このリリースには、以前のプレビュー バージョンからの Microsoft SQL Server ワークロード サポートに対する次の機能強化が含まれています。
 
@@ -1066,7 +1066,7 @@ NetApp Backup and Recovery は、Wasabi に重点を置き、サードパーテ�
 
 ==== Wasabiを使い始める
 
-サードパーティのストレージをオブジェクト ストアとして使用するには、コンソール エージェント内でフラグを有効にする必要があります。次に、サードパーティのオブジェクト ストアの接続詳細を入力し、それをバックアップおよびリカバリのワークフローに統合できます。
+サードパーティ製ストレージをオブジェクトストアとして使用するには、Console エージェント内でフラグを有効にする必要があります。次に、サードパーティ製オブジェクトストアへの接続情報を入力し、Backup and Recovery のワークフローに統合できます。
 
 .手順
 . コネクタに SSH で接続します。
@@ -1218,7 +1218,7 @@ NOTE: このドキュメントはテクノロジープレビューとして提�
 
 NetApp Backup and Recovery Preview 2025 のこのバージョンには、次の更新が含まれています。
 
-* バックアップおよびリカバリ タスクをより直感的に管理できるように再設計されたユーザー インターフェイス。
+* バックアップとリカバリのタスク管理をより直感的に行えるよう、ユーザーインターフェースを再設計しました。
 * プレビュー バージョンでは、Microsoft SQL Server データベースのバックアップと復元が可能になります。(他のワークロードのサポートは将来のリリースで追加される予定です。)
 * このバージョンではSnapCenter の機能が統合されており、 NetApp Backup and Recoveryユーザー インターフェイスから 3-2-1 データ保護戦略を使用してSnapCenterリソースを管理および保護できます。
 * このバージョンでは、 SnapCenterワークロードをNetApp Backup and Recoveryにインポートできます。

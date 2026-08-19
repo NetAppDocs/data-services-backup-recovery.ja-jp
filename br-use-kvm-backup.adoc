@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-kvm-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: NetApp のバックアップとリカバリを使用して KVM ワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して KVM ワークロードを保護します。 
 ---
 = NetApp Backup and RecoveryでKVMワークロードをバックアップ
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: NetApp のバックアップとリカバリを使用して KVM ワー�
 
 
 [role="lead"]
-データが確実に保護されるように、オンプレミスのONTAPシステムから Amazon Web Services、 Azure NetApp Files、またはStorageGRIDに KVM 保護グループをバックアップします。保護グループをバックアップすると、 NetApp Consoleは保護グループに含まれる VM とストレージ プールをバックアップします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。
+オンプレミスの ONTAP システムから Amazon Web Services、Azure NetApp Files、または StorageGRID に KVM プロテクション グループをバックアップします。プロテクション グループをバックアップすると、NetApp Backup and Recovery はそのグループ内の VM とストレージ プールをバックアップし、パブリック クラウドまたはプライベート クラウド アカウントのオブジェクト ストアにバックアップを保存します。
 
 
-NOTE: 保護グループをスケジュールに従ってバックアップするには、バックアップおよび復元操作を制御するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
+NOTE: スケジュールされたバックアップを実行するには、バックアップおよび復元操作を管理するポリシーを作成します。手順については、link:br-use-policies-kvm-create.html["KVM保護ポリシーを作成する"]を参照してください。
 
-* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。詳細については、link:br-use-kvm-protection-groups.html["KVM保護グループをNetApp Backup and Recoveryで管理する"]を参照してください。
+* 一連のリソースのバックアップおよび復元操作を管理するための保護グループを作成します。詳細については、link:br-use-kvm-protection-groups.html["KVM保護グループをNetApp Backup and Recoveryで管理する"]を参照してください。
 
 
 
@@ -27,7 +27,7 @@ NOTE: 保護グループをスケジュールに従ってバックアップす�
 [[back-up-protection-groups-now-with-an-on-demand-backup]]
 == オンデマンド バックアップで保護グループを今すぐバックアップ
 
-オンデマンド バックアップをすぐに実行できます。これは、システムに変更を加える前にバックアップがあることを確認したい場合に役立ちます。
+変更を加える前に最新のバックアップが必要な場合は、オンデマンドバックアップをすぐに実行してください。
 
 *必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -35,9 +35,9 @@ NOTE: 保護グループをスケジュールに従ってバックアップす�
 . NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
 . KVM タイルで、[検出と管理] を選択します。
 . *在庫*を選択します。
-. 保護の詳細を表示するには、ワークロードを選択します。
+. 保護の詳細を表示するには、ワークロードを選択してください。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
-. *保護グループ*、*データストア*、または*仮想マシン*タブを選択します。
+. 「保護グループ」、「データストア」、または「仮想マシン」タブを選択します。
 . バックアップする保護グループを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
 +

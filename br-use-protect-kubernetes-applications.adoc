@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery を使用すると、ワークロード ホ�
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用すると、Web UIを介して、またはカスタムリソースファイルを適用して、Kubernetesアプリケーションを追加できます。アプリケーションは、標準のKubernetesリソースで構成されるネームスペースベース、または1つ以上の仮想マシンで構成されるVMベースにすることができます。
+NetApp Backup and Recovery の Web UI またはカスタムリソースファイルを使用して、Kubernetes アプリケーションを保護対象として追加します。標準の Kubernetes リソースを使用する名前空間ベースのアプリケーション、または1つ以上の仮想マシンを使用する VM ベースのアプリケーションを追加できます。
 
 .必要なNetApp Consoleロール
 組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
@@ -24,7 +24,7 @@ NetApp Backup and Recoveryを使用すると、Web UIを介して、またはカ
 [[add-and-protect-a-new-kubernetes-application]]
 == 新しいKubernetesアプリケーションを追加して保護する
 
-Kubernetesアプリケーションを保護する最初のステップは、NetApp Backup and Recovery内でアプリケーションを作成することです。アプリケーションを作成すると、Kubernetesクラスター上で実行されているアプリケーションがBackup and Recoveryに認識されるようになります。
+Kubernetes アプリケーションを保護するには、まず NetApp Backup and Recovery でアプリケーションを作成します。アプリケーションを作成すると、NetApp Backup and Recovery は Kubernetes クラスタ上で実行されているアプリケーションを認識します。
 
 .開始する前に
 Kubernetesアプリケーションを追加して保護する前に、link:br-start-discover.html["Kubernetesワークロードを発見する"] 。
@@ -95,7 +95,7 @@ NOTE: リストから仮想マシンを選択した場合、アプリケーシ�
 
 
 .結果
-アプリケーションが作成され、Kubernetes インベントリの *アプリケーション* タブのアプリケーション リストに表示されます。  NetApp Consoleは設定に基づいてアプリケーションの保護を有効にし、バックアップとリカバリの *監視* 領域で進行状況を監視できます。
+アプリケーションが作成され、Kubernetesインベントリの「アプリケーション」タブにあるアプリケーション一覧に表示されます。NetApp Backup and Recoveryは、お客様の設定に基づいてアプリケーションの保護を有効にします。進行状況は「監視」エリアで確認できます。
 
 --
 .名前空間ベースのアプリ（CR）を追加する

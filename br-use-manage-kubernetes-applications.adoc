@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: br-use-manage-kubernetes-applications.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery を使用すると、Kubernetes アプリケーションと関連リソースの保護を解除したり削除したりできます。 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, on-premises, applications, virtual machines, backup and recovery, snapcenter 
+summary: NetApp Backup and RecoveryでKubernetesアプリケーションと関連する保護データを管理します。 
 ---
 = NetApp Backup and RecoveryでKubernetesアプリケーションを管理する
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery を使用すると、Kubernetes アプリケ
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用すると、Kubernetes アプリケーションと関連リソースの保護を解除したり削除したりできます。
+必要に応じて、Kubernetesアプリケーションの保護を解除または削除し、復元ポイントを削除します。
 
 .必要なNetApp Consoleロール
 組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
@@ -24,16 +24,16 @@ NetApp Backup and Recovery を使用すると、Kubernetes アプリケーショ
 [[unprotect-a-kubernetes-application]]
 == Kubernetes アプリケーションの保護を解除する
 
-アプリケーションを保護する必要がなくなった場合は、保護を解除できます。アプリケーションの保護を解除すると、 NetApp Backup and Recovery はアプリケーションの保護を停止しますが、関連するすべてのバックアップとスナップショットは保持されます。
+アプリケーションの保護が不要になった場合は、保護を解除できます。アプリケーションの保護を解除すると、NetApp Backup and Recoveryはアプリケーションの保護を停止しますが、関連するすべてのバックアップとスナップショットを保持します。
 
 
-NOTE: 保護操作が実行中の間は、アプリケーションの保護を解除することはできません。操作が完了するまで待つか、回避策として、実行中の保護操作が使用している<<Kubernetes アプリケーションの復元ポイントを削除する,リストアポイントを削除する>>を削除します。その後、アプリケーションの保護を解除できます。
+NOTE: 保護操作が実行されている間は、アプリケーションの保護を解除することはできません。操作が完了するまで待つか、実行中の保護操作で使用されている復元ポイントを削除してください。その後、アプリケーションの保護を解除できます。
 
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。
-. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
+. Kubernetesインスタンスを選択し、*表示*を選択して、そのインスタンスに関連付けられているリソースを開きます。
 . *アプリケーション*タブを選択します。
-. アプリケーションのリストで、保護を解除するアプリケーションを選択し、関連する [アクション] メニューを選択します。
+. アプリケーションの一覧から、保護を解除するアプリケーションを選択し、関連する「アクション」メニューを選択します。
 . *保護解除*を選択します。
 . 通知を読み、準備ができたら [*保護解除*] を選択します。
 
@@ -43,15 +43,15 @@ NOTE: 保護操作が実行中の間は、アプリケーションの保護を�
 [[delete-a-kubernetes-application]]
 == Kubernetes アプリケーションを削除する
 
-不要になったアプリケーションを削除します。  NetApp Backup and Recovery は保護を停止し、削除されたアプリケーションのバックアップとスナップショットをすべて削除します。
+不要になったアプリケーションを削除します。NetApp Backup and Recovery は、保護を停止し、削除されたアプリケーションのすべてのバックアップとスナップショットを削除します。
 
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。
-. Kubernetes インスタンスを選択し、[表示] を選択して、そのインスタンスに関連付けられているリソースを表示します。
+. Kubernetesインスタンスを選択し、*表示*を選択して、そのインスタンスに関連付けられているリソースを開きます。
 . *アプリケーション*タブを選択します。
-. アプリケーションのリストで、削除するアプリケーションを選択し、関連する [アクション] メニューを選択します。
+. アプリケーションの一覧から、削除するアプリケーションを選択し、関連するアクションメニューを選択します。
 . *削除*を選択します。
-. *スナップショットとバックアップの削除* を有効にすると、アプリケーションのすべてのスナップショットとバックアップが削除されます。
+. アプリケーションのすべてのスナップショットとバックアップを削除するには、「スナップショットとバックアップの削除」を有効にします。
 +
 
 CAUTION: これらのスナップショットとバックアップを使用してアプリケーションを復元することはできなくなります。
@@ -64,13 +64,10 @@ CAUTION: これらのスナップショットとバックアップを使用し�
 [[remove-a-restore-point-for-a-kubernetes-application]]
 == Kubernetes アプリケーションの復元ポイントを削除する
 
-アプリケーションの保護を解除する必要があり、現在保護操作が実行中の場合は、アプリケーションの復元ポイントを削除する必要がある場合があります。
+保護操作が実行中にアプリケーションの保護を解除する必要がある場合は、アプリケーションのリストアポイントを削除してください。
 
 .手順
 . NetApp Backup and Recoveryメニューで、*リストア*を選択します。
-. リストから Kubernetes アプリケーションを選択し、そのアプリケーションの * 表示と復元 * を選択します。
-+
-復元ポイントのリストが表示されます。
-
-. 削除するリカバリポイントを選択し、アクションアイコンimage:../media/icon-action.png["アクションオプション"]>*リカバリポイントの削除*を選択して削除します。
+. リストからKubernetesアプリケーションを選択し、*表示と復元*を選択して復元ポイントを開きます。
+. 削除する復元ポイントを選択し、アクションアイコン image:../media/icon-action.png["アクションオプション"] > *リカバリポイントの削除* を選択して削除します。
 

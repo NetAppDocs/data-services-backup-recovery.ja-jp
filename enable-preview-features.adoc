@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryのプレビュー機能と非表示機能を
 
 
 [role="lead"]
-NetApp Backup and Recoveryのプレビュー機能と非表示機能を有効にします。
+次の手順に従って、NetApp Backup and Recoveryのプレビュー機能および非表示の機能を有効にします。本番環境でプレビュー機能を使用する場合は、十分に注意してください。
 
 *必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
@@ -44,7 +44,7 @@ NetApp Backup and Recovery では、以下のプレビュー機能を有効に�
 プレビュー機能フラグオプションを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。
 
 .手順
-. SSH を使用して Console エージェントにログインします。
+. SSHを使用してコンソールエージェントにログインします。
 . ルートユーザーに変更します：
 +
 [source, shell]
@@ -129,7 +129,7 @@ NOTE: プレビュー機能を無効にするには、同じ手順に従いま�
 
 
 .手順
-. SSH を使用して Console エージェントにログインします。
+. SSHを使用してコンソールエージェントにログインします。
 . ルートユーザーに変更します：
 +
 [source, shell]

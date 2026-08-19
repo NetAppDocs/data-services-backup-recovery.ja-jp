@@ -7,7 +7,7 @@
 [[microsoft-sql-server-workload-supported-in-general-availability-ga]]
 === Microsoft SQL Server ワークロードが一般提供 (GA) でサポートされるようになりました
 
-Microsoft SQL Server ワークロード サポートが、 NetApp Backup and Recoveryで一般提供 (GA) されました。ONTAP、 Cloud Volumes ONTAP、 Amazon FSx for NetApp ONTAPストレージ上で MSSQL 環境を使用している組織は、この新しいバックアップおよびリカバリ サービスを利用してデータを保護できるようになりました。
+Microsoft SQL Serverワークロードのサポートが、NetApp Backup and Recoveryで一般提供（GA）になりました。ONTAP、Cloud Volumes ONTAP、およびAmazon FSx for NetApp ONTAPストレージ上でMSSQL環境を使用している組織は、この新しいBackup and Recoveryサービスを活用してデータを保護できるようになりました。
 
 このリリースには、以前のプレビュー バージョンからの Microsoft SQL Server ワークロード サポートに対する次の機能強化が含まれています。
 

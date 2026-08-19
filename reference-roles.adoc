@@ -14,6 +14,6 @@ summary: NetApp Backup and Recovery は、 IAM ロールを使用して、各ユ
 
 
 [role="lead"]
-NetApp Backup and Recovery は、 Identity and Access Management (IAM) を使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。
+IDおよびアクセス管理（IAM）を使用して、各ユーザーがアクセスできるNetApp Backup and Recoveryの機能と操作を制御します。
 
-NetApp Backup and Recoveryに固有のIAMロールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^] 。
+NetApp Backup and Recovery に固有の IAM ロールについては、 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^]を参照してください。

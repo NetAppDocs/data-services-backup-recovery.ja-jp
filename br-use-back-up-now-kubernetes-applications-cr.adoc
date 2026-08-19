@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-back-up-now-kubernetes-applications-cr.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery では、カスタムリソース（CR）を使用して Kubernetes アプリケーションを手動でバックアップできます。 
+summary: カスタムリソース（CR）を使用して、Kubernetesアプリケーションのオンデマンドスナップショットとバックアップを作成し、ベースラインを確立したり、最新のデータ変更を保護したりします。 
 ---
 = NetApp Backup and Recoveryのカスタムリソースを使用して、Kubernetesアプリケーションを今すぐバックアップします
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery では、カスタムリソース（CR）を
 
 
 [role="lead"]
-NetApp Backup and Recovery では、カスタムリソース（CR）を使用して Kubernetes アプリケーションを手動でバックアップできます。
+カスタムリソース（CR）を使用して、Kubernetesアプリケーションのオンデマンドスナップショットとバックアップを作成し、ベースラインを確立したり、最新のデータ変更を保護したりします。
 
 
 
@@ -47,7 +47,7 @@ Kubernetes アプリケーションのスナップショットを作成してロ
 ** *metadata.name*：（_必須_）このカスタム リソースの名前。環境に合わせて一意かつ適切な名前を選択してください。
 ** *spec.applicationRef*：スナップショットを作成するアプリケーションの Kubernetes 名。
 ** *spec.appVaultRef*：（_必須_）スナップショットの内容（メタデータ）を保存するAppVaultの名前。
-** *spec.reclaimPolicy*：（_オプション_）スナップショット CR が削除されたときに、スナップショットの AppArchive に対して何が起こるかを定義します。つまり、 `Retain`に設定されている場合でも、スナップショットは削除されます。有効なオプション：
+** *spec.reclaimPolicy*: （_オプション_） スナップショット CR が削除されたときにAppArchiveに何が起こるかを定義します。 `Retain`に設定した場合でも、スナップショット CR 自体は削除されます。AppArchiveのみが保持されます。有効なオプション：
 +
 *** `Retain`（デフォルト）
 *** `Delete`
@@ -228,5 +228,5 @@ kubectl apply -f 3-2-1-fanout-backup-cr.yaml
 | protect.trident.netapp.io/ボリュームスナップショット作成タイムアウト | string | ボリューム スナップショットの作成に許可される最大時間。 | 「5m」 
 
 
-| protect.trident.netapp.io/pvc-bind-timeout-sec | string | 新しく作成されたPersistentVolumeClaims（PVC）が `Bound`フェーズに到達するまで待機する最大時間（秒単位）。この時間を超えると操作は失敗します。 | 「1200」（20分） 
+| protect.trident.netapp.io/pvc-bind-timeout-sec | string | 新しく作成された PersistentVolumeClaims （PVC）が操作失敗前に `Bound`フェーズに到達するまでの最大待機時間（秒単位）。 | 「1200」（20分） 
 |===

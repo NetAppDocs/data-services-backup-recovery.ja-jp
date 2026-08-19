@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery でリストア処理中にリソースを�
 
 
 [role="lead"]
-リソース変換機能を使用すると、リソースの復元中にリソースを変更できます。これは、復元したバージョンを元のバージョンと異なるものにする必要がある場合に役立ちます。たとえば、仮想マシンを別のネットワークに復元する際に、そのIPアドレスを変更する場合などです。また、link:br-use-restore-kubernetes-applications.html#restore-kubernetes-applications["Web UIを使用してリソースを復元する際に、リソースを変更します"^]。
+リソース変換を使用して、リストア操作中にKubernetesリソースを変更します。Web UIでリソースを変更する方法については、link:br-use-restore-kubernetes-applications.html#restore-kubernetes-applications["リストア中にリソースを変更する"^]を参照してください。
 
 *必須 NetApp Console ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護している場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
@@ -27,7 +27,7 @@ summary: NetApp Backup and Recovery でリストア処理中にリソースを�
 
 リソース変換では、 https://tools.ietf.org/html/rfc6902["RFC 6902"]JSON Patch操作と https://tools.ietf.org/html/rfc6901["RFC 6901"]JSON Pointerパスを使用して、Kubernetesリソース内の特定のフィールドをターゲットにして変更します。
 
-リソース変換を含む復元オブジェクトの基本的な構造は以下のとおりです：
+以下の例は、リソース変換を含む復元オブジェクトの基本的な構造を示しています。
 
 [source, yaml]
 ----
@@ -61,7 +61,7 @@ spec:
 以下の条件に一致するリソースに対して、リソース変換を使用できます：
 
 * `kind`（必須）：Kubernetesリソースの種類（例： `ConfigMap`、 `Deployment`、 `Pod`）
-* `group`（オプション）：API グループ（例： `apps`、 `route.openshift.io`）- コアリソースの場合は省略
+* `group`（オプション）：API グループ（例： `apps`、 `route.openshift.io`）—コアリソースの場合は省略
 * `version`（オプション）：APIバージョン（例： `v1`、 `v1beta1`）
 * `name`（オプション）：名前で指定した特定のリソースにのみ適用します
 
@@ -185,7 +185,7 @@ tridentctl-protect --transformation ',v1,ConfigMap:remove{"path":"/metadata/anno
 [[replace-a-value-within-a-resource]]
 == リソース内の値を置き換える
 
- `replace`操作を使用して、指定されたパスにあるリソース内の既存の値を置き換えます。JSONパスは既に存在している必要があります。次の例は、Routeオブジェクトのホスト名を変更します：
+ `replace`操作を使用して、指定されたパスにあるリソース内の既存の値を置き換えます。JSON Pointerのパスはすでに存在している必要があります。次の例では、Route オブジェクトのホスト名を変更します。
 
 [source, yaml]
 ----

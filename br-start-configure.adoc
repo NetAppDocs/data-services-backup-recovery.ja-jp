@@ -14,9 +14,9 @@ summary: NetApp Backup and Recoveryを構成するには、いくつかの手順
 
 
 [role="lead"]
-NetApp Consoleをセットアップした後、バックアップとリカバリの設定を構成します。ホスト リソースの資格情報を追加し、 SnapCenterリソースをインポートし、ログ ディレクトリを構成し、VMware vCenter 設定を設定します。データをバックアップまたは復元する前に、これらの手順を完了してください。
+ワークロードの認証情報を追加し、既存のインフラストラクチャと統合し、バックアップおよびリストア操作を準備するために、Backup and Recovery設定を構成します。
 
-* <<ホストリソースの資格情報を追加する>>Windows、Microsoft SQL Server、Oracle Database、またはLinuxホストでNetApp Backup and Recoveryが認証する必要があるもの。これには、ファイルやフォルダをリストアする際に使用されるゲストOSのクレデンシャルが含まれます。
+* <<ホストリソースの資格情報を追加する>>（Windows、Microsoft SQL Server、Oracle Database、およびLinuxホスト用。NetApp Backup and Recoveryが認証を行う必要があります）これには、ファイルまたはフォルダーをリストアするときに使用するゲストOSの資格情報が含まれます。
 * <<VMware vCenter 設定を維持する>>。
 * <<SnapCenterホストリソースのインポートと管理>>。(Microsoft SQL Server ワークロードのみ)
 * <<KVM管理プラットフォームを追加する>>。(KVM ワークロードのみ)
@@ -49,13 +49,13 @@ NetApp Consoleをセットアップした後、バックアップとリカバリ
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . *資格情報*の下矢印を選択します。
 . *新しい資格情報の追加*を選択します。
-. 資格情報の情報を入力します。選択した認証モードに応じて、異なるフィールドが表示されます。フィールドの詳細情報を表示するには、情報 *i* アイコンにマウスを移動します。
+. 認証情報を入力してください。選択した認証モードによって、表示される項目が異なります。情報アイコン（*i*）にカーソルを合わせると、各フィールドに関する詳細情報が表示されます。
 +
 ** *資格情報名*: 資格情報の名前を入力します。
 ** *認証モード*: *Windows*、*Microsoft SQL*、*Oracle Database*、または *Linux* を選択します。
 +
 
-TIP: Microsoft SQL Serverワークロードの場合、Windows とMicrosoft SQL Server の両方の資格情報を入力する必要があるため、2 セットの資格情報を追加する必要があります。
+TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQL Server の両方の認証情報を入力する必要があり、2セットの認証情報が必要です。
 
 +
 [role="tabbed-block"]
@@ -138,7 +138,7 @@ TIP: Microsoft SQL Serverワークロードの場合、Windows とMicrosoft SQL 
 [[maintain-vmware-vcenter-settings]]
 == VMware vCenter 設定を維持する
 
-バックアップのワークロードを検出するには、VMware vCenter の資格情報を提供します。資格情報がない場合は、VMware vCenter Server ワークロードにアクセスして管理する権限を持つ資格情報を作成します。
+バックアップ対象のワークロードを検出するために、VMware vCenter Server の認証情報を入力してください。認証情報がない場合は、VMware vCenter Server のワークロードにアクセスして管理するための権限を持つ認証情報を作成してください。
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
@@ -146,7 +146,7 @@ TIP: Microsoft SQL Serverワークロードの場合、Windows とMicrosoft SQL 
 . *vCenter の追加*を選択します。
 . VMware vCenter Server 情報を入力します。
 +
-** *vCenter FQDN または IP アドレス*: VMware vCenter Server の FQDN 名または IP アドレスを入力します。
+** *vCenter FQDNまたはIPアドレス*：VMware vCenter ServerのFQDNまたはIPアドレスを入力してください。
 ** *ユーザー名* と *パスワード*: VMware vCenter Server のユーザー名とパスワードを入力します。
 ** *ポート*: VMware vCenter Server のポート番号を入力します。
 ** *プロトコル*: *HTTP* または *HTTPS* を選択します。
@@ -247,7 +247,7 @@ SnapCenterからのインポート ページには、以前のすべてのイン
 [[add-a-kvm-management-platform]]
 == KVM管理プラットフォームを追加する
 
-Apache CloudStack 管理プラットフォームを使用して KVM リソースを管理する場合は、 NetApp Backup and Recoveryと統合して、Backup and Recovery が管理対象の KVM ホストと VM を検出して保護できるようにする必要があります。
+Apache CloudStack 管理プラットフォームを使用してKVMリソースを管理する場合は、NetApp Backup and Recoveryと統合することで、管理対象のKVMホストとVMを検出して保護することができます。
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
@@ -255,7 +255,7 @@ Apache CloudStack 管理プラットフォームを使用して KVM リソース
 . *管理プラットフォームの資格情報の追加*を選択します。
 . 次の情報を入力してください。
 +
-** *管理プラットフォームの IP アドレスまたは FQDN*: 管理プラットフォームの IP アドレスまたは完全修飾ドメイン名を入力します。
+** *管理プラットフォームのIPアドレスまたはFQDN*：管理プラットフォームのIPアドレスまたはFQDNを入力してください。
 ** *API キー*: API リクエストの認証に使用する API キーを入力します。
 ** *秘密キー*: API リクエストの認証に使用する秘密キーを入力します。
 ** *ポート*: バックアップとリカバリと管理プラットフォーム間の通信に使用するポートを入力します。
@@ -270,7 +270,7 @@ Apache CloudStack 管理プラットフォームを使用して KVM リソース
 [[configure-log-directories-in-snapshots-for-windows-hosts]]
 == Windowsホストのスナップショットのログディレクトリを構成する
 
-Windows ホストのポリシーを作成する前に、Windows ホストのスナップショット内のログ ディレクトリを構成する必要があります。ログ ディレクトリは、バックアップ プロセス中に生成されるログを保存するために使用されます。
+Windowsホスト用のポリシーを作成する前に、バックアップ処理中に生成されたログを保存するために、Snapshotのログディレクトリを設定してください。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -310,18 +310,18 @@ NOTE: ここで作成するテンプレートは、Kubernetes ワークロード
 [[create-a-resource-transformation-template]]
 == リソース変換テンプレートを作成する
 
-リソースを復元する際に行う一般的な変換を保存するために、リソース変換テンプレートを作成します。
+リソース変換テンプレートを作成して、復元操作中にリソースに適用する共通の変換処理を保存します。
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
-. 下向き矢印を選択して、*Resource modifer template* セクションを展開します。
+. 下向き矢印を選択して、*リソース変換テンプレート*セクションを展開します。
 . *テンプレートを作成*を選択します。
 . リソース変換テンプレートの名前を入力します。
 . 必要に応じて、テンプレートの説明を入力してください。
 . ターゲットリソースの説明：
 +
 .. リソースの種類（Pod や Deployment など）を入力します。このフィールドは必須です。
-.. 必要に応じて、リソースグループ、バージョン、名前を入力します。
+.. 必要に応じて、リソースグループ、バージョン、および名前を入力してください。
 
 
 . オペレーションを構築する：

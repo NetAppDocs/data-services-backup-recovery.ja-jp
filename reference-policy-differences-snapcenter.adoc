@@ -4,7 +4,7 @@ permalink: reference-policy-differences-snapcenter.html
 keywords: backup policy, backup policies, snapcenter, migration 
 summary: NetApp Backup and Recoveryで使用されるポリシーとSnapCenterで使用されるポリシーにはいくつかの違いがあります。 
 ---
-= SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較
+= SnapCenterとNetApp Backup and Recoveryのポリシーの違い
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recoveryで使用されるポリシーとSnapCenter�
 
 
 [role="lead"]
-SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーにはいくつかの違いがあり、 SnapCenterからリソースとポリシーをインポートした後の表示内容に影響する可能性があります。
+この資料を参照して、インポートされたリソースやポリシーに影響する可能性がある SnapCenter と NetApp Backup and Recovery のポリシーの違いを理解してください。
 
 
 
@@ -27,7 +27,7 @@ SnapCenter は次のスケジュール層を使用します。
 * *毎月*: 1 月から 12 月まで。毎月特定の日または複数の日 (例: 7 日) に実行するオプションがあります。
 
 
-NetApp Backup and Recoveryでは、若干異なる次のスケジュール層が使用されます。
+NetApp Backup and Recovery では、以下のスケジュール階層が使用されますが、それぞれ若干異なります：
 
 * *時間ごと*: 15 分間隔でのみスナップショットを実行します (例: 1 時間または 60 未満の 15 分間隔)。
 * *毎日*: 1 日の時間帯 (0 ～ 23)、開始時刻 (例: 午前 10:00)、および一定時間ごとに実行するオプション。
@@ -50,7 +50,7 @@ SnapCenterのリソースに、同じスケジュール ティアを持つ複数
 [[imported-snapcenter-daily-schedules]]
 == インポートされたSnapCenterの毎日のスケジュール
 
-NetApp Backup and Recovery は、 SnapCenter のスケジュールを次のように調整します。
+NetApp Backup and Recovery は、SnapCenter スケジュールを次のように調整します：
 
 * SnapCenter のスケジュールが 7 日以下に設定されている場合、 NetApp Backup and Recovery はスケジュールを毎週に設定します。週の間にいくつかのスナップショットがスキップされます。
 +

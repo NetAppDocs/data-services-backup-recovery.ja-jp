@@ -14,7 +14,7 @@ summary: Microsoft SQL Server スナップショットは、NetApp Backup and Re
 
 
 [role="lead"]
-Microsoft SQL Server スナップショットは、NetApp Backup and Recoveryから削除することで管理できます。
+ローカルの Microsoft SQL Server スナップショットを NetApp Backup and Recovery から削除します。
 
 
 
@@ -23,15 +23,15 @@ Microsoft SQL Server スナップショットは、NetApp Backup and Recoveryか
 
 削除できるのはローカル スナップショットのみです。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryで、*Inventory* を選択します。
 . ワークロードを選択し、[表示] を選択します。
 . *データベース*タブを選択します。
-. スナップショットを削除するデータベースを選択します。
+. スナップショットを削除するデータベースを選択してください。
 . [アクション] メニューから、[保護の詳細を表示] を選択します。
-. 削除するローカル スナップショットを選択します。
+. 削除するローカルスナップショットを選択してください。
 +
 
 TIP: その行の *場所* 列のローカル スナップショット アイコンが青色で表示されていることを確認します。

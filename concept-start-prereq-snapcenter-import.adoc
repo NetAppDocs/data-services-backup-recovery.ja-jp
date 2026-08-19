@@ -14,7 +14,7 @@ summary: 運用環境、コンソール エージェント、コンソール ア
 
 
 [role="lead"]
-Microsoft SQL Server 用のSnapCenterプラグイン サービスからNetApp Backup and Recoveryにリソースをインポートする場合は、さらにいくつかの項目を構成する必要があります。
+SnapCenter Plug-in for Microsoft SQL Server から NetApp Backup and Recovery にリソースをインポートする前に、環境がこれらの追加要件を満たしていることを確認してください。
 
 
 
@@ -25,10 +25,10 @@ SnapCenterからリソースをインポートする場合は、 SnapCenterか�
 
 
 
-[[ensure-host-requirements-to-install-the-snapcenter-plug-in]]
-== SnapCenterプラグインをインストールするためのホスト要件を確認する
+[[ensure-host-requirements-for-the-snapcenter-plug-in]]
+== SnapCenterプラグインのホスト要件を満たしていることを確認します
 
-SnapCenter Plug-in for Microsoft SQL Server からリソースをインポートするには、 SnapCenter Plug-in for Microsoft SQL Server をインストールするためのホスト要件が満たされていることを確認します。
+Microsoft SQL Server 用 SnapCenter プラグインからリソースをインポートするには、Microsoft SQL Server 用 SnapCenter プラグインをインストールするためのホスト要件が満たされていることを確認してください。
 
 SnapCenterの要件については、link:concept-start-prereq.html["NetApp Backup and Recoveryの前提条件"] 。
 
@@ -97,10 +97,10 @@ UAC リモート制限を無効にする前に、次の問題を考慮してく�
 . 以下の値がサポートされています。このシナリオでは、値を `1`:
 +
 ** `0`(デフォルト): UAC リモート制限が有効になります。ローカル アカウントには、リモート アクセス時にフィルターされたトークンがあります。
-** `1`: UAC リモート制限は無効です。ローカル アカウントはトークン フィルタリングをバイパスし、リモート アクセス時に完全な管理者権限を持ちます。
+** `1`：UACのリモート制限は無効になっています。ローカルアカウントはトークンフィルタリングをバイパスし、リモートアクセス時に完全な管理者権限を持ちます。
 
 
-. [OK]をクリックします。
+. 「OK」を選択します。
 . レジストリ エディターを閉じます。
 . SnapCenter Windows ホストを再起動します。
 
@@ -127,7 +127,7 @@ CAUTION: 昇格された権限で PowerShell コマンドを実行すると、�
 .手順
 . SnapCenter Windows ホストで管理者権限を使用して PowerShell ウィンドウを開きます。
 +
-.. *スタート* メニューをクリックします。
+.. 「スタート」メニューを選択してください。
 .. *PowerShell 7* または *Windows Powershell* を検索します。
 .. そのオプションを右クリックし、[管理者として実行] を選択します。
 
@@ -143,7 +143,7 @@ TIP: PowerShell は、Windows 7 以降のバージョンにデフォルトで含
 ----
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord
 ----
-. 現在の値が「1」に設定されていることを確認します。 `LocalAccountTokenFilterPolicy``実行して:
+. 次のコマンドを実行して、 `LocalAccountTokenFilterPolicy`で現在の値が「1」に設定されていることを確認します：
 +
 [listing]
 ----

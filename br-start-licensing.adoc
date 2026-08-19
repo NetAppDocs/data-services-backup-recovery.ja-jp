@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery のライセンスを取得するには、�
 
 
 [role="lead"]
-NetApp Console または NetApp Console（ローカル展開）のどちらを使用しているかに応じて、クラウド プロバイダから *NetApp Intelligent Services* の従量課金制（PAYGO）またはマーケットプレイスの年間サブスクリプションを購入するか、NetApp からBYOL（Bring Your Own License）を購入することで、NetApp Backup and Recovery のライセンスを取得できます。システムで NetApp Backup and Recovery をアクティブ化し、本番データのバックアップを作成して、バックアップデータを本番システムに復元するには、有効なライセンスが必要です。
+NetApp Console または NetApp Console のローカル展開において、マーケットプレイスのサブスクリプションまたは NetApp のBYOL（Bring Your Own License）を使用して、NetApp Backup and Recovery のライセンスを設定します。サービスの有効化、バックアップの作成、および本番システムへのデータ復元には、有効なライセンスが必要です。
 
 ライセンスの仕組みに関するいくつかの注意点：
 
@@ -22,19 +22,19 @@ NetApp Console または NetApp Console（ローカル展開）のどちらを�
 * バックアップとリカバリを NetApp Console のローカル展開で使用している場合は、BYOL（Bring Your Own License）ライセンスのみ購入できます。
 * NetApp Backup and Recovery のBring Your Own License (BYOL) は、 NetApp Console組織またはアカウントに関連付けられているすべてのシステムで使用できるフローティング ライセンスです。したがって、既存の BYOL ライセンスから十分なバックアップ容量を利用できる場合は、別の BYOL ライセンスを購入する必要はありません。
 * BYOLライセンスをNetApp Consoleと併用している場合は、PAYGOサブスクリプションにも加入することをお勧めします。BYOLライセンスで許可されている以上のデータをバックアップした場合、またはライセンスの有効期限が切れた場合、バックアップは従量課金制（PAYGO）サブスクリプションを通じて継続されます。サービスの中断はありません。
-* オンプレミスのONTAPデータをStorageGRIDにバックアップする場合は BYOL ライセンスが必要ですが、クラウド プロバイダーのストレージ スペースにはコストはかかりません。
+* オンプレミス の ONTAP データを StorageGRID にバックアップする場合は BYOL ライセンスが必要ですが、クラウド プロバイダのストレージ スペースにかかるコストはありません。
 
 
 link:concept-backup-to-cloud.html["NetApp Backup and Recoveryの使用に関連するコストについて詳しく説明します。"]
 
 
 
-[[set-up-licensing-for-netapp-backup-and-recovery]]
-== NetApp Backup and Recoveryのライセンスを設定する
+[[licensing-options-for-netapp-backup-and-recovery]]
+== NetApp Backup and Recovery のライセンスオプション
 
 NetApp Backup and Recovery のライセンスオプションは3つあります：
 
-* NetApp から直接ライセンス（BYOL とも呼ばれる）を購入します。このオプションは、NetApp Console とコンソールのローカル展開の両方に適用されます。
+* 直接ライセンス（bring-your-own-license（BYOL）とも呼ばれる）を NetApp から購入してください。このオプションは、NetApp Console およびコンソールのローカル展開の両方に適用されます。
 * ハイパースケーラーのマーケットプレイスから年間契約を購入します。このオプションはNetApp Consoleにのみ適用されます。
 * ハイパースケーラーのマーケットプレイスから従量課金制（PAYGO）ライセンスを契約します。このオプションはNetApp Consoleにのみ適用されます。
 
@@ -68,11 +68,11 @@ NetAppの Bring-Your-Own ライセンスには、1 年、2 年、または 3 年
 
 BYOL NetApp Backup and Recoveryライセンスはフローティング ライセンスであり、 NetApp Console組織またはアカウントに関連付けられているすべてのシステム間で合計容量が共有されます。  ONTAPシステムの場合、CLIコマンドを実行することで、必要な容量の大まかな見積もりを取得できます。 `volume show -fields logical-used-by-afs`バックアップする予定のボリュームに対して。
 
-NetApp Backup and Recovery BYOL ライセンスをお持ちでない場合は、コンソールの右下にあるチャット アイコンをクリックしてライセンスを購入してください。
+NetApp Backup and RecoveryのBYOLライセンスをお持ちでない場合は、Consoleの右下にあるチャット アイコンを選択して購入してください。
 
 オプションとして、使用しないCloud Volumes ONTAPの未割り当てのノードベースのライセンスがある場合は、同じドル相当額と同じ有効期限を持つNetApp Backup and Recoveryライセンスに変換できます。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["詳細はこちら"^] 。
 
-NetApp Console またはコンソールのローカル展開を使用して、BYOL ライセンスを管理します。コンソールから、新しいライセンスの追加、既存のライセンスの更新、およびライセンスの状態の確認を行うことができます。
+NetApp Console または NetApp Console のローカル展開を使用して、BYOL ライセンスを管理します。コンソールから、新しいライセンスの追加、既存のライセンスの更新、およびライセンスの状態の確認を行うことができます。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["ライセンスの追加について学ぶ"^]。
 
@@ -124,7 +124,7 @@ NetApp がプライベート オファーを共有した後、 NetApp Backup and
 [[use-a-netapp-backup-and-recovery-paygo-subscription-applies-to-netapp-console-only]]
 === NetApp Backup and Recovery の従量課金制サブスクリプションを使用する（NetApp Console のみに適用）
 
-従量課金制の場合、オブジェクト ストレージ コストとNetAppバックアップ ライセンス コストを、単一のサブスクリプションで時間単位でクラウド プロバイダーに支払います。無料トライアルをお持ちの場合や、独自のライセンス (BYOL) をお持ちの場合でも、マーケットプレイスで * NetApp Intelligent Services* にサブスクライブする必要があります。
+従量課金制の場合、オブジェクトストレージのコストとNetAppバックアップライセンスのコストを、単一のサブスクリプションで時間単位にクラウド プロバイダへお支払いいただきます。無料トライアルをご利用の場合やライセンス持ち込み（BYOL）の場合でも、Marketplace で *NetApp Intelligent Services* にサブスクライブする必要があります。
 
 * サブスクリプションに登録すると、無料トライアル期間終了後もサービスが中断されることがなくなります。試用期間が終了すると、バックアップしたデータの量に応じて時間ごとに料金が発生します。
 * BYOL ライセンスで許可されている量よりも多くのデータをバックアップする場合、データのバックアップと復元の操作は従量課金制サブスクリプションを通じて継続されます。たとえば、10 TiB の BYOL ライセンスがある場合、10 TiB を超えるすべての容量は PAYGO サブスクリプションを通じて課金されます。
@@ -137,7 +137,7 @@ NetApp Backup and Recoveryにはいくつかの PAYGO プランがあります�
 * Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」パッケージ。
 * Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」パッケージ。これには、ライセンスを使用したCloud Volumes ONTAPシステムの無制限のバックアップが含まれます (バックアップ容量はライセンス容量にカウントされません)。このオプションでは、オンプレミスのONTAPデータをバックアップすることはできません。
 +
-このオプションにはバックアップとリカバリの PAYGO サブスクリプションも必要ですが、対象となるCloud Volumes ONTAPシステムには料金は発生しないことに注意してください。
+このオプションには Backup and Recovery の従量課金制サブスクリプションが必要ですが、対象となる Cloud Volumes ONTAP システムには料金は発生しません。
 
 
 
@@ -155,7 +155,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 [[exceeding-license-capacity]]
 == ライセンス容量の超過
 
-ライセンス容量を超えると PAYGO 料金が発生します。PAYGO サブスクリプションがない場合、新しいバックアップを作成することはできませんが、既存のバックアップはサービス保証なしで復元可能です。ライセンスは期限が切れる前に必ず更新してください。ライセンスの期限が切れると、新しいバックアップが実行できなくなり、サービスが中断されます。
+ライセンス容量を超過すると、従量課金制が適用されます。従量課金制のサブスクリプションがない場合、新しいバックアップを作成することはできませんが、サービス保証なしで既存のバックアップを復元することは可能です。ライセンスの有効期限が切れる前に更新してください。有効期限切れのライセンスは、新しいバックアップの作成を妨げ、サービスに支障をきたします。
 
 
 

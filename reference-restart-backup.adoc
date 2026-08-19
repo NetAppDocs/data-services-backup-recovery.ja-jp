@@ -14,12 +14,12 @@ summary: NetApp Backup and Recovery を再起動しなければならない場�
 
 
 [role="lead"]
-NetApp Backup and Recovery を再起動しなければならない場合があります。
+サービスのリカバリや変更の適用が必要な場合は、Console エージェントホストから NetApp Backup and Recovery を再起動できます。デプロイメントの種類とコンテナランタイムに合ったコマンドを使用してください。
 
 コンソール エージェントには、NetApp Backup and Recovery機能が含まれています。
 
 .手順
-. コンソール エージェントが実行されている Linux システムに接続します。
+. コンソールエージェントが実行されているLinuxシステムに接続します。
 +
 [cols="25,50"]
 |===

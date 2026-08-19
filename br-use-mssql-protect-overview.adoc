@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: br-use-mssql-protect-overview.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに至るまで、Microsoft SQL Server アプリケーション データを保護します。 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, on-premises, applications, virtual machines, backup and recovery 
+summary: お客様のMicrosoft SQL Serverアプリケーションデータを、オンプレミスのONTAPシステムからAmazon Web Services、Microsoft Azure、またはStorageGRIDに保護するには、NetApp Backup and Recoveryを使用します。 
 ---
-= Microsoft SQL Server の保護ワークフロー（NetApp Backup and Recovery）
+= NetApp Backup and Recoveryを使用してMicrosoft SQL Serverワークロードを保護する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,11 @@ summary: NetApp Backup and Recoveryを使用して、オンプレミスのONTAP�
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから AWS、Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムはポリシーに従って、クラウド アカウントにバックアップを自動的に作成して保存します。  3-2-1 戦略を使用します。つまり、データの 3 つのコピーを 2 つのストレージ システムに保存し、1 つのコピーをクラウドに保存します。
-
-3-2-1 アプローチの利点は次のとおりです。
-
-* 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
-* オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
-
+オンプレミス ONTAP システムの Microsoft SQL Server データベースを、NetApp Backup and Recovery を使用して AWS、Azure、または StorageGRID にバックアップします。プライマリ ストレージでのスナップショット、セカンダリ システムへのレプリケーション、オブジェクト ストレージへのコピーを含む 3-2-1 バックアップ戦略を実装します。
 
 NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。
 
-データを保護するために、次の操作を実行できます。
+データを保護するには、以下のワークフローを使用してください。
 
 * link:concept-start-prereq-snapcenter-import.html["SnapCenterからインポートする場合の追加項目を構成する"]
 * link:br-start-discover.html["Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします"]
@@ -42,11 +35,11 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップ�
 ワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]詳細についてはこちらをご覧ください。
 
 .サポートされているバックアップ先
-NetApp Backup and Recovery を使用すると、Microsoft SQL Server インスタンスとデータベースを次のソース システムから次のセカンダリ システムおよびパブリック クラウド プロバイダーとプライベート クラウド プロバイダーのオブジェクト ストレージにバックアップできます。スナップショットはソース システムに存在します。
+NetApp Backup and Recovery は、以下のソースシステムから、パブリッククラウドおよびプライベートクラウド上のリストされたセカンダリ システムおよびオブジェクトストアへの Microsoft SQL Server インスタンスおよびデータベースのバックアップをサポートします。スナップショットはソースシステムに残ります。
 
 [cols="33,33,33"]
 |===
-| ソースシステム | セカンダリシステム（レプリケーション） | 宛先オブジェクトストア（バックアップ） 
+| ソースシステム | セカンダリ システム（レプリケーション） | 宛先オブジェクトストア（バックアップ） 
 
 
 | AWS のCloud Volumes ONTAP | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Amazon S3 ONTAP S3 
@@ -61,17 +54,17 @@ NetApp Backup and Recovery を使用すると、Microsoft SQL Server インス�
 | Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | NA 
 |===
 .サポートされている復元先
-プライマリ ストレージまたはセカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップから、Microsoft SQL Server インスタンスとデータベースを次のシステムに復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。
+プライマリストレージ、セカンダリ システム（複製ボリューム）、またはオブジェクトストレージ（バックアップファイル）に存在するバックアップから、Microsoft SQL Server のインスタンスとデータベースを以下の宛先システムに復元できます。スナップショットはソースシステム上に保存され、同じシステムにのみ復元できます。
 
 [cols="33,33,33"]
 |===
 2+| バックアップファイルの場所から | 宛先システムへ 
 
 
-| *オブジェクトストア（バックアップ）* | *セカンダリシステム（レプリケーション）* |  
+| *オブジェクトストア（バックアップ）* | *セカンダリ システム（レプリケーション）* |  
 
 
-| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | AWS オンプレミスのONTAPシステムONTAP S3 の Cloud Volumes 
+| Amazon S3 | AWS オンプレミスONTAPシステムのCloud Volumes ONTAP | Cloud Volumes ONTAP AWS オンプレミス ONTAP システム ONTAP S3 
 
 
 | Azure ブロブ | Azure のCloud Volumes ONTAPオンプレミスONTAPシステム | Azure のCloud Volumes ONTAPオンプレミスのONTAPシステムONTAP S3 

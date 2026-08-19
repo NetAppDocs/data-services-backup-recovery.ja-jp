@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-switch-ui.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: さまざまなNetApp Backup and Recoveryワークロードを切り替えることができます。一部のワークロードでは異なる UI が使用されます。 
+summary: NetApp Backup and Recovery は複数のワークロードタイプをサポートしており、ワークロードによっては異なるユーザーインターフェースが使用されます。ワークロード切り替え機能を使用して、ワークロード間を切り替えてください。 
 ---
-= さまざまなNetApp Backup and Recoveryワークロードに切り替える
+= 別の NetApp Backup and Recovery ワークロードに切り替える
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: さまざまなNetApp Backup and Recoveryワークロードを切り替
 
 
 [role="lead"]
-さまざまなNetApp Backup and Recoveryワークロードを切り替えることができます。
+NetApp Backup and Recovery は複数のワークロードタイプをサポートしており、ワークロードによっては異なるユーザーインターフェースが使用されます。ワークロード切り替え機能を使用して、ワークロード間を切り替えてください。
 
 
 

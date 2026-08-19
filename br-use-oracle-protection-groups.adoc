@@ -14,13 +14,13 @@ summary: NetApp Backup and RecoveryでOracle Databaseワークロードの保護
 
 
 [role="lead"]
-保護グループを作成して、Oracle Database リソース セットのバックアップ操作を管理します。保護グループとは、まとめて保護するデータベースなどのリソースの論理的なグループです。  Oracle データベースをバックアップするには、保護グループを作成する必要があります。
+Oracle Database リソースのバックアップ操作を管理するための保護グループを作成します。保護グループとは、データベースなど、まとめて保護したいリソースを論理的にグループ化したものです。
 
 保護グループに関連する次のタスクを実行できます。
 
 * 保護グループを作成します。
 * 保護の詳細を表示します。
-* 今すぐ保護グループをバックアップします。link:br-use-kvm-backup.html["Oracle Databaseのワークロードを今すぐバックアップ"]を参照してください。
+* 今すぐ保護グループをバックアップします。参照してくださいlink:br-use-oracle-backup.html["Oracle Databaseのワークロードを今すぐバックアップ"]。
 * 保護グループを削除します。
 
 
@@ -29,7 +29,7 @@ summary: NetApp Backup and RecoveryでOracle Databaseワークロードの保護
 [[create-a-protection-group]]
 == 保護グループを作成する
 
-保護する VM とストレージ プールを保護グループにグループ化します。
+保護するOracle Databaseリソースをまとめて保護グループにグループ化します。
 
 *必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -40,7 +40,7 @@ summary: NetApp Backup and RecoveryでOracle Databaseワークロードの保護
 . *保護グループ*タブを選択します。
 . *保護グループの作成*を選択します。
 . 保護グループの名前を指定します。
-. 保護グループに含める VM またはストレージ プールを選択します。
+. 保護グループに含めるデータベースを選択してください。
 . *次へ*を選択します。
 . 保護グループに適用する*バックアップ ポリシー*を選択します。
 +

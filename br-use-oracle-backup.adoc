@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
+keywords: backing up, back up, backup, backup application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
 summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
 ---
 = NetApp Backup and Recoveryを使用したOracle Databaseワークロードのバックアップ
@@ -14,22 +14,22 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムから Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage、 ONTAP S3 などのクラウド ストレージに Oracle Database 保護グループまたはデータベースをバックアップします。  NetApp Backup and Recovery は、各保護グループ内のデータベースとログ データをバックアップします。
+オンプレミス ONTAP システムから NetApp Backup and Recovery を使用して、Oracle Database の保護グループまたは個々のデータベースをバックアップします。Amazon S3、NetApp StorageGRID、Microsoft Azure Blob Storage、または ONTAP S3 などのクラウドストレージにバックアップを送信します。
 
 
 NOTE: 保護グループまたは単一のデータベースをスケジュールに従ってバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
 
-* 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。link:br-use-kvm-protection-groups.html["NetApp Backup and Recoveryを使用したOracle Databaseワークロードの保護グループの作成と管理"]を参照してください。
-* 保護グループを今すぐバックアップします (オンデマンド バックアップを今すぐ作成します)。
-* 今すぐデータベースをバックアップします。
+* 一連のリソースのバックアップおよび復元操作を管理するための保護グループを作成します。詳細については、link:br-use-kvm-protection-groups.html["NetApp Backup and Recoveryを使用したOracle Databaseワークロードの保護グループの作成と管理"]を参照してください。
+* 保護グループのオンデマンドバックアップを作成します。
+* データベースのオンデマンド バックアップを作成します。
 
 
 
 
-[[back-up-protection-groups-now-with-an-on-demand-backup]]
-== オンデマンド バックアップで保護グループを今すぐバックアップ
+[[create-an-on-demand-backup-of-a-protection-group]]
+== 保護グループのオンデマンドバックアップを作成する
 
-システムを変更する前にオンデマンド バックアップを実行して、データが保護されていることを確認します。
+システムに変更を加える前に、データを保護するためのオンデマンドバックアップを作成してください。
 
 *必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
@@ -39,7 +39,7 @@ NOTE: 保護グループまたは単一のデータベースをスケジュー�
 . *在庫*を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
-. *保護グループ*、*データストア*、または*仮想マシン*タブを選択します。
+. 「Protection Groups」タブを選択してください。
 . バックアップする保護グループを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
 +
@@ -52,10 +52,10 @@ NOTE: NetApp Backup and Recovery、バックアップと保護グループの両
 
 
 
-[[back-up-a-database-now-with-an-on-demand-backup]]
-== オンデマンドバックアップで今すぐデータベースをバックアップ
+[[create-an-on-demand-backup-of-a-database]]
+== データベースのオンデマンド バックアップを作成する
 
-単一のデータベースのオンデマンド バックアップを実行できます。
+システムに変更を加える前に、データを保護するためのオンデマンドバックアップを作成してください。
 
 *必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 

@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-gcp.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
-= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPデータを Google Cloud Storage にバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをGoogle Cloud Storageにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-Cloud Volumes ONTAPシステムから Google Cloud Storage へのボリューム データのバックアップを開始するには、NetApp Backup and Recoveryでいくつかの手順を完了します。
+NetApp Backup and Recovery を使用して、Cloud Volumes ONTAP システムのボリューム データを Google Cloud Storage にバックアップします。
 
 
 NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
@@ -46,7 +46,7 @@ NetApp Backup and Recovery PAYGO ライセンスの場合、 Cloud Volumes ONTAP
 
 NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
 
-また、バックアップを保存するストレージスペース用の Google サブスクリプションが必要です。
+バックアップを保存するストレージスペースには、Google Cloudアカウントも必要です。
 
 
 
@@ -64,7 +64,7 @@ NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期
 [[verify-or-add-permissions-to-the-console-agent]]
 === コンソールエージェントへの権限を確認または追加する
 
-NetApp Backup and Recovery の「検索と復元」機能を使用するには、Google Cloud BigQuery サービスにアクセスできるように、コンソール エージェントのロールに特定の権限が必要です。以下の権限を確認し、ポリシーを変更する必要がある場合は手順に従ってください。
+NetApp Backup and Recovery の検索と復元機能を使用するには、コンソール エージェントのロールに、Google Cloud BigQuery サービスにアクセスするための特定の権限が含まれている必要があります。以下の権限を確認し、ポリシーを変更する必要がある場合は、手順に従ってください。
 
 .手順
 . の中で https://console.cloud.google.com["Google Cloud コンソール"^]、*役割*ページに移動します。
@@ -165,7 +165,7 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 [[enable-netapp-backup-and-recovery-on-cloud-volumes-ontap]]
 == Cloud Volumes ONTAPでNetApp Backup and Recoveryを有効にする
 
-NetApp Backup and Recoveryを有効にする手順は、既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって若干異なります。
+新規または既存の Cloud Volumes ONTAP システムで NetApp Backup and Recovery を有効にすることができます。手順はオプションごとに若干異なります。
 
 *新しいシステムでNetApp Backup and Recoveryを有効にする*
 
@@ -181,7 +181,7 @@ NetApp Backup and Recoveryを有効にする手順は、既存のCloud Volumes O
 . *タイプを選択*: * Cloud Volumes ONTAP* (シングルノードまたは高可用性) を選択します。
 . *詳細と資格情報*: 次の情報を入力します。
 +
-.. 使用するプロジェクトがデフォルトのプロジェクト (コンソール エージェントが存在するプロジェクト) と異なる場合は、[プロジェクトの編集] をクリックして新しいプロジェクトを選択します。
+.. 「Edit Project」を選択し、使用するプロジェクトがデフォルトのプロジェクト（Console エージェントが配置されているプロジェクト）と異なる場合は、新しいプロジェクトを選択します。
 .. クラスタ名を指定します。
 .. *サービス アカウント* スイッチを有効にし、事前定義されたストレージ管理者ロールを持つサービス アカウントを選択します。これは、バックアップと階層化を有効にするために必要です。
 .. 資格情報を指定します。
@@ -190,7 +190,7 @@ GCP Marketplace サブスクリプションが設定されていることを確�
 
 
 
-. *サービス*: NetApp Backup and Recovery を有効のままにして、[続行] をクリックします。
+. *サービス*：NetApp Backup and Recoveryを有効にしたまま、*続行*を選択します。
 . ウィザードのページを完了して、説明に従ってシステムを展開します。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["GCP でCloud Volumes ONTAP を起動"^] 。
 
 
@@ -202,7 +202,7 @@ GCP Marketplace サブスクリプションが設定されていることを確�
 NetApp Backup and Recovery は、いつでもシステムから直接有効にすることができます。
 
 .手順
-. コンソールの *システム* ページでシステムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効* を選択します。
+. コンソールの「Systems」ページからシステムを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」を選択します。
 +
 バックアップの Google Cloud Storage 保存先がコンソールの [システム] ページにシステムとして存在する場合は、クラスタを Google Cloud Storage システムにドラッグしてセットアップ ウィザードを開始できます。
 
@@ -258,7 +258,7 @@ storage.objects.update
 . へ移動 https://console.cloud.google.com/storage/settings["GCP ストレージ設定"^]サービス アカウントのアクセス キーを作成します。
 +
 .. プロジェクトを選択し、*相互運用性*を選択します。まだ行っていない場合は、[相互運用性アクセスを有効にする] を選択します。
-.. *サービス アカウントのアクセス キー* の下で、*サービス アカウントのキーの作成* を選択し、作成したサービス アカウントを選択して、*キーの作成* をクリックします。
+.. 「サービスアカウントのアクセスキー」で「サービスアカウントのキーを作成する」を選択し、先ほど作成したサービスアカウントを選択して、「キーを作成する」を選択します。
 +
 後でバックアップ サービスを構成するときに、 NetApp Backup and Recoveryにキーを入力する必要があります。
 
@@ -315,7 +315,7 @@ cloudkms.keyRings.setIamPolicy
 [[activate-backups-on-your-ontap-volumes]]
 == ONTAPボリューム上のバックアップをアクティブ化する
 
-オンプレミスのシステムからいつでも直接バックアップをアクティブ化できます。
+Cloud Volumes ONTAP システムからいつでも直接バックアップを有効化できます。
 
 ウィザードに従って、次の主要な手順を実行します。
 
@@ -332,17 +332,17 @@ cloudkms.keyRings.setIamPolicy
 === ウィザードを起動する
 
 .手順
-. 次のいずれかの方法で、バックアップと回復のアクティブ化ウィザードにアクセスします。
+. 以下のいずれかの方法で、バックアップと復元の有効化ウィザードにアクセスしてください。
 +
-** コンソールの *システム* ページ* からシステムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化 > バックアップ ボリューム* を選択します。
+** Console の「Systems」ページからシステムを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」>「Backup Volumes」を選択します。
 +
-バックアップの GCP 保存先がコンソールの *システム* ページにシステムとして存在する場合は、 ONTAPクラスターを GCP オブジェクト ストレージにドラッグできます。
+バックアップの Google Cloud Storage 保存先がコンソールの *システム* ページにシステムとして存在する場合は、ONTAP クラスターを Google Cloud Storage システムにドラッグできます。
 
 ** バックアップとリカバリ バーで *ボリューム* を選択します。ボリュームタブから*アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、単一ボリューム（オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていない）の [バックアップのアクティブ化]* を選択します。
 
 
 +
-ウィザードの「概要」ページには、ローカル スナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で 2 番目のオプションを実行した場合、ボリュームが 1 つ選択された状態で「バックアップ戦略の定義」ページが表示されます。
+ウィザードの「はじめに」ページには、ローカルスナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で2番目のオプションを選択した場合、「バックアップ戦略の定義」ページが表示され、1つのボリュームが選択された状態になります。
 
 . 次のオプションを続行します。
 +
@@ -459,7 +459,7 @@ TIP: レプリケーションをアクティブ化する前にカスタムポリ
 
 ** *暗号化キー*: 新しい Google バケットを作成した場合は、プロバイダから提供された暗号化キー情報を入力します。データの暗号化を管理するために、デフォルトの Google Cloud 暗号化キーを使用するか、Google アカウントから独自の顧客管理キーを選択するかを選択します。
 +
-独自のカスタマー管理キーを使用する場合は、キー コンテナーとキー情報を入力します。
+お客様自身が管理するキーを使用する場合は、キーリングとキーの情報を入力してください。
 
 
 
@@ -510,7 +510,7 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 
 デフォルトでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。低コストの _Nearline_、_Coldline_、または _Archive_ ストレージ クラスを使用できます。ただし、ストレージ クラスは、 NetApp Backup and Recovery UI ではなく、Google を通じて構成します。  Googleトピックを見る https://cloud.google.com/storage/docs/changing-default-storage-class["バケットのデフォルトのストレージ クラスを変更する"^]詳細については。
 
-ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。
+ボリュームバックアップダッシュボードが表示され、バックアップの状態を監視できます。
 
 バックアップと復元ジョブのステータスを監視することもできます。link:br-use-monitor-tasks.html["ジョブ監視ページ"] 。
 
@@ -519,10 +519,10 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 [[show-the-api-commands]]
 === APIコマンドを表示する
 
-バックアップとリカバリのアクティブ化ウィザードで使用される API コマンドを表示し、必要に応じてコピーすることもできます。将来のシステムでバックアップのアクティベーションを自動化するには、これを実行する必要がある場合があります。
+バックアップとリカバリの有効化ウィザードで使用されるAPIコマンドを表示し、必要に応じてコピーすることができます。将来のシステムでバックアップの有効化を自動化するために、この操作を行うことをご検討ください。
 
 .手順
-. バックアップとリカバリのアクティブ化ウィザードから、*API リクエストの表示*を選択します。
+. バックアップとリカバリの有効化ウィザードから、*APIリクエストの表示*を選択します。
 . コマンドをクリップボードにコピーするには、[コピー] アイコンを選択します。
 
 

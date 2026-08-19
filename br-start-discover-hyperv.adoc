@@ -14,24 +14,24 @@ summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前
 
 
 [role="lead"]
-NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。
+NetApp Backup and Recovery で Hyper-V 仮想マシンを検出し、保護ポリシーを使用して保護できるようにします。
 
-*必要なコンソール ロール* バックアップとリカバリのスーパー管理者。詳細はこちらlink:reference-roles.html["バックアップとリカバリの役割と権限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須コンソールロール* バックアップおよびリカバリのスーパー管理者。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 
 [[add-a-hyper-v-host-and-discover-resources]]
 == Hyper-Vホストを追加してリソースを検出する
 
-Hyper-V ホスト情報を追加し、 NetApp Backup and Recovery で仮想マシンを検出できるようにします。各コンソール エージェント内で、リソースを検出するシステムを選択します。
+Hyper-V ホスト情報を追加して、NetApp Backup and Recovery が仮想マシンを検出できるようにします。各コンソールエージェント内で、リソースを検出するシステムを選択します。
 
 
 NOTE: Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
 
 .手順
-. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
 +
-NetApp Backup and Recoveryに初めてログインする場合、コンソールにはすでにシステムがあるがリソースがまだ検出されていないと、「新しいNetApp Backup and Recoveryへようこそ」ランディング ページが表示され、*リソースの検出*オプションが表示されます。
+初めて NetApp Backup and Recovery にログインする場合で、コンソールにシステムが既に存在するがリソースがまだ検出されていない場合、「新しい NetApp Backup and Recovery へようこそ」ランディングページが表示され、*リソースの検出* オプションが表示されます。
 
 . *リソースの検出*を選択します。
 . 次の情報を入力してください。
@@ -64,8 +64,8 @@ NetApp Backup and Recovery がリソースを検出すると、インベント�
 == NetApp Backup and Recoveryダッシュボードに進みます
 
 .手順
-. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
-. ワークロード タイル (Microsoft SQL Server など) を選択します。
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
+. Hyper-Vワークロードタイルを選択します。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
 

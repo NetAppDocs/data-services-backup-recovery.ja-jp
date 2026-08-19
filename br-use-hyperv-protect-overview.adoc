@@ -4,7 +4,7 @@ permalink: br-use-hyperv-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: オンプレミスのONTAPシステムからプライマリ ストレージおよびセカンダリ ストレージまで、Hyper-V 仮想マシンを保護して、データが確実に保護されるようにすることができます。 
 ---
-= Hyper-V 保護ワークフローと NetApp Backup and Recovery
+= NetApp Backup and RecoveryによるHyper-Vワークロードの保護
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: オンプレミスのONTAPシステムからプライマリ ストレ�
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して Hyper-V VM を保護します。NetApp Backup and Recovery は、スタンドアロン インスタンスと FCI クラスタ インスタンスの両方に対して、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態、VM 整合性のあるバックアップおよびリストア操作を提供します。System Center Virtual Machine Manager (SCVMM) によってプロビジョニングされ、CIFS 共有でホストされている Hyper-V 仮想マシンを保護することもできます。
+NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、FCI クラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。
 
-Hyper-V ワークロードを Amazon Web Services S3 またはStorageGRIDにバックアップし、Hyper-V ワークロードをオンプレミスの Hyper-V ホストに復元できます。
+Hyper-V ワークロードを Amazon S3 または StorageGRID にバックアップし、オンプレミスの Hyper-V ホストにリストアできます。
 
-NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
+NetApp Backup and Recovery を使用して、3-2-1 の保護戦略を実装します。これは、ソースデータの 3 つのコピーを 2 つの異なるストレージシステムに、1 つのコピーをクラウドに保存するものです。3-2-1 方式の利点は以下のとおりです：
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
 * 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
-* オンサイト コピーを使用すると、データを迅速に復元できます。また、オンサイト コピーが侵害された場合は、オフサイト コピーを使用できます。
+* オンサイトコピーはデータをすばやく復元するのに役立ち、オンサイトコピーが侵害された場合はオフサイトコピーを使用できます。
 
 
-Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
+Hyper-V ホストを追加してリソースを検出すると、NetApp Backup and Recovery は NetApp Hyper-V プラグインと NetApp SnapCenter Windows FileSystem プラグインを各 Hyper-V ホストにインストールし、仮想マシンの管理と保護を支援します。
 
 NetApp Backup and Recoveryを使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。
 

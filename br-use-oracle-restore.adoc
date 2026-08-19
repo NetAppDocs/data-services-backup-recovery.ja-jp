@@ -4,7 +4,7 @@ permalink: br-use-oracle-restore.html
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
 ---
-= NetApp Backup and RecoveryでOracleデータベースを復元する
+= Oracle DatabaseワークロードをNetApp Backup and Recoveryで復元する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して、スナップショット、セカンダリ ストレージに複製されたバックアップ、またはオブジェクト ストレージに保存されたバックアップから Oracle データベースを復元します。
+スナップショット、セカンダリ システム上のレプリケートされたバックアップ、またはオブジェクトストレージに保存されているバックアップから Oracle Database ワークロードを復元するには、NetApp Backup and Recovery を使用します。
 
 .これらの場所から復元
 異なる開始場所からデータベースを復元できます。
@@ -32,10 +32,10 @@ NetApp Backup and Recoveryを使用して、スナップショット、セカン
 
 
 
-[[how-restoring-oracle-databases-works]]
-== Oracleデータベースの復元の仕組み
+[[how-oracle-database-restore-works]]
+== Oracleデータベースのリストアの仕組み
 
-Oracle データベースを復元すると、次のことが起こります。
+Oracle Database のワークロードを復元すると、次のことが発生します：
 
 * ローカル スナップショットからデータベースを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。
 * 複製されたストレージから復元する場合は、元の場所に復元できます。
@@ -49,9 +49,9 @@ Oracle データベースを復元すると、次のことが起こります。
 [[restore-an-oracle-database]]
 == Oracleデータベースを復元する
 
-ニーズに応じて、Oracle データベースを特定の時点、特定のシステム変更番号 (SCN)、または最後の正常な状態に復元します。また、スナップショットからデータベースを復元し、自動回復プロセスをスキップすることもできます。手動で回復を実行する場合は、自動回復プロセスをスキップすることができます。データベースは、名前または特定のフィルターを使用して検索できます。
+必要に応じて、Oracleデータベースを特定の時点、特定のシステム変更番号（SCN）、または最後に正常に動作していた状態に復元できます。また、スナップショットからデータベースを復元して、自動リカバリプロセスをスキップすることもできます。たとえば、手動でリカバリを実行したい場合などに利用できます。データベースは、その名前で検索することも、特定のフィルターを使用して検索することもできます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Console ロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Consoleメニューから、*保護 > バックアップとリカバリ* を選択します。
@@ -130,13 +130,13 @@ Oracle データベースを復元すると、次のことが起こります。
 . *復元前のオプション*:
 +
 ** 必要に応じて、このオプションを有効にし、復元操作の前に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。
-** スクリプトのタイムアウト値を選択します。この期間内にスクリプトの実行に失敗した場合、復元は続行されます。
+** スクリプトのタイムアウト値を選択してください。スクリプトがこの時間内に実行されなかった場合でも、復元処理は続行されます。
 
 
 . *復元後のオプション*:
 +
 ** *Postscript*: 必要に応じて、このオプションを有効にし、復元操作後に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。
-** *リカバリ後にデータベースまたはコンテナ データベースを読み取り/書き込みモードで開きます*: 復元操作が完了すると、バックアップとリカバリによってデータベースの読み取り/書き込みモードが有効になります。
+** *リカバリ後にデータベースまたはコンテナデータベースを読み書きモードで開く*：リストア操作が完了すると、Backup and Recovery によってデータベースの読み書きモードが有効になります。
 
 
 . *通知*セクション:
@@ -150,7 +150,7 @@ Oracle データベースを復元すると、次のことが起こります。
 --
 .別の場所へのリストア
 --
-Oracle Database ワークロード プレビューでは使用できません。
+このプレビューリリースでは、Oracle Database ワークロードでは利用できません。
 
 --
 ====

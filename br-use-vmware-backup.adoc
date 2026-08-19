@@ -14,11 +14,11 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-データが確実に保護されるように、オンプレミスのONTAPシステムから VMware VM とデータストアを Amazon Web Services、 Azure NetApp Files、またはStorageGRIDにバックアップします。バックアップは自動的に生成され、パブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストアに保存されます。
+オンプレミス ONTAP システムから Amazon Web Services、Azure NetApp Files、または StorageGRID に VMware VM とデータストアをバックアップして、データを保護します。バックアップは自動的に生成され、パブリッククラウドまたはプライベートクラウドアカウント内のオブジェクトストアに保存されます。
 
 * ワークロードをスケジュールに基づいてバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。手順についてはlink:br-use-policies-create.html["保護ポリシーを作成する"]を参照してください。
 * 保護グループを作成して、リソース セットのバックアップおよび復元操作を管理します。詳細については、link:br-use-vmware-protection-groups.html["保護グループの作成と管理"]を参照してください。
-* 今すぐワークロードをバックアップします (今すぐオンデマンド バックアップを作成します)。
+* 今すぐワークロードをバックアップするには、オンデマンド バックアップを作成してください。
 
 
 
@@ -31,7 +31,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 *必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
-. [バックアップとリカバリ] メニューから、[*インベントリ*] を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . VMwareワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . * Protection Groups * 、 * Datastores * 、 * Virtual machines * 、または * Tags * のメニュー項目を選択します。

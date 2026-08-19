@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations-hyperv.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, SAP HANA database, virtual machine, vm 
-summary: 環境でバックアップとリカバリを使用する前に、これらのNetApp Backup and Recoveryの制限事項を確認してください。 
+summary: 環境で Backup and Recovery を使用する前に、これらの NetApp Backup and Recovery の制限事項を確認してください。 
 ---
 = Hyper-V ワークロード向けNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
@@ -14,18 +14,18 @@ summary: 環境でバックアップとリカバリを使用する前に、こ�
 
 
 [role="lead"]
-このバージョンで動作しない、または正常に動作しないプラットフォーム、デバイス、または機能がここにリストされています。これらの制限事項を注意深くお読みください。
+Hyper-Vワークロードに関する現在の制限事項とサポートされていないアクションを NetApp Backup and Recovery で確認してください。
 
 
 
 [[unsupported-actions]]
 == サポートされていないアクション
 
-以下のアクションは、NetApp Backup and RecoveryのHyper-Vワークロードではサポートされていません：
+Hyper-V ワークロードに対して、NetApp Backup and Recovery ではサポートされていない操作は次のとおりです：
 
 * NetApp Console ローカル展開のバックアップとリカバリのプレビューリリースでは、オブジェクトストレージへのバックアップは ONTAP S3 と StorageGRID の宛先のみサポートされています。バックアップのアーカイブは、このプレビューリリースではサポートされていません。
 * Microsoft Windows Server 2025 を使用している場合、SANストレージに保存されている第2世代VMの保護はサポートされていません。
-* 複数の Hyper-V ホストの VM を使用してリソース グループを作成する
-* スパニングディスク（複数の CIFS 共有にまたがる）
+* 複数のHyper-VホストのVMを使用してリソースグループを作成する
+* 複数のCIFS共有にまたがるスパンニングディスクの使用
 * Hyper-Vの「プロセッサ互換性」設定に関わらず、異なるCPUベンダー（IntelからAMD、またはその逆）のシステム間でVMまたはVMデータを復元することはできません。この設定は、同一ベンダーの異なる世代間（例：IntelからIntel、AMDからAMD）の互換性のみをサポートします。
 

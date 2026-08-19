@@ -4,7 +4,7 @@ permalink: br-use-kvm-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、KVM 仮想マシンを保護して、データを確実に保護できます。 
 ---
-= KVMワークロードをNetApp Backup and Recoveryで保護する方法について説明します
+= KVM保護ワークフローとNetApp Backup and Recovery
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用して、管理対象の KVM VM とストレージ プールを保護します。NetApp Backup and Recovery は、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態、VM 整合性のあるバックアップおよびリストア操作を提供します。バックアップとリカバリを使用して KVM ホストと VM を保護する前に、Apache CloudStack などの管理プラットフォームで KVM ホストと VM を管理する必要があります。
+管理対象の KVM VM とストレージ プールを NetApp Backup and Recovery で保護します。このサービスは、高速で、スペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態および VM 整合性のあるバックアップとリストア操作を提供します。
 
-KVM ワークロードを Amazon Web Services S3、 Azure NetApp Files、またはStorageGRIDにバックアップし、KVM ワークロードをオンプレミスの KVM ホストに復元できます。
+KVMホストとVMは、Apache CloudStackなどのプラットフォームで管理されている必要があります。NetApp Backup and Recoveryで保護する前に、これらのプラットフォームによる管理が必要です。
 
 NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* 異なる種類のメディアを使用することで、いずれかのメディアが故障した場合でも復旧しやすくなります。
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-NetApp Backup and Recoveryを使用して、KVM ワークロードに関連する次のタスクを実行できます。
+NetApp Backup and Recoveryを使用して、KVMワークロードに対して以下のタスクを実行できます。
 
 * link:br-start-discover-kvm.html["KVMワークロードを発見"]
 * link:br-use-kvm-protection-groups.html["KVM ワークロードの保護グループの作成と管理"]

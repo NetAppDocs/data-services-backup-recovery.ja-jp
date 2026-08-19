@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-migrate-pvc.html
 keywords: migrate, pvc, nfs, storage, performance, persistence 
 summary: NetApp Console のローカル展開環境におけるカタログインデックスのパフォーマンスを向上させます。 
 ---
-= NetApp Backup and Recovery のローカル展開における検索とリストアのパフォーマンスの向上
+= 検索とリストアのカタログストレージを ONTAP NFS に移行する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Console のローカル展開環境におけるカタログイ�
 
 
 [role="lead"]
-カタログインデックスストレージをクラスターのデフォルトストレージクラスから ONTAP ベースの NFS 共有に移行することで、NetApp Console ローカル展開のカタログパフォーマンスを大幅に向上させることができます。インデックスカタログは、検索および復元機能に使用されます。カタログはデフォルトのストレージでも機能しますが、ONTAP を基盤とした NFS を使用すると、検索と復元において測定可能なパフォーマンス向上が得られます。
+NetApp Consoleのローカル導入環境において検索とリストアのパフォーマンスを向上させるには、カタログ インデックス ストレージをクラスターのデフォルトのストレージ クラスからONTAPベースのNFS共有に移行します。カタログ インデックスは検索とリストアをサポートしており、ONTAPベースのNFSを使用することで、測定可能なパフォーマンス向上を実現できます。
 
 .開始する前に
 始める前に、以下のものを用意してください。
@@ -52,7 +52,7 @@ kubectl get pods -n cbs | grep cloudmanager-cbs-catalog-worker- || echo "no work
 
 
 [discrete]
-===== ONTAP ボリュームを NetApp Console のローカルデプロイメントにマウントし、Pod からコピーする
+===== NetApp ConsoleのローカルデプロイにONTAPボリュームをマウントし、ポッドからデータをコピーします
 
 . ONTAP NFS エクスポートを、NetApp Console ローカル展開 OVA のデプロイ時に作成された VM のローカルマウントポイントにマウントします。
 . 実行中のコーディネーターポッドからデータを、中間ディレクトリなしで ONTAP マウントにコピーします。コーディネーターはまだ実行中である必要があります。
@@ -118,7 +118,7 @@ kubectl delete pv "$PV"
 [discrete]
 ===== 静的 ONTAP PV と PVC を作成する
 
-. 以下のPVおよびPVCのYAMLオブジェクトを作成します：
+. 以下のPVおよびPVC YAMLオブジェクトを作成します。
 +
 **`pv.yaml`**
 
@@ -166,7 +166,7 @@ spec:
     matchLabels:
       volume: ontap-nfs-share # Forces binding to the specific PV above
 ----
-. YAMLオブジェクトを適用する際は、まずPVを適用し、次にPVCを適用します（PVCのラベルセレクターがバインドされるためには、PVが存在している必要があります）。次に、PVCクレームがバインドされていることを確認します。
+. YAMLオブジェクトを適用するには、まずPVを適用し、次にPVCを適用します（PVCのラベルセレクターがバインドされるためには、PVが存在している必要があります）。次に、PVCクレームがバインドされていることを確認します。
 +
 [source, shell]
 ----

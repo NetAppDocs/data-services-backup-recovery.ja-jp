@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-aws.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
-= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPデータを Amazon S3 にバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAmazon S3にバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-Cloud Volumes ONTAPシステムから Amazon S3 へのボリューム データのバックアップを開始するには、NetApp Backup and Recoveryでいくつかの手順を完了します。
+NetApp Backup and Recovery を使用して、Cloud Volumes ONTAP システムのボリュームデータを Amazon S3 にバックアップします。
 
 
 NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
@@ -51,7 +51,7 @@ Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルできる年間�
 
 NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。コンソール エージェントとCloud Volumes ONTAPシステムをダーク サイトに展開する場合は、BYOL ライセンスを使用する必要があります。
 
-また、バックアップを保存するストレージスペース用の AWS アカウントも必要です。
+バックアップを保存するストレージスペースには、AWSアカウントも必要です。
 
 
 
@@ -208,7 +208,7 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 [[enable-netapp-backup-and-recovery-on-cloud-volumes-ontap]]
 == Cloud Volumes ONTAPでNetApp Backup and Recoveryを有効にする
 
-NetApp Backup and Recoveryを有効にするのは簡単です。既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって、手順が若干異なります。
+新規または既存の Cloud Volumes ONTAP システムで NetApp Backup and Recovery を有効にすることができます。手順はオプションごとに若干異なります。
 
 *新しいシステムでNetApp Backup and Recoveryを有効にする*
 
@@ -232,9 +232,9 @@ NetApp Backup and Recovery は、システム ウィザードでデフォルト�
 コンソールからいつでも既存のシステムでNetApp Backup and Recoveryを有効にできます。
 
 .手順
-. コンソールの *システム* ページでクラスターを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化* を選択します。
+. コンソールの「Systems」ページからクラスターを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」を選択します。
 +
-バックアップの Amazon S3 保存先が *システム* ページにクラスターとして存在する場合は、クラスターを Amazon S3 システムにドラッグしてセットアップ ウィザードを開始できます。
+バックアップのAmazon S3の保存先が*システム*ページにシステムとして存在する場合は、クラスターをAmazon S3システムにドラッグしてセットアップ ウィザードを開始できます。
 
 
 
@@ -243,7 +243,7 @@ NetApp Backup and Recovery は、システム ウィザードでデフォルト�
 [[activate-backups-on-your-ontap-volumes]]
 == ONTAPボリューム上のバックアップをアクティブ化する
 
-オンプレミスのシステムからいつでも直接バックアップをアクティブ化できます。
+Cloud Volumes ONTAP システムからいつでも直接バックアップを有効化できます。
 
 ウィザードに従って、次の主要な手順を実行します。
 
@@ -260,17 +260,17 @@ NetApp Backup and Recovery は、システム ウィザードでデフォルト�
 === ウィザードを起動する
 
 .手順
-. 次のいずれかの方法で、バックアップと回復のアクティブ化ウィザードにアクセスします。
+. 以下のいずれかの方法で、バックアップと復元の有効化ウィザードにアクセスしてください。
 +
-** コンソールの *システム* ページで、システムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化 > バックアップ ボリューム* を選択します。
+** Console の「Systems」ページからシステムを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」>「Backup Volumes」を選択します。
 +
-バックアップの AWS 保存先がコンソールの [システム] ページにシステムとして存在する場合は、 ONTAPクラスターを AWS オブジェクト ストレージにドラッグできます。
+バックアップの Amazon S3 の保存先が、コンソールの *システム* ページにシステムとして存在する場合は、ONTAP クラスターを Amazon S3 システムにドラッグできます。
 
-** バックアップとリカバリ バーで *ボリューム* を選択します。ボリュームタブから*アクション*を選択します image:icon-action.png["アクションアイコン"] アイコン オプションをクリックし、単一ボリューム (オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていないボリューム) に対して *3-2-1 保護のアクティブ化* を選択します。
+** Backup and Recovery バーで「ボリューム」を選択します。「ボリューム」タブから「アクション」image:icon-action.png["アクションアイコン"]アイコンを選択し、単一ボリューム（既にレプリケーションまたはオブジェクトストレージへのバックアップが有効になっていないボリューム）に対して「3-2-1保護を有効にする」を選択します。
 
 
 +
-ウィザードの「概要」ページには、ローカル スナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で 2 番目のオプションを実行した場合、ボリュームが 1 つ選択された状態で「バックアップ戦略の定義」ページが表示されます。
+ウィザードの「はじめに」ページには、ローカルスナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で2番目のオプションを選択した場合、「バックアップ戦略の定義」ページが表示され、1つのボリュームが選択された状態になります。
 
 . 次のオプションを続行します。
 +
@@ -395,7 +395,7 @@ TIP: カスタムポリシーを作成するには、link:br-use-policies-create
 
 ** *暗号化*: 新しいバケットを作成した場合は、プロバイダーから提供された暗号化キー情報を入力します。データの暗号化を管理するために、デフォルトの AWS 暗号化キーを使用するか、AWS アカウントから独自のカスタマー管理キーを選択するかを選択します。(https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自の暗号化キーの使用方法を確認する"^]）。
 +
-独自のカスタマー管理キーを使用する場合は、キー コンテナーとキー情報を入力します。
+お客様ご自身で管理するキーを使用する場合は、キー情報を入力してください。
 
 +
 
@@ -443,7 +443,7 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 
 入力した S3 アクセスキーとシークレットキーで示されるサービスアカウントに S3 バケットが作成され、そこにバックアップファイルが保存されます。
 
-ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。
+ボリュームバックアップダッシュボードが表示され、バックアップの状態を監視できます。
 
 バックアップと復元ジョブのステータスを監視することもできます。link:br-use-monitor-tasks.html["ジョブ監視ページ"] 。
 
@@ -452,9 +452,9 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 [[show-the-api-commands]]
 === APIコマンドを表示する
 
-バックアップとリカバリのアクティブ化ウィザードで使用される API コマンドを表示し、必要に応じてコピーすることもできます。将来のシステムでバックアップのアクティベーションを自動化するには、これを実行する必要がある場合があります。
+バックアップとリカバリの有効化ウィザードで使用されるAPIコマンドを表示し、必要に応じてコピーすることができます。将来のシステムでバックアップの有効化を自動化するために、この操作を行うことをご検討ください。
 
 .手順
-. バックアップとリカバリのアクティブ化ウィザードから、*API リクエストの表示*を選択します。
+. バックアップとリカバリの有効化ウィザードから、*APIリクエストの表示*を選択します。
 . コマンドをクリップボードにコピーするには、[コピー] アイコンを選択します。
 

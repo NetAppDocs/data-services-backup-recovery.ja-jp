@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery、サービスを使用するために、ま
 
 
 [role="lead"]
-NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に検出する必要があります。
+Kubernetes クラスターとそのワークロードを NetApp Backup and Recovery で検出し、保護ポリシーを使用してデータを保護できます。
 
 *必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
@@ -23,11 +23,11 @@ NetApp Backup and Recovery、 Kubernetes ワークロードを保護する前に
 [[discover-kubernetes-workloads]]
 == Kubernetes ワークロードを発見する
 
-NetApp Backup and Recoveryのインベントリで、環境内のKubernetesワークロードを検出します。ワークロードを追加すると、KubernetesクラスターがNetApp Backup and Recoveryに追加されます。その後、アプリケーションを追加してクラスターリソースを保護できます。必要に応じて、NetApp Consoleのローカル展開を使用して、エアギャップされたローカルのKubernetesリソースを検出することもできます。
+バックアップおよびリカバリのインベントリで、環境内の Kubernetes クラスターとワークロードを検出します。クラスターを追加すると、NetApp Backup and Recovery に登録し、保護対象のアプリケーションとリソースを検出できます。オプションで、NetApp Console のローカル展開を使用して、エアギャップされたローカル Kubernetes リソースを検出することもできます。
 
 [NOTE]
 ====
-現在Trident Protectで保護されているクラスタを検出すると、Trident Protectで使用されていたバックアップスケジュールは検出プロセス中に無効になります（Trident Protectのバックアップスケジュールはバックアップおよびリカバリと互換性がありません）。クラスタのアプリケーションを保護するには、link:br-use-policies-create.html["新しい保護ポリシーを作成する"]または、アプリケーションを既存のポリシーに関連付けます。その後、必要に応じてTrident Protectのバックアップスケジュールを削除できます。
+Trident Protect で現在保護されているクラスターを検出すると、Trident Protect のバックアップスケジュールは Backup and Recovery と互換性がないため、検出プロセス中に Trident Protect で使用されているバックアップスケジュールが無効になります。クラスターのアプリケーションを保護するには、link:br-use-policies-create.html["新しい保護ポリシーを作成する"]か、アプリケーションを既存のポリシーに関連付けてください。その後、必要に応じて Trident Protect のバックアップスケジュールを削除できます。
 
 ====
 .手順
@@ -40,7 +40,7 @@ NetApp Backup and Recoveryのインベントリで、環境内のKubernetesワ�
 . *Kubernetes* ワークロード タイプを選択します。
 . クラスター名を入力し、クラスターで使用するコンソールエージェントを選択してください。
 +
-Backup and Recoveryでは、選択したインストール タイプの選択に応じて異なる手順が提供されます。NetApp Consoleのローカル展開を使用する場合は、外部ネットワークに接続されていないエアギャップ環境のリソースを検出できる手順を選択できます。
+Backup and Recoveryでは、選択したインストール タイプの選択に応じて異なる手順が提供されます。NetApp Consoleのローカル展開を使用する場合は、外部ネットワークに接続されていないエアギャップ環境のリソースを検出する手順を選択できます。
 
 . Kubernetes クラスターに Trident Protect をインストールする手順を確認するには、インストール タイプの選択を選択してください：
 +
@@ -89,7 +89,7 @@ Backup and Recoveryでは、選択したインストール タイプの選択に
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == NetApp Backup and Recoveryダッシュボードに進みます
 
-NetApp Backup and Recoveryダッシュボードを表示するには、次の手順に従います。
+以下の手順に従って、NetApp Backup and Recovery ダッシュボードを表示し、検出されたリソースを確認します。
 
 . NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
 . Kubernetesワークロードタイルを選択します。

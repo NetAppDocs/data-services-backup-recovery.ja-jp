@@ -14,14 +14,14 @@ summary: NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレ
 
 
 [role="lead"]
-NetApp Backup and Recovery は、 2 つの S3 アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。
+この情報を使用して、NetApp Backup and Recovery バックアップ用の AWS S3 アーカイブ ティアを選択してください。アーカイブされたバックアップのリストアコストと取得時間も確認できます。
 
 
 
 [[supported-s3-archival-storage-classes-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recoveryでサポートされている S3 アーカイブ ストレージ クラス
 
-バックアップ ファイルは最初に作成されると、S3 _Standard_ ストレージに保存されます。この層は、アクセス頻度の低いデータを保存するように最適化されていますが、すぐにアクセスすることもできます。  30 日後、コストを節約するために、バックアップは S3 _Standard-Infrequent Access_ ストレージ クラスに移行します。
+バックアップファイルが最初に作成されると、S3 _Standard_ ストレージに保存されます。この階層は、アクセス頻度の低いデータの保存に最適化されていますが、即時アクセスも可能です。30日後、バックアップデータはコスト削減のため、S3 _Standard-Infrequent Access_ ストレージクラスに移行されます。
 
 ソース クラスターがONTAP 9.10.1 以降を実行している場合は、コストをさらに最適化するために、一定の日数 (通常は 30 日以上) 後にバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。これを「0」または1～999日に設定できます。  「0」日に設定した場合、後で 1 ～ 999 日に変更することはできません。
 

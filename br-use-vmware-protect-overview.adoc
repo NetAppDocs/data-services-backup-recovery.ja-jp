@@ -4,7 +4,7 @@ permalink: br-use-vmware-protect-overview.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
-= VMwareの保護ワークフローとNetApp Backup and Recovery
+= VMwareワークロードをNetApp Backup and Recoveryで保護する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and RecoveryでVMwareのVMおよびデータストアを保護します。NetApp Backup and Recoveryは、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態の、およびVM整合性のあるバックアップとリストアの操作を提供します。サポートされているバックアップターゲットにVMwareワークロードをバックアップし、オンプレミスのVMwareホストにVMwareワークロードをリストアできます。
+NetApp Backup and Recovery を使用して、VMware の VM とデータストアを保護します。高速で、スペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態の、VM と整合性のあるバックアップを作成し、サポートされているバックアップ ターゲットに保存して、VMware ワークロードをオンプレミスの VMware ホストにリストアできます。
 
 
 NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。
 
-NetApp Backup and Recoveryを使用して 3-2-1 戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
+NetApp Backup and Recovery を使用して、ソースデータの3つのコピーを2つの異なるストレージシステムに、1つのコピーをクラウドに保存する3-2-1戦略を実装します。3-2-1方式の利点は以下のとおりです。
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
 * 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
-* オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
+* オンサイトコピーから迅速に復元でき、オンサイトコピーが破損した場合はオフサイトコピーを使用できます。
 
 
 NetApp Backup and Recoveryを使用すると、VMware ワークロードに関連する次のタスクを実行できます。

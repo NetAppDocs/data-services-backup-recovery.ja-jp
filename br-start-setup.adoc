@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-setup.html 
 keywords: backup, back up, restore, recovery, aws, azure 
-summary: NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。 
+summary: StorageGRID、AWS、Azure などのオフサイトの場所を準備し、バックアップ先として使用できるように必要な権限を設定してください。 
 ---
-= NetApp Backup and Recoveryを使用する前にバックアップ先を設定する
+= バックアップ先を設定する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recoveryを使用する前に、いくつかの手順
 
 
 [role="lead"]
-NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行してバックアップ先を設定します。
+StorageGRID、AWS、Azure などのオフサイトの場所を準備し、バックアップ先として使用できるように必要な権限を設定してください。
 
 始める前に、link:concept-start-prereq.html["前提条件"]環境の準備ができていることを確認します。
 
@@ -25,32 +25,32 @@ NetApp Backup and Recoveryを使用する前に、いくつかの手順を実行
 
 * NetAppStorageGRID。
 +
-参照 https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDについて知る"^]。
+参照してください https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDについて知る"^]。
 
 +
-参照 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRIDドキュメント"^]StorageGRIDの詳細については、こちらをご覧ください。
+StorageGRID の詳細については、 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRIDドキュメント"^]を参照してください。
 
-* Amazon Web サービス。参照 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Amazon S3 ドキュメント"^]。
+* Amazon Web Services。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Amazon S3 ドキュメント"^]を参照してください。
 +
 AWS をバックアップ先として準備するには、次の手順を実行します。
 
 +
 ** AWS にアカウントを設定します。
 ** 次のセクションにリストされている AWS で S3 権限を設定します。
-** コンソールでAWSストレージを管理する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Amazon S3バケットを管理する"^] 。
+** AWS コンソールでのストレージ管理の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Amazon S3バケットを管理する"^]を参照してください。
 
 
 * マイクロソフト アジュール。
 +
-** 参照 https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Files のドキュメント"^]。
+** 参照してください https://docs.netapp.com/us-en/storage-management-blob-storage/index.html["Azure Blob Storage のドキュメント"^]。
 ** Azure でアカウントを設定します。
 ** 設定 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["Azure のアクセス許可"^]Azure で。
-** コンソールでAzureストレージを管理する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["Azure ストレージ アカウントを管理する"^] 。
+** Azure ストレージをコンソールで管理する方法の詳細については、 https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["Azure ストレージ アカウントを管理する"^]を参照してください。
 
 
 
 
-バックアップ先自体でオプションを設定した後、後でNetApp Backup and Recoveryでバックアップ先として設定します。  NetApp Backup and Recoveryでバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"] 。
+バックアップ先自体でオプションを設定した後、NetApp Backup and Recovery でバックアップ先として設定します。NetApp Backup and Recovery でバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"]を参照してください。
 
 
 
@@ -71,7 +71,7 @@ NOTE: AWS中国リージョンでバックアップを作成する場合、IAM�
 
 . サービスをアクティブ化すると、バックアップ ウィザードによってアクセス キーとシークレット キーの入力が求められます。これらの認証情報はONTAPクラスターに渡され、 ONTAP はS3 バケットにデータをバックアップおよび復元できるようになります。そのためには、次の権限を持つ IAM ユーザーを作成する必要があります。
 +
-参照 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS ドキュメント: IAM ユーザーに権限を委任するロールの作成"^]。
+ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS ドキュメント: IAM ユーザーに権限を委任するロールの作成"^]を参照してください。
 
 +
 [%collapsible]

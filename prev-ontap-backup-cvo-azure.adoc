@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-azure.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
 ---
-= NetApp Backup and Recoveryを使用して、 Cloud Volumes ONTAPデータを Azure Blob ストレージにバックアップします。
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAzure Blobストレージにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-Cloud Volumes ONTAPシステムから Azure Blob ストレージへのボリューム データのバックアップを開始するには、NetApp Backup and Recoveryでいくつかの手順を実行します。
+NetApp Backup and Recoveryを使用して、お客様のCloud Volumes ONTAPシステムからAzure Blobストレージにボリューム データをバックアップします。
 
 
 NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
@@ -51,7 +51,7 @@ NetApp Backup and Recovery PAYGO ライセンスの場合、 NetApp Backup and R
 
 NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。コンソール エージェントとCloud Volumes ONTAPシステムをダーク サイト (「プライベート モード」) に展開する場合は、BYOL ライセンスを使用する必要があります。
 
-また、バックアップを保存するストレージ スペース用の Microsoft Azure サブスクリプションが必要です。
+バックアップを保存するストレージスペースには、Azureサブスクリプションも必要です。
 
 
 
@@ -70,7 +70,7 @@ NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期
 [[verify-or-add-permissions-to-the-console-agent]]
 === コンソールエージェントへの権限を確認または追加する
 
-NetApp Backup and Recovery の検索と復元機能を使用するには、Azure Synapse ワークスペースと Data Lake ストレージ アカウントにアクセスできるように、コンソール エージェントのロールに特定のアクセス許可が必要です。以下の権限を確認し、ポリシーを変更する必要がある場合は手順に従ってください。
+NetApp Backup and Recovery の検索および復元機能を使用するには、コンソールエージェントのロールに、Azure Synapse ワークスペースと Azure Data Lake Storage アカウントにアクセスするための特定の権限が含まれている必要があります。以下の権限を確認し、ポリシーを変更する必要がある場合は手順に従ってください。
 
 .開始する前に
 * Azure Synapse Analytics リソース プロバイダー（「Microsoft.Synapse」という名前）をサブスクリプションに登録する必要があります。 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["このリソースプロバイダーをサブスクリプションに登録する方法をご覧ください"^]。リソース プロバイダーを登録するには、サブスクリプションの *Owner* または *Contributor* である必要があります。
@@ -195,7 +195,7 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 [[enable-netapp-backup-and-recovery-on-cloud-volumes-ontap]]
 == Cloud Volumes ONTAPでNetApp Backup and Recoveryを有効にする
 
-NetApp Backup and Recoveryを有効にするのは簡単です。既存のCloud Volumes ONTAPシステムがあるか、新しいシステムがあるかによって、手順が若干異なります。
+新規または既存の Cloud Volumes ONTAP システムで NetApp Backup and Recovery を有効にすることができます。手順はオプションごとに若干異なります。
 
 *新しいシステムでNetApp Backup and Recoveryを有効にする*
 
@@ -223,7 +223,7 @@ NOTE: リソース グループの名前を選択する場合は、 Cloud Volume
 NetApp Backup and Recoveryをいつでもシステムから直接有効にできます。
 
 .手順
-. コンソールの *システム* ページでシステムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効* を選択します。
+. コンソールの「Systems」ページからシステムを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」を選択します。
 +
 バックアップの Azure Blob 保存先がコンソールの *システム* ページにシステムとして存在する場合は、クラスターを Azure Blob システムにドラッグしてセットアップ ウィザードを開始できます。
 
@@ -236,7 +236,7 @@ NetApp Backup and Recoveryをいつでもシステムから直接有効にでき
 [[activate-backups-on-your-ontap-volumes]]
 == ONTAPボリューム上のバックアップをアクティブ化する
 
-オンプレミスのシステムからいつでも直接バックアップをアクティブ化できます。
+Cloud Volumes ONTAP システムからいつでも直接バックアップを有効化できます。
 
 ウィザードに従って、次の主要な手順を実行します。
 
@@ -253,9 +253,9 @@ NetApp Backup and Recoveryをいつでもシステムから直接有効にでき
 === ウィザードを起動する
 
 .手順
-. 次のいずれかの方法で、バックアップと回復のアクティブ化ウィザードにアクセスします。
+. 以下のいずれかの方法で、バックアップと復元の有効化ウィザードにアクセスしてください。
 +
-** コンソールの *システム* ページで、システムを選択し、右側のパネルの [バックアップとリカバリ] の横にある *有効化 > バックアップ ボリューム* を選択します。
+** Console の「Systems」ページからシステムを選択し、右側のパネルにある「Backup and Recovery」の横にある「Enable」>「Backup Volumes」を選択します。
 +
 バックアップの Azure 保存先が *Systems* ページにシステムとして存在する場合は、 ONTAPクラスターを Azure Blob オブジェクト ストレージにドラッグできます。
 
@@ -263,7 +263,7 @@ NetApp Backup and Recoveryをいつでもシステムから直接有効にでき
 
 
 +
-ウィザードの「概要」ページには、ローカル スナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で 2 番目のオプションを実行した場合、ボリュームが 1 つ選択された状態で「バックアップ戦略の定義」ページが表示されます。
+ウィザードの「はじめに」ページには、ローカルスナップショット、レプリケーション、バックアップなどの保護オプションが表示されます。この手順で2番目のオプションを選択した場合、「バックアップ戦略の定義」ページが表示され、1つのボリュームが選択された状態になります。
 
 . 次のオプションを続行します。
 +
@@ -398,7 +398,7 @@ TIP: バックアップ ファイルが変更されたり削除されたりす�
 
 +
 
-NOTE: 既存の Microsoft ストレージ アカウントを選択した場合は、暗号化情報が既に用意されているため、ここで入力する必要はありません。
+NOTE: 既存のAzureストレージアカウントを選択した場合、暗号化情報は既に用意されているため、ここで入力する必要はありません。
 
 +
 ** *ネットワーク*: IPspace を選択し、プライベート エンドポイントを使用するかどうかを選択します。プライベート エンドポイントはデフォルトで無効になっています。
@@ -450,7 +450,7 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 
 デフォルトでは、 NetApp Backup and Recovery はコストの最適化のためにローカル冗長性 (LRS) を使用して BLOB コンテナーをプロビジョニングします。異なるゾーン間でデータが複製されるようにしたい場合は、この設定をゾーン冗長性 (ZRS) に変更できます。  Microsoftの指示を参照してください https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["ストレージアカウントの複製方法を変更する"^]。
 
-ボリューム バックアップ ダッシュボードが表示され、バックアップの状態を監視できます。
+ボリュームバックアップダッシュボードが表示され、バックアップの状態を監視できます。
 
 バックアップと復元ジョブのステータスを監視することもできます。link:br-use-monitor-tasks.html["ジョブ監視ページ"] 。
 
@@ -459,10 +459,10 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 [[show-the-api-commands]]
 === APIコマンドを表示する
 
-バックアップとリカバリのアクティブ化ウィザードで使用される API コマンドを表示し、必要に応じてコピーすることもできます。将来のシステムでバックアップのアクティベーションを自動化するには、これを実行する必要がある場合があります。
+バックアップとリカバリの有効化ウィザードで使用されるAPIコマンドを表示し、必要に応じてコピーすることができます。将来のシステムでバックアップの有効化を自動化するために、この操作を行うことをご検討ください。
 
 .手順
-. バックアップとリカバリのアクティブ化ウィザードから、*API リクエストの表示*を選択します。
+. バックアップとリカバリの有効化ウィザードから、*APIリクエストの表示*を選択します。
 . コマンドをクリップボードにコピーするには、[コピー] アイコンを選択します。
 
 

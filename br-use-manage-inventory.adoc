@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: br-use-manage-inventory.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベース、インスタンスの管理に役立ちます。 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, on-premises, applications, virtual machines, backup and recovery, snapcenter 
+summary: Microsoft SQL Server のホスト、インスタンス、およびデータベースを NetApp Backup and Recovery で管理します。 
 ---
 = NetApp Backup and Recoveryで Microsoft SQL Server のインベントリを管理する
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、デ�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベース、インスタンスの管理に役立ちます。インベントリの保護設定を表示、変更、または削除できます。
+Microsoft SQL Server のホスト、インスタンス、データベースを表示および管理し、保護設定を変更または削除します。
 
-在庫管理に関連する次のタスクを実行できます。
+インベントリを管理するには、次の操作を実行できます。
 
 * ホスト情報の管理
 +
@@ -39,7 +39,7 @@ NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベ�
 ** オンデマンドバックアップを開始して今すぐバックアップ
 
 
-* ログ ディレクトリを構成します ([インベントリ] > [ホスト])。スナップショット内のデータベース ホストのログをバックアップする場合は、まずNetApp Backup and Recoveryでログを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
+* スナップショットでデータベースホストのログをバックアップする前に、*インベントリ* > *ホスト* からログディレクトリを設定してください。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"]を参照してください。
 
 
 
@@ -47,11 +47,11 @@ NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベ�
 [[manage-host-information]]
 == ホスト情報の管理
 
-ホスト情報を管理して、適切なホストが保護されるようにすることができます。ホスト情報を表示、編集、削除できます。
+ホスト情報を管理して、適切なホストが保護されるようにします。必要に応じてホスト情報を表示、編集、削除できます。
 
 *必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者、またはバックアップとリカバリのクローン管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
-* ログディレクトリを構成します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"] 。
+* ログディレクトリを設定します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"]を参照してください。
 * スケジュールを中断
 * ホストを編集する
 * ホストを削除する
@@ -62,10 +62,10 @@ NetApp Backup and Recovery は、 Microsoft SQL Server ホスト、データベ�
 [[manage-hosts]]
 === ホストの管理
 
-システム内で検出されたホストを管理できます。個別に、またはグループとして管理できます。
+システム内で検出されたホストは、個別に、またはグループとして管理できます。
 
 
-TIP: 「ホスト」列で「管理対象外」ステータスのホストを管理できます。  NetApp Backup and Recovery はすでに「管理対象」ステータスのホストを管理しています。
+TIP: ホストを管理するには、「ホスト」列で「管理対象外」のステータスを探してください。NetApp Backup and Recoveryは、既に「管理対象」ステータスのホストを管理しています。
 
 NetApp Backup and Recoveryでホストを管理すると、 SnapCenterそれらのホスト上のリソースは管理されなくなります。
 
@@ -76,7 +76,7 @@ NetApp Backup and Recoveryでホストを管理すると、 SnapCenterそれら�
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
 . *ホスト*タブを選択します。
-. 1 つ以上のホストを選択します。複数のホストを選択した場合は、一括操作オプションが表示され、*管理（最大 5 台のホスト）*を選択できます。
+. ホストを1つ以上選択してください。複数のホストを選択した場合、「一括操作」オプションが表示されます。「管理（最大5台のホスト）」を選択してください。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理*。
 . ホストの依存関係を確認します。
 +
@@ -107,7 +107,7 @@ NetApp Backup and Recoveryでホストを管理すると、 SnapCenterそれら�
 [[edit-a-host]]
 === ホストを編集する
 
-vCenter サーバー情報、ホスト登録資格情報、および詳細設定オプションを変更できます。
+vCenter サーバー情報、ホスト登録認証情報、および詳細設定を変更できます。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -133,15 +133,15 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 
 
 
-[[manage-instances-information]]
+[[manage-instance-information]]
 == インスタンス情報の管理
 
-次の方法でインスタンス情報を管理し、リソース保護のための適切な資格情報を割り当て、リソースをバックアップすることができます。
+インスタンス情報を管理してリソースを保護し、認証情報を関連付けたり削除したり、保護設定を編集したり、バックアップを実行したりします。
 
 * インスタンスを保護する
 * アソシエイト資格
 * 資格情報の関連付けを解除する
-* 編集保護
+* 保護設定を編集する
 * 今すぐバックアップ
 
 
@@ -152,7 +152,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 [[protect-database-instances]]
 === データベースインスタンスを保護する
 
-リソース保護のスケジュールと保持を管理するポリシーを使用して、データベース インスタンスにポリシーを割り当てることができます。
+リソース保護のスケジュールと保持期間を管理するために、データベースインスタンスにポリシーを割り当てます。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -162,19 +162,19 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護] を選択します。
 . ポリシーを選択するか、新しいポリシーを作成します。
 +
-ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシーの作成方法の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"]を参照してください。
 
-. バックアップの前後に実行するスクリプトに関する情報を提供します。
+. バックアップの前後に実行するスクリプトを指定します。
 +
-** *事前スクリプト*: 保護アクションがトリガーされる前にスクリプトを自動的に実行するには、スクリプトのファイル名と場所を入力します。これは、保護ワークフローの前に実行する必要がある追加のタスクや構成を実行するのに役立ちます。
-** *事後スクリプト*: 保護アクションが完了した後にスクリプトを自動的に実行するには、スクリプトのファイル名と場所を入力します。これは、保護ワークフローの後に実行する必要がある追加のタスクや構成を実行するのに役立ちます。
+** *事前スクリプト*：保護アクションの開始前に自動的に実行されるスクリプトのファイル名と場所を入力してください。保護ワークフローの前に、追加のタスクや設定を実行する場合に使用します。
+** *Post-script*：保護処理の完了後に自動的に実行するスクリプトのファイル名と場所を入力してください。保護ワークフローの完了後に追加のタスクや設定を実行する場合に使用します。
 
 
-. スナップショットを検証する方法についての情報を提供します。
+. スナップショットの検証情報を入力してください：
 +
-** 保存場所: 検証スナップショットを保存する場所を選択します。
-** 検証リソース: 検証するリソースがローカル スナップショット上にあるか、 ONTAPセカンダリ ストレージ上にあるかを選択します。
-** 検証スケジュール: 時間ごと、日ごと、週ごと、月ごと、または年ごとの頻度を選択します。
+** 保存場所：検証スナップショットの保存場所を選択してください。
+** 検証リソース：ローカルスナップショット、ONTAP セカンダリストレージ、またはその両方でリソースを検証するかどうかを選択します。
+** 検証スケジュール：頻度を選択してください：毎時、毎日、毎週、毎月、または毎年。
 
 
 
@@ -184,7 +184,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 [[associate-credentials-with-a-resource]]
 === 資格情報をリソースに関連付ける
 
-保護が行われるように、資格情報をリソースに関連付けることができます。
+認証情報をリソースに関連付けることで、保護を実現できます。
 
 詳細については、link:br-start-configure.html["資格情報を含むNetApp Backup and Recoveryの設定を構成する"] 。
 
@@ -211,7 +211,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 . インスタンスを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護の編集] を選択します。
 +
-ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシーの作成方法の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"]を参照してください。
 
 
 
@@ -230,7 +230,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[今すぐバックアップ] を選択します。
 . バックアップの種類を選択し、スケジュールを設定します。
 +
-アドホックバックアップの作成の詳細については、link:br-use-mssql-backup.html["ポリシーを作成します。"] 。
+アドホックバックアップの作成方法の詳細については、link:br-use-mssql-backup.html["Microsoft SQL Server ワークロードのバックアップ"]を参照してください。
 
 
 
@@ -264,7 +264,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 . データベースを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護] を選択します。
 +
-ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシーの作成方法の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"]を参照してください。
 
 
 
@@ -273,15 +273,18 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 [[restore-databases]]
 === データベースを復元する
 
-データを保護するためにデータベースを復元します。
+データの復旧が必要な場合は、データベースを復元してください。
 
 *必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
+.手順
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
+. 表示するワークロードを選択し、[表示] を選択します。
 . *データベース*タブを選択します。
 . データベースを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[復元] を選択します。
 +
-ワークロードの復元については、以下を参照してください。link:br-use-mssql-restore.html["ワークロードを復元する"] 。
+ワークロードの復元に関する情報については、link:br-use-mssql-restore.html["ワークロードを復元する"]を参照してください。
 
 
 
@@ -301,7 +304,7 @@ vCenter サーバー情報、ホスト登録資格情報、および詳細設定
 . データベースを選択します。
 . *アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、[保護の編集] を選択します。
 +
-ポリシー作成の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"] 。
+ポリシーの作成方法の詳細については、link:br-use-policies-create.html["ポリシーを作成します。"]を参照してください。
 
 
 

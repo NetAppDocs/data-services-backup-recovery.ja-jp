@@ -14,11 +14,9 @@ summary: NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 Ne
 
 
 [role="lead"]
-NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。SnapMirror Logical Replication (LRSE) を使用してボリュームをオンプレミスのNetApp展開から別の展開へ、またはCloud Volumes ONTAPなどのクラウドベースのソリューションに移行した場合、 SnapMirror to Cloud Resync により、既存のクラウド バックアップがそのままの状態で動作し続けることが保証されます。
+SnapMirror to Cloud Resync を NetApp Backup and Recovery で使用すると、SnapMirror 論理レプリケーション（LRSE）でボリュームを移行した後も、既存のクラウドバックアップを引き続き利用できます。この機能により、再ベースラインなしでバックアップを継続でき、ONTAP 9.16.1 以降で利用可能です。
 
-この機能により、再ベースライン プロセスが不要になり、移行後もバックアップを続行できるようになります。この機能は、FlexVol と FlexGroup の両方をサポートし、ワークロード移行シナリオで役立ち、 ONTAPバージョン 9.16.1 以降で利用できます。
-
-SnapMirror to Cloud Resync は、環境間でバックアップの継続性を維持し、ハイブリッドおよびマルチクラウド設定でのデータ管理を容易にします。
+SnapMirror to Cloud Resync は、FlexVol および FlexGroup の移行をサポートし、ハイブリッドおよびマルチクラウド環境全体でバックアップの継続性を維持するのに役立ちます。
 
 
 NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
@@ -46,7 +44,7 @@ NOTE: SVM-Migrate、SVM-DR、またはヘッドスワップ方式を使用した
 
 次に例を示します。
 
-Vol1a というオンプレミスのボリュームがあるとします。このボリュームには、S1、S2、S3 の 3 つのスナップショットがあります。これらのスナップショットは復元ポイントです。  Vol1 はSnapMirror to Cloud (SM-C) を使用してクラウドにバックアップされていますが、オブジェクト ストアには S1 と S2 のみが存在します。
+オンプレミスのボリューム Vol1a があるとします。このボリュームには、S1、S2、S3 の 3 つの Snapshot があります。これらの Snapshot はリストア ポイントです。Vol1a は SnapMirror to Cloud （SM-C） を使用してクラウドにバックアップされていますが、オブジェクト ストアには S1 と S2 のみが格納されています。
 
 ここで、Vol1 を別のONTAPクラスタに移行します。これを行うには、Vol1b という新しいクラウド ボリュームへのSnapMirror論理レプリケーション (LRSE) 関係を作成します。これにより、3 つのスナップショット (S1、S2、S3) すべてが Vol1a から Vol1b に転送されます。
 
@@ -168,7 +166,7 @@ NOTE: ボリューム ID ではなく、ボリューム インスタンス UUID 
 NetApp Backup and Recoveryは、再同期のために選択された各ボリュームが、オブジェクトストアと共通のスナップショットを共有していることを検証します。具体的には、オブジェクトストアに保存されている最新のスナップショットは、新しくクローンされたボリュームのローカルスナップショットにも存在している必要があります。このチェックにより、ボリュームがSnapMirror to Cloud再同期操作の準備ができていることが保証されます。
 
 . 新しいソース ボリューム名や各ボリュームの再同期ステータスなどの検証結果を確認します。
-. ボリュームの適格性を確認します。システムは、ボリュームが再同期の対象であるかどうかを確認します。ボリュームが対象外の場合は、共通Snapshotの条件が確立されていないことを意味します。
+. ボリュームの適用条件を確認してください。システムは、ボリュームが再同期の対象であるかどうかを確認します。ボリュームが対象外となる場合、共通Snapshotの基準を満たしていないことを意味します。
 +
 
 IMPORTANT: ボリュームがSnapMirrorから Cloud Resync への操作の対象であり続けるようにするには、移行前のフェーズでSnapMirror関係を削除する前に、各ボリュームの最終スナップショットを作成します。これにより、データの最新の状態が保持されます。

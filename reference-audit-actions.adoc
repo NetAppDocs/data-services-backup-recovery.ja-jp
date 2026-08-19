@@ -14,9 +14,9 @@ summary: NetApp Console監査でサポートされるバックアップおよび
 
 
 [role="lead"]
-NetApp Console の監査ページでは、監査機能の一環として、ユーザーが Backup and Recovery で実行した以下の操作が記録されます。監査イベントの表示方法とフィルタリング方法の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]Console のドキュメントを参照してください。
+この参照を使用して、NetApp Backup and Recovery のアクションのうち、NetApp Console が監査ページに記録するものを確認してください。監査イベントの表示とフィルタリングの詳細については、NetApp Console のドキュメントの https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]を参照してください。
 
-監査対象となる各アクションについて、NetApp Consoleはサービス名、エージェント、リソース、ユーザー、およびアクションのステータスを記録します。
+監査対象となる各アクションについて、NetApp Console はサービス名、エージェント、リソース、ユーザー、およびアクションのステータスを記録します。
 
 .監査済みのNetApp Backup and Recovery操作
 * バックアップからボリュームまたはファイルを復元する

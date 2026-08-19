@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: br-use-mssql-backup.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、 StorageGRIDに Microsoft SQL Server アプリケーション データをバックアップして、データが保護されるようにします。 
+keywords: backing up, back up, backup, cloud volumes ontap, aws, azure, storagegrid, back up volumes, cloud backup, on-premises ontap, onprem, applications, backup and recovery 
+summary: オンプレミスの ONTAP システムから Amazon Web Services、Microsoft Azure、および StorageGRID に Microsoft SQL Server アプリケーションデータをバックアップして、データを確実に保護します。 
 ---
 = NetApp Backup and Recoveryで Microsoft SQL Server ワークロードをバックアップする
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 
 [role="lead"]
-オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、またはStorageGRIDに Microsoft SQL Server アプリケーション データをバックアップします。システムは自動的にバックアップを作成し、データ保護のためにクラウド アカウント内のオブジェクト ストアに保存します。
+オンプレミスの ONTAP システムから Amazon Web Services、Microsoft Azure、または StorageGRID への Microsoft SQL Server ワークロードのバックアップ。
 
-* スケジュールに従ってワークロードをバックアップするには、バックアップおよび復元操作を管理するポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]手順についてはこちらをご覧ください。
+* ワークロードをスケジュールに基づいてバックアップし、バックアップおよび復元操作を管理するためのポリシーを作成します。手順については、link:br-use-policies-create.html["ポリシーを作成"]を参照してください。
 * バックアップを開始する前に、検出されたホストのログ ディレクトリを構成します。
-* 今すぐワークロードをバックアップします (今すぐオンデマンド バックアップを作成します)。
+* オンデマンドバックアップを作成して、ワークロードをすぐにバックアップします。
 
 
 
@@ -28,7 +28,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 バックアップを開始する前に、ワークロードの保護ステータスを表示します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -44,7 +44,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 
 ワークロードをバックアップする前に、検出されたホストのアクティビティ ログ パスを設定して操作ステータスを追跡します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、またはバックアップとリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、またはバックアップとリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -53,7 +53,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 . ホストを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *ログディレクトリを設定します*。
 . ホスト パスを入力するか、ホストまたはノードのリストを参照して、ホスト ログを保存する場所を見つけます。
-. ログを保存するものを選択します。
+. ログを保存するホストまたはノードを選択してください。
 +
 
 NOTE: 表示されるフィールドは、フェールオーバー クラスター インスタンスやスタンドアロンなど、選択した展開モデルによって異なります。
@@ -68,7 +68,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 複数のワークロードのバックアップおよび復元操作を管理するための保護グループを作成します。保護グループは、ワークロードの論理的なグループです。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -81,7 +81,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 . *次へ*を選択します。
 . 保護グループに適用する*バックアップ ポリシー*を選択します。
 +
-ポリシーを作成する場合は、「*新しいポリシーの作成*」を選択し、指示に従ってポリシーを作成します。見るlink:br-use-policies-create.html["ポリシーを作成"]詳細についてはこちらをご覧ください。
+ポリシーを作成する場合は、*新しいポリシーの作成*を選択し、画面の指示に従ってください。詳細については、link:br-use-policies-create.html["ポリシーを作成"]を参照してください。
 
 . *次へ*を選択します。
 . 構成を確認します。
@@ -95,16 +95,16 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 システムに変更を加える前にオンデマンド バックアップを実行して、データが保護されていることを確認してください。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
-. メニューから*インベントリ*を選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
-. *保護グループ*、*インスタンス*、または*データベース*タブを選択します。
+. 「保護グループ」、「インスタンス」、または「データベース」タブを選択します。
 . バックアップするインスタンスまたはデータベースを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *今すぐバックアップ*。
-. バックアップに適用するポリシーを選択します。
+. バックアップに適用するポリシーを選択してください。
 . スケジュール層を選択します。
 . *今すぐバックアップ*を選択します。
 
@@ -116,13 +116,13 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 メンテナンスやトラブルシューティング中にバックアップを一時的に停止するには、スケジュールを一時停止します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
-. *保護グループ*、*インスタンス*、または*データベース*タブを選択します。
+. 「保護グループ」、「インスタンス」、または「データベース」タブを選択します。
 . 一時停止する保護グループ、インスタンス、またはデータベースを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *一時停止*。
 
@@ -134,7 +134,7 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 保護グループを削除すると、保護グループとそれに関連付けられているすべてのバックアップ スケジュールが削除されます。保護グループが不要になった場合は削除することができます。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -151,13 +151,13 @@ NOTE: 表示されるフィールドは、フェールオーバー クラスタ�
 
 ワークロードのバックアップが不要になった場合、またはNetApp Backup and Recoveryでの管理を停止する場合は、ワークロードから保護を削除できます。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、またはバックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
 . 保護の詳細を表示するには、ワークロードを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示*。
-. *保護グループ*、*インスタンス*、または*データベース*タブを選択します。
+. 「保護グループ」、「インスタンス」、または「データベース」タブを選択します。
 . 保護グループ、インスタンス、またはデータベースを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *保護を解除*。
 . [保護の削除] ダイアログ ボックスで、バックアップとメタデータを保持するか削除するかを選択します。

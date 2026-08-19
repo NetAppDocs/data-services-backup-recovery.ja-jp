@@ -14,11 +14,11 @@ summary: NetApp Backup and Recovery は、ボリューム、データベース�
 
 
 [role="lead"]
-NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ サービスです。
+この概要では、NetApp Backup and Recovery が ONTAP ワークロードをどのように保護するか、サポートするワークロードとバックアップ対象、およびライセンスとコストの仕組みについて説明します。
 
 ワークロードとは、システム内のリソースを論理的にグループ化したものであり、保護、ガバナンス、検出、および復旧のために単一の単位として管理されます。Backup and Recoveryにおいて、ワークロードとは保護対象となる単位のことです。その意味はデータソースによって異なります：Kubernetesの場合、ワークロードはアプリケーションであり、VM環境の場合は仮想マシンであり、データベース環境の場合はデータベースです。
 
-バックアップとリカバリのサポートは、すべての ONTAP システムにすでに組み込まれているため、追加のハードウェアやメディアゲートウェイは不要です。これにより、バックアップ作業がシンプルになり、コスト効率も向上します。NetApp Console を使用すると、複数のリソースマネージャや専門の担当者を必要とせずに、3-2-1 バックアップのすべてのバリエーションを含む、あらゆるバックアップ戦略の実装を簡素化できます。
+バックアップとリカバリのサポートは既にすべての ONTAP システムに組み込まれているため、追加のハードウェアやメディアゲートウェイは不要です。これにより、バックアップ作業が簡素化され、コスト効率も向上します。NetApp Console は、複数のリソースマネージャーや専門の担当者を必要とせずに、3-2-1 バックアップの全種類を含むあらゆるバックアップ戦略の実装を簡素化します。
 
 
 
@@ -244,7 +244,7 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 バックアップ コピーは、 NetApp Consoleがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスターまたはシステムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに次のように名前が付けられます。 `netapp-backup-clusteruuid` 。このオブジェクト ストアを削除しないように注意してください。
 
 * AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
-* Azureでは、 NetApp ConsoleはBLOBコンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトです。
+* Azureでは、NetApp Consoleは、Blobコンテナ用のストレージアカウントを持つ新規または既存のリソースグループを使用します。Consoleは https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトで使用されます。
 * StorageGRIDでは、コンソールはオブジェクト ストア バケットに既存のストレージ アカウントを使用します。
 * ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 
@@ -260,8 +260,8 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 
 
 
-[[terms-that-might-help-you-with-netapp-backup-and-recovery]]
-== NetApp Backup and Recoveryに役立つ用語
+[[terms-for-netapp-backup-and-recovery]]
+== NetApp Backup and Recovery の用語
 
 保護に関連するいくつかの用語を理解しておくと役立つかもしれません。
 
