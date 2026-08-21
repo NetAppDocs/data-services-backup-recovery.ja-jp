@@ -64,7 +64,7 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元する流�
 * *インベントリ ページから*: 特定のリソースの名前、場所、最終有効日がわかっている場合は、このオプションを使用してそのリソースを復元します。リストを参照してリソースを見つけます。
 
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、またはバックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 
 

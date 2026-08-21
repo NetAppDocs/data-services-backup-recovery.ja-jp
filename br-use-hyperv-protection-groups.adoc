@@ -31,7 +31,7 @@ summary: NetApp Backup and Recoveryで Hyper-V ワークロードの保護グル
 
 保護したいワークロードをまとめて保護グループにグループ化します。これらのワークロードをまとめてバックアップおよび復元するための保護グループを作成します。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .開始する前に
 * Hyper-V ワークロードの場合、スケジュールされたバックアップ時間は管理ホストのタイムゾーンで解釈されます。詳細については、link:br-use-policies-hyper-v-create.html["NetApp Backup and RecoveryでのHyper-Vバックアップ ポリシーの作成と管理"]を参照してください。

@@ -16,8 +16,9 @@ summary: NetApp Backup and Recovery を使用すると、ワークロード ホ�
 [role="lead"]
 NetApp Backup and Recovery の Web UI またはカスタムリソースファイルを使用して、Kubernetes アプリケーションを保護対象として追加します。標準の Kubernetes リソースを使用する名前空間ベースのアプリケーション、または1つ以上の仮想マシンを使用する VM ベースのアプリケーションを追加できます。
 
-.必要なNetApp Consoleロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp Console ロール*
+
+Backup and Recovery スーパー管理者、または Backup and Recovery バックアップ管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 
 

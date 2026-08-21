@@ -28,7 +28,7 @@ summary: NetApp のバックアップとリカバリを使用して Hyper-V ワ�
 
 システムに変更を加える前に、オンデマンドバックアップを使用してデータを保護してください。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。

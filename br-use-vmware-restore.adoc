@@ -59,7 +59,7 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元する流�
 
 VMwareワークロードを復元するには、「復元」オプションを使用します。スナップショットは、名前で検索することも、フィルターを使用して検索することもできます。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、[復元] を選択します。

@@ -16,7 +16,7 @@ summary: ワークロードの健全性を監視することで、ワークロ�
 [role="lead"]
 ワークロードの状態を監視して、保護上の問題を特定し、アラートに対応します。バックアップと復元のステータスを表示し、NetApp Backup and Recovery ダッシュボードでシステム、保護、ジョブ、復元の概要を確認します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリーのスーパー管理者、バックアップとリカバリーのバックアップ管理者、バックアップとリカバリーのリストア管理者、バックアップとリカバリーのクローン管理者、またはバックアップとリカバリーのビューアーロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp Console ロール* Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、Backup and Recovery リストア管理者、Backup and Recovery クローン管理者、または Backup and Recovery バックアップビューアロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護している場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。

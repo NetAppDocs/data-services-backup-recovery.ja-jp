@@ -25,8 +25,6 @@ summary: NetApp Backup and Recoveryを構成するには、いくつかの手順
 * <<リソース変換テンプレートを作成する>>リソースを復元する際に、リソースを変更します。
 
 
-*必須 NetApp コンソールロール* バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
-
 
 
 [[add-credentials-for-host-resources]]
@@ -44,6 +42,8 @@ summary: NetApp Backup and Recoveryを構成するには、いくつかの手順
 * Oracle データベースの資格情報
 * Linuxホストの資格情報
 
+
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
@@ -122,6 +122,8 @@ TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQ
 
 作成した資格情報のパスワードは後で編集できます。
 
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . 下矢印を選択して、*資格情報*セクションを展開します。
@@ -139,6 +141,8 @@ TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQ
 == VMware vCenter 設定を維持する
 
 バックアップ対象のワークロードを検出するために、VMware vCenter Server の認証情報を入力してください。認証情報がない場合は、VMware vCenter Server のワークロードにアクセスして管理するための権限を持つ認証情報を作成してください。
+
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
@@ -167,6 +171,8 @@ TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQ
 * SnapCenter Server アプリケーションとホスト リソースをインポートする
 * 選択したSnapCenterホストリソースを管理する
 
+
+*必須 NetApp Console ロール* Backup and Recovery スーパー管理者または Backup and Recovery バックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 
@@ -249,6 +255,8 @@ SnapCenterからのインポート ページには、以前のすべてのイン
 
 Apache CloudStack 管理プラットフォームを使用してKVMリソースを管理する場合は、NetApp Backup and Recoveryと統合することで、管理対象のKVMホストとVMを検出して保護することができます。
 
+*必須 NetApp Console ロール* Backup and Recovery スーパー管理者または Backup and Recovery バックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
 . 下矢印を選択して、*管理プラットフォーム*セクションを展開します。
@@ -271,6 +279,8 @@ Apache CloudStack 管理プラットフォームを使用してKVMリソース�
 == Windowsホストのスナップショットのログディレクトリを構成する
 
 Windowsホスト用のポリシーを作成する前に、バックアップ処理中に生成されたログを保存するために、Snapshotのログディレクトリを設定してください。
+
+*必須 NetApp コンソールロール* Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、または Backup and Recovery リストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -311,6 +321,8 @@ NOTE: ここで作成するテンプレートは、Kubernetes ワークロード
 == リソース変換テンプレートを作成する
 
 リソース変換テンプレートを作成して、復元操作中にリソースに適用する共通の変換処理を保存します。
+
+*必須 NetApp コンソールロール* Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、または Backup and Recovery リストア管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。

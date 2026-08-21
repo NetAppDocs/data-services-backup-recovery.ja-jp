@@ -23,7 +23,8 @@ NetApp Backup and Recoveryの保護ポリシーで保護されているアプリ
 
 Backup and Recoveryで保護している各アプリケーションについて、特定の復元ポイント用にバックアップされたリソースを表示できます。
 
-.必要なNetApp Consoleロール
+*必須 NetApp Console ロール*
+
 バックアップおよびリカバリビューア。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
@@ -46,7 +47,8 @@ Backup and Recoveryで保護している各アプリケーションについて�
 .開始する前に
 Trident Protect を使用してバックアップされたアプリケーションを復元する場合は、Trident Protect がソース クラスタとデスティネーション クラスタの両方にインストールされていることを確認してください。
 
-.必要なNetApp Consoleロール
+*必須 NetApp Console ロール*
+
 Backup and Recovery スーパー管理者または Backup and Recovery リストア管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順

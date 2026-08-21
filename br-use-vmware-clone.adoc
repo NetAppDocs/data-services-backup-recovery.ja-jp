@@ -16,7 +16,7 @@ summary: NetApp Backup and Recoveryを使用してVMware仮想マシンのワー
 [role="lead"]
 NetApp Backup and Recovery を使用して、プライマリまたはセカンダリのスナップショットから VMware 仮想マシンの書き込み可能なクローンを作成します。テスト、統合、トレーニングのために、本番データに影響を与えることなく、クローンされた仮想マシンを作成および管理できます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryスーパー管理者、またはBackup and Recoveryクローン管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .開始する前に
 スナップショットをクローンする仮想マシンが保護グループに追加され、バックアップされていることを確認してください。

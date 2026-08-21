@@ -16,8 +16,9 @@ summary: NetApp Backup and Recovery の Web UI を使用して、Kubernetes ア�
 [role="lead"]
 ウェブUIを使用して、Kubernetesアプリケーションのオンデマンドバックアップを実行します。
 
-.必要なNetApp Consoleロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp Console ロール*
+
+Backup and Recovery スーパー管理者、または Backup and Recovery バックアップ管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 
 

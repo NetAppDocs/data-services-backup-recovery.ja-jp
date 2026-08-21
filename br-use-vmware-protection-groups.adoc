@@ -51,7 +51,7 @@ vSphere タグを使用したタグベースの保護により、NetApp Backup a
 
 バックアップと復元をまとめて行いたいリソースを整理するために、保護グループを作成します。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .開始する前に
 * ご使用の環境で、サポートされているバージョンのVMware vSphereが使用されていることを確認してください。

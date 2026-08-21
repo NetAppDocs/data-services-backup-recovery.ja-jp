@@ -16,9 +16,6 @@ summary: NetApp Backup and Recovery を使用すると、Kubernetes クラスタ
 [role="lead"]
 Kubernetesクラスターを検出して管理し、ホストされているリソースを保護します。
 
-.必要なNetApp Consoleロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
-
 
 NOTE: Kubernetesクラスターを発見するには、以下を参照してください。link:br-start-discover.html["Kubernetes ワークロードを発見する"] 。
 
@@ -28,6 +25,10 @@ NOTE: Kubernetesクラスターを発見するには、以下を参照してく�
 == Kubernetes クラスターの情報を編集する
 
 名前を変更する必要がある場合は、クラスターを編集できます。
+
+*必須 NetApp Console ロール*
+
+Backup and Recovery スーパー管理者、または Backup and Recovery バックアップ管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
@@ -44,6 +45,10 @@ NOTE: Kubernetesクラスターを発見するには、以下を参照してく�
 
 Kubernetes クラスターの保護を停止するには、保護を無効にして関連付けられているアプリケーションを削除し、 NetApp Backup and Recoveryからクラスターを削除します。  NetApp Backup and Recovery、クラスタまたはそのリソースは削除されません。NetAppNetApp Consoleインベントリからクラスタが削除されるだけです。
 
+*必須 NetApp Console ロール*
+
+バックアップとリカバリのスーパー管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
+
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
 . クラスターの一覧から、削除するクラスターを選択し、関連する「アクション」メニューを選択します。
@@ -57,6 +62,10 @@ Kubernetes クラスターの保護を停止するには、保護を無効にし
 == Trident Protectのアップグレード
 
 Trident Protect 26.05以降を実行しているKubernetesクラスタの場合、NetApp Backup and RecoveryからTrident Protectを直接アップグレードできます。アップグレードオプションは、新しいバージョンが利用可能な場合にのみ表示されます。
+
+*必須 NetApp Console ロール*
+
+バックアップとリカバリのスーパー管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
@@ -76,6 +85,10 @@ Trident Protect 26.05以降を実行しているKubernetesクラスタの場合�
 
 Console エージェントの IP アドレスが変更された場合（たとえば、再起動後など）、Kubernetes クラスターはエージェントとの接続を失うため、再接続する必要があります。
 
+*必須 NetApp Console ロール*
+
+バックアップとリカバリのスーパー管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
+
 .手順
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
 . 切断された Kubernetes クラスターを選択し、アクションアイコン image:../media/icon-action.png["アクションオプション"] > *クラスターの変更* > *クラスターの再接続* を選択します。
@@ -92,6 +105,10 @@ Console エージェントの IP アドレスが変更された場合（たと�
 == Kubernetesクラスターを新しいコンソールエージェントに移行する
 
 コンソールエージェントが削除されたり、利用できなくなった場合は、アプリケーション保護の中断を避けるため、そのエージェントを使用しているすべてのクラスターを新しいエージェントに移行してください。
+
+*必須 NetApp Console ロール*
+
+バックアップとリカバリのスーパー管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .開始する前に
 * https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["新しいコンソールエージェントをデプロイします。"^]

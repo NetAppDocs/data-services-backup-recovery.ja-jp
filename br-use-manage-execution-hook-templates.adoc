@@ -25,8 +25,9 @@ NetApp Backup and Recoveryは、データ保護中にKubeVirtなどのアプリ�
 
 
 ====
-.必要なNetApp Consoleロール
-組織管理者またはSnapCenter管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須 NetApp Console ロール*
+
+Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、または Backup and Recovery リストア管理者。link:reference-roles.html["NetApp Backup and Recoveryのアクセス ロールについて学習します"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 
 

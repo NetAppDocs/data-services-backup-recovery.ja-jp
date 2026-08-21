@@ -23,7 +23,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 
 提供されているデフォルトのバックアップポリシーの詳細については、以下を参照してください。link:prev-ontap-protect-journey.html["保護の旅を計画する"] 。
 
-NetApp Backup and Recovery は、スナップショット、レプリケーション、オブジェクト ストレージへのバックアップという 3 種類のONTAPデータのバックアップを提供します。ポリシーは、使用するアーキテクチャとバックアップの種類に応じて異なる場所に存在します。
+NetApp Backup and Recoveryは、ONTAPデータの3種類のバックアップを提供します：スナップショット、レプリケーション、およびオブジェクトストレージへのバックアップ。これらのポリシーは、使用するアーキテクチャとバックアップの種類に応じて、異なる場所に保存されます。
 
 [cols="25,25,25,25"]
 |===
@@ -85,7 +85,7 @@ TIP: System Manager を使用する場合は、レプリケーション ポリ�
 +
 ポリシー管理ページが表示されます。
 
-. ポリシー管理ページで、*ポリシーの作成* > *Snapshotポリシーの作成*を選択します。
+. ポリシー管理ページで、*ポリシーの作成* > *スナップショットポリシーの作成*を選択します。
 . ポリシー名を指定します。
 . スナップショット スケジュールを選択します。最大 5 つのラベルを設定できます。または、スケジュールを作成します。
 . スケジュールを作成する場合:
@@ -206,4 +206,4 @@ NOTE: プロセスはレプリケーション ポリシーとバックアップ 
 
 System Manager またはONTAP CLI を使用してポリシーを作成する手順については、以下を参照してください。
 
-https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["System Managerを使用してスナップショットポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["ONTAP CLIを使用してスナップショットポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["System Managerを使用してレプリケーションポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/data-protection/create-custom-replication-policy-concept.html["ONTAP CLIを使用してレプリケーションポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/task_dp_back_up_to_cloud.html#create-a-custom-cloud-backup-policy["System Manager を使用してオブジェクト ストレージ ポリシーへのバックアップを作成する"^] https://docs.netapp.com/us-en/ontap-cli-9131/snapmirror-policy-create.html#description["ONTAP CLIを使用してオブジェクトストレージポリシーへのバックアップを作成する"^]
+https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["System Manager を使用してスナップショットポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["ONTAP CLIを使用してスナップショットポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["System Managerを使用してレプリケーションポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/data-protection/create-custom-replication-policy-concept.html["ONTAP CLIを使用してレプリケーションポリシーを作成する"^] https://docs.netapp.com/us-en/ontap/task_dp_back_up_to_cloud.html#create-a-custom-cloud-backup-policy["System Manager を使用してオブジェクト ストレージ ポリシーへのバックアップを作成する"^] https://docs.netapp.com/us-en/ontap-cli-9131/snapmirror-policy-create.html#description["ONTAP CLIを使用してオブジェクトストレージポリシーへのバックアップを作成する"^]

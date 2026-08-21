@@ -53,7 +53,7 @@ SnapCenterからリソースをインポートする場合、 SnapCenterで使�
 
 ローカル スナップショット、セカンダリ ストレージへのレプリケーション、オブジェクト ストレージへのバックアップを管理するポリシーを作成できます。3-2-1 戦略の一部として、プライマリ ストレージ システム上のインスタンス、データベース、アプリケーション、または VM のスナップショットを作成します。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須 NetApp Console ロール* Backup and Recovery スーパー管理者または Backup and Recovery バックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .開始する前に
 セカンダリ ストレージへのレプリケーションを計画していて、ローカル スナップショットまたはリモート ONTAP セカンダリ ストレージのスナップショットでスナップショット ロックを使用する場合は、まずクラスタ レベルで ONTAP コンプライアンス クロックを初期化する必要があります。これは、ポリシーでスナップショット ロックを有効にするための要件です。
@@ -150,8 +150,9 @@ TIP: スナップショットの取得頻度を1時間に設定した場合、�
 
 SnapCenter からリソースをインポートした場合、SnapCenter で使用されているポリシーと NetApp Backup and Recovery で使用されているポリシーとの間に相違点が生じる場合があります。link:reference-policy-differences-snapcenter.html["SnapCenterとNetApp Backup and Recoveryのポリシーの違い"] を参照してください。
 
-.必要なNetApp Consoleロール
-バックアップとリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護している場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp Console ロール*
+
+Backup and Recovery スーパー管理者、または Backup and Recovery バックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Console で、*Protection* > *Backup and Recovery* に移動します。

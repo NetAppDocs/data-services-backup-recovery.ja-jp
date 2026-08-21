@@ -26,7 +26,8 @@ NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します�
 NetApp Backup and Recoveryを使用して、Oracleデータベースワークロードに関連する次のタスクを実行できます：
 
 * link:br-start-discover-oracle.html["Oracle Databaseワークロードを検出"]
-* link:br-use-oracle-protection-groups.html["Oracle Database ワークロードの保護グループの作成と管理"]
+* link:br-use-oracle-protection-groups.html["Oracle Databaseワークロードの保護グループを管理する"]
 * link:br-use-oracle-backup.html["Oracle Databaseワークロードのバックアップ"]
+* link:br-use-oracle-clone.html["Oracle Database ワークロードのクローン作成"]
 * link:br-use-oracle-restore.html["Oracle Database ワークロードのリストア"]
 

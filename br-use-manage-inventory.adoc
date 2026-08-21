@@ -49,7 +49,7 @@ Microsoft SQL Server のホスト、インスタンス、データベースを�
 
 ホスト情報を管理して、適切なホストが保護されるようにします。必要に応じてホスト情報を表示、編集、削除できます。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者、バックアップとリカバリのリストア管理者、またはバックアップとリカバリのクローン管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須 NetApp Console ロール* Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、Backup and Recovery リストア管理者、または Backup and Recovery クローン管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 * ログディレクトリを設定します。詳細については、link:br-start-setup.html["NetApp Backup and Recovery設定を構成する"]を参照してください。
 * スケジュールを中断
@@ -69,7 +69,7 @@ TIP: ホストを管理するには、「ホスト」列で「管理対象外」
 
 NetApp Backup and Recoveryでホストを管理すると、 SnapCenterそれらのホスト上のリソースは管理されなくなります。
 
-*必須 NetApp コンソールロール* ストレージビューアー、またはバックアップとリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須NetApp Consoleロール* Backup and Recoveryスーパー管理者またはBackup and Recoveryバックアップ管理者。Cloud Volumes ONTAPクラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . メニューから*インベントリ*を選択します。
@@ -145,7 +145,7 @@ vCenter サーバー情報、ホスト登録認証情報、および詳細設定
 * 今すぐバックアップ
 
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 
@@ -255,7 +255,7 @@ vCenter サーバー情報、ホスト登録認証情報、および詳細設定
 
 ポリシーを変更したり、新しいポリシーを作成したり、スケジュールを設定したり、保持設定を設定したりできます。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -275,7 +275,7 @@ vCenter サーバー情報、ホスト登録認証情報、および詳細設定
 
 データの復旧が必要な場合は、データベースを復元してください。
 
-*必須 NetApp コンソールロール* ストレージビューアー、バックアップとリカバリのスーパー管理者、バックアップとリカバリのバックアップ管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -295,7 +295,7 @@ vCenter サーバー情報、ホスト登録認証情報、および詳細設定
 
 ポリシーを変更したり、新しいポリシーを作成したり、スケジュールを設定したり、保持設定を設定したりできます。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
@@ -315,7 +315,7 @@ vCenter サーバー情報、ホスト登録認証情報、および詳細設定
 
 今すぐ Microsoft SQL Server インスタンスとデータベースをバックアップして、データを保護できます。
 
-*必要なNetApp Consoleロール* ストレージ ビューアー、バックアップおよびリカバリ スーパー管理者、バックアップおよびリカバリ バックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。

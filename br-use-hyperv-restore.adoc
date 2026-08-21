@@ -57,7 +57,7 @@ TIP: バックアップ ファイルの内容にアクセスするには、ク�
 
 「復元」メニューを使用して、Hyper-Vワークロードを復元します。スナップショットは、名前で検索することも、フィルターを使用して検索することもできます。
 
-*必要なコンソール ロール* バックアップおよびリカバリのスーパー管理者またはバックアップおよびリカバリの復元管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+*必須NetApp Console ロール* バックアップおよびリカバリのスーパー管理者、またはバックアップおよびリカバリのリストア管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順
 . NetApp Backup and Recoveryメニューから、[復元] を選択します。
