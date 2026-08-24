@@ -2846,7 +2846,6 @@
   <block id="5d8a63e586bb4dfbba4ae7d992161e1c" category="admonition">システムのONTAPバージョンが 9.13.1 未満の場合、バックアップ ファイルが DataLock &amp; Ransomware で構成されていると、フォルダーまたはファイルを復元できません。この場合、バックアップ ファイルからボリューム全体を復元し、必要なファイルにアクセスできます。</block>
   <block id="6570e12596b3149578b487431c923c26" category="section-title">参照と復元を使用してボリュームを復元する</block>
   <block id="0dd2b1cb1df813100b87a26410a861c2" category="paragraph">バックアップ ファイルからボリュームを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいボリュームを作成します。オブジェクト ストレージからのバックアップを使用すると、データを元のシステムのボリューム、ソース システムと同じクラウド アカウントにある別のシステム、またはオンプレミスのONTAPシステムに復元できます。</block>
-  <block id="c1b52fe790511b9298f4b5f6a53599f4" category="paragraph">ONTAP 9.13.0 以降を使用しているCloud Volumes ONTAPシステム、またはONTAP 9.14.1 を実行しているオンプレミスのONTAPシステムにクラウド バックアップを復元する場合は、_クイック リストア_ 操作を実行するオプションがあります。クイック リストアは、ボリュームへのアクセスをできるだけ早く提供する必要がある災害復旧の状況に最適です。クイック リストアでは、バックアップ ファイル全体を復元するのではなく、バックアップ ファイルからボリュームにメタデータを復元します。クイック リストアは、パフォーマンスや待ち時間が重要となるアプリケーションには推奨されません。また、アーカイブ ストレージ内のバックアップではサポートされません。</block>
   <block id="8e602d0d71734b6cf234a5890bf1241a" category="paragraph">複製されたボリュームから復元する場合、ボリュームを元のシステム、 Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムに復元できます。</block>
   <block id="9336df9a96bed9adb0f67170b2dad2b3" category="inline-image-macro">参照と復元を使用してボリューム復元操作を実行するフローを示す図。</block>
   <block id="38aad7ac8bd6898064d142472e3e7624" category="paragraph"><block ref="7d27a3070fb1dce60f7cb72cb7d60b55" category="inline-image-macro-rx" type="image"></block></block>
@@ -2865,7 +2864,6 @@
   <block id="f88c0e05820f08ba199e29b639f011b8" category="list-text">[次へ] を選択して、通常の復元プロセスを実行するか、クイック復元プロセスを実行するかを選択します。</block>
   <block id="2618b905cdc9e04055a7d6a5328eebfb" category="list-text">*通常の復元*: 高いパフォーマンスが必要なボリュームでは通常の復元を使用します。復元プロセスが完了するまでボリュームは使用できません。</block>
   <block id="64063115b259542737cce343064e3233" category="list-text">*クイック復元*: 復元されたボリュームとデータはすぐに利用できるようになります。クイック リストア プロセス中はデータへのアクセスが通常よりも遅くなる可能性があるため、高パフォーマンスが必要なボリュームではこれを使用しないでください。</block>
-  <block id="6eee547bc01439c26e38a61dd8989c57" category="list-text">*復元*を選択すると、復元ダッシュボードに戻り、復元操作の進行状況を確認できます。</block>
   <block id="4276310eb89ef8fcf7b98a74fece59a4" category="paragraph">NetApp Backup and Recovery は、選択したバックアップに基づいて新しいボリュームを作成します。</block>
   <block id="db4e4a49003b7dd44bc5766a32164bcb" category="paragraph">アーカイブ ストレージにあるバックアップ ファイルからボリュームを復元する場合、アーカイブ層と復元の優先度に応じて数分から数時間かかる場合があることに注意してください。復元の進行状況を確認するには、[*ジョブ監視*] タブを選択します。</block>
   <block id="310dbba96c4cb79d0f5f822051257fc8" category="section-title">参照と復元を使用してフォルダとファイルを復元する</block>
@@ -5441,7 +5439,6 @@
   <block id="9e7b2b1d8b0a463be272aa82baedba1c" category="list-text"><block ref="db0f6f37ebeb6ea09489124345af2a45" prefix="" category="inline-code"></block>（オプション）：API グループ（例：<block ref="9a6dd283c3de653fbca500f9721f634f" prefix=" " category="inline-code"></block>、<block ref="1349047320cfd1ac557e762506024413" prefix=" " category="inline-code"></block>）—コアリソースの場合は省略</block>
   <block id="f7281027f1afedf6f7157acbff7d7570" category="paragraph"><block ref="9dde360102c103867bd2f45872f1129c" prefix=" " category="inline-code"></block>操作を使用して、指定されたパスにあるリソース内の既存の値を置き換えます。JSON Pointerのパスはすでに存在している必要があります。次の例では、Route オブジェクトのホスト名を変更します。</block>
   <block id="e2c49b50023b8581ad0e0c1590477c2c" category="paragraph">スナップショット、レプリケーション、バックアップ、およびリストアのジョブを監視します。メール通知を設定し、Console Timeline を使用してアクティビティを調査します。</block>
-  <block id="5aab39a051334c1f3071545a180c86a8" category="paragraph">NetApp Backup and Recovery は、ジョブ情報を15日間保持した後、削除してジョブモニターからも削除します。</block>
   <block id="dfb648ab8bdcaffa1f10f59b16fbdbe6" category="list-text">追加の列（System、Storage VM、User Name、Workload、Policy Name、Snapshot Label）を表示するには、プラス記号を選択します。</block>
   <block id="f961d5780137e52b38d60d0076cfad03" category="paragraph">ジョブ監視ページでは、ポリシー、スナップショットラベル、操作の種類（保護、復元、保持、その他）、保護の種類（ローカルスナップショット、レプリケーション、クラウドへのバックアップ）など、複数のフィルターを使用して操作をフィルタリングできます。</block>
   <block id="5fe43d3e42037473a1d9dcda6cb5135c" category="paragraph">このパネルを使用して、任意のリソースをフリーテキスト検索できます。たとえば、「volume 1」または「application 3」と入力してください。ドロップダウンメニューの項目に基づいて、ジョブリストを絞り込むこともできます。</block>
@@ -5957,4 +5954,8 @@
   <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDBまたはPDBテーブルスペース*：リカバリ後、プラガブルデータベースを READ-WRITE モードで開きます。</block>
   <block id="e05364f3d78ebbf253882396f17dda00" category="list-text">*非CDBテーブルスペース*：リカバリ後にテーブルスペースをオンラインにします。</block>
   <block id="ee1ada4dd46ef0156c7c521a2fe33302" category="list-text">「Prescripts and postscripts」セクションで、以下の操作を行ってください。</block>
+  <block id="a85c5f2691ea6f5dc194ee9983c85c49" category="paragraph">NetApp Backup and Recovery は、ジョブ情報を90日間保持した後、削除してジョブモニターからも削除します。</block>
+  <block id="02164fcf87ac25e7b1e8147e2943b53e" category="paragraph">クラウドバックアップを ONTAP 9.13.0 以降を使用する Cloud Volumes ONTAP システム、または ONTAP 9.14.1 を実行しているオンプレミス ONTAP システムに復元する場合、_クイックリストア_ 操作を実行するオプションを使用できます。クイックリストアは、できるだけ早くボリュームへのアクセスを提供する必要があるディザスタリカバリの状況に最適です。クイックリストアでは、バックアップファイル全体を復元するのではなく、バックアップファイルのメタデータをボリュームに復元します。クイックリストアは、パフォーマンスやレイテンシの影響を受けやすいアプリケーションには推奨されず、アーカイブストレージのバックアップではサポートされていません。</block>
+  <block id="a73fb6eabf726bf5ee3f07c45ffe0012" category="list-text">必要に応じて、「既存のジョブキューよりもこの復元を優先する」を有効にすると、この復元操作の優先度が高くなります。有効にすると、この復元処理を進めるために、他の実行中のジョブが一時停止または遅延される場合があります。</block>
+  <block id="5f02d8d1cae515b7bc981f8e3a14acc4" category="paragraph">復元ダッシュボードに戻り、復元操作の進行状況を確認します。</block>
 </blocks>

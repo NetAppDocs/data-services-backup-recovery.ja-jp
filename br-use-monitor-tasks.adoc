@@ -16,7 +16,7 @@ summary: NetApp Backup and Recoveryを使用すると、ローカル スナッ�
 [role="lead"]
 スナップショット、レプリケーション、バックアップ、およびリストアのジョブを監視します。メール通知を設定し、Console Timeline を使用してアクティビティを調査します。
 
-NetApp Backup and Recovery は、ジョブ情報を15日間保持した後、削除してジョブモニターからも削除します。
+NetApp Backup and Recovery は、ジョブ情報を90日間保持した後、削除してジョブモニターからも削除します。
 
 *必須 NetApp Console ロール* Backup and Recovery スーパー管理者、Backup and Recovery バックアップ管理者、Backup and Recovery リストア管理者、Backup and Recovery クローン管理者、または Backup and Recovery ビューアロール。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
