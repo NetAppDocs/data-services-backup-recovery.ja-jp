@@ -1151,18 +1151,13 @@
   <block id="5a0e55e0c971663f11ffa98ecb642d75" category="list-text">復元オプションを選択します:</block>
   <block id="2a7de0c7b558a918c244ae825c46a356" category="list-text">*特定の時点に復元*を選択します。</block>
   <block id="ee66a549a7689aad7a05e70a3a1e9af0" category="list-text">ドロップダウンから日付を選択し、「*検索*」を選択します。</block>
-  <block id="be8647181bb6b528f220d7a2ea185a2f" category="paragraph">指定された日付に一致するスナップショットのリストが表示されます。</block>
   <block id="e7511ff89b416bba8be19b1b6fa19929" category="open-title">特定のシステム変更番号 (SCN) に復元する</block>
   <block id="29e5772da97d56f52500d5bb7c795955" category="list-text">*特定のシステム変更番号 (SCN) に復元*を選択します。</block>
   <block id="1d38433e132d1c9ace532efa4e1ca346" category="list-text">復元ポイントとして使用する SCN を入力し、[検索] を選択します。</block>
-  <block id="9682c2aa6cb6b7b9f0e407d7ccdca848" category="paragraph">指定された SCN に一致するスナップショットのリストが表示されます。</block>
   <block id="f91416b4cce325c317c3bc6d09f4ecaf" category="open-title">最新のバックアップ（最後の正常な状態）に復元する</block>
   <block id="d207ef420c0a9c86c4c49f855cf6ddb1" category="list-text">*最新のバックアップに復元*を選択します。</block>
-  <block id="790d9ee95fb0b27d88ff783342f56ffb" category="paragraph">最新の完全バックアップとログバックアップが表示されます。</block>
   <block id="e778183067d12c261c4b71b0ccc4eaad" category="open-title">リカバリなしでスナップショットから復元</block>
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">*リカバリなしでスナップショットから復元*を選択します。</block>
-  <block id="002b8c566162a2cd02c4e355805ac3f6" category="paragraph">一致するスナップショットが表示されます。</block>
-  <block id="98b2af096c36f02920b21c788a2a0dc6" category="list-text">*宛先設定*:</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*Postscript*: 必要に応じて、このオプションを有効にし、復元操作後に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
   <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">これらのオプションと構成セクションの一部は、すべてのワークロードで使用できるわけではありません。</block>
@@ -5906,21 +5901,13 @@
   <block id="2a89654f2e87daae0211a674ae5febfc" category="inline-link-macro">Oracle Databaseワークロードの保護グループを管理する</block>
   <block id="0a6313cec6301ae98c94e73ba522078e" category="list-text"><block ref="0a6313cec6301ae98c94e73ba522078e" category="inline-link-macro-rx"></block></block>
   <block id="ef28f96440f72809a7152ffc66dd809c" category="list-text"><block ref="ef28f96440f72809a7152ffc66dd809c" category="inline-link-macro-rx"></block></block>
-  <block id="5527c64bc2c020672e46509a73b4e2a3" category="paragraph">PDBまたはPDBテーブルスペースを特定のポイントインタイムまたはSCNにリストアする場合：</block>
   <block id="51c644b83084bd09a324c54def440e42" category="list-text">PDBを1つだけ選択してください。ポイントインタイムリカバリは、複数のPDBのリストアとは互換性がありません。</block>
-  <block id="d07bbaca1491351524d765cd27b2e463" category="list-text">PDB$SEEDはポイントインタイムリカバリに選択できません。</block>
-  <block id="271fc080f7f715ac8f2462be5414bfba" category="list-text">制御ファイルのリストアは、PDBまたはテーブルスペースのポイントインタイムリカバリと組み合わせることはできません。</block>
   <block id="1de84049759abb6734a6922f26da254f" category="list-text">データバックアップと必要なログバックアップがカタログ化されていることを確認してください。</block>
   <block id="4422040316e7063d2b6eeee89d2cb610" category="list-text">復元する項目を選択してください：</block>
   <block id="edaeb35620b1bfb1682cb9dc8b30993d" category="list-text">*[すべてのデータファイル]* を選択すると、データベース全体またはコンテナデータベース（CDB）が復元されます。</block>
   <block id="6ef18b5f7ddc8dccec3f8cfc05180417" category="list-text">コンテナ内の他の PDB に影響を与えることなく、CDB から 1 つ以上の PDB を復元するには、*プラガブル データベース （PDB）* を選択します。次に、リストから PDB を選択します。</block>
   <block id="c9bba403aa1a3b775c98bb8fe83a6a86" category="list-text">特定の PDB テーブルスペースを復元するには、*「プラガブル データベース （PDB） テーブルスペース」*（CDB 以外のデータベースの場合は *「テーブルスペース」* と表示されます）を選択します。次に、PDB とテーブルスペースを選択します。</block>
-  <block id="91cf6e173caf9f208d009579fae3cfba" category="list-text">必要に応じて、*制御ファイル*オプションを有効にすると、データベースの制御ファイルも復元されます。このオプションは、PDBまたはPDBテーブルスペースのポイントインタイムまたはSCNリカバリには使用できません。</block>
   <block id="4b49aa44ab53622375dd4e4de6f229e3" category="list-text">必要に応じて、「復元およびリカバリに必要な場合にデータベースの状態を変更する」オプションを有効にすると、Backup and Recoveryがリカバリの種類に応じてデータベースの状態を管理できるようになります。</block>
-  <block id="4fb05c33c01facc6c181bfeee40ec5ec" category="list-text">オプションとして、「強制インプレース復元」オプションを有効にすると、SAN/ASMデータベースに対して、外部ファイルの検証チェックをスキップして、より高速な復元方法を使用できます。データベースとASM ディスク グループは、バックアップ作成時点の状態に復元されます。</block>
-  <block id="4efc67368dfd729f9c295744e484fac3" category="list-text">PDBまたはPDBテーブルスペースを特定のポイントインタイムまたはSCNに復元する場合は、外部アーカイブログファイルの場所を指定してください。RMANがリカバリを実行するための補助インスタンスを作成する場所を入力してください。「/」で始まるファイルシステムパス、または「+」で始まるASM ディスク グループを入力してください。テキスト入力フィールドの横にある「プラス」ボタンと「マイナス」ボタンを使用して、場所を追加または削除します。</block>
-  <block id="d76fe5c3d527bffb082aae2a4d6b5558" category="list-text">オプションとして、*リカバリ後にデータベースまたはコンテナデータベースをREAD-WRITEモードで開く*を有効にすると、復元後にデータベースをREAD-WRITEモードで開くことができます。これにより、復元されたテーブルスペースがオンラインになります。</block>
-  <block id="9470d5c114013f8b3d728de1df5dd487" category="list-text">*前書きと後書き*：</block>
   <block id="17902e09130187fca130b259322f6340" category="list-text">*Prescript*：必要に応じて、このオプションを有効にして、リストア操作の前に実行するスクリプトの完全パスと、そのスクリプトが受け取る引数を入力します。</block>
   <block id="a4aa2f0da5fe920e49b4efa7582a1089" category="list-text">スクリプトのタイムアウト値を選択してください。スクリプトがこの時間内に実行されなかった場合でも、復元処理は続行されます。</block>
   <block id="808c0184b1d838fe3f6240a02adeedf3" category="paragraph">Backup and Recovery スーパー管理者またはBackup and Recovery バックアップ管理者。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
@@ -5946,4 +5933,28 @@
   <block id="96700d751785d80f017bf85fc1a4a76c" category="paragraph">各バックアップ ポリシーには、バックアップファイルに適用できる「ラベルと保持期間」のセクションが用意されています。ボリュームに適用されるスナップショット ポリシーは、NetApp Backup and Recoveryが認識するポリシーのいずれかである必要があります。そうでない場合、バックアップファイルは作成されません。</block>
   <block id="6f8cf279072f687ab049a6dc930dfa1d" category="admonition">ボリュームに適用されるスナップショットポリシーには、レプリケーションポリシーおよびオブジェクトへのバックアップポリシーで使用しているラベルのいずれかが含まれている必要があります。一致するラベルが見つからない場合、バックアップファイルは作成されません。例えば、「weekly」のレプリケートされたボリュームとバックアップファイルを作成する場合は、「weekly」スナップショットを作成するスナップショットポリシーを使用する必要があります。</block>
   <block id="3853002b75aefc21d388f510cae8f516" category="paragraph">*Location* 列には、バックアップファイル（スナップショット）が *Local*（ソースシステムのスナップショット）、*Secondary*（セカンダリ ONTAP システム上のレプリケートされたボリューム）、または *Object Storage*（オブジェクトストレージ内のバックアップファイル）のいずれであるかが表示されます。復元するファイルを選択してください。</block>
+  <block id="bf550c792f32f60cca4d833c734e3139" category="paragraph">PDBまたはテーブルスペースを特定のポイントインタイムまたはSCNにリストアする場合：</block>
+  <block id="6d26fc4748876aad896b3483365ea28f" category="list-text"><block ref="d77f3c9db249e472a92ac4b41ecc4805" prefix="" category="inline-code"></block>はポイントインタイムリカバリに選択できません。</block>
+  <block id="bba24b3818e297fabc67f6f7560b0988" category="list-text">コントロールファイルのリストアは、PDBまたはPDBテーブルスペースのポイントインタイムリカバリと組み合わせることはできません。</block>
+  <block id="08b60260a4bc5ba792144d142c950168" category="list-text"><block ref="fa177138f94a7ea01f549b1aa7893d03" prefix=" " category="inline-code"></block>、<block ref="2000a37455e46fd15ee265c2382b9741" prefix=" " category="inline-code"></block>、および<block ref="269940bcad6fddf5c68d3e67f767c3d1" prefix=" " category="inline-code"></block>テーブルスペースは選択できません。</block>
+  <block id="9919b7cad46288ca29f8fb296dd13536" category="list-text">データバックアップと必要なログバックアップがカタログ化されていることを確認してください。</block>
+  <block id="0b375c92f006ebc34ffb21da222ac752" category="paragraph">指定された日時から最も近い時点のスナップショットが表示されます。</block>
+  <block id="cdb77aa4c72bd58fc3f38eb99937d3d7" category="list-text">必要に応じて、*ログバックアップを表示*を選択すると、関連するログバックアップが表示されます。</block>
+  <block id="21df2c5f3ea31de3417da5d6b7a5af6f" category="list-text">ログバックアップがマウントされていることを確認してください。</block>
+  <block id="fe30a881b5d0622f2e579194115dc323" category="list-text">スナップショットが複数の場所に保存されている場合は、使用するソースの場所を選択し、場所の詳細を追加または確認してください。</block>
+  <block id="1a0861850bbff5a4629682768903a6a8" category="paragraph">指定されたSCNに最も近いスナップショットが表示されます。</block>
+  <block id="190cbdc2fe368e8cdb928c64072a855e" category="paragraph">最新のスナップショットが表示されます。リストア操作では、利用可能なすべてのログバックアップを使用して、最後に正常だった状態をリカバリします。</block>
+  <block id="f7e9cc07ffeb39b44af9c81fc95ee80a" category="paragraph">このオプションを選択すると、データベースはスナップショットからリストアされますが、リカバリはスキップされます（ログバックアップは適用されません）。</block>
+  <block id="12c36d7d5c6e22f7d7de9e842bd09185" category="paragraph">利用可能なスナップショットが表示されます。</block>
+  <block id="97c49bc0b0e47bb6618c6550eaed4bd4" category="list-text">リストからスナップショットを選択し、*次へ*を選択します。</block>
+  <block id="84069594ae22604a5263ed16cc5c85d7" category="list-text">「宛先設定」セクションで、以下の操作を行います。</block>
+  <block id="a6bd46b772365e5b6c3e3ebcfb5d88ce" category="list-text">RACデータベースの場合は、リストアを実行するRACノードを選択してください。このオプションはRACデータベースでのみ表示されます。</block>
+  <block id="f788e090e936649cf2c5c0ff154c27a9" category="list-text">必要に応じて、「制御ファイル」オプションを有効にすると、データベースの制御ファイルも復元されます。このオプションは、PDBまたはPDBテーブルスペースのポイントインタイムまたはSCNリカバリには選択できません。</block>
+  <block id="79d30138f764cb5a18ef350673cd0630" category="list-text">オプションで、*Force in place restore* オプションを有効にして、バックアップ後に新しいデータファイルが追加された場合、またはLVM ディスク グループでLUNが追加、削除、または再作成された場合に、In Placeリストアを実行します。これにより、外部ファイルチェックが上書きされます。データベース リカバリは、選択したリストアオプションを使用して処理を進めます。</block>
+  <block id="7c47104cd2fa4267b0939b38c887b1e1" category="list-text">PDB または表領域を特定のポイントインタイムまたは SCN にリストアする場合で、アーカイブ ログが構成済みの場所にない場合は、*外部アーカイブ ログ ファイルの場所* フィールドに外部アーカイブ ログ ファイルの場所を指定してください。で始まるファイルシステムパスを入力してください<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>または で始まる ASM ディスク グループを入力してください<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>。テキスト入力フィールドの横にある「プラス」ボタンと「マイナス」ボタンを使用して、場所を追加または削除します。リカバリなしでスナップショットからリストアする場合、このフィールドは表示されません。</block>
+  <block id="4a2e39bd630275c8eae0d833bd13f831" category="list-text">必要に応じて、「リカバリ後にデータベースまたはコンテナデータベースを読み書きモードで開く」オプションを有効にし、リストア範囲に一致するサブオプションを選択します（これらのオプションは、リカバリなしのスナップショットからリストアする場合は表示されません）：</block>
+  <block id="1598545f145b423567a9960785cf8619" category="list-text">*すべてのデータファイル*：リカバリ後、データベースまたはコンテナデータベースを READ-WRITE モードで開きます。</block>
+  <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDBまたはPDBテーブルスペース*：リカバリ後、プラガブルデータベースを READ-WRITE モードで開きます。</block>
+  <block id="e05364f3d78ebbf253882396f17dda00" category="list-text">*非CDBテーブルスペース*：リカバリ後にテーブルスペースをオンラインにします。</block>
+  <block id="ee1ada4dd46ef0156c7c521a2fe33302" category="list-text">「Prescripts and postscripts」セクションで、以下の操作を行ってください。</block>
 </blocks>
