@@ -14,7 +14,7 @@ summary: オンプレミスのONTAPシステムからプライマリ ストレ�
 
 
 [role="lead"]
-NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、FCI クラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。
+NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、フェールオーバークラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。
 
 Hyper-V ワークロードを Amazon S3 または StorageGRID にバックアップし、オンプレミスの Hyper-V ホストにリストアできます。
 

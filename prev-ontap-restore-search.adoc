@@ -293,7 +293,7 @@ mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。
 
 +
-*** Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。link:prev-ontap-backup-onprem-aws.html["これらの要件の詳細については、こちらをご覧ください。"]。
+*** Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力して、必要に応じてセキュアなデータ転送のためのプライベート VPC エンドポイントを選択します。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。link:prev-ontap-backup-onprem-aws.html["これらの要件の詳細については、こちらをご覧ください。"]。
 *** Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。link:prev-ontap-backup-onprem-azure.html["これらの要件の詳細については、こちらをご覧ください。"]。
 *** Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするためのアクセス キーとシークレット キーを選択します。link:prev-ontap-backup-onprem-gcp.html["これらの要件の詳細については、こちらをご覧ください。"]。
 *** StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。link:prev-ontap-backup-onprem-storagegrid.html["これらの要件の詳細については、こちらをご覧ください。"]。

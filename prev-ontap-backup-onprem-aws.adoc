@@ -44,6 +44,9 @@ image:diagram_cloud_backup_onprem_aws_public.png["NetApp Backup and Recovery が
 image:diagram_cloud_backup_onprem_aws_private.png["NetApp Backup and Recovery が、プライベート接続を介してクラスター上のボリュームおよびバックアップ ファイルが保存されている AWS S3 ストレージと通信する方法を示す図。"]
 
 
+NOTE: バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。
+
+
 
 [[prepare-your-console-agent]]
 == コンソールエージェントを準備する

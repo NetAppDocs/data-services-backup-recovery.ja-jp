@@ -1504,7 +1504,6 @@
   <block id="35efe147e51e11d3e82b92163214c36a" category="paragraph">Kubernetes リソースを検出し、Kubernetes アプリケーションを保護するには、特定の要件が必要です。</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">Hyper-V ワークロードを保護するための要件</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">Hyper-V インスタンスが仮想マシンを検出して保護するための特定の要件を満たしていることを確認します。</block>
-  <block id="e8ab74a683c73fd7edd0ea5adc16b2b6" category="list-text">スタンドアロンおよびFCIクラスタホストがサポートされています</block>
   <block id="6106f73de41b0409a6e5dd18d2f2baf3" category="list-text">Hyper-V ホスト上のNetApp Hyper-V プラグインには最低 1 GB の RAM が必要です</block>
   <block id="6736478116770d132993185ee55b6baf" category="list-text">Hyper-Vホスト上のプラグイン用に最低5GBのインストールおよびログ領域が必要</block>
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">Hyper-V ホストにログ フォルダー用の十分なディスク領域を割り当て、その使用状況を定期的に監視するようにしてください。必要なスペースは、バックアップとデータ保護操作の実行頻度によって異なります。十分なスペースがない場合、ログは生成されません。</block>
@@ -2853,7 +2852,6 @@
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">[_ソースの選択_] ページで、復元するボリュームのバックアップ ファイルに移動します。復元する日付/タイムスタンプを持つ *システム*、*ボリューム*、および *バックアップ* ファイルを選択します。</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">[_宛先の選択_] ページで、ボリュームを復元する *システム* を選択します。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">オブジェクト ストレージからバックアップ ファイルを復元するときに、オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。</block>
-  <block id="8e494bd03a27f49a3a42559fa89f035a" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。</block>
   <block id="51610f62d18ca7d65b1b6ede56b0ec28" category="list-text">Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オブジェクト ストレージにアクセスするための Azure サブスクリプションを選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。</block>
   <block id="8e4c50ba47b740ee23a3b8d84d794692" category="list-text">Google Cloud Storage から復元する場合は、Google Cloud プロジェクトとアクセス キーおよびシークレット キーを選択して、オブジェクト ストレージ、バックアップが保存されるリージョン、および宛先ボリュームが存在するONTAPクラスター内の IPspace にアクセスします。</block>
   <block id="7af0d0a640485c14ebea27a93041e711" category="list-text">StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を選択します。</block>
@@ -2963,7 +2961,6 @@
   <block id="b91fa3318d0603136bd7864720ebff00" category="list-text">ファイルについては、元の場所へ復元することも、システム、ボリューム、フォルダーなどの別の場所を選択することもできます。元の場所を選択するときに、ソース ファイルを上書きするか、新しいファイルを作成するかを選択できます。</block>
   <block id="428717688bc831d4b76987ab81a8cda9" category="paragraph">オンプレミスのONTAPシステムを選択し、オブジェクト ストレージへのクラスタ接続をまだ構成していない場合は、追加情報の入力を求められます。</block>
   <block id="149fb738a290d4d7e242bb7a559fed06" category="inline-link-macro">これらの要件の詳細については、こちらをご覧ください。</block>
-  <block id="83e331088b3da3e2f5bbe9b400dc12c8" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、作成したユーザーのアクセス キーとシークレット キーを入力してONTAPクラスターに S3 バケットへのアクセス権を付与し、オプションで安全なデータ転送のためにプライベート VPC エンドポイントを選択します。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>。</block>
   <block id="a89d2d40f70bfc28a07321ed33550cb2" category="list-text">Azure Blob から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace を選択し、オプションで VNet とサブネットを選択して、安全なデータ転送のためのプライベート エンドポイントを選択します。<block ref="f738627e711b1dd12952ed94dbe95969" category="inline-link-macro-rx"></block>。</block>
   <block id="dd93e25b0389c6530d40ab857139a7dd" category="list-text">Google Cloud Storage から復元する場合は、宛先ボリュームが存在するONTAPクラスター内の IPspace と、オブジェクト ストレージにアクセスするためのアクセス キーとシークレット キーを選択します。<block ref="1ed2c3c577c844ea86381aba67dcaebe" category="inline-link-macro-rx"></block>。</block>
   <block id="9bf1efb65c01a771dea1888483386d2f" category="list-text">StorageGRIDから復元する場合は、 StorageGRIDサーバーの FQDN と、 ONTAP がStorageGRIDとの HTTPS 通信に使用するポートを入力し、オブジェクト ストレージにアクセスするために必要なアクセス キーとシークレット キー、および宛先ボリュームが存在するONTAPクラスタ内の IPspace を入力します。<block ref="0a6f49c57b3530476d46e42054d8abbf" category="inline-link-macro-rx"></block>。</block>
@@ -3401,7 +3398,6 @@
   <block id="3e2ef02026c97d7e5a6f8783f142b8ca" category="list-text">*リソース料金*: ストレージ使用量に基づきます。詳細については、<block ref="fb7e1562747222c6aa716c91aa0ab813" category="inline-link-rx"></block> 。</block>
   <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*サービス料金*: NetApp Backup and Recoveryの料金。ただし、ソース ボリュームが CVO Professional プランを使用しているストレージ システム内にある場合は、 NetApp Backup and Recovery が無料で提供されます。</block>
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">Google Cloud Platform を使用する場合は、 NetAppからプライベート オファーをリクエストし、Google Cloud Marketplace でのアクティベーション時にプランを選択します。</block>
-  <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*ホスト登録*: ホストの FQDN または IP アドレス、資格情報、コンソール エージェント、およびポート番号を入力して、新しい Hyper-V ホストを追加します。FQDN がコンソール エージェントによって解決できない場合は、代わりに IP アドレスを使用します。FCI クラスターの場合は、FCI クラスター管理 IP アドレスを入力します。</block>
   <block id="6d397139779cf4483cf1c4693e7f6cfc" category="paragraph">独自のバケットを作成する場合は、「netapp-backup」というバケット名を使用する必要があります。カスタム名を使用する必要がある場合は、<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>既存のCVOのIAMRoleを作成し、次のJSONブロックをS3権限に追加します。<block ref="2af6fd9ec72aee193ee7ffe09638e08f" prefix=" " category="inline-code"></block>配列。含める必要がある<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>バケットに関連付ける必要のあるすべての必要な権限を割り当てます。</block>
   <block id="05347845672273f3cffd76e4077cdb51" category="paragraph">復元機能はONTAP のバージョンによって異なります。</block>
   <block id="a03a5900281bf25c93cb811180bba191" category="list-text">*フォルダ:* ONTAP 9.13.0 以降を使用すると、すべてのファイルとサブフォルダを含むフォルダを復元できます。それ以前のバージョンでは、フォルダ内のファイルのみを復元できます。</block>
@@ -5299,7 +5295,6 @@
   <block id="6c7f786a585215a0972dba032e54e883" category="list-text">「保護グループ」、「データストア」、または「仮想マシン」タブを選択します。</block>
   <block id="d112fdc953015b9428df6fb4b0d292e2" category="list-text">バックアップする保護グループまたは仮想マシンを選択してください。</block>
   <block id="95be69974cb6ceeee9b82d51d01ea71b" category="doc">NetApp Backup and RecoveryによるHyper-Vワークロードの保護</block>
-  <block id="889075d391c376e8e93346a67a144591" category="paragraph">NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、FCI クラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。</block>
   <block id="2ffb298144dea264e23cf17896e69764" category="paragraph">Hyper-V ワークロードを Amazon S3 または StorageGRID にバックアップし、オンプレミスの Hyper-V ホストにリストアできます。</block>
   <block id="b13b14d77e25c739cf89bc679587947b" category="paragraph">NetApp Backup and Recovery を使用して、3-2-1 の保護戦略を実装します。これは、ソースデータの 3 つのコピーを 2 つの異なるストレージシステムに、1 つのコピーをクラウドに保存するものです。3-2-1 方式の利点は以下のとおりです：</block>
   <block id="1d7d9d286a1119ddef4be36aa4acd70a" category="list-text">オンサイトコピーはデータをすばやく復元するのに役立ち、オンサイトコピーが侵害された場合はオフサイトコピーを使用できます。</block>
@@ -5958,4 +5953,10 @@
   <block id="02164fcf87ac25e7b1e8147e2943b53e" category="paragraph">クラウドバックアップを ONTAP 9.13.0 以降を使用する Cloud Volumes ONTAP システム、または ONTAP 9.14.1 を実行しているオンプレミス ONTAP システムに復元する場合、_クイックリストア_ 操作を実行するオプションを使用できます。クイックリストアは、できるだけ早くボリュームへのアクセスを提供する必要があるディザスタリカバリの状況に最適です。クイックリストアでは、バックアップファイル全体を復元するのではなく、バックアップファイルのメタデータをボリュームに復元します。クイックリストアは、パフォーマンスやレイテンシの影響を受けやすいアプリケーションには推奨されず、アーカイブストレージのバックアップではサポートされていません。</block>
   <block id="a73fb6eabf726bf5ee3f07c45ffe0012" category="list-text">必要に応じて、「既存のジョブキューよりもこの復元を優先する」を有効にすると、この復元操作の優先度が高くなります。有効にすると、この復元処理を進めるために、他の実行中のジョブが一時停止または遅延される場合があります。</block>
   <block id="5f02d8d1cae515b7bc981f8e3a14acc4" category="paragraph">復元ダッシュボードに戻り、復元操作の進行状況を確認します。</block>
+  <block id="0cf2d9f20f0932bf7e81cfd6634a5ced" category="list-text">*ホスト登録*：ホストのFQDNまたはIPアドレス、資格情報、コンソールエージェント、ポート番号を入力して、新しいHyper-Vホストを追加します。コンソールエージェントがFQDNを解決できない場合は、代わりにIPアドレスを使用してください。フェイルオーバークラスタの場合は、クラスタ管理IPアドレスを入力してください。</block>
+  <block id="5d2f99cd43d814823b35af3f0ece474e" category="paragraph">NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、フェールオーバークラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。</block>
+  <block id="ae9414d83e17965302547068ba4057f3" category="list-text">スタンドアロンホストとフェイルオーバークラスタ構成がサポートされています。</block>
+  <block id="1ee017b4f9f2424d881f97ae99e7a740" category="admonition">バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。</block>
+  <block id="e9595cd472d344aa937e119b35d5ad88" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力します。また、オプションで安全なデータ転送のためのプライベート VPC エンドポイントを選択することもできます。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。</block>
+  <block id="abefb361c80a6971ec2a25acc5be3b04" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力して、必要に応じてセキュアなデータ転送のためのプライベート VPC エンドポイントを選択します。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>。</block>
 </blocks>

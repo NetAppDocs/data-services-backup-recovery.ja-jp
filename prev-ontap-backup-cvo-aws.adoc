@@ -34,6 +34,9 @@ image:diagram_cloud_backup_cvo_aws.png["NetApp Backup and Recovery が、ソー�
 
 VPC ゲートウェイ エンドポイントがすでに VPC 内に存在している必要があります。 https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html["ゲートウェイエンドポイントの詳細"^] 。
 
+
+NOTE: バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。
+
 サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 データ暗号化に顧客管理キーを使用するために必要な情報:: アクティベーションウィザードでは、デフォルトの Amazon S3 暗号化キーを使用する代わりに、データ暗号化用に独自のカスタマー管理キーを選択できます。この場合、暗号化管理キーがすでに設定されている必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自のキーの使用方法を確認する"^] 。
 
