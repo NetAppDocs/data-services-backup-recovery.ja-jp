@@ -28,6 +28,9 @@ ONTAP システムで実行されている VMware データストアと VM を�
 VMware NFS および VMFS データストアと VM を、オンプレミスのSnapCenter Plug-in for VMware vSphereからNetApp Backup and Recoveryインベントリにインポートできます。
 
 
+NOTE: ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。
+
+
 NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。
 
 インポート プロセス中に、 NetApp Backup and Recovery は次のタスクを実行します。

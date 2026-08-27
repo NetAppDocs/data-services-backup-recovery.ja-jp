@@ -5959,4 +5959,5 @@
   <block id="1ee017b4f9f2424d881f97ae99e7a740" category="admonition">バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。</block>
   <block id="e9595cd472d344aa937e119b35d5ad88" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力します。また、オプションで安全なデータ転送のためのプライベート VPC エンドポイントを選択することもできます。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。</block>
   <block id="abefb361c80a6971ec2a25acc5be3b04" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力して、必要に応じてセキュアなデータ転送のためのプライベート VPC エンドポイントを選択します。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>。</block>
+  <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。</block>
 </blocks>

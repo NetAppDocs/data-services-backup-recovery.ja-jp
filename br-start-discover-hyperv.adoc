@@ -26,6 +26,9 @@ NetApp Backup and Recovery で Hyper-V 仮想マシンを検出し、保護ポ�
 Hyper-V ホスト情報を追加して、NetApp Backup and Recovery が仮想マシンを検出できるようにします。各コンソールエージェント内で、リソースを検出するシステムを選択します。
 
 
+NOTE: ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。
+
+
 NOTE: Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。
 
 .手順
