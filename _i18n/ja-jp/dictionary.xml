@@ -5627,7 +5627,6 @@
   <block id="e90dd1da7e3beb4b00ec4d71a841c82a" category="paragraph">ゲストファイル復元機能を使用すると、WindowsまたはLinuxゲストOS上の仮想マシンディスク（VMDK）からファイルやフォルダを復元できます。</block>
   <block id="7d11f0d164b3c2f24ac6ebba24d776fd" category="section-title">ゲストファイル復元ワークフロー</block>
   <block id="132ce8102afdf85562e35cc5b0159f1e" category="paragraph">ゲストファイルの復元には、以下の手順が含まれます。</block>
-  <block id="fa48228aaf71277e6bc2d05f062b62bb" category="list-text">VMware Toolsがインストールされ、実行されている必要があります。</block>
   <block id="b7617062b51a8726ceb7fc1cef74fb14" category="paragraph">NetApp Backup and Recovery は、VMware Tools からの情報を使用して VMware ゲスト OS への接続を確立します。</block>
   <block id="b3e82e6ed4e9c1fea48b8efb84514fc0" category="list-text">接続する仮想ディスクは、NetApp Backup and Recovery のバックアップに含まれている必要があります。</block>
   <block id="7882721ef3524a68e1e9dab8597db0a1" category="list-text">英語以外の文字で名前が付けられたファイルは、単一のファイルとしてではなく、ディレクトリに復元する必要があります。</block>
@@ -5960,4 +5959,6 @@
   <block id="e9595cd472d344aa937e119b35d5ad88" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力します。また、オプションで安全なデータ転送のためのプライベート VPC エンドポイントを選択することもできます。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。</block>
   <block id="abefb361c80a6971ec2a25acc5be3b04" category="list-text">Amazon S3 から復元する場合は、宛先ボリュームが存在する ONTAP クラスター内の IPspace を選択し、ONTAP クラスターに S3 バケットへのアクセスを許可するために作成したユーザーのアクセスキーとシークレットキーを入力して、必要に応じてセキュアなデータ転送のためのプライベート VPC エンドポイントを選択します。プライベート VPC エンドポイントを使用する場合、設定済みのプロキシ接続よりも優先されます。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>。</block>
   <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。</block>
+  <block id="47e1adf864d09fb0e60489239284fdcf" category="list-text">VMware ESXiサーバーでは、双方向通信のためにポート443（HTTPS）を開放しておく必要があります。</block>
+  <block id="b8b48a359182777f9c1858fe64bd41cf" category="list-text">VMware ToolsはゲストOSにインストールされ、実行されている必要があります。</block>
 </blocks>

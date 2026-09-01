@@ -48,7 +48,8 @@ summary: WindowsゲストOSの仮想マシン ディスク（VMDK）からファ
 
 VMDKからファイルやフォルダをリストアする前に、すべての要件を確認してください。
 
-* VMware Toolsがインストールされ、実行されている必要があります。
+* VMware ESXiサーバーでは、双方向通信のためにポート443（HTTPS）を開放しておく必要があります。
+* VMware ToolsはゲストOSにインストールされ、実行されている必要があります。
 +
 NetApp Backup and Recovery は、VMware Tools からの情報を使用して VMware ゲスト OS への接続を確立します。
 
