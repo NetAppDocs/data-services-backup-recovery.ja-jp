@@ -4782,17 +4782,13 @@
   <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">Microsoft Windows Server 2025 を使用している場合、SANストレージに保存されている第2世代VMの保護はサポートされていません。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">別の場所に復元する（プライマリストレージ、セカンダリストレージ、オブジェクトストレージから）</block>
   <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery は、異なるクラウドプロバイダーにまたがる最大 100 個のバケットを使用して、システム内のワークロードを保護する機能をサポートするようになりました。システムあたり 6 つを超えるバケットをサポートするには、ONTAP 9.19.1 以降が必要です。</block>
-  <block id="a804a09090ab946ea48120427df5be47" category="paragraph">NetApp Console のローカル展開をエアギャップ環境で使用しており、標準の DNS を介してデータベース ホストにアクセスできない場合は、RKE2 CoreDNS の内部構成を一時的に変更する必要があります。これにより、ポッドはクラスター内の特定のホスト名を IP アドレスに解決できるようになります。これは、ノード上の<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>にエントリを追加するのと似ています。</block>
-  <block id="d38c5698c3f0a0cc565d84f0583ddbe8" category="admonition">変更を加える前に、既存のCoreDNS設定を確認し、既存のカスタマイズ設定を上書きしないようにしてください。この変更を適用するには、RKE2マニフェストを使用してください。これにより、RKE2オペレーターとランタイムによって変更が一貫して管理されるようになります。</block>
   <block id="0d1c49b7f34131be8c6ddbc862cc359d" category="list-text">可能な限り、HelmChartConfig ファイルを変更管理下に置いてください。</block>
   <block id="feb789eaa0d039f7e4fc241b5a35b268" category="list-text">CoreDNSの上書きの目的が明確になるように、分かりやすいファイル名を使用してください。</block>
   <block id="1c675544711def39976f57e2f6b7e39d" category="list-text">想定される DNS レコードが Corefile に表示されない場合は、RKE2 サーバーのログを確認し、マニフェスト ファイルの構文を確認してください。</block>
   <block id="d36d322fa13411cc64a12177b6ad51ce" category="list-text">既存の CoreDNS 設定を確認して、既存の変更を上書きしていないことを確認してください：</block>
-  <block id="f4edd834d634c666190d7b67f0c12622" category="list-text">以下のコマンドブロックをコピーし、<block ref="10e11b33e0776f6cd4b1e675accff1f5" prefix=" " category="inline-code"></block>エリアを編集して静的DNSレコードを追加してください。これにより、RKE2のマニフェストフォルダにHelmChartConfig YAMLファイルが作成され、RKE2はこれを自動的に適用してCoreDNSの設定を上書きします。</block>
   <block id="b893a4548c6b5490f347a2312c465362" category="list-text">CoreDNS が変更を認識したことを確認します。</block>
   <block id="ad5eadc57f2e0ed4fdd17752bad0fe52" category="paragraph">数分経っても変更が反映されない場合は、CoreDNS のデプロイメントを再起動し、Corefile を再度確認してください：</block>
   <block id="9e04101c187aa923054a894c988f5aeb" category="list-text">データベースホストを検出した後にエントリを削除する必要がある場合は、次の手順を実行してください。</block>
-  <block id="606b05130da19f4457434aa58ba985b8" category="list-text">マニフェストフォルダから HelmChartConfig ファイルを削除します。</block>
   <block id="5b25c5946d94965af8af242970d2aee2" category="list-text">CoreDNS のデプロイメントを再起動します。</block>
   <block id="64c0705ecd150a07e521638d5157a4ec" category="doc">一般的なNetApp Backup and Recovery の機能強化</block>
   <block id="7700d007f970d2c042d61e3551aa039e" category="list-text">*NetApp Console ローカル展開のサポート*：このリリースの NetApp Backup and Recovery は、プレビュー ステータスの NetApp Console ローカル展開をサポートしています。</block>
@@ -5961,4 +5957,27 @@
   <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。</block>
   <block id="47e1adf864d09fb0e60489239284fdcf" category="list-text">VMware ESXiサーバーでは、双方向通信のためにポート443（HTTPS）を開放しておく必要があります。</block>
   <block id="b8b48a359182777f9c1858fe64bd41cf" category="list-text">VMware ToolsはゲストOSにインストールされ、実行されている必要があります。</block>
+  <block id="30683bd981424213f9f341084dacc328" category="paragraph">NetApp Console のローカル展開をエアギャップ環境で使用していて、標準の DNS を介してデータベースホストに到達できない場合は、RKE2 CoreDNS の内部構成を一時的に変更する必要があります。これにより、ポッドはクラスター内の特定のホスト名を IP アドレスに解決できるようになります。これは、ノード上の<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>にエントリを追加するのと同様です。</block>
+  <block id="68916b141cb1549e4306b1426107693e" category="admonition">変更を加える前に、既存のカスタマイズ設定を上書きしないよう、既存の CoreDNS 設定と既存の<block ref="821b85d65c91bb0224e76904b78ee646" prefix=" " category="inline-code"></block> HelmChartConfig の両方を確認してください。ほとんどの NetApp Console ローカルデプロイメントノードでは、このファイルはすでに存在し、リソースリクエストもすでに含まれています。ファイルがすでに存在する場合は、再作成せず、代わりに<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block> ブロックのみを既存の<block ref="f15029ddf2ec349489f6a578bf8ff002" prefix=" " category="inline-code"></block> に追記してください。RKE2 マニフェストを使用してこの変更を適用することで、RKE2 オペレーターとランタイムによって継続的かつ一貫して管理されます。</block>
+  <block id="c83678dcc36ba7a58a3d2e313cdc5cb2" category="list-text">HelmChartConfig ファイルが存在することを確認します：</block>
+  <block id="7cbf1254454bfb83ecf45d67569bb210" category="open-title">ファイルが存在する場合</block>
+  <block id="dd8b91d84403e7c4c2df5612c3deb788" category="list-text">次のスクリプトを実行して、<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>ブロックを既存のHelmChartConfigファイルに追加します：</block>
+  <block id="df5298d33ab8b68cf08a5d8265ae6e02" category="list-text">HelmChartConfigファイルへの唯一の変更が<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>ブロックの追加であることを確認します。</block>
+  <block id="a405e148dd89c6d878f7202bd0acac46" category="open-title">ファイルが存在しない場合</block>
+  <block id="f545e4267a4d131a69797e4afd537a05" category="list-text">以下のスクリプトの<block ref="10e11b33e0776f6cd4b1e675accff1f5" prefix=" " category="inline-code"></block>エリアを編集して、静的DNSレコードを追加してください。これにより、RKE2のマニフェストフォルダにHelmChartConfigのYAMLファイルが作成され、RKE2はこれを自動的に適用してCoreDNSの設定を上書きします。</block>
+  <block id="1c0fab9d442597478403d8226e5a2d16" category="list-text">スクリプトをコピーして実行してください。</block>
+  <block id="e56134bb955e879714d813d368a791ce" category="open-title">既存のファイルに追記した場合</block>
+  <block id="492165cbd490b6e6832804b381c9e69e" category="list-text">バックアップしたファイルを復元するか、ファイル内から<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>ブロックのみを削除します：</block>
+  <block id="7d20cae7d54370385d0972a25df82057" category="paragraph">このファイルには既存のRKE2リソースチューニング情報が含まれているため、削除しないでください。</block>
+  <block id="86c39cd0104d9ef70cce9b5b29ee92f1" category="list-text">ファイルを復元した後、ホストエントリを削除してください。古いエントリは、ホストの検出やスケジュールされたバックアップに問題を引き起こす可能性があります。</block>
+  <block id="cbfe0ed3153804b7d4fc2498c31941a1" category="open-title">新しいファイルを作成した場合</block>
+  <block id="0e5396fa21718b76cbd3c1a11136c9dc" category="list-text">マニフェストフォルダから HelmChartConfig ファイルを削除します：</block>
+  <block id="251aaa9a6d6dee8d3e892c83b282de62" category="list-text">ファイルを削除した後、ホストエントリを削除してください。古いエントリは、ホストの検出やスケジュールされたバックアップに問題を引き起こす可能性があります。</block>
+  <block id="9fb67925a7099f4959311f91b028441f" category="section-title">可用性グループ情報の管理</block>
+  <block id="e5e0bae15d01ae8a68af97e8ee4181d1" category="paragraph">リソースを保護し、保護設定を編集し、バックアップを実行するために、可用性グループ情報を管理します。</block>
+  <block id="984cf8529e178e40665ddc1a3284488c" category="section-title">可用性グループを保護する</block>
+  <block id="b49fedaec38028e3cfd9d84a3c135474" category="paragraph">リソース保護のスケジュールと保持を管理するために、可用性グループにポリシーを割り当てます。</block>
+  <block id="f4c9691991fd542b1f48cc8fcbdef656" category="list-text">*Availability groups* タブを選択してください。</block>
+  <block id="65fa180bca046084f17003e06ddb0b9f" category="list-text">可用性グループを選択します。</block>
+  <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">「保護グループ」、「可用性グループ」、「インスタンス」、または「データベース」タブを選択します。</block>
 </blocks>

@@ -2,10 +2,10 @@
 :allow-uri-read: 
 
 
-NetApp Console のローカル展開をエアギャップ環境で使用しており、標準の DNS を介してデータベース ホストにアクセスできない場合は、RKE2 CoreDNS の内部構成を一時的に変更する必要があります。これにより、ポッドはクラスター内の特定のホスト名を IP アドレスに解決できるようになります。これは、ノード上の `/etc/hosts`にエントリを追加するのと似ています。
+NetApp Console のローカル展開をエアギャップ環境で使用していて、標準の DNS を介してデータベースホストに到達できない場合は、RKE2 CoreDNS の内部構成を一時的に変更する必要があります。これにより、ポッドはクラスター内の特定のホスト名を IP アドレスに解決できるようになります。これは、ノード上の `/etc/hosts`にエントリを追加するのと同様です。
 
 
-IMPORTANT: 変更を加える前に、既存のCoreDNS設定を確認し、既存のカスタマイズ設定を上書きしないようにしてください。この変更を適用するには、RKE2マニフェストを使用してください。これにより、RKE2オペレーターとランタイムによって変更が一貫して管理されるようになります。
+IMPORTANT: 変更を加える前に、既存のカスタマイズ設定を上書きしないよう、既存の CoreDNS 設定と既存の `rke2-coredns-config.yaml` HelmChartConfig の両方を確認してください。ほとんどの NetApp Console ローカルデプロイメントノードでは、このファイルはすでに存在し、リソースリクエストもすでに含まれています。ファイルがすでに存在する場合は、再作成せず、代わりに `servers:` ブロックのみを既存の `valuesContent` に追記してください。RKE2 マニフェストを使用してこの変更を適用することで、RKE2 オペレーターとランタイムによって継続的かつ一貫して管理されます。
 
 .開始する前に
 * 可能な限り、HelmChartConfig ファイルを変更管理下に置いてください。
@@ -20,7 +20,79 @@ IMPORTANT: 変更を加える前に、既存のCoreDNS設定を確認し、既�
 ----
 kubectl -n kube-system get cm rke2-coredns-rke2-coredns -o jsonpath='{.data.Corefile}'
 ----
-. 以下のコマンドブロックをコピーし、 `configBlock`エリアを編集して静的DNSレコードを追加してください。これにより、RKE2のマニフェストフォルダにHelmChartConfig YAMLファイルが作成され、RKE2はこれを自動的に適用してCoreDNSの設定を上書きします。
+. HelmChartConfig ファイルが存在することを確認します：
++
+[source, shell]
+----
+sudo cat /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
++
+[role="tabbed-block"]
+====
+.ファイルが存在する場合
+--
+.. 次のスクリプトを実行して、 `servers:`ブロックを既存のHelmChartConfigファイルに追加します：
++
+[source, shell]
+----
+MANIFEST=/var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+
+# 1. Back up first
+sudo cp -a "$MANIFEST" "$MANIFEST.bak.$(date +%Y%m%d-%H%M%S)"
+
+# 2. Safety checks: valuesContent must be the last key, no servers: block yet
+grep -n 'servers:' "$MANIFEST"        # must return nothing
+tail -c 1 "$MANIFEST" | od -c | head  # file must end with a newline
+
+# 3. Append ONLY the servers block (nothing above it changes)
+sudo tee -a "$MANIFEST" >/dev/null <<'YAML'
+    servers:
+    - zones:
+      - zone: .
+      port: 53
+      plugins:
+      - name: errors
+      - name: health
+        configBlock: |-
+          lameduck 10s
+      - name: ready
+      - name: kubernetes
+        parameters: cluster.local in-addr.arpa ip6.arpa
+        configBlock: |-
+          pods insecure
+          fallthrough in-addr.arpa ip6.arpa
+          ttl 30
+      # ───────────────────────── EDIT BELOW ─────────────────────────
+      # Static DNS records for hosts the corporate DNS cannot resolve.
+      # Format:  <IP>  <FQDN>  [optional aliases...]
+      # `fallthrough` MUST stay as the last line -- it lets every other
+      # name go to the upstream resolver via the `forward` plugin below.
+      - name: hosts
+        configBlock: |-
+          1.2.3.4 example.domain.com exampleshortname
+          fallthrough
+      # ───────────────────────── EDIT ABOVE ─────────────────────────
+      - name: prometheus
+        parameters: 0.0.0.0:9153
+      - name: forward
+        parameters: . /etc/resolv.conf
+      - name: cache
+        parameters: 30
+      - name: loop
+      - name: reload
+      - name: loadbalance
+YAML
+
+# 4. Confirm the merged result
+sudo cat "$MANIFEST"
+----
+.. HelmChartConfigファイルへの唯一の変更が `servers:`ブロックの追加であることを確認します。
+
+
+--
+.ファイルが存在しない場合
+--
+.. 以下のスクリプトの `configBlock`エリアを編集して、静的DNSレコードを追加してください。これにより、RKE2のマニフェストフォルダにHelmChartConfigのYAMLファイルが作成され、RKE2はこれを自動的に適用してCoreDNSの設定を上書きします。
 +
 [source, shell]
 ----
@@ -77,6 +149,11 @@ spec:
 YAML
 sudo chmod 600 /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
 ----
+.. スクリプトをコピーして実行してください。
+
+
+--
+====
 . CoreDNS が変更を認識したことを確認します。
 +
 [source, shell]
@@ -93,7 +170,21 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 ----
 . データベースホストを検出した後にエントリを削除する必要がある場合は、次の手順を実行してください。
 +
-.. マニフェストフォルダから HelmChartConfig ファイルを削除します。
+[role="tabbed-block"]
+====
+.既存のファイルに追記した場合
+--
+.. バックアップしたファイルを復元するか、ファイル内から `servers:`ブロックのみを削除します：
++
+[source, shell]
+----
+sudo cp -a /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml.bak.<timestamp> \
+/var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
++
+このファイルには既存のRKE2リソースチューニング情報が含まれているため、削除しないでください。
+
+.. ファイルを復元した後、ホストエントリを削除してください。古いエントリは、ホストの検出やスケジュールされたバックアップに問題を引き起こす可能性があります。
 .. CoreDNS のデプロイメントを再起動します。
 +
 [source, shell]
@@ -102,4 +193,24 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 ----
 
 
+--
+.新しいファイルを作成した場合
+--
+.. マニフェストフォルダから HelmChartConfig ファイルを削除します：
++
+[source, shell]
+----
+sudo rm /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
+.. ファイルを削除した後、ホストエントリを削除してください。古いエントリは、ホストの検出やスケジュールされたバックアップに問題を引き起こす可能性があります。
+.. CoreDNS のデプロイメントを再起動します。
++
+[source, shell]
+----
+kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
+----
+
+
+--
+====
 
