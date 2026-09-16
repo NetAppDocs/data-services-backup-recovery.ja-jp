@@ -4876,7 +4876,6 @@
   <block id="29baeb7c31a3e708d97805f86fcb505a" category="inline-link">プレビュー登録フォームに記入してください</block>
   <block id="4d405e082b9036b99ea8ef4d4c6b3cae" category="paragraph"><block ref="570de0e604bd7f8002cc6704e0146ea7" category="inline-link-rx"></block></block>
   <block id="a3b49aeb70a4060b1c36c4a694debc5c" category="inline-link">NetApp Console ローカル展開でストレージを追加する</block>
-  <block id="de0f709d7b0812e121e9fa6bdb8b87b3" category="paragraph"><block ref="de0f709d7b0812e121e9fa6bdb8b87b3" category="inline-link-rx"></block></block>
   <block id="5867ad8a560196a64df2278876df70c2" category="paragraph"><block ref="fd61760e9709a64e2426151a909b6045" category="inline-link-macro-rx"></block>。</block>
   <block id="83524f1d1d58a585ea5008790d8e85cf" category="paragraph">アイデンティティとアクセス管理について学び、ユーザーがそれぞれのタスクを実行するために必要な適切な権限を設定します。</block>
   <block id="acb0fa18e6cbdd062b1c342d22b5d7e9" category="inline-link">NetApp Console ローカル展開でのIDとアクセス管理の開始</block>
@@ -5981,4 +5980,5 @@
   <block id="65fa180bca046084f17003e06ddb0b9f" category="list-text">可用性グループを選択します。</block>
   <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">「保護グループ」、「可用性グループ」、「インスタンス」、または「データベース」タブを選択します。</block>
   <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">アーカイブストレージからボリュームやファイルを復元するには、追加の時間がかかる場合があります。バックアップとリカバリが選択された優先度に基づいて復元を再試行している間、ジョブモニターではジョブは「進行中」のままになります。復元処理は「ジョブモニター」で監視します。すべての再試行後、ジョブが「完了」または「失敗」などの最終ステータスに達すると、復元処理は完了します。最終的にジョブが失敗しない限り、別の復元を開始しないでください。</block>
+  <block id="534cf708a73e1e3ff80e4b70322d78d6" category="paragraph"><block ref="534cf708a73e1e3ff80e4b70322d78d6" category="inline-link-rx"></block></block>
 </blocks>

@@ -123,7 +123,7 @@ https://forms.cloud.microsoft/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOmN
 
 NetApp Backup and Recoveryでワークロードを保護するには、まずONTAPストレージシステムをNetApp Consoleに追加する必要があります。
 
-https://docs.netapp.com/us-en/console-local/task-discover-storage.html["NetApp Console ローカル展開でストレージを追加する"^]
+https://docs.netapp.com/us-en/console-local/task-add-systems.html["NetApp Console ローカル展開でストレージを追加する"^]
 
 
 
