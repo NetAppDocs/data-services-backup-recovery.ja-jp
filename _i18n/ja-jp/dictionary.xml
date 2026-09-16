@@ -1258,8 +1258,6 @@
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">バックアップの削除</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">NetApp Backup and Recoveryで VMware ワークロードをバックアップする</block>
   <block id="f1e9f00ae199ca6520d1d2e98102cd84" category="doc">NetApp Backup and Recoveryで VMware ワークロードを発見</block>
-  <block id="dcd2ed119bd25caa1d2e5fbbadd0e260" category="section-title">VMware ワークロードを検出し、オプションでSnapCenterリソースをインポートする</block>
-  <block id="20224d78d1f591aa6ed092cd19c23642" category="paragraph">VMware NFS および VMFS データストアと VM を、オンプレミスのSnapCenter Plug-in for VMware vSphereからNetApp Backup and Recoveryインベントリにインポートできます。</block>
   <block id="02bff5613eedf1bcc6846345d0b55fbd" category="admonition">このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。</block>
   <block id="fee320715a193861e4f6dc2068899465" category="paragraph">インポート プロセス中に、 NetApp Backup and Recovery は次のタスクを実行します。</block>
   <block id="bd8db3845afb35c10e4abfbdf5709291" category="list-text">vCenter サーバーへの安全な SSH アクセスを有効にします。</block>
@@ -1268,35 +1266,21 @@
   <block id="f3cd1cfa60b70ab3833f6ec373ec8327" category="list-text">データベース アクセスを構成します。</block>
   <block id="ed39d64277006cf603e473c457526c25" category="list-text">VMware vCenter、データストア、および VM を検出します。</block>
   <block id="9ebd805e73003051d15b45a35a4e54e5" category="list-text">検出されたリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。</block>
-  <block id="48f6d5cbb866129c890c2677a75d46eb" category="list-text">SnapCenter Plug-in for VMware vSphere がすでにインストールされている場合は、 NetApp Backup and Recovery UI を使用してSnapCenterリソースをNetApp Backup and Recoveryにインポートします。</block>
-  <block id="b758229c4311907d27297d6e3812db06" category="admonition">SnapCenterプラグインがすでにある場合は、 SnapCenterからインポートする前に前提条件を満たしていることを確認してください。たとえば、 SnapCenterからインポートする前に、まずNetApp ConsoleですべてのオンプレミスのSnapCenterクラスター ストレージ用のシステムを作成する必要があります。見る<block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>。</block>
   <block id="36b36cfb3f6fc12df63c864d8e7b40a1" category="list-text">SnapCenterプラグインがまだインストールされていない場合でも、vCenter を手動で追加して検出を実行することで、システム内のワークロードを検出できます。</block>
-  <block id="e3ee523018b6799a0939043eefc9098c" category="section-title">SnapCenterプラグインがまだインストールされていない場合は、vCenterを追加してリソースを検出します。</block>
   <block id="7248204ed2d72c7c934127b7789c6157" category="list-text">*ワークロード タイプ*: *VMware* を選択します。</block>
-  <block id="8d2f5acbe9ae8a7ad87b9b825c0e5f29" category="list-text">*vCenter 設定*: 新しい vCenter を追加します。新しい vCenter を追加するには、vCenter FQDN または IP アドレス、ユーザー名、パスワード、ポート、プロトコルを入力します。</block>
-  <block id="1b7ab9fadabd410c692af601b6da1bd2" category="list-text">*ホスト登録*: VMware では必要ありません。</block>
-  <block id="448e3bbdf47805516f7b529afcbedb47" category="section-title">SnapCenterプラグインがすでにインストールされている場合は、VMwareリソース用のSnapCenterプラグインをNetApp Backup and Recoveryにインポートします。</block>
-  <block id="d7df5d5a7771d8964d3ad312a019f2a7" category="list-text">検出中に、 SnapCenterプラグインからリソースをインポートするオプションを選択します。</block>
   <block id="d0a37c5f3a756f70f149387e5e024455" category="list-text">検出後、インベントリ ページからSnapCenterプラグイン リソースをインポートするオプションを選択します。</block>
-  <block id="72512ee3dbbd33b6b0e82862f004f7b4" category="list-text">検出後、[設定] メニューから、 SnapCenterプラグイン リソースをインポートするオプションを選択します。詳細については、<block ref="97d5ee4c1307bc47ebfffa62683db47d" category="inline-link-macro-rx"></block> 。これは VMware ではサポートされていません。</block>
   <block id="e68d5688d8ed4428f4698c24ecebe981" category="paragraph">このセクションでは、次の 2 つの部分から成るプロセスについて説明します。</block>
   <block id="c6f071c40c15c848457f973025ccd0a6" category="list-text">SnapCenterプラグインからvCenterメタデータをインポートします。インポートされたvCenterリソースは、まだNetApp Backup and Recoveryによって管理されていません。</block>
-  <block id="cf47887931a3e51685acecf1df31898e" category="list-text">NetApp Backup and Recoveryで選択した vCenter、VM、およびデータストアの管理を開始します。管理を開始すると、 NetApp Backup and Recovery は、インベントリ ページで vCenter を「管理対象」としてラベル付けし、インポートしたリソースをバックアップおよびリカバリできるようになります。  NetApp Backup and Recoveryで管理を開始すると、 SnapCenterプラグインでそれらのリソースを管理できなくなります。</block>
   <block id="53624320c75e524d23062b211afde11a" category="section-title">SnapCenterプラグインからvCenterメタデータをインポートする</block>
   <block id="a0db4035e526ed9a7d3ab3f54948a1a1" category="paragraph">この最初のステップでは、 SnapCenterプラグインからvCenterメタデータをインポートします。この時点では、リソースはまだNetApp Backup and Recoveryによって管理されていません。</block>
   <block id="d15a40324af88049d2add38cd8f56009" category="admonition">SnapCenterプラグインから vCenter メタデータをインポートした後、 NetApp Backup and Recovery は保護管理を自動的に引き継ぎません。そのためには、 NetApp Backup and Recoveryでインポートされたリソースを管理することを明示的に選択する必要があります。これにより、 NetApp Backup and Recoveryによってそれらのリソースをバックアップする準備が整います。</block>
-  <block id="4fa4bcc2a1f0d681fb390d96f9891a59" category="list-text">[インポート元] フィールドで、* SnapCenter Plug-in for VMware* を選択します。</block>
   <block id="45ff731338448b957095de0f0c3fcd1f" category="list-text">*VMware vCenter の資格情報* を入力してください:</block>
   <block id="87015fc1c283283c06b5b6f139ba1403" category="list-text">*vCenter IP/ホスト名*: NetApp Backup and Recoveryにインポートする vCenter の FQDN または IP アドレスを入力します。</block>
   <block id="83232179998a0e4df8a7fec8b01b073d" category="list-text">*vCenter ポート番号*: vCenter のポート番号を入力します。</block>
   <block id="bf44275a582b218f2c18fd73a1b49f7d" category="list-text">*vCenter ユーザー名* と *パスワード*: vCenter のユーザー名とパスワードを入力します。</block>
-  <block id="0e262289f889681dd134476e46394c9b" category="list-text">*コネクタ*: vCenter のコンソール エージェントを選択します。</block>
-  <block id="f8ccd2c36b2459b541ae637dac832e19" category="list-text">* SnapCenterプラグイン ホストの資格情報* を入力してください:</block>
-  <block id="60b1a925906e7fb4348924a6fdd9149b" category="list-text">*新しい資格情報の追加*: 既存のSnapCenterプラグイン ホスト資格情報がない場合は、新しい資格情報を追加できます。資格情報名、認証モード、ユーザー名、およびパスワードを入力します。</block>
   <block id="7c2e72fe3815fa111632e0f221695e03" category="list-text">*インポート* を選択してエントリを検証し、 SnapCenterプラグインを登録します。</block>
   <block id="17ffe2e72fe7b5b93cc83ba3b6aa34c1" category="paragraph">明示的に管理対象として選択するまで、インベントリ ページには、NetApp Backup and Recoveryで vCenter が管理対象外として表示されます。</block>
   <block id="25c0a491dae6caf57d57d941f0eb08d9" category="section-title">SnapCenterプラグインからインポートされたリソースを管理する</block>
-  <block id="4513150785c046bfbcd37a0b9dcb7a35" category="list-text">「移行を続行しますか？」のボックスをチェックし、「移行」を選択します。</block>
   <block id="13be03aaa1d065e4e2a3d1cb64d9f254" category="paragraph">インベントリ ページには、新しく管理された vCenter リソースが表示されます。</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">NetApp Backup and Recoveryを使用すると、VMware ワークロードに関連する次のタスクを実行できます。</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
@@ -3587,12 +3571,7 @@
   <block id="24e30755a36f1f0fbf2585a3d6fcea00" category="list-text">*ワークロード*の下で、*KVM*タイルを選択します。</block>
   <block id="99c78c9137cee80ce48d764854f4f37d" category="paragraph">初めて Backup and Recovery にログインし、コンソールにシステムがあるがリソースが検出されていない場合は、[新しいNetApp Backup and Recovery へようこそ] ページが表示され、[リソースの検出] オプションが表示されます。</block>
   <block id="72caa651e04c375669fa47d6d7c97bd8" category="list-text">管理プラットフォームをバックアップとリカバリとまだ統合していない場合は、[*管理プラットフォームの追加*] を選択します。</block>
-  <block id="e48c46f67dcc12e71756d8f1484fd1e5" category="list-text">*KVM 設定*: 次の情報を入力して新しい KVM ホストを追加します。</block>
   <block id="1379fbf6716203ac9b069e9dcb1b630e" category="list-text">*KVM FQDN または IP アドレス*: ホストの FQDN または IP アドレスを入力します。</block>
-  <block id="a3b2bf747985ecc6d947647708117a50" category="list-text">*資格情報*: KVM ホストのユーザー名とパスワードを入力します。</block>
-  <block id="9bf19b226e98ad82718a06ed1be0ccff" category="list-text">*コンソール エージェント*: バックアップおよびリカバリと KVM ホスト間の通信に使用するコンソール エージェントを選択します。</block>
-  <block id="255d844db697f34dcf46b6abb2370218" category="list-text">*ポート番号*: バックアップおよびリカバリと KVM ホスト間の通信に使用するポートを入力します。</block>
-  <block id="cba87e6c48ee4064103429e66f87d737" category="list-text">*管理プラットフォーム*: KVM ホストが管理されており、管理プラットフォームをバックアップとリカバリに追加している場合は、リストから管理プラットフォームを選択します。</block>
   <block id="1ab61c2a203a782ffd6293f052fa3198" category="list-text">*ワークロード*の下で、*Oracle*タイルを選択します。</block>
   <block id="7f924709b4be1415b21d2f13de8768fc" category="section-title">保護グループを編集する</block>
   <block id="d866b8b94a3e8b940c5c063a7cf79472" category="paragraph">保護グループを編集して、名前または設定を変更します。グループ内のリソースが変更された場合は、保護グループを編集する必要がある場合があります。</block>
@@ -5169,7 +5148,6 @@
   <block id="d15ce5f7b11589a195af27e9552d666f" category="paragraph">NetApp Backup and Recovery で Hyper-V 仮想マシンを検出し、保護ポリシーを使用して保護できるようにします。</block>
   <block id="b2d7b24c3bf71ab6e29740c4642ffafe" category="paragraph">Hyper-V ホスト情報を追加して、NetApp Backup and Recovery が仮想マシンを検出できるようにします。各コンソールエージェント内で、リソースを検出するシステムを選択します。</block>
   <block id="b7f882b06eddf2dfd9de57436d956c2c" category="list-text">NetApp Console メニューから、*Protection* &gt; *Backup and Recovery* を選択します。</block>
-  <block id="c4aea5e44a79c8aa4bb534878de9f3a0" category="paragraph">初めて NetApp Backup and Recovery にログインする場合で、コンソールにシステムが既に存在するがリソースがまだ検出されていない場合、「新しい NetApp Backup and Recovery へようこそ」ランディングページが表示され、*リソースの検出* オプションが表示されます。</block>
   <block id="f449ed9853e04fc0b05aaa0a461c94c1" category="list-text">Hyper-Vワークロードタイルを選択します。</block>
   <block id="c8c0b636c4dc30cad0d464be2b47090d" category="paragraph">Kubernetes クラスターとそのワークロードを NetApp Backup and Recovery で検出し、保護ポリシーを使用してデータを保護できます。</block>
   <block id="6604e60d4f1c2e3c6bc9c63d2ee97067" category="paragraph">バックアップおよびリカバリのインベントリで、環境内の Kubernetes クラスターとワークロードを検出します。クラスターを追加すると、NetApp Backup and Recovery に登録し、保護対象のアプリケーションとリソースを検出できます。オプションで、NetApp Console のローカル展開を使用して、エアギャップされたローカル Kubernetes リソースを検出することもできます。</block>
@@ -5177,7 +5155,6 @@
   <block id="b5db886dbc4143a50071b971de05c3b6" category="paragraph">Backup and Recoveryでは、選択したインストール タイプの選択に応じて異なる手順が提供されます。NetApp Consoleのローカル展開を使用する場合は、外部ネットワークに接続されていないエアギャップ環境のリソースを検出する手順を選択できます。</block>
   <block id="992e1a79c40146226d531b2d54202029" category="paragraph">以下の手順に従って、NetApp Backup and Recovery ダッシュボードを表示し、検出されたリソースを確認します。</block>
   <block id="d25cc2a23f6d490aa6ca66c1fc0a6982" category="paragraph">KVM ホストと仮想マシンを NetApp Backup and Recovery で検出し、保護ポリシーを使用してデータを保護できます。KVM 環境は、検出の前に Apache CloudStack などの管理プラットフォームで管理されている必要があります。</block>
-  <block id="64d1830b55112fb89c5efe473a488759" category="paragraph">初めて NetApp Backup and Recovery にログインする場合で、Console にシステムがすでに存在するがリソースが検出されていない場合、「新しい NetApp Backup and Recovery へようこそ」ページが表示され、*リソースの検出* オプションが表示されます。</block>
   <block id="d6a34cddcbce1ef6f28243118f9d171b" category="list-text">KVMワークロードタイルを選択します。</block>
   <block id="e3720b1dee4abe1712504428b0c4eee1" category="summary">NetApp Backup and Recovery は、ワークロードを保護する前に、まずワークロードを検出する必要があります。</block>
   <block id="27f6c9f669ba02aa92df4193fd4d3367" category="paragraph">NetApp Backup and Recovery で Oracle Database ワークロードを検出し、バックアップやスナップショットで保護できます。</block>
@@ -5591,9 +5568,6 @@
   <block id="3dd3ba4b63229b475a20f7cd9addb146" category="paragraph">オンプレミス ONTAP システムから Amazon Web Services、Azure NetApp Files、または StorageGRID に VMware VM とデータストアをバックアップして、データを保護します。バックアップは自動的に生成され、パブリッククラウドまたはプライベートクラウドアカウント内のオブジェクトストアに保存されます。</block>
   <block id="39e8552d644f5836bb606e9f024f8213" category="list-text">今すぐワークロードをバックアップするには、オンデマンド バックアップを作成してください。</block>
   <block id="67815c5b8fc21f4677397c47a093cc04" category="paragraph">NetApp Backup and Recovery を使用して、プライマリまたはセカンダリのスナップショットから VMware 仮想マシンの書き込み可能なクローンを作成します。テスト、統合、トレーニングのために、本番データに影響を与えることなく、クローンされた仮想マシンを作成および管理できます。</block>
-  <block id="0235c606522ad40f43092e88c70da6f4" category="paragraph">ONTAP システムで実行されている VMware データストアと VM を保護する前に、NetApp Backup and Recovery でそれらを検出する必要があります。すでに SnapCenter Plug-in for VMware vSphere がインストールされている場合は、そのバックアップデータとポリシーをインポートすることもできます。</block>
-  <block id="df1070d1677eb4e0f80ad6ffbd180001" category="paragraph">まだ SnapCenter Plug-in for VMware vSphere がインストールされていない場合は、NetApp Backup and Recovery がワークロードを検出できるように vCenter の情報を追加します。各 Console エージェント内で、ワークロードを検出するシステムを選択します。</block>
-  <block id="f0edd8cd666348783317b3a12c204778" category="paragraph">すでに SnapCenter Plug-in for VMware がインストールされている場合は、次の手順に従って SnapCenter Plug-in のリソースを NetApp Backup and Recovery にインポートします。NetApp Console は、プラグインから ESXi ホスト、データストア、VM、およびスケジュールを検出するため、これらの情報を再作成する必要はありません。</block>
   <block id="79f1b2505db34bcc40686f104f76593a" category="admonition">SnapCenter プラグインがすでに登録されている場合は、既存の登録情報を更新できます。</block>
   <block id="2a1d91f94990e0b54f21a4a5400e5f85" category="paragraph">SnapCenter Plug-in for VMware vSphereからvCenterメタデータをインポートした後、NetApp Backup and Recoveryでリソースを管理します。これらのリソースの管理を選択すると、NetApp Backup and Recoveryはインポートされたリソースをバックアップおよびリカバリできるようになります。NetApp Backup and Recoveryで管理を開始した後は、SnapCenter Plug-inでこれらのリソースを管理することはできなくなります。</block>
   <block id="974ab6deb29dd728f277f1b504bbbd65" category="paragraph">リソースの管理を選択すると、NetApp Backup and Recoveryはリソース、VM、およびポリシーをSnapCenter Plug-in for VMwareからインポートします。リソースグループ、ポリシー、およびスナップショットがプラグインから移行され、NetApp Backup and Recoveryで管理されるようになります。</block>
@@ -5947,7 +5921,6 @@
   <block id="02164fcf87ac25e7b1e8147e2943b53e" category="paragraph">クラウドバックアップを ONTAP 9.13.0 以降を使用する Cloud Volumes ONTAP システム、または ONTAP 9.14.1 を実行しているオンプレミス ONTAP システムに復元する場合、_クイックリストア_ 操作を実行するオプションを使用できます。クイックリストアは、できるだけ早くボリュームへのアクセスを提供する必要があるディザスタリカバリの状況に最適です。クイックリストアでは、バックアップファイル全体を復元するのではなく、バックアップファイルのメタデータをボリュームに復元します。クイックリストアは、パフォーマンスやレイテンシの影響を受けやすいアプリケーションには推奨されず、アーカイブストレージのバックアップではサポートされていません。</block>
   <block id="a73fb6eabf726bf5ee3f07c45ffe0012" category="list-text">必要に応じて、「既存のジョブキューよりもこの復元を優先する」を有効にすると、この復元操作の優先度が高くなります。有効にすると、この復元処理を進めるために、他の実行中のジョブが一時停止または遅延される場合があります。</block>
   <block id="5f02d8d1cae515b7bc981f8e3a14acc4" category="paragraph">復元ダッシュボードに戻り、復元操作の進行状況を確認します。</block>
-  <block id="0cf2d9f20f0932bf7e81cfd6634a5ced" category="list-text">*ホスト登録*：ホストのFQDNまたはIPアドレス、資格情報、コンソールエージェント、ポート番号を入力して、新しいHyper-Vホストを追加します。コンソールエージェントがFQDNを解決できない場合は、代わりにIPアドレスを使用してください。フェイルオーバークラスタの場合は、クラスタ管理IPアドレスを入力してください。</block>
   <block id="5d2f99cd43d814823b35af3f0ece474e" category="paragraph">NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM、フェールオーバークラスタインスタンス、および CIFS 共有上でホストされている SCVMM でプロビジョニングされた VM をバックアップおよびリストアします。</block>
   <block id="ae9414d83e17965302547068ba4057f3" category="list-text">スタンドアロンホストとフェイルオーバークラスタ構成がサポートされています。</block>
   <block id="1ee017b4f9f2424d881f97ae99e7a740" category="admonition">バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。</block>
@@ -5981,4 +5954,57 @@
   <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">「保護グループ」、「可用性グループ」、「インスタンス」、または「データベース」タブを選択します。</block>
   <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">アーカイブストレージからボリュームやファイルを復元するには、追加の時間がかかる場合があります。バックアップとリカバリが選択された優先度に基づいて復元を再試行している間、ジョブモニターではジョブは「進行中」のままになります。復元処理は「ジョブモニター」で監視します。すべての再試行後、ジョブが「完了」または「失敗」などの最終ステータスに達すると、復元処理は完了します。最終的にジョブが失敗しない限り、別の復元を開始しないでください。</block>
   <block id="534cf708a73e1e3ff80e4b70322d78d6" category="paragraph"><block ref="534cf708a73e1e3ff80e4b70322d78d6" category="inline-link-rx"></block></block>
+  <block id="6c302dca9120d9212ecda9d1ad1f74c9" category="paragraph">今回のリリースでは、KVM、Hyper-V、およびVMwareワークロードに以下の機能強化が導入されました：</block>
+  <block id="0898522d58ded515e98cbdbeae0b2894" category="paragraph">*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを登録する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。</block>
+  <block id="51b1f28526e9e7dfdb39548a8b5d4ac0" category="paragraph">*VM のスパンディスク保護*: CIFS 構成の場合、Backup and Recovery は、保護グループ内の各 VM に接続されているすべてのディスクを保護できるようになりました。これには、複数の ONTAP ボリュームまたは ONTAP ストレージシステムに分散したファイル（スパンディスク）と、単一の場所に限定されたファイルが含まれます。</block>
+  <block id="1e62d1b5255654e86ebb8b223345252a" category="section-title">ONTAPボリュームワークロードの強化</block>
+  <block id="705eb27960b89edebb2b2269e939009b" category="paragraph">今回のリリースでは、ONTAP Volumes ワークロードに、以下のプレビュー版機能強化が導入されました。</block>
+  <block id="921187f214ef75f0b99f59d69af64c46" category="paragraph">*日次バックアップデータ転送レポート*：NetApp Backup and Recovery for Volumes の「レポート」タブに日次バックアップデータ転送レポートが追加されました。これにより、環境全体における日々のバックアップおよびレプリケーションのデータ転送状況を把握できます。アカウント全体または選択したストレージシステムについてレポートを生成し、日付範囲と保護タイプでフィルタリングして、結果をCSV形式でダウンロードできます。</block>
+  <block id="6ca40fed8a7133003ac7b662160a7e13" category="paragraph">ONTAP ボリュームワークロードの保護の詳細については、<block ref="2a59f28eae334d4c500755e30c1cf84e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="6670366d68c7a8ab46f10d0e7683eeb5" category="list-text">*Hyper-V の設定*：次の手順を実行してください。</block>
+  <block id="da0e1eca92a9eb1111443e96b8196d3a" category="list-text">ホストのFQDNまたはIPアドレスを入力し、コンソールエージェントと資格情報を選択して、新しいHyper-Vホストを追加します。コンソールエージェントがFQDNを解決できない場合は、代わりにIPアドレスを使用してください。フェイルオーバークラスタの場合は、クラスタ管理IPアドレスを入力してください。</block>
+  <block id="fabdd9e2388c21b1d1588e5f54160735" category="list-text">*詳細設定*：必要に応じて、NetApp Hyper-V プラグインのインストールパスを入力します。</block>
+  <block id="c3b6f25d711d6680de1b5933b93726d7" category="list-text">*KVM設定*：次の手順を実行します。</block>
+  <block id="893154d2bbfb66474661f9a0545a1144" category="list-text">このKVMホストの認証情報をまだ保存していない場合は、*認証情報の追加*を選択してください。</block>
+  <block id="d6c9f02ce1679400431070286136d97d" category="list-text">以下の情報を入力して、新しいKVMホストを追加します：</block>
+  <block id="8b215f293605af71d0430a32a7e80999" category="list-text">*エージェント*：Backup and RecoveryとKVMホスト間の通信に使用するコンソールエージェントを選択します。</block>
+  <block id="a9c837a95e737168ee3ce1e980c47216" category="list-text">*認証情報*：KVMホストに保存されている認証情報を選択します。</block>
+  <block id="d41a581fc85315dff70aff8313ea3257" category="list-text">*詳細設定*：必要に応じて、KVMホストと通信するためのポートを入力し、リストからホストの管理プラットフォームを選択します。</block>
+  <block id="6ba9f255707f8a2103b20486c4949029" category="list-text">ディスクを分割する際の動作を選択してください。現在、*Always include all spanning disks* がサポートされています。</block>
+  <block id="f3a516904e0ccca6ef2462dfb7ce6d13" category="admonition">CIFS構成の場合、Backup and Recoveryは、保護グループ内の各VMに接続されているすべてのディスクを自動的に保護します。これには、複数のONTAPボリュームまたはONTAPストレージシステムに分散されたファイル（スパンニングディスク）と、単一の場所に限定されたファイル（非スパンニングディスク）が含まれます。SAN構成の場合、スパンニングディスク以外のすべてのディスクが保護グループに含まれます。</block>
+  <block id="eb66f05eb35d497da0a423fd13838c97" category="paragraph">オプションで、*新しいポリシーを作成*を選択して、新しい保護ポリシーを作成できます。ポリシーを選択すると、ポリシーの詳細が表示されます。</block>
+  <block id="c2a9493df2887bffbf4d321961143b50" category="paragraph">ONTAP システムで稼働している VMware データストアと VM を保護するには、まず NetApp Backup and Recovery でそれらを検出する必要があります。また、SnapCenter からバックアップデータとポリシーをインポートすることもできます。</block>
+  <block id="56ed800e3e95a86a0d288e29e284d3d6" category="section-title">VMwareワークロードを検出し、必要に応じて SnapCenter プラグインリソースをインポートします</block>
+  <block id="e8b6f1046eb45e0d7c556fe91f209ff5" category="paragraph">オンプレミスの SnapCenter Plug-in for VMware vSphere を使用する場合は、VMware データストアとリソース VM を NetApp Backup and Recovery にインポートできます。</block>
+  <block id="cb84b0bbbd691a54a50154950c0e836d" category="admonition">NetApp Backup and Recovery は VMware vCenter のみをサポートしており、vVols または vVols 上の VM を検出しません。</block>
+  <block id="2be89f2d64b748bc3ddbd4eda10bc1c4" category="list-text">すでにSnapCenterまたはSnapCenter Plug-in for VMware vSphereをお持ちの場合は、NetApp Backup and RecoveryのUIを使用して、SnapCenterリソースをNetApp Backup and Recoveryにインポートします。</block>
+  <block id="59f63937cd6da6ec7cfb13fb8668ed43" category="admonition">すでにSnapCenterプラグインをお持ちの場合は、SnapCenterからインポートする前に、前提条件を満たしていることを確認してください。たとえば、SnapCenterからインポートする前に、まずすべてのオンプレミスSnapCenterクラスタストレージ用のシステムをNetApp Consoleで作成する必要があります。<block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>を参照してください。SnapCenterホストから直接データをインポートするには、<block ref="ee998d05cd5af30cbe5fb785a79b4f67" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="9fa2560b9a95740336ffcc8454846563" category="section-title">SnapCenter プラグインを使用しない場合は、vCenter を追加してリソースを検出します</block>
+  <block id="4845b75256c82f5f32280991198ad08e" category="paragraph">SnapCenter Plug-in for VMware vSphereがインストールされていない場合は、NetApp Backup and Recoveryがワークロードを検出できるように、vCenter情報を追加します。各Consoleエージェント内で、ワークロードを検出するシステムを選択します。</block>
+  <block id="18246d81fb68cd2343a12805d2791031" category="list-text">*vCenter 設定*：次の操作を行ってください。</block>
+  <block id="6719804654c600651d2cad23ec96bd88" category="list-text">この vCenter サーバーの認証情報をまだ保存していない場合は、*認証情報の追加* を選択します。</block>
+  <block id="4ba860007747821205fc10f3946288e4" category="list-text">この vCenter で使用する Console エージェントを選択します。</block>
+  <block id="2e0a4ddd33096232c5d4c768a8314cd9" category="list-text">アカウントのドメイン、ユーザー名、パスワードを入力してください。</block>
+  <block id="06ddb25ccec51579cae2ff34e996f429" category="list-text">vCenter の FQDN または IP アドレスを入力し、Console エージェントを選択して、vCenter との認証に使用する資格情報を選択します。</block>
+  <block id="877a5658dfd839a5b12966f868d9de69" category="list-text">*詳細設定*：オプションで、vCenterとの通信に使用するポートを入力し、自己署名証明書の使用を有効にします。自己署名証明書は本番環境での使用は推奨されません。</block>
+  <block id="d732956918570635dce1b2dd5dac6327" category="section-title">SnapCenter Plug-in for VMware のリソースを NetApp Backup and Recovery にインポートする</block>
+  <block id="9dec481cd8405cdbd8356bddea37a828" category="paragraph">NetApp SnapCenter Plug-in for VMware から NetApp Backup and Recovery にリソースをインポートします。インポート処理中に、コンソールが ESXi ホスト、データストア、VM、およびスケジュールを自動的に検出するため、手動で再作成する必要はありません。</block>
+  <block id="eaaa8108cf51c6d618f2e2a4a0d4279b" category="list-text">検出中に、SnapCenter プラグインからリソースをインポートするオプションを選択します。</block>
+  <block id="987a4493afe0cd7f8a796c3201ef8369" category="list-text">検出後、設定メニューから SnapCenter プラグインリソースをインポートするオプションを選択します。詳細については、<block ref="97d5ee4c1307bc47ebfffa62683db47d" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8505a079b03207a95c1bee8a5bb91488" category="list-text">選択したvCenters、VM、およびデータストアの管理をNetApp Backup and Recoveryで開始します。管理を開始すると、NetApp Backup and RecoveryはインベントリページでvCenterを「Managed」としてラベル付けし、インポートしたリソースのバックアップとリカバリが可能になります。NetApp Backup and Recoveryで管理を開始した後は、SnapCenter プラグインを使用してこれらのリソースを管理しなくなります。</block>
+  <block id="376ec8b3e51e6597fb939c31a3fe0e59" category="list-text">*設定*を選択します。</block>
+  <block id="dde557737b6adddb3b5ac63ab390444f" category="list-text">*SnapCenterからのインポート ＞ SnapCenterからのインポート*を選択します。</block>
+  <block id="0b1c2288e02f81a5abc6efc0ad82c503" category="list-text">「インポート元」フィールドで、*SnapCenter Plug-in for VMware (SCV)* を選択します。</block>
+  <block id="a9cd412f9615bdc45608d80d697cbdf9" category="list-text">*SnapCenter Plug-in for VMware* のホスト認証情報を入力します：</block>
+  <block id="a0bfb2f62b787250e030fdf21138a6fd" category="list-text">*IPアドレス*：SnapCenter Plug-in for VMware vSphereのIPアドレスを入力します。</block>
+  <block id="a74ddb6f976bda860df11538fe8899ce" category="list-text">*ポート番号*：プラグインのポート番号を入力してください。</block>
+  <block id="17dd94ceb07f426452a46f98fc5f7178" category="list-text">*ユーザー名*と*パスワード*：OVA展開時に作成したユーザー名とパスワードを入力してください。</block>
+  <block id="a446374c4c4c3fc2ce33e7d1111ab1b9" category="list-text">*SSHパスワード*：SSHが有効になっている場合は、rootユーザーのSSHパスワードを入力してください。</block>
+  <block id="5950f420ea00b053ec6dda54548967ec" category="list-text">*エージェント*：プラグインで使用するコンソールエージェントを選択します。</block>
+  <block id="89e0000dd56bdf10ae2847acdff0e6dd" category="list-text">*新しい認証情報を追加*：既存のvCenter認証情報がない場合は、新しい認証情報を追加できます。次の情報を入力してください：</block>
+  <block id="0af523844bb81bb0f65da936b7af72a6" category="list-text">*認証情報名*：この新しい認証情報セットの名前を入力してください。</block>
+  <block id="92e781ed9b2cbb1d2bb902abf023729d" category="list-text">「移行を続行しますか？」のチェックボックスをオンにして、*管理*を選択してください。</block>
+  <block id="8ec423cb544f5a4931b35174a601686c" category="cell"><block ref="a1eba06bd1db60b0b7acd47a98fdd405" prefix="" category="inline-code"></block></block>
+  <block id="def96a092a0c6947fcdadafb96edb659" category="cell">NetApp Backup and Recovery for Volumes の「レポート」タブで日次バックアップデータ転送レポートを有効にします。このレポートは、お客様の環境全体における日々のバックアップおよびレプリケーションのデータ転送アクティビティに関する情報を提供します。</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026年9月16日</block>
 </blocks>

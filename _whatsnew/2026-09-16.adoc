@@ -1,0 +1,34 @@
+= 一般的なNetApp Backup and Recovery の機能強化
+:allow-uri-read: 
+
+
+
+
+[[general-netapp-backup-and-recovery-enhancements]]
+=== 一般的なNetApp Backup and Recovery の機能強化
+
+今回のリリースでは、KVM、Hyper-V、およびVMwareワークロードに以下の機能強化が導入されました：
+
+*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを登録する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。
+
+
+
+[[hyper-v-workloads-enhancements]]
+=== Hyper-V ワークロードの機能強化
+
+今回のリリースでは、Hyper-Vワークロードに以下の機能強化が導入されました。
+
+*VM のスパンディスク保護*: CIFS 構成の場合、Backup and Recovery は、保護グループ内の各 VM に接続されているすべてのディスクを保護できるようになりました。これには、複数の ONTAP ボリュームまたは ONTAP ストレージシステムに分散したファイル（スパンディスク）と、単一の場所に限定されたファイルが含まれます。
+
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-VワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
+
+
+
+[[ontap-volumes-workloads-enhancement]]
+=== ONTAPボリュームワークロードの強化
+
+今回のリリースでは、ONTAP Volumes ワークロードに、以下のプレビュー版機能強化が導入されました。
+
+*日次バックアップデータ転送レポート*：NetApp Backup and Recovery for Volumes の「レポート」タブに日次バックアップデータ転送レポートが追加されました。これにより、環境全体における日々のバックアップおよびレプリケーションのデータ転送状況を把握できます。アカウント全体または選択したストレージシステムについてレポートを生成し、日付範囲と保護タイプでフィルタリングして、結果をCSV形式でダウンロードできます。
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["NetApp Backup and Recoveryを使用したONTAPボリューム保護について説明します"]を参照してください。

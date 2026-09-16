@@ -14,24 +14,24 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-ONTAP システムで実行されている VMware データストアと VM を保護する前に、NetApp Backup and Recovery でそれらを検出する必要があります。すでに SnapCenter Plug-in for VMware vSphere がインストールされている場合は、そのバックアップデータとポリシーをインポートすることもできます。
+ONTAP システムで稼働している VMware データストアと VM を保護するには、まず NetApp Backup and Recovery でそれらを検出する必要があります。また、SnapCenter からバックアップデータとポリシーをインポートすることもできます。
 
 *必須 NetApp Console ロール* Backup and Recovery スーパー管理者。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 
 
-[[discover-vmware-workloads-and-optionally-import-snapcenter-resources]]
-== VMware ワークロードを検出し、オプションでSnapCenterリソースをインポートする
+[[discover-vmware-workloads-and-optionally-import-snapcenter-plug-in-resources]]
+== VMwareワークロードを検出し、必要に応じて SnapCenter プラグインリソースをインポートします
 
 検出中に、 NetApp Backup and Recovery は組織内の VMware ワークロードを分析し、既存の保護ポリシー、スナップショット、バックアップおよび復元オプションを評価してインポートします。
 
-VMware NFS および VMFS データストアと VM を、オンプレミスのSnapCenter Plug-in for VMware vSphereからNetApp Backup and Recoveryインベントリにインポートできます。
+オンプレミスの SnapCenter Plug-in for VMware vSphere を使用する場合は、VMware データストアとリソース VM を NetApp Backup and Recovery にインポートできます。
 
 
 NOTE: ストレージシステムを NetApp Console に追加した後、リソースを検出するまで数分お待ちください。ストレージシステムを追加した直後にリソースを検出すると、検出が失敗する可能性があります。
 
 
-NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter のみをサポートし、 vVolsまたはvVols上の VM を検出しません。
+NOTE: NetApp Backup and Recovery は VMware vCenter のみをサポートしており、vVols または vVols 上の VM を検出しません。
 
 インポート プロセス中に、 NetApp Backup and Recovery は次のタスクを実行します。
 
@@ -46,64 +46,68 @@ NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter の�
 
 検出は次のように行われます。
 
-* SnapCenter Plug-in for VMware vSphere がすでにインストールされている場合は、 NetApp Backup and Recovery UI を使用してSnapCenterリソースをNetApp Backup and Recoveryにインポートします。
+* すでにSnapCenterまたはSnapCenter Plug-in for VMware vSphereをお持ちの場合は、NetApp Backup and RecoveryのUIを使用して、SnapCenterリソースをNetApp Backup and Recoveryにインポートします。
 +
 
-NOTE: SnapCenterプラグインがすでにある場合は、 SnapCenterからインポートする前に前提条件を満たしていることを確認してください。たとえば、 SnapCenterからインポートする前に、まずNetApp ConsoleですべてのオンプレミスのSnapCenterクラスター ストレージ用のシステムを作成する必要があります。見るlink:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"]。
+NOTE: すでにSnapCenterプラグインをお持ちの場合は、SnapCenterからインポートする前に、前提条件を満たしていることを確認してください。たとえば、SnapCenterからインポートする前に、まずすべてのオンプレミスSnapCenterクラスタストレージ用のシステムをNetApp Consoleで作成する必要があります。link:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"]を参照してください。SnapCenterホストから直接データをインポートするには、link:br-start-configure.html#import-and-manage-snapcenter-host-resources["SnapCenterホストリソースのインポートと管理"]を参照してください。
 
 * SnapCenterプラグインがまだインストールされていない場合でも、vCenter を手動で追加して検出を実行することで、システム内のワークロードを検出できます。
 
 
 
 
-[[if-snapcenter-plug-in-is-not-already-installed-add-a-vcenter-and-discover-resources]]
-=== SnapCenterプラグインがまだインストールされていない場合は、vCenterを追加してリソースを検出します。
+[[if-not-using-the-snapcenter-plug-in-add-a-vcenter-and-discover-resources]]
+=== SnapCenter プラグインを使用しない場合は、vCenter を追加してリソースを検出します
 
-まだ SnapCenter Plug-in for VMware vSphere がインストールされていない場合は、NetApp Backup and Recovery がワークロードを検出できるように vCenter の情報を追加します。各 Console エージェント内で、ワークロードを検出するシステムを選択します。
+SnapCenter Plug-in for VMware vSphereがインストールされていない場合は、NetApp Backup and Recoveryがワークロードを検出できるように、vCenter情報を追加します。各Consoleエージェント内で、ワークロードを検出するシステムを選択します。
 
 .手順
 . NetApp Consoleの左側のナビゲーションから、*保護* > *バックアップとリカバリ* を選択します。
-+
-初めて Backup and Recovery にログインし、コンソールにシステムがあるがリソースが検出されていない場合は、[新しいNetApp Backup and Recovery へようこそ] ページが表示され、[リソースの検出] オプションが表示されます。
-
 . *リソースの検出*を選択します。
 . 次の情報を入力してください。
 +
 .. *ワークロード タイプ*: *VMware* を選択します。
-.. *vCenter 設定*: 新しい vCenter を追加します。新しい vCenter を追加するには、vCenter FQDN または IP アドレス、ユーザー名、パスワード、ポート、プロトコルを入力します。
+.. *vCenter 設定*：次の操作を行ってください。
++
+... この vCenter サーバーの認証情報をまだ保存していない場合は、*認証情報の追加* を選択します。
++
+**** この vCenter で使用する Console エージェントを選択します。
+**** この資格情報の名前を入力します。
+**** アカウントのドメイン、ユーザー名、パスワードを入力してください。
+**** *完了*を選択します。
+
+
+... vCenter の FQDN または IP アドレスを入力し、Console エージェントを選択して、vCenter との認証に使用する資格情報を選択します。
 +
 
 TIP: vCenter 情報を入力する場合は、vCenter 設定とホスト登録の両方の情報を入力します。ここで vCenter 情報を追加または入力した場合は、次に詳細設定でプラグイン情報も追加する必要があります。
 
-.. *ホスト登録*: VMware では必要ありません。
+
+
+.. *詳細設定*：オプションで、vCenterとの通信に使用するポートを入力し、自己署名証明書の使用を有効にします。自己署名証明書は本番環境での使用は推奨されません。
 
 
 . *Discover*を選択します。
-+
-
-TIP: このプロセスには数分かかる場合があります。
-
-. 詳細設定に進みます。
 
 
 
 
-[[if-snapcenter-plug-in-is-already-installed-import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
-=== SnapCenterプラグインがすでにインストールされている場合は、VMwareリソース用のSnapCenterプラグインをNetApp Backup and Recoveryにインポートします。
+[[import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
+=== SnapCenter Plug-in for VMware のリソースを NetApp Backup and Recovery にインポートする
 
-すでに SnapCenter Plug-in for VMware がインストールされている場合は、次の手順に従って SnapCenter Plug-in のリソースを NetApp Backup and Recovery にインポートします。NetApp Console は、プラグインから ESXi ホスト、データストア、VM、およびスケジュールを検出するため、これらの情報を再作成する必要はありません。
+NetApp SnapCenter Plug-in for VMware から NetApp Backup and Recovery にリソースをインポートします。インポート処理中に、コンソールが ESXi ホスト、データストア、VM、およびスケジュールを自動的に検出するため、手動で再作成する必要はありません。
 
 これは次の方法で実行できます。
 
-* 検出中に、 SnapCenterプラグインからリソースをインポートするオプションを選択します。
+* 検出中に、SnapCenter プラグインからリソースをインポートするオプションを選択します。
 * 検出後、インベントリ ページからSnapCenterプラグイン リソースをインポートするオプションを選択します。
-* 検出後、[設定] メニューから、 SnapCenterプラグイン リソースをインポートするオプションを選択します。詳細については、link:br-start-configure.html["NetApp Backup and Recoveryを構成する"] 。これは VMware ではサポートされていません。
+* 検出後、設定メニューから SnapCenter プラグインリソースをインポートするオプションを選択します。詳細については、link:br-start-configure.html["NetApp Backup and Recoveryを構成する"]を参照してください。
 
 
 このセクションでは、次の 2 つの部分から成るプロセスについて説明します。
 
 . SnapCenterプラグインからvCenterメタデータをインポートします。インポートされたvCenterリソースは、まだNetApp Backup and Recoveryによって管理されていません。
-. NetApp Backup and Recoveryで選択した vCenter、VM、およびデータストアの管理を開始します。管理を開始すると、 NetApp Backup and Recovery は、インベントリ ページで vCenter を「管理対象」としてラベル付けし、インポートしたリソースをバックアップおよびリカバリできるようになります。  NetApp Backup and Recoveryで管理を開始すると、 SnapCenterプラグインでそれらのリソースを管理できなくなります。
+. 選択したvCenters、VM、およびデータストアの管理をNetApp Backup and Recoveryで開始します。管理を開始すると、NetApp Backup and RecoveryはインベントリページでvCenterを「Managed」としてラベル付けし、インポートしたリソースのバックアップとリカバリが可能になります。NetApp Backup and Recoveryで管理を開始した後は、SnapCenter プラグインを使用してこれらのリソースを管理しなくなります。
 
 
 
@@ -117,28 +121,35 @@ TIP: SnapCenterプラグインから vCenter メタデータをインポート�
 
 .手順
 . コンソールの左側のナビゲーションから、*保護* > *バックアップとリカバリ*を選択します。
-. *在庫*を選択します。
-. NetApp Backup and Recovery のワークロード リソースの検出ページで、* SnapCenterからのインポート*を選択します。
-. [インポート元] フィールドで、* SnapCenter Plug-in for VMware* を選択します。
+. *設定*を選択します。
+. *SnapCenterからのインポート ＞ SnapCenterからのインポート*を選択します。
+. 「インポート元」フィールドで、*SnapCenter Plug-in for VMware (SCV)* を選択します。
+. *SnapCenter Plug-in for VMware* のホスト認証情報を入力します：
++
+SnapCenter プラグインがすでに登録されている場合は、既存の登録情報を更新できます。
+
++
+** *IPアドレス*：SnapCenter Plug-in for VMware vSphereのIPアドレスを入力します。
+** *ポート番号*：プラグインのポート番号を入力してください。
+** *ユーザー名*と*パスワード*：OVA展開時に作成したユーザー名とパスワードを入力してください。
+** *SSHパスワード*：SSHが有効になっている場合は、rootユーザーのSSHパスワードを入力してください。
+** *エージェント*：プラグインで使用するコンソールエージェントを選択します。
+
+
 . *VMware vCenter の資格情報* を入力してください:
 +
-.. *vCenter IP/ホスト名*: NetApp Backup and Recoveryにインポートする vCenter の FQDN または IP アドレスを入力します。
-.. *vCenter ポート番号*: vCenter のポート番号を入力します。
-.. *vCenter ユーザー名* と *パスワード*: vCenter のユーザー名とパスワードを入力します。
-.. *コネクタ*: vCenter のコンソール エージェントを選択します。
-
-
-. * SnapCenterプラグイン ホストの資格情報* を入力してください:
+** *既存の資格情報*: このオプションを選択すると、すでに追加されている既存の資格情報を使用できます。資格情報の名前を選択します。
+** *新しい認証情報を追加*：既存のvCenter認証情報がない場合は、新しい認証情報を追加できます。次の情報を入力してください：
 +
-.. *既存の資格情報*: このオプションを選択すると、すでに追加されている既存の資格情報を使用できます。資格情報の名前を選択します。
-.. *新しい資格情報の追加*: 既存のSnapCenterプラグイン ホスト資格情報がない場合は、新しい資格情報を追加できます。資格情報名、認証モード、ユーザー名、およびパスワードを入力します。
+*** *認証情報名*：この新しい認証情報セットの名前を入力してください。
+*** *vCenter IP/ホスト名*: NetApp Backup and Recoveryにインポートする vCenter の FQDN または IP アドレスを入力します。
+*** *vCenter ユーザー名* と *パスワード*: vCenter のユーザー名とパスワードを入力します。
+*** *vCenter ポート番号*: vCenter のポート番号を入力します。
+
+
 
 
 . *インポート* を選択してエントリを検証し、 SnapCenterプラグインを登録します。
-+
-
-NOTE: SnapCenter プラグインがすでに登録されている場合は、既存の登録情報を更新できます。
-
 
 
 .結果
@@ -157,7 +168,7 @@ SnapCenter Plug-in for VMware vSphereからvCenterメタデータをインポー
 . 「インベントリ」ページから、NetApp Backup and Recoveryで管理する、インポートされたvCenterを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示* をクリックして、ワークロードの詳細を表示します。
 . インベントリ > ワークロード ページから、アクション アイコン image:../media/icon-action.png["アクションオプション"] > *管理* を選択して、vCenter の管理ページを開きます。
-. 「移行を続行しますか？」のボックスをチェックし、「移行」を選択します。
+. 「移行を続行しますか？」のチェックボックスをオンにして、*管理*を選択してください。
 
 
 .結果
@@ -165,7 +176,8 @@ SnapCenter Plug-in for VMware vSphereからvCenterメタデータをインポー
 
 
 
-==== NetApp Backup and Recoveryダッシュボードに進みます
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
+=== NetApp Backup and Recoveryダッシュボードに進みます
 
 . ダッシュボードを表示するには、「Backup and Recovery」メニューから「Dashboard」を選択してください。
 . データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
