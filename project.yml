@@ -232,10 +232,14 @@ sidebar:
           url: "/br-use-kubernetes-advanced-restore-settings.html"
         - title: カスタムリソースを使用して復元操作中にリソースを変更する
           url: "/br-use-modify-resources-kubernetes-cr.html"
+        - title: VMベースのアプリケーションからファイルやフォルダを復元またはダウンロードする
+          url: "/br-use-restore-kubernetes-files-folders.html"
       - title: Kubernetes クラスターを管理する
         url: "/br-use-manage-kubernetes-clusters.html"
       - title: Kubernetes アプリケーションを管理する
         url: "/br-use-manage-kubernetes-applications.html"
+      - title: Kubernetesリソースへのアクセスを管理する
+        url: "/br-use-manage-kubernetes-access-control.html"
       - title: Kubernetes ワークロードの実行フック テンプレートを管理する
         url: "/br-use-manage-execution-hook-templates.html"
       - title: 保護レポートの作成と管理

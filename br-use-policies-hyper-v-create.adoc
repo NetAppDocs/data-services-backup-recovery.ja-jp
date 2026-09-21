@@ -53,7 +53,13 @@ NOTE: Hyper-Vワークロードの場合、バックアップスケジュール�
 
 ローカル スナップショット、セカンダリ ストレージへのレプリケーション、オブジェクト ストレージへのバックアップを管理するポリシーを作成できます。3-2-1 戦略の一部として、プライマリ ストレージ システム上のインスタンス、データベース、アプリケーション、または VM のスナップショットを作成します。
 
-*必須 NetApp Console ロール* Backup and Recovery スーパー管理者または Backup and Recovery バックアップ管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"]について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+*必須の NetApp Console ロール* 以下の両方が必要です：
+
+* *組織管理者*
+* *Backup and Recovery super admin* または *Backup and Recovery backup admin*
+
+
+Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。link:reference-roles.html["バックアップとリカバリの役割と権限"] について学ぶ。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .開始する前に
 セカンダリ ストレージに複製し、ローカル スナップショットまたはリモートONTAPセカンダリ ストレージでスナップショット ロックを使用する予定の場合は、まずクラスタ レベルでONTAPコンプライアンス クロックを初期化する必要があります。これは、ポリシーでスナップショット ロックを有効にするための要件です。

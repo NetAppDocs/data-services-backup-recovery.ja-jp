@@ -36,6 +36,7 @@ NOTE: これらの手順は、NetApp Console で組織管理者ロールが割�
 +
 *** *Organization admin* および *Backup and Recovery super admin*: これらの役割を持つユーザーは、組織全体のリソースを表示し、Backup and Recovery のワークロードを検出してプロジェクト（たとえば、US East または US West）に割り当てることができます。
 *** *フォルダーまたはプロジェクト管理者* および *Backup and Recovery スーパー管理者*：これらの役割を持つユーザーは、割り当てられたフォルダーまたはプロジェクト内のリソースのみを表示できますが、Backup and Recovery ワークロードを検出して、そのプロジェクトに割り当てることができます。
+*** *その他の Backup and Recovery のロール*：Backup and Recovery ビューアーや Backup and Recovery クローン管理者など、ユーザーに必要な特定の Backup and Recovery のロールを割り当てます。これらのロールにより、ユーザーはリソースの表示、ワークロードの保護、クローン作成、リストアなどの日常的なタスクを実行できます。Backup and Recovery のロールは、プラットフォームレベルのロールとは別に割り当ててください。詳細については、link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^]を参照してください。
 
 
 .. 代替オプション：
@@ -46,7 +47,7 @@ NOTE: これらの手順は、NetApp Console で組織管理者ロールが割�
 
 . Backup and Recoveryでワークロードを検出します。
 +
-組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（米国東部、米国西部など）を選択します。各ワークロードは、選択されたプロジェクトに自動的に関連付けられます。
+組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（US East や US West など）を選択します。各ワークロードは、選択したプロジェクトに自動的に関連付けられます。Kubernetes クラスターの場合、検出時にクラスターに関連付けるフォルダーまたはプロジェクトを任意で選択できます。
 
 . プロジェクトにユーザーを追加します。
 +
@@ -59,6 +60,9 @@ NOTE: これらの手順は、NetApp Console で組織管理者ロールが割�
 [[related-information]]
 == 関連情報
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetApp Console の ID とアクセス管理について説明します"^].
-* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^].
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["NetApp Console の ID とアクセス管理について説明します"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp ConsoleのNetApp Backup and Recoveryの役割"^]
+* link:reference-roles.html["NetApp Backup and Recovery のロールと権限"]
+* link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]
+* link:br-use-manage-kubernetes-access-control.html["Kubernetesリソースへのアクセスを管理する"]
 

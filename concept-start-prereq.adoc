@@ -416,6 +416,7 @@ NOTE: NetApp では、Kubernetes ワークロードに使用するコンソー�
 ** Kubernetesクラスタ、Trident Protect Connector、およびTrident Protectプロキシ間のアウトバウンド方向でTCPポート443がフィルタリングされていないことを確認してください。
 
 
+* VMベースのアプリケーションからファイルやフォルダを復元するには、SSHが必要です。Linux接続先ホストでSSHサービスが有効になっていること、およびWindows接続先ホストにOpenSSHサーバーがインストールされ、有効になっていることを確認してください。
 
 
 

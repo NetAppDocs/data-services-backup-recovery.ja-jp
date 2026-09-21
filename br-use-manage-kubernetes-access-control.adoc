@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: br-use-manage-kubernetes-access-control.html 
+keywords: backup, back up, restore, recovery, kubernetes, k8s, access control, rbac, iam, folder, project 
+summary: NetApp Console のフォルダー、プロジェクト、およびロールを使用して、NetApp Backup and Recovery の Kubernetes リソースへのアクセスを管理します。 
+---
+= Kubernetesリソースへのアクセスを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+クラスターレベルまたはリソースレベルで、NetApp Backup and Recovery の Kubernetes リソースへのアクセスを管理します。NetApp Console での検出時にクラスターをフォルダーまたはプロジェクトに関連付け、ユーザーに適切なロールを割り当てることで、クラスターリソースへのアクセスを管理します。名前空間をプロジェクトまたはフォルダーに関連付けられた IAM リソースとして登録することで、名前空間レベルでのリソースアクセスを管理します。
+
+クラスターを IAM フォルダーまたはプロジェクトに関連付ける方法については、link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]を参照してください。
+
+Kubernetes リソースのバックアップおよびリカバリにおける名前空間レベルのリソースアクセスは、アクセス制御のために名前空間を登録する際に、その名前空間に関連付けるフォルダまたはプロジェクトによって制御されます。名前空間がフォルダーまたはプロジェクトに関連付けられた後、そのスコープに対して適切な NetApp Console およびバックアップとリカバリのロールを持つユーザーは、名前空間とその保護されたリソースにアクセスできます。
+
+
+
+[[backup-and-recovery-roles-and-what-they-allow-with-kubernetes-workloads]]
+== バックアップとリカバリの役割、およびKubernetesワークロードでそれらが許可する機能
+
+フォルダーまたはプロジェクトに関連付けられた Kubernetes クラスターまたは名前空間の場合、ユーザーがそのフォルダーまたはプロジェクトに対して持つ特定の Backup and Recovery の役割によって、ユーザーが実行できる操作が決まります。Backup and Recovery の役割の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console でのバックアップとリカバリの役割"^]を参照してください。
+
+
+NOTE: バックアップおよびリカバリのクローン管理者ロールは、Kubernetesワークロードでは使用されません。
+
+[cols="1,2,2"]
+|===
+| ロール | 表示アクセスの範囲 | 許可された行為 
+
+
+| バックアップとリカバリのスーパー管理者 | 対象となるクラスター、ネームスペース、およびアプリケーションの全体像 | アプリケーションの表示、作成、保護（保護の作成/削除）、および復元 
+
+
+| バックアップおよびリカバリビューア | スコープ内のクラスターと名前空間のみを表示する | 閲覧のみ。作成、保護、復元できません。 
+
+
+| バックアップとリカバリ バックアップ管理者 | 対象となるクラスター、ネームスペース、およびアプリケーションの全体像 | アプリケーションの表示、作成、および保護（保護の作成/削除）を行います。復元できません。 
+
+
+| バックアップとリカバリ復元管理者 | 対象となるクラスター、ネームスペース、およびアプリケーションの全体像 | 閲覧と復元のみ可能です。アプリケーションや保護ポリシーを作成できません。 
+|===
+
+
+[[associate-a-kubernetes-namespace-with-a-folder-or-project]]
+== Kubernetes名前空間をフォルダまたはプロジェクトに関連付ける
+
+名前空間をフォルダーまたはプロジェクトに関連付けることで、そのスコープにアクセス制御を適用できます。
+
+*必須 NetApp コンソールロール* バックアップおよびリカバリのスーパー管理者。Cloud Volumes ONTAP クラスターに保存されているデータを保護する場合は、Cloud Volumes ONTAP 管理者ロールも必要です。詳細については、link:reference-roles.html["バックアップとリカバリの役割と権限"]を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
+
+.手順
+. NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
+. *ワークロード*の下にある*Kubernetes*タイルを選択します。
+. インベントリで、*Namespaces* メニューを選択します。
+. アクセス制御のために登録する名前空間を1つ以上選択し、それぞれのチェックボックスをオンにします。
+. 「アクセス制御に登録する」を選択してください。
+. 必要に応じて、フォルダーまたはプロジェクトを選択して、この名前空間にアクセス制御を適用する場所を指定します。フォルダーまたはプロジェクトを選択しない場合、名前空間 IAM リソースは登録されますが、フォルダーまたはプロジェクトには追加されません：
++
+** *フォルダー*：このオプションを選択すると、フォルダーレベルで名前空間リソースへのユーザーアクセスを制御できます。リストからフォルダーを選択してください。
++
+
+NOTE: Kubernetes クラスターまたは名前空間がフォルダーに関連付けられている場合、ユーザーは右上のプロジェクトセレクターで選択したプロジェクトに対して *Backup and Recovery viewer* ロールも必要です。このプロジェクトレベルのアクセス権により、ユーザーは Backup and Recovery のホームページを開くことができます。フォルダーレベルで割り当てられたロール（例：Backup and Recovery backup admin）は、ユーザーがワークロードページに入った後に実行できる操作を決定しますが、それ自体ではページへのアクセス権は付与されません。
+
+** *プロジェクト*：このオプションを選択すると、プロジェクトレベルで名前空間リソースへのユーザーアクセスを制御できます。リストからプロジェクトを選択してください。
++
+https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html#netapp-console-organizational-components["詳細情報"^] NetApp Console の組織コンポーネントについて。
+
+
+
+. 「登録」を選択します。
+
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:br-start-discover-kubernetes.html["Kubernetes ワークロードを発見する"]
+* link:br-rbac-setup.html["NetApp Backup and Recovery でロールベースのアクセス制御を設定"]
+* link:reference-roles.html["NetApp Backup and Recovery のロールと権限"]
+

@@ -1,0 +1,17 @@
+= Kubernetes ワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、Kubernetesワークロードに以下の機能強化が導入されました。
+
+* *Trident Protect 26.09*：このリリースには Trident Protect 26.09 が含まれます。
+* *クラスタおよび名前空間単位のロールベースのアクセス制御*：Kubernetesクラスタの検出中に、新しいクラスタに関連付けるプロジェクトまたはフォルダを選択することで、リソースへのアクセスを制御できます。アクセス制御のために、特定の名前空間を登録することもできます。これにより、クラスタレベルまたはネームスペースレベルで、よりきめ細かなアクセス制御が可能になります。
+* *ファイルとフォルダの復元*：Kubernetes VM ベースのアプリケーションバックアップから、特定のファイルとフォルダを復元またはダウンロードできるようになりました。
+
+
+Kubernetesワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["NetApp Backup and Recoveryを使用したKubernetesワークロードの保護について説明します"]を参照してください。
