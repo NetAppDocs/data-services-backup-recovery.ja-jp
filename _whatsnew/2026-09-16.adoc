@@ -1,20 +1,20 @@
-= 一般的なNetApp Backup and Recovery の機能強化
+= 一般的なNetApp Backup and Recoveryの機能強化
 :allow-uri-read: 
 
 
 
 
-[[general-netapp-backup-and-recovery-enhancements]]
-=== 一般的なNetApp Backup and Recovery の機能強化
+[[general-netapp-backup-and-recovery-enhancement]]
+=== 一般的なNetApp Backup and Recoveryの機能強化
 
 今回のリリースでは、KVM、Hyper-V、およびVMwareワークロードに以下の機能強化が導入されました：
 
-*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを登録する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。
+*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを検出する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。
 
 
 
-[[hyper-v-workloads-enhancements]]
-=== Hyper-V ワークロードの機能強化
+[[hyper-v-workloads-enhancement]]
+=== Hyper-Vワークロードの機能強化
 
 今回のリリースでは、Hyper-Vワークロードに以下の機能強化が導入されました。
 

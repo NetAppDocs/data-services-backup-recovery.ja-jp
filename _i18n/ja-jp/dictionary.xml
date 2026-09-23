@@ -5921,7 +5921,6 @@
   <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">アーカイブストレージからボリュームやファイルを復元するには、追加の時間がかかる場合があります。バックアップとリカバリが選択された優先度に基づいて復元を再試行している間、ジョブモニターではジョブは「進行中」のままになります。復元処理は「ジョブモニター」で監視します。すべての再試行後、ジョブが「完了」または「失敗」などの最終ステータスに達すると、復元処理は完了します。最終的にジョブが失敗しない限り、別の復元を開始しないでください。</block>
   <block id="534cf708a73e1e3ff80e4b70322d78d6" category="paragraph"><block ref="534cf708a73e1e3ff80e4b70322d78d6" category="inline-link-rx"></block></block>
   <block id="6c302dca9120d9212ecda9d1ad1f74c9" category="paragraph">今回のリリースでは、KVM、Hyper-V、およびVMwareワークロードに以下の機能強化が導入されました：</block>
-  <block id="0898522d58ded515e98cbdbeae0b2894" category="paragraph">*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを登録する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。</block>
   <block id="51b1f28526e9e7dfdb39548a8b5d4ac0" category="paragraph">*VM のスパンディスク保護*: CIFS 構成の場合、Backup and Recovery は、保護グループ内の各 VM に接続されているすべてのディスクを保護できるようになりました。これには、複数の ONTAP ボリュームまたは ONTAP ストレージシステムに分散したファイル（スパンディスク）と、単一の場所に限定されたファイルが含まれます。</block>
   <block id="1e62d1b5255654e86ebb8b223345252a" category="section-title">ONTAPボリュームワークロードの強化</block>
   <block id="705eb27960b89edebb2b2269e939009b" category="paragraph">今回のリリースでは、ONTAP Volumes ワークロードに、以下のプレビュー版機能強化が導入されました。</block>
@@ -6104,4 +6103,7 @@
   <block id="6cdd743b39af79062eb92fec70569354" category="section-title">2025年2月13日</block>
   <block id="008c6d012aabba0e44e2b94f8259635c" category="section-title">2024年11月22日</block>
   <block id="5fcc5d3ffc4bbbcf6d018ab4a9639205" category="section-title">2024年9月27日</block>
+  <block id="1f5228fb8e4d751814a84ea17a1c4929" category="doc">一般的なNetApp Backup and Recoveryの機能強化</block>
+  <block id="36d329847d8e5ae441cfdb0f4e5f6e2f" category="paragraph">*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを検出する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。</block>
+  <block id="ffe23fba63447ec89bcdd7bc0c48257f" category="section-title">Hyper-Vワークロードの機能強化</block>
 </blocks>
