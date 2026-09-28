@@ -1,0 +1,25 @@
+= 一般的なNetApp Backup and Recoveryの機能強化
+:allow-uri-read: 
+
+
+
+
+[[general-netapp-backup-and-recovery-enhancement]]
+=== 一般的なNetApp Backup and Recoveryの機能強化
+
+今回のリリースでは、KVM、Hyper-V、およびVMwareワークロードに以下の機能強化が導入されました：
+
+*コンソールロールベースアクセス制御（RBAC）サポート*：Hyper-V、KVM、VMware ワークロードは、RBAC 向け NetApp Console フレームワークをサポートするようになり、個々の Hyper-V、KVM、または VMware ホストへのアクセスを管理できます。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["RBACの使用方法について詳しくは、NetApp Backup and Recoveryを参照してください"]。
+
+
+
+[[vmware-workloads-enhancements]]
+=== VMwareワークロードの機能強化
+
+今回のリリースでは、VMwareワークロードに以下の機能強化が導入されました。
+
+*Google Cloud NetApp Volumes Flex Unified のサポート*：NetApp Backup and Recovery for VMware ワークロードが、Google Cloud NetApp Volumes の Flex Unified サービスレベルをサポートするようになりました。Flex Unified は ONTAP モードでのみサポートされています。
+
+VMwareワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["VMwareワークロードをNetApp Backup and Recoveryで保護する"]を参照してください。

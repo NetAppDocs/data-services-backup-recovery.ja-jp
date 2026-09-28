@@ -5971,7 +5971,6 @@
   <block id="8ec423cb544f5a4931b35174a601686c" category="cell"><block ref="a1eba06bd1db60b0b7acd47a98fdd405" prefix="" category="inline-code"></block></block>
   <block id="def96a092a0c6947fcdadafb96edb659" category="cell">NetApp Backup and Recovery for Volumes の「レポート」タブで日次バックアップデータ転送レポートを有効にします。このレポートは、お客様の環境全体における日々のバックアップおよびレプリケーションのデータ転送アクティビティに関する情報を提供します。</block>
   <block id="200e15de6a3939fa4dda17a8836f5233" category="list-text">*Trident Protect 26.09*：このリリースには Trident Protect 26.09 が含まれます。</block>
-  <block id="6e2d39e3670c746bf336eaad2e07b214" category="list-text">*クラスタおよび名前空間単位のロールベースのアクセス制御*：Kubernetesクラスタの検出中に、新しいクラスタに関連付けるプロジェクトまたはフォルダを選択することで、リソースへのアクセスを制御できます。アクセス制御のために、特定の名前空間を登録することもできます。これにより、クラスタレベルまたはネームスペースレベルで、よりきめ細かなアクセス制御が可能になります。</block>
   <block id="bc9e0a0c6dd42dbca705164e269a3b81" category="list-text">*ファイルとフォルダの復元*：Kubernetes VM ベースのアプリケーションバックアップから、特定のファイルとフォルダを復元またはダウンロードできるようになりました。</block>
   <block id="0eae5eefe564ecf4ccbc3e8d5990e3e5" category="list-text">*その他の Backup and Recovery のロール*：Backup and Recovery ビューアーや Backup and Recovery クローン管理者など、ユーザーに必要な特定の Backup and Recovery のロールを割り当てます。これらのロールにより、ユーザーはリソースの表示、ワークロードの保護、クローン作成、リストアなどの日常的なタスクを実行できます。Backup and Recovery のロールは、プラットフォームレベルのロールとは別に割り当ててください。詳細については、<block ref="8432e361253dad22d74ca5fd3ad3c136" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="495d694fb4e6c9ffefefeddb8fb2c749" category="paragraph">組織管理者、フォルダ管理者、またはプロジェクト管理者は、利用可能なワークロードを検出し、適切なプロジェクト（US East や US West など）を選択します。各ワークロードは、選択したプロジェクトに自動的に関連付けられます。Kubernetes クラスターの場合、検出時にクラスターに関連付けるフォルダーまたはプロジェクトを任意で選択できます。</block>
@@ -6106,4 +6105,13 @@
   <block id="36d329847d8e5ae441cfdb0f4e5f6e2f" category="paragraph">*VM ホスト検出時の認証情報の選択*：KVM、Hyper-V、または VMware ホストを検出する際に、Backup and Recovery に既に追加済みの認証情報を使用できるようになりました。</block>
   <block id="ffe23fba63447ec89bcdd7bc0c48257f" category="section-title">Hyper-Vワークロードの機能強化</block>
   <block id="8dbaebd91b282de2115c0933e53cc8b1" category="list-text">*バックアップよりも復元ジョブを優先*：ボリューム、ファイル、またはフォルダーを復元する際に、バックアップジョブよりも復元ジョブを優先できるようになりました。</block>
+  <block id="419cd2b7ee4c4a768ccdb742a76a6d51" category="paragraph">*ダークサイトのサポートを改善しました*：ダークサイト向け NetApp Backup and Recovery では、NetApp Backup and Recovery と同じ ONTAP ボリュームデータ保護機能を提供するようになりました。今回の機能強化には、バックアップ、リストア、ジョブ管理サービスの更新、および新しいメタデータデータベースが含まれています。アップグレード中は、既存のデータベースデータが保持され、自動的に移行されます。アップグレード後、監査ログを確認して、移行が正常に完了したことを検証してください。ダークサイト向け NetApp Backup and Recovery は、ONTAP ボリュームワークロードのみをサポートします。</block>
+  <block id="fc56ab1b23274c05b12ad0c8dc80ef1c" category="list-text">*クラスタおよび名前空間単位のロールベースアクセス制御（RBAC）*：Kubernetesクラスタの検出中に、新しいクラスタに関連付けるプロジェクトまたはフォルダを選択することで、リソースへのアクセスを制御できます。アクセス制御のために、特定の名前空間を登録することもできます。これにより、クラスタレベルまたは名前空間レベルで、よりきめ細かなアクセス制御が可能になります。</block>
+  <block id="f7afeeafbf15177ad50522c2abcfb502" category="paragraph">*コンソールロールベースアクセス制御（RBAC）サポート*：Hyper-V、KVM、VMware ワークロードは、RBAC 向け NetApp Console フレームワークをサポートするようになり、個々の Hyper-V、KVM、または VMware ホストへのアクセスを管理できます。</block>
+  <block id="ba79eaf594c940e1fe41ef7be1d90de0" category="inline-link">RBACの使用方法について詳しくは、NetApp Backup and Recoveryを参照してください</block>
+  <block id="c0efbe51bb7620993fb42a308c6ad8b2" category="paragraph"><block ref="d7adec871f52434e6c062a1e94dd0f14" category="inline-link-rx"></block>。</block>
+  <block id="fd2c958c800e793ec18ea2546e033c24" category="paragraph">*Google Cloud NetApp Volumes Flex Unified のサポート*：NetApp Backup and Recovery for VMware ワークロードが、Google Cloud NetApp Volumes の Flex Unified サービスレベルをサポートするようになりました。Flex Unified は ONTAP モードでのみサポートされています。</block>
+  <block id="af77598cf52235180b19bf359e518fc2" category="paragraph">VMwareワークロードの保護の詳細については、<block ref="d7977b9c562cb95be37532b996678207" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="b97cd70ddadb686487dcde47c3a4791d" category="list-text">Google Cloud NetApp Volumes（ONTAPモードおよびFlex Unifiedサービスレベル）</block>
+  <block id="e133e28734ec4222b7f45792925cee97" category="section-title">2026年9月28日</block>
 </blocks>

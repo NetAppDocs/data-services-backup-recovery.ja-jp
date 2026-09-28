@@ -277,8 +277,9 @@ VMware ワークロードを検出して保護するには、特定の要件が�
 
 | 接続されたストレージ  a| 
 * ONTAP 9.13.1以降（異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットをサポートするにはONTAP 9.19.1以降が必要です。最大100バケットまで）
-* Amazon FSx for NetApp ONTAP バージョン 9.13.1 以降を実行しているストレージ システム
 * ASA r2 SAN専用システム（ONTAP 9.17.1以降が必要）
+* Amazon FSx for NetApp ONTAP バージョン 9.13.1 以降を実行しているストレージ システム
+* Google Cloud NetApp Volumes（ONTAPモードおよびFlex Unifiedサービスレベル）
 
 
 |===
