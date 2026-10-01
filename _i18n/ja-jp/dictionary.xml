@@ -3230,7 +3230,6 @@
   <block id="c06e8b3ad6c2a4bcf247b5b6ff031cbf" category="admonition">ONTAPシステムを 9.13.x にアップグレードし、ジョブ モニターに進行中のスケジュールされたバックアップ操作が表示されない場合は、 NetApp Backup and Recoveryを再起動してください。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
   <block id="2d7e91b503470d39f08e98b06f5d7864" category="paragraph">ほとんどのフィルターは説明を要しません。「ワークロード」のフィルターを使用すると、次のカテゴリのジョブを表示できます。</block>
   <block id="9535df3e89123a36d140c06cf83471aa" category="paragraph">通知センターでアラートを表示し、ログインしていない場合でも重要なシステム アクティビティに関する電子メール アラートを送信するようにコンソールを構成することができます。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
-  <block id="63369edef3fcbf27a13a1f4394250d9b" category="paragraph">デフォルトでは、 NetApp Consoleの組織およびアカウント管理者は、すべての「重大」および「推奨事項」アラートに関するメールを受信します。デフォルトでは、システムは他のユーザーや受信者が通知メールを受信するように設定しません。  NetAppクラウド アカウントのコンソール ユーザー、またはバックアップと復元のアクティビティについて知る必要があるその他の受信者への電子メール アラートを構成します。</block>
   <block id="31aacaea95ea11818f2629af38fa3f2c" category="list-text">バックアップを開始する前に、検出されたホストのログ ディレクトリを構成します。</block>
   <block id="6f74e6b5a59cfaab5656a1be6c164a0a" category="paragraph">バックアップを開始する前に、ワークロードの保護ステータスを表示します。</block>
   <block id="457aa988b8eb5473cac5e0469be1df6a" category="paragraph">ワークロードをバックアップする前に、検出されたホストのアクティビティ ログ パスを設定して操作ステータスを追跡します。</block>
@@ -5380,7 +5379,6 @@
   <block id="c327b2b7ac3704c9c322df3bca8aab7e" category="paragraph">結果をフィルタリングまたは並べ替えた後、メインのジョブ監視ページの内容をレポートとしてダウンロードできます。NetApp Backup and RecoveryはCSVファイルを生成してダウンロードします。このファイルは、必要に応じて内容を確認したり、他のグループに送信したりできます。CSVファイルには最大10,000行のデータが含まれます。</block>
   <block id="714b7ef1018c44ef0c79e384540766a3" category="paragraph">バックアップコピーの有効期限を追跡し、監査をサポートするために、保持（_backup lifecycle_）ジョブを監視します。</block>
   <block id="ebb874a91308a9b8ae116acd0d55c0ce" category="paragraph">NetApp Console通知センターは、お客様が開始したバックアップおよびリストアジョブの進行状況を追跡し、操作が成功したかどうかを確認できます。</block>
-  <block id="d951db5806c5dd9d8ec3269b27d8752b" category="paragraph">コンソールのタイムラインでは、バックアップおよび復元操作の詳細を確認し、さらに調査することができます。コンソールタイムラインには、ユーザーが開始したイベントかシステムが開始したイベントかを問わず、各イベントの詳細が表示され、UIまたはAPIを介して開始されたアクションが表示されます。</block>
   <block id="84ecd721169d5c605dbcca8e4b87b0f6" category="inline-link">NetApp Console の操作のモニタリングについて</block>
   <block id="1b0decc1adcbaa0df14dd4b8aa07c062" category="paragraph"><block ref="f68769e6bd56c2c042f91d6dd3d25dda" category="inline-link-rx"></block>。</block>
   <block id="33dfb641cd4d6acea75347380756a630" category="summary">オンプレミスの ONTAP システムから Amazon Web Services、Microsoft Azure、および StorageGRID に Microsoft SQL Server アプリケーションデータをバックアップして、データを確実に保護します。</block>
@@ -6114,4 +6112,32 @@
   <block id="af77598cf52235180b19bf359e518fc2" category="paragraph">VMwareワークロードの保護の詳細については、<block ref="d7977b9c562cb95be37532b996678207" category="inline-link-rx"></block>を参照してください。</block>
   <block id="b97cd70ddadb686487dcde47c3a4791d" category="list-text">Google Cloud NetApp Volumes（ONTAPモードおよびFlex Unifiedサービスレベル）</block>
   <block id="e133e28734ec4222b7f45792925cee97" category="section-title">2026年9月28日</block>
+  <block id="935253a377b19143ee00ca184dec844f" category="paragraph">今回のリリースでは、ONTAP Volumes ワークロードに以下のプレビュー版の機能強化が導入されます。</block>
+  <block id="cd4f576093d5ac341dfcb0aaa95386df" category="list-text">*ボリューム復元ジョブのキャンセル*：ジョブ監視ページから進行中の ONTAP ボリューム復元ジョブをキャンセルできるようになりました。これにより、長時間実行されるジョブや実行速度の遅いジョブの管理が容易になります。</block>
+  <block id="f280b51545cc9233bf1322ad4aa41fc1" category="list-text">*ボリュームインデックスステータスレポートの改善*：ONTAP ボリュームダッシュボードは、インデックス作成の対象とならないボリュームおよびスナップショットコピーに<block ref="6136261711c49bf0e8e1dcb22a2c524f" prefix=" " category="inline-code"></block>ステータスを導入することで、インデックス作成ステータスをより正確に報告するようになりました。<block ref="838534d879f74e7af515a7de57e72b71" prefix=" " category="inline-code"></block>ステータスは、インデックス作成待ちのボリューム専用となり、ボリュームの詳細にはスナップショットごとのインデックス作成ステータスが表示され、ボリュームまたはスナップショットコピーがインデックス作成されない理由を説明するホバーテキストが表示されるようになりました。</block>
+  <block id="0ab4a270a7306aa53a9216568b919ddc" category="list-text">*NetApp AFXサポート*：2ノードおよび4ノードのNetApp AFXクラスターでホストされているボリュームを保護できるようになりました。</block>
+  <block id="84261bb42a8f4774a2a88f93ef2e7b97" category="paragraph">デフォルトでは、NetApp Console組織管理者およびアカウント管理者は、「重大」および「推奨」アラートに関するすべてのメール通知を受け取ります。設定しない限り、他のユーザーや受信者には通知メールは送信されません。NetApp Cloud Accountのコンソールユーザー向け、またはバックアップと復元アクティビティを監視する必要のあるその他の受信者向けにメールアラートを設定します。</block>
+  <block id="98e79c21e7c10597997314959fdd10d0" category="paragraph">コンソールのタイムラインを使用して、バックアップおよび復元操作を調査します。各イベントに関する詳細情報（ユーザーによって開始されたのか、システムによって開始されたのかなど）を提供し、UIまたはAPIを介して実行されたアクションを表示します。</block>
+  <block id="40305b815eb9b5fb3a975d34be14698f" category="section-title">進行中のジョブをキャンセルする</block>
+  <block id="c8dd83bac545851e691ee53c6bf71118" category="paragraph">バックアップおよびリカバリワークロードの中には、完了に時間がかかりすぎているが失敗していない場合に、進行中のジョブをキャンセルする機能をサポートしているものがあります。</block>
+  <block id="c137e799769a7454b6a1931c8d90a2bd" category="admonition">ONTAP Volumes の復元ジョブをキャンセルするには、<block ref="96dd8a0343f48aea81970933eccfcd1d" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="354f26b8c487e6cf93a857c5b1295cef" category="list-text">必要に応じて、「高度な検索とフィルタリング」エリアを展開し、特定の条件を選択してジョブ検索結果を絞り込むことができます。</block>
+  <block id="b119d9b7e39888b824b9e76b1f3c1bb6" category="list-text">「検索」を選択すると、一致する復元ジョブが表示されます。</block>
+  <block id="30aba68ce2e20aad165f9dfea8e8da72" category="list-text">リストからジョブを選択し、アクションメニュー <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> を選択して、*キャンセル* アクションを選択します（アクションのラベルはジョブの種類によって異なります）。</block>
+  <block id="6c776a625685ac880249a673e78404e9" category="list-text">確認ダイアログで、キャンセルを確定してください。</block>
+  <block id="2334788351c495c555cf1ec795d3a592" category="section-title">ONTAP Volumes 復元ジョブのキャンセル</block>
+  <block id="1f6a2c06fc3eaf8246ba5bd164f21c2c" category="paragraph">完了に時間がかかりすぎており、失敗していない場合は、ONTAP ボリュームのリストアジョブをキャンセルします。</block>
+  <block id="5f0c099781d2652d095607a987a47110" category="paragraph">ボリュームの復元をキャンセルすると、復元操作全体がロールバックされ、ボリュームのどの部分も復元されません。</block>
+  <block id="ee9f716edf70563519c906192c0b39e9" category="paragraph">ファイルとフォルダの復元時、バックアップとリカバリはファイルを8個ずつまとめて復元します。バッチ処理の進行中にファイルとフォルダの復元をキャンセルした場合、次のバッチが開始される前に復元処理は停止します。既に復元されたファイルやフォルダは、元の場所にそのまま残ります。</block>
+  <block id="89bb68d2ba06c8f5ec94311dc846a22f" category="paragraph">キャンセルできるジョブとキャンセルできないジョブの種類を確認してください。</block>
+  <block id="6e00df6cf203194e9db62250dcd59b84" category="cell">キャンセルできます</block>
+  <block id="c56beeb0de548206540e2478336371ea" category="cell">キャンセルできません</block>
+  <block id="75d6ce34553a749b1d6a586f79d9f1f6" category="cell">ローカルまたはクラウドのスナップショットからのボリュームリストア（FlexVolおよびFlexGroup）</block>
+  <block id="e62abda2edc633553c509cf9fbdfd763" category="cell">キューに登録された復元ジョブ</block>
+  <block id="d4fecb1eeebc825130e17bc277c17bfb" category="cell">クラウドからのファイルとフォルダの復元</block>
+  <block id="f6418296c6faecb259d5ebc86a7d65ca" category="cell">アーカイブ復元</block>
+  <block id="12ad3a859d20918ff344c7776abe3b50" category="cell">ローカルスナップショットから別のボリュームへのファイルとフォルダの復元</block>
+  <block id="30144384865c9bc036707d99163c215c" category="cell">ローカルスナップショットから同じボリュームへのファイルとフォルダの復元</block>
+  <block id="b6a5b73bc90d7aa324c49f4f91a911c2" category="list-text">リストからジョブを選択し、アクションメニュー<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>を選択して、*復元をキャンセル*アクションを選択します。</block>
+  <block id="67221d952a3dfa81a9eee1d6fc312266" category="list-text">確認ダイアログで、*復元をキャンセル* を選択します。</block>
 </blocks>
