@@ -32,7 +32,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 
 image:diagram_cloud_backup_cvo_azure.png["NetApp Backup and Recovery が、ソース システムのボリュームおよびバックアップ ファイルが保存されている宛先ストレージと通信する方法を示す図。"]
 
-サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
+サポートされるONTAPバージョン:: 最小要件はONTAP 9.8です。ONTAP 9.8P13以降を推奨します。AzureオブジェクトストレージでMicrosoft Entra ID認証を使用する場合は、ONTAP 9.16.1以降が必要です。
 サポートされているAzureリージョン:: NetApp Backup and Recovery は、Azure Government リージョンを含むすべての Azure リージョンでサポートされています。
 +
 --
@@ -52,6 +52,24 @@ NetApp Backup and Recovery PAYGO ライセンスの場合、 NetApp Backup and R
 NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。コンソール エージェントとCloud Volumes ONTAPシステムをダーク サイト (「プライベート モード」) に展開する場合は、BYOL ライセンスを使用する必要があります。
 
 バックアップを保存するストレージスペースには、Azureサブスクリプションも必要です。
+
+
+
+[[requirements-for-using-microsoft-entra-id-authentication-with-azure-object-stores]]
+[[anchor-entraid]]
+== Microsoft Entra ID 認証を Azure オブジェクト ストアで使用するための要件
+
+Azureオブジェクトストレージの認証にストレージアカウントのアクセスキーを使用しない場合は、Azureオブジェクトストレージバケットを作成する際、または既存のAzureバケット構成を編集する際に、Microsoft Entra ID認証を有効にすることができます。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされています。
+
+
+NOTE: 同じCloud Volumes ONTAPシステム内の異なるオブジェクトストア構成に対して、異なる認証方法を使用できますが、オブジェクトストア構成をMicrosoft Entra IDを使用するように切り替えたあとは、ストレージアカウントキーを使用するように戻すことはできません。
+
+* Cloud Volumes ONTAPシステムで「use-azure-msi-cvo」機能フラグが有効になっていることを確認します。詳細については、link:enable-preview-features.html["プレビュー機能を有にする"]を参照してください。
+* サポートされているのは、Bring Your Own Bucketバックアップ戦略オプションのみです。Azureストレージアカウントがすでに存在し、アカウントと同じ名前のコンテナが含まれていることを確認してください。
+* AzureストレージアカウントのIAM設定で、 `Storage Blob Data Contributor`ロールがAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てられていることを確認します。 `Object lock`ポリシーオプションを使用する場合は、ストレージアカウントでバージョン管理を有効にし、 `Storage Blob Data Owner`ロールをAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てます。
+
+
+ご使用の環境がこれらの要件を満たしている場合は、<<バックアップ戦略を定義する,バックアップ戦略を定義する>>の際に、新しい Azure オブジェクトストレージバケットの認証タイプとして `Entra ID`を選択できます。ONTAP ボリュームの *Backup settings* ページからlink:prev-ontap-policy-object-advanced-settings.html#switch-an-azure-object-store-configuration-to-microsoft-entra-id-authentication["既に構成済みのAzureバケットに対してEntra IDに切り替える"]こともできます。
 
 
 
@@ -146,8 +164,8 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
-[[required-information-for-using-customer-managed-keys-for-data-encryption]]
-=== データ暗号化に顧客管理キーを使用するために必要な情報
+[[requirements-for-using-customer-managed-keys-for-data-encryption]]
+=== データ暗号化に顧客管理キーを使用するための要件
 
 アクティベーション ウィザードでは、既定の Microsoft 管理の暗号化キーを使用する代わりに、独自の顧客管理キーをデータの暗号化に使用できます。この場合、Azure サブスクリプション、Key Vault 名、およびキーが必要になります。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["独自のキーの使用方法を確認する"^] 。
 
@@ -321,7 +339,7 @@ NOTE: 選択したボリュームのスナップショットおよびレプリ�
 
 
 .手順
-. 「バックアップ戦略の定義」ページで、次のいずれかまたはすべてを選択します。デフォルトでは 3 つすべてが選択されています。
+. 「バックアップ戦略の定義」ページで、以下のいずれか、またはすべてを選択してください。デフォルトでは3つすべてが選択されています：
 +
 ** *ローカル スナップショット*: オブジェクト ストレージへのレプリケーションまたはバックアップを実行する場合は、ローカル スナップショットを作成する必要があります。
 ** *レプリケーション*: 別のONTAPストレージ システムに複製されたボリュームを作成します。
@@ -370,25 +388,26 @@ TIP: レプリケーションをアクティブ化する前にカスタムポリ
 
 
 
-. *オブジェクトにバックアップ*: *バックアップ*を選択した場合は、次のオプションを設定します。
+. *バックアップ*: 次のオプションを設定します。
 +
+** *バックアップ先設定*：既存のバックアップ先を使用する場合はリストから選択するか、新しいバックアップ先を設定するかを選択します。
 ** *プロバイダー*: *Microsoft Azure* を選択します。
-** *プロバイダー設定*: プロバイダーの詳細を入力します。
+** *プロバイダー設定*：バケットの作成や認証オプションなど、プロバイダーの詳細を入力します：
 +
-バックアップを保存するリージョンを入力します。これは、Cloud Volumes ONTAPシステムが存在するリージョンとは異なるリージョンにすることができます。
-
+*** *新しいバケットを作成*：NetApp Backup and Recoveryは、プロバイダ環境にバケットを作成します。
+*** *Bring Your Own Bucket*：すでに作成済みの既存のバケットを使用します。
+*** *認証方法*：Azureへの認証には、ストレージアカウントアクセスキーまたはMicrosoft Entra IDのいずれかを使用するように選択します。環境がEntra ID <<anchor-entraid,要件>> を満たしている場合にのみ、*Entra ID*を選択できます。*ストレージアカウントアクセスキー*を選択した場合は、以下を選択します：
 +
-新しいストレージ アカウントを作成するか、既存のストレージ アカウントを選択します。
-
-+
-バックアップを保存するために使用する Azure サブスクリプションを入力します。これは、Cloud Volumes ONTAPシステムが存在するサブスクリプションとは異なるサブスクリプションにすることができます。
-
-+
-Blob コンテナーを管理する独自のリソース グループを作成するか、リソース グループの種類とグループを選択します。
-
+**** バックアップを保存するAzureサブスクリプションを選択してください。これは、Cloud Volumes ONTAPシステムが配置されているサブスクリプションとは別のサブスクリプションでもかまいません。
+**** バックアップを保存するリージョンを選択します。これは、Cloud Volumes ONTAPシステムが存在するリージョンとは異なるリージョンにすることができます。
+**** Blob コンテナーを管理する独自のリソース グループを作成するか、リソース グループの種類とグループを選択します。
 +
 
 TIP: バックアップ ファイルが変更されたり削除されたりするのを防ぐには、30 日間の保持期間を使用して不変ストレージが有効になっているストレージ アカウントが作成されていることを確認してください。
+
+
+
+
 
 ** *暗号化キー*: 新しい Azure ストレージ アカウントを作成した場合は、プロバイダーから提供された暗号化キー情報を入力します。データの暗号化を管理するために、既定の Azure 暗号化キーを使用するか、Azure アカウントから独自のカスタマー管理キーを選択するかを選択します。
 +

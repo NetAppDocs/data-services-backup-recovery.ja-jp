@@ -155,14 +155,29 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 [[requirements-for-protecting-ontap-volume-workloads]]
 == ONTAP ボリューム ワークロードを保護するための要件
 
-ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用するには、以下のホスト システム、容量、およびサイジングに関する前提条件が必要です。
+ONTAPボリュームワークロードでNetApp Backup and Recoveryを使用するには、以下の前提条件を満たしている必要があります。
 
-* ONTAP 9.8以降が必要です。
-* FlexGroup ボリューム保護には ONTAP 9.12.1 以降が必要です。詳細については、link:br-reference-limitations.html["ONTAPボリュームのNetApp Backup and Recoveryの既知の制限"] を参照してください。
-* ONTAP 9.17.1以降は、S3互換オブジェクトストレージへのバックアップまたはリストアに必要です。
-* 異なるクラウドプロバイダー間でシステムごとに6つ以上のバケット（最大100バケットまで）をサポートするには、ONTAP 9.19.1以降が必要です。
-* オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。
+[cols="2,1"]
+|===
+| 機能 | 必須ONTAPバージョン 
 
+
+| ONTAPボリュームを保護する | 9.8以降 
+
+
+| FlexGroupボリュームを保護する（詳細についてはlink:br-reference-limitations.html["ONTAPボリュームのNetApp Backup and Recoveryの既知の制限"]を参照してください） | 9.12.1以降 
+
+
+| Cloud Volumes ONTAPを保護する際は、AzureバケットにMicrosoft Entra ID認証を使用してください | 9.16.1以降 
+
+
+| S3互換オブジェクトストレージへのバックアップまたは復元 | 9.17.1以降 
+
+
+| 異なるクラウドプロバイダー間で、システムごとに6つ以上のバケットを使用する（最大100バケットまで） | 9.19.1以降 
+|===
+
+NOTE: オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。
 
 サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、link:prev-ontap-protect-overview.html["ONTAPボリュームデータを保護する"]を参照してください。
 

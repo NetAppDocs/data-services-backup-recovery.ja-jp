@@ -154,3 +154,22 @@ TIP: ランサムウェアスキャンを有効にすると、クラウドプロ
 . スキャンを実行する頻度を日数または週数で設定します。
 . *適用*を選択します。
 
+
+
+
+[[switch-an-azure-object-store-configuration-to-microsoft-entra-id-authentication]]
+== Azure オブジェクト ストア構成を Microsoft Entra ID 認証に切り替える
+
+Azureオブジェクトストレージの認証にストレージアカウントのアクセスキーを使用しない場合は、既存のAzureバケット構成を編集する際に、Microsoft Entra ID認証に切り替えることができます。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされています。
+
+.開始する前に
+Entra IDを使用するためのlink:prev-ontap-backup-cvo-azure.html#anchor-entraid["要件"^]を環境が満たしていることを確認してください。
+
+.手順
+. *ボリューム*タブから*バックアップ設定*を選択します。
+. _バックアップ設定ページ_から、システムのimage:icon-actions-horizontal.gif["その他のアイコン"]を選択し、*詳細設定の構成 > プロバイダー設定*を選択します。
+. 表示されたページの上部で、設定を変更する必要があるバケットを選択します。
+. *認証方法*セクションを展開します。
+. *Entra ID（マネージドID）*を選択してください。
+. *適用*を選択します。
+

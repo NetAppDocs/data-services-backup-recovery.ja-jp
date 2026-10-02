@@ -1704,10 +1704,7 @@
   <block id="c261701c0a638fff16b256b7172f9ad8" category="list-text">*ローカル スナップショット*: 既存のスナップショット ポリシーを選択するか、新しいスナップショット ポリシーを作成します。</block>
   <block id="b18210e92f4a87b1f7c6722188562864" category="admonition">レプリケーションをアクティブ化する前にカスタムポリシーを作成するには、<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block> 。</block>
   <block id="af14ed236e1187cb69e6b99e4332efba" category="list-text">*プロバイダー*: *Microsoft Azure* を選択します。</block>
-  <block id="308ae624df45c66718b6d2cb73b83d14" category="list-text">*プロバイダー設定*: プロバイダーの詳細を入力します。</block>
-  <block id="e850b416e9c74abb2c30ff149c33b965" category="paragraph">バックアップを保存するリージョンを入力します。これは、Cloud Volumes ONTAPシステムが存在するリージョンとは異なるリージョンにすることができます。</block>
   <block id="e90f61567d45b4aa5a1f884395480afd" category="paragraph">新しいストレージ アカウントを作成するか、既存のストレージ アカウントを選択します。</block>
-  <block id="fbbde4256c2fb5bda7558a46213f5d5a" category="paragraph">バックアップを保存するために使用する Azure サブスクリプションを入力します。これは、Cloud Volumes ONTAPシステムが存在するサブスクリプションとは異なるサブスクリプションにすることができます。</block>
   <block id="4516b0da13e1509d57f15deb85fd4416" category="paragraph">Blob コンテナーを管理する独自のリソース グループを作成するか、リソース グループの種類とグループを選択します。</block>
   <block id="933cc9e4a85b592d8fa25352508f2035" category="admonition">バックアップ ファイルが変更されたり削除されたりするのを防ぐには、30 日間の保持期間を使用して不変ストレージが有効になっているストレージ アカウントが作成されていることを確認してください。</block>
   <block id="fea7328886ae797091b7afcd97768302" category="admonition">さらにコストを最適化するために古いバックアップ ファイルを Azure Archive Storage に階層化する場合は、ストレージ アカウントに適切なライフサイクル ルールがあることを確認してください。</block>
@@ -4572,8 +4569,6 @@
   <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph"><block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>を参照して、NetApp Backup and Recoveryで操作を実行するために必要なロールと権限の詳細を確認してください。</block>
   <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">オブジェクト ストレージへのバックアップの要件</block>
   <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">ONTAP ボリューム ワークロードを保護するための要件</block>
-  <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">ONTAP ボリューム ワークロードに NetApp Backup and Recovery を使用するには、以下のホスト システム、容量、およびサイジングに関する前提条件が必要です。</block>
-  <block id="f17da14a026a5974537cf1303ac53974" category="list-text">ONTAP 9.8以降が必要です。</block>
   <block id="45b096193f4470968c1063df19d1c253" category="list-text">オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、<block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">データベース ホスト</block>
@@ -4683,8 +4678,6 @@
   <block id="ea5b48c7d3f8b0a9e0a12672ffc2b29a" category="list-text">ワークロードの項目で *View* を選択すると、Kubernetes リソースが表示されます。</block>
   <block id="a7ffc4809e4a33a20f30769fc3e62703" category="list-text">S3互換ストレージ（ONTAP Volumesワークロードのみ）</block>
   <block id="7229e78ecf33d07a5618d54695f22e2b" category="list-text">Microsoft Azure Blob ストレージ</block>
-  <block id="df9ce829d97bcaaccefd13ad9443c5fe" category="list-text">FlexGroup ボリューム保護には ONTAP 9.12.1 以降が必要です。詳細については、<block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="bc75b0ab08d9eba6d835f75a9dc3780f" category="list-text">ONTAP 9.17.1以降は、S3互換オブジェクトストレージへのバックアップまたはリストアに必要です。</block>
   <block id="6e61da6259c2e5766003325feb7a477a" category="list-text">保護するソースボリュームを選択する際は、一致するSnapLock設定を持つボリュームのみを選択できます。選択するボリュームは、すべてSnapLock機能が有効になっているか、すべてSnapLock機能が無効になっている必要があります。</block>
   <block id="fa428977bbfd079a1a152d734ac0da9a" category="list-text">*既存の SnapMirror および SyncMirror セカンダリ関係を使用する*：このオプションを有効にすると、既存の SnapMirror または SyncMirror 関係を使用して、指定されたデスティネーション クラスタにスナップショットを転送します。</block>
   <block id="2d86afc1dea874d04cb6b44f9329cb39" category="list-text">*VMwareワークロード*：</block>
@@ -6140,4 +6133,43 @@
   <block id="30144384865c9bc036707d99163c215c" category="cell">ローカルスナップショットから同じボリュームへのファイルとフォルダの復元</block>
   <block id="b6a5b73bc90d7aa324c49f4f91a911c2" category="list-text">リストからジョブを選択し、アクションメニュー<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>を選択して、*復元をキャンセル*アクションを選択します。</block>
   <block id="67221d952a3dfa81a9eee1d6fc312266" category="list-text">確認ダイアログで、*復元をキャンセル* を選択します。</block>
+  <block id="2ae03161c414273a2c4ef1fbfecc2c18" category="paragraph">ONTAPボリュームワークロードでNetApp Backup and Recoveryを使用するには、以下の前提条件を満たしている必要があります。</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
+  <block id="35d371dfd4ffcaa6df33332c8e851cb6" category="cell">必須ONTAPバージョン</block>
+  <block id="041dd7a51404fc5dc5a87c2a0bc90b15" category="cell">9.8以降</block>
+  <block id="5d373d06bd6c55f7acd2cd162140309b" category="cell">FlexGroupボリュームを保護する（詳細については<block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block>を参照してください）</block>
+  <block id="384264f87c50753f2eb17ca87ee9effa" category="cell">9.12.1以降</block>
+  <block id="7302e093b366701b61b9e7ea1cf0d501" category="cell">Cloud Volumes ONTAPを保護する際は、AzureバケットにMicrosoft Entra ID認証を使用してください</block>
+  <block id="5d4f2555064c941936a870946b60b493" category="cell">9.16.1以降</block>
+  <block id="a3f248f0b42b591c55de4315dfe33cbf" category="cell">S3互換オブジェクトストレージへのバックアップまたは復元</block>
+  <block id="a48a0937fc12df9714feb4f90708686d" category="cell">9.17.1以降</block>
+  <block id="8e8029d7ebad3152861cb8a5f298ff52" category="cell">異なるクラウドプロバイダー間で、システムごとに6つ以上のバケットを使用する（最大100バケットまで）</block>
+  <block id="33bb0fb1eb1d7544e65ed467aa0cf274" category="cell">9.19.1以降</block>
+  <block id="9ca7107af6688cc44a1bcc2ce2046b03" category="cell"><block ref="85f823e464828e8803d4ef0669c47bde" prefix="" category="inline-code"></block></block>
+  <block id="f4d8d86297c910edd07515360629dc8b" category="inline-link-macro">Cloud Volumes ONTAPをAzure Blob storageにバックアップする</block>
+  <block id="afdef63d55a31f83b0472ea15938d9cd" category="cell">Azureオブジェクトストレージに対して、ストレージアカウントアクセスキーを使用する代わりに、Microsoft Entra IDマネージドID認証を使用するオプションを有効にします。ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされます。詳細については、<block ref="233a4aa6c0a23fa528a31eee71ed15ac" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="abe72bc586e5883f1af04cf80727dc68" category="list-text">最小要件はONTAP 9.8です。ONTAP 9.8P13以降を推奨します。AzureオブジェクトストレージでMicrosoft Entra ID認証を使用する場合は、ONTAP 9.16.1以降が必要です。</block>
+  <block id="0c4cf99159d4cd1b532e2ab5e24174cb" category="section-title">Microsoft Entra ID 認証を Azure オブジェクト ストアで使用するための要件</block>
+  <block id="42920e377000a5bd5c1d6ca781abb0d8" category="paragraph">Azureオブジェクトストレージの認証にストレージアカウントのアクセスキーを使用しない場合は、Azureオブジェクトストレージバケットを作成する際、または既存のAzureバケット構成を編集する際に、Microsoft Entra ID認証を有効にすることができます。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされています。</block>
+  <block id="19491804ac62048a8e851071df62ae81" category="admonition">同じCloud Volumes ONTAPシステム内の異なるオブジェクトストア構成に対して、異なる認証方法を使用できますが、オブジェクトストア構成をMicrosoft Entra IDを使用するように切り替えたあとは、ストレージアカウントキーを使用するように戻すことはできません。</block>
+  <block id="f423e3045bb39879808f640f6d3edc7a" category="list-text">Cloud Volumes ONTAPシステムで「use-azure-msi-cvo」機能フラグが有効になっていることを確認します。詳細については、<block ref="6da975d9d27e80cef2a7d63b105961f2" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="393b26469137541bfe97a83dd8809ccc" category="list-text">サポートされているのは、Bring Your Own Bucketバックアップ戦略オプションのみです。Azureストレージアカウントがすでに存在し、アカウントと同じ名前のコンテナが含まれていることを確認してください。</block>
+  <block id="c25166e827f3d8e40a7dc77175109dd0" category="list-text">AzureストレージアカウントのIAM設定で、<block ref="43a75a85e4a5f4ca31d88a3753adbcea" prefix=" " category="inline-code"></block>ロールがAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てられていることを確認します。<block ref="7a97177198173bd0b74d0f70c9d953e3" prefix=" " category="inline-code"></block>ポリシーオプションを使用する場合は、ストレージアカウントでバージョン管理を有効にし、<block ref="74d42a47b950c356be555335ad7b2450" prefix=" " category="inline-code"></block>ロールをAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てます。</block>
+  <block id="61368bcd5b5179392ffa4405c00d249e" category="inline-link-macro">既に構成済みのAzureバケットに対してEntra IDに切り替える</block>
+  <block id="958d06d551680ecc2de50098779cabaf" category="inline-xref">バックアップ戦略を定義する</block>
+  <block id="1334bf370e99b217dfa24707a8013ec8" category="paragraph">ご使用の環境がこれらの要件を満たしている場合は、<block ref="d43a54f1761f010f98e5f729a40650ea" category="inline-xref-macro-rx"></block>の際に、新しい Azure オブジェクトストレージバケットの認証タイプとして<block ref="0248eceb183034c82899c7bc91d5d37c" prefix=" " category="inline-code"></block>を選択できます。ONTAP ボリュームの *Backup settings* ページから<block ref="6d99e488f0e600fabd6ff47eb61bcf0f" category="inline-link-macro-rx"></block>こともできます。</block>
+  <block id="77811f9b1ddfb0aa2879a2000b2513b6" category="section-title">データ暗号化に顧客管理キーを使用するための要件</block>
+  <block id="e1517d7086bafd3d92eae75445613f32" category="list-text">「バックアップ戦略の定義」ページで、以下のいずれか、またはすべてを選択してください。デフォルトでは3つすべてが選択されています：</block>
+  <block id="5741e8ce61ad7e2079c4958447deef4f" category="list-text">*バックアップ先設定*：既存のバックアップ先を使用する場合はリストから選択するか、新しいバックアップ先を設定するかを選択します。</block>
+  <block id="aa67358cced63c3ab92e847061153bda" category="list-text">*プロバイダー設定*：バケットの作成や認証オプションなど、プロバイダーの詳細を入力します：</block>
+  <block id="f3c92ea169084b24ee7f57949a25e6bc" category="list-text">*新しいバケットを作成*：NetApp Backup and Recoveryは、プロバイダ環境にバケットを作成します。</block>
+  <block id="9dfa550facaa156053152c7480a78e8a" category="list-text">*Bring Your Own Bucket*：すでに作成済みの既存のバケットを使用します。</block>
+  <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-xref">要件</block>
+  <block id="760f22cd63d8ba2af5510c6c9a156865" category="list-text">*認証方法*：Azureへの認証には、ストレージアカウントアクセスキーまたはMicrosoft Entra IDのいずれかを使用するように選択します。環境がEntra ID <block ref="ddbcf24f8793bd718ad1413287a068f4" category="inline-xref-macro-rx"></block> を満たしている場合にのみ、*Entra ID*を選択できます。*ストレージアカウントアクセスキー*を選択した場合は、以下を選択します：</block>
+  <block id="03628d2a24f98121695c37a42df64ac7" category="list-text">バックアップを保存するAzureサブスクリプションを選択してください。これは、Cloud Volumes ONTAPシステムが配置されているサブスクリプションとは別のサブスクリプションでもかまいません。</block>
+  <block id="2b6fad0bbaa44587d9b5ac0ac2031ce4" category="section-title">Azure オブジェクト ストア構成を Microsoft Entra ID 認証に切り替える</block>
+  <block id="53a4f9c26971c8e33aa0fba4358ddb67" category="paragraph">Azureオブジェクトストレージの認証にストレージアカウントのアクセスキーを使用しない場合は、既存のAzureバケット構成を編集する際に、Microsoft Entra ID認証に切り替えることができます。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされています。</block>
+  <block id="969defc1889ccc6f8ee630d878ad0cf6" category="paragraph">Entra IDを使用するための<block ref="fea8710e19d17f9dcce7cbc75ce18f8b" category="inline-link-macro-rx"></block>を環境が満たしていることを確認してください。</block>
+  <block id="b7653fde2d6e0a6d514915930b0db4bd" category="list-text">*認証方法*セクションを展開します。</block>
+  <block id="68bc12754c0710946a9eaa7fa64fb06b" category="list-text">*Entra ID（マネージドID）*を選択してください。</block>
 </blocks>
