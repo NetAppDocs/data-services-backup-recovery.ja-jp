@@ -4023,7 +4023,6 @@
   <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
   <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">*ls* コマンドを実行して、「catalogdb1」フォルダが作成され、そのフォルダ内にサブフォルダ<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>、および<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>が含まれていることを確認してください。</block>
-  <block id="5896522d63454009d1844a27f9e16972" category="cell">7.4.13以降</block>
   <block id="0fd3e1f73fc71151c33e67909039dd88" category="paragraph">今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：</block>
   <block id="b77d45fa1e71e6bf913df1f7680aa70c" category="list-text">*クラスタホストのサポート*：Oracle Automatic Storage Management（ASM）を使用し、VMFSファイルシステム上にVMDKを使用してデプロイされたOracle Real Application Clusters（RAC）データベースを検出および保護できるようになりました。詳細については、<block ref="d0dab0542f96585a18cc2e536da75fd6" category="inline-link-rx"></block>を参照してください。</block>
   <block id="cb7dc55d43e841bfb3cf4e114d10c93d" category="inline-link">Oracleデータベースを設定する</block>
@@ -4227,7 +4226,6 @@
   <block id="1eb5bc9aed171393a1b9575017d9efef" category="cell"><block ref="ff10ff95bc79c857a9d612d300c756c9" prefix="" category="inline-code"></block></block>
   <block id="bad5ef63ec2094c6d84831f4e77806a0" category="cell">Backup and Recovery Web UIにおける復元ワークフロー中に、*既存のジョブキューよりも復元を優先する*オプションを選択できるようにします。復元ワークフロー中にこのオプションを選択すると、復元操作は他のキューに登録されたジョブよりも優先され、キューがビジー状態の場合でも実行されます。</block>
   <block id="5760817f42cfdcd9c310ec63890ecb27" category="section-title">プレビュー機能を有にする</block>
-  <block id="72493bb7c79c6733ffc1d16ee7c7d104" category="paragraph">プレビュー機能フラグオプションを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。</block>
   <block id="eb7643c8d813a09c07f2d8076b2befd1" category="list-text">ルートユーザーに変更します：</block>
   <block id="9ba4f57294fda814dbab7cbda4e897fa" category="list-text">Docker で NetApp Backup and Recovery ボリュームを見つけます。</block>
   <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">次のような出力が表示されます。</block>
@@ -4513,7 +4511,6 @@
   <block id="aefd2cbeb423f608e4e14dc18e7cda38" category="section-title">アクティブな VMDK マウントセッションを表示する</block>
   <block id="29760f5766da0c4d6a0ac770b454e9d0" category="paragraph">開いているVMDKマウントセッションの一覧が表示されます。関連するバックアップ、ソースVM、マウントパス、その他の情報を確認できます。</block>
   <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
-  <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（およびそれ以降のすべての 8.0.x パッチ）</block>
   <block id="5b94860a42a3f19b0fba83e9b7d762f3" category="sidebar">VMwareワークロードをクローンする</block>
   <block id="beb76bddbaec1f03042fdde3ce87a100" category="sidebar">KVMワークロードのバックアップポリシーを作成および管理する</block>
   <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">Hyper-Vワークロードのバックアップポリシーを作成および管理する</block>
@@ -4529,8 +4526,6 @@
   <block id="17ee1e3baa1892c1f3d00118ea446fca" category="section-title">ボリュームのインデックス作成を無効にする</block>
   <block id="9d0f404c5a1959bdade3f7db9b0dfed5" category="paragraph">以下のオプションフラグを使用して、特定のボリューム、または1つ以上のStorage VMに属するすべてのボリュームのインデックス作成を無効にします：</block>
   <block id="99d6bb7f841b0ddd33dd9e23fe42b4e8" category="list-text"><block ref="2f0729ea8ff63f23144ca016d097072b" prefix="" category="inline-code"></block>：ボリュームをインデックス化しないストレージVMのカンマ区切りリスト</block>
-  <block id="a4c2ad915aa7ffe7e12eaa0ec56e0fcb" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：索引付けしない個々のボリュームをカンマで区切ったリスト</block>
-  <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text"><block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>という名前のファイルを作成し、ストレージVMとボリューム名を環境に合わせてカスタマイズします。</block>
   <block id="48be46e5153e88189d804da13793e42d" category="list-text">ローカルスナップショットからのフォルダの復元はサポートされていません。</block>
   <block id="637d209786fc6476ac3ed36c800de343" category="summary">プライベートモード（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。コンソールエージェントのホストシステムに障害が発生した場合は、新しいコンソールエージェントをデプロイしてこのデータを復元できます。</block>
   <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">_プライベートモード_（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。Consoleエージェントのホストシステムに障害が発生した場合、新しいConsoleエージェントを導入して、このデータをリストアできます。</block>
@@ -6146,8 +6141,6 @@
   <block id="8e8029d7ebad3152861cb8a5f298ff52" category="cell">異なるクラウドプロバイダー間で、システムごとに6つ以上のバケットを使用する（最大100バケットまで）</block>
   <block id="33bb0fb1eb1d7544e65ed467aa0cf274" category="cell">9.19.1以降</block>
   <block id="9ca7107af6688cc44a1bcc2ce2046b03" category="cell"><block ref="85f823e464828e8803d4ef0669c47bde" prefix="" category="inline-code"></block></block>
-  <block id="f4d8d86297c910edd07515360629dc8b" category="inline-link-macro">Cloud Volumes ONTAPをAzure Blob storageにバックアップする</block>
-  <block id="afdef63d55a31f83b0472ea15938d9cd" category="cell">Azureオブジェクトストレージに対して、ストレージアカウントアクセスキーを使用する代わりに、Microsoft Entra IDマネージドID認証を使用するオプションを有効にします。ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされます。詳細については、<block ref="233a4aa6c0a23fa528a31eee71ed15ac" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="abe72bc586e5883f1af04cf80727dc68" category="list-text">最小要件はONTAP 9.8です。ONTAP 9.8P13以降を推奨します。AzureオブジェクトストレージでMicrosoft Entra ID認証を使用する場合は、ONTAP 9.16.1以降が必要です。</block>
   <block id="0c4cf99159d4cd1b532e2ab5e24174cb" category="section-title">Microsoft Entra ID 認証を Azure オブジェクト ストアで使用するための要件</block>
   <block id="42920e377000a5bd5c1d6ca781abb0d8" category="paragraph">Azureオブジェクトストレージの認証にストレージアカウントのアクセスキーを使用しない場合は、Azureオブジェクトストレージバケットを作成する際、または既存のAzureバケット構成を編集する際に、Microsoft Entra ID認証を有効にすることができます。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされています。</block>
@@ -6172,4 +6165,13 @@
   <block id="969defc1889ccc6f8ee630d878ad0cf6" category="paragraph">Entra IDを使用するための<block ref="fea8710e19d17f9dcce7cbc75ce18f8b" category="inline-link-macro-rx"></block>を環境が満たしていることを確認してください。</block>
   <block id="b7653fde2d6e0a6d514915930b0db4bd" category="list-text">*認証方法*セクションを展開します。</block>
   <block id="68bc12754c0710946a9eaa7fa64fb06b" category="list-text">*Entra ID（マネージドID）*を選択してください。</block>
+  <block id="0491a290496a647f9f8b7a77afbb4a59" category="admonition">選択したファイルとフォルダの合計サイズは5 MBを超えることはできません。</block>
+  <block id="a1cf900390187e5be1460cc1f4cf8265" category="cell">10.0.10 ホスティングバンドル</block>
+  <block id="9b237dcdc22b8d854b0c16f0a9d8b68b" category="cell">7.6.4以降</block>
+  <block id="de67e78e01941dcc9c15168df621fae8" category="cell">ストレージアカウントのアクセスキーを使用する代わりに、AzureオブジェクトストレージでMicrosoft Entra IDマネージドID認証を使用するオプションを有効にします。ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされます（ConsoleエージェントもAzureに存在する必要があります）。詳細については、<block ref="f363f656ffffe333619f8fa07242f366" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="80e04227d7e4cba8f70346caa34031fa" category="paragraph">プレビュー機能フラグを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。</block>
+  <block id="8830ede83298d61256b72a05ef889a1d" category="admonition">これらの例はDockerを使用していることを前提としています。Podmanを使用している場合は、同等のPodmanコマンドを実行してください。</block>
+  <block id="2a3eb35eaa4bea08656e899dd4bc3c61" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：インデックスを作成しないボリュームの個々のボリュームIDをカンマで区切ったリスト</block>
+  <block id="3a273880b40ea51e4b60121d32145e13" category="list-text"><block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>という名前のファイルを作成し、環境に合わせてストレージVM名とボリュームIDをカスタマイズします：</block>
+  <block id="a940e8044fb83a96d0472abdc71d61e8" category="list-text">Cloud Volumes ONTAPシステムとコンソールエージェントは両方ともAzure上に存在する必要があります。</block>
 </blocks>

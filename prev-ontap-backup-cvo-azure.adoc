@@ -64,6 +64,7 @@ Azureオブジェクトストレージの認証にストレージアカウント
 
 NOTE: 同じCloud Volumes ONTAPシステム内の異なるオブジェクトストア構成に対して、異なる認証方法を使用できますが、オブジェクトストア構成をMicrosoft Entra IDを使用するように切り替えたあとは、ストレージアカウントキーを使用するように戻すことはできません。
 
+* Cloud Volumes ONTAPシステムとコンソールエージェントは両方ともAzure上に存在する必要があります。
 * Cloud Volumes ONTAPシステムで「use-azure-msi-cvo」機能フラグが有効になっていることを確認します。詳細については、link:enable-preview-features.html["プレビュー機能を有にする"]を参照してください。
 * サポートされているのは、Bring Your Own Bucketバックアップ戦略オプションのみです。Azureストレージアカウントがすでに存在し、アカウントと同じ名前のコンテナが含まれていることを確認してください。
 * AzureストレージアカウントのIAM設定で、 `Storage Blob Data Contributor`ロールがAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てられていることを確認します。 `Object lock`ポリシーオプションを使用する場合は、ストレージアカウントでバージョン管理を有効にし、 `Storage Blob Data Owner`ロールをAzure AgentとCloud Volumes ONTAPシステムの両方に割り当てます。

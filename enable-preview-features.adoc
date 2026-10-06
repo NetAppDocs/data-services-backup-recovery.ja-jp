@@ -40,14 +40,17 @@ NetApp Backup and Recovery では、以下のプレビュー機能を有効に�
 | `"data-transfer-report": true` | NetApp Backup and Recovery for Volumes の「レポート」タブで日次バックアップデータ転送レポートを有効にします。このレポートは、お客様の環境全体における日々のバックアップおよびレプリケーションのデータ転送アクティビティに関する情報を提供します。 
 
 
-| `"use-azure-msi-cvo": true` | Azureオブジェクトストレージに対して、ストレージアカウントアクセスキーを使用する代わりに、Microsoft Entra IDマネージドID認証を使用するオプションを有効にします。ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされます。詳細については、link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAPをAzure Blob storageにバックアップする"]を参照してください。 
+| `"use-azure-msi-cvo": true` | ストレージアカウントのアクセスキーを使用する代わりに、AzureオブジェクトストレージでMicrosoft Entra IDマネージドID認証を使用するオプションを有効にします。ONTAP 9.16.1以降を実行しているAzureシステム上のCloud Volumes ONTAPでサポートされます（ConsoleエージェントもAzureに存在する必要があります）。詳細については、link:prev-ontap-backup-cvo-azure.html#anchor-entraid["Microsoft Entra ID 認証を Azure オブジェクト ストアで使用するための要件"]を参照してください。 
 |===
 
 
 [[enable-preview-features]]
 == プレビュー機能を有にする
 
-プレビュー機能フラグオプションを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。
+プレビュー機能フラグを有効にすると、まだ一般提供されていない機能を使用できます。プレビュー機能は、本番環境では慎重に使用してください。
+
+
+NOTE: これらの例はDockerを使用していることを前提としています。Podmanを使用している場合は、同等のPodmanコマンドを実行してください。
 
 .手順
 . SSHを使用してコンソールエージェントにログインします。
@@ -131,8 +134,11 @@ NOTE: プレビュー機能を無効にするには、同じ手順に従いま�
 以下のオプションフラグを使用して、特定のボリューム、または1つ以上のStorage VMに属するすべてのボリュームのインデックス作成を無効にします：
 
 * `svms-not-to-index`：ボリュームをインデックス化しないストレージVMのカンマ区切りリスト
-* `volumes-not-to-index`：索引付けしない個々のボリュームをカンマで区切ったリスト
+* `volumes-not-to-index`：インデックスを作成しないボリュームの個々のボリュームIDをカンマで区切ったリスト
 
+
+
+NOTE: これらの例はDockerを使用していることを前提としています。Podmanを使用している場合は、同等のPodmanコマンドを実行してください。
 
 .手順
 . SSHを使用してコンソールエージェントにログインします。
@@ -176,14 +182,14 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_catalog_config
 ----
-.  `production-customer.json`という名前のファイルを作成し、ストレージVMとボリューム名を環境に合わせてカスタマイズします。
+.  `production-customer.json`という名前のファイルを作成し、環境に合わせてストレージVM名とボリュームIDをカスタマイズします：
 +
 [source, json]
 ----
 {
   "indexing": {
-    "svms-not-to-index": "storage_vm_1,storage_vm_2,storage_vm_3",
-    "volumes-not-to-index": "volume_1,volume_2,volume_3"
+    "svms-not-to-index": "storage_vm_name_1,storage_vm_name_2,storage_vm_name_3",
+    "volumes-not-to-index": "volume_ID_1,volume_ID_2,volume_ID_3"
   }
 }
 ----
