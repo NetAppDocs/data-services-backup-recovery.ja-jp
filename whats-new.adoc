@@ -36,6 +36,18 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["
 
 
 
+[[ontap-volumes-workloads-enhancement]]
+=== ONTAPボリュームワークロードの強化
+
+今回のリリースでは、ONTAP Volumes ワークロードに、以下のプレビュー版機能強化が導入されました。
+
+* *Cloud Volumes ONTAP Azure Entra ID のサポート*：Azure 認証にストレージアカウントのアクセスキーを使用しない場合は、Azure オブジェクトストレージバケット構成に Microsoft Entra ID 認証を使用できるようになりました。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム内のCloud Volumes ONTAPでサポートされています。
+
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["NetApp Backup and Recoveryを使用したONTAPボリューム保護について説明します"]を参照してください。
+
+
+
 [[vmware-workloads-enhancements]]
 === VMwareワークロードの機能強化
 
