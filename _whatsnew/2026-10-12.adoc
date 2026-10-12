@@ -1,0 +1,38 @@
+= Hyper-V ワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+[[hyper-v-workloads-enhancements]]
+=== Hyper-V ワークロードの機能強化
+
+今回のリリースでは、Hyper-V ワークロードに以下の機能強化が導入されました。
+
+* *NetApp MetroClusterサポート*：NetApp Backup and Recoveryにより、NetApp MetroClusterでミラーリングされたHyper-V VMを保護できるようになりました。
+* *SAN VMのスパンディスク保護*：CIFSおよびSAN構成の場合、保護グループ内の各VMに接続されているすべてのディスクを保護できるようになりました。これには、複数のONTAPボリュームまたはONTAPストレージシステムに分散しているファイル（スパンディスク）や、単一の場所に限定されたファイルが含まれます。
+
+
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-VワークロードをNetApp Backup and Recoveryで保護する方法について説明します"]を参照してください。
+
+
+
+[[oracle-database-workloads-enhancement]]
+=== Oracle Databaseワークロードの強化
+
+今回のリリースでは、Oracle Databaseワークロードに以下の機能強化が導入されました：
+
+*自動アーカイブログ管理*：データベースのリストアおよびクローン処理中、NetApp Backup and Recoveryは必要なアーカイブログを自動的に検出してマウントし、処理が完了するとアンマウントします。プライマリ、セカンダリ、およびオブジェクトストレージのログソースがサポートされています。
+
+Oracle Databaseワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["NetApp Backup and Recovery を使用した Oracle Database ワークロードの保護について学ぶ"]を参照してください。
+
+
+
+[[microsoft-sql-server-workloads-enhancement]]
+=== Microsoft SQL Serverワークロードの強化
+
+今回のリリースでは、Microsoft SQL Serverワークロードに以下の機能強化が導入されました：
+
+*ライセンス変更*：ディスク間またはディスク間のファンアウトアーキテクチャを使用したバックアップには、料金が適用されなくなりました。料金は、3-2-1またはディスクツーオブジェクトストレージアーキテクチャを使用したバックアップを含む、オブジェクトストレージへのバックアップにのみ適用されます。
+
+Microsoft SQL Serverワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["NetApp Backup and Recoveryを使用したMicrosoft SQL Serverワークロードの保護について"]を参照してください。

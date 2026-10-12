@@ -1143,7 +1143,6 @@
   <block id="efe1918d405691fc9d90b1a6589911df" category="list-text">ローカル スナップショットからデータベースを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。</block>
   <block id="b3460ca65bf39006b718d394a43c3ebf" category="list-text">複製されたストレージから復元する場合は、元の場所に復元できます。</block>
   <block id="3ac9aabbf91084676e4b67aa8a398c20" category="list-text">オブジェクト ストレージからバックアップを復元する場合、データをソース ストレージまたはオンプレミスのONTAPシステムに復元し、そこからデータベースを回復できます。</block>
-  <block id="de8e79d7f6fb2709000846a84f9a1628" category="paragraph">[復元] ページ (検索と復元とも呼ばれます) からは、データベースの正確な名前、データベースが存在する場所、データベースが最後に正常な状態であった日付を覚えていなくても、データベースを復元できます。フィルターを使用してデータベースを検索できます。</block>
   <block id="f7b6484db67a5a5ebaa0cd7c631c837f" category="section-title">Oracleデータベースを復元する</block>
   <block id="2d2e2835608dd4c300d9727603452421" category="list-text">名前検索フィールドの右側にあるドロップダウン リストから、*Oracle* を選択します。</block>
   <block id="71fcd2352c7b3f1be0c4680747f8cd92" category="list-text">復元するデータベースの名前を入力するか、復元するデータベースが配置されているデータベース ホストをフィルターします。</block>
@@ -5813,7 +5812,6 @@
   <block id="0a6313cec6301ae98c94e73ba522078e" category="list-text"><block ref="0a6313cec6301ae98c94e73ba522078e" category="inline-link-macro-rx"></block></block>
   <block id="ef28f96440f72809a7152ffc66dd809c" category="list-text"><block ref="ef28f96440f72809a7152ffc66dd809c" category="inline-link-macro-rx"></block></block>
   <block id="51c644b83084bd09a324c54def440e42" category="list-text">PDBを1つだけ選択してください。ポイントインタイムリカバリは、複数のPDBのリストアとは互換性がありません。</block>
-  <block id="1de84049759abb6734a6922f26da254f" category="list-text">データバックアップと必要なログバックアップがカタログ化されていることを確認してください。</block>
   <block id="4422040316e7063d2b6eeee89d2cb610" category="list-text">復元する項目を選択してください：</block>
   <block id="edaeb35620b1bfb1682cb9dc8b30993d" category="list-text">*[すべてのデータファイル]* を選択すると、データベース全体またはコンテナデータベース（CDB）が復元されます。</block>
   <block id="6ef18b5f7ddc8dccec3f8cfc05180417" category="list-text">コンテナ内の他の PDB に影響を与えることなく、CDB から 1 つ以上の PDB を復元するには、*プラガブル データベース （PDB）* を選択します。次に、リストから PDB を選択します。</block>
@@ -5848,12 +5846,8 @@
   <block id="6d26fc4748876aad896b3483365ea28f" category="list-text"><block ref="d77f3c9db249e472a92ac4b41ecc4805" prefix="" category="inline-code"></block>はポイントインタイムリカバリに選択できません。</block>
   <block id="bba24b3818e297fabc67f6f7560b0988" category="list-text">コントロールファイルのリストアは、PDBまたはPDBテーブルスペースのポイントインタイムリカバリと組み合わせることはできません。</block>
   <block id="08b60260a4bc5ba792144d142c950168" category="list-text"><block ref="fa177138f94a7ea01f549b1aa7893d03" prefix=" " category="inline-code"></block>、<block ref="2000a37455e46fd15ee265c2382b9741" prefix=" " category="inline-code"></block>、および<block ref="269940bcad6fddf5c68d3e67f767c3d1" prefix=" " category="inline-code"></block>テーブルスペースは選択できません。</block>
-  <block id="9919b7cad46288ca29f8fb296dd13536" category="list-text">データバックアップと必要なログバックアップがカタログ化されていることを確認してください。</block>
   <block id="0b375c92f006ebc34ffb21da222ac752" category="paragraph">指定された日時から最も近い時点のスナップショットが表示されます。</block>
-  <block id="cdb77aa4c72bd58fc3f38eb99937d3d7" category="list-text">必要に応じて、*ログバックアップを表示*を選択すると、関連するログバックアップが表示されます。</block>
-  <block id="21df2c5f3ea31de3417da5d6b7a5af6f" category="list-text">ログバックアップがマウントされていることを確認してください。</block>
   <block id="fe30a881b5d0622f2e579194115dc323" category="list-text">スナップショットが複数の場所に保存されている場合は、使用するソースの場所を選択し、場所の詳細を追加または確認してください。</block>
-  <block id="1a0861850bbff5a4629682768903a6a8" category="paragraph">指定されたSCNに最も近いスナップショットが表示されます。</block>
   <block id="190cbdc2fe368e8cdb928c64072a855e" category="paragraph">最新のスナップショットが表示されます。リストア操作では、利用可能なすべてのログバックアップを使用して、最後に正常だった状態をリカバリします。</block>
   <block id="f7e9cc07ffeb39b44af9c81fc95ee80a" category="paragraph">このオプションを選択すると、データベースはスナップショットからリストアされますが、リカバリはスキップされます（ログバックアップは適用されません）。</block>
   <block id="12c36d7d5c6e22f7d7de9e842bd09185" category="paragraph">利用可能なスナップショットが表示されます。</block>
@@ -5862,7 +5856,6 @@
   <block id="a6bd46b772365e5b6c3e3ebcfb5d88ce" category="list-text">RACデータベースの場合は、リストアを実行するRACノードを選択してください。このオプションはRACデータベースでのみ表示されます。</block>
   <block id="f788e090e936649cf2c5c0ff154c27a9" category="list-text">必要に応じて、「制御ファイル」オプションを有効にすると、データベースの制御ファイルも復元されます。このオプションは、PDBまたはPDBテーブルスペースのポイントインタイムまたはSCNリカバリには選択できません。</block>
   <block id="79d30138f764cb5a18ef350673cd0630" category="list-text">オプションで、*Force in place restore* オプションを有効にして、バックアップ後に新しいデータファイルが追加された場合、またはLVM ディスク グループでLUNが追加、削除、または再作成された場合に、In Placeリストアを実行します。これにより、外部ファイルチェックが上書きされます。データベース リカバリは、選択したリストアオプションを使用して処理を進めます。</block>
-  <block id="7c47104cd2fa4267b0939b38c887b1e1" category="list-text">PDB または表領域を特定のポイントインタイムまたは SCN にリストアする場合で、アーカイブ ログが構成済みの場所にない場合は、*外部アーカイブ ログ ファイルの場所* フィールドに外部アーカイブ ログ ファイルの場所を指定してください。で始まるファイルシステムパスを入力してください<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>または で始まる ASM ディスク グループを入力してください<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>。テキスト入力フィールドの横にある「プラス」ボタンと「マイナス」ボタンを使用して、場所を追加または削除します。リカバリなしでスナップショットからリストアする場合、このフィールドは表示されません。</block>
   <block id="4a2e39bd630275c8eae0d833bd13f831" category="list-text">必要に応じて、「リカバリ後にデータベースまたはコンテナデータベースを読み書きモードで開く」オプションを有効にし、リストア範囲に一致するサブオプションを選択します（これらのオプションは、リカバリなしのスナップショットからリストアする場合は表示されません）：</block>
   <block id="1598545f145b423567a9960785cf8619" category="list-text">*すべてのデータファイル*：リカバリ後、データベースまたはコンテナデータベースを READ-WRITE モードで開きます。</block>
   <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDBまたはPDBテーブルスペース*：リカバリ後、プラガブルデータベースを READ-WRITE モードで開きます。</block>
@@ -5921,7 +5914,6 @@
   <block id="a9c837a95e737168ee3ce1e980c47216" category="list-text">*認証情報*：KVMホストに保存されている認証情報を選択します。</block>
   <block id="d41a581fc85315dff70aff8313ea3257" category="list-text">*詳細設定*：必要に応じて、KVMホストと通信するためのポートを入力し、リストからホストの管理プラットフォームを選択します。</block>
   <block id="6ba9f255707f8a2103b20486c4949029" category="list-text">ディスクを分割する際の動作を選択してください。現在、*Always include all spanning disks* がサポートされています。</block>
-  <block id="f3a516904e0ccca6ef2462dfb7ce6d13" category="admonition">CIFS構成の場合、Backup and Recoveryは、保護グループ内の各VMに接続されているすべてのディスクを自動的に保護します。これには、複数のONTAPボリュームまたはONTAPストレージシステムに分散されたファイル（スパンニングディスク）と、単一の場所に限定されたファイル（非スパンニングディスク）が含まれます。SAN構成の場合、スパンニングディスク以外のすべてのディスクが保護グループに含まれます。</block>
   <block id="eb66f05eb35d497da0a423fd13838c97" category="paragraph">オプションで、*新しいポリシーを作成*を選択して、新しい保護ポリシーを作成できます。ポリシーを選択すると、ポリシーの詳細が表示されます。</block>
   <block id="c2a9493df2887bffbf4d321961143b50" category="paragraph">ONTAP システムで稼働している VMware データストアと VM を保護するには、まず NetApp Backup and Recovery でそれらを検出する必要があります。また、SnapCenter からバックアップデータとポリシーをインポートすることもできます。</block>
   <block id="56ed800e3e95a86a0d288e29e284d3d6" category="section-title">VMwareワークロードを検出し、必要に応じて SnapCenter プラグインリソースをインポートします</block>
@@ -6176,4 +6168,27 @@
   <block id="a940e8044fb83a96d0472abdc71d61e8" category="list-text">Cloud Volumes ONTAPシステムとコンソールエージェントは両方ともAzure上に存在する必要があります。</block>
   <block id="389c52d9a18d68d9dd6a3eb24bc88982" category="list-text">*Cloud Volumes ONTAP Azure Entra ID のサポート*：Azure 認証にストレージアカウントのアクセスキーを使用しない場合は、Azure オブジェクトストレージバケット構成に Microsoft Entra ID 認証を使用できるようになりました。このオプションは、ONTAP 9.16.1以降を実行しているAzureシステム内のCloud Volumes ONTAPでサポートされています。</block>
   <block id="82d1d9da33b9c6cae173365156457fff" category="section-title">VMwareワークロードの機能強化</block>
+  <block id="b77bf9dc680cf2db1d8b3d5f6156585b" category="list-text">*NetApp MetroClusterサポート*：NetApp Backup and Recoveryにより、NetApp MetroClusterでミラーリングされたHyper-V VMを保護できるようになりました。</block>
+  <block id="7ed9eebaad97e0f936b753873e6ff586" category="list-text">*SAN VMのスパンディスク保護*：CIFSおよびSAN構成の場合、保護グループ内の各VMに接続されているすべてのディスクを保護できるようになりました。これには、複数のONTAPボリュームまたはONTAPストレージシステムに分散しているファイル（スパンディスク）や、単一の場所に限定されたファイルが含まれます。</block>
+  <block id="82dd01a289cf98e9d962781faec1018b" category="paragraph">*自動アーカイブログ管理*：データベースのリストアおよびクローン処理中、NetApp Backup and Recoveryは必要なアーカイブログを自動的に検出してマウントし、処理が完了するとアンマウントします。プライマリ、セカンダリ、およびオブジェクトストレージのログソースがサポートされています。</block>
+  <block id="5f1a7ddd55d2a0b34003e08fe7cacdaf" category="section-title">Microsoft SQL Serverワークロードの強化</block>
+  <block id="32d770e78ed41453037389dce2e33d9c" category="paragraph">今回のリリースでは、Microsoft SQL Serverワークロードに以下の機能強化が導入されました：</block>
+  <block id="92337d8e70dfe880909b2051333e2fe4" category="paragraph">*ライセンス変更*：ディスク間またはディスク間のファンアウトアーキテクチャを使用したバックアップには、料金が適用されなくなりました。料金は、3-2-1またはディスクツーオブジェクトストレージアーキテクチャを使用したバックアップを含む、オブジェクトストレージへのバックアップにのみ適用されます。</block>
+  <block id="2f75ea4c51ce88400f5201fdeb2ccb9d" category="inline-link">NetApp Backup and Recoveryを使用したMicrosoft SQL Serverワークロードの保護について</block>
+  <block id="a5e96f4320434690f042cf906acacdcd" category="paragraph">Microsoft SQL Serverワークロードの保護の詳細については、<block ref="36e999a623e2068d9719d9ca1143b559" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="fb45f68d5333e580b42206cf36659ecd" category="list-text">Microsoft SQL Serverワークロードを保護する場合、オブジェクトストレージへのバックアップに対してのみ料金が発生します（たとえば、3-2-1バックアップアーキテクチャやディスクからオブジェクトストレージへのバックアップを使用する場合など）。</block>
+  <block id="7065e852c4b6888b4e74708a90ddb20d" category="list-text">Oracle Databaseワークロードはプレビューリリース段階にあるため、ライセンスは不要です。</block>
+  <block id="e28980c3ae4b3c703cc7a4f8d25ecda7" category="admonition">CIFSおよびSAN構成の場合、Backup and Recoveryは、保護グループ内の各VMに接続されているすべてのディスクを自動的に保護します。これには、複数のONTAPボリュームやONTAPストレージシステムに分散しているファイル（スパンニングディスク）と、単一の場所に限定されているファイル（非スパンニングディスク）が含まれます。</block>
+  <block id="c138f0fc5add74f3ad77a943271dcc42" category="section-title">利用可能なOracle Databaseのリストアポイントに関する情報を表示します</block>
+  <block id="b8294ceea04597d2d60f5b28b3b3f610" category="paragraph">SCN番号や関連するデータベースのインカーネーションなど、利用可能な復元ポイントを表示します。</block>
+  <block id="e55e7c5f94a5f9a43478bf91d01e8053" category="admonition">Oracle Databaseは、<block ref="d25b8c1b3f7ba3e06913b87e4360ec6d" prefix=" " category="inline-code"></block>オプションを使用してデータベースを開くたびに、新しいデータベースインカーネーションを作成します。NetApp Backup and Recoveryは、リストアポイントを確認する際や特定のSCNにリストアする際に、関連するデータベースインカーネーションを表示します。</block>
+  <block id="bd3847966f48b6808bad35d652e79b8b" category="list-text">Backup and Recoveryメニューから、*Inventory*を選択します。</block>
+  <block id="770e9d2ddce6214aa3a89285f53f6579" category="list-text">Oracle Databaseワークロードの *表示* を選択します。</block>
+  <block id="4a2205c1af5bce054c0536c538540831" category="list-text">復元ポイントを表示するデータベースの「アクション」<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>アイコンを選択し、「保護の詳細を表示」を選択します。</block>
+  <block id="3300f2655fe420c86cc828285fa0c124" category="list-text">利用可能な復元ポイントと、それぞれの復元ポイントに関連付けられているSCN番号およびデータベースのインカーネーションを確認してください。</block>
+  <block id="402afb3450325e60e5ac66aa3a09b855" category="list-text">利用可能なSCNと関連するデータベースのインカーネーションを確認するには、必要に応じて<block ref="c12704870bf071e0e07ed4d97d800d3f" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="eec1bb4eef0bc2471da6d24624c8e7af" category="paragraph">指定されたSCNに最も近いスナップショットが表示されます。複数のデータベースインカネーションがSCNに一致する場合、一致するすべてのインカネーションが表示されます。</block>
+  <block id="004ae5ca2de3ea160e921da76ac388d7" category="list-text">複数のデータベースインカネーションが検索に一致する場合は、正しいインカネーションのスナップショットを選択してください。</block>
+  <block id="38eb0a9d79c02f31a9749c6e9e2b5e32" category="list-text">PDBまたは表領域を特定の時点またはSCNにリストアする場合で、アーカイブログが設定された場所にない場合は、*外部アーカイブログファイルの場所を指定*フィールドに外部アーカイブログファイルの場所を指定します。<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>で始まるファイルシステムパス、または<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>で始まるASMディスク グループを入力します。テキスト入力フィールドの横にある「プラス」ボタンと「マイナス」ボタンを使用して、場所を追加または削除します。リカバリなしのスナップショットからリストアする場合、このフィールドは表示されません。</block>
+  <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
 </blocks>
