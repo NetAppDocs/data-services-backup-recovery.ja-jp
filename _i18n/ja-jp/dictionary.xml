@@ -3657,7 +3657,6 @@
   <block id="ea7f18044a9efb2ea47bdd370e5870f3" category="example-title">Trident Protect 24.10</block>
   <block id="98d3ce5c789124fc9207b48d4d1e8fc7" category="paragraph">Trident Protect 24.10は、データ保護処理中にKubeVirt VMファイルシステムの整合性のある状態を自動的に保証するものではありません。KubeVirt VMデータをTrident Protect 24.10を使用して保護する場合は、データ保護処理の前に、ファイルシステムのフリーズ/アンフリーズ機能を手動で有効にする必要があります。これにより、ファイルシステムが整合性のある状態になることが保証されます。</block>
   <block id="acb14ba5b70eb330a1d4de9c6b7a325d" category="inline-link-macro">仮想化の設定</block>
-  <block id="5ea5c247812e1dca5ff02ca853f05032" category="paragraph">Trident Protect 24.10を設定して、<block ref="e0dd4c4b8aa16596df6c3f5cb36d3cdc" category="inline-link-macro-rx"></block>を使用し、次のコマンドを実行することで、データ保護操作中にVMファイルシステムの凍結と解凍を管理できます：</block>
   <block id="cedf2576eebff15fc6b30d5a7109eb6b" category="doc">リストアおよびフェイルオーバー処理中のネームスペースのアノテーションとラベル</block>
   <block id="20f40e0b9308901dac07ce8a8efb3350" category="inline-link-macro">OpenShiftセキュリティコンテキスト制約ドキュメント</block>
   <block id="59f713e31282fe744caf06335d891f9a" category="inline-link-macro">追加のTrident Protectヘルムチャート設定を構成する</block>
@@ -5359,7 +5358,6 @@
   <block id="e2c49b50023b8581ad0e0c1590477c2c" category="paragraph">スナップショット、レプリケーション、バックアップ、およびリストアのジョブを監視します。メール通知を設定し、Console Timeline を使用してアクティビティを調査します。</block>
   <block id="dfb648ab8bdcaffa1f10f59b16fbdbe6" category="list-text">追加の列（System、Storage VM、User Name、Workload、Policy Name、Snapshot Label）を表示するには、プラス記号を選択します。</block>
   <block id="f961d5780137e52b38d60d0076cfad03" category="paragraph">ジョブ監視ページでは、ポリシー、スナップショットラベル、操作の種類（保護、復元、保持、その他）、保護の種類（ローカルスナップショット、レプリケーション、クラウドへのバックアップ）など、複数のフィルターを使用して操作をフィルタリングできます。</block>
-  <block id="5fe43d3e42037473a1d9dcda6cb5135c" category="paragraph">このパネルを使用して、任意のリソースをフリーテキスト検索できます。たとえば、「volume 1」または「application 3」と入力してください。ドロップダウンメニューの項目に基づいて、ジョブリストを絞り込むこともできます。</block>
   <block id="69eff9fb541f852de7b410e50792716f" category="paragraph">完了した特定の作業に関する詳細情報を表示できます。特定のジョブの詳細をJSON形式でエクスポートできます。</block>
   <block id="393c89f1515a0c516f0c06ada46600ef" category="paragraph">ジョブタイプ（スケジュール済みまたはオンデマンド）、SnapMirrorバックアップの種類（初期または定期）、開始時刻と終了時刻、期間、システムからオブジェクトストレージに転送されたデータ量、平均転送速度、ポリシー名、保持ロックの有効化、ランサムウェアスキャンの実行状況、保護ソースの詳細、および保護対象の詳細などの情報を表示できます。</block>
   <block id="61f87e5c880646f5edd955f28644ca18" category="list-text">「アクション」メニュー <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> を選択し、「詳細を表示」を選択します。</block>
@@ -6191,4 +6189,8 @@
   <block id="004ae5ca2de3ea160e921da76ac388d7" category="list-text">複数のデータベースインカネーションが検索に一致する場合は、正しいインカネーションのスナップショットを選択してください。</block>
   <block id="38eb0a9d79c02f31a9749c6e9e2b5e32" category="list-text">PDBまたは表領域を特定の時点またはSCNにリストアする場合で、アーカイブログが設定された場所にない場合は、*外部アーカイブログファイルの場所を指定*フィールドに外部アーカイブログファイルの場所を指定します。<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>で始まるファイルシステムパス、または<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>で始まるASMディスク グループを入力します。テキスト入力フィールドの横にある「プラス」ボタンと「マイナス」ボタンを使用して、場所を追加または削除します。リカバリなしのスナップショットからリストアする場合、このフィールドは表示されません。</block>
   <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
+  <block id="cd8c5a4fae99d9a57a4e12c8f43a8a84" category="paragraph">Trident Protect 24.10を設定して、<block ref="7689e703f80621bc0155b88d35cddcc8" category="inline-link-macro-rx"></block>を使用し、次のコマンドを実行することで、データ保護操作中にVMファイルシステムの凍結と解凍を管理できます：</block>
+  <block id="54ea8878308d39d6d78a01f24a278aa1" category="list-text">*ジョブモニターのカスタム日付範囲フィルタリング*：ジョブモニターのカレンダーからカスタムの開始日と終了日を選択することで、過去90日間のジョブを検索できるようになりました。</block>
+  <block id="61065205211a8d57175713e9b45b8198" category="paragraph">このパネルを使用して、任意のリソースをフリーテキスト検索できます。たとえば、「volume 1」または「application 3」と入力してください。ドロップダウンメニューの項目に基づいて、ジョブリストを絞り込むこともできます。期間を指定して検索することもできます。</block>
+  <block id="9598a4f2b418f0c49368419070383673" category="paragraph">期間を指定して検索する場合は、*カスタム範囲*を選択して、カレンダーから開始日と終了日を選択してください。</block>
 </blocks>
