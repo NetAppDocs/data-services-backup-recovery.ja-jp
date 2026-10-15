@@ -263,6 +263,18 @@ NOTE: パススルーディスクまたはNetAppストレージにプロビジ�
 |===
 
 
+[[required-permissions-for-microsoft-sql-server-host-discovery]]
+=== Microsoft SQL Serverホストの検出に必要な権限
+
+SQL Serverホストを検出すると、NetApp Backup and RecoveryはホストにMicrosoft SQL Server向けNetApp SnapCenter プラグインをインストールします。代わりに、プラグインを手動でインストールすることもできます。自動インストールを選択した場合、Backup and Recoveryがプラグインをインストールできるように、検出時に指定するホストの資格情報には次のメンバーシップと権限が必要です：
+
+* Microsoft SQL Serverインスタンスの `sysadmin`固定サーバーレベルロールのメンバーシップ
+* WindowsローカルAdministratorグループのメンバーシップ
+* ホストにログインするための許可
+
+
+
+
 [[requirements-for-protecting-vmware-workloads]]
 == VMware ワークロードを保護するための要件
 
@@ -411,6 +423,33 @@ NOTE: 異なるクラウドプロバイダー間でシステムごとに6つ以�
 
 
 |===
+
+
+[[required-permissions-for-oracle-database-host-discovery]]
+=== Oracle Databaseホスト検出に必要な権限
+
+Oracle Databaseホストを検出すると、NetApp Backup and RecoveryはパスワードベースのSSHを使用してホストにNetApp Oracle Databaseプラグインをインストールします。代わりに、プラグインを手動でインストールすることもできます。プラグインのインストールには特定の権限が必要です。
+
+
+
+==== プラグインの自動インストールを使用する場合の要件
+
+Backup and RecoveryがNetApp Oracle Databaseプラグインをインストールできるように、検出時に指定するホスト認証情報には次の権限が必要です：
+
+* root権限、または非rootユーザーに対するsudoアクセス権限。ホスト検出中にsudoアクセスを許可するには、「ホスト登録」セクションでroot以外の認証情報を選択し、「sudoersの設定」を選択して指示に従ってください。root認証情報を使用する場合は、この手順は不要です。
+* Java JVMに対する実行権限。
+
+
+
+
+==== プラグインを手動でインストールする場合の要件
+
+プラグインを手動でインストールする場合、インストールに使用するアカウントには以下の権限が必要です：
+
+* 非rootユーザーのroot権限またはsudo権限。
+* Java JVMに対する実行権限。
+
+
 
 
 [[requirements-for-protecting-kubernetes-applications]]

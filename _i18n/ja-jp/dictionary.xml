@@ -584,7 +584,6 @@
   <block id="afedbe20f6822f0dee210eea973a9560" category="list-text">*ワークロード タイプ*: このバージョンでは、Microsoft SQL Server のみが利用可能です。</block>
   <block id="8ced46662b7c39f90c1b2041834e629b" category="list-text">*vCenter 設定*: 既存の vCenter を選択するか、新しい vCenter を追加します。新しい vCenter を追加するには、vCenter FQDN または IP アドレス、ユーザー名、パスワード、ポート、プロトコルを入力します。</block>
   <block id="757f6c0f45e5e6c857597da9d0a937d1" category="admonition">vCenter 情報を入力する場合は、vCenter 設定とホスト登録の両方の情報を入力します。ここで vCenter 情報を追加または入力した場合は、次に詳細設定でプラグイン情報も追加する必要があります。</block>
-  <block id="2b6e241b6ca02934c3d70cbf729b2190" category="list-text">*ホスト登録*: *資格情報の追加* を選択し、検出するワークロードを含むホストに関する情報を入力します。</block>
   <block id="9c4b59ad81bef49107c1a8eb04473a44" category="admonition">vCenter サーバーではなくスタンドアロン サーバーを追加する場合は、ホスト情報のみを入力します。</block>
   <block id="180f20972969fa31108736a33e1febee" category="list-text">詳細設定に進みます。</block>
   <block id="4f95933eb191bec1d5fda6d14b048ae9" category="list-text">「ワークロード リソースの検出」ページで、次の情報を入力します。</block>
@@ -4714,7 +4713,6 @@
   <block id="4ad36f854b6d4d49c94081fec1b29de2" category="list-text">異なるクラウドプロバイダー間でシステムごとに6つ以上のバケット（最大100バケットまで）をサポートするには、ONTAP 9.19.1以降が必要です。</block>
   <block id="59ebd83b4c20d2b24ac46c96525c37fc" category="list-text">ONTAP 9.13.1以降（異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットをサポートするにはONTAP 9.19.1以降が必要です。最大100バケットまで）</block>
   <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">プライマリONTAPシステム（ONTAP 9.14.1以降 - 異なるクラウドプロバイダー間でシステムごとに6つ以上のバケットをサポートするにはONTAP 9.19.1以降が必要です。最大100バケットまで）</block>
-  <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">Microsoft Windows Server 2025 を使用している場合、SANストレージに保存されている第2世代VMの保護はサポートされていません。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">別の場所に復元する（プライマリストレージ、セカンダリストレージ、オブジェクトストレージから）</block>
   <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery は、異なるクラウドプロバイダーにまたがる最大 100 個のバケットを使用して、システム内のワークロードを保護する機能をサポートするようになりました。システムあたり 6 つを超えるバケットをサポートするには、ONTAP 9.19.1 以降が必要です。</block>
   <block id="0d1c49b7f34131be8c6ddbc862cc359d" category="list-text">可能な限り、HelmChartConfig ファイルを変更管理下に置いてください。</block>
@@ -5017,7 +5015,6 @@
   <block id="6dee314e5a8212befbbb5550bcd8c82f" category="paragraph">Hyper-Vワークロードに関する現在の制限事項とサポートされていないアクションを NetApp Backup and Recovery で確認してください。</block>
   <block id="2320ca4680a90af67c892bc394770545" category="paragraph">Hyper-V ワークロードに対して、NetApp Backup and Recovery ではサポートされていない操作は次のとおりです：</block>
   <block id="5ef97381ee778e6a2856d655b0f66fc2" category="list-text">複数のHyper-VホストのVMを使用してリソースグループを作成する</block>
-  <block id="4b1cae8294562e32be20bab07c14f9bc" category="list-text">複数のCIFS共有にまたがるスパンニングディスクの使用</block>
   <block id="38ac42adbbba8d3dccfd49459843843b" category="paragraph">NetApp Backup and RecoveryにおけるKubernetesワークロードの現在の制限と回避策を確認します。</block>
   <block id="c5e627d3d20d62858bf75231e8a6b069" category="section-title">NetApp Console ローカル展開のバックアップとリカバリプレビューにおける制限事項</block>
   <block id="e5d90e82b6c24e7b1bf837dd1bcb3d30" category="paragraph">アプリケーションの保護ポリシーを変更して別のバケットまたはセカンダリ レプリケーションターゲットを使用するようにした場合、保護が失敗する可能性があります。</block>
@@ -5130,9 +5127,7 @@
   <block id="ab01805ccfe371fe51580a961290e0c4" category="paragraph">VMware環境をご利用の場合は、この手順は省略可能です。</block>
   <block id="9b42846cd9771e997a08e3200d79e8e3" category="admonition">vCenter 情報を入力する場合は、vCenter 設定とホスト登録の両方の情報を入力してください。ここで vCenter 情報を追加または入力した場合は、次に詳細設定でプラグイン情報も追加する必要があります。</block>
   <block id="6e895abe8a9bc049bbd4b4acc199426d" category="section-title">検出中に詳細設定オプションを設定し、プラグインをインストールする</block>
-  <block id="b5c6b1b5218957aa87aa0f5da8f67efc" category="paragraph">詳細設定では、登録されているすべてのサーバーにプラグイン エージェントを手動でインストールできます。これにより、すべての SnapCenter ワークロードを NetApp Backup and Recovery にインポートし、バックアップと復元を管理できます。NetApp Backup and Recovery には、プラグインのインストールに必要な手順が表示されます。</block>
   <block id="05ec5e0d0ed90b0c5620cefe19c46d67" category="list-text">「リソースを探す」ページから、右側の下向き矢印を選択して「詳細設定」に進みます。</block>
-  <block id="0a51d763335c94619b1bad74ea3fa23d" category="list-text">*プラグイン ポート番号を入力*：プラグインが使用するポート番号を入力してください。</block>
   <block id="8cd0810025b90e56e30a8cd2c7647649" category="list-text">*インストール パス*：プラグインをインストールするパスを入力してください。</block>
   <block id="9d0a0f1f3ed9f239f57d8c5056d68fae" category="list-text">SnapCenter エージェントを手動でインストールする場合は、次のオプションを選択してください。</block>
   <block id="51b2f0bb496d4976f9362c52c90bc7cb" category="list-text">*手動インストールを使用する*：このオプションを選択して、プラグインを手動でインストールします。</block>
@@ -6193,4 +6188,25 @@
   <block id="54ea8878308d39d6d78a01f24a278aa1" category="list-text">*ジョブモニターのカスタム日付範囲フィルタリング*：ジョブモニターのカレンダーからカスタムの開始日と終了日を選択することで、過去90日間のジョブを検索できるようになりました。</block>
   <block id="61065205211a8d57175713e9b45b8198" category="paragraph">このパネルを使用して、任意のリソースをフリーテキスト検索できます。たとえば、「volume 1」または「application 3」と入力してください。ドロップダウンメニューの項目に基づいて、ジョブリストを絞り込むこともできます。期間を指定して検索することもできます。</block>
   <block id="9598a4f2b418f0c49368419070383673" category="paragraph">期間を指定して検索する場合は、*カスタム範囲*を選択して、カレンダーから開始日と終了日を選択してください。</block>
+  <block id="2b8abfeb97d865eaa0365ae5ea904375" category="list-text">*ホスト登録*：以下の情報を入力してください：</block>
+  <block id="2262ff21634c9674e4ff5f4c74bda8cd" category="list-text">ホストのFQDNまたはIPアドレス</block>
+  <block id="8c212cb55c136cbf08fbff8301a57f9e" category="list-text">ホストがBackup and Recoveryと通信するために使用するコンソールエージェント</block>
+  <block id="ffffc5b40a52bf8078bfaa777967b249" category="list-text">ホストの保存済み認証情報</block>
+  <block id="ff35c388a5cbf8ae8f8807f67d1462b3" category="paragraph">このホストの認証情報をNetApp Backup and Recoveryにまだ追加していない場合は、*認証情報の追加*を選択し、ホストの認証情報を入力します。</block>
+  <block id="0984a9b22a15a2ae7667031dd00e4230" category="paragraph">詳細設定を使用すると、登録するすべてのサーバーにMicrosoft SQL Server向けNetApp SnapCenterプラグインを手動でインストールできます。これにより、すべてのSnapCenterワークロードをNetApp Backup and Recoveryにインポートして、そこでバックアップとリストアを管理できるようになります。NetApp Backup and Recoveryには、プラグインのインストールに必要な手順が表示されます。</block>
+  <block id="ca670126755dcd34f80e41c964315abf" category="list-text">*プラグインポート*：プラグインが使用するポート番号を入力します。</block>
+  <block id="2f613600ce95cea85557e892bb8ce093" category="section-title">Microsoft SQL Serverホストの検出に必要な権限</block>
+  <block id="d39410ece499dd7cb49c6305b59c92f2" category="paragraph">SQL Serverホストを検出すると、NetApp Backup and RecoveryはホストにMicrosoft SQL Server向けNetApp SnapCenter プラグインをインストールします。代わりに、プラグインを手動でインストールすることもできます。自動インストールを選択した場合、Backup and Recoveryがプラグインをインストールできるように、検出時に指定するホストの資格情報には次のメンバーシップと権限が必要です：</block>
+  <block id="bc6f4ea338b05255900e4b0506829f4c" category="list-text">Microsoft SQL Serverインスタンスの<block ref="48a365b4ce1e322a55ae9017f3daf0c0" prefix=" " category="inline-code"></block>固定サーバーレベルロールのメンバーシップ</block>
+  <block id="85e3de057dc6005479930eb6aa5b2f79" category="list-text">WindowsローカルAdministratorグループのメンバーシップ</block>
+  <block id="2ff43e2a2d5b0aa3489389af408c838a" category="list-text">ホストにログインするための許可</block>
+  <block id="80d46fed65051869c8128d0c98118592" category="section-title">Oracle Databaseホスト検出に必要な権限</block>
+  <block id="79358627f2feaa4d2338391a918789ac" category="paragraph">Oracle Databaseホストを検出すると、NetApp Backup and RecoveryはパスワードベースのSSHを使用してホストにNetApp Oracle Databaseプラグインをインストールします。代わりに、プラグインを手動でインストールすることもできます。プラグインのインストールには特定の権限が必要です。</block>
+  <block id="168489ecd7560d51be74b06b631df49c" category="section-title">プラグインの自動インストールを使用する場合の要件</block>
+  <block id="41727149db11b5b52863b15d5def9886" category="paragraph">Backup and RecoveryがNetApp Oracle Databaseプラグインをインストールできるように、検出時に指定するホスト認証情報には次の権限が必要です：</block>
+  <block id="1da21a47453ca95a01bd9ec124a97558" category="list-text">root権限、または非rootユーザーに対するsudoアクセス権限。ホスト検出中にsudoアクセスを許可するには、「ホスト登録」セクションでroot以外の認証情報を選択し、「sudoersの設定」を選択して指示に従ってください。root認証情報を使用する場合は、この手順は不要です。</block>
+  <block id="8086df899fb70153c36c060c18be25c4" category="list-text">Java JVMに対する実行権限。</block>
+  <block id="3e3321c0918c1d68c43253c427d52a85" category="section-title">プラグインを手動でインストールする場合の要件</block>
+  <block id="bd6c005addd81d8409ae4c84d588f53d" category="paragraph">プラグインを手動でインストールする場合、インストールに使用するアカウントには以下の権限が必要です：</block>
+  <block id="901e5d2cf1e185b371f3c54154d4da3c" category="list-text">非rootユーザーのroot権限またはsudo権限。</block>
 </blocks>
