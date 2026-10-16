@@ -4561,7 +4561,6 @@
   <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph"><block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>を参照して、NetApp Backup and Recoveryで操作を実行するために必要なロールと権限の詳細を確認してください。</block>
   <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">オブジェクト ストレージへのバックアップの要件</block>
   <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">ONTAP ボリューム ワークロードを保護するための要件</block>
-  <block id="45b096193f4470968c1063df19d1c253" category="list-text">オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、<block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">データベース ホスト</block>
   <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">サポートされているストレージ</block>
@@ -6209,4 +6208,8 @@
   <block id="3e3321c0918c1d68c43253c427d52a85" category="section-title">プラグインを手動でインストールする場合の要件</block>
   <block id="bd6c005addd81d8409ae4c84d588f53d" category="paragraph">プラグインを手動でインストールする場合、インストールに使用するアカウントには以下の権限が必要です：</block>
   <block id="901e5d2cf1e185b371f3c54154d4da3c" category="list-text">非rootユーザーのroot権限またはsudo権限。</block>
+  <block id="061c095c759eb7e64dd46465f3c7a817" category="paragraph">Backup and RecoveryでONTAPシステムを検出する前に、以下のものが用意されていることを確認してください：</block>
+  <block id="5df6bd1a45bdd2a4028f468e490de21e" category="list-text">オンプレミスのONTAPインスタンスでONTAP Oneライセンスが有効になっていることを確認してください。</block>
+  <block id="74fbbc0e09dfc08bd2ae9fa2fa257555" category="list-text">ONTAPシステムの検出に使用するONTAPユーザーの<block ref="dc647eb65e6711e155375218212b3964" prefix=" " category="inline-code"></block>ログイン方法として、AMQPアプリケーションが有効になっていることを確認してください。これにより、スケジュールされたバックアップジョブがジョブモニターに表示されるようになります。ユーザー管理の手順については、<block ref="08349f0e2e31cf6e59517a8789874b25" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="2a6990e4544c8a19dcf0e20cd83f5c68" category="paragraph">一部のONTAP機能には特定のONTAPバージョンが必要です：</block>
 </blocks>

@@ -157,6 +157,14 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 
 ONTAPボリュームワークロードでNetApp Backup and Recoveryを使用するには、以下の前提条件を満たしている必要があります。
 
+Backup and RecoveryでONTAPシステムを検出する前に、以下のものが用意されていることを確認してください：
+
+* オンプレミスのONTAPインスタンスでONTAP Oneライセンスが有効になっていることを確認してください。
+* ONTAPシステムの検出に使用するONTAPユーザーの `Password`ログイン方法として、AMQPアプリケーションが有効になっていることを確認してください。これにより、スケジュールされたバックアップジョブがジョブモニターに表示されるようになります。ユーザー管理の手順については、 https://docs.netapp.com/us-en/ontap/manage-users-groups-host-specific-task.html#manage-unix-users["ONTAPのドキュメント"^]を参照してください。
+
+
+一部のONTAP機能には特定のONTAPバージョンが必要です：
+
 [cols="2,1"]
 |===
 | 機能 | 必須ONTAPバージョン 
@@ -176,9 +184,6 @@ ONTAPボリュームワークロードでNetApp Backup and Recoveryを使用す�
 
 | 異なるクラウドプロバイダー間で、システムごとに6つ以上のバケットを使用する（最大100バケットまで） | 9.19.1以降 
 |===
-
-NOTE: オンプレミス ONTAP インスタンスで ONTAP One ライセンスを有効にする必要があります。
-
 サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、link:prev-ontap-protect-overview.html["ONTAPボリュームデータを保護する"]を参照してください。
 
 
