@@ -5013,7 +5013,6 @@
   <block id="c234b1583acaea4fed0749d70c41d549" category="listing-title">&lt;code&gt;status&lt;/code&gt;が&lt;code&gt;COMPLETED&lt;/code&gt;になるまで監視します：</block>
   <block id="6dee314e5a8212befbbb5550bcd8c82f" category="paragraph">Hyper-Vワークロードに関する現在の制限事項とサポートされていないアクションを NetApp Backup and Recovery で確認してください。</block>
   <block id="2320ca4680a90af67c892bc394770545" category="paragraph">Hyper-V ワークロードに対して、NetApp Backup and Recovery ではサポートされていない操作は次のとおりです：</block>
-  <block id="5ef97381ee778e6a2856d655b0f66fc2" category="list-text">複数のHyper-VホストのVMを使用してリソースグループを作成する</block>
   <block id="38ac42adbbba8d3dccfd49459843843b" category="paragraph">NetApp Backup and RecoveryにおけるKubernetesワークロードの現在の制限と回避策を確認します。</block>
   <block id="c5e627d3d20d62858bf75231e8a6b069" category="section-title">NetApp Console ローカル展開のバックアップとリカバリプレビューにおける制限事項</block>
   <block id="e5d90e82b6c24e7b1bf837dd1bcb3d30" category="paragraph">アプリケーションの保護ポリシーを変更して別のバケットまたはセカンダリ レプリケーションターゲットを使用するようにした場合、保護が失敗する可能性があります。</block>
@@ -5110,7 +5109,6 @@
   <block id="0da8b01ff90ac6c56d271760e3cae180" category="list-text">Oracle Databaseホスト上のsudoersファイルに選択した非rootユーザーを追加する手順については、*sudoersの設定*を選択してください。</block>
   <block id="91acd102eb682e81c6d3b35f15584ce9" category="paragraph">NetApp Backup and Recovery は、SSH を介して各ホストに接続し、プラグインを自動的にインストールします。以下のいずれかに該当する場合は、*手動インストールを使用する* を有効にしてください。</block>
   <block id="f4de6ef110c2809c2cea661247d6cb3b" category="admonition">リソースの追加には数分かかる場合があります。進捗状況を確認するには、インベントリページ下部のステータスダイアログで「Track progress」を選択するか、左側のナビゲーションから「Monitoring」を選択してください。</block>
-  <block id="f3436bbdd5970784a88deadec1e68fca" category="paragraph">Oracle Databaseワークロードは、インベントリページのワークロード一覧に表示されます。</block>
   <block id="967daf4999f1b34597e41a06dcbebb8d" category="list-text">ワークロードタイルを選択します（例：Oracle Database）。</block>
   <block id="f23a00db51eb125b74f1083a222aa335" category="list-text">データ保護の健全性を確認します。新たに検出、保護、バックアップされたワークロードに基づいて、リスクにさらされているワークロードまたは保護されているワークロードの数が増加します。</block>
   <block id="481bf56c7b5ff0737dc345dbd4230f02" category="paragraph">NetApp Backup and Recovery で Microsoft SQL Server ワークロードを検出し、保護およびリストアを実行できます。すでに SnapCenter を使用している場合は、既存のバックアップデータとポリシーをインポートすることもできます。</block>
@@ -6201,15 +6199,29 @@
   <block id="2ff43e2a2d5b0aa3489389af408c838a" category="list-text">ホストにログインするための許可</block>
   <block id="80d46fed65051869c8128d0c98118592" category="section-title">Oracle Databaseホスト検出に必要な権限</block>
   <block id="79358627f2feaa4d2338391a918789ac" category="paragraph">Oracle Databaseホストを検出すると、NetApp Backup and RecoveryはパスワードベースのSSHを使用してホストにNetApp Oracle Databaseプラグインをインストールします。代わりに、プラグインを手動でインストールすることもできます。プラグインのインストールには特定の権限が必要です。</block>
-  <block id="168489ecd7560d51be74b06b631df49c" category="section-title">プラグインの自動インストールを使用する場合の要件</block>
   <block id="41727149db11b5b52863b15d5def9886" category="paragraph">Backup and RecoveryがNetApp Oracle Databaseプラグインをインストールできるように、検出時に指定するホスト認証情報には次の権限が必要です：</block>
-  <block id="1da21a47453ca95a01bd9ec124a97558" category="list-text">root権限、または非rootユーザーに対するsudoアクセス権限。ホスト検出中にsudoアクセスを許可するには、「ホスト登録」セクションでroot以外の認証情報を選択し、「sudoersの設定」を選択して指示に従ってください。root認証情報を使用する場合は、この手順は不要です。</block>
   <block id="8086df899fb70153c36c060c18be25c4" category="list-text">Java JVMに対する実行権限。</block>
-  <block id="3e3321c0918c1d68c43253c427d52a85" category="section-title">プラグインを手動でインストールする場合の要件</block>
-  <block id="bd6c005addd81d8409ae4c84d588f53d" category="paragraph">プラグインを手動でインストールする場合、インストールに使用するアカウントには以下の権限が必要です：</block>
-  <block id="901e5d2cf1e185b371f3c54154d4da3c" category="list-text">非rootユーザーのroot権限またはsudo権限。</block>
   <block id="061c095c759eb7e64dd46465f3c7a817" category="paragraph">Backup and RecoveryでONTAPシステムを検出する前に、以下のものが用意されていることを確認してください：</block>
   <block id="5df6bd1a45bdd2a4028f468e490de21e" category="list-text">オンプレミスのONTAPインスタンスでONTAP Oneライセンスが有効になっていることを確認してください。</block>
   <block id="74fbbc0e09dfc08bd2ae9fa2fa257555" category="list-text">ONTAPシステムの検出に使用するONTAPユーザーの<block ref="dc647eb65e6711e155375218212b3964" prefix=" " category="inline-code"></block>ログイン方法として、AMQPアプリケーションが有効になっていることを確認してください。これにより、スケジュールされたバックアップジョブがジョブモニターに表示されるようになります。ユーザー管理の手順については、<block ref="08349f0e2e31cf6e59517a8789874b25" category="inline-link-rx"></block>を参照してください。</block>
   <block id="2a6990e4544c8a19dcf0e20cd83f5c68" category="paragraph">一部のONTAP機能には特定のONTAPバージョンが必要です：</block>
+  <block id="b81cecd98ea4b4f80df7b99bd8f7480e" category="paragraph">*Oracle Data Guardのサポート*：NetApp Backup and Recoveryは、Oracle Data Guardを使用して高可用性を実現するプライマリおよびスタンバイデータベースを保護するために、保護グループを使用することをサポートするようになりました。</block>
+  <block id="a1f64a2f11ad0edebf465c430dceffb3" category="list-text">NetApp Backup and Recoveryは現在、FlexGroupボリュームでホストされているHyper-V LUNの保護をサポートしていません。</block>
+  <block id="2ff849b2bfb227ca5861a726eac745c4" category="list-text">複数のHyper-Vホスト上の仮想マシンを使用してリソースグループを作成することはできません。</block>
+  <block id="d4877862cff89c6cc177b4a6402a008d" category="paragraph">Oracle Databaseホストは、インベントリページのワークロードリストに表示されます。</block>
+  <block id="0b988f352bf3178a56bb9dbb7aa6f591" category="section-title">Oracle Databaseのインベントリを表示する</block>
+  <block id="13b17d82aa76831194bc5fedd9ef5155" category="paragraph">バックアップおよびリカバリのインベントリで検出されたOracle Databaseリソースの詳細を確認してください。</block>
+  <block id="ef09861f0e356e1256cc79b90af82a9c" category="list-text">検出されたOracle Databaseホストを表示するには、*ホスト*タブを選択します。</block>
+  <block id="acb5a0c1d6543fd64291bcd931b0212a" category="paragraph">このビューを使用すると、各ホスト名、各ホストがホストしているデータベースの数、デプロイメントモデル（クラスタ、Oracle Data Guard、スタンドアロンなど）、その他の情報などの詳細情報を確認できます。</block>
+  <block id="5ef22a9f4e63d5ea6dccdceaf60cc129" category="list-text">Oracle Databaseリソースを保護するために作成された保護グループを表示するには、*保護グループ*タブを選択します。</block>
+  <block id="4636080fe3dd6af1a05f50e6b8612fcd" category="list-text">各Oracle Databaseホストがホストするデータベースを表示するには、*データベース*タブを選択します。</block>
+  <block id="88b5a8e3aeecbee62ee44ae9949af352" category="paragraph">このビューには、各データベースが単一インスタンスであるか、クラスタまたは高可用性構成の一部であるかなど、詳細な情報が表示されます。</block>
+  <block id="c567e32a931e50ea00e322c45bada4f9" category="list-text">保護グループに適用する*バックアップ ポリシー*を選択してください。Oracle Data Guard構成の一部であるデータベースを含める場合は、Data Guardオプションが有効になっているバックアップ ポリシーを選択してください。</block>
+  <block id="e07c044b43b8ab05fce956dd78928ec0" category="list-text">*Data Guard設定*：Oracle Data Guard展開でデータベースを保護する際に、ポリシーでData Guard設定を有効にするかどうか、およびプライマリ、セカンダリ、またはプライマリとセカンダリの両方をバックアップするかどうかを選択します。Oracle Data Guard環境では、保護グループを使用してデータベースを保護できます。</block>
+  <block id="debe14f2792fef47d8b9076e14c82cb3" category="section-title">プラグインインストールの要件</block>
+  <block id="3cf57a2a4d07542c89b05ad643bb219e" category="list-text">SSHを使用してホストにログインできる機能。</block>
+  <block id="1bcf5153145f75a86a1ad16ea9b03c7a" category="list-text">root権限、または非rootユーザーに対するsudoアクセス権限。</block>
+  <block id="5b82c5e93eb556ac924b1e6909752359" category="list-text">ホスト検出中にsudoアクセスを許可するには、「ホスト登録」セクションでroot以外の認証情報を選択し、「sudoersの設定」を選択して指示に従ってください。root認証情報を使用する場合は、この手順は不要です。手動インストールの場合、この手順は不要です。</block>
+  <block id="41550faf0c68179011d757996fd6d047" category="list-text">Oracleデータベースユーザーには<block ref="4811df2c83bee7ee3a883640cc4d80af" prefix="" category="inline-code"></block>権限が必要です。</block>
+  <block id="5d3eb6919efa937c33d95e081b5ac2fc" category="section-title">2026年10月19日</block>
 </blocks>

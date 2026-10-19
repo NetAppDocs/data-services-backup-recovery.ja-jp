@@ -290,13 +290,35 @@ TIP: リソースの追加には数分かかる場合があります。進捗状
 
 
 .結果
-Oracle Databaseワークロードは、インベントリページのワークロード一覧に表示されます。
+Oracle Databaseホストは、インベントリページのワークロードリストに表示されます。
+
+
+
+[[view-oracle-database-inventory]]
+== Oracle Databaseのインベントリを表示する
+
+バックアップおよびリカバリのインベントリで検出されたOracle Databaseリソースの詳細を確認してください。
+
+.手順
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
+. *ワークロード*の下で、*Oracle*タイルを選択します。
+. 検出されたOracle Databaseホストを表示するには、*ホスト*タブを選択します。
++
+このビューを使用すると、各ホスト名、各ホストがホストしているデータベースの数、デプロイメントモデル（クラスタ、Oracle Data Guard、スタンドアロンなど）、その他の情報などの詳細情報を確認できます。
+
+. Oracle Databaseリソースを保護するために作成された保護グループを表示するには、*保護グループ*タブを選択します。
+. 各Oracle Databaseホストがホストするデータベースを表示するには、*データベース*タブを選択します。
++
+このビューには、各データベースが単一インスタンスであるか、クラスタまたは高可用性構成の一部であるかなど、詳細な情報が表示されます。
+
+
 
 
 
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == NetApp Backup and Recoveryダッシュボードに進みます
 
+.手順
 . NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
 . ワークロードタイルを選択します（例：Oracle Database）。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
