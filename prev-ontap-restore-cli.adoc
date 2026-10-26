@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-restore-cli.html 
+keywords: CLI, ONTAP, restore, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery 
+summary: 状況によっては、ONTAPデータを復元するためにONTAP CLIを使用する必要がある場合があります。 
+---
+= ONTAP CLIを使用してONTAPデータをリストアする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Backup and Recovery Web UIを使用して、一部のONTAPデータをリストアできない場合があります。これは、システムの登録解除後にバックアップを保持していた場合、またはバックアップが既に存在しないリレーションシップを通じて作成された場合に発生する可能性があります。いずれの場合も、ONTAP CLIを使用してバックアップをリストアしてください。
+
+.開始する前に
+* デスティネーション クラスタのONTAP CLIにアクセスできること、およびリストアするバックアップ コピーを把握していることを確認してください。
+* 別のONTAPクラスタにリストアする場合、そのクラスタはすでに同じオブジェクトストアにアクセスできる必要があります。必要に応じて、リストアする前にデスティネーション クラスタでオブジェクトストアを設定してください。
+* システムを登録解除する前に新しいバックアップ関係が作成されていた場合は、NetApp Backup and Recoveryでは、新しいバックアップが作成されてから最大1時間の間、古いスナップショットが表示され続ける場合があります。その更新期間中は、UIベースの古いスナップショットのリストアが失敗する可能性があります。
+
+
+.手順
+. NetApp Backup and Recovery メニューから、「レポート」を選択します。
+. バックアップレポートをダウンロードしてください。
+. レポート内で、復元するボリュームを見つけ、必要なバックアップコピーのエンドポイントエントリを探します：
++
+** 以前の関係における古いバックアップについては、*Endpoint UUID History*の値を使用してください。
+** 現在の関係からのバックアップには、*Endpoint UUID*の値を使用してください。
++
+各履歴エントリは次の形式を使用します `<bucket_name>:<endpoint_uuid>`。リストアするバックアップのバケット名とエンドポイントUUIDを記録してください。
+
+
+
+. ONTAPクラスタのCLIに接続し、診断モードに入ります：
++
+[source, shell]
+----
+set -privilege diagnostic
+----
+. デスティネーションデータ保護（DP）ボリュームを作成します：
++
+[source, shell]
+----
+volume create -vserver <vserver_name> -volume <volume_name> -aggregate <aggr_name> -size <size> -type DP
+----
+. 記録したバケットとエンドポイントUUIDで使用可能なスナップショットを一覧表示します：
++
+[source, shell]
+----
+snapm object-store endpoint snapshot show -object-store-name <bucket_name> -endpoint-uuid <endpoint_uuid>
+----
++
+
+NOTE: このコマンドは、ONTAPがそのバケットとエンドポイントについて追跡しているスナップショットのみを一覧表示します。手動で別のバケットに移動されたスナップショットは一覧表示されません。
+
+. バックアップ作成後にオブジェクトストアの認証情報が変更された場合は、続行する前にオブジェクトストアの設定を更新してください：
++
+[source, shell]
+----
+snapmirror object-store config show -object-store-name <object_store_name>
+snapmirror object-store config modify -object-store-name <object_store_name> -access-key <new_access_key> -secret-password <new_secret_password>
+----
+. 選択したスナップショットをオブジェクトストレージからデスティネーションDPボリュームに復元します：
++
+[source, shell]
+----
+snapmirror restore -destination-path <vserver>:<destination_volume> -source-path <bucket_name>:/objstore/<endpoint_uuid> -source-snapshot <snapshot_name> -source-endpoint-uuid <endpoint_uuid>
+----
+
+
+
+
+[[find-more-information]]
+== 詳細情報の参照
+
+このタスクのONTAPコマンドの詳細については、次のONTAPドキュメントを参照してください：
+
+* https://docs.netapp.com/us-en/ontap-cli/volume-create.html["volume create"]
+* https://docs.netapp.com/us-en/ontap-cli/snapmirror-object-store-config-modify.html["snapmirror object-store config modify"]
+* https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["snapmirror restore"]
+

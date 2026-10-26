@@ -506,15 +506,6 @@
   <block id="7db92dd7efdf06d451de19b3781f8e9c" category="list-text">*タグ*: S3 バケットのタグを選択します。タグは、S3 リソースを整理および管理するために使用できるキーと値のペアです。</block>
   <block id="2e0fcab1edb478e0ed60f14f18213876" category="list-text">*暗号化*: S3 バケットの暗号化のタイプを選択します。オプションは、AWS S3 管理キーまたは AWS Key Management Service キーのいずれかです。  AWS Key Management Service キーを選択した場合は、キー ID を指定する必要があります。</block>
   <block id="041e82a49e6bf584cd99d83e1bafb066" category="list-text">*リソース グループ*: Azure リソース グループの名前を選択します。</block>
-  <block id="ae35608efd65bb3b4a4c91d9eb59142d" category="list-text">*インスタンスの詳細*:</block>
-  <block id="fc20d9e6ed90928d9ec3cbce5033eb69" category="list-text">*バケット名*: StorageGRIDバケットの名前を入力します。</block>
-  <block id="fb0a62ab3a9d8a07269344d7b23f7f5a" category="list-text">*リージョン*: バケットのStorageGRIDリージョンを入力します。</block>
-  <block id="b7fd04780555fe4dcbc36171fb2c2e75" category="list-text">*バージョン管理を有効にする*: StorageGRIDバケットのバージョン管理を有効にするには、このオプションを選択します。バージョニングを使用すると、バケット内にオブジェクトの複数のバージョンを保存できるため、バックアップやリカバリに役立ちます。</block>
-  <block id="dd72147c676f5569cdd5fff6ac028f32" category="list-text">*オブジェクト ロック*: StorageGRIDバケットのオブジェクト ロックを有効にするには、このオプションを選択します。オブジェクト ロックにより、指定された保持期間中、オブジェクトの削除または上書きが防止され、データ保護の層が追加されます。これはバケットを作成するときにのみ有効にすることができ、後で無効にすることはできません。</block>
-  <block id="6031dc56db006b45d651306df278faab" category="list-text">*容量*: StorageGRIDバケットの容量を入力します。これはバケットに保存できるデータの最大量です。</block>
-  <block id="c6321a7b8f7062e1faad1738a74c7b18" category="list-text">*容量*: ONTAP S3 バケットの容量を入力します。これはバケットに保存できるデータの最大量です。</block>
-  <block id="12ea5f17a4629e89577f5d94a91cf1b0" category="list-text">*バージョン管理を有効にする*: ONTAP S3 バケットのバージョン管理を有効にするには、このオプションを選択します。バージョニングを使用すると、バケット内にオブジェクトの複数のバージョンを保存できるため、バックアップやリカバリに役立ちます。</block>
-  <block id="121844aa2e3824e5ec649efe8e79f965" category="list-text">*オブジェクト ロック*: ONTAP S3 バケットのオブジェクト ロックを有効にするには、このオプションを選択します。オブジェクト ロックにより、指定された保持期間中、オブジェクトの削除または上書きが防止され、データ保護の層が追加されます。これはバケットを作成するときにのみ有効にすることができ、後で無効にすることはできません。</block>
   <block id="b4f88e9494ba01afc4abc87164a307eb" category="section-title">バックアップターゲットの資格情報を変更する</block>
   <block id="784e8d94d56b7cca4512442d67485233" category="paragraph">バックアップ ターゲットにアクセスするために必要な資格情報を入力します。</block>
   <block id="500085ef4daa2d41e99c68f5d7ced622" category="list-text">バックアップ ターゲットの新しい資格情報を入力します。情報は、選択したバックアップ対象の種類によって異なります。</block>
@@ -1158,7 +1149,6 @@
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">*リカバリなしでスナップショットから復元*を選択します。</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*Postscript*: 必要に応じて、このオプションを有効にし、復元操作後に実行するスクリプトの完全なパスと、スクリプトが受け取る引数を入力します。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。</block>
-  <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">これらのオプションと構成セクションの一部は、すべてのワークロードで使用できるわけではありません。</block>
   <block id="f32ce25b9d7e6b0f57abe3fec295f863" category="inline-link-macro">SnapCenterとNetApp Backup and Recoveryのポリシーの違い</block>
   <block id="5ccfa6adf604407ae2c4559222331c92" category="paragraph">SnapCenterからリソースをインポートする場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーとの間に若干の違いが生じる可能性があります。見る<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block>。</block>
   <block id="bd47823121834a26ffa455589637515d" category="paragraph">ポリシーに関連する次の目標を達成できます。</block>
@@ -1897,7 +1887,6 @@
   <block id="6520b079587db54a07f00ca17e5ebf3f" category="admonition">バックアップがあるシステムまたはクラスターを削除する予定の場合は、システムを削除する前にバックアップを削除する必要があります。 NetApp Backup and Recoveryでは、システムを削除してもバックアップは自動的に削除されません。また、システムの削除後にバックアップを削除するための UI は現在サポートされていません。残りのバックアップについては、オブジェクト ストレージ コストが引き続き請求されます。</block>
   <block id="62fcab4349f4ca0402c709f1892d15bf" category="section-title">システムのすべてのバックアップファイルを削除する</block>
   <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-xref">ここで説明されているように</block>
-  <block id="390711dbf9b1194e9b19351d96031550" category="paragraph">システムのオブジェクト ストレージ上のすべてのバックアップを削除しても、このシステム内のボリュームの将来のバックアップは無効になりません。システム内のすべてのボリュームのバックアップの作成を停止したい場合は、バックアップを非アクティブ化できます。<block ref="f79da60ab60aec0656411209a64eca6e" category="inline-xref-macro-rx"></block> 。</block>
   <block id="29e9cf7ef22475594ad87c1e6e2499e4" category="list-text">選択<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>すべてのバックアップを削除するシステムを選択し、[すべてのバックアップを削除] を選択します。</block>
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">確認ダイアログボックスで、システムの名前を入力します。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">*詳細設定*を選択します。</block>
@@ -1918,21 +1907,9 @@
   <block id="1173c80b35af26bafcc4b74670bfa9c8" category="inline-link">そこからボリュームを削除します</block>
   <block id="8e219be71b8bc390ef2ad2ec3a99ccae" category="paragraph">NetApp Backup and Recoveryユーザー インターフェイスからソース ボリュームを削除することはできません。ただし、コンソールの*システム*ページでボリュームの詳細ページを開いて、<block ref="65a826e779230e29e5ca1795b6b89aba" category="inline-link-rx"></block> 。</block>
   <block id="07351083dae4540a45ff30e023e217c2" category="list-text">*ボリューム*タブから、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>ソースボリュームの*バックアップ* &gt; *関係の削除*を選択します。</block>
-  <block id="97966562c30303c0bc168db1ef4e82e6" category="section-title">システムのNetApp Backup and Recoveryを非アクティブ化する</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">バックアップを削除する</block>
   <block id="150316ac807c8abc9de05ff5720178a5" category="paragraph">バックアップに使用する容量については、クラウドプロバイダーからオブジェクトストレージの料金が引き続き請求されます。<block ref="f0fba6094ff5354e1300b0446d643e3c" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="a0fb50abe315f82d405a6dfa5e9af373" category="list-text">_バックアップ設定ページ_から、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>バックアップを無効にするシステムで、[*バックアップの無効化*] を選択します。</block>
-  <block id="ea2a76f4405b6e362502ec8a74d85774" category="list-text">確認ダイアログボックスで、「非アクティブ化」を選択します。</block>
-  <block id="8f7dcbf976c2b6952c4600f157324198" category="admonition">バックアップが無効になっている間、そのシステムに対して *バックアップをアクティブ化* ボタンが表示されます。そのシステムのバックアップ機能を再度有効にする場合は、このボタンを選択できます。</block>
   <block id="c7f20e0601efa026bf0dd9479de3f55e" category="section-title">システムのNetApp Backup and Recoveryの登録を解除する</block>
-  <block id="36d567455db793edde5264e68c28c75a" category="paragraph">バックアップ機能を使用する必要がなくなり、そのシステムでのバックアップに対する課金を停止したい場合は、システムのNetApp Backup and Recovery の登録を解除できます。通常、この機能は、システムを削除する予定があり、バックアップ サービスをキャンセルする場合に使用されます。</block>
-  <block id="15c7aac94228eb0c1ad110f50335500c" category="paragraph">クラスターのバックアップが保存される宛先オブジェクト ストアを変更する場合にも、この機能を使用できます。システムからNetApp Backup and Recoveryを登録解除した後、新しいクラウド プロバイダー情報を使用してそのクラスターに対してNetApp Backup and Recovery を有効にすることができます。</block>
-  <block id="28b9d28e040edb153420aaa034a386c1" category="paragraph">NetApp Backup and Recoveryを登録解除する前に、次の手順をこの順序で実行する必要があります。</block>
-  <block id="39b3af400d3ca8b2d3d8dca4f75cd99e" category="list-text">システムのNetApp Backup and Recoveryを無効にします</block>
-  <block id="59aea9f6f5073dc62e11916d7a07492f" category="list-text">そのシステムのすべてのバックアップを削除します</block>
-  <block id="f7ae31ad4a6513f59e6103af4d0c2230" category="paragraph">これら 2 つのアクションが完了するまで、登録解除オプションは使用できません。</block>
-  <block id="1c87fb51fed9ca5989cc401564c7fcb2" category="list-text">_バックアップ設定ページ_から、<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>バックアップ サービスを登録解除するシステムで、[*登録解除*] を選択します。</block>
-  <block id="7c89aa28480fddd6d4128cbe73ba1804" category="list-text">確認ダイアログボックスで、[登録解除] を選択します。</block>
   <block id="cb261d232a70015577ae3c5052a9ba56" category="doc">NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータを Amazon S3 にバックアップする</block>
   <block id="0c0bf2caafe0a0bcf95f58c110265658" category="admonition">「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。</block>
   <block id="e1e487d9ff52c7741cc25ee4b1ff06ea" category="section-title">接続方法を特定する</block>
@@ -4079,7 +4056,6 @@
   <block id="cab9c79c2324192af6049aa8cd78508d" category="list-text">*代替ストレージシステムへの復元*：元の（プライマリ）ストレージシステムが完全に利用できない場合でも、仮想マシンを代替ストレージシステムに復元できるようになりました。詳細については、<block ref="f3d02f39d5e1822fd83675aa2d7843de" category="inline-link-rx"></block>を参照してください。</block>
   <block id="9486b4129634e76f84d1e52fbd1b3326" category="inline-link">ファイルとフォルダを復元する</block>
   <block id="19e7d45c6bedb302dc81dcad6024f1c3" category="list-text">*Linux VMへのファイルの復元*：Linux VMにVMファイルとフォルダを復元できるようになりました。詳細については、<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>を参照してください。</block>
-  <block id="e75ea37e96b8396fc26e7835fb754851" category="list-text">利用可能なバックアップターゲットタイプのいずれかを選択します：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3*、または*GCP*。</block>
   <block id="c6ef992c54853d072b258e289ef08dd0" category="list-text">（AWS および Azure バックアップターゲットのみ）* Choose credentials location * セクションで、クレデンシャルが存在する場所を選択し、クレデンシャルを関連付ける方法を選択します。</block>
   <block id="3d138696a1e858f52942d736c24c1bd5" category="list-text">GCPの場合：</block>
   <block id="b2f385fda6ddca9e16bfe40b90994155" category="list-text">*認証情報名*：Google Cloud の認証情報名を入力してください。</block>
@@ -4088,7 +4064,6 @@
   <block id="b054d8e2a18fe4e350f13d024953aa8f" category="list-text">*バケット名*: Google Cloud バケットの名前を入力します。</block>
   <block id="d4e12036c5885fe3db728e0ff90b2385" category="list-text">*GCP project*：Google Cloud プロジェクトの名前を選択します。</block>
   <block id="c4366421a636f973ac0a44746588f3f0" category="list-text">*バケットリージョン*：Google Cloudバケットのリージョンを選択してください。</block>
-  <block id="7a39559ae62ff6325a41e1d2e21ae805" category="list-text">*オブジェクトのロック*：このオプションを選択すると、このバケット内のオブジェクトの保持期間が有効になります。保持期間が有効な間は、オブジェクトは変更または削除できず、期間が終了するまで変更できません。バケットに対してこのオプションを有効にすると、無効にすることはできません。</block>
   <block id="8e3ed50707ba6a187fccaa3ddd0a90cb" category="list-text">* Original location * ペインを選択します。元の場所に復元すると、* Destination settings * セクションを展開することで保存先設定を表示できますが、変更することはできません。</block>
   <block id="bd388205d06a997206a3077f6f06b20b" category="section-title">KVM仮想マシンを復元する</block>
   <block id="bcc1225a04b96d25ceeaa1d2157718ae" category="list-text">*Post-restore options* セクションで、 *Restart virtual machine* オプションを有効にすると、リストア処理の完了後に VM が再起動されます。</block>
@@ -4196,7 +4171,6 @@
   <block id="24a354b4e93e0d1659baa023a11ddcda" category="inline-xref">ボリュームのすべてのバックアップファイルを削除します</block>
   <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。ただし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
   <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">バックアップ関係が削除されると、個々のボリュームバックアップファイルを削除することはできません。しかし、<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。ボリュームのバックアップ関係を削除する必要がある場合は、まずそのボリュームのバックアップを削除してから、バックアップ関係を削除してください。</block>
-  <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">システムのNetApp Backup and Recoveryを無効化すると、既存のバックアップを削除せずに、すべてのボリュームのバックアップとリストアが一時停止されます。これにより、このシステムからバックアップサービスの登録を解除することなく、一定期間すべてのバックアップおよびリストアアクティビティを一時停止できます。</block>
   <block id="ac702e35e5d377649ce818c63f8cb9d6" category="paragraph">注釈<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>を使用して、バックアップおよびリストア中に操作ごとのデータムーバータイムアウト（秒）を設定します。これは、データムーバーがタイムアウトするまでに操作の進行を待機する時間を指定します。これは、停止した転送を検出して処理する場合（たとえば、ネットワークの問題によってボリュームデータのリストアが進行しない場合）に役立ちます。</block>
   <block id="aaaf3fb2db80e20e6d50218f16d99f4f" category="paragraph">リストアおよびフェイルオーバー時には、宛先の名前空間ラベルと注釈がソースに合わせて更新されます（ソースのキーは宛先のキーに追加または上書きされますが、宛先にのみ存在するキーは変更されません）。</block>
   <block id="a0c960e39999d3e07d43b18aadea4f7e" category="admonition">Red Hat OpenShiftでは、ネームスペースアノテーションは、リストアされたポッドが正しいセキュリティコンテキスト制約と権限を受け取ることを保証し、ボリュームへのアクセスや権限エラーなしでの実行を可能にするため重要です。詳細については、<block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -5072,7 +5046,6 @@
   <block id="0a7db0b8fe12008946ac8fe978e3d69e" category="list-text">下向き矢印を選択して、*リソース変換テンプレート*セクションを展開します。</block>
   <block id="9c517bfc321114ff54423e43965367b4" category="list-text">必要に応じて、リソースグループ、バージョン、および名前を入力してください。</block>
   <block id="523b43a20131df6f47ff988233d2eecd" category="paragraph">AWS S3、Azure Blob Storage、Google Cloud Storage、StorageGRIDなどのオフサイトバックアップターゲットを検出または手動で追加することで、バックアップをプライマリ環境の外部に保存できます。</block>
-  <block id="d4db6d6e4928ad83f42d61e0861bc45d" category="paragraph">バックアップターゲット（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage、またはStorageGRID）を設定してから、NetApp Backup and Recoveryを使用してください。</block>
   <block id="23896f5c70301b948b1aa5b4b36cd20a" category="paragraph">ストレージアカウントにアクセスするための認証情報を入力してください。NetApp Backup and Recoveryでは、これらの認証情報を使用して、バックアップ対象バケットへのアクセス権を検出および検証します。</block>
   <block id="83a41f03292d1a2eb5d1e5c3c3e82bdd" category="list-text">NetApp Backup and Recovery メニューから、*バックアップターゲット*を選択します。</block>
   <block id="71e713e318f2ad1741f1abee4f606656" category="list-text">*アクセスキー*：AWSアクセスキーを入力してください。</block>
@@ -5084,10 +5057,6 @@
   <block id="655cc3b0e95dc40ab8723703833d5cb3" category="list-text">*サブスクリプション*：Azure サブスクリプションの名前を選択します。</block>
   <block id="c1c1ad906518844255c02a6eb2fa8196" category="list-text">*ストレージアカウント名*：Azure Blob Storage アカウントの名前を入力してください。</block>
   <block id="f0f386af9d4c467951d13eabc4185ca7" category="list-text">*Azure リージョン*：ストレージ アカウントの Azure リージョンを入力してください。</block>
-  <block id="87d2d0ed9aedfdd167b4264a369336ba" category="list-text">*パフォーマンス タイプ*：Azure Blob Storage アカウントのパフォーマンス タイプとして、標準またはプレミアムのいずれかを選択し、必要なパフォーマンス レベルを指定します。</block>
-  <block id="29fbc2167fb971b5bdee4e572372b0a4" category="list-text">*暗号化*：Azure Blob Storage アカウントの暗号化の種類を選択します。選択肢は、Microsoft が管理するキーか、カスタマーマネージドキーのいずれかです。カスタマーマネージドキーを選択する場合は、キーコンテナー名とキー名を指定する必要があります。</block>
-  <block id="a59d53d7e7ab6a12c16a345297a65da7" category="list-text">*バックアップ先*：StorageGRID バックアップ ターゲットの名前を選択します。</block>
-  <block id="bdd4e66322e60cca57b3bd09ad13e871" category="list-text">*バックアップ先*：ONTAP S3バックアップ先の名前を選択します。</block>
   <block id="730acae7684dfbf79ddf6b1f05ea9f75" category="list-text">*バケット名*：ONTAP S3バケットの名前を入力してください。</block>
   <block id="6caed87fa2992f2b01dad7a3a9dc41eb" category="list-text">対象を選択し、右側の *Actions* <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> アイコンを選択して、*Change credentials* を選択します。</block>
   <block id="d15ce5f7b11589a195af27e9552d666f" category="paragraph">NetApp Backup and Recovery で Hyper-V 仮想マシンを検出し、保護ポリシーを使用して保護できるようにします。</block>
@@ -6224,4 +6193,78 @@
   <block id="5b82c5e93eb556ac924b1e6909752359" category="list-text">ホスト検出中にsudoアクセスを許可するには、「ホスト登録」セクションでroot以外の認証情報を選択し、「sudoersの設定」を選択して指示に従ってください。root認証情報を使用する場合は、この手順は不要です。手動インストールの場合、この手順は不要です。</block>
   <block id="41550faf0c68179011d757996fd6d047" category="list-text">Oracleデータベースユーザーには<block ref="4811df2c83bee7ee3a883640cc4d80af" prefix="" category="inline-code"></block>権限が必要です。</block>
   <block id="5d3eb6919efa937c33d95e081b5ac2fc" category="section-title">2026年10月19日</block>
+  <block id="d2ebbd36608739936bb939c9de72a23a" category="paragraph">今回のリリースでは、NetApp Backup and RecoveryでKubernetesワークロード向けに以下の機能強化が導入されています：</block>
+  <block id="cc7c8e0fe116e37f04e0ad62644d821b" category="list-text">*Trident Protect 26.10*：このリリースには Trident Protect 26.10 が含まれます。</block>
+  <block id="ca663f12e620da9687b7846a60e5d2e7" category="list-text">*ontap-nas-economyおよびontap-san-economyドライバのサポート*：NetApp Trident<block ref="caafdf62a2c609bfa5316118231a1007" prefix=" " category="inline-code"></block>ドライバ（Qtrees）および<block ref="3016c12c1db45f14c80c9c1731b9c26a" prefix=" " category="inline-code"></block>ドライバ（LUN）によってプロビジョニングされた永続ボリューム要求（PVC）を保護できるようになりました。economyドライバを使用してPVCを保護すると、基盤となるFlexVolまたはLUN全体が保護されます。これらのバックアップから個々のPVCを復元できます。</block>
+  <block id="d3ea67062b764fc121c2313921544714" category="list-text">*Kubernetes対応アラート*：NetApp Consoleは、Kubernetesアラートをボリュームごとではなく、Kubernetesアプリケーションごとに1回送信するようになりました。</block>
+  <block id="56763801785ca9815df36fb133a8847a" category="list-text">*ボリュームグループスナップショットのサポート*：Kubernetesアプリケーションを定義する際に、ボリュームグループを作成できるようになりました。ボリュームグループを使用すると、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態のセットとして複数のボリュームをまとめてスナップショットを取得でき、グループ内のすべてのボリューム間でデータの一貫性を確保できます。</block>
+  <block id="1d458bfacd6d519628c6da6c1cb44452" category="list-text">*S3互換オブジェクトストレージのサポート*：バックアップ対象の認証情報を追加し、保護ポリシーを設定することで、KubernetesアプリケーションのリソースとデータをS3互換オブジェクトストレージにバックアップできるようになりました。</block>
+  <block id="c49afcf4c9d7fb7f9e3e56e33e3ed3a8" category="paragraph">今回のリリースでは、NetApp Backup and RecoveryにONTAP Volumesワークロード向けの以下の機能強化が導入されています：</block>
+  <block id="c087f837ef797de43d9ebd1a7d125236" category="list-text">*保護レポート*：NetApp Backup and Recoveryでは、ONTAPボリュームワークロードの拡張レポートの作成とダウンロードがサポートされるようになりました。</block>
+  <block id="b9ba826047adb428b13135e4a8370ce8" category="list-text">*ONTAPシステムの登録解除時にバックアップを保持するかどうかを選択*：NetApp Backup and RecoveryからONTAPシステムの登録を解除する際に、以前にバックアップしたデータを破棄するか、リストア用に保持するかを選択できるようになりました。NetApp Backup and Recoveryのドキュメントに、システムの登録解除後に保持されたデータをリストアする手順が追加されました。</block>
+  <block id="147e4e035d3742c8a163c4282707c86d" category="inline-link">システムのBackup and Recoveryの登録を解除する</block>
+  <block id="113ea0f6ada6e0a0faeef3e476b36daa" category="paragraph">詳細については、<block ref="d430b7e541ef6ef0ab6b72278c77300c" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="4218ebde887e47d99313814e89fca1dc" category="paragraph">今回のリリースでは、今回のリリースでは、NetApp Backup and Recoveryで、Oracle Databaseワークロード向けに以下の機能強化が導入されています：</block>
+  <block id="d2a0591e201dfac56fdea850632dc8e3" category="paragraph">*別の場所へのリストア*：NetApp Backup and Recoveryは、Oracleデータベースを別の場所（別の登録済みホスト）にリストアできるようになりました。</block>
+  <block id="497cd988427d83c8811290c97c318790" category="paragraph">NetApp Backup and Recoveryを使用する前に、バックアップターゲット（Amazon Web Services（AWS）S3、ONTAP S3、S3互換オブジェクトストレージ、Microsoft Azure Blob Storage、Google Cloud Storage、またはStorageGRID）を設定してください。</block>
+  <block id="512c8a19583567b0c60a6d4046e3fc9d" category="list-text">利用可能なバックアップ対象タイプから1つを選択してください：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3*、*S3互換*、または*GCP*。</block>
+  <block id="4828de8adc4e9d7efea3fb6a81a07cac" category="list-text">S3互換の場合：</block>
+  <block id="229cde11dc3a1e8e2c7d01739e81a8cc" category="list-text">*認証情報名*：S3互換の認証情報名を入力してください。</block>
+  <block id="f5e327b49bbb21e98940f0e794efac25" category="list-text">*ゲートウェイノードのFQDN*：S3互換ゲートウェイノードのFQDNを入力してください。</block>
+  <block id="4f4d1f557a30e4b8b6b0ad1b2f14fee9" category="list-text">*ポート*：S3互換のポート番号を入力してください。</block>
+  <block id="f40f98161e8527be6da60ccfc954e485" category="list-text">*アクセスキー*：S3互換のアクセスキーを入力してください。</block>
+  <block id="544dcb1b29d755ccb0cd04844b0c85a8" category="list-text">*秘密鍵*：S3互換の秘密鍵を入力してください。</block>
+  <block id="35ab23dfe4dfebb961a6643c98501af8" category="list-text">*GCPプロジェクト*：Google Cloudプロジェクトの名前を入力してください。</block>
+  <block id="faa21d68908d97d45895575e1ccfb06c" category="list-text">*インスタンスの詳細*：次の情報を追加してください：</block>
+  <block id="89942d61d62ce975085dbc1a223193cf" category="list-text">*オブジェクトロック*：このオプションを選択すると、バケットのオブジェクトロックが有効になります。オブジェクトロック機能は、指定された保持期間中、オブジェクトの削除や上書きを防止することで、データ保護をさらに強化します。この機能はバケットを作成する際にのみ有効にでき、後から無効にすることはできません。</block>
+  <block id="603cc6c27a8469c81813bfebca168e93" category="list-text">*暗号化*：Azure Blob Storage アカウントの暗号化の種類を選択します。Microsoftが管理するキー、またはお客様が管理するキーのいずれかを選択できます。お客様が管理するキーを選択した場合は、暗号化キーと暗号化IDの両方を指定する必要があります。</block>
+  <block id="1c8f409ecfd750e9ab731c44e8cf83b4" category="list-text">*認証情報名*：このバケットのバックアップ対象への認証に使用する認証情報を選択します。</block>
+  <block id="c193c9ebe64e85f3f8bffd1dae7b1b49" category="list-text">*バケット名*：新しいStorageGRIDバケットの名前を入力してください。</block>
+  <block id="f6d09036b60b1acbf448ef32db03bec9" category="list-text">*オブジェクトロック*：バケットのオブジェクトロックを有効にするには、このオプションを選択します。オブジェクトロック機能は、指定された保持期間中、オブジェクトの削除や上書きを防止することで、データ保護をさらに強化します。この機能はバケットを作成する際にのみ有効にでき、後から無効にすることはできません。</block>
+  <block id="ac2a1e88d9a3d9f15c0797a4a25eb69b" category="list-text">*バケット名*：新しいS3互換バケットの名前を入力してください。</block>
+  <block id="99fb4aae942ff1af2bfc554e10a731d2" category="admonition">アプリケーションでQtreeによってパーティション分割されたFlexVolボリュームを使用している場合、アプリケーションを保護すると、そのアプリケーションの一部であるすべてのFlexVolボリューム内のすべてのQtreeが保護されます。</block>
+  <block id="fb7cdb707e234b2e8272fc581163dfff" category="list-text">必要に応じて、「Volume groups」領域でラベルセレクタを使用してボリュームグループを定義します。各カンマ区切りラベル内のリソースは、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態セットとして保護されます。</block>
+  <block id="6a59150c4b9633c51fe2d270250c6749" category="list-text">オプションで、*Volume groups*領域において、選択したVMのディスクを「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態のボリュームグループ（VMごとに1つのボリュームグループ）としてまとめて保護するオプションを有効にします。</block>
+  <block id="fa316da11f02e062f57f24ae76cebc99" category="paragraph">システムのオブジェクトストレージ上のすべてのバックアップを削除しても、そのシステム内のボリュームの今後のバックアップが無効になるわけではありません。システム内のすべてのボリュームのバックアップ作成を停止したい場合は、バックアップを一時停止できます<block ref="627bc8b5a101988e015458f90d7fd491" category="inline-xref-macro-rx"></block>。</block>
+  <block id="cd2e1afe7aab66c663a0c7c824b8efe9" category="section-title">システムのすべてのバックアップを一時停止する</block>
+  <block id="f910b8416a243dfc4c6b5c21357aa42a" category="paragraph">システムのすべてのバックアップを一時停止すると、既存のバックアップを削除せずに、システムのすべてのボリュームのバックアップアクティビティを一時停止できます。バックアップを一時停止しても、このシステムからバックアップサービスの登録は解除されません。</block>
+  <block id="16e073461cf907aa3388d4dd6cc76b33" category="list-text">_バックアップ設定_ページから、バックアップを一時停止するシステムの<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>を選択し、*すべてのバックアップを一時停止*を選択します。</block>
+  <block id="45fce289f1a8c83302b5f4d872ce0be8" category="list-text">確認ダイアログボックスで、*一時停止*を選択します。</block>
+  <block id="93922475d8b2d2f399fffc2f6502c7ff" category="paragraph">システムのNetApp Backup and Recoveryの登録を解除すると、ストレージシステムの今後のバックアップが停止され、NetApp Backup and Recoveryから削除されます。このプロセス中に、既存のバックアップを保持するか削除するかを選択できます。</block>
+  <block id="b9acdfb3fe6814689f798ee5ba478262" category="inline-link-macro">ONTAP CLIを使用してONTAPデータをリストアする</block>
+  <block id="6b49e32c5370aa75037ea90ff889e18a" category="list-text">既存のバックアップを復元するには、<block ref="ca224e7fbcd3a58dec3d0008f9be881e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="55599fb6b927f75020d253ee0e5a1c92" category="list-text">「バックアップ設定」を選択します。</block>
+  <block id="7a51161327000ec76e9bd8e138468625" category="list-text">バックアップ設定ページで、システムの<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>を選択し、*バックアップの登録解除*を選択します。</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="list-text">次のいずれかのオプションを選択します。</block>
+  <block id="4bc8fd684d21298394914dc8f59016a2" category="list-text">*バックアップの無効化*：今後のバックアップを停止し、オブジェクトストアのバックアップ関係を削除し、既存のバックアップをオブジェクトストレージに保持します。システムが登録解除された後は、ONTAP CLIを使用してのみこれらのバックアップを復元できます。</block>
+  <block id="ff65356755d54101e749f5bb8d6390a5" category="list-text">*バックアップの無効化と削除*：今後のバックアップを停止し、オブジェクトストアのバックアップ関係を削除し、既存のバックアップを削除します。必要に応じて、*バックアップの無効化/削除時のエラーを無視する*を選択すると、手順が失敗した場合でも操作を続行できます。</block>
+  <block id="dfee6097752e7129482df13f43e0d016" category="list-text">*システム名を入力して確認してください* にシステム名を入力します。</block>
+  <block id="6f53822dc138caffe0db3d1b7228eb76" category="list-text">*保護レポートのバックアップを確認する* で、必要なレポートがすべて保存されていることを確認してください。</block>
+  <block id="0e99a50f987d33fb61f7174388ec5bf7" category="list-text">*確認して登録解除*を選択します。</block>
+  <block id="128b9b68bc952926898e9cb180142a2f" category="list-text">ジョブモニターで操作が完了するまで監視してください。</block>
+  <block id="f34901277d832930a7715899d8aab192" category="admonition">システムの登録を解除しても、ONTAPでのシステムのボリューム、スナップショット構成、またはレプリケーション関係は変更されません。</block>
+  <block id="c697b002591b1081640514a7d1737556" category="summary">状況によっては、ONTAPデータを復元するためにONTAP CLIを使用する必要がある場合があります。</block>
+  <block id="f01e63e1a85b954f51ca4a6e068eb6b7" category="paragraph">Backup and Recovery Web UIを使用して、一部のONTAPデータをリストアできない場合があります。これは、システムの登録解除後にバックアップを保持していた場合、またはバックアップが既に存在しないリレーションシップを通じて作成された場合に発生する可能性があります。いずれの場合も、ONTAP CLIを使用してバックアップをリストアしてください。</block>
+  <block id="ec86bd3101749b0341e24ffb93a6a492" category="list-text">デスティネーション クラスタのONTAP CLIにアクセスできること、およびリストアするバックアップ コピーを把握していることを確認してください。</block>
+  <block id="75416dfe2ceb2c6cb8491b2cb515feb5" category="list-text">別のONTAPクラスタにリストアする場合、そのクラスタはすでに同じオブジェクトストアにアクセスできる必要があります。必要に応じて、リストアする前にデスティネーション クラスタでオブジェクトストアを設定してください。</block>
+  <block id="a54f62a8dcb41305536a5acf09464352" category="list-text">システムを登録解除する前に新しいバックアップ関係が作成されていた場合は、NetApp Backup and Recoveryでは、新しいバックアップが作成されてから最大1時間の間、古いスナップショットが表示され続ける場合があります。その更新期間中は、UIベースの古いスナップショットのリストアが失敗する可能性があります。</block>
+  <block id="fdd4155863226ecb841ae09602e4c668" category="list-text">バックアップレポートをダウンロードしてください。</block>
+  <block id="29a4dbbef911b88bedf19bdfa84b4263" category="list-text">レポート内で、復元するボリュームを見つけ、必要なバックアップコピーのエンドポイントエントリを探します：</block>
+  <block id="e01874ecf753c8cb1de8f34c4dfb8d80" category="list-text">以前の関係における古いバックアップについては、*Endpoint UUID History*の値を使用してください。</block>
+  <block id="645c3c66102fc66596a98bd5dc33b8ef" category="list-text">現在の関係からのバックアップには、*Endpoint UUID*の値を使用してください。</block>
+  <block id="8a73294528d93a1f59eecd121d51ff0d" category="paragraph">各履歴エントリは次の形式を使用します<block ref="55e85e3ccf753c88d658ef791c8f6cde" prefix=" " category="inline-code"></block>。リストアするバックアップのバケット名とエンドポイントUUIDを記録してください。</block>
+  <block id="5fba4a68d61bc5f7f7e6554abf272e41" category="list-text">ONTAPクラスタのCLIに接続し、診断モードに入ります：</block>
+  <block id="0da552512b372f563014f14813cf9885" category="list-text">デスティネーションデータ保護（DP）ボリュームを作成します：</block>
+  <block id="8f626d1139a53068fec0fdc5498c1ab6" category="list-text">記録したバケットとエンドポイントUUIDで使用可能なスナップショットを一覧表示します：</block>
+  <block id="9b8ba9c9dbbe51510f9dfbdab292ff32" category="admonition">このコマンドは、ONTAPがそのバケットとエンドポイントについて追跡しているスナップショットのみを一覧表示します。手動で別のバケットに移動されたスナップショットは一覧表示されません。</block>
+  <block id="8e2984dd6db099579064ed18ea316672" category="list-text">バックアップ作成後にオブジェクトストアの認証情報が変更された場合は、続行する前にオブジェクトストアの設定を更新してください：</block>
+  <block id="85b4448e71f07ab48dbb54cf4df1d355" category="list-text">選択したスナップショットをオブジェクトストレージからデスティネーションDPボリュームに復元します：</block>
+  <block id="3770b537731b467947d113336d70a371" category="paragraph">このタスクのONTAPコマンドの詳細については、次のONTAPドキュメントを参照してください：</block>
+  <block id="4784dd0ffa42c3d1b43b0afd079dfc17" category="inline-link">volume create</block>
+  <block id="0fa851dd782b19eb7cc49215ec058fa8" category="list-text"><block ref="0fa851dd782b19eb7cc49215ec058fa8" category="inline-link-rx"></block></block>
+  <block id="83360a1eaef3ed445d1e195bce123d01" category="inline-link">snapmirror object-store config modify</block>
+  <block id="64a789f9359deaaa5d68c54fd43daf3a" category="list-text"><block ref="64a789f9359deaaa5d68c54fd43daf3a" category="inline-link-rx"></block></block>
+  <block id="5b18e7c216c868ae1b7c4df44ba6df58" category="inline-link">snapmirror restore</block>
+  <block id="399d4101cbf520dcec67f680dbf4ad81" category="list-text"><block ref="399d4101cbf520dcec67f680dbf4ad81" category="inline-link-rx"></block></block>
+  <block id="b0609734250ba6ba4d0839963ce55146" category="section-title">2026年10月26日</block>
 </blocks>

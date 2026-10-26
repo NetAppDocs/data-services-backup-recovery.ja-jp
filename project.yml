@@ -104,6 +104,8 @@ sidebar:
           url: "/prev-ontap-restore-search.html"
         - title: Browse and Restore を使用して ONTAP データをリストアする
           url: "/prev-ontap-restore-browse.html"
+        - title: ONTAP CLIを使用してONTAPデータをリストアする
+          url: "/prev-ontap-restore-cli.html"
     - title: Microsoft SQL Server ワークロードを保護する
       entries:
       - title: Microsoft SQL Server の保護ワークフロー（NetApp Backup and Recovery）

@@ -27,6 +27,9 @@ Backup and Recovery スーパー管理者、または Backup and Recovery バッ
 
 Kubernetes アプリケーションを保護するには、まず NetApp Backup and Recovery でアプリケーションを作成します。アプリケーションを作成すると、NetApp Backup and Recovery は Kubernetes クラスタ上で実行されているアプリケーションを認識します。
 
+
+NOTE: アプリケーションでQtreeによってパーティション分割されたFlexVolボリュームを使用している場合、アプリケーションを保護すると、そのアプリケーションの一部であるすべてのFlexVolボリューム内のすべてのQtreeが保護されます。
+
 .開始する前に
 Kubernetesアプリケーションを追加して保護する前に、link:br-start-discover.html["Kubernetesワークロードを発見する"] 。
 
@@ -59,6 +62,7 @@ NOTE: NetApp Backup and Recoveryでは、検索パラメータや検索結果は
 
 
 
+. 必要に応じて、「Volume groups」領域でラベルセレクタを使用してボリュームグループを定義します。各カンマ区切りラベル内のリソースは、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態セットとして保護されます。
 . Backup and Recoveryでは、検索条件に一致するリソースの一覧が表示されます。
 . 保護するリソースがリストに含まれている場合は、[次へ] を選択します。
 . オプションで、*ポリシー*領域で、既存の保護ポリシーを選択してアプリケーションを保護するか、新しいポリシーを作成します。ポリシーを選択しない場合、アプリケーションは保護ポリシーなしで作成されます。後でlink:br-use-policies-kubernetes-create.html#create-a-policy["保護ポリシーを追加する"]できます。
@@ -89,6 +93,7 @@ NOTE: リストから仮想マシンを選択した場合、アプリケーシ�
 +
 選択した仮想マシンが右側のリストに表示されます。
 
+. オプションで、*Volume groups*領域において、選択したVMのディスクを「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態のボリュームグループ（VMごとに1つのボリュームグループ）としてまとめて保護するオプションを有効にします。
 . リストに保護する VM が含まれている場合は、* Next * を選択します。
 . オプションで、*ポリシー*領域で、既存の保護ポリシーを選択してアプリケーションを保護するか、新しいポリシーを作成します。ポリシーを選択しない場合、アプリケーションは保護ポリシーなしで作成されます。後でlink:br-use-policies-kubernetes-create.html#create-a-policy["保護ポリシーを追加する"]できます。
 . *プレスクリプトとポストスクリプト*領域で、バックアップ操作の前または後に実行するプレスクリプトまたはポストスクリプトの実行フックを有効にして構成します。プレスクリプトまたはポストスクリプトを有効にするには、少なくとも1つ作成しておく必要があります。link:br-use-manage-execution-hook-templates.html["実行フックテンプレート"] 。
@@ -157,6 +162,10 @@ spec:
       labelSelector:
         matchLabels:
           app: another-example-app
+  volumeGroups:
+    - labelSelector:
+        matchLabels:
+          volume-group: my-volume-group
   includedClusterScopedResources:
     - groupVersionKind:
         group: rbac.authorization.k8s.io

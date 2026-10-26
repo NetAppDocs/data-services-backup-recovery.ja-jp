@@ -14,9 +14,6 @@ summary: NetApp Backup and Recoveryでは、バックアップの頻度、バッ
 [role="lead"]
 NetApp Backup and Recovery を使用して、バックアップの頻度、スケジュール、およびデータ保持を制御する Microsoft SQL Server のバックアップ ポリシーを作成します。
 
-
-NOTE: これらのオプションと構成セクションの一部は、すべてのワークロードで使用できるわけではありません。
-
 SnapCenterからリソースをインポートする場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーとの間に若干の違いが生じる可能性があります。見るlink:reference-policy-differences-snapcenter.html["SnapCenterとNetApp Backup and Recoveryのポリシーの違い"]。
 
 ポリシーに関連する次の目標を達成できます。
