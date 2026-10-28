@@ -36,6 +36,8 @@ sidebar:
       url: "/concept-backup-to-cloud.html"
     - title: NetApp Backup and Recoveryの要件
       url: "/concept-start-prereq.html"
+    - title: サポートされているバックアップおよび復元先
+      url: "/br-start-sources-destinations.html"
     - title: ライセンスの設定
       url: "/br-start-licensing.html"
     - title: セキュリティ証明書を設定する
@@ -58,7 +60,7 @@ sidebar:
       url: "/br-use-dashboard.html"
     - title: ONTAPボリュームのワークロードを保護する
       entries:
-      - title: NetApp Backup and Recovery for ONTAP ボリュームについて
+      - title: ONTAPボリュームの保護ワークロードの概要
         url: "/prev-ontap-protect-overview.html"
       - title: NetApp Backup and Recovery を有効にしてボリュームを保護する
         url: "/br-start-enable.html"

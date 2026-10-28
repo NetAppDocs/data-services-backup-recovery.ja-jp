@@ -30,9 +30,9 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 * * ONTAPボリューム ワークロード*:
 +
 ** ローカル スナップショットを作成し、セカンダリ ストレージに複製し、オンプレミスのONTAPまたはCloud Volumes ONTAPONTAPからパブリック クラウド アカウントまたはプライベート クラウド アカウントのオブジェクト ストレージに ONTAP ボリュームをバックアップします。
+** ファイルとフォルダを検索して復元します。
 ** 別のONTAPクラスターとクラウド内のオブジェクト ストレージに保存されるブロック レベルの永久増分バックアップを作成します。
-** NetApp Backup and RecoveryをSnapCenterと併用します。
-** 参照link:prev-ontap-protect-overview.html["ONTAPボリュームを保護する"]。
+** link:prev-ontap-protect-overview.html["ONTAPボリュームのワークロードを保護する"]を参照してください。
 
 
 * *Microsoft SQL Server ワークロード*:
@@ -85,7 +85,6 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** Kubernetes アプリケーションとリソースをすべて 1 か所で管理および保護します。
 ** 保護ポリシーを使用して増分バックアップを構成します。
 ** アプリケーションとリソースを同じまたは異なるクラスターと名前空間に復元します。
-** SnapCenterを使用せずにNetApp Backup and Recoveryを使用します。
 ** 参照link:br-use-kubernetes-protect-overview.html["Kubernetesワークロードを保護する"]。
 
 
@@ -128,15 +127,8 @@ ONTAPシステムでNetApp Backup and Recoveryのオブジェクトへのバッ�
 +
 NetApp Backup and Recovery はソース ボリュームのストレージ効率を維持するため、 ONTAP効率化後のデータ (重複排除と圧縮が適用された後の少量のデータ) に対してクラウド プロバイダーのオブジェクト ストレージ コストを支払います。
 
-* 検索と復元を使用してデータを復元する場合、クラウド プロバイダーによって特定のリソースがプロビジョニングされ、検索要求によってスキャンされるデータの量に応じて TiB ごとにコストが発生します。  (これらのリソースは参照と復元には必要ありません。)
-+
-** AWSでは、 https://aws.amazon.com/athena/faqs/["アマゾンアテナ"^]そして https://aws.amazon.com/glue/faqs/["AWS グルー"^]リソースは新しい S3 バケットにデプロイされます。
-** Azureでは、 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse ワークスペース"^]そして https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure データレイクストレージ"^]データを保存および分析するためにストレージ アカウントにプロビジョニングされます。
-** Google Cloud では、新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]はアカウント/プロジェクトレベルでプロビジョニングされます。
-
-
 * アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。
-* ボリュームデータのリストアプロセス中にランサムウェアのバックアップファイルをスキャンする場合（クラウドバックアップでDatalockとランサムウェア対策を有効にしている場合）、クラウド プロバイダからの追加のegress コストも発生します。
+* ボリュームデータの復元プロセス中にバックアップファイルのランサムウェアスキャンを実行する予定がある場合（クラウドバックアップでDataLockとランサムウェア保護を有効にしている場合）、クラウド プロバイダからも追加料金が発生します。
 
 
 *サービス料*
@@ -162,8 +154,8 @@ NetApp Backup and Recoveryでは無料トライアルが提供されており、
 次の 3 つのライセンス オプションから選択できます。
 
 * *お客様独自のライセンスの使用 (BYOL)*: NetAppから期間ベース (1 年、2 年、または 3 年) および容量ベース (1 TiB 単位) のライセンスを購入します。提供されたシリアル番号をNetApp Consoleに入力してアクティブ化します。ライセンスは組織内のすべてのソース システムに適用されます。期間または容量制限に達した場合は更新が必要です。
-* *従量課金制（PAYGO）*：クラウド プロバイダのマーケットプレイスからサブスクリプションを登録し、バックアップされたデータのGiB単位で料金を支払います。課金は時間単位で行われます。前払い金は不要です。初回登録時には30日間の無料トライアルをご利用いただけます。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-paygo-subscription["NetApp Backup and Recovery PAYGOサブスクリプションを使用する"]を参照してください。
-* *年間契約*: AWS および Azure マーケットプレイスを通じて 1 年、2 年、または 3 年間ご利用いただけます。  2 つの年間契約が利用可能です:
+* *従量課金制（PAYGO）*：クラウド プロバイダのマーケットプレイスからサブスクリプションを登録し、バックアップされたデータ1GiBごとに料金を支払います（月額請求）。前払い金は不要です。初回登録時には30日間の無料トライアルをご利用いただけます。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-paygo-subscription["NetApp Backup and Recovery PAYGOサブスクリプションを使用する"]を参照してください。
+* *期間契約*：AWSおよびAzureマーケットプレイスを通じて、6ヶ月または1年単位で利用可能です。年間契約は2種類あります：
 +
 ** *クラウド バックアップ*: Cloud Volumes ONTAPとオンプレミスのONTAPデータをバックアップします。
 ** *CVO Professional*: Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルし、 Cloud Volumes ONTAPボリュームのバックアップを無制限に提供します (バックアップ容量はライセンスにカウントされません)。
@@ -241,9 +233,13 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 
 * AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
 * Azureでは、NetApp Consoleは、Blobコンテナ用のストレージアカウントを持つ新規または既存のリソースグループを使用します。Consoleは https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトで使用されます。
-* StorageGRIDでは、コンソールはオブジェクト ストア バケットに既存のストレージ アカウントを使用します。
+* Google Cloud では、Console は Google Cloud ストレージ バケット用のストレージ アカウントを持つ、新規または既存のプロジェクトを使用します。
+* StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。
 * ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
 
+
+
+CAUTION: クラウド プロバイダ環境から直接クラウドバックアップファイルを管理または変更すると、ファイルが破損し、サポートされない構成になる可能性があります。
 
 
 

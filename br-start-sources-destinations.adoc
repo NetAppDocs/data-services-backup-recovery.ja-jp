@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: br-start-sources-destinations.html 
+keywords: supported systems, supported regions, backup destinations, restore destinations, backup sources, secondary system, object storage, Amazon S3, Azure Blob, Google Cloud Storage, StorageGRID, ONTAP S3, Amazon FSx for NetApp ONTAP, Google Cloud NetApp Volumes Flex 
+summary: NetApp Backup and Recoveryは、さまざまなソースシステム、セカンダリ システム、およびオブジェクトストレージの保存先にわたるデータのバックアップと復元をサポートします。 
+---
+= NetApp Backup and Recoveryでサポートされているバックアップおよびリストア先
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recoveryがワークロード全体のバックアップおよびリストア処理でサポートするソース システム、セカンダリ システム、およびオブジェクト ストレージの保存先を確認します。
+
+
+
+[[supported-systems-for-backup-and-restore-operations]]
+== バックアップおよび復元操作でサポートされているシステム
+
+NetApp Backup and Recovery は、 ONTAPシステムとパブリックおよびプライベート クラウド プロバイダーをサポートします。
+
+
+
+[[supported-regions]]
+=== サポートされている地域
+
+NetApp Backup and Recovery は、多くの Amazon Web Services、Microsoft Azure、Google Cloud リージョンでCloud Volumes ONTAPによってサポートされています。
+
+https://bluexp.netapp.com/cloud-volumes-global-regions["グローバル地域マップを使用して詳細を確認する"^]
+
+
+
+[[supported-backup-destinations]]
+=== サポートされているバックアップ先
+
+NetApp Backup and Recoveryを使用すると、以下のソースシステムから、パブリックおよびプライベートのクラウド プロバイダ上の以下のセカンダリ システムおよびオブジェクトストレージにデータをバックアップできます。スナップショットはソースシステム上に保存されます。
+
+
+NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。
+
+[cols="33,33,33"]
+|===
+| ソースシステム | セカンダリシステム（レプリケーション） | 宛先オブジェクトストア（バックアップ） 
+
+
+| AWS のCloud Volumes ONTAP  a| 
+* AWS のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+| Amazon S3 
+
+
+| Azure のCloud Volumes ONTAP  a| 
+* Azure のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+| Azure ブロブ 
+
+
+| Google のCloud Volumes ONTAP  a| 
+* Google のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+| Google Cloud Storage 
+
+
+| オンプレミスのONTAPシステム  a| 
+* Cloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* Amazon S3
+* S3互換ストレージ
+* Azure ブロブ
+* Google Cloud Storage
+* NetAppStorageGRID
+* ONTAP S3
+
+
+
+
+| Google Cloud NetApp Volumes Flex（Oracle DatabaseおよびVMwareワークロードのみ） | Google Cloud NetApp Volumes Flex | Google Cloud Storage 
+
+
+| Amazon FSx for NetApp ONTAP（Microsoft SQL Server、Oracle Database、およびVMwareワークロードのみ） | AWS のCloud Volumes ONTAP | Amazon S3（Cloud Volumes ONTAPからのみ） 
+|===
+
+NOTE: 「オンプレミス ONTAPシステム」とは、FAS、AFF、およびONTAP Selectシステムを指します。
+
+
+
+[[supported-restore-destinations]]
+=== サポートされている復元先
+
+セカンダリ システム（複製ボリューム）またはオブジェクト ストレージ（バックアップ ファイル）に存在するバックアップ ファイル、仮想マシン、データベース、または Kubernetes リソースから、以下のシステムにデータを復元できます。スナップショットはソース システムに存在し、その同じシステムにのみ復元できます。
+
+
+NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。
+
+[cols="30,35,35"]
+|===
+| バックアップ場所（オブジェクトストア） | オブジェクトストレージ（バックアップ）から復元する際の宛先システム | セカンダリ システムから復元する場合の宛先システム（レプリケーション） 
+
+
+| Amazon S3  a| 
+* AWS のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+* Amazon FSx for NetApp ONTAP（Microsoft SQL Server、Oracle Database、およびVMwareワークロードのみ）
+
+ a| 
+* AWS のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+* Amazon FSx for NetApp ONTAP
+
+
+
+
+| Azure ブロブ  a| 
+* Azure のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+ a| 
+* Azure のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+
+
+
+
+| Google Cloud Storage  a| 
+* Google のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+* Google Cloud NetApp Volumes Flex
+
+ a| 
+* Google のCloud Volumes ONTAP
+* オンプレミスのONTAPシステム
+* Google Cloud NetApp Volumes Flex
+
+
+
+
+| StorageGRID  a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+| オンプレミスのONTAPシステム 
+
+
+| ONTAP S3  a| 
+* オンプレミスのONTAPシステム
+* Cloud Volumes ONTAP
+
+| オンプレミスのONTAPシステム 
+
+
+| S3互換オブジェクトストレージ（ONTAPボリュームのみ） | オンプレミスのONTAPシステム | オンプレミスのONTAPシステム 
+|===
+復元にあたっては、以下の点に留意してください：
+
+* Cloud Volumes ONTAP（レプリケーション）からのリストアは、Cloud Volumes ONTAPにのみ実行できます。ただし、AWSのCloud Volumes ONTAPは、Amazon FSx for NetApp ONTAPへのリストアもサポートしています。
+* オンプレミスONTAP（レプリケーション）からのリストアは、オンプレミスONTAPにのみ実行できます。
+* ファーストパーティのAmazon FSx for NetApp ONTAPおよびGoogle Cloud NetApp Volumesからの復元（レプリケーション）は、それぞれのファーストパーティ システムにのみ実行できます。
+* Amazon S3からAmazon FSx for NetApp ONTAPへのリストアは、次の順序に従う必要があります：Amazon S3からCloud Volumes ONTAPへ、次にCloud Volumes ONTAPからAmazon FSx for NetApp ONTAPへ。
+
+
+
+NOTE: 「オンプレミス ONTAPシステム」とは、FAS、AFF、およびONTAP Selectシステムを指します。

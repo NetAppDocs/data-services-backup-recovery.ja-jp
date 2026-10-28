@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: prev-ontap-protect-overview.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+keywords: ontap volumes, protect volumes, back up volumes, restore volumes, snapshots, replication, backup to object storage, 3-2-1, FlexVol, FlexGroup, SnapLock, DataLock, ransomware protection, NetApp Backup and Recovery 
+summary: NetApp Backup and Recoveryを使用して、スナップショット、レプリケートされたボリューム、およびオブジェクトストレージ内のバックアップでONTAPボリュームを保護し、任意のコピーからボリューム、フォルダ、またはファイルを復元します。 
 ---
-= NetApp Backup and Recoveryを使用したONTAPボリューム保護について説明します
+= NetApp Backup and Recoveryを使用してONTAPボリュームのワークロードを保護する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,211 +16,86 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 [role="lead"]
 NetApp Backup and Recoveryを使用して、ONTAPボリューム データを保護およびリストアし、バックアップを長期アーカイブします。2つの異なるストレージ システム上のソース データの3つのコピーと、クラウド上の1つのコピーを使用して、3-2-1戦略を実装できます。
 
-
-NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
-
-有効化後、Backup and Recoveryはブロックレベルの増分バックアップを永続的に作成し、別のONTAPクラスターおよびクラウド上のオブジェクトストレージに保存します。ソースボリュームに加えて、以下のものも利用できます：
+システムの保護を有効にすると、Backup and Recoveryはボリュームのブロックレベルの永久増分コピーを作成します。ソースボリュームに加えて、以下のものがあります：
 
 * ソースシステム上のボリュームのスナップショット
-* 別のストレージシステム上の複製ボリューム
+* 別のONTAPストレージシステム上の複製ボリューム
 * オブジェクトストレージ内のボリュームのバックアップ
 
 
-image:diagram-321-overview-unified.png["バックアップ ファイルが、ソース システムではスナップショットとして、セカンダリ ストレージ システムでは複製されたボリュームとして、オブジェクト ストレージではバックアップ ファイルとしてどのように存在するかを示す図。"]
+image:diagram-321-overview-unified.png["バックアップファイルが、ソースシステム上ではスナップショットとして、セカンダリストレージシステム上では複製ボリュームとして、そしてオブジェクトストレージ内ではバックアップファイルとしてどのように存在するかを示す図。"]
 
-NetApp Backup and Recovery は、NetApp の SnapMirror データレプリケーション テクノロジを使用して、スナップショットを作成し、バックアップ先に転送することで、バックアップの同期を維持します。
-
-3-2-1 アプローチの利点は次のとおりです。
+3-2-1方式には、以下の利点があります：
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
 * 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
-必要に応じて、任意のバックアップ コピーから、_ボリューム_全体、_フォルダ_、または 1 つ以上の_ファイル_を同じシステムまたは別のシステムに復元できます。
+必要に応じて、いずれかのコピーから、_ボリューム_全体、_フォルダ_、または1つ以上の_ファイル_を、同じシステムまたは別のシステムに復元できます。
+
+
+
+[[how-protection-for-ontap-volumes-works]]
+== ONTAPボリュームの保護の仕組み
+
+Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムでバックアップとリカバリを有効にすると、サービスはボリュームデータの完全なベースライン転送を実行します。その後の転送はすべて増分になります：変更されたブロックと新しいブロックのみが転送されるため、ネットワーク トラフィックは最小限に抑えられます。
+
+Backup and Recoveryは、ONTAPのSnapMirrorテクノロジを使用してコピーの同期を維持します。ソースボリューム上にスナップショットを作成し、それをレプリケーション先とバックアップ先に転送します。オブジェクトストレージへのバックアップは、 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirrorクラウドテクノロジー"^]を基盤としています。
+
+image:diagram-backup-recovery-general.png["NetApp Backup and Recovery が、ソース システム上のボリューム、および複製されたボリュームとバックアップ ファイルが保存されているセカンダリ ストレージ システムと宛先オブジェクト ストレージと通信する方法を示す図。"]
+
+この図は、ボリュームがCloud Volumes ONTAPシステムにレプリケートされる様子を示していますが、オンプレミスのONTAPシステムにボリュームをレプリケートすることもできます。
+
+各種類のコピーはそれぞれ異なる場所に保存されています：
+
+* _スナップショット_ はソース システムのソース ボリュームに存在します。
+* _複製ボリューム_はセカンダリ ストレージ システムに配置されます。これは、Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムになります。
+* _バックアップコピー_は、クラウドアカウント内のオブジェクトストア、またはオンプレミスに配置されます。Consoleは、クラスタごとに1つのオブジェクトストアを作成します。Consoleがオブジェクトストアを作成して名前を付ける方法の詳細については、link:concept-backup-to-cloud.html#where-backups-reside-in-object-store-locations["オブジェクトストア内のバックアップの保存場所"]を参照してください。
+
+
+
+CAUTION: ストレージシステムやクラウド プロバイダ環境から直接バックアップ ファイルを管理したり変更したりしないでください。そうするとファイルが破損し、サポートされていない構成になる可能性があります。
+
+使用するコピーとアーキテクチャを計画するには、link:prev-ontap-protect-journey.html["ONTAPボリューム保護の計画"]を参照してください。
 
 
 
 [[features]]
 == 機能
 
-*レプリケーション機能:*
+*複製*
 
 * バックアップと災害復旧をサポートするために、 ONTAPストレージ システム間でデータを複製します。
-* 高可用性により DR 環境の信頼性を確保します。
-* 2つのシステム間で事前共有鍵（PSK）を使用して、ネイティブ ONTAP 転送中暗号化を設定します。
-* コピーされたデータは、書き込み可能になって使用可能になるまで変更できません。
-* 転送に失敗した場合、レプリケーションは自動的に修復されます。
-*  https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]と比較すると、NetApp Backup and Recoveryにおけるレプリケーションには次の機能が含まれています：
-+
-** 一度に複数のFlexVolボリュームをセカンダリ システムに複製します。
-** UI を使用して、複製されたボリュームをソース システムまたは別のシステムに復元します。
+* 一度に複数のFlexVolボリュームをセカンダリ システムに複製します。
+* 2つのシステム間で事前共有鍵（PSK）を使用したONTAPネイティブの転送中暗号化を使用します。
+* 転送失敗時には自己修復レプリケーションを利用します。
+* レプリケートされたボリュームを、ソースシステムまたは別のシステムに復元します。
 
 
+Backup and Recoveryを使用したレプリケーション時に利用できない https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]の機能については、link:br-reference-limitations.html#replication-limitations-for-ontap-volumes["ONTAPボリュームのレプリケーションの制限"]を参照してください。
 
+*オブジェクトストレージへのバックアップ*
 
-見るlink:br-reference-limitations.html["ONTAPボリュームのレプリケーションの制限"]ONTAPボリュームのNetApp Backup and Recoveryで使用できないレプリケーション機能のリストについては、こちらをご覧ください。
+* オンプレミスまたはクラウドシステムからパブリックまたはプライベートクラウドの低コストのオブジェクトストレージに、ボリュームの独立したコピーをバックアップします。
+* 単一のバックアップ ポリシーをクラスタ内のすべてのボリュームに適用したり、固有のリカバリポイント目標を持つボリュームに異なるポリシーを割り当てたり、クラスタ内の将来のすべてのボリュームに適用されるポリシーを作成したりできます。link:prev-ontap-policy-manage.html["ONTAPボリュームのポリシーの管理"]を参照してください。
+* DataLockとランサムウェアスキャンを使用して、バックアップを削除やランサムウェアから保護します。link:prev-ontap-policy-object-options.html#datalock-and-ransomware-protection-options["DataLockとランサムウェア保護オプション"]を参照してください。
+* コストを削減するために、古いバックアップをアーカイブストレージに階層化します。link:prev-ontap-policy-object-options.html#archival-storage-options["アーカイブ保存オプション"] を参照してください。
+* バックアップ関係を削除することで、バックアップを保持したままソースボリュームを廃止できます。
+* 1つのボリュームにつき最大4,000個のバックアップを保持できます。
+* 保存時はAES-256ビット暗号化、転送時はTLS 1.2 HTTPS接続でバックアップ データを保護するか、デフォルトのクラウド プロバイダのキーの代わりにお客様が管理する独自のキーを使用します。
 
-*オブジェクトへのバックアップ機能:*
 
-* データ ボリュームの独立したコピーを低コストのオブジェクト ストレージにバックアップします。
-* クラスター内のすべてのボリュームに単一のバックアップ ポリシーを適用するか、固有の復旧ポイント目標を持つボリュームに異なるバックアップ ポリシーを割り当てます。
-* クラスターで今後作成されるすべてのボリュームに適用されるバックアップ ポリシーを作成します。
-* 変更不可能なバックアップ ファイルを作成し、保持期間中はロックされて保護されるようにします。
-* バックアップファイルをスキャンしてランサムウェア攻撃の可能性を検出し、感染したバックアップを自動的に削除または置き換えます。
-* 古いバックアップ ファイルをアーカイブ ストレージに階層化してコストを節約します。
-* ボリュームのバックアップを保持しながら不要なソース ボリュームをアーカイブできるように、バックアップ関係を削除します。
-* クラウドからクラウドへ、オンプレミス システムからパブリック クラウドまたはプライベート クラウドへバックアップします。
-* バックアップ データは、保存時には AES-256 ビット暗号化、実行時には TLS 1.2 HTTPS 接続によって保護されます。
-* クラウド プロバイダーのデフォルトの暗号化キーを使用する代わりに、独自の顧客管理キーを使用してデータを暗号化します。
-* 単一ボリュームの最大 4,000 件のバックアップをサポートします。
+*復元*
 
+* ローカルスナップショット、レプリケートボリューム、またはオブジェクトストレージ内のバックアップから、特定の時点のデータを復元します。
+* ボリューム、フォルダ、または個々のファイルを、ソースシステム、または別のシステム（異なるサブスクリプションやアカウントを使用しているシステム、または異なるリージョンにあるシステムを含む）にリストアします。
+* 災害復旧時など、ボリュームへのアクセスをできるだけ早く提供する必要がある場合は、オブジェクトストレージからCloud Volumes ONTAPまたはオンプレミスシステムへのボリュームの_クイックリストア_を実行します。
+* ブロックレベルでデータを指定した場所に直接復元し、元のACLを保持します。
+* ファイルカタログを参照または検索して、復元する個々のフォルダとファイルを選択します。
 
-*復元機能:*
 
-* ローカル スナップショット、複製されたボリューム、またはオブジェクト ストレージ内のバックアップされたボリュームから特定の時点のデータを復元します。
-* ボリューム、フォルダー、または個々のファイルをソース システムまたは別のシステムに復元します。
-* 別のサブスクリプション/アカウントを使用しているシステム、または別のリージョンにあるシステムにデータを復元します。
-* クラウド ストレージからCloud Volumes ONTAPシステムまたはオンプレミス システムへのボリュームの _クイック リストア_ を実行します。ボリュームへのアクセスをできるだけ早く提供する必要がある災害復旧の状況に最適です。
-* 元の ACL を維持しながら、ブロック レベルでデータを復元し、指定した場所にデータを直接配置します。
-* ファイル カタログを参照して検索し、個々のフォルダーとファイルを簡単に選択して単一ファイルの復元を行うことができます。
-
-
-
-
-[[supported-systems-for-backup-and-restore-operations]]
-== バックアップおよび復元操作でサポートされているシステム
-
-NetApp Backup and Recovery は、 ONTAPシステムとパブリックおよびプライベート クラウド プロバイダーをサポートします。
-
-
-
-[[supported-regions]]
-=== サポートされている地域
-
-NetApp Backup and Recovery は、多くの Amazon Web Services、Microsoft Azure、Google Cloud リージョンでCloud Volumes ONTAPによってサポートされています。
-
-https://bluexp.netapp.com/cloud-volumes-global-regions["グローバル地域マップを使用して詳細を確認する"^]
-
-
-
-[[supported-backup-destinations]]
-=== サポートされているバックアップ先
-
-NetApp Backup and Recoveryを使用すると、以下のソースシステムからONTAPボリュームを以下のセカンダリ システムおよびパブリッククラウドとプライベートクラウド プロバイダのオブジェクトストレージにバックアップできます。Snapshotはソースシステムに保存されます。
-
-
-NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。
-
-[cols="33,33,33"]
-|===
-| ソースシステム | セカンダリシステム（レプリケーション） | 宛先オブジェクトストア（バックアップ） 
-
-
-| AWS のCloud Volumes ONTAP  a| 
-* AWS のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-| Amazon S3 
-
-
-| Azure のCloud Volumes ONTAP  a| 
-* Azure のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-| Azure ブロブ 
-
-
-| Google のCloud Volumes ONTAP  a| 
-* Google のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-| Google Cloud Storage 
-
-
-| オンプレミスのONTAPシステム  a| 
-* Cloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
- a| 
-* Amazon S3
-* S3互換ストレージ
-* Azure ブロブ
-* Google Cloud Storage
-* StorageGRID
-* ONTAP S3
-
-
-|===
-
-
-[[supported-restore-destinations]]
-=== サポートされている復元先
-
-セカンダリ システム (複製されたボリューム) またはオブジェクト ストレージ (バックアップ ファイル) にあるバックアップ ファイルから、次のシステムにONTAPデータを復元できます。スナップショットはソース システム上に存在し、同じシステムにのみ復元できます。
-
-
-NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクトストレージプロバイダです。その他のS3互換プロバイダは検証されていません。
-
-[cols="33,33,33"]
-|===
-2+| バックアップファイルの場所 | 宛先システム 
-
-
-| *オブジェクトストア（バックアップ）* | *セカンダリシステム（レプリケーション）* |  
-
-
-| Amazon S3  a| 
-* AWS のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
- a| 
-* AWS のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-
-
-
-| Azure ブロブ  a| 
-* Azure のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
- a| 
-* Azure のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-
-
-
-| Google Cloud Storage  a| 
-* Google のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
- a| 
-* Google のCloud Volumes ONTAP
-* オンプレミスのONTAPシステム
-
-
-
-
-| StorageGRID  a| 
-* オンプレミスのONTAPシステム
-* Cloud Volumes ONTAP
-
-| オンプレミスのONTAPシステム 
-
-
-| ONTAP S3  a| 
-* オンプレミスのONTAPシステム
-* Cloud Volumes ONTAP
-
-| オンプレミスのONTAPシステム 
-
-
-| S3 互換オブジェクトストレージ | オンプレミスのONTAPシステム | オンプレミスのONTAPシステム 
-|===
-
-NOTE: 「オンプレミス ONTAPシステム」とは、FAS、AFF、およびONTAP Selectシステムを指します。
+復元オプションについては、link:prev-ontap-restore.html["ONTAPボリュームのワークロードを復元する"]を参照してください。
 
 
 
@@ -232,233 +107,32 @@ NetApp Backup and Recovery は、次のタイプのボリュームをサポー�
 * FlexVol読み取り/書き込みボリューム
 * FlexGroupボリューム（ ONTAP 9.12.1以降が必要）
 * SnapLock Enterpriseボリューム（ ONTAP 9.11.1 以降が必要）
-* オンプレミスボリュームのSnapLock Compliance （ ONTAP 9.14 以降が必要）
+* SnapLock Compliance（オンプレミスボリューム向け）（ONTAP 9.14以降が必要）
 * SnapMirrorデータ保護（DP）宛先ボリューム
 
 
 
 NOTE: NetApp Backup and Recovery は、 FlexCacheボリュームのバックアップをサポートしていません。
 
-以下のセクションを参照してくださいlink:br-reference-limitations.html["ONTAPボリュームのバックアップとリストアの制限"]追加の要件と制限については、こちらをご覧ください。
+Backup and Recoveryがサポートするソース システム、セカンダリ システム、オブジェクト ストレージの保存先、リストア先、およびリージョンについては、link:br-start-sources-destinations.html["NetApp Backup and Recoveryでサポートされているバックアップおよびリストア先"]を参照してください。追加の要件と制限については、link:br-reference-limitations.html["ONTAPボリュームのNetApp Backup and Recoveryの既知の制限"]を参照してください。
 
 
 
-[[cost]]
-== 料金
+[[cost-and-licensing]]
+== コストとライセンス
 
-ONTAPシステムでNetApp Backup and Recoveryを使用する場合、リソース料金とサービス料金の 2 種類のコストが発生します。これら両方の料金は、サービスのオブジェクト部分へのバックアップに対して発生します。
+スナップショットやレプリケートボリュームを作成する際に発生する費用は、使用するディスク容量以外には一切かかりません。クラウド プロバイダからのリソース料金およびNetAppからのサービス料金は、オブジェクトストレージへのバックアップにのみ適用されます。
 
-スナップショットや複製ボリュームの作成には、スナップショットや複製ボリュームを保存するために必要なディスク容量以外は料金はかかりません。
+コストとライセンスオプションの詳細については、link:concept-backup-to-cloud.html#cost["NetApp Backup and Recoveryについて学ぶ"]およびlink:br-start-licensing.html["ライセンスの設定"]を参照してください。
 
-*リソース料金*
 
-オブジェクト ストレージ容量とクラウドへのバックアップ ファイルの書き込みと読み取りに対して、リソース料金がクラウド プロバイダーに支払われます。
 
-* オブジェクト ストレージへのバックアップの場合、オブジェクト ストレージのコストをクラウド プロバイダーに支払います。
-+
-NetApp Backup and Recovery はソース ボリュームのストレージ効率を維持するため、 ONTAP効率化後のデータ (重複排除と圧縮が適用された後の少量のデータ) に対してクラウド プロバイダーのオブジェクト ストレージ コストを支払います。
+[[where-to-go-next]]
+== 次のステップ
 
-* 検索と復元を使用してデータを復元する場合、クラウド プロバイダーによって特定のリソースがプロビジョニングされ、検索要求によってスキャンされるデータの量に応じて TiB ごとにコストが発生します。  (これらのリソースは参照と復元には必要ありません。)
-+
-** AWSでは、 https://aws.amazon.com/athena/faqs/["アマゾンアテナ"^]そして https://aws.amazon.com/glue/faqs/["AWS グルー"^]リソースは新しい S3 バケットにデプロイされます。
-** Azureでは、 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse ワークスペース"^]そして https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure データレイクストレージ"^]データを保存および分析するためにストレージ アカウントにプロビジョニングされます。
-** Googleでは新しいバケットがデプロイされ、 https://cloud.google.com/bigquery["Google Cloud BigQuery サービス"^]アカウント/プロジェクト レベルでプロビジョニングされます。
-
-
-* アーカイブ オブジェクト ストレージに移動されたバックアップ ファイルからボリューム データを復元する場合は、クラウド プロバイダーから追加の GiB あたりの取得料金とリクエストあたりの料金が発生します。
-* ボリュームデータの復元プロセス中にバックアップファイルをランサムウェアスキャンする予定がある場合（クラウドバックアップに対してDataLockとランサムウェア対策を有効にしている場合）、クラウド プロバイダから追加のデータ転送コストが発生します。
-
-
-*サービス料*
-
-サービス料金はNetAppに支払われ、オブジェクト ストレージへのバックアップを _作成_ するコストと、それらのバックアップからボリュームまたはファイルを _復元_ するコストの両方をカバーします。オブジェクト ストレージにバックアップされるONTAPボリュームのソース論理使用容量 ( ONTAP効率前) によって計算された、オブジェクト ストレージで保護するデータに対してのみ料金を支払います。この容量は、フロントエンド テラバイト (FETB) とも呼ばれます。
-
-バックアップ サービスの支払い方法は 3 つあります。最初のオプションは、クラウド プロバイダーにサブスクライブすることです。これにより、月ごとに支払いが可能になります。  2 番目のオプションは、年間契約を結ぶことです。  3 番目のオプションは、 NetAppから直接ライセンスを購入することです。
-
-
-
-[[licensing]]
-== ライセンス
-
-NetApp Backup and Recovery は、次の消費モデルで利用できます。
-
-* *BYOL*: NetAppから購入したライセンスで、どのクラウド プロバイダーでも使用できます。
-* *PAYGO*: クラウド プロバイダーのマーケットプレイスからの時間単位のサブスクリプション。
-* *年間*: クラウド プロバイダーのマーケットプレイスからの年間契約。
-
-
-バックアップ ライセンスは、オブジェクト ストレージからのバックアップと復元にのみ必要です。スナップショットおよび複製されたボリュームの作成にはライセンスは必要ありません。
-
-
-
-[[bring-your-own-license]]
-=== 自分のライセンスを持参する
-
-BYOL は期間ベース (1 年、2 年、または 3 年) であり、1 TiB 単位で容量ベースになります。一定期間（たとえば 1 年）および最大容量（たとえば 10 TiB）のサービス使用料をNetApp に支払います。
-
-サービスを有効にするためにNetApp Consoleに入力するシリアル番号を受け取ります。どちらかの制限に達した場合は、ライセンスを更新する必要があります。バックアップ BYOL ライセンスは、 NetApp Console組織またはアカウントに関連付けられているすべてのソース システムに適用されます。
-
-link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。
-
-
-
-[[pay-as-you-go-subscription]]
-=== 従量課金制サブスクリプション
-
-NetApp Backup and Recovery は、従量課金モデルで消費ベースのライセンスを提供します。クラウド プロバイダーのマーケットプレイスを通じてサブスクライブすると、バックアップされたデータに対して GiB ごとに料金が発生します。前払いはありません。クラウド プロバイダーから毎月の請求書を通じて請求されます。
-
-link:br-start-licensing.html["従量課金制サブスクリプションの設定方法を学ぶ"]。
-
-PAYGO サブスクリプションに最初にサインアップすると、30 日間の無料トライアルが利用できることに注意してください。
-
-
-
-[[annual-contract]]
-=== 年間契約
-
-AWS を使用する場合、1 年、2 年、または 3 年の期間で 2 つの年間契約を利用できます。
-
-* Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
-* Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。
-
-
-Azure を使用する場合、1 年、2 年、または 3 年の期間で 2 つの年間契約を利用できます。
-
-* Cloud Volumes ONTAPデータとオンプレミスのONTAPデータをバックアップできる「クラウド バックアップ」プラン。
-* Cloud Volumes ONTAPとNetApp Backup and Recovery をバンドルできる「CVO Professional」プラン。これには、このライセンスに対して課金されるCloud Volumes ONTAPボリュームの無制限のバックアップが含まれます (バックアップ容量はライセンスに対してカウントされません)。
-
-
-GCP を使用する場合、 NetAppからプライベート オファーをリクエストし、 NetApp Backup and Recovery のアクティベーション中に Google Cloud Marketplace からサブスクライブするときにプランを選択できます。
-
-link:br-start-licensing.html["年間契約の設定方法を学ぶ"]。
-
-
-
-[[how-netapp-backup-and-recovery-works]]
-== NetApp Backup and Recoveryの仕組み
-
-Cloud Volumes ONTAPまたはオンプレミスのONTAPシステムでNetApp Backup and Recoveryを有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップとなり、変更されたブロックと新しいブロックのみがバックアップされます。これにより、ネットワーク トラフィックが最小限に抑えられます。オブジェクトストレージへのバックアップは、 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirrorクラウドテクノロジー"^] 。
-
-
-CAUTION: クラウド プロバイダー環境から直接クラウド バックアップ ファイルを管理または変更するアクションを実行すると、ファイルが破損し、サポートされていない構成になる可能性があります。
-
-次の図は、各コンポーネント間の関係を示しています。
-
-image:diagram-backup-recovery-general.png["NetApp Backup and Recovery が、ソース システム上のボリューム、および複製されたボリュームとバックアップ ファイルが保存されているセカンダリ ストレージ システムと宛先オブジェクト ストレージと通信する方法を示す図。"]
-
-この図は、ボリュームがCloud Volumes ONTAPシステムに複製されていることを示していますが、ボリュームはオンプレミスのONTAPシステムにも複製できます。
-
-
-
-[[where-backups-reside]]
-=== バックアップの保存場所
-
-バックアップは、バックアップの種類に応じて異なる場所に保存されます。
-
-* _スナップショット_ はソース システムのソース ボリュームに存在します。
-* _複製されたボリューム_は、セカンダリ ストレージ システム ( Cloud Volumes ONTAPまたはオンプレミスのONTAPシステム) に存在します。
-* _バックアップ コピー_ は、コンソールがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスター/システムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに「netapp-backup-clusteruuid」という名前が付けられます。このオブジェクト ストアを削除しないように注意してください。
-+
-** AWSでは、コンソールで https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
-** Azure では、コンソールは、Blob コンテナーのストレージ アカウントを持つ新規または既存のリソース グループを使用します。コンソール https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"] デフォルトです。
-** GCP では、コンソールは Google Cloud Storage バケットのストレージ アカウントを持つ新規または既存のプロジェクトを使用します。
-** StorageGRIDでは、コンソールは S3 バケットに既存のテナント アカウントを使用します。
-** ONTAP S3 では、コンソールは S3 バケットに既存のユーザー アカウントを使用します。
-
-
-
-
-将来的にクラスタの宛先オブジェクトストアを変更する場合は、link:prev-ontap-backup-manage.html["システムのNetApp Backup and Recoveryの登録を解除する"] 、新しいクラウド プロバイダー情報を使用してNetApp Backup and Recoveryを有効にします。
-
-
-
-[[customizable-backup-schedule-and-retention-settings]]
-=== カスタマイズ可能なバックアップスケジュールと保持設定
-
-システムに対してNetApp Backup and Recovery を有効にすると、最初に選択したすべてのボリュームが、選択したポリシーを使用してバックアップされます。スナップショット、複製されたボリューム、バックアップ ファイルごとに個別のポリシーを選択できます。異なるリカバリポイント目標 (RPO) を持つ特定のボリュームに異なるバックアップ ポリシーを割り当てる場合は、そのクラスターに追加のポリシーを作成し、 NetApp Backup and Recovery をアクティブ化した後でそれらのポリシーを他のボリュームに割り当てることができます。
-
-すべてのボリュームの毎時、毎日、毎週、毎月、毎年のバックアップの組み合わせを選択できます。オブジェクトへのバックアップでは、3 か月、1 年、7 年間のバックアップと保持を提供するシステム定義のポリシーのいずれかを選択することもできます。 ONTAP System Manager またはONTAP CLI を使用してクラスタ上に作成したバックアップ保護ポリシーも選択肢として表示されます。これには、カスタムSnapMirrorラベルを使用して作成されたポリシーが含まれます。
-
-
-NOTE: ボリュームに適用されるスナップショットポリシーには、レプリケーションポリシーおよびオブジェクトへのバックアップポリシーで使用しているラベルのいずれかが含まれている必要があります。一致するラベルが見つからない場合、バックアップファイルは作成されません。例えば、「weekly」のレプリケートされたボリュームとバックアップファイルを作成する場合は、「weekly」スナップショットを作成するスナップショットポリシーを使用する必要があります。
-
-カテゴリまたは間隔のバックアップの最大数に達すると、古いバックアップが削除されるため、常に最新のバックアップが保持されます (そのため、古いバックアップがスペースを占有し続けることはありません)。
-
-
-TIP: データ保護ボリュームのバックアップの保持期間は、ソースSnapMirror関係で定義されている期間と同じです。必要に応じて、API を使用してこれを変更できます。
-
-
-
-[[backup-file-protection-settings]]
-=== バックアップファイルの保護設定
-
-クラスターが ONTAP 9.11.1 以降を使用している場合、オブジェクトストレージ内のバックアップを削除やランサムウェア攻撃から保護できます。各バックアップ ポリシーには、特定の期間（保持期間）にわたってバックアップファイルに適用できる「DataLock およびランサムウェア保護」セクションが用意されています。
-
-* _DataLock_ は、バックアップ ファイルが変更されたり削除されたりするのを防ぎます。
-* _ランサムウェア保護_ は、バックアップ ファイルの作成時とバックアップ ファイルからのデータの復元時に、バックアップ ファイルをスキャンしてランサムウェア攻撃の証拠を探します。
-
-
-スケジュールされたランサムウェア保護スキャンはデフォルトで有効になっています。スキャン頻度のデフォルト設定は 7 日間です。スキャンは最新のスナップショットに対してのみ実行されます。コストを削減するために、スケジュールされたスキャンを無効にすることができます。「詳細設定」ページのオプションを使用して、最新のスナップショットでスケジュールされたランサムウェア スキャンを有効または無効にすることができます。有効にすると、デフォルトでスキャンが毎週実行されます。スケジュールを日単位や週単位に変更したり、無効にしたりしてコストを節約できます。
-
-バックアップの保持期間は、バックアップ スケジュールの保持期間に最大 31 日間のバッファを加えた期間と同じです。たとえば、_5_ 個のコピーが保持される _毎週_ のバックアップでは、各バックアップ ファイルが 5 週間ロックされます。  _6_ 個のコピーが保持される _月次_ バックアップでは、各バックアップ ファイルが 6 か月間ロックされます。
-
-バックアップ先が Amazon S3、Azure Blob、または StorageGRID の場合、現在サポートされています。その他のストレージ プロバイダへの接続先は、今後のリリースで追加される予定です。
-
-詳細については、次の情報を参照してください。
-
-* link:prev-ontap-policy-object-options.html["DataLockとランサムウェア保護の仕組み"]。
-* link:prev-ontap-policy-object-advanced-settings.html["詳細設定ページでランサムウェア保護オプションを更新する方法"]。
-
-
-
-TIP: バックアップをアーカイブ ストレージに階層化している場合、DataLock を有効にすることはできません。
-
-
-
-[[archival-storage-for-older-backup-files]]
-=== 古いバックアップファイルのアーカイブストレージ
-
-特定のクラウド ストレージを使用する場合、一定の日数後に古いバックアップ ファイルをより安価なストレージ クラス/アクセス ティアに移動できます。バックアップ ファイルを標準のクラウド ストレージに書き込まずに、すぐにアーカイブ ストレージに送信することも選択できます。  DataLock を有効にしている場合はアーカイブ ストレージを使用できないことに注意してください。
-
-* AWS では、バックアップは _Standard_ ストレージ クラスで開始され、30 日後に _Standard-Infrequent Access_ ストレージ クラスに移行します。
-+
-クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _S3 Glacier_ または _S3 Glacier Deep Archive_ ストレージに階層化することを選択できます。link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレージの詳細"]。
-
-
-
-* Azure では、バックアップは _Cool_ アクセス層に関連付けられています。
-+
-クラスターでONTAP 9.10.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップを _Azure Archive_ ストレージに階層化することを選択できます。link:prev-reference-azure-archive-storage-tiers.html["Azure アーカイブ ストレージの詳細"]。
-
-
-
-* GCP では、バックアップは _Standard_ ストレージ クラスに関連付けられています。
-+
-クラスターでONTAP 9.12.1 以降を使用している場合は、コストをさらに最適化するために、一定の日数後にNetApp Backup and Recovery UI で古いバックアップをアーカイブ ストレージに階層化することを選択できます。link:prev-reference-gcp-archive-storage-tiers.html["Google アーカイブ ストレージの詳細"]。
-
-* StorageGRIDでは、バックアップは _Standard_ ストレージ クラスに関連付けられます。
-+
-オンプレミスクラスターが ONTAP 9.12.1 以降を使用しており、StorageGRID システムがバージョン 11.4 以降を使用している場合、一定日数経過後に古いバックアップ ファイルをパブリック クラウドのアーカイブ ストレージにアーカイブすることができます。現在サポートされているのは、AWS S3 Glacier/S3 Glacier Deep Archive または Azure Archive ストレージ層です。link:prev-ontap-backup-onprem-storagegrid.html["StorageGRIDからのバックアップファイルのアーカイブについて詳しくは"]。
-
-
-
-参照してくださいlink:prev-ontap-policy-object-options.html["古いバックアップファイルのアーカイブの仕組み"]。
-
-
-
-[[fabricpool-tiering-policy-considerations]]
-== FabricPool階層化ポリシーの考慮事項
-
-バックアップするボリュームがFabricPoolアグリゲート上に存在し、それに割り当てられた階層化ポリシー以外のポリシーがある場合、注意すべき点がいくつかあります。 `none` :
-
-* FabricPool階層化ボリュームの最初のバックアップでは、すべてのローカル データとすべての階層化データ (オブジェクト ストアから) を読み取る必要があります。バックアップ操作では、オブジェクト ストレージに階層化されたコールド データが「再加熱」されることはありません。
-+
-この操作により、クラウド プロバイダーからデータを読み取るためのコストが 1 回だけ増加する可能性があります。
-
-+
-** 後続のバックアップは増分バックアップであるため、この影響はありません。
-** ボリュームが最初に作成されるときに階層化ポリシーが割り当てられている場合は、この問題は発生しません。
-
-
-* 割り当てる前にバックアップの影響を考慮してください `all`ボリュームへの階層化ポリシー。データは即座に階層化されるため、 NetApp Backup and Recovery はローカル層ではなくクラウド層からデータを読み取ります。同時バックアップ操作ではクラウド オブジェクト ストアへのネットワーク リンクが共有されるため、ネットワーク リソースが飽和状態になるとパフォーマンスが低下する可能性があります。この場合、このタイプのネットワーク飽和を減らすために、複数のネットワーク インターフェイス (LIF) を事前に構成する必要がある場合があります。
+* link:prev-ontap-protect-journey.html["ONTAPボリューム保護の計画"]
+* link:br-start-enable.html["ONTAP ボリュームの NetApp Backup and Recovery を有効にする"]
+* link:prev-ontap-policy-manage.html["ONTAPボリュームのポリシーの管理"]
+* link:prev-ontap-backup-manage.html["ONTAPシステムのバックアップを管理する"]
+* link:prev-ontap-restore.html["ONTAPボリュームのワークロードを復元する"]
 

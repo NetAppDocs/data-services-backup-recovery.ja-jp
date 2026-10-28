@@ -184,7 +184,7 @@ Backup and RecoveryでONTAPシステムを検出する前に、以下のもの�
 
 | 異なるクラウドプロバイダー間で、システムごとに6つ以上のバケットを使用する（最大100バケットまで） | 9.19.1以降 
 |===
-サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、link:prev-ontap-protect-overview.html["ONTAPボリュームデータを保護する"]を参照してください。
+サポートされている機能、ボリュームの種類、バックアップと復元先などの詳細については、link:prev-ontap-protect-overview.html["NetApp Backup and Recoveryを使用してONTAPボリュームのワークロードを保護する"]を参照してください。
 
 
 
