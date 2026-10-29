@@ -5917,11 +5917,7 @@
   <block id="b77bf9dc680cf2db1d8b3d5f6156585b" category="list-text">*NetApp MetroClusterサポート*：NetApp Backup and Recoveryにより、NetApp MetroClusterでミラーリングされたHyper-V VMを保護できるようになりました。</block>
   <block id="7ed9eebaad97e0f936b753873e6ff586" category="list-text">*SAN VMのスパンディスク保護*：CIFSおよびSAN構成の場合、保護グループ内の各VMに接続されているすべてのディスクを保護できるようになりました。これには、複数のONTAPボリュームまたはONTAPストレージシステムに分散しているファイル（スパンディスク）や、単一の場所に限定されたファイルが含まれます。</block>
   <block id="82dd01a289cf98e9d962781faec1018b" category="paragraph">*自動アーカイブログ管理*：データベースのリストアおよびクローン処理中、NetApp Backup and Recoveryは必要なアーカイブログを自動的に検出してマウントし、処理が完了するとアンマウントします。プライマリ、セカンダリ、およびオブジェクトストレージのログソースがサポートされています。</block>
-  <block id="5f1a7ddd55d2a0b34003e08fe7cacdaf" category="section-title">Microsoft SQL Serverワークロードの強化</block>
-  <block id="32d770e78ed41453037389dce2e33d9c" category="paragraph">今回のリリースでは、Microsoft SQL Serverワークロードに以下の機能強化が導入されました：</block>
   <block id="92337d8e70dfe880909b2051333e2fe4" category="paragraph">*ライセンス変更*：ディスク間またはディスク間のファンアウトアーキテクチャを使用したバックアップには、料金が適用されなくなりました。料金は、3-2-1またはディスクツーオブジェクトストレージアーキテクチャを使用したバックアップを含む、オブジェクトストレージへのバックアップにのみ適用されます。</block>
-  <block id="2f75ea4c51ce88400f5201fdeb2ccb9d" category="inline-link">NetApp Backup and Recoveryを使用したMicrosoft SQL Serverワークロードの保護について</block>
-  <block id="a5e96f4320434690f042cf906acacdcd" category="paragraph">Microsoft SQL Serverワークロードの保護の詳細については、<block ref="36e999a623e2068d9719d9ca1143b559" category="inline-link-rx"></block>を参照してください。</block>
   <block id="7065e852c4b6888b4e74708a90ddb20d" category="list-text">Oracle Databaseワークロードはプレビューリリース段階にあるため、ライセンスは不要です。</block>
   <block id="e28980c3ae4b3c703cc7a4f8d25ecda7" category="admonition">CIFSおよびSAN構成の場合、Backup and Recoveryは、保護グループ内の各VMに接続されているすべてのディスクを自動的に保護します。これには、複数のONTAPボリュームやONTAPストレージシステムに分散しているファイル（スパンニングディスク）と、単一の場所に限定されているファイル（非スパンニングディスク）が含まれます。</block>
   <block id="c138f0fc5add74f3ad77a943271dcc42" category="section-title">利用可能なOracle Databaseのリストアポイントに関する情報を表示します</block>
@@ -6298,4 +6294,6 @@
   <block id="5af099efa04197b8148cd4c53d100646" category="list-text">*プライマリのみバックアップ*</block>
   <block id="e2d9ce30ebfec7057c448e8a44f805e1" category="list-text">*スタンバイでのみバックアップ*</block>
   <block id="ec521975a51b13a00e3d392d7acdf5f5" category="paragraph">*Data Guard設定*を有効にしない場合、プライマリデータベースとスタンバイデータベースの両方がバックアップされます。リソースにポリシーを割り当てた後は、*Data Guard設定*を無効にすることはできません。</block>
+  <block id="ce6934326bbfd4652849311e1ed89fe6" category="paragraph">今回のリリースでは、NetApp Backup and Recoveryで、すべてのワークロードに対して以下のライセンス機能強化が導入されます：</block>
+  <block id="83b090108fa1e810d92771b23b7b0267" category="paragraph">ライセンスの詳細については、<block ref="aa1a103ec550203513cdef85cd5672c0" category="inline-link-rx"></block>を参照してください。</block>
 </blocks>
