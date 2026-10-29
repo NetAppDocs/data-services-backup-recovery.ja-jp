@@ -5966,12 +5966,9 @@
   <block id="0b988f352bf3178a56bb9dbb7aa6f591" category="section-title">Oracle Databaseのインベントリを表示する</block>
   <block id="13b17d82aa76831194bc5fedd9ef5155" category="paragraph">バックアップおよびリカバリのインベントリで検出されたOracle Databaseリソースの詳細を確認してください。</block>
   <block id="ef09861f0e356e1256cc79b90af82a9c" category="list-text">検出されたOracle Databaseホストを表示するには、*ホスト*タブを選択します。</block>
-  <block id="acb5a0c1d6543fd64291bcd931b0212a" category="paragraph">このビューを使用すると、各ホスト名、各ホストがホストしているデータベースの数、デプロイメントモデル（クラスタ、Oracle Data Guard、スタンドアロンなど）、その他の情報などの詳細情報を確認できます。</block>
   <block id="5ef22a9f4e63d5ea6dccdceaf60cc129" category="list-text">Oracle Databaseリソースを保護するために作成された保護グループを表示するには、*保護グループ*タブを選択します。</block>
   <block id="4636080fe3dd6af1a05f50e6b8612fcd" category="list-text">各Oracle Databaseホストがホストするデータベースを表示するには、*データベース*タブを選択します。</block>
   <block id="88b5a8e3aeecbee62ee44ae9949af352" category="paragraph">このビューには、各データベースが単一インスタンスであるか、クラスタまたは高可用性構成の一部であるかなど、詳細な情報が表示されます。</block>
-  <block id="c567e32a931e50ea00e322c45bada4f9" category="list-text">保護グループに適用する*バックアップ ポリシー*を選択してください。Oracle Data Guard構成の一部であるデータベースを含める場合は、Data Guardオプションが有効になっているバックアップ ポリシーを選択してください。</block>
-  <block id="e07c044b43b8ab05fce956dd78928ec0" category="list-text">*Data Guard設定*：Oracle Data Guard展開でデータベースを保護する際に、ポリシーでData Guard設定を有効にするかどうか、およびプライマリ、セカンダリ、またはプライマリとセカンダリの両方をバックアップするかどうかを選択します。Oracle Data Guard環境では、保護グループを使用してデータベースを保護できます。</block>
   <block id="debe14f2792fef47d8b9076e14c82cb3" category="section-title">プラグインインストールの要件</block>
   <block id="3cf57a2a4d07542c89b05ad643bb219e" category="list-text">SSHを使用してホストにログインできる機能。</block>
   <block id="1bcf5153145f75a86a1ad16ea9b03c7a" category="list-text">root権限、または非rootユーザーに対するsudoアクセス権限。</block>
@@ -6275,4 +6272,30 @@
   <block id="84618cfc7eb2bbb4efbbd7209a02b83b" category="list-text"><block ref="84618cfc7eb2bbb4efbbd7209a02b83b" category="inline-link-macro-rx"></block></block>
   <block id="37f041132ba68784c19dbe8a3c6a5d54" category="list-text"><block ref="37f041132ba68784c19dbe8a3c6a5d54" category="inline-link-macro-rx"></block></block>
   <block id="dbc0ac8fb1f3ed243ea3e89e9cfc4781" category="sidebar">サポートされているバックアップおよび復元先</block>
+  <block id="e92c60b9dce59b8a708c12a44c8cd00c" category="list-text">Oracle Data Guard構成において現在スタンバイ状態にあるデータベースを元の場所に復元することは、現時点ではサポートされていません。代わりに別の場所に復元してください。</block>
+  <block id="d0ea0d089a51f4912e025340deac9c94" category="list-text">RACを使用するOracle Data Guard構成、およびOracle Active Data Guard構成はサポートされていません。</block>
+  <block id="8ead40bfdf058563a49a6088340c0a5e" category="admonition">データベースがOracle Data Guard構成になっている場合は、プライマリホストとスタンバイホストを別々のホストとして追加してください。</block>
+  <block id="cb3202cc77d4d07b32f7413c59f5764b" category="paragraph">このビューを使用すると、各ホスト名、各ホストがホストしているデータベースの数、デプロイメントモデル（クラスタ、Data Guard、スタンドアロンなど）、その他の情報などの詳細を確認できます。</block>
+  <block id="024c370a5e2df8680dde3adb456bc63b" category="paragraph">Oracle Data Guardデータベースには、*Data Guard Primary*または*Data Guard Standby*というラベルが付けられます。スタンバイデータベースはデフォルトでは非表示になっています。これらを表示するには、*Type*フィルタで*Data Guard Standby*を選択します。各Oracle Data Guardデータベース名は、Oracle SIDの後に括弧で囲まれたデータベース名が続く形で表示されます。例：<block ref="6a829caf0294d3176c613fc594dbcc91" prefix=" " category="inline-code"></block>。</block>
+  <block id="a4acb54c369f0c50a25853f5f2d72387" category="paragraph">切り替えまたはフェイルオーバーの後、*ホスト*タブを選択し、影響を受けるホストに対して*更新*を選択して、表示される役割を更新します。</block>
+  <block id="8e3defa486fd6395b3186f053883b5d7" category="admonition">Oracle Data Guardデータベースの場合、NetApp Backup and Recoveryは、バックアップ開始時に各データベースの現在のロールを確認し、ポリシー内の*Data Guard設定*に従います。スイッチオーバーまたはフェイルオーバー後、次回のバックアップでは新しいロールが使用されます。</block>
+  <block id="848e936049005dc765ef08314cfe45b8" category="admonition">Oracle Data Guardの構成では、保護対象のプライマリデータベースまたは保護対象の物理スタンバイデータベースをクローンできます。このクローンは独立したデータベースであり、Oracle Data Guardの構成の一部ではありません。スタンバイデータベースをクローンした場合、ホストを更新するまで、新しいデータベースは*Data Guard Standby*として表示されます。ホストを更新すると、通常のデータベースとして表示されます。</block>
+  <block id="326535fa9507ec810eb8c39ff9808048" category="section-title">Oracle Data Guardのサポート</block>
+  <block id="f8524f96f354b3f8d4fca9e30727bfd6" category="paragraph">NetApp Backup and Recoveryは、単一インスタンスのプライマリデータベースと、マウント状態の物理スタンバイデータベースが1つ存在するOracle Data Guard構成を保護できます。</block>
+  <block id="2ef07622f2dfb8abf76b043b142d62c6" category="section-title">サポートされているタスク</block>
+  <block id="75089d6e1e93d883e04ed0b3a24ca3c9" category="paragraph">スタンバイデータベースはデフォルトでは一覧表示されません。一覧表示するには、*Data Guardスタンバイデータベースを表示*を選択します。Oracle Data Guard構成の一部であるデータベースを選択した場合、NetApp Backup and Recoveryは同じ構成の他のデータベースも追加します。これは、そのデータベースが検出され、保護可能であり、かつ他の保護グループに属していない場合にのみ実行されます。</block>
+  <block id="03d1a38bd67097c9f65b44addd6c10b1" category="inline-link-macro">Oracle Databaseのバックアップポリシーの作成と管理</block>
+  <block id="8f7f8bda280de96a8d2ea204f01f0e79" category="list-text">保護グループに適用する*バックアップポリシー*を選択します。グループにOracle Data Guardデータベースが含まれている場合は、ポリシーの*Data Guard設定*を使用して、バックアップするデータベースを選択します。<block ref="dbb202f56fddd64d485e7ab84741d680" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="cb4a9fdc969151f53f537c85ddd4e60a" category="admonition">保護グループを作成した後にスタンバイホストを追加する場合は、保護グループを編集して保存してください。NetApp Backup and Recoveryは、スタンバイを自動的に追加します。スタンバイホストから、スタンバイデータベースのみをグループに追加します。そのホスト上の別のデータベースで、異なる種類のバックアップが必要な場合、そのホストのバックアップが失敗します。</block>
+  <block id="d5ead59a8fc743551f9007e24cadba9a" category="paragraph">*Oracle Data Guardデータベースの復元に関する重要な注意事項*</block>
+  <block id="616672565c96137c7a96fd54acc8e9da" category="list-text">復元する前に、データベースの役割が最新であることを確認してください。スイッチオーバーまたはフェイルオーバーが発生した場合は、まず *Hosts* タブを選択し、該当ホストの *Refresh* を選択してください。利用可能な復元オプションは、データベースが現在担っている役割によって異なります。</block>
+  <block id="b211c3a6078492ed458135e880352629" category="list-text">データベースが現在スタンバイ状態にある場合、バックアップ取得時の役割に関係なく、元の場所に復元することはできません。別の場所に復元してください。</block>
+  <block id="d93c32f5f94e7a9c136c20e11c78def2" category="list-text">データベースが現在スタンバイ状態の場合、セカンダリストレージまたはオブジェクトストレージにのみ存在するスナップショットを復元することはできません。</block>
+  <block id="368ff82501bf375fe962ae7b3740bb7b" category="list-text">データベースがスタンバイ状態だったときに取得したバックアップは、データベースがプライマリになった後に元の場所に復元できます。</block>
+  <block id="ae3633e4eb4a82b89a3980ff858610f1" category="admonition">プライマリデータベースをリストアしても、スタンバイは変更されません。ポイントインタイムまたはSCNリストアのあとに<block ref="d25b8c1b3f7ba3e06913b87e4360ec6d" prefix=" " category="inline-code"></block>を使用してプライマリを開くと、新しいデータベースインカネーションが開始されます。スタンバイがすでにその時点以降のREDOを適用している場合、スタンバイでのREDO適用はエラーで停止し、スタンバイは以前の状態のままになります。保護を再開するには、リストア後にOracleツールを使用してスタンバイを再確立します。</block>
+  <block id="a593f44359692a4c6bb8088242bffe01" category="list-text">*Data Guard設定*：*Data Guard設定を有効にする*を選択して、バックアップするOracle Data Guardデータベースを選択します：</block>
+  <block id="030c52c41fd1981a36ae43013d3e78c3" category="list-text">*プライマリとスタンバイの両方をバックアップする*（デフォルト）</block>
+  <block id="5af099efa04197b8148cd4c53d100646" category="list-text">*プライマリのみバックアップ*</block>
+  <block id="e2d9ce30ebfec7057c448e8a44f805e1" category="list-text">*スタンバイでのみバックアップ*</block>
+  <block id="ec521975a51b13a00e3d392d7acdf5f5" category="paragraph">*Data Guard設定*を有効にしない場合、プライマリデータベースとスタンバイデータベースの両方がバックアップされます。リソースにポリシーを割り当てた後は、*Data Guard設定*を無効にすることはできません。</block>
 </blocks>

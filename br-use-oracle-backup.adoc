@@ -71,3 +71,6 @@ NOTE: NetApp Backup and Recovery、バックアップと保護グループの両
 . スケジュール層を選択します。
 . *バックアップ*を選択します。
 
+
+
+NOTE: Oracle Data Guardデータベースの場合、NetApp Backup and Recoveryは、バックアップ開始時に各データベースの現在のロールを確認し、ポリシー内の*Data Guard設定*に従います。スイッチオーバーまたはフェイルオーバー後、次回のバックアップでは新しいロールが使用されます。
