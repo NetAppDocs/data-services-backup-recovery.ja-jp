@@ -511,7 +511,6 @@
   <block id="500085ef4daa2d41e99c68f5d7ced622" category="list-text">バックアップ ターゲットの新しい資格情報を入力します。情報は、選択したバックアップ対象の種類によって異なります。</block>
   <block id="65aa0e52587b5f59eb26af06ddeef28a" category="list-text">*完了*を選択します。</block>
   <block id="6d655e5ab4c22c9a5dd1c7b3cc53bcd4" category="summary">NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。</block>
-  <block id="ebe1fa7e8a9f4c3139f8657f10a169ee" category="doc">NetApp Backup and Recoveryで Hyper-V ワークロードを発見</block>
   <block id="ccb99cc37b628cd3d05ccf85f8c0c579" category="section-title">Hyper-Vホストを追加してリソースを検出する</block>
   <block id="6512c2901e9f9eae6ce40754ef6845cb" category="admonition">Hyper-V ホストを追加してリソースを検出すると、 NetApp Backup and Recoveryによって、仮想マシンの管理と保護を支援するために、Hyper-V ホストにNetApp Hyper-V プラグインとNetApp SnapCenter Windows FileSystem プラグインがインストールされます。</block>
   <block id="dd38712b98e7db15ffc7ca4ac996020c" category="list-text">NetApp Consoleメニューから、*保護* &gt; *バックアップとリカバリ* を選択します。</block>
@@ -6296,4 +6295,17 @@
   <block id="ec521975a51b13a00e3d392d7acdf5f5" category="paragraph">*Data Guard設定*を有効にしない場合、プライマリデータベースとスタンバイデータベースの両方がバックアップされます。リソースにポリシーを割り当てた後は、*Data Guard設定*を無効にすることはできません。</block>
   <block id="ce6934326bbfd4652849311e1ed89fe6" category="paragraph">今回のリリースでは、NetApp Backup and Recoveryで、すべてのワークロードに対して以下のライセンス機能強化が導入されます：</block>
   <block id="83b090108fa1e810d92771b23b7b0267" category="paragraph">ライセンスの詳細については、<block ref="aa1a103ec550203513cdef85cd5672c0" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="78ba94be34b62da6b3c55ab6428c64de" category="paragraph">今回のリリースでは、NetApp Backup and RecoveryでHyper-Vワークロード向けに以下の機能強化が導入されています：</block>
+  <block id="5a17a39de31b7b5832a689a22a0960d3" category="paragraph">*NetApp MetroClusterサポートの強化*：NetApp Backup and Recoveryは、スイッチオーバーまたはスイッチバック操作の前後において、NetApp MetroCluster構成のHyper-Vホストの保護をサポートするようになりました。</block>
+  <block id="3df1770bd78ab7f279534a4bc01e8279" category="inline-link">Hyper-Vワークロードの検出と管理</block>
+  <block id="3cb8f9712223b09ad73c450e0af0ea64" category="paragraph">NetApp MetroCluster構成でHyper-Vホストを保護する方法の詳細については、<block ref="665a91254fa4402bbc204875b0e6bd92" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="844ae54d758df29e7d829704e13ec279" category="paragraph">Hyper-Vワークロードの保護に関する詳細は、<block ref="ae9a446e0ed2e2ae49be41b424784f6c" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="cf675c654413dcc854cb4be52cd83dc3" category="doc">NetApp Backup and RecoveryでHyper-Vワークロードを検出して管理する</block>
+  <block id="d69713a2a3c453e5fbf0ea6d3400e8d8" category="section-title">Hyper-Vホストを更新する</block>
+  <block id="41d2c48fc5de199e2d709875cf13b714" category="paragraph">Hyper-Vホストをリフレッシュして、ホスト上のVMsのリストを更新し、接続されているストレージをマッピングします。MetroClusterのスイッチオーバーまたはスイッチバックのあと、あるいは最近ホストでVMsを追加または削除した場合は、この操作が必要になることがあります。</block>
+  <block id="07a120107375b845b998da2fcc4ff1b5" category="admonition">Hyper-VホストがNetApp MetroCluster構成で保護されている場合は、MetroClusterのスイッチオーバーまたはスイッチバックのあと、次回のスケジュールされたバックアップや手動バックアップ、またはスナップショットの前に、ホストを更新してください。ホストが更新される前にそのホストに対して実行されたバックアップやスナップショットはすべて失敗します。ホストを手動で更新しない場合、Backup and Recoveryは12時間以内に自動的にホストを更新します。</block>
+  <block id="f801f8619ab78bc2c752d1ee8fd4f92c" category="list-text">Hyper-Vワークロードタイプの*表示*リンクを選択します。</block>
+  <block id="09ccb7f44019b1b4d13b4944ec04a56f" category="list-text">更新するHyper-Vホストを選択し、「アクション」アイコン <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *更新* を選択します。</block>
+  <block id="2ed0cb11d89d0befd7096c8dfd797cf8" category="admonition">Hyper-VホストがNetApp MetroCluster構成で保護されている場合は、MetroClusterのスイッチオーバーまたはスイッチバックのたびに、次回のスケジュールされたバックアップや手動のバックアップ、またはスナップショットの前にホストを更新してください。手順については、<block ref="8cb2dd4b3d4a18fa676f8b0c073c9b7b" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
 </blocks>

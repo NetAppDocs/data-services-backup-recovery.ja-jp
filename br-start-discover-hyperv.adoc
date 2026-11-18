@@ -4,7 +4,7 @@ permalink: br-start-discover-hyperv.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
 summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。 
 ---
-= NetApp Backup and Recoveryで Hyper-V ワークロードを発見
+= NetApp Backup and RecoveryでHyper-Vワークロードを検出して管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -62,6 +62,24 @@ TIP: このプロセスには数分かかる場合があります。
 
 .結果
 NetApp Backup and Recovery がリソースを検出すると、インベントリ ページのワークロード リストに Hyper-V ワークロードが表示されます。
+
+
+
+[[refresh-a-hyper-v-host]]
+== Hyper-Vホストを更新する
+
+Hyper-Vホストをリフレッシュして、ホスト上のVMsのリストを更新し、接続されているストレージをマッピングします。MetroClusterのスイッチオーバーまたはスイッチバックのあと、あるいは最近ホストでVMsを追加または削除した場合は、この操作が必要になることがあります。
+
+
+IMPORTANT: Hyper-VホストがNetApp MetroCluster構成で保護されている場合は、MetroClusterのスイッチオーバーまたはスイッチバックのあと、次回のスケジュールされたバックアップや手動バックアップ、またはスナップショットの前に、ホストを更新してください。ホストが更新される前にそのホストに対して実行されたバックアップやスナップショットはすべて失敗します。ホストを手動で更新しない場合、Backup and Recoveryは12時間以内に自動的にホストを更新します。
+
+.手順
+. NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
+. Hyper-Vワークロードタイルを選択します。
+. NetApp Backup and Recoveryメニューから、*インベントリ* を選択します。
+. Hyper-Vワークロードタイプの*表示*リンクを選択します。
+. 更新するHyper-Vホストを選択し、「アクション」アイコン image:../media/icon-action.png["アクションオプション"] > *更新* を選択します。
+
 
 
 

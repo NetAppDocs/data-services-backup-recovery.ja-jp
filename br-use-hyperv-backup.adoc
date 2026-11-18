@@ -28,6 +28,9 @@ summary: NetApp のバックアップとリカバリを使用して Hyper-V ワ�
 
 システムに変更を加える前に、オンデマンドバックアップを使用してデータを保護してください。
 
+
+IMPORTANT: Hyper-VホストがNetApp MetroCluster構成で保護されている場合は、MetroClusterのスイッチオーバーまたはスイッチバックのたびに、次回のスケジュールされたバックアップや手動のバックアップ、またはスナップショットの前にホストを更新してください。手順については、link:br-start-discover-hyperv.html#refresh-a-hyper-v-host["Hyper-Vホストを更新する"]を参照してください。
+
 *必須NetApp Consoleロール* Backup and Recoveryのスーパー管理者、またはBackup and Recoveryのバックアップ管理者ロール。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]
 
 .手順

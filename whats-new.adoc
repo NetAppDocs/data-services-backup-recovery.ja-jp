@@ -18,6 +18,26 @@ summary: NetApp Backup and Recoveryの新機能について説明します。
 
 
 
+[[09-november-2026]]
+== 2026年11月9日
+
+このNetApp Backup and Recoveryリリースには、次の更新が含まれています。
+
+
+
+[[hyper-v-workloads-enhancement]]
+=== Hyper-Vワークロードの機能強化
+
+今回のリリースでは、NetApp Backup and RecoveryでHyper-Vワークロード向けに以下の機能強化が導入されています：
+
+*NetApp MetroClusterサポートの強化*：NetApp Backup and Recoveryは、スイッチオーバーまたはスイッチバック操作の前後において、NetApp MetroCluster構成のHyper-Vホストの保護をサポートするようになりました。
+
+NetApp MetroCluster構成でHyper-Vホストを保護する方法の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-discover-hyperv.html["Hyper-Vワークロードの検出と管理"^]を参照してください。
+
+Hyper-Vワークロードの保護に関する詳細は、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["Hyper-VワークロードをNetApp Backup and Recoveryで保護する方法について説明します"^]を参照してください。
+
+
+
 [[26-october-2026]]
 == 2026年10月26日
 
