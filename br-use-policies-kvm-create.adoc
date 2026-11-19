@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-policies-kvm-create.html 
 keywords: backing up, back up, backup, backup on-premises ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
-summary: NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。 
+summary: NetApp Backup and Recoveryで、バックアップの頻度、スケジュール、保持期間を制御するKVMバックアップポリシーを作成し、編集または削除します。 
 ---
 = NetApp Backup and RecoveryでのKVMバックアップ ポリシーの作成と管理
 :hardbreaks:
@@ -16,7 +16,7 @@ NetApp Backup and Recovery を使用して、バックアップの頻度、ス�
 
 SnapCenterからリソースをインポートする場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーとの間に若干の違いが生じる可能性があります。見るlink:reference-policy-differences-snapcenter.html["SnapCenterとNetApp Backup and Recoveryのポリシーの違い"]。
 
-ポリシーに関連する次の目標を達成できます。
+ポリシーを使用することで、以下のタスクを完了できます：
 
 * ローカルスナップショットポリシーを作成する
 * セカンダリストレージへのレプリケーションのポリシーを作成する

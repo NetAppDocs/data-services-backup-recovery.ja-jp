@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-clone.html 
 keywords: clone, clone application data, NetApp backup and recovery, VMware 
-summary: NetApp Backup and Recoveryを使用してVMware仮想マシンのワークロードをクローニングします。 
+summary: NetApp Backup and Recoveryを使用して、プライマリまたはセカンダリスナップショットからVMware仮想マシンの書き込み可能なクローンを作成、分割、削除します。 
 ---
 = NetApp Backup and Recoveryを使用したVMwareワークロードのクローニング
 :hardbreaks:
@@ -61,7 +61,7 @@ NOTE: VMクローンを作成した後、元のVMとのIPアドレスの競合�
 [[split-a-clone]]
 == クローンのスプリット
 
-VMware VMのクローンを分割することで、親ボリュームから切り離すことができます。分割されると、クローンは親ボリュームに依存しない独立したボリュームになります。
+VMware VMのクローンを分割することで、親ボリュームから切り離すことができます。分割後、クローンは親ボリュームに依存しない独立したボリュームになります。
 
 分割後、クローンされた仮想マシンに関連付けられていたデータストアは、新しい独立したデータストアになります。クローンされた仮想マシン自体は保持されます。
 

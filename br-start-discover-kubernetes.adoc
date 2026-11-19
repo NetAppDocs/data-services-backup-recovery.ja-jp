@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-kubernetes.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Kubernetes 
-summary: NetApp Backup and Recovery、サービスを使用するために、まずワークロードを検出する必要があります。 
+summary: エアギャップ環境のクラスタを含め、NetApp Backup and RecoveryでKubernetesクラスタとワークロードを検出し、ポリシーを使用してアプリケーションを保護できるようにします。 
 ---
 = NetApp Backup and Recoveryで Kubernetes ワークロードを発見
 :hardbreaks:
@@ -27,7 +27,7 @@ Kubernetes クラスターとそのワークロードを NetApp Backup and Recov
 
 [NOTE]
 ====
-Trident Protect で現在保護されているクラスターを検出すると、Trident Protect のバックアップスケジュールは Backup and Recovery と互換性がないため、検出プロセス中に Trident Protect で使用されているバックアップスケジュールが無効になります。クラスターのアプリケーションを保護するには、link:br-use-policies-create.html["新しい保護ポリシーを作成する"]か、アプリケーションを既存のポリシーに関連付けてください。その後、必要に応じて Trident Protect のバックアップスケジュールを削除できます。
+現在Trident Protectで保護されているクラスタを検出すると、Trident Protectのバックアップ スケジュールはBackup and Recoveryと互換性がないため、検出プロセス中にTrident Protectで使用されているバックアップ スケジュールは無効になります。クラスタのアプリケーションを保護するには、link:br-use-policies-create.html["新しい保護ポリシーを作成する"]するか、アプリケーションを既存のポリシーに関連付けます。その後、必要に応じてTrident Protectのバックアップ スケジュールを削除できます。
 
 ====
 .手順
@@ -74,7 +74,7 @@ Backup and Recoveryでは、選択したインストール タイプの選択に
 ... プライベート Docker コンテナレジストリの URL を入力してください。このレジストリは、インストール中に Trident Protect および Trident Protect Connector イメージをダウンロードするために使用されます。
 ... プライベートコンテナレジストリで認証が必要な場合は、以下のいずれかの方法を使用してレジストリの認証情報を設定してください。
 +
-**** *ノードレベル認証*：各ノードのコンテナランタイムでレジストリ認証情報を設定します。設定が完了すると、すべてのポッドは追加の Helm 設定を必要とせずにイメージをプルできます。
+**** *ノードレベル認証*：各ノードのコンテナランタイムでレジストリ認証情報を構成します。これらを設定すれば、すべてのポッドは追加のHelm設定なしでイメージをプルできるようになります。
 **** *Kubernetes image pull secret*: Kubernetes image pull secret を `trident-protect`名前空間に作成し、Trident Protect のインストール手順の Helm アップグレード手順中にそれを参照します：
 +
 [source, console]

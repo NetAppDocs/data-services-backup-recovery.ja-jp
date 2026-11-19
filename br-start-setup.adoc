@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-setup.html 
 keywords: backup, back up, restore, recovery, aws, azure 
-summary: StorageGRID、AWS、Azure などのオフサイトの場所を準備し、バックアップ先として使用できるように必要な権限を設定してください。 
+summary: NetApp Backup and Recoveryのバックアップ先を設定し、S3のアクセス許可を構成します。 
 ---
-= バックアップ先を設定する
+= NetApp Backup and Recoveryのバックアップ先を設定する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -50,7 +50,7 @@ AWS をバックアップ先として準備するには、次の手順を実行�
 
 
 
-バックアップ先自体でオプションを設定した後、NetApp Backup and Recovery でバックアップ先として設定します。NetApp Backup and Recovery でバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"]を参照してください。
+バックアップ先自体を設定したら、NetApp Backup and Recoveryのバックアップ先として追加します。NetApp Backup and Recoveryでバックアップ先を設定する方法の詳細については、link:br-start-discover-backup-targets.html["バックアップターゲットの検出"]を参照してください。
 
 
 
@@ -64,12 +64,12 @@ AWS S3 権限を 2 セット設定する必要があります。
 
 
 .手順
-. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"] 。
+. Consoleエージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"]を参照してください。
 +
 
 NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。
 
-. サービスをアクティブ化すると、バックアップ ウィザードによってアクセス キーとシークレット キーの入力が求められます。これらの認証情報はONTAPクラスターに渡され、 ONTAP はS3 バケットにデータをバックアップおよび復元できるようになります。そのためには、次の権限を持つ IAM ユーザーを作成する必要があります。
+. サービスを有効化すると、バックアップウィザードでアクセスキーとシークレットキーの入力を求められます。これらの認証情報はONTAPクラスタに渡され、ONTAPがS3バケットにデータをバックアップおよびリストアできるようにします。そのためには、以下の権限を持つIAMユーザーを作成する必要があります。
 +
  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS ドキュメント: IAM ユーザーに権限を委任するロールの作成"^]を参照してください。
 

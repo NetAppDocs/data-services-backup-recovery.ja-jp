@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-overview.html
 keywords: ontap volumes, protect volumes, back up volumes, restore volumes, snapshots, replication, backup to object storage, 3-2-1, FlexVol, FlexGroup, SnapLock, DataLock, ransomware protection, NetApp Backup and Recovery 
 summary: NetApp Backup and Recoveryを使用して、スナップショット、レプリケートされたボリューム、およびオブジェクトストレージ内のバックアップでONTAPボリュームを保護し、任意のコピーからボリューム、フォルダ、またはファイルを復元します。 
 ---
-= NetApp Backup and Recoveryを使用してONTAPボリュームのワークロードを保護する
+= NetApp Backup and Recoveryを使用したONTAPボリューム保護について説明します
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -28,7 +28,7 @@ image:diagram-321-overview-unified.png["バックアップファイルが、ソ�
 3-2-1方式には、以下の利点があります：
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* 異なる種類のメディアを使用することで、ある種類のメディアが故障した場合でも復旧が可能になります。
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 
@@ -55,7 +55,7 @@ image:diagram-backup-recovery-general.png["NetApp Backup and Recovery が、ソ�
 
 
 
-CAUTION: ストレージシステムやクラウド プロバイダ環境から直接バックアップ ファイルを管理したり変更したりしないでください。そうするとファイルが破損し、サポートされていない構成になる可能性があります。
+CAUTION: ストレージシステムやクラウド プロバイダ環境から直接バックアップ ファイルを管理または変更しないでください。そうするとファイルが破損し、サポートされていない構成になる可能性があります。
 
 使用するコピーとアーキテクチャを計画するには、link:prev-ontap-protect-journey.html["ONTAPボリューム保護の計画"]を参照してください。
 
@@ -69,7 +69,7 @@ CAUTION: ストレージシステムやクラウド プロバイダ環境から�
 * バックアップと災害復旧をサポートするために、 ONTAPストレージ システム間でデータを複製します。
 * 一度に複数のFlexVolボリュームをセカンダリ システムに複製します。
 * 2つのシステム間で事前共有鍵（PSK）を使用したONTAPネイティブの転送中暗号化を使用します。
-* 転送失敗時には自己修復レプリケーションを利用します。
+* 転送が失敗した場合は、自己修復レプリケーションを利用します。
 * レプリケートされたボリュームを、ソースシステムまたは別のシステムに復元します。
 
 
@@ -104,7 +104,7 @@ Backup and Recoveryを使用したレプリケーション時に利用できな�
 
 NetApp Backup and Recovery は、次のタイプのボリュームをサポートしています。
 
-* FlexVol読み取り/書き込みボリューム
+* FlexVol 読み取り / 書き込みボリューム
 * FlexGroupボリューム（ ONTAP 9.12.1以降が必要）
 * SnapLock Enterpriseボリューム（ ONTAP 9.11.1 以降が必要）
 * SnapLock Compliance（オンプレミスボリューム向け）（ONTAP 9.14以降が必要）

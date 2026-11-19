@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: 要件を確認し、Consoleエージェントを準備し、NetApp Backup and Recoveryでバックアップを有効にして、Cloud Volumes ONTAPのデータをAmazon S3にバックアップします。 
 ---
 = NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAmazon S3にバックアップする
 :hardbreaks:
@@ -24,11 +24,11 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 [[verify-support-for-your-configuration]]
 == 構成のサポートを確認する
 
-ボリュームを S3 にバックアップする前に、次の要件を読んで、サポートされている構成であることを確認してください。
+S3へのボリュームのバックアップを開始する前に、サポートされている構成の要件を満たしていることを確認してください。
 
 次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。
 
-オプションとして、パブリック接続またはプライベート接続を使用して、複製されたボリュームのセカンダリONTAPシステムに接続することもできます。
+パブリック接続またはプライベート接続を介して、レプリケートされたボリューム用のセカンダリONTAPシステムに接続することもできます。
 
 image:diagram_cloud_backup_cvo_aws.png["NetApp Backup and Recovery が、ソース システムのボリュームおよびバックアップ ファイルが保存されている宛先ストレージと通信する方法を示す図。"]
 
@@ -38,7 +38,7 @@ VPC ゲートウェイ エンドポイントがすでに VPC 内に存在して�
 NOTE: バックアップまたは復元データの転送にプライベートVPCエンドポイントを使用する場合、設定されているプロキシ接続よりも優先されます。
 
 サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
-データ暗号化に顧客管理キーを使用するために必要な情報:: アクティベーションウィザードでは、デフォルトの Amazon S3 暗号化キーを使用する代わりに、データ暗号化用に独自のカスタマー管理キーを選択できます。この場合、暗号化管理キーがすでに設定されている必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自のキーの使用方法を確認する"^] 。
+データ暗号化に顧客管理キーを使用するために必要な情報:: アクティベーションウィザードでは、デフォルトのAmazon S3暗号化キーを使用する代わりに、データ暗号化用に独自のお客様管理キーを選択できます。この場合、お客様管理キーの設定は既に完了している必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["独自のキーの使用方法を確認する"^]
 
 
 
@@ -50,7 +50,7 @@ NetApp Backup and Recovery PAYGO ライセンスの場合、 Cloud Volumes ONTAP
 
 Cloud Volumes ONTAPデータとオンプレミスONTAPデータの両方をバックアップできる年間契約の場合は、 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWSマーケットプレイスページ"^]その後 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["サブスクリプションをAWS認証情報に関連付ける"^]。
 
-Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルできる年間契約の場合は、 Cloud Volumes ONTAPシステムを作成するときに年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。
+Cloud Volumes ONTAPとNetApp Backup and Recoveryをバンドルできる年間契約の場合、Cloud Volumes ONTAPシステムの作成時に年間契約を設定する必要があります。このオプションでは、オンプレミスデータのバックアップはできません。
 
 NetApp Backup and Recovery BYOL ライセンスの場合、ライセンスの期間と容量にわたってサービスを使用できるようにするNetAppからのシリアル番号が必要です。link:br-start-licensing.html["BYOLライセンスの管理方法を学ぶ"]。コンソール エージェントとCloud Volumes ONTAPシステムをダーク サイトに展開する場合は、BYOL ライセンスを使用する必要があります。
 
@@ -192,7 +192,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 

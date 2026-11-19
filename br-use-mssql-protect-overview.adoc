@@ -18,7 +18,7 @@ summary: お客様のMicrosoft SQL Serverアプリケーションデータを、
 
 NetApp Backup and Recovery は、 NetApp SnapMirrorを使用してスナップショットを作成し、それをバックアップの場所に転送することでバックアップを同期します。
 
-データを保護するには、以下のワークフローを使用してください。
+データを保護するには、以下のワークフローを使用してください：
 
 * link:concept-start-prereq-snapcenter-import.html["SnapCenterからインポートする場合の追加項目を構成する"]
 * link:br-start-discover.html["Microsoft SQL Server ワークロードを検出し、オプションでSnapCenterリソースをインポートします"]

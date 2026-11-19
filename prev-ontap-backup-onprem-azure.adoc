@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: 環境を準備し、NetApp Backup and Recoveryを使用して、オンプレミスのONTAPボリュームからAzure Blob Storageへのバックアップを有効化します。 
 ---
-= NetApp Backup and Recoveryを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをAzure Blob Storageにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recoveryでは、オンプレミスのONTAPシステムからセカンダリ システムおよびAzure Blobにボリューム データをバックアップできます。このページを使用して環境を準備し、バックアップを有効にします。
+NetApp Backup and Recoveryでは、オンプレミスのONTAPシステムからセカンダリストレージシステムおよびAzure Blob Storageにボリュームデータをバックアップできます。環境を準備してから、バックアップを有効にしてボリュームを保護します。
 
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
@@ -80,7 +80,7 @@ NetApp Backup and Recovery は、コンソール エージェントがクラウ�
 +
 ** NetApp Backup and RecoveryおよびBlobオブジェクトストレージへのポート443経由のHTTPS接続(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["エンドポイントのリストを見る"^]）
 ** ポート443経由のONTAPクラスタ管理LIFへのHTTPS接続
-** NetApp Backup and Recoveryの検索と復元機能が動作するには、コンソール エージェントと Azure Synapse SQL サービス間の通信用にポート 1433 が開いている必要があります。
+** NetApp Backup and Recoveryの検索とリストアを機能させるには、ConsoleエージェントとAzure Synapse SQLサービス間の通信用にポート1433が開いている必要があります。
 ** Azure および Azure Government の展開には、追加の受信セキュリティ グループ ルールが必要です。見る https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure のコンソール エージェントのルール"^]詳細については。
 
 
@@ -272,7 +272,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -290,9 +290,9 @@ Cloud Volumes ONTAPまたはオンプレミス システムにレプリケート
 
 . アクティベーション ウィザードでは、既定の Microsoft 管理の暗号化キーを使用する代わりに、独自のカスタム管理キーを使用してデータを暗号化することができます。この場合、Azure サブスクリプション、Key Vault 名、およびキーが必要になります。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["独自のキーの使い方を学ぶ"^] 。
 +
-NetApp Backup and Recoveryは、アクセス許可モデルとして「Azureアクセス ポリシー」をサポートしています。「Azureロールベース アクセス制御」（Azure RBAC）アクセス許可モデルは現在サポートされていません。
+NetApp Backup and Recoveryは、アクセス許可モデルとして_Azureアクセスポリシー_をサポートしています。_Azureロールベースアクセス制御_（Azure RBAC）アクセス許可モデルは現在サポートされていません。
 
-. オンプレミスのデータセンターから VNet へのパブリック インターネット経由のより安全な接続を確立したい場合は、アクティベーション ウィザードで Azure プライベート エンドポイントを構成するオプションがあります。この場合、この接続の VNet とサブネットを知っておく必要があります。 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["プライベートエンドポイントの使用に関する詳細を参照してください"^] 。
+. オンプレミスのデータセンターからパブリックインターネット経由でVNetへのよりセキュアな接続を確立したい場合は、アクティベーションウィザードでAzureプライベートエンドポイントを設定するオプションがあります。この場合、この接続のVNetとサブネットを把握しておく必要があります。 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["プライベートエンドポイントの使用に関する詳細を参照してください"^]。
 
 
 

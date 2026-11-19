@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-manage-snapshots.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: Microsoft SQL Server スナップショットは、NetApp Backup and Recoveryから削除することで管理できます。 
+summary: NetApp Backup and RecoveryのインベントリからローカルのMicrosoft SQL Serverスナップショットを削除します。 
 ---
 = NetApp Backup and Recoveryで Microsoft SQL Server スナップショットを管理する
 :hardbreaks:

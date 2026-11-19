@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-restore.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して、Oracle Databaseワークロードをローカルスナップショット、レプリケートされたバックアップ、またはオブジェクトストレージから元のホストまたは代替ホストにリストアします。 
 ---
 = Oracle DatabaseワークロードをNetApp Backup and Recoveryで復元する
 :hardbreaks:
@@ -36,7 +36,7 @@ summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロー
 [[how-oracle-database-restore-works]]
 == Oracleデータベースのリストアの仕組み
 
-Oracle Database のワークロードを復元すると、次のことが発生します：
+Oracle Databaseのリストアは、以下のとおり動作します：
 
 * ローカル スナップショットからデータベースを復元すると、 NetApp Backup and Recovery はバックアップのデータを使用して新しいリソースを作成します。
 * 複製されたストレージから復元する場合は、元の場所に復元できます。

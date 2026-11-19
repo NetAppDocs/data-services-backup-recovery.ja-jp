@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-clone.html 
 keywords: clone, clone application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードのクローンを作成します。 
+summary: NetApp Backup and Recoveryを使用して、Oracle Databaseワークロードのクローンを作成、スケジュール、分割、削除します。 
 ---
 = Oracle DatabaseワークロードをNetApp Backup and Recoveryでクローニングする
 :hardbreaks:

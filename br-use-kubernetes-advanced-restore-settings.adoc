@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-kubernetes-advanced-restore-settings.html 
 keywords: cr, custom resource, restore, data, backup, advanced, settings 
-summary: 注釈、名前空間設定、およびストレージ オプションを使用して、CR リストア操作をカスタマイズできます。 
+summary: アノテーション、ネームスペース設定、およびストレージオプションを使用して、Kubernetes CRの復元操作をカスタマイズします。 
 ---
 = Kubernetes の高度なリストア設定（NetApp Backup and Recovery）
 :hardbreaks:
@@ -41,7 +41,7 @@ helm upgrade trident-protect -n trident-protect netapp-trident-protect/trident-p
   --reuse-values
 ----
 
-NOTE: リストアまたはフェイルオーバー中に、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定された名前空間アノテーションとラベルは、リストアまたはフェイルオーバー処理から除外されます。これらの設定は、Helmの初回インストール時に必ず構成してください。詳細については、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
+NOTE: リストアまたはフェイルオーバー時、 `restoreSkipNamespaceAnnotations`および `restoreSkipNamespaceLabels`で指定されたネームスペースの注釈とラベルは、リストアまたはフェイルオーバー処理から除外されます。これらの設定は、Helmの初回インストール時に構成してください。詳細については、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-customize-installation.html#configure-additional-trident-protect-helm-chart-settings["追加のTrident Protectヘルムチャート設定を構成する"]を参照してください。
 
 Helm を `--create-namespace`フラグとともに使用してソースアプリケーションをインストールした場合、Trident Protect は名前ラベルをデスティネーションネームスペースにコピーします。ラベルの値がソースネームスペース名と一致する場合は、デスティネーションネームスペース名に置き換えられます。一致しない場合は、そのまま残されます。
 
@@ -88,7 +88,7 @@ Helm を `--create-namespace`フラグとともに使用してソースアプリ
 
 ==== リストア処理後
 
-次の表は、復元またはフェイルオーバー操作後の宛先名前空間の例の状態を示しています。いくつかのキーが追加され、いくつかは上書きされ、 `name`ラベルは宛先名前空間と一致するように更新されました：
+以下の表は、リストアまたはフェイルオーバー操作後の宛先ネームスペースの例の状態を示しています。この操作により、いくつかのキーが追加され、他のキーが上書きされ、宛先ネームスペースに一致するように `name`ラベルが更新されました：
 
 [cols="1,2a,2a"]
 |===
@@ -113,7 +113,7 @@ Helm を `--create-namespace`フラグとともに使用してソースアプリ
 [[supported-fields]]
 == サポートされているフィールド
 
-このセクションでは、復元操作に関する追加フィールドについて説明します。
+復元操作では、これらの追加フィールドがサポートされます。
 
 
 
@@ -137,7 +137,7 @@ storageClassMapping:
 [[supported-annotations]]
 == サポートされているアノテーション
 
-このセクションでは、システムにおける様々な動作を設定するためにサポートされている注釈を一覧表示します。明示的に注釈を設定しない場合、システムはデフォルト値を使用します。
+これらの注釈を使用して、システムの動作を設定します。注釈を設定しない場合、システムはデフォルト値を使用します。
 
 [cols="1,1,3,1"]
 |===

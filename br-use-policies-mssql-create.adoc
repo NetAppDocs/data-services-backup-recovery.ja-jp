@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-policies-mssql-create.html 
 keywords: backing up, back up, backup, backup on-premises ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
-summary: NetApp Backup and Recoveryでは、バックアップの頻度、バックアップの実行時間、保持されるバックアップ ファイルの数を制御する独自のポリシーを作成します。 
+summary: NetApp Backup and RecoveryでMicrosoft SQL Serverのバックアップポリシーを作成、編集、削除して、バックアップの頻度、スケジュール、保持期間を制御します。 
 ---
-= NetApp Backup and RecoveryでのMicrosoft SQL Serverバックアップ ポリシーの作成と管理
+= NetApp Backup and RecoveryでのMicrosoft SQL Serverポリシーの作成と管理
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -16,7 +16,7 @@ NetApp Backup and Recovery を使用して、バックアップの頻度、ス�
 
 SnapCenterからリソースをインポートする場合、 SnapCenterで使用されるポリシーとNetApp Backup and Recoveryで使用されるポリシーとの間に若干の違いが生じる可能性があります。見るlink:reference-policy-differences-snapcenter.html["SnapCenterとNetApp Backup and Recoveryのポリシーの違い"]。
 
-ポリシーに関連する次の目標を達成できます。
+以下のポリシータスクを完了できます：
 
 * ローカルスナップショットポリシーを作成する
 * セカンダリストレージへのレプリケーションのポリシーを作成する

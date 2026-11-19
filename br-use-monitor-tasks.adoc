@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-monitor-tasks.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, jobs 
-summary: NetApp Backup and Recoveryを使用すると、ローカル スナップショット、レプリケーション、および開始したバックアップ ジョブを監視します。 
+summary: スナップショット、レプリケーション、バックアップ、リストアジョブを監視し、通知センターでアラートを確認し、Consoleタイムラインでアクティビティを調査し、進行中のジョブをキャンセルします。 
 ---
 = NetApp Backup and Recoveryのジョブを監視する
 :hardbreaks:
@@ -271,7 +271,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.htm
 [[cancel-an-ongoing-job]]
 == 進行中のジョブをキャンセルする
 
-バックアップおよびリカバリワークロードの中には、完了に時間がかかりすぎているが失敗していない場合に、進行中のジョブをキャンセルする機能をサポートしているものがあります。
+一部のBackup and Recoveryワークロードは、完了に時間がかかりすぎている場合、かつジョブが失敗していない場合に、進行中のジョブをキャンセルする機能をサポートしています。
 
 
 NOTE: ONTAP Volumes の復元ジョブをキャンセルするには、<<ONTAP Volumes 復元ジョブのキャンセル>>を参照してください。
@@ -289,7 +289,7 @@ NOTE: ONTAP Volumes の復元ジョブをキャンセルするには、<<ONTAP V
 [[cancel-an-ontap-volumes-restore-job]]
 == ONTAP Volumes 復元ジョブのキャンセル
 
-完了に時間がかかりすぎており、失敗していない場合は、ONTAP ボリュームのリストアジョブをキャンセルします。
+ONTAP Volumesのリストアジョブの完了に時間がかかりすぎており、かつ失敗していない場合は、ジョブをキャンセルします。
 
 ボリュームの復元をキャンセルすると、復元操作全体がロールバックされ、ボリュームのどの部分も復元されません。
 

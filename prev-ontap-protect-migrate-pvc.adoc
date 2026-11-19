@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-migrate-pvc.html 
 keywords: migrate, pvc, nfs, storage, performance, persistence 
-summary: NetApp Console のローカル展開環境におけるカタログインデックスのパフォーマンスを向上させます。 
+summary: NetApp Consoleのローカル展開環境でのパフォーマンスを向上させるために、検索とリストアのカタログインデックスストレージをONTAP NFSに移行します。 
 ---
 = 検索とリストアのカタログストレージを ONTAP NFS に移行する
 :hardbreaks:
@@ -58,7 +58,7 @@ kubectl get pods -n cbs | grep cloudmanager-cbs-catalog-worker- || echo "no work
 . 実行中のコーディネーターポッドからデータを、中間ディレクトリなしで ONTAP マウントにコピーします。コーディネーターはまだ実行中である必要があります。
 +
 
-NOTE: 内容をボリュームのルートにコピーしてください。サブディレクトリにはコピーしないでください。ONTAPボリュームが新しい `/opt/netapp/cbs/catalog/shared`ディレクトリです。データはボリュームのルートに配置する必要があります。そうすることで、アプリは同じパス（例：/opt/netapp/cbs/catalog/shared/cbs/<DATASET_NAME>/…）でデータを見つけることができます。以下のコマンドのtarコマンド形式は、ディレクトリの内容（ドットファイルを含む）をマウントルートにストリームし、ネストされた `shared`フォルダを回避します。
+NOTE: 内容をボリュームのルートにコピーしてください。サブディレクトリにはコピーしないでください。ONTAPボリュームが新しい `/opt/netapp/cbs/catalog/shared`ディレクトリになります。アプリが同じパス（例：/opt/netapp/cbs/catalog/shared/cbs/<DATASET_NAME>/…）でデータを見つけられるように、データはボリュームのルートに配置する必要があります。以下のコマンドのtarコマンド形式は、ディレクトリの内容（ドットファイルを含む）をマウントルートにストリームし、ネストされた `shared`フォルダが作成されるのを防ぎます。
 
 . NetApp Console ローカル展開のローカルマウントポイントに ONTAP NFS エクスポートをマウントします。後で pv.yaml で使用するのと同じサーバー/パスを使用してください：
 +
@@ -166,7 +166,7 @@ spec:
     matchLabels:
       volume: ontap-nfs-share # Forces binding to the specific PV above
 ----
-. YAMLオブジェクトを適用するには、まずPVを適用し、次にPVCを適用します（PVCのラベルセレクターがバインドされるためには、PVが存在している必要があります）。次に、PVCクレームがバインドされていることを確認します。
+. まずPVを適用し、次にPVCを適用します（PVCのラベルセレクタがバインドするためには、PVが存在している必要があります）。次に、PVCクレームがバインドされていることを確認します：
 +
 [source, shell]
 ----

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-hyperv.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
-summary: NetApp Backup and Recovery、 Hyper-V 仮想マシンを保護する前に、それらを検出する必要があります。 
+summary: Hyper-Vホストを追加して、NetApp Backup and Recoveryが仮想マシンを検出し、変更後にホストを更新して、ダッシュボードで保護ステータスを確認できるようにします。 
 ---
 = NetApp Backup and RecoveryでHyper-Vワークロードを検出して管理する
 :hardbreaks:
@@ -90,5 +90,5 @@ IMPORTANT: Hyper-VホストがNetApp MetroCluster構成で保護されている�
 . NetApp Console メニューから、*Protection* > *Backup and Recovery* を選択します。
 . Hyper-Vワークロードタイルを選択します。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
-. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
+. データ保護の健全性を確認します。新たに検出、保護、バックアップされたワークロードに基づいて、リスクにさらされているワークロードまたは保護されているワークロードの数が増加します。
 

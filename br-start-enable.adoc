@@ -43,7 +43,7 @@ NetApp Console でバックアップとリカバリサービスを有効にし�
 NetApp Console のローカル展開でバックアップとリカバリサービスを有効にします。
 
 .開始する前に
-NetApp Backup and Recovery のライセンスを取得していることを確認してください。詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["ライセンスを取得する"^]を参照してください。
+NetApp Backup and Recoveryのライセンスをお持ちであることを確認してください。詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["ライセンスを取得する"^]を参照してください。
 
 .手順
 . NetApp Console メニューから、*ストレージ* > *フリート* を選択します。

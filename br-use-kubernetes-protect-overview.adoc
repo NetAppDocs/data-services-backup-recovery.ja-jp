@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-kubernetes-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Kubernetes アプリケーションとアプリケーション データを保護し、データを確実に保護できます。 
+summary: オンプレミスのONTAPシステムからAmazon Web Services、Microsoft Azure、Google Cloud Platform、およびStorageGRIDにKubernetesアプリケーションとアプリケーションデータを保護します。 
 ---
 = NetApp Backup and Recoveryを使用したKubernetes保護のワークフロー
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 [role="lead"]
 NetApp Backup and Recovery を使用して、単一のインターフェースから Kubernetes クラスターとアプリケーションの検出、管理、保護を行うことができます。
 
-次の図は、Kubernetesのバックアップとリカバリの構成要素と基本アーキテクチャ、およびデータのコピーを異なる場所に保存する方法を示しています。
+この図は、Kubernetesのバックアップとリカバリの構成要素と基本アーキテクチャ、およびデータのコピーを異なる場所に保存する方法を示しています：
 
 image:../media/backup-recovery-architecture-diagram.png["Kubernetes ワークロードのバックアップとリカバリのアーキテクチャ図"]
 

@@ -126,7 +126,7 @@ image:diagram_browse_restore_volume-unified.png["リソースを復元する流�
 
 
 
-[[restore-to-specific-point-in-time]]
+[[restore-to-a-specific-point-in-time]]
 === 特定の時点に復元する
 
 NetApp Backup and Recovery は、ログと最新のスナップショットを使用して、データのポイントインタイム リストアを作成します。

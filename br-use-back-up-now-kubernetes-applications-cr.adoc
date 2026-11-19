@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-back-up-now-kubernetes-applications-cr.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: カスタムリソース（CR）を使用して、Kubernetesアプリケーションのオンデマンドスナップショットとバックアップを作成し、ベースラインを確立したり、最新のデータ変更を保護したりします。 
+summary: カスタムリソースを使用して、Kubernetesアプリケーションのオンデマンドスナップショット、オブジェクトストアバックアップ、および3-2-1ファンアウトバックアップを作成し、サポートされているバックアップアノテーションを確認します。 
 ---
-= NetApp Backup and Recoveryのカスタムリソースを使用して、Kubernetesアプリケーションを今すぐバックアップします
+= NetApp Backup and Recoveryでのカスタムリソースを使用したKubernetesアプリのバックアップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -27,7 +27,7 @@ summary: カスタムリソース（CR）を使用して、Kubernetesアプリ�
 NOTE: クラスタを対象としたリソースは、アプリケーション定義で明示的に参照されている場合、またはいずれかのアプリケーション名前空間への参照がある場合、バックアップ、Snapshot、またはクローンに含まれます。
 
 .開始する前に
-AWS セッショントークンの有効期限が、長時間実行される s3 バックアップ処理に十分であることを確認します。バックアップ処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+AWSセッショントークンの有効期限が、長時間実行されるS3バックアップ操作に十分であることを確認してください。バックアップ操作中にトークンの有効期限が切れた場合、操作が失敗する可能性があります。
 
 * 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
 *  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。
@@ -209,14 +209,14 @@ kubectl apply -f 3-2-1-fanout-backup-cr.yaml
 [[supported-backup-annotations]]
 == サポートされているバックアップアノテーション
 
-次の表では、バックアップ CR を作成するときに使用できる注釈について説明します。
+バックアップCRを作成する際に、これらのアノテーションを使用できます。
 
 [cols="2,1,3,1"]
 |===
 | 注釈 | タイプ | 説明 | デフォルト値 
 
 
-| protect.trident.netapp.io/full-backup | string | バックアップを非増分にするかどうかを指定します。 `true`に設定すると、非増分バックアップが作成されます。ベストプラクティスとしては、定期的にフル バックアップを実行し、フル バックアップの間に増分バックアップを実行して、リストアに伴うリスクを最小限に抑えることです。 | "false" 
+| protect.trident.netapp.io/full-backup | string | バックアップを非増分バックアップにするかどうかを指定します。非増分バックアップを作成するには、 `true`に設定します。ベストプラクティスとして、リストアに伴うリスクを最小限に抑えるため、定期的にフル バックアップを実行し、フル バックアップの間に増分バックアップを実行してください。 | "false" 
 
 
 | protect.trident.netapp.io/snapshot-completion-timeout | string | スナップショット処理全体が完了するまでに許容される最大時間。 | "60m" 

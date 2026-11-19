@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-restart-backup.html 
 keywords: backup restart, restart backup 
-summary: NetApp Backup and Recovery を再起動しなければならない場合があります。 
+summary: デプロイの種類に応じたDockerまたはPodmanコマンドを使用して、ConsoleエージェントホストからNetApp Backup and Recoveryを再起動します。 
 ---
 = NetApp Backup and Recoveryを再起動します
 :hardbreaks:

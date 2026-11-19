@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-migrate-resync.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, migrate volumes, SnapMirror to Cloud Resync, ONTAP, NetApp, NetApp ONTAP, NetApp Cloud Volumes ONTAP, FlexVols, FlexGroups 
-summary: NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 NetApp環境でのボリューム移行中のデータ保護と継続性を効率化します。 
+summary: NetApp Backup and Recovery で ONTAP ボリュームを移行した後、再ベースラインなしでクラウド バックアップを利用可能な状態に保つには、SnapMirror to Cloud Resync を使用します。 
 ---
 = NetApp Backup and RecoveryでSnapMirrorを使用してボリュームを Cloud Resync に移行する
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: NetApp Backup and RecoveryのSnapMirror to Cloud Resync 機能は、 Ne
 [role="lead"]
 SnapMirror to Cloud Resync を NetApp Backup and Recovery で使用すると、SnapMirror 論理レプリケーション（LRSE）でボリュームを移行した後も、既存のクラウドバックアップを引き続き利用できます。この機能により、再ベースラインなしでバックアップを継続でき、ONTAP 9.16.1 以降で利用可能です。
 
-SnapMirror to Cloud Resync は、FlexVol および FlexGroup の移行をサポートし、ハイブリッドおよびマルチクラウド環境全体でバックアップの継続性を維持するのに役立ちます。
+SnapMirror to Cloud Resyncは、FlexVolおよびFlexGroupの移行をサポートし、ハイブリッド環境およびマルチクラウド環境全体でバックアップの継続性を維持するのに役立ちます。
 
 
 NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、link:br-start-switch-ui.html["さまざまなNetApp Backup and Recoveryワークロードに切り替える"] 。
@@ -46,7 +46,7 @@ NOTE: SVM-Migrate、SVM-DR、またはヘッドスワップ方式を使用した
 
 オンプレミスのボリューム Vol1a があるとします。このボリュームには、S1、S2、S3 の 3 つの Snapshot があります。これらの Snapshot はリストア ポイントです。Vol1a は SnapMirror to Cloud （SM-C） を使用してクラウドにバックアップされていますが、オブジェクト ストアには S1 と S2 のみが格納されています。
 
-ここで、Vol1 を別のONTAPクラスタに移行します。これを行うには、Vol1b という新しいクラウド ボリュームへのSnapMirror論理レプリケーション (LRSE) 関係を作成します。これにより、3 つのスナップショット (S1、S2、S3) すべてが Vol1a から Vol1b に転送されます。
+ここで、Vol1aを別のONTAPクラスタに移行するとします。これを行うには、Vol1bという新しいクラウド ボリュームへのSnapMirror論理レプリケーション（LRSE）関係を作成します。これにより、S1、S2、S3の3つのスナップショットすべてがVol1aからVol1bに転送されます。
 
 移行が完了すると、次の設定になります。
 
@@ -123,7 +123,7 @@ NOTE: 古い ONTAP クラスタから新しい ONTAP クラスタへのボリュ
 . コンソールの *システム* ページで、新しいONTAPクラスタをシステムとして追加します。
 +
 
-NOTE: ボリューム ID ではなく、ボリューム インスタンス UUID を使用する必要があります。ボリューム インスタンス UUID は移行全体で一貫性が保たれる一意の識別子ですが、ボリューム ID は移行後に変更される可能性があります。
+NOTE: ボリュームIDではなく、ボリュームインスタンスのUUIDを使用してください。ボリュームインスタンスのUUIDは、移行後も一貫性を保つ一意の識別子ですが、ボリュームIDは移行後に変更される可能性があります。
 
 
 
@@ -135,7 +135,7 @@ NOTE: ボリューム ID ではなく、ボリューム インスタンス UUID 
 移行後、 NetApp Tech Refresh チームはSnapMirror to Cloud Resync 操作を実行し、新しく移行されたボリュームからクラウド バックアップを再開します。
 
 . コンソールの *システム* ページで、新しいONTAPクラスタをシステムとして追加します。
-. NetApp Backup and Recoveryボリューム ページを参照して、古いソース システムの詳細が利用可能であることを確認します。
+. NetApp Backup and Recovery Volumesページで、古いソースシステムの詳細が利用可能であることを確認してください。
 . NetApp Backup and Recoveryボリューム ページから、*バックアップ設定* を選択します。
 +
 ** バックアップ設定ページで、[すべて表示] を選択します。
@@ -158,7 +158,7 @@ NOTE: ボリューム ID ではなく、ボリューム インスタンス UUID 
 . *ボリューム マッピングの詳細のアップロード* の下の *アップロード* を選択して、完了した CSV シートをNetApp Backup and Recovery UI にアップロードします。
 +
 
-NOTE: ボリューム ID ではなく、ボリューム インスタンス UUID を使用する必要があります。ボリューム インスタンス UUID は移行全体で一貫性が保たれる一意の識別子ですが、ボリューム ID は移行後に変更される可能性があります。
+NOTE: ボリュームIDではなく、ボリュームインスタンスのUUIDを使用してください。ボリュームインスタンスのUUIDは、移行後も一貫性を保つ一意の識別子ですが、ボリュームIDは移行後に変更される可能性があります。
 
 . 再同期操作に必要なプロバイダーとネットワーク構成情報を入力します。
 . 検証プロセスを開始するには、[*送信*] を選択します。

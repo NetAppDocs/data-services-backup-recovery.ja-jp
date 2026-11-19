@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-oracle.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
-summary: NetApp Backup and Recovery は、ワークロードを保護する前に、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and RecoveryでOracle Databaseホストとワークロードを検出し、Oracleインベントリを表示して、バックアップとスナップショットによるデータベース保護の準備を行います。 
 ---
 = NetApp Backup and RecoveryでOracle Databaseワークロードを検出
 :hardbreaks:
@@ -35,7 +35,7 @@ IMPORTANT: 変更を加える前に、既存のカスタマイズ設定を上書
 
 
 .手順
-. 既存の CoreDNS 設定を確認して、既存の変更を上書きしていないことを確認してください：
+. 既存のCoreDNS設定を確認し、既存の変更を上書きしていないことを確認してください：
 +
 [source, shell]
 ----

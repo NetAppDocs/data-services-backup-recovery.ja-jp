@@ -4,7 +4,7 @@ permalink: br-use-oracle-protection-groups.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle, database, workloads, volumes, snapshots 
 summary: NetApp Backup and RecoveryでOracle Databaseワークロードの保護グループを作成および管理します。 
 ---
-= NetApp Backup and Recoveryを使用したOracle Databaseワークロードの保護グループの作成と管理
+= NetApp Backup and RecoveryでOracle Database保護グループを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

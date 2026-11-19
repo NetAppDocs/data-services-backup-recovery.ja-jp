@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: Consoleエージェント、ONTAPクラスタ、およびバケットの権限の準備を含め、NetApp Backup and Recoveryを使用してオンプレミスのONTAPボリュームデータをGoogle Cloud Storageにバックアップします。 
 ---
-= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをGoogle Cloudにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recoveryでは、オンプレミスのONTAPシステムからセカンダリ システムおよびGoogle Cloud Storageにボリューム データをバックアップできます。このページを使用して環境を準備し、バックアップを有効にします。
+NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムからGoogle Cloud Storageおよびセカンダリストレージシステムにボリュームデータをバックアップします。環境を準備してから、バックアップを有効にします。
 
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
@@ -33,7 +33,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 * *プライベート接続* - VPN または Google Cloud Interconnect を使用して、プライベート IP アドレスを使用するプライベート Google アクセス インターフェース経由でトラフィックをルーティングします。
 
 
-オプションとして、パブリック接続またはプライベート接続を使用して、複製されたボリュームのセカンダリONTAPシステムに接続することもできます。
+パブリック接続またはプライベート接続を使用して、レプリケートされたボリュームのセカンダリ ONTAP システムに接続することもできます。
 
 次の図は、*パブリック接続*方式と、コンポーネント間で準備する必要がある接続を示しています。コンソール エージェントは、Google Cloud Platform VPC にデプロイする必要があります。
 
@@ -57,7 +57,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["NetApp Backup and Recovery �
 
 Google Cloud Platform VPC にコンソール エージェントがすでにデプロイされている場合は、準備は完了です。
 
-そうでない場合は、その場所にコンソール エージェントを作成して、 ONTAPデータを Google Cloud Storage にバックアップする必要があります。別のクラウド プロバイダーまたはオンプレミスにデプロイされたコンソール エージェントは使用できません。
+お持ちでない場合は、その場所にConsoleエージェントを作成して、ONTAPデータをGoogle Cloud Storageにバックアップしてください。別のクラウド プロバイダやオンプレミスに導入されているConsoleエージェントは使用できません。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["GCP にコンソール エージェントをインストールする"^]
@@ -92,7 +92,7 @@ NetApp Backup and Recovery の「検索と復元」機能を使用するには�
 
 .手順
 . の中で https://console.cloud.google.com["Google Cloud コンソール"^]、*役割*ページに移動します。
-. ページ上部のドロップダウン リストを使用して、編集するロールを含むプロジェクトまたは組織を選択します。
+. ページ上部のドロップダウンリストから、編集するロールが含まれているプロジェクトまたは組織を選択します。
 . カスタム ロールを選択します。
 . ロールの権限を更新するには、「*ロールの編集*」を選択します。
 . 次の新しい権限をロールに追加するには、「権限の追加」を選択します。
@@ -192,19 +192,19 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 * ONTAPクラスタは、バックアップおよび復元操作のために、クラスタ間 LIF から Google Cloud Storage へのポート 443 経由の HTTPS 接続を開始します。
 +
-ONTAP はオブジェクト ストレージとの間でデータの読み取りと書き込みを行います。オブジェクト ストレージは開始することはなく、応答するだけです。
+ONTAPはオブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージは接続を開始しません。応答するだけです。
 
 * ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。コンソール エージェントは、Google Cloud Platform VPC に配置できます。
 * バックアップするボリュームをホストする各ONTAPノードには、クラスタ間 LIF が必要です。  LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
 +
 NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
 
-* ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます。
+* ノードのクラスタ間LIFはオブジェクトストアにアクセスできます。
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
 +
 プライベートGoogleアクセスまたはプライベートサービス接続を使用している場合は、DNSサーバーが次のように設定されていることを確認してください。 `storage.googleapis.com`正しい内部 (プライベート) IP アドレスに設定します。
 
-* デフォルトとは異なるIPspaceを使用している場合は、オブジェクトストレージにアクセスするために静的ルートを作成する必要がある場合があることに注意してください。
+* Default以外のIPspaceを使用する場合は、オブジェクトストレージにアクセスするための静的ルートを作成する必要がある場合があります。
 * 必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。
 
 
@@ -222,7 +222,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -329,8 +329,8 @@ cloudkms.keyRings.setIamPolicy
 *CMEKの考慮事項:*
 
 * HSM (ハードウェア バックアップ) キーとソフトウェア生成キーの両方がサポートされています。
-* 新しく作成された Cloud KMS キーとインポートされた Cloud KMS キーの両方がサポートされます。
-* 地域キーのみがサポートされ、グローバル キーはサポートされません。
+* 新規作成されたCloud KMSキーとインポートされたCloud KMSキーの両方がサポートされています。
+* リージョンキーのみがサポートされています。グローバルキーはサポートされていません。
 * 現在、「対称暗号化/復号化」目的のみがサポートされています。
 * ストレージ アカウントに関連付けられたサービス エージェントには、NetApp Backup and Recoveryによって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
 

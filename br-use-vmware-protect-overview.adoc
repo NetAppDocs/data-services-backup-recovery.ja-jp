@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-protect-overview.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: バックアップを作成してサポート対象のターゲットに保存し、オンプレミスのVMwareホストにリストアすることで、NetApp Backup and Recoveryを使用してVMware VMとデータストアを保護します。 
 ---
 = VMwareワークロードをNetApp Backup and Recoveryで保護する
 :hardbreaks:
@@ -22,11 +22,11 @@ NOTE: このバージョンのNetApp Backup and Recovery はVMware vCenter の�
 NetApp Backup and Recovery を使用して、ソースデータの3つのコピーを2つの異なるストレージシステムに、1つのコピーをクラウドに保存する3-2-1戦略を実装します。3-2-1方式の利点は以下のとおりです。
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* 異なる種類のメディアを使用することで、ある種類のメディアが故障した場合でも復旧が可能になります。
 * オンサイトコピーから迅速に復元でき、オンサイトコピーが破損した場合はオフサイトコピーを使用できます。
 
 
-NetApp Backup and Recoveryを使用すると、VMware ワークロードに関連する次のタスクを実行できます。
+VMwareワークロードに対して以下のタスクを実行するには、NetApp Backup and Recoveryを使用します：
 
 * link:br-use-vmware-discovery.html["VMware ワークロードを発見"]
 * link:br-use-vmware-protection-groups.html["VMware ワークロードの保護グループの作成と管理"]

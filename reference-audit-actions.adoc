@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-audit-actions.html 
 keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
-summary: NetApp Console監査でサポートされるバックアップおよびリカバリ処理のリファレンス。 
+summary: リストア、バックアップ、レプリケーション、Cyber Vault、クレデンシャル管理など、NetApp Consoleが監査用に記録するNetApp Backup and Recoveryのアクションを確認します。 
 ---
 = 監査済み NetApp Backup and Recovery アクション
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Console監査でサポートされるバックアップおよび
 
 
 [role="lead"]
-この参照を使用して、NetApp Backup and Recovery のアクションのうち、NetApp Console が監査ページに記録するものを確認してください。監査イベントの表示とフィルタリングの詳細については、NetApp Console のドキュメントの https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]を参照してください。
+監査ページでNetApp Consoleが記録するNetApp Backup and Recoveryのアクションを確認します。監査イベントの表示とフィルタリングの詳細については、NetApp Consoleドキュメントの https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["監査ページからユーザーアクティビティを監査する"^]を参照してください。
 
 監査対象となる各アクションについて、NetApp Console はサービス名、エージェント、リソース、ユーザー、およびアクションのステータスを記録します。
 

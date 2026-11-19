@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-reference-limitations.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, SAP HANA database 
-summary: 既知の制限事項では、このリリースの製品ではサポートされていない機能、またはこのリリースの製品と正しく相互運用されない機能が特定されます。これらの制限事項をよく確認してください。 
+summary: ONTAPボリュームを使用するNetApp Backup and Recoveryの既知の制限事項を確認してください。 
 ---
 = ONTAPボリュームのNetApp Backup and Recoveryの既知の制限
 :hardbreaks:
@@ -95,7 +95,7 @@ FlexVolボリュームにはそのような制限はありません。システ�
 [[restore-limitations-for-ontap-volumes]]
 == ONTAPボリュームのリストア制限
 
-これらの制限は、特に明記されていない限り、ファイルとフォルダーを復元する検索と復元、および参照と復元の両方の方法に適用されます。
+特に明記されていない限り、これらの制限事項は、ファイルとフォルダーを復元する「検索と復元」および「参照と復元」の両方の方法に適用されます。
 
 * ローカルスナップショットからのフォルダの復元はサポートされていません。
 * ディザスタリカバリ（DR）構成でのファイルとフォルダのリストア：フェイルオーバー後、DR用に構成されたStorage VMのボリュームは、既存のSnapMirror関係を解除された状態で保持します。一時的なSnapMirror RST関係を作成するファイルまたはフォルダのリストアは、デスティネーションボリュームにすでに関係が存在するため、ONTAPによってブロックされます。

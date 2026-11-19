@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-configure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを構成するには、いくつかの手順を実行します。 
+summary: ホストの認証情報を追加し、VMware vCenter の設定を維持し、SnapCenter リソースをインポートし、KVM管理プラットフォームを追加し、NetApp Backup and Recoveryでテンプレートを作成します。 
 ---
 = NetApp Backup and Recovery設定を構成する
 :hardbreaks:
@@ -55,7 +55,7 @@ summary: NetApp Backup and Recoveryを構成するには、いくつかの手順
 ** *認証モード*: *Windows*、*Microsoft SQL*、*Oracle Database*、または *Linux* を選択します。
 +
 
-TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQL Server の両方の認証情報を入力する必要があり、2セットの認証情報が必要です。
+TIP: Microsoft SQL Serverワークロードの場合、2組の資格情報を入力する必要があります：1組はWindows用、もう1組はMicrosoft SQL Server用です。
 
 +
 [role="tabbed-block"]
@@ -182,7 +182,7 @@ TIP: Microsoft SQL Server ワークロードの場合、Windows と Microsoft SQ
 この最初のステップでは、 SnapCenterからホスト リソースをインポートし、それらのリソースをNetApp Backup and Recoveryインベントリ ページに表示されます。その時点では、リソースはまだNetApp Backup and Recoveryによって管理されていません。
 
 
-TIP: SnapCenterホスト リソースをインポートした後、 NetApp Backup and Recovery は保護管理を引き継ぎません。そのためには、 NetApp Backup and Recoveryでこれらのリソースを管理することを明示的に選択する必要があります。
+TIP: SnapCenterホストリソースをインポートしても、NetApp Backup and Recoveryが保護管理を引き継ぐことはありません。管理を移行するには、NetApp Backup and Recoveryで管理するこれらのリソースを明示的に選択します。
 
 .手順
 . NetApp Backup and Recoveryメニューから、[設定] を選択します。
@@ -217,10 +217,10 @@ NOTE: SnapCenter Server がすでに登録されている場合は、既存の�
 [[manage-snapcenter-host-resources]]
 === SnapCenterホストリソースの管理
 
-SnapCenterリソースをインポートした後、 NetApp Backup and Recoveryでそれらのホスト リソースを管理します。インポートしたリソースを管理することを選択すると、 NetApp Backup and Recovery はSnapCenterからインポートしたリソースをバックアップおよびリカバリできるようになります。  SnapCenter Server でこれらのリソースを管理する必要がなくなります。
+SnapCenterリソースをインポートしたあと、NetApp Backup and Recoveryでそれらのホストリソースを管理します。インポートしたリソースを管理すると、NetApp Backup and Recoveryでそれらをバックアップおよびリカバリできるようになります。SnapCenter Serverでこれらのリソースを管理する必要はなくなります。
 
 .手順
-. SnapCenterリソースをインポートした後、表示される [インベントリ] ページで、今後NetApp Backup and Recoveryで管理するインポートしたSnapCenterリソースを選択します。
+. 対象の SnapCenter リソースをインポートした後、インベントリページで、インポート済みの SnapCenter リソースのうち、NetApp Backup and Recovery で管理するものを選択します。
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理* をクリックしてリソースを管理します。
 . * NetApp Consoleで管理*を選択します。
 +
@@ -307,7 +307,7 @@ NOTE: ここで作成するテンプレートは、Kubernetes ワークロード
 . *実行フック テンプレート* セクションを展開します。
 . *実行フックテンプレートの作成*を選択します。
 . 実行フックの名前を入力します。
-. 必要に応じて、フックの種類を選択します。たとえば、復元後フックは復元操作が完了した後に実行されます。
+. 必要に応じて、フックの種類を選択してください。例えば、復元後フックは復元操作が完了した後に実行されます。
 . *スクリプト* テキスト ボックスに、実行フック テンプレートの一部として実行する実行可能シェル スクリプトを入力します。必要に応じて、*スクリプトのアップロード*を選択して、代わりにスクリプト ファイルをアップロードすることもできます。
 . *作成*を選択します。
 +

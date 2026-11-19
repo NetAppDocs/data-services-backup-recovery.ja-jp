@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-start-prereq-snapcenter-import.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
-summary: 運用環境、コンソール エージェント、コンソール アカウントの準備状況を確認して、NetApp Backup and Recoveryを開始します。  NetApp Backup and Recoveryを使用するには、次の前提条件が必要です。 
+summary: システムの追加、ホスト要件の確認、UACリモート制限の無効化を行って、SnapCenter Microsoft SQL ServerリソースをNetApp Backup and Recoveryにインポートする準備をします。 
 ---
 = SnapCenter の NetApp Backup and Recovery へのインポートの前提条件
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: 運用環境、コンソール エージェント、コンソール ア
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft SQL Server から NetApp Backup and Recovery にリソースをインポートする前に、環境がこれらの追加要件を満たしていることを確認してください。
+システムをConsoleに追加し、ホストの要件を確認し、ユーザーアカウント制御のリモート制限を無効にして、SnapCenter Plug-in for Microsoft SQL ServerからNetApp Backup and Recoveryにリソースをインポートする準備を行います。
 
 
 
 [[create-systems-in-netapp-console-first]]
 == まずNetApp Consoleでシステムを作成する
 
-SnapCenterからリソースをインポートする場合は、 SnapCenterからインポートする前に、オンプレミスのすべてのSnapCenterクラスター ストレージをコンソールの [システム] ページに追加する必要があります。これにより、ホスト リソースが正しく検出され、インポートされるようになります。
+SnapCenterからリソースをインポートする前に、すべてのオンプレミスSnapCenterクラスタストレージをConsoleの*システム*ページに追加して、Consoleがホストリソースを正しく検出およびインポートできるようにしてください。
 
 
 
@@ -132,7 +132,7 @@ CAUTION: 昇格された権限で PowerShell コマンドを実行すると、�
 .. そのオプションを右クリックし、[管理者として実行] を選択します。
 
 
-. PowerShell がシステムにインストールされていることを確認してください。インストール後、*スタート* メニューに表示されます。
+. システムにPowerShellがインストールされていることを確認してください。インストール後、*スタート*メニューに表示されるはずです。
 +
 
 TIP: PowerShell は、Windows 7 以降のバージョンにデフォルトで含まれています。

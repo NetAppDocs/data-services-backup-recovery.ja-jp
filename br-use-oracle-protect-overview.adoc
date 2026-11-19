@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: オンプレミスのONTAPシステムから Amazon Web Services、Microsoft Azure、Google Cloud Platform、 StorageGRIDに至るまで、Oracle 仮想マシンを保護して、データを確実に保護できます。 
+summary: AWS S3、StorageGRID、Azure Blob、またはONTAP S3へのデータベース整合性バックアップでOracle Databaseのワークロードとログを保護し、オンプレミスのOracleホストにリストアします。 
 ---
 = Oracle DatabaseワークロードをNetApp Backup and Recoveryで保護する
 :hardbreaks:
@@ -16,10 +16,10 @@ summary: オンプレミスのONTAPシステムから Amazon Web Services、Micr
 [role="lead"]
 NetApp Backup and Recovery を使用して、高速でスペース効率に優れた、「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態、およびデータベースと整合性のあるバックアップとリストアにより、Oracle Database のワークロードとログを保護します。ワークロードを AWS S3、StorageGRID、Azure Blob、または ONTAP S3 にバックアップし、オンプレミスの Oracle ホストにバックアップをリストアできます。
 
-NetApp Backup and Recoveryを使用して 3-2-1 保護戦略を実装します。この戦略では、ソース データのコピーを 2 つの異なるストレージ システムに 3 つ、クラウドに 1 つ保存します。3-2-1 アプローチの利点は次のとおりです。
+NetApp Backup and Recoveryを使用して3-2-1保護戦略を実装します。この戦略では、ソースデータの3つのコピーを2つの異なるストレージシステムに保存し、さらに1つのコピーをクラウドに保存します。3-2-1方式の利点は次のとおりです：
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 異なるタイプのメディアを使用すると、1 つのタイプに障害が発生した場合でも回復しやすくなります。
+* 異なる種類のメディアを使用することで、ある種類のメディアが故障した場合でも復旧が可能になります。
 * オンサイト コピーから迅速に復元し、オンサイト コピーが侵害された場合はオフサイト コピーを使用できます。
 
 

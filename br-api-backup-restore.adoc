@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-api-backup-restore.html 
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
-summary: Web UI を通じて利用できるNetApp Backup and Recovery機能は、RESTful API を通じても利用できます。 
+summary: NetApp Backup and Recovery REST APIを使用して、バックアップとリストアのタスクを自動化し、必要なトークンとIDを取得して、ジョブを監視します。 
 ---
 = NetApp Backup and RecoveryをREST APIで自動化する
 :hardbreaks:
@@ -117,10 +117,10 @@ Header:
 [[example-using-the-apis]]
 == APIの使用例
 
-次の例は、新しいポリシーが適用されたシステムでNetApp Backup and Recoveryをアクティブ化するAPI呼び出しを示しています。このポリシーには日次、時間次、週次のラベルがあり、East US 2 Azureリージョンでは180日後にアーカイブされます。この要求はシステム上のバックアップを有効にしますが、ボリュームのバックアップは行いません。
+このAPI呼び出しの例では、新しいポリシーを持つシステムでNetApp Backup and Recoveryをアクティブ化します。このポリシーには、日次、時間次、週次のラベルがあり、米国東部2 Azureリージョンで180日後にアーカイブされます。この要求はシステムでのバックアップを有効にしますが、ボリュームのバックアップは行いません。
 
 .API 要求
-NetApp ConsoleのアカウントIDを使用していることがわかります `account-DpTFcxN3`、コンソールエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`このコマンドでは。
+この例では、NetApp ConsoleアカウントID `account-DpTFcxN3`、ConsoleエージェントID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients`、およびユーザートークン `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`を使用します。
 
 [source, shell]
 ----

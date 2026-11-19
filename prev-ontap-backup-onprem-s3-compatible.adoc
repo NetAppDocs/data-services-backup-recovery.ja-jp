@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-s3-compatible.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, S3, compatible, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: サポートされている構成を確認し、NetApp Backup and Recoveryを使用してオンプレミスのONTAPシステムからS3互換オブジェクトストレージにボリュームデータをバックアップします。 
 ---
-= NetApp Backup and Recoveryを使用して、オンプレミスのONTAPデータをS3互換ストレージにバックアップします
+= NetApp Backup and Recoveryを使用してONTAPデータをS3互換ストレージにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-このページを使用して、構成がサポートされていることを確認し、プライマリ オンプレミス ONTAP システムから NetApp Backup and Recovery の S3 互換オブジェクトストレージへのバックアップを構成します。
+構成がサポートされていることを確認してから、NetApp Backup and RecoveryでプライマリのオンプレミスONTAPシステムからS3互換オブジェクトストレージへのバックアップを構成します。
 
 
 
 [[verify-support-for-your-configuration]]
 == 構成のサポートを確認する
 
-S3互換ストレージへのボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認するために、以下の要件をお読みください。
+S3互換ストレージへのボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認してください。
 
 サポートされるONTAPバージョン:: ONTAP バージョン 9.17.1 以降が必要です。
 
@@ -92,7 +92,7 @@ S3互換ストレージにデータをバックアップする場合、コンソ
 [[prepare-console-agent-networking-requirements]]
 === コンソールエージェントのネットワーク要件を準備する
 
-コンソール エージェントがインストールされているネットワークで次の接続が有効になっていることを確認します。
+Consoleエージェントがインストールされているネットワークで、以下の接続が有効になっていることを確認します：
 
 * S3互換サーバーへのポート443経由のHTTPS接続
 * ソースONTAPクラスタ管理 LIF へのポート 443 経由の HTTPS 接続
@@ -170,7 +170,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 [[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === オブジェクトストレージにデータをバックアップするためのONTAPネットワーク要件を確認する
 
-オブジェクト ストレージに接続するシステムでは、次の要件が満たされていることを確認する必要があります。
+オブジェクトストレージに接続するシステムが、以下の要件を満たしていることを確認してください。
 
 [NOTE]
 ====
@@ -266,7 +266,7 @@ FlexVolまたはFlexGroupボリュームを保護することを選択できま�
 
 ====
 .手順
-選択したボリュームに既にスナップショットまたはレプリケーションのポリシーが適用されている場合、後で選択したポリシーによって既存のポリシーが上書きされます。
+選択したボリュームに既にスナップショットまたはレプリケーションのポリシーが適用されている場合、後から選択したポリシーはこれらの既存のポリシーを上書きします。
 
 . 「ボリュームの選択」ページで、保護するボリュームを選択します。
 +
@@ -384,7 +384,7 @@ TIP: バックアップとリカバリを使用してカスタムポリシーを
 [[review-your-selections]]
 === 選択内容を確認する
 
-ここで選択内容を確認し、必要に応じて調整を行うことができます。
+選択内容を確認し、必要に応じて調整してください。
 
 .手順
 . 「レビュー」ページで選択内容を確認します。

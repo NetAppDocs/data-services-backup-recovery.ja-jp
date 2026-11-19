@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-backup-to-cloud.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべてのONTAPワークロードに対して効率的で安全かつコスト効率に優れたデータ保護を提供するデータ サービスです。 
+summary: NetApp Backup and Recoveryで、ボリューム、データベース、仮想マシン、KubernetesアプリケーションなどのONTAPワークロードを保護する方法や、サポートされるターゲット、ライセンス、コストについて説明します。 
 ---
 = NetApp Backup and Recoveryについて学ぶ
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery は、ボリューム、データベース�
 
 
 [role="lead"]
-この概要では、NetApp Backup and Recovery が ONTAP ワークロードをどのように保護するか、サポートするワークロードとバックアップ対象、およびライセンスとコストの仕組みについて説明します。
+NetApp Backup and Recoveryは、ローカルスナップショット、レプリケーション、およびオブジェクトストレージバックアップを使用して、ONTAPワークロードを保護します。サポートされているワークロードとバックアップターゲット、およびライセンスとコストの仕組みについてご確認ください。
 
 ワークロードとは、システム内のリソースを論理的にグループ化したものであり、保護、ガバナンス、検出、および復旧のために単一の単位として管理されます。Backup and Recoveryにおいて、ワークロードとは保護対象となる単位のことです。その意味はデータソースによって異なります：Kubernetesの場合、ワークロードはアプリケーションであり、VM環境の場合は仮想マシンであり、データベース環境の場合はデータベースです。
 
@@ -74,7 +74,7 @@ NetApp Backup and Recoveryを使用して、次の目標を達成します。
 ** データベースとログのバックアップと復元
 ** 保護グループを使用してバックアップタスクを管理する
 ** データベースとログのバックアップを管理するためのポリシーを作成する
-** 3-2-1バックアップアーキテクチャによるデータベースの保護
+** 3-2-1バックアップアーキテクチャでデータベースを保護する
 ** バックアップ保持を構成する
 ** ARCHIVELOGバックアップのマウントとアンマウント
 ** link:br-use-oracle-protect-overview.html["Oracle Databaseのワークロードを保護する"]を参照してください。
@@ -217,7 +217,7 @@ NetApp Backup and Recovery は、次の種類のワークロードを保護し�
 
 NetApp Backup and Recoveryを有効にすると、サービスによってデータの完全バックアップが実行されます。最初のバックアップ後の追加のバックアップはすべて増分バックアップになります。これにより、ネットワーク トラフィックが最小限に抑えられます。
 
-次の図は、コンポーネント間の関係を示しています。
+この画像は、各構成要素間の関係性を示しています。
 
 image:diagram-br-321-aff-a.png["NetApp Backup and Recoveryが3-2-1保護戦略を使用する様子を示す図"]
 
@@ -229,7 +229,7 @@ NOTE: セカンダリ ストレージからオブジェクト ストレージだ
 [[where-backups-reside-in-object-store-locations]]
 === オブジェクトストア内のバックアップの保存場所
 
-バックアップ コピーは、 NetApp Consoleがクラウド アカウントに作成するオブジェクト ストアに保存されます。クラスターまたはシステムごとに 1 つのオブジェクト ストアがあり、コンソールではオブジェクト ストアに次のように名前が付けられます。 `netapp-backup-clusteruuid` 。このオブジェクト ストアを削除しないように注意してください。
+バックアップコピーは、NetApp Consoleがお客様のクラウドアカウントに作成するオブジェクトストアに保存されます。クラスタまたはシステムごとにオブジェクトストアが1つあり、Consoleはオブジェクトストアに次のように名前を付けます： `netapp-backup-clusteruuid`。このオブジェクトストアを削除しないでください。
 
 * AWSでは、 NetApp Consoleにより、 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 ブロックパブリックアクセス機能"^] S3 バケット上。
 * Azureでは、NetApp Consoleは、Blobコンテナ用のストレージアカウントを持つ新規または既存のリソースグループを使用します。Consoleは https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOBデータへのパブリックアクセスをブロックします"]デフォルトで使用されます。

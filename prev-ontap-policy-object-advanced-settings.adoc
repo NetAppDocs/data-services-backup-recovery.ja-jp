@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-advanced-settings.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: 帯域幅、履歴スナップショットのエクスポート、年次スナップショットの削除、ランサムウェア スキャンなど、NetApp Backup and Recoveryでのクラスタレベルのオブジェクトへのバックアップ設定を変更します。 
 ---
 = NetApp Backup and Recoveryでオブジェクトへのバックアップの詳細設定を管理する
 :hardbreaks:
@@ -131,8 +131,8 @@ TIP: ランサムウェアスキャンを有効にすると、クラウドプロ
 . 表示されたページで、*ランサムウェア スキャン* セクションを展開します。
 . *ランサムウェアスキャン*を有効または無効にします。
 . *スケジュールされたランサムウェアスキャン*を選択します。
-. 必要に応じて、毎週のデフォルトスキャンを日ごとまたは週ごとに変更します。
-. スキャンを実行する頻度を日数または週数で設定します。
+. 必要に応じて、デフォルトの週単位のスキャンを日単位または週単位に変更できます。
+. スキャンを実行する頻度を、日数または週数で設定してください。
 . *適用*を選択します。
 
 
@@ -150,8 +150,8 @@ TIP: ランサムウェアスキャンを有効にすると、クラウドプロ
 . *ランサムウェアスキャン*セクションを展開します。
 . *ランサムウェアスキャン*を有効または無効にします。
 . *スケジュールされたランサムウェアスキャン*を選択します。
-. 必要に応じて、毎週のデフォルトスキャンを日ごとまたは週ごとに変更します。
-. スキャンを実行する頻度を日数または週数で設定します。
+. 必要に応じて、デフォルトの週単位のスキャンを日単位または週単位に変更できます。
+. スキャンを実行する頻度を、日数または週数で設定してください。
 . *適用*を選択します。
 
 

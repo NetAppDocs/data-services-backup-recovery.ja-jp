@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-storagegrid.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryでいくつかの手順を完了して、オンプレミスのプライマリONTAPシステムからセカンダリ ストレージ システムおよびNetApp StorageGRIDシステムのオブジェクト ストレージへのボリューム データのバックアップを開始します。 
+summary: 環境を準備してバックアップを有効にすることで、オンプレミスのONTAPシステムからセカンダリ ストレージ システムおよびStorageGRIDオブジェクト ストレージにボリューム データをバックアップします。 
 ---
 = NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをStorageGRIDにバックアップします。
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryでいくつかの手順を完了して、オ
 
 
 [role="lead"]
-NetApp Backup and Recoveryでは、プライマリのオンプレミスONTAPシステムからセカンダリ システムおよびStorageGRIDオブジェクト ストレージにボリューム データをバックアップできます。このページを使用して環境を準備し、バックアップを有効にします。
+NetApp Backup and Recoveryを使用して、プライマリのオンプレミスONTAPシステムからセカンダリ ストレージ システムおよびStorageGRIDオブジェクトストレージにボリュームデータをバックアップします。環境を準備してから、バックアップを有効にしてボリュームを保護します。
 
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
@@ -151,12 +151,12 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 * ONTAPクラスタは、バックアップおよびリストア操作のために、クラスタ間 LIF からStorageGRIDゲートウェイ ノードへのユーザ指定ポートを介して HTTPS 接続を開始します。ポートはバックアップのセットアップ中に構成可能です。
 +
-ONTAP はオブジェクト ストレージとの間でデータの読み取りと書き込みを行います。オブジェクト ストレージは開始することはなく、応答するだけです。
+ONTAPはオブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージは接続を開始しません。応答するだけです。
 
 * ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。コンソール エージェントは社内に常駐する必要があります。
 * バックアップするボリュームをホストする各ONTAPノードには、クラスタ間 LIF が必要です。  LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
 +
-NetApp Backup and Recoveryをセットアップするときに、使用する IPspace の入力を求められます。各 LIF が関連付けられている IPspace を選択する必要があります。これは、「デフォルト」の IPspace の場合もあれば、作成したカスタム IPspace の場合もあります。
+NetApp Backup and Recoveryをセットアップする際、使用するIPspaceの入力を求められます。各LIFが関連付けられているIPspaceを選択してください。これは、「Default」IPspace、または作成したカスタムIPspaceのいずれかになります。
 
 * ノードのクラスタ間 LIF はオブジェクト ストアにアクセスできます (コンソール エージェントが「ダーク」サイトにインストールされている場合は必要ありません)。
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが構成されています。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
@@ -178,7 +178,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -235,7 +235,7 @@ StorageGRIDへのバックアップを設定すると、バックアップ ウ�
 [[prepare-to-archive-older-backup-files-to-public-cloud-storage]]
 === 古いバックアップファイルをパブリッククラウドストレージにアーカイブする準備をする
 
-古いバックアップ ファイルをアーカイブ ストレージに階層化することで、必要のないバックアップに安価なストレージ クラスを使用することになり、コストを節約できます。 StorageGRID は、アーカイブ ストレージを提供しないオンプレミス (プライベート クラウド) ソリューションですが、古いバックアップ ファイルをパブリック クラウド アーカイブ ストレージに移動できます。この方法で使用すると、クラウド ストレージに階層化されたデータ、またはクラウド ストレージから復元されたデータは、 StorageGRIDとクラウド ストレージの間で転送されます。このデータ転送にはコンソールは関与しません。
+古いバックアップファイルをアーカイブストレージに階層化することで、必要のないバックアップにはより安価なストレージクラスを使用できるため、コストを削減できます。StorageGRIDはアーカイブストレージを提供しないオンプレミス（プライベートクラウド）ソリューションですが、古いバックアップファイルをパブリッククラウドのアーカイブストレージに移動することは可能です。この設定では、クラウドストレージに階層化したり、クラウドストレージからリストアしたりするデータは、StorageGRIDとクラウドストレージの間を移動します。Consoleはこのデータ転送には関与しません。
 
 現在のサポートでは、AWS _S3 Glacier_/_S3 Glacier Deep Archive_ または _Azure Archive_ ストレージにバックアップをアーカイブできます。
 

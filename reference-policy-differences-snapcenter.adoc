@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-policy-differences-snapcenter.html 
 keywords: backup policy, backup policies, snapcenter, migration 
-summary: NetApp Backup and Recoveryで使用されるポリシーとSnapCenterで使用されるポリシーにはいくつかの違いがあります。 
+summary: インポートされたリソースとポリシーがどのように変更されるかを理解するために、SnapCenterとNetApp Backup and Recoveryのポリシーのスケジュール階層、保持期間、およびラベルを比較します。 
 ---
 = SnapCenterとNetApp Backup and Recoveryのポリシーの違い
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recoveryで使用されるポリシーとSnapCenter�
 
 
 [role="lead"]
-この資料を参照して、インポートされたリソースやポリシーに影響する可能性がある SnapCenter と NetApp Backup and Recovery のポリシーの違いを理解してください。
+SnapCenterとNetApp Backup and Recoveryでは、ポリシーのスケジュール、保持期間、ラベルの処理方法が異なるため、インポートされたリソースやポリシーに影響を与える可能性があります。
 
 
 
@@ -69,9 +69,9 @@ NetApp Backup and Recovery は、SnapCenter スケジュールを次のように
 
 繰り返し間隔が 1 時間を超えるSnapCenter の時間別ポリシーは、NetApp Backup and Recoveryの日次ポリシーに変換されます。
 
-繰り返し間隔が 24 の倍数ではない (たとえば 5、7 など) 時間単位のポリシーでは、1 日にいくつかのスナップショットがスキップされます。
+繰り返し間隔が24の約数でない（例えば5や7など）時間単位のポリシーでは、1日のうち一部のスナップショットがスキップされます。
 
-*Example*：1：00 AMから5時間ごとの繰り返し間隔を持つSnapCenterの毎時ポリシーがある場合、NetApp Backup and Recovery（移行後）は、1：00 AM、6：00 AM、11：00 AM、4：00 PM、および9：00 PMの5時間間隔で毎日スケジュールを設定します。一部の時間はスキップされます。9：00 PMの後は、5時間ごとに繰り返すために2：00 AMになるはずですが、常に1：00 AMになります。
+*例*：午前1時から5時間ごとに繰り返されるSnapCenterの時間単位のポリシーがある場合、NetApp Backup and Recovery（移行後）は、スケジュールを毎日、午前1時、午前6時、午前11時、午後4時、午後9時の5時間間隔で設定します。一部の時間はスキップされます。午後9時のあとは、5時間ごとに繰り返すために次のスナップショットは午前2時になるはずですが、常に午前1時になります。
 
 
 

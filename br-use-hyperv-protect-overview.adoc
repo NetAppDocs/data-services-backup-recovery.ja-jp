@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-hyperv-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: オンプレミスのONTAPシステムからプライマリ ストレージおよびセカンダリ ストレージまで、Hyper-V 仮想マシンを保護して、データが確実に保護されるようにすることができます。 
+summary: オンプレミスのONTAPシステムからプライマリストレージおよびセカンダリストレージにHyper-V仮想マシンをバックアップし、リストアしてデータを保護します。 
 ---
 = NetApp Backup and RecoveryによるHyper-Vワークロードの保護
 :hardbreaks:
@@ -18,16 +18,16 @@ NetApp Backup and Recovery を使用して、スタンドアロンの Hyper-V VM
 
 Hyper-V ワークロードを Amazon S3 または StorageGRID にバックアップし、オンプレミスの Hyper-V ホストにリストアできます。
 
-NetApp Backup and Recovery を使用して、3-2-1 の保護戦略を実装します。これは、ソースデータの 3 つのコピーを 2 つの異なるストレージシステムに、1 つのコピーをクラウドに保存するものです。3-2-1 方式の利点は以下のとおりです：
+NetApp Backup and Recoveryを使用して、ソースデータの3つのコピーを2つの異なるストレージシステムに、1つのコピーをクラウドに配置する3-2-1保護戦略を実装します。3-2-1方式の利点は次のとおりです：
 
 * 複数のデータ コピーにより、内部および外部のサイバー セキュリティの脅威から保護されます。
-* 複数のメディア タイプにより、1 つのメディア タイプに物理的または論理的な障害が発生した場合でも、フェイルオーバーの実行可能性が確保されます。
+* 複数のメディアタイプが存在することで、いずれかのメディアタイプが物理的または論理的に故障した場合でも、フェイルオーバー機能が維持されます。
 * オンサイトコピーはデータをすばやく復元するのに役立ち、オンサイトコピーが侵害された場合はオフサイトコピーを使用できます。
 
 
 Hyper-V ホストを追加してリソースを検出すると、NetApp Backup and Recovery は NetApp Hyper-V プラグインと NetApp SnapCenter Windows FileSystem プラグインを各 Hyper-V ホストにインストールし、仮想マシンの管理と保護を支援します。
 
-NetApp Backup and Recoveryを使用すると、Hyper-V ワークロードに関連する次のタスクを実行できます。
+Hyper-Vワークロードの以下のタスクを完了するには、NetApp Backup and Recoveryを使用します：
 
 * link:br-start-discover-hyperv.html["Hyper-V ワークロードの検出"]
 * link:br-use-hyperv-protection-groups.html["Hyper-V ワークロードの保護グループの作成と管理"]

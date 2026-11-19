@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-hyper-v-restore-guest-files-and-folders.html 
 keywords: restore, guest, files, folders, files and folders, Windows, VM, virtual machine, browse, mount, virtual disk, session, snapshot, backup 
-summary: Hyper-V VMのスナップショットから、1つまたは複数のファイルやフォルダーをWindowsゲストVMに復元できます。 
+summary: Hyper-V VMのスナップショットから仮想ディスクをマウントすることで、ファイルとフォルダーを元のWindowsゲストVMに復元します。 
 ---
 = NetApp Backup and Recoveryを使用したHyper-Vゲストのファイルとフォルダーのリストア
 :hardbreaks:
@@ -92,7 +92,7 @@ NetApp Backup and Recoveryは、仮想ディスクを元のVMに接続し、隠�
 +
 同じ名前のファイルが存在する場合は、上書きするかスキップするかを選択できます。
 
-. *Post-restore options* セクションでは、*Disconnect guest session after the restore completes* 設定を有効にすることで、復元完了後にゲストセッションを切断することができます。これにより、仮想ディスクが切り離され、データストアがアンマウントされます。つまり、追加のファイルやフォルダの復元操作を実行する前に、ゲストセッションに再接続する必要があります。
+. *リストア後のオプション*セクションでは、*リストア完了後にゲストセッションを切断する*設定を有効にすることで、リストア完了後にゲストセッションを切断することができます。これにより、仮想ディスクが切り離され、データストアがアンマウントされます。その後、追加のファイルおよびフォルダのリストア操作を実行する前に、ゲストセッションに再接続する必要があります。
 . *復元*を選択します。
 +
 ジョブ監視ページで復元の進行状況を確認できます。

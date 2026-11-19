@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-restore-kubernetes-applications.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。 
+summary: すべてのリソースまたは選択したサブセットを使用して、NetApp Backup and Recoveryのポリシーで保護されたKubernetesアプリケーションを、元のネームスペースまたは新しいネームスペースにリストアします。 
 ---
 = NetApp Backup and Recovery の Web UI を使用して Kubernetes アプリケーションをリストアする
 :hardbreaks:
@@ -45,7 +45,7 @@ Backup and Recoveryで保護している各アプリケーションについて�
 名前空間ベースのアプリケーションまたは仮想マシンベースのアプリケーションは、復元ポイントから復元できます。復元するには、すべてのリソースを復元するか、復元するリソースのサブセットを選択します。
 
 .開始する前に
-Trident Protect を使用してバックアップされたアプリケーションを復元する場合は、Trident Protect がソース クラスタとデスティネーション クラスタの両方にインストールされていることを確認してください。
+Trident Protectを使用してバックアップされたアプリケーションをリストアする場合は、Trident Protectがソースクラスタとデスティネーションクラスタの両方にインストールされていることを確認します。
 
 *必須 NetApp Console ロール*
 
@@ -159,7 +159,7 @@ _Destination settings_ ページが表示されます。
 
 NOTE: Trident Protectを使用して作成されたバックアップまたはスナップショットの復元を容易にするために、Kubernetesクラスタ上にAppVaultを作成する必要がある場合は、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-appvault-custom-resources.html["Trident Protect AppVaultオブジェクトを使用してバケットを管理する"]を参照してください。
 
-. 必要に応じて、[*復元スクリプト*] セクションを展開し、[*Postscript*] オプションを有効にして、復元操作の完了後に実行される実行フック テンプレートを選択します。必要に応じて、スクリプトに必要な引数を入力し、ラベル セレクタを追加して、リソース ラベルに基づいてリソースをフィルタします。
+. 必要に応じて、*復元スクリプト*セクションを展開し、*Postscript*オプションを有効にして、復元操作完了後に実行される実行フックテンプレートを選択します。必要に応じて、スクリプトが必要とする引数を入力し、リソースラベルに基づいてリソースをフィルタリングするためのラベルセレクタを追加します。
 . 必要に応じて、*リソース変換*セクションを展開して、復元プロセス中にリソース属性を追加、削除、または変更します。次に、以下の手順を実行します：
 +
 

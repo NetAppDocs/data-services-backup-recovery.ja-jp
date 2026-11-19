@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: 環境の準備やバックアップの有効化を含め、NetApp Backup and Recoveryを使用してオンプレミスのONTAPシステムからAmazon S3にボリュームデータをバックアップします。 
 ---
 = NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータを Amazon S3 にバックアップする
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保
 
 
 [role="lead"]
-NetApp Backup and Recoveryでは、オンプレミスのONTAPシステムからセカンダリ システムおよびAmazon S3にボリューム データをバックアップできます。このページを使用して環境を準備し、バックアップを有効にします。
+NetApp Backup and Recoveryを使用して、オンプレミスのONTAPシステムからセカンダリ ストレージ システムおよびAmazon S3にボリューム データをバックアップします。環境を準備してから、バックアップを有効にします。
 
 
 NOTE: 「オンプレミスのONTAPシステム」には、 FAS、 AFF、およびONTAP Selectシステムが含まれます。
@@ -58,7 +58,7 @@ NOTE: バックアップまたは復元データの転送にプライベートVP
 [[create-or-switch-console-agents]]
 === コンソールエージェントの作成または切り替え
 
-AWS VPC またはオンプレミスにコンソールエージェントがすでにデプロイされている場合は、準備は完了です。
+AWS VPCまたはオンプレミスにConsoleエージェントがすでにデプロイされている場合は、続行できます。
 
 そうでない場合は、 ONTAPデータを AWS S3 ストレージにバックアップするために、これらの場所のいずれかにコンソールエージェントを作成する必要があります。別のクラウド プロバイダーにデプロイされたコンソール エージェントは使用できません。
 
@@ -76,9 +76,9 @@ NetApp Backup and Recovery は、コンソール エージェントがオンプ�
 [[prepare-console-agent-networking-requirements]]
 === コンソールエージェントのネットワーク要件を準備する
 
-次のネットワーク要件が満たされていることを確認してください。
+以下のネットワーク要件が満たされていることを確認してください：
 
-* コンソール エージェントがインストールされているネットワークで次の接続が有効になっていることを確認します。
+* Consoleエージェントがインストールされているネットワークで、以下の接続が有効になっていることを確認します：
 +
 ** ポート443経由のNetApp Backup and RecoveryおよびS3オブジェクトストレージへのHTTPS接続(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["エンドポイントのリストを見る"^]）
 ** ポート443経由のONTAPクラスタ管理LIFへのHTTPS接続
@@ -184,8 +184,8 @@ IPspace 内のすべてのクラスタ間 LIF はオブジェクト ストアに
 
 * ボリュームが配置されているストレージ VM に対して DNS サーバーが設定されている必要があります。方法を見る https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVMのDNSサービスを構成する"^]。
 * 必要に応じてファイアウォール ルールを更新し、 ONTAPからオブジェクト ストレージへのポート 443 経由のNetApp Backup and Recovery接続と、ストレージ VM から DNS サーバーへのポート 53 (TCP/UDP) 経由の名前解決トラフィックを許可します。
-* S3 接続に AWS のプライベート VPC インターフェイス エンドポイントを使用している場合は、HTTPS/443 を使用するために、S3 エンドポイント証明書をONTAPクラスターにロードする必要があります。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>>。
-* ONTAPクラスターに S3 バケットにアクセスする権限があることを確認します。
+* AWS で S3 接続にプライベート VPC インターフェイス エンドポイントを使用している場合、HTTPS/443 を使用するには、S3 エンドポイント証明書を ONTAP クラスタにロードします。<<VPC エンドポイント インターフェースを使用してシステムをプライベート接続用に設定する>>。
+* ONTAPクラスタにS3バケットへのアクセス権限があることを確認します。
 
 
 
@@ -202,7 +202,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -238,7 +238,7 @@ Amazon S3 をバックアップターゲットとして準備するには、次�
 
 
 .手順
-. コンソール エージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"^] 。
+. Consoleエージェントに必要な権限があることを確認します。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["NetApp Consoleポリシー権限"^]を参照してください。
 +
 
 NOTE: AWS中国リージョンでバックアップを作成する場合、IAMポリシーのすべての_Resource_セクションのAWSリソース名「arn」を「aws」から「aws-cn」に変更する必要があります。例： `arn:aws-cn:s3:::netapp-backup-*` 。
@@ -349,7 +349,7 @@ link:prev-ontap-protect-journey.html["独自のバケットの作成について
 [[set-up-customer-managed-aws-keys-for-data-encryption]]
 === データ暗号化用の顧客管理 AWS キーを設定する
 
-デフォルトの Amazon S3 暗号化キーを使用してオンプレミスのクラスターと S3 バケット間で渡されるデータを暗号化する場合は、デフォルトのインストールでそのタイプの暗号化が使用されるため、すべて準備完了です。
+オンプレミスクラスタとS3バケット間でやり取りされるデータを暗号化するためにデフォルトのAmazon S3暗号化キーを使用する場合は、デフォルトのインストールでそのタイプの暗号化が使用されるため、設定はすべて完了しています。
 
 代わりに、デフォルトのキーではなく、独自の顧客管理キーを使用してデータを暗号化する場合は、 NetApp Backup and Recoveryウィザードを開始する前に、暗号化管理キーを事前に設定しておく必要があります。
 
@@ -365,13 +365,13 @@ NOTE: 顧客管理キー暗号化は、Amazon FSx for NetApp ONTAP でのみサ�
 
 標準のパブリック インターネット接続を使用する場合は、すべての権限がコンソール エージェントによって設定されるため、他に何もする必要はありません。
 
-オンプレミスのデータセンターから VPC へのインターネット経由のより安全な接続を確立したい場合は、バックアップアクティベーションウィザードで AWS PrivateLink 接続を選択するオプションがあります。プライベート IP アドレスを使用する VPC エンドポイント インターフェイスを介してオンプレミス システムに接続するために VPN または AWS Direct Connect を使用する予定の場合は、これが必要です。
+オンプレミスのデータセンターからVPCへのインターネット経由の接続をよりセキュアにするために、バックアップの有効化ウィザードでAWS PrivateLink接続を選択するオプションがあります。プライベートIPアドレスを使用するVPCエンドポイントインターフェイス経由で、VPNまたはAWS Direct Connectを使用してオンプレミスシステムを接続する場合は、この設定が必要です。
 
 .手順
 . Amazon VPC コンソールまたはコマンドラインを使用して、インターフェイスエンドポイント設定を作成します。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["Amazon S3 の AWS PrivateLink の使用に関する詳細については、こちらをご覧ください。"^] 。
 . コンソール エージェントに関連付けられているセキュリティ グループ構成を変更します。ポリシーを「カスタム」（「フルアクセス」から）に変更し、<<S3の権限を設定する,バックアップポリシーからS3権限を追加する>>先に示したとおりです。
 +
-プライベート エンドポイントへの通信にポート 80 (HTTP) を使用している場合は、設定は完了です。これで、クラスター上でNetApp Backup and Recoveryを有効にできるようになりました。
+プライベートエンドポイントとの通信にポート80（HTTP）を使用している場合は、他に何もする必要はありません。これで、クラスタでNetApp Backup and Recoveryを有効にすることができます。
 
 +
 プライベート エンドポイントへの通信にポート 443 (HTTPS) を使用している場合は、次の 4 つの手順に示すように、VPC S3 エンドポイントから証明書をコピーし、 ONTAPクラスターに追加する必要があります。
@@ -442,7 +442,7 @@ Please enter Certificate: Press <Enter> when done
 
 . 次のオプションを続行します。
 +
-** コンソールエージェントがすでにある場合は、設定は完了です。  *次へ*を選択してください。
+** すでにConsoleエージェントをお持ちの場合は、続行してください。*次へ*を選択してください。
 ** コンソール エージェントがまだない場合は、[*コンソール エージェントの追加*] オプションが表示されます。参照<<コンソールエージェントを準備する>>。
 
 
@@ -594,7 +594,7 @@ TIP: バックアップをアクティブ化する前にカスタムポリシー
 [[review-your-selections]]
 === 選択内容を確認する
 
-ここで選択内容を確認し、必要に応じて調整を行うことができます。
+選択内容を確認し、必要に応じて調整してください。
 
 .手順
 . 「レビュー」ページで選択内容を確認します。

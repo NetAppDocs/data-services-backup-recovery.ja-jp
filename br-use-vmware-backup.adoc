@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: NetApp Backup and RecoveryでVMware VMとデータストアのオンデマンドバックアップを作成し、不要になったローカルスナップショットを削除します。 
 ---
 = NetApp Backup and Recoveryで VMware ワークロードをバックアップする
 :hardbreaks:

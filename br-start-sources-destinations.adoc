@@ -159,7 +159,7 @@ NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクト
 
 | S3互換オブジェクトストレージ（ONTAPボリュームのみ） | オンプレミスのONTAPシステム | オンプレミスのONTAPシステム 
 |===
-復元にあたっては、以下の点に留意してください：
+リストアには以下の制限が適用されます：
 
 * Cloud Volumes ONTAP（レプリケーション）からのリストアは、Cloud Volumes ONTAPにのみ実行できます。ただし、AWSのCloud Volumes ONTAPは、Amazon FSx for NetApp ONTAPへのリストアもサポートしています。
 * オンプレミスONTAP（レプリケーション）からのリストアは、オンプレミスONTAPにのみ実行できます。

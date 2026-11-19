@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database, dark site, private mode, restore database, backup and recovery, Console agent 
-summary: プライベートモード（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。コンソールエージェントのホストシステムに障害が発生した場合は、新しいコンソールエージェントをデプロイしてこのデータを復元できます。 
+summary: プライベートモードでConsoleエージェントに障害が発生したあとに、新しいConsoleエージェントをデプロイし、StorageGRIDまたはONTAP S3バケットからNetApp Backup and Recoveryの構成データをリストアします。 
 ---
 = ダークサイトでのNetApp Backup and Recovery構成データの復元
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: プライベートモード（インターネットアクセスなし�
 [role="lead"]
 _プライベートモード_（インターネットアクセスなし）では、NetApp Backup and Recoveryは、バックアップに使用されるのと同じStorageGRIDまたはONTAP S3バケットに構成データを保存します。Consoleエージェントのホストシステムに障害が発生した場合、新しいConsoleエージェントを導入して、このデータをリストアできます。
 
-クラウドアカウントが関与しない場合のオンプレミスでの_標準モード_でのバックアップとリカバリの使用時に（たとえば、バックアップ先として NetApp StorageGRID を使用する場合）、以下の手順に従ってコンソールエージェントを交換し、そこに保存されていた構成データを復元することもできます。
+また、クラウド アカウントが関与しないオンプレミスの_標準モード_でBackup and Recoveryを使用する場合（たとえば、バックアップ先としてNetApp StorageGRIDを使用する場合など）、以下の手順に従ってConsoleエージェントを交換し、そこに保存されている構成データを復元することもできます。
 
 
 NOTE: この手順はONTAPボリューム データにのみ適用されます。
@@ -26,7 +26,7 @@ NOTE: この手順はONTAPボリューム データにのみ適用されます�
 バックアップされるデータには 2 種類あります。
 
 * NetApp Backup and Recoveryデータベース - すべてのボリューム、バックアップ ファイル、バックアップ ポリシー、および構成情報のリストが含まれています。
-* インデックス カタログ ファイル - 検索と復元機能に使用される詳細なインデックスが含まれており、復元するボリューム データを探すときに、検索を非常に迅速かつ効率的に行うことができます。
+* インデックス付きカタログファイル - 検索および復元機能が使用する詳細なインデックスが含まれており、復元したいボリュームデータをすばやく見つけることができます。
 
 
 このデータは 1 日に 1 回深夜にバックアップされ、各ファイルの最大 7 つのコピーが保持されます。コンソール エージェントが複数のオンプレミスのONTAPシステムを管理している場合、 NetApp Backup and Recoveryファイルは、最初にアクティブ化されたシステムのバケットに保存されます。
@@ -46,12 +46,12 @@ NetApp Backup and Recoveryシステムを動作状態に戻すには、次のタ
 * 新しいコンソールエージェントをインストールする
 * NetApp Backup and Recoveryデータベースを復元する
 * インデックスカタログファイルを復元する
-* オンプレミスのONTAPシステムとStorageGRIDシステムをすべてNetApp ConsoleUIに再検出します。
+* すべてのオンプレミスONTAPシステムおよびStorageGRIDシステムをNetApp Console UIに再検出します
 
 
 システムが動作していることを確認したら、新しいバックアップ ファイルを作成します。
 
-.要件
+.開始する前に
 バックアップ ファイルが保存されているStorageGRIDまたはONTAP S3 バケットから最新のデータベースとインデックスのバックアップにアクセスする必要があります。
 
 * NetApp Backup and RecoveryMySQL データベース ファイル
@@ -124,7 +124,7 @@ mysql -u root -p cloud_backup
 mysql> show tables;
 mysql> select * from volume;
 ----
-. 表示されるボリュームが元の環境に存在していたボリュームと同じであることを確認します。
+. 表示されているボリュームが、元の環境に存在していたボリュームと同じであることを確認してください。
 
 
 

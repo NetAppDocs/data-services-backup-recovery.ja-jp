@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-kvm.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, KVM, workloads, protect 
-summary: NetApp Backup and Recovery、ワークロードを保護するために、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and RecoveryでKVMワークロードを検出するために管理プラットフォームとKVMホストを追加し、ダッシュボードで保護状況を確認します。 
 ---
 = NetApp Backup and Recoveryで KVM ワークロードを発見
 :hardbreaks:
@@ -90,5 +90,5 @@ KVM ワークロードは、インベントリ ページのワークロード �
 . NetApp Consoleメニューから、*保護* > *バックアップとリカバリ* を選択します。
 . KVMワークロードタイルを選択します。
 . 「バックアップとリカバリ」メニューから、「ダッシュボード」を選択します。
-. データ保護の健全性を確認します。新しく検出され、保護され、バックアップされたワークロードに基づいて、危険にさらされているワークロードまたは保護されているワークロードの数が増加します。
+. データ保護の健全性を確認します。新たに検出、保護、バックアップされたワークロードに基づいて、リスクにさらされているワークロードまたは保護されているワークロードの数が増加します。
 

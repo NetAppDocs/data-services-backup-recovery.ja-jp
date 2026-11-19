@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery、サービスを使用するために、まずワークロードを検出する必要があります。 
+summary: NetApp Backup and RecoveryでMicrosoft SQL Serverワークロードを検出し、必要に応じてSnapCenterのリソース、ホスト、認証情報、スケジュールをインポートします。 
 ---
 = NetApp Backup and RecoveryでMicrosoft SQL Serverワークロードを検出します
 :hardbreaks:
@@ -35,7 +35,7 @@ IMPORTANT: 変更を加える前に、既存のカスタマイズ設定を上書
 
 
 .手順
-. 既存の CoreDNS 設定を確認して、既存の変更を上書きしていないことを確認してください：
+. 既存のCoreDNS設定を確認し、既存の変更を上書きしていないことを確認してください：
 +
 [source, shell]
 ----
@@ -250,9 +250,9 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 * SnapCenterがすでにある場合は、 NetApp Backup and Recovery UI を使用してSnapCenterリソースをNetApp Backup and Recoveryにインポートします。
 +
 
-NOTE: すでにSnapCenterをお使いの場合は、SnapCenterからインポートする前に、前提条件を満たしていることを確認してください。たとえば、SnapCenterからインポートする前に、オンプレミスのSnapCenterクラスタ ストレージ システムをNetApp Consoleに追加しておく必要があります。link:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"]を参照してください。
+NOTE: すでに SnapCenter をお持ちの場合は、SnapCenter からインポートする前に前提条件を満たしていることを確認してください。たとえば、SnapCenter からインポートする前に、オンプレミスの SnapCenter クラスタ ストレージ システムを NetApp Console に追加してください。link:concept-start-prereq-snapcenter-import.html["SnapCenterからリソースをインポートするための前提条件"]を参照してください。
 
-* まだ SnapCenter をお持ちでない場合でも、vCenter を手動で追加してワークロードを検出することができます。
+* SnapCenterをまだ導入していない場合でも、手動でvCenterを追加して検出を実行することで、ワークロードを検出できます。
 
 
 
@@ -327,7 +327,7 @@ SnapCenter リソースをインポートした後、NetApp Backup and Recovery 
 . アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *詳細を表示* をクリックして、ワークロードの詳細を表示します。
 . インベントリ > ワークロードページから、アクションアイコンを選択しますimage:../media/icon-action.png["アクションオプション"]> *管理* をクリックして、ホストの管理ページを表示します。
 . *管理*を選択します。
-. [ホストの管理] ページで、既存の vCenter を使用するか、新しい vCenter を追加するかを選択します。
+. ホストの管理ページで、既存のvCenterを選択するか、新しいvCenterを追加します。
 . *管理*を選択します。
 +
 インベントリ ページには、新しく管理されたSnapCenterリソースが表示されます。

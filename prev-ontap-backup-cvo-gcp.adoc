@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: Consoleエージェント、権限、暗号化キーの準備を含め、NetApp Backup and Recoveryを使用してCloud Volumes ONTAPボリュームをGoogle Cloud Storageにバックアップします。 
 ---
-= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをGoogle Cloud Storageにバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをGoogle Cloudにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 [[verify-support-for-your-configuration]]
 == 構成のサポートを確認する
 
-Google Cloud Storage へのボリュームのバックアップを開始する前に、次の要件を読んで、サポートされている構成であることを確認してください。
+Google Cloud Storageへのボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認してください。
 
 次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。
 
@@ -34,7 +34,7 @@ image:diagram_cloud_backup_cvo_google.png["NetApp Backup and Recovery が、ソ�
 
 サポートされるONTAPバージョン:: 最低でもONTAP 9.8、 ONTAP 9.8P13 以降が推奨されます。
 サポートされているGCPリージョン:: NetApp Backup and Recoveryは、すべての GCP リージョンでサポートされています。
-GCP サービス アカウント:: Google Cloud プロジェクトにカスタムロールを持つサービス アカウントが必要です。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["サービスアカウントの作成方法を学ぶ"^] 。
+GCP サービス アカウント:: Google Cloud プロジェクトには、カスタム ロールが付与されたサービス アカウントが必要です。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["サービスアカウントの作成方法を学ぶ"^]
 
 
 
@@ -146,7 +146,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -305,7 +305,7 @@ cloudkms.keyRings.setIamPolicy
 
 * HSM (ハードウェア バックアップ) キーとソフトウェア生成キーの両方がサポートされています。
 * 新しく作成された Cloud KMS キーとインポートされた Cloud KMS キーの両方がサポートされます。
-* 地域キーのみがサポートされ、グローバル キーはサポートされません。
+* リージョンキーのみがサポートされています。グローバルキーはサポートされていません。
 * 現在、「対称暗号化/復号化」目的のみがサポートされています。
 * ストレージ アカウントに関連付けられたサービス エージェントには、NetApp Backup and Recoveryによって「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM ロールが割り当てられます。
 
@@ -369,7 +369,7 @@ FlexVolまたはFlexGroupボリュームを保護することを選択できま�
 
 ====
 .手順
-選択したボリュームに既にスナップショットまたはレプリケーションのポリシーが適用されている場合、後で選択したポリシーによって既存のポリシーが上書きされます。
+選択したボリュームに既にスナップショットまたはレプリケーションのポリシーが適用されている場合、後から選択したポリシーはこれらの既存のポリシーを上書きします。
 
 . 「ボリュームの選択」ページで、保護するボリュームを選択します。
 +

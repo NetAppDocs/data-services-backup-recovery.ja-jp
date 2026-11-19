@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-backup-targets.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, 
-summary: 'NetApp Backup and Recoveryでオフサイト バックアップ ターゲットを検出するには、いくつかの手順を実行します。これらのターゲットには、Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage、 StorageGRIDなどが含まれます。' 
+summary: NetApp Backup and Recoveryで、オフサイトバックアップターゲットの検出、バケットの追加、認証情報の変更を行います。 
 ---
 = NetApp Backup and Recoveryでオフサイトバックアップターゲットを検出
 :hardbreaks:
@@ -108,7 +108,7 @@ NetApp Backup and Recoveryを使用する前に、バックアップターゲッ
 +
 ** AWS の場合:
 +
-*** *バケット名*: S3 バケットの名前を入力します。「netapp-backup」というプレフィックスは必須のプレフィックスであり、指定した名前に自動的に追加されます。
+*** *バケット名*：S3バケットの名前を入力してください。必要な接頭辞「netapp-backup」は、指定した名前に自動的に追加されます。
 *** *AWS アカウント*: AWS アカウント名を入力します。
 *** *バケットリージョン*: バケットの AWS リージョンを入力します。
 *** *S3 オブジェクト ロックを有効にする*: バケットの S3 オブジェクト ロックを有効にするには、このオプションを選択します。 S3 オブジェクトロックは、指定された保持期間中にオブジェクトの削除または上書きを防ぎ、データ保護をさらに強化します。これはバケットを作成するときにのみ有効にすることができ、後で無効にすることはできません。

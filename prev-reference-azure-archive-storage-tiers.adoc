@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-reference-azure-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery は、 1 つの Azure アーカイブ アクセス層とほとんどのリージョンをサポートします。 
+summary: NetApp Backup and RecoveryがサポートするAzureアーカイブアクセス階層と、アーカイブされたバックアップのリストアコストおよび取得時間を確認してください。 
 ---
 = NetApp Backup and Recoveryでサポートされている Azure アーカイブ アクセス層
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery は、 1 つの Azure アーカイブ アク
 
 
 [role="lead"]
-この情報を使用して、NetApp Backup and Recovery がサポートする Azure アーカイブ層を理解してください。アーカイブされたバックアップのリストアコストと取得時間も確認できます。
+NetApp Backup and Recoveryは、ストレージコストを削減するために古いバックアップを階層化するAzure Archiveアクセス層をサポートしています。アーカイブされたバックアップはリストアのコストが高く、時間もかかるため、バックアップを階層化する前にリストアのコストと取得時間を確認してください。
 
 
 
@@ -23,9 +23,9 @@ summary: NetApp Backup and Recovery は、 1 つの Azure アーカイブ アク
 
 バックアップファイルが最初に作成されると、_Cool_ アクセス層に保存されます。この層は、アクセス頻度の低いデータの保存に最適化されていますが、必要なときにすぐにアクセスできます。
 
-ソース クラスターでONTAP 9.10.1 以降が実行されている場合は、コストをさらに最適化するために、一定の日数 (通常は 30 日以上) 後にバックアップを _Cool_ ストレージから _Azure Archive_ ストレージに階層化することを選択できます。この層のデータは必要なときにすぐにアクセスできず、取得コストも高くなります。そのため、アーカイブされたバックアップ ファイルからデータを復元する必要がある頻度を考慮する必要があります。アーカイブ ストレージからのデータの復元については、このページのセクションを参照してください。
+ソースクラスタでONTAP 9.10.1以降を実行している場合は、一定日数（通常は30日以上）経過後にバックアップを_Cool_から_Azure Archive_ストレージに階層化することで、コストをさらに最適化できます。この階層のデータは、必要なときにすぐにアクセスできず、取得コストも高くなります。そのため、これらのアーカイブされたバックアップファイルからデータをリストアする必要がある頻度を考慮する必要があります。アーカイブストレージからのデータのリストアについては、このページのセクションを参照してください。
 
-このタイプのライフサイクル ルールを使用してNetApp Backup and Recoveryを構成する場合は、Azure アカウントでコンテナーを設定するときにライフサイクル ルールを構成しないでください。
+このタイプのライフサイクルルールを使用してNetApp Backup and Recoveryを設定する場合は、Azureアカウントでコンテナをセットアップする際にライフサイクルルールを設定しないでください。
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azure BLOB アクセス層について学ぶ"^]。
 
@@ -34,7 +34,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azur
 [[restore-data-from-archival-storage]]
 == アーカイブストレージからデータを復元する
 
-古いバックアップ ファイルをアーカイブ ストレージに保存するとクール ストレージよりもはるかに安価になりますが、復元操作のために Azure アーカイブ内のバックアップ ファイルのデータにアクセスすると、時間がかかり、コストも高くなります。
+古いバックアップファイルをアーカイブストレージに保存する方がクールストレージよりもはるかに安価ですが、Azure Archiveにあるバックアップファイルからデータにアクセスして復元操作を行うには、より時間がかかり、コストも高くなります。
 
 Azure Archive からデータを復元するにはどれくらいの費用がかかりますか?:: Azure アーカイブからデータを取得するときに選択できる復元優先順位は 2 つあります。
 +
@@ -51,7 +51,7 @@ Azure Archive からデータを復元するにはどれくらいの費用がか
 
 NOTE: Azure から StorageGRID システムにデータをリストアする場合、高優先度はサポートされていません。
 
-Azure Archive にアーカイブされたデータを復元するにはどのくらいの時間がかかりますか?:: 復元時間は 2 つの部分で構成されます。
+Azure Archive にアーカイブされたデータを復元するにはどのくらいの時間がかかりますか?:: 復旧時間は、以下の2つの要素で構成されています：
 +
 --
 * *取得時間*: アーカイブされたバックアップ ファイルを Azure アーカイブから取得し、クール ストレージに配置する時間。これは「再水和」時間と呼ばれることもあります。取得時間は、選択した復元優先度によって異なります。

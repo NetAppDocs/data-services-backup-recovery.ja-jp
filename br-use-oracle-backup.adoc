@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用して、Oracle Databaseの保護グループまたは個々のデータベースをオンデマンドでバックアップし、データを保護します。 
 ---
 = NetApp Backup and Recoveryを使用したOracle Databaseワークロードのバックアップ
 :hardbreaks:

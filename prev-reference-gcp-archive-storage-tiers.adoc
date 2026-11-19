@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-reference-gcp-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery は、 1 つの Google アーカイブ ストレージ クラスとほとんどのリージョンをサポートしています。 
+summary: NetApp Backup and RecoveryがサポートするGoogle Cloud Storage Archiveティアを確認し、アーカイブされたバックアップのリストアコストと取得時間について理解してください。 
 ---
 = NetApp Backup and Recoveryでサポートされている Google アーカイブ ストレージ層
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery は、 1 つの Google アーカイブ ス�
 
 
 [role="lead"]
-この情報を使用して、NetApp Backup and Recovery がサポートする Google Cloud Storage のアーカイブ層を理解してください。アーカイブされたバックアップのリストアコストと取得時間も確認できます。
+NetApp Backup and Recoveryは、古いバックアップ用のGoogle Cloud Storage Archive階層をサポートしています。この階層におけるバックアップのリストアコストと取得時間についてご確認ください。
 
 
 
@@ -23,9 +23,9 @@ summary: NetApp Backup and Recovery は、 1 つの Google アーカイブ ス�
 
 バックアップファイルが最初に作成されると、それらは_Standard_ストレージに保存されます。この階層は、アクセス頻度の低いデータの保存に最適化されていますが、即時アクセスも可能です。
 
-オンプレミスクラスターが ONTAP 9.12.1 以降を使用している場合、コスト最適化のために、一定日数（通常は 30 日以上）経過後に古いバックアップを NetApp Backup and Recovery UI で _Archive_ ストレージに階層化することを選択できます。この階層のデータを取得するには、より高いコストがかかるため、これらのアーカイブされたバックアップファイルからデータを復元する必要がある頻度を考慮する必要があります。このページにある、アーカイブストレージからのデータ復元に関するセクションをご覧ください。
+オンプレミスクラスタでONTAP 9.12.1以降を使用している場合は、さらなるコスト最適化のために、一定の日数（通常は30日以上）が経過したあとに、NetApp Backup and Recovery UIで古いバックアップを_Archive_ストレージに階層化できます。この階層のデータは取得コストが高いため、これらのアーカイブされたバックアップファイルからデータをリストアする必要がある頻度を考慮してください。アーカイブストレージからのデータのリストアについては、このページの該当セクションを参照してください。
 
-このタイプのライフサイクル ルールを使用してNetApp Backup and Recoveryを構成する場合は、Google アカウントでバケットを設定するときにライフサイクル ルールを構成しないでください。
+このタイプのライフサイクルルールを使用してNetApp Backup and Recoveryを設定する場合は、Googleアカウントでバケットを設定する際にライフサイクルルールを設定しないでください。
 
 https://cloud.google.com/storage/docs/storage-classes["Google のストレージ クラスについて学ぶ"^]。
 
@@ -34,14 +34,14 @@ https://cloud.google.com/storage/docs/storage-classes["Google のストレージ
 [[restore-data-from-archival-storage]]
 == アーカイブストレージからデータを復元する
 
-古いバックアップ ファイルをアーカイブ ストレージに保存すると、標準ストレージよりもはるかに安価になりますが、復元操作のためにアーカイブ ストレージのバックアップ ファイルからデータにアクセスすると、少し時間がかかり、コストも高くなります。
+古いバックアップファイルをアーカイブストレージに保存する方が、標準ストレージに保存するよりもはるかに安価です。ただし、アーカイブストレージに保存されたバックアップファイルからデータを復元するには、若干時間がかかり、費用も高くなります。
 
 Google アーカイブからデータを復元するにはいくらかかりますか?:: Google Cloud Storageの地域別の料金の詳細については、 https://cloud.google.com/storage/pricing["Google Cloud Storage の料金ページ"^] 。
-Google アーカイブにアーカイブされたオブジェクトの復元にはどのくらいの時間がかかりますか?:: 復元時間全体は 2 つの部分で構成されます。
+Google アーカイブにアーカイブされたオブジェクトの復元にはどのくらいの時間がかかりますか?:: 全体のリストア時間は2つの部分から構成されます：
 +
 --
 * *取得時間*: アーカイブからバックアップ ファイルを取得して標準ストレージに配置する時間。これは「再水和」時間と呼ばれることもあります。他のクラウド プロバイダーが提供する「最も冷たい」ストレージ ソリューションとは異なり、データには数ミリ秒以内にアクセスできます。
-* *復元時間*: 標準ストレージ内のバックアップ ファイルからデータを復元する時間。この時間は、アーカイブ層を使用しない場合に、標準ストレージから直接実行する一般的な復元操作と変わりません。
+* *リストア時間*：標準ストレージ内のバックアップファイルからデータをリストアするのにかかる時間。この時間は、アーカイブ階層を使用しない場合の、標準ストレージから直接実行する通常のリストアと同じです。
 
 
 --

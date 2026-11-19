@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-manage-kubernetes-clusters.html 
 keywords: discover, backup and recovery, snapcenter, kubernetes, k8s, clusters, applications, inventory 
-summary: NetApp Backup and Recovery を使用すると、Kubernetes クラスターを検出して管理できるため、クラスターによってホストされるリソースを保護できます。 
+summary: Kubernetesクラスタの検出と管理、クラスタの詳細の編集、Trident Protectのアップグレード、およびホストされているリソースを保護するためのクラスタの再接続または移行を行います。 
 ---
 = NetApp Backup and Recovery で Kubernetes クラスターを管理する
 :hardbreaks:
@@ -24,7 +24,7 @@ NOTE: Kubernetesクラスターを発見するには、以下を参照してく�
 [[edit-kubernetes-cluster-information]]
 == Kubernetes クラスターの情報を編集する
 
-名前を変更する必要がある場合は、クラスターを編集できます。
+クラスターを編集して名前を変更します。
 
 *必須 NetApp Console ロール*
 
@@ -83,7 +83,7 @@ Trident Protect 26.05以降を実行しているKubernetesクラスタの場合�
 [[reconnect-a-kubernetes-cluster-to-a-console-agent]]
 == Kubernetes クラスターをコンソール エージェントに再接続する
 
-Console エージェントの IP アドレスが変更された場合（たとえば、再起動後など）、Kubernetes クラスターはエージェントとの接続を失うため、再接続する必要があります。
+ConsoleエージェントのIPアドレスが変更された場合（たとえば、再起動後）、Kubernetesクラスターはエージェントとの接続を失うため、再接続する必要があります。
 
 *必須 NetApp Console ロール*
 
@@ -119,7 +119,7 @@ Console エージェントの IP アドレスが変更された場合（たと�
 . NetApp Backup and Recoveryで、*インベントリ* > *クラスタ* を選択します。
 . 切断されたKubernetesクラスターを選択し、アクションアイコンimage:../media/icon-action.png["アクションオプション"] > *クラスターの変更* > *エージェントの管理*を選択します。
 . リストから新しいコンソールエージェントを選択してください。
-. 新しいコンソールエージェントが、このクラスタ上の保護対象アプリケーションが使用するシステム、バックアップターゲット、およびセカンダリターゲットにアクセスできることを確認するために、エージェント情報を確認してください。
+. エージェント情報を確認し、新しいConsoleエージェントが、このクラスタ上の保護対象アプリケーションが使用するシステム、バックアップターゲット、およびセカンダリターゲットにアクセスできることを確認します。
 . 各セクションのコマンドライン手順をコピーし、クラスター上でコマンドを実行してください。
 +
 これにより、Kubernetes のシークレットが再作成され、Trident Protect が新しいコンソールエージェントにリダイレクトされ、設定が再読み込みされます。コマンドの実行が完了すると、クラスターは新しいコンソールエージェントを使用するようになります。

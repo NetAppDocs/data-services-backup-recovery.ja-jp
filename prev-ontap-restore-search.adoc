@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-restore-search.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 検索と復元を使用して、ONTAPバックアップファイルからボリューム、フォルダー、またはファイルを復元できます。 
+summary: 正確なシステム名、ボリューム名、またはファイル名がわからない場合に、NetApp Backup and RecoveryのONTAPバックアップからボリューム、フォルダ、またはファイルを検索してリストアします。 
 ---
 = NetApp Backup and Recoveryの「検索とリストア」を使用したONTAPデータのリストア
 :hardbreaks:
@@ -46,7 +46,7 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 
 
 ====
-始める前に、復元したいボリュームまたはファイルの名前や場所をある程度把握しておく必要があります。
+作業を開始する前に、復元したいボリュームまたはファイルの名前や場所を少なくとも一部把握しておいてください。
 
 
 
@@ -88,7 +88,7 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 * ONTAP S3 の場合、Console エージェントはオンプレミス（インターネット アクセスの有無にかかわらず）またはクラウド プロバイダ環境にデプロイできます。
 
 
-「オンプレミス ONTAP システム」への言及には、FAS、AFF、および ONTAP Select システムが含まれます。
+「オンプレミス ONTAP システム」という呼称には、FAS、AFF、および ONTAP Select システムが含まれます。
 
 
 
@@ -120,7 +120,7 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 +
 ** コンソールに権限を付与するユーザー ロールに、特定の Amazon Athena、AWS Glue、および AWS S3 権限を追加する必要があります。link:prev-ontap-backup-onprem-aws.html["すべての権限が正しく設定されていることを確認してください"]。
 +
-以前に設定したコンソール エージェントでNetApp Backup and Recoveryをすでに使用していた場合は、コンソール ユーザー ロールに Athena および Glue 権限を追加する必要があることに注意してください。これらは検索と復元に必要です。
+過去に構成したConsoleエージェントでNetApp Backup and Recoveryをすでに使用している場合は、ConsoleユーザーロールにAthenaとGlueの権限を追加する必要があります。これらは検索とリストアに必要です。
 
 
 
@@ -129,7 +129,7 @@ link:prev-reference-aws-archive-storage-tiers.html["AWSアーカイブストレ�
 ** Azure Synapse Analytics リソース プロバイダー（「Microsoft.Synapse」という名前）をサブスクリプションに登録する必要があります。 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["このリソースプロバイダーをサブスクリプションに登録する方法をご覧ください"^]。リソース プロバイダーを登録するには、サブスクリプションの *Owner* または *Contributor* である必要があります。
 ** コンソールに権限を付与するユーザー ロールに、特定の Azure Synapse ワークスペースおよび Data Lake Storage アカウントの権限を追加する必要があります。link:prev-ontap-backup-onprem-azure.html["すべての権限が正しく設定されていることを確認してください"]。
 +
-以前に構成したコンソール エージェントでNetApp Backup and Recovery を既に使用していた場合は、Azure Synapse ワークスペースと Data Lake ストレージ アカウントのアクセス許可をコンソール ユーザー ロールに追加する必要があることに注意してください。これらは検索と復元に必要です。
+過去に構成したConsoleエージェントでNetApp Backup and Recoveryをすでに使用していた場合は、ここでConsoleユーザーロールにAzure Synapse WorkspaceとData Lake Storageアカウントの権限を追加する必要があります。これらは検索とリストアに必要です。
 
 ** コンソール エージェントは、インターネットへの HTTP 通信用にプロキシ サーバーなしで構成する必要があります。コンソール エージェントに HTTP プロキシ サーバーを構成している場合は、検索と復元機能は使用できません。
 
@@ -282,7 +282,7 @@ mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 . 復元するデータがあるリソースを見つけて、[すべてのバックアップを表示] を選択し、一致するボリューム、フォルダー、またはファイルを含むすべてのバックアップ ファイルを表示します。
 . データの復元に使用するバックアップ ファイルを見つけて、[復元] を選択します。
 +
-検索結果には、検索対象のファイルを含むローカルボリュームのスナップショットとリモートレプリケートボリュームが表示されます。クラウドバックアップファイル、スナップショット、またはレプリケートボリュームからリストアするかどうかを選択できます。
+検索結果には、検索対象のファイルを含むローカルボリュームのスナップショットとリモートレプリケートボリュームが特定されます。クラウドバックアップファイル、スナップショット、またはレプリケートボリュームからの復元を選択できます。
 
 . ボリューム、フォルダー、またはファイルを復元する宛先の場所を選択し、[復元] を選択します。
 +

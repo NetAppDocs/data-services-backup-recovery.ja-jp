@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-mount-unmount.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してOracle Databaseワークロードを保護します。 
+summary: Oracle Databaseのリカバリポイントをマウント、アンマウント、カタログ化することで、データベースの変更履歴を表示し、バックアップメタデータをRMANリカバリカタログに保持できます。 
 ---
-= NetApp Backup and RecoveryによるOracle Databaseリカバリポイントのマウント、アンマウント、カタログ化
+= NetApp Backup and Recoveryを使用したOracle Databaseのリカバリポイントの管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

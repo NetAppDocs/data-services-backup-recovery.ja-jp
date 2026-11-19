@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recoveryを使用してVMwareワークロードを保護します。 
+summary: NetApp Backup and Recoveryを使用してCloud Volumes ONTAPボリュームをAzure Blob Storageにバックアップし、要件を確認してサービスを有効にし、ボリュームのバックアップをアクティブ化します。 
 ---
-= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAzure Blobストレージにバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAzure Blob Storageにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,9 +24,9 @@ NOTE: NetApp Backup and Recoveryのワークロードを切り替えるには、
 [[verify-support-for-your-configuration]]
 == 構成のサポートを確認する
 
-ボリュームを Azure Blob ストレージにバックアップする前に、次の要件を読んで、サポートされている構成であることを確認してください。
+Azure Blob Storage にボリュームのバックアップを開始する前に、サポートされている構成になっていることを確認してください。
 
-次の図は、各コンポーネントとそれらの間で準備する必要がある接続を示しています。
+この画像は、各構成要素と、それらの間に準備する必要のある接続を示しています。
 
 オプションとして、パブリック接続またはプライベート接続を使用して、複製されたボリュームのセカンダリONTAPシステムに接続することもできます。
 
@@ -168,7 +168,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 [[requirements-for-using-customer-managed-keys-for-data-encryption]]
 === データ暗号化に顧客管理キーを使用するための要件
 
-アクティベーション ウィザードでは、既定の Microsoft 管理の暗号化キーを使用する代わりに、独自の顧客管理キーをデータの暗号化に使用できます。この場合、Azure サブスクリプション、Key Vault 名、およびキーが必要になります。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["独自のキーの使用方法を確認する"^] 。
+アクティベーションウィザードでは、デフォルトのMicrosoft管理の暗号化キーの代わりに、お客様が管理するキーを使用してデータを暗号化できます。この場合、Azureサブスクリプション、Key Vault名、およびキーが必要です https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["独自のキーの使用方法を確認する"^]。
 
 NetApp Backup and Recoveryは、_Azureアクセスポリシー_、_Azureロールベースアクセス制御_（Azure RBAC）権限モデル、および_マネージドハードウェアセキュリティモデル_（HSM）をサポートしています（ https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview["Azure Key Vault Managed HSM とは何ですか?"] ）。
 
@@ -195,7 +195,7 @@ NetApp Backup and Recoveryを使用してセカンダリONTAPシステムに複�
 * クラスターがオンプレミスにある場合は、企業ネットワークからクラウド プロバイダーの仮想ネットワークへの接続が必要です。これは通常、VPN 接続です。
 * ONTAPクラスタは、追加のサブネット、ポート、ファイアウォール、およびクラスタの要件を満たす必要があります。
 +
-Cloud Volumes ONTAPまたはオンプレミス システムにレプリケートできるため、オンプレミスONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^] 。
+Cloud Volumes ONTAPやオンプレミスシステムにレプリケートできるため、オンプレミスのONTAPシステムのピアリング要件を確認してください。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAPドキュメントでクラスタピアリングの前提条件を確認する"^]。
 
 
 
@@ -404,7 +404,7 @@ TIP: レプリケーションをアクティブ化する前にカスタムポリ
 **** Blob コンテナーを管理する独自のリソース グループを作成するか、リソース グループの種類とグループを選択します。
 +
 
-TIP: バックアップ ファイルが変更されたり削除されたりするのを防ぐには、30 日間の保持期間を使用して不変ストレージが有効になっているストレージ アカウントが作成されていることを確認してください。
+TIP: バックアップファイルが改ざんまたは削除されないように保護したい場合は、ストレージアカウントが30日間の保持期間を設定した不変ストレージを有効にして作成されていることを確認してください。
 
 
 
@@ -453,7 +453,7 @@ TIP: バックアップをアクティブ化する前にカスタムポリシー
 [[review-your-selections]]
 === 選択内容を確認する
 
-ここで選択内容を確認し、必要に応じて調整を行うことができます。
+選択内容を確認し、必要に応じて調整してください。
 
 .手順
 . 「レビュー」ページで選択内容を確認します。
@@ -479,7 +479,7 @@ NetApp Backup and Recovery はボリュームの初期バックアップを開�
 [[show-the-api-commands]]
 === APIコマンドを表示する
 
-バックアップとリカバリの有効化ウィザードで使用されるAPIコマンドを表示し、必要に応じてコピーすることができます。将来のシステムでバックアップの有効化を自動化するために、この操作を行うことをご検討ください。
+バックアップとリカバリの有効化ウィザードで使用されるAPIコマンドを表示し、必要に応じてコピーして、今後のシステムでバックアップの有効化を自動化します。
 
 .手順
 . バックアップとリカバリの有効化ウィザードから、*APIリクエストの表示*を選択します。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-restore-kubernetes-applications-cr.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery を使用すると、保護ポリシーで保護したアプリケーションを復元できます。 
+summary: 別のネームスペース、元のネームスペース、または別のクラスタへのリストアを含め、カスタムリソースを使用してスナップショットまたはバックアップからKubernetesアプリケーションをリストアします。 
 ---
-= カスタムリソースを使用してKubernetesアプリケーションを復元する
+= NetApp Backup and Recoveryでカスタムリソースを使用してKubernetesアプリをリストアする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,7 +39,7 @@ BackupRestore CR を使用して異なる名前空間にバックアップを復
 
 ====
 .開始する前に
-AWS セッショントークンの有効期限が、長時間実行される s3 復元処理に十分であることを確認します。復元処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+AWSセッショントークンの有効期限が、長時間実行されるS3復元操作に十分であることを確認してください。復元操作中にトークンの有効期限が切れた場合、操作が失敗する可能性があります。
 
 * 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
 *  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。
@@ -137,7 +137,7 @@ kubectl apply -f trident-protect-backup-restore-cr.yaml
 いつでもバックアップを元の名前空間に復元できます。
 
 .開始する前に
-AWS セッショントークンの有効期限が、長時間実行される s3 復元処理に十分であることを確認します。復元処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+AWSセッショントークンの有効期限が、長時間実行されるS3復元操作に十分であることを確認してください。復元操作中にトークンの有効期限が切れた場合、操作が失敗する可能性があります。
 
 * 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
 *  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。
@@ -243,7 +243,7 @@ kubectl apply -f trident-protect-backup-ipr-cr.yaml
 
 ====
 .開始する前に
-次の前提条件が満たされていることを確認してください：
+以下の前提条件を満たしていることを確認してください：
 
 * デスティネーション クラスタに Trident Protect がインストールされている。
 * デスティネーション クラスタは、バックアップが保存されているソース クラスタと同じAppVaultのバケット パスにアクセスできます。
@@ -341,7 +341,7 @@ kubectl apply -f trident-protect-backup-restore-cr.yaml
 [[restore-a-snapshot-to-a-different-namespace]]
 == スナップショットを別のネームスペースにリストアする
 
-カスタム リソース (CR) ファイルを使用して、スナップショットからデータを別の名前空間または元のソース名前空間に復元できます。SnapshotRestore CR を使用してスナップショットを別の名前空間に復元すると、Backup and Recovery はアプリケーションを新しい名前空間に復元し、復元されたアプリケーションのアプリケーション CR を作成します。復元されたアプリケーションを保護するには、オンデマンド バックアップまたはスナップショットを作成するか、保護スケジュールを設定します。
+カスタムリソース（CR）ファイルを使用して、スナップショットから別のネームスペースまたは元のソースネームスペースにデータを復元できます。SnapshotRestore CRを使用してスナップショットを別のネームスペースに復元する場合、Backup and Recoveryは新しいネームスペースにアプリケーションを復元し、復元されたアプリケーション用のアプリケーションCRを作成します。復元されたアプリケーションを保護するには、オンデマンドバックアップやスナップショットを作成するか、保護スケジュールを設定します。
 
 [NOTE]
 ====
@@ -351,7 +351,7 @@ kubectl apply -f trident-protect-backup-restore-cr.yaml
 
 ====
 .開始する前に
-AWS セッショントークンの有効期限が、長時間実行される s3 復元処理に十分であることを確認します。復元処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+AWSセッショントークンの有効期限が、長時間実行されるS3復元操作に十分であることを確認してください。復元操作中にトークンの有効期限が切れた場合、操作が失敗する可能性があります。
 
 * 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
 *  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。
@@ -449,7 +449,7 @@ kubectl apply -f trident-protect-snapshot-restore-cr.yaml
 NOTE: ローカルスナップショットからのVMベースのアプリケーションのインプレース復元（元の名前空間および元のクラスタへの復元）は、現在サポートされていません。
 
 .開始する前に
-AWS セッショントークンの有効期限が、長時間実行される s3 復元処理に十分であることを確認します。復元処理中にトークンの有効期限が切れると、処理が失敗する可能性があります。
+AWSセッショントークンの有効期限が、長時間実行されるS3復元操作に十分であることを確認してください。復元操作中にトークンの有効期限が切れた場合、操作が失敗する可能性があります。
 
 * 現在のセッショントークンの有効期限を確認する方法の詳細については、 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API ドキュメント"^]を参照してください。
 *  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM ドキュメント"^]AWS リソースの認証情報の詳細については、こちらを参照してください。

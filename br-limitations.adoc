@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery、サービスを使用するためにまずデータを検出する必要があります。検出中に、 NetApp Backup and Recovery は組織内のシステム内のすべてのボリュームとファイルを分析します。 
+summary: SQL ServerワークロードにおけるNetApp Backup and Recoveryの既知の制限事項を確認します。 
 ---
 = NetApp Backup and Recovery の SQL Server ワークロードに関する既知の制限事項
 :hardbreaks:
@@ -53,7 +53,7 @@ Windows クラスター名にはアンダースコア (_) 文字を含めるこ�
 [[snapcenter-migration-issues]]
 == SnapCenterの移行に関する問題
 
-SnapCenterからNetApp Backup and Recoveryへのリソースの移行には、次の制限があります。
+SnapCenterからNetApp Backup and Recoveryにリソースを移行する際には、制限事項が適用されます。
 
 SnapCenterポリシーをNetApp Backup and Recoveryポリシーに移行する方法の詳細については、以下を参照してください。link:reference-policy-differences-snapcenter.html["SnapCenterのポリシーとNetApp Backup and Recovery のポリシーの比較"] 。
 
