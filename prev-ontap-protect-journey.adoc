@@ -258,7 +258,7 @@ NOTE: Azureでバックアップ先として使用するコンテナを作成す
 
 既にコンソールを使用してストレージを管理している場合は、コンソールエージェントが既にインストールされています。同じコンソールエージェントを NetApp Backup and Recovery で使用する予定がある場合は、準備は万端です。別のコンソールエージェントを使用する必要がある場合は、バックアップとリカバリの実装を開始する前にインストールしてください。
 
-NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす方法でコンソールを使用できるようにする複数の導入モードを提供します。  _標準モード_ では、コンソール SaaS レイヤーを活用して完全な機能を提供しますが、_制限モード_ と _プライベート モード_ は接続制限のある組織で利用できます。
+NetApp Consoleは、ビジネスおよびセキュリティの要件を満たす方法でConsoleを使用できるようにする、複数の導入モードを提供します。_標準モード_はConsoleのSaaSレイヤを使用してフル機能を提供しますが、接続に制限のある組織では_制限モード_と_プライベートモード_を利用できます。
 
 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの導入モードの詳細"^]。
 
@@ -280,6 +280,8 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Con
 * link:prev-ontap-backup-onprem-storagegrid.html["オンプレミスのONTAPデータをStorageGRIDにバックアップする"]
 * link:prev-ontap-backup-onprem-ontaps3.html["オンプレミスのONTAPをONTAP S3 にバックアップする"]
 
+
+Azure China（21Vianet）の Azure Blob ストレージにバックアップするには、Azure 中国リージョンに標準モードで Console エージェントを展開します。詳細については、上記に記載されているAzureバックアップ手順を参照してください。
 
 
 

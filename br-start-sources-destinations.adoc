@@ -50,6 +50,7 @@ NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクト
 | AWS のCloud Volumes ONTAP  a| 
 * AWS のCloud Volumes ONTAP
 * オンプレミスのONTAPシステム
+* Amazon FSx for NetApp ONTAP（Kubernetesワークロードのみ）
 
 | Amazon S3 
 
@@ -86,7 +87,11 @@ NOTE: Wasabiは、現時点で唯一の認定されたS3互換オブジェクト
 | Google Cloud NetApp Volumes Flex（Oracle DatabaseおよびVMwareワークロードのみ） | Google Cloud NetApp Volumes Flex | Google Cloud Storage 
 
 
-| Amazon FSx for NetApp ONTAP（Microsoft SQL Server、Oracle Database、およびVMwareワークロードのみ） | AWS のCloud Volumes ONTAP | Amazon S3（Cloud Volumes ONTAPからのみ） 
+| Amazon FSx for NetApp ONTAP（Microsoft SQL Server、Oracle Database、VMware、およびKubernetesワークロードのみ）  a| 
+* AWS のCloud Volumes ONTAP
+* 同一または異なるAWSリージョン内のAmazon FSx for NetApp ONTAP（Kubernetesワークロードのみ）
+
+| Amazon S3（Cloud Volumes ONTAPからのみ。Kubernetesワークロードでは利用できません） 
 |===
 
 NOTE: 「オンプレミス ONTAPシステム」とは、FAS、AFF、およびONTAP Selectシステムを指します。

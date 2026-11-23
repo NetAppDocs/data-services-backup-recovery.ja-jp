@@ -1,0 +1,37 @@
+= Kubernetes ワークロードの機能強化
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes ワークロードの機能強化
+
+今回のリリースでは、NetApp Backup and RecoveryでKubernetesワークロード向けに以下の機能強化が導入されています：
+
+* *Amazon FSx for NetApp ONTAPのディスク間バックアップアーキテクチャのサポート*：同じAWSリージョンまたは異なるAWSリージョンで、Amazon FSx for NetApp ONTAPをプライマリストレージとし、別のFSx for NetApp ONTAPファイルシステムをセカンダリストレージとして使用する、ディスク間バックアップアーキテクチャを利用したKubernetes保護ポリシーを作成できるようになりました。また、Cloud Volumes ONTAPをプライマリストレージとして、FSx for NetApp ONTAPをセカンダリストレージとして使用することもできます。
+* *qtreeリストアの問題の修正*：以前のontap-nas-economyボリュームのリストアでは、qtreeディレクトリが誤った所有者と権限でリストアされていました。この問題は今回のリリースで解決されました。
+
+
+Kubernetes保護ポリシーの作成の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-kubernetes-create.html["NetApp Backup and RecoveryでのKubernetesバックアップ ポリシーの作成と管理"^]を参照してください。
+
+Kubernetesワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["NetApp Backup and Recoveryを使用したKubernetesワークロードの保護について説明します"^]を参照してください。
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP ボリュームワークロードの機能強化
+
+今回のリリースでは、NetApp Backup and RecoveryにONTAP Volumesワークロード向けの以下の機能強化が導入されています：
+
+* *リストア インターフェイスの改善*：ONTAPボリュームのリストア ウィザードのレイアウトが刷新され、ナビゲーションが改善されました：
++
+** *選択テーブルの改善*：選択テーブルに一度に表示する行と列の数が増えました。リストア画面では、洗練された間隔とパンくずリストが使用されているため、ワークフローのどの段階にいるのかが一目でわかります。
+** *ステップバイステップのナビゲーション*：*次へ*ボタンと*続行*ボタンの機能が改善され、誤って次の主要なステップに進んでしまうことがなくなりました。*前へ*ボタンをクリックすると、最後に完了した画面に戻り、以前の選択内容が保持されるため、手順を最初からやり直す必要はありません。
+** *ソースボリュームを選択する際の詳細情報*：ボリュームリストに、ボリュームタイプ、ボリュームスタイル、SnapLockタイプ、既存の保護、および保護の健常性が表示されるようになりました。「既存の保護」列は幅が広くなっているので、すべての保護インジケーター（スナップショット、レプリケーション、バックアップ）を確認できます。
+
+
+* *Azure 中国リージョンでホストされているボリュームの保護のサポート*：Azure 中国（21Vianet）の Azure Blob ストレージに ONTAP ボリュームをバックアップできるようになりました。このサポートは、Cloud Volumes ONTAP とオンプレミス ONTAP システムの両方に適用されます。商用 Azure および Azure Government リージョンに変更はありません。
+
+
+ONTAP ボリュームワークロードの保護の詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["NetApp Backup and Recoveryを使用したONTAPボリューム保護について説明します"^]を参照してください。

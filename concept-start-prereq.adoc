@@ -465,6 +465,10 @@ NOTE: 異なるクラウドプロバイダー間でシステムごとに6つ以�
 NOTE: NetApp では、Kubernetes ワークロードに使用するコンソールエージェントには、エージェントの IP アドレスが変更された場合に発生する問題を回避するため、静的 IP アドレスを割り当てることを強くお勧めします。
 
 * プライマリONTAPシステム（ASA r2システムはサポートされていません）
++
+** Amazon FSx for NetApp ONTAPは、ディスク間バックアップアーキテクチャにおいて、プライマリストレージまたはセカンダリストレージとしてサポートされています。Kubernetesクラスターは、AWS上で動作する自己管理型クラスターである必要があります。
+
+
 * NetApp Trident 25.06から26.06
 * NetApp Trident Protect 26.08以降（検出時にKubernetesクラスタにインストール済み）
 * Kubernetes クラスター - サポートされている Kubernetes ディストリビューションとバージョンには、 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"]でサポートされているものが含まれます。

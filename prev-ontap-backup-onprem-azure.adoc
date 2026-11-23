@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-onprem-azure.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 環境を準備し、NetApp Backup and Recoveryを使用して、オンプレミスのONTAPボリュームからAzure Blob Storageへのバックアップを有効化します。 
 ---
-= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをAzure Blob Storageにバックアップする
+= NetApp Backup and Recoveryを使用してオンプレミスのONTAPデータをAzure Blobにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -59,6 +59,8 @@ Azure VNet またはオンプレミスにコンソール エージェントが�
 
 そうでない場合は、いずれかの場所にコンソール エージェントを作成し、 ONTAPデータを Azure Blob ストレージにバックアップする必要があります。別のクラウド プロバイダーにデプロイされたコンソール エージェントは使用できません。
 
+Azure China （21Vianet） の Azure Blob ストレージにバックアップするには、Azure China リージョンに標準モードで Console エージェントを展開する必要があります。オンプレミス、商用の Azure リージョン、または Azure Government にインストールした Console エージェントは、Azure China にバックアップできません。
+
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Azureにコンソールエージェントをインストールする"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["オンプレミスにコンソールエージェントをインストールする"^]
@@ -78,7 +80,7 @@ NetApp Backup and Recovery は、コンソール エージェントがクラウ�
 .手順
 . コンソール エージェントがインストールされているネットワークで次の接続が有効になっていることを確認します。
 +
-** NetApp Backup and RecoveryおよびBlobオブジェクトストレージへのポート443経由のHTTPS接続(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["エンドポイントのリストを見る"^]）
+** ポート 443 経由の HTTPS 接続で、NetApp Backup and Recovery および Blob オブジェクト ストレージ (https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["エンドポイントのリストを見る"^]）に接続します。Azure China の場合、Console エージェントは  `*.chinacloudapi.cn`（ `login.chinacloudapi.cn` および  `management.chinacloudapi.cn` を含む）にも到達できる必要があります。
 ** ポート443経由のONTAPクラスタ管理LIFへのHTTPS接続
 ** NetApp Backup and Recoveryの検索とリストアを機能させるには、ConsoleエージェントとAzure Synapse SQLサービス間の通信用にポート1433が開いている必要があります。
 ** Azure および Azure Government の展開には、追加の受信セキュリティ グループ ルールが必要です。見る https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure のコンソール エージェントのルール"^]詳細については。
@@ -182,7 +184,9 @@ Azure とコンソールの両方のライセンス要件を確認する必要�
 
 *サポート対象地域*
 
-Azure Government リージョンを含むすべてのリージョンで、オンプレミス システムから Azure Blob へのバックアップを作成できます。サービスを設定するときに、バックアップを保存するリージョンを指定します。
+すべてのAzure商用リージョンおよびAzure Governmentリージョンで、オンプレミスシステムからAzure Blobへのバックアップを作成できます。サービスを設定する際に、バックアップを保存するリージョンを指定します。
+
+ConsoleエージェントがAzure Chinaリージョンにデプロイされている場合、Azure China（21Vianet）リージョン（中国東部、中国東部 2、中国東部 3、中国北部、中国北部 2、中国北部 3）のAzure Blobにバックアップを作成することもできます。Consoleエージェントはリージョンに基づいてAzure Chinaエンドポイントを自動的に使用し、バックアップ ストレージアカウントはConsoleエージェントのリージョンに作成されます。
 
 
 
@@ -243,9 +247,9 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 次のONTAPクラスタ ネットワーク要件が必要です。
 
-* ONTAPクラスタは、バックアップおよび復元操作のために、クラスタ間 LIF から Azure Blob ストレージへのポート 443 経由の HTTPS 接続を開始します。
+* ONTAPクラスターは、バックアップおよびリストア処理のために、クラスター間LIFからポート443経由でAzure BlobストレージへのHTTPS接続を開始します。Azure Chinaの場合、クラスター間LIFはポート443で `<storage_account>.blob.core.chinacloudapi.cn`へのアウトバウンドアクセスが必要です。LIFにアウトバウンドパスがない場合、オブジェクトストアの検証中に接続タイムアウトエラーが発生し、バックアップが失敗します。
 +
-ONTAP はオブジェクト ストレージとの間でデータの読み取りと書き込みを行います。オブジェクト ストレージは開始することはなく、応答するだけです。
+ONTAPはオブジェクトストレージとの間でデータの読み書きを行います。オブジェクトストレージは接続を開始することはありません。応答するのみです。
 
 * ONTAP、コンソール エージェントからクラスタ管理 LIF への着信接続が必要です。コンソール エージェントは Azure VNet に配置できます。
 * バックアップするボリュームをホストする各ONTAPノードには、クラスタ間 LIF が必要です。  LIF は、 ONTAP がオブジェクト ストレージに接続するために使用する _IPspace_ に関連付ける必要があります。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspacesについて詳しくはこちら"^] 。
@@ -508,7 +512,7 @@ TIP: バックアップをアクティブ化する前にカスタムポリシー
 [[review-your-selections]]
 === 選択内容を確認する
 
-ここで選択内容を確認し、必要に応じて調整を行うことができます。
+選択内容を確認し、必要に応じて調整してください。
 
 .手順
 . 「レビュー」ページで選択内容を確認します。

@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-azure.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: NetApp Backup and Recoveryを使用してCloud Volumes ONTAPボリュームをAzure Blob Storageにバックアップし、要件を確認してサービスを有効にし、ボリュームのバックアップをアクティブ化します。 
 ---
-= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAzure Blob Storageにバックアップする
+= NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをAzure Blobにバックアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -32,10 +32,12 @@ Azure Blob Storage にボリュームのバックアップを開始する前に�
 
 image:diagram_cloud_backup_cvo_azure.png["NetApp Backup and Recovery が、ソース システムのボリュームおよびバックアップ ファイルが保存されている宛先ストレージと通信する方法を示す図。"]
 
-サポートされるONTAPバージョン:: 最小要件はONTAP 9.8です。ONTAP 9.8P13以降を推奨します。AzureオブジェクトストレージでMicrosoft Entra ID認証を使用する場合は、ONTAP 9.16.1以降が必要です。
-サポートされているAzureリージョン:: NetApp Backup and Recovery は、Azure Government リージョンを含むすべての Azure リージョンでサポートされています。
+サポートされるONTAPバージョン:: 最低でもONTAP 9.8が必要です。ONTAP 9.8P13以降を推奨します。AzureオブジェクトストレージでMicrosoft Entra ID認証を使用する場合は、ONTAP 9.16.1以降が必要です。
+サポートされているAzureリージョン:: NetApp Backup and Recoveryは、すべてのAzure商用リージョンおよびAzure Governmentリージョンでサポートされています。
 +
 --
+ConsoleエージェントがAzure Chinaリージョン（中国東部、中国東部 2、中国東部 3、中国北部、中国北部 2、または中国北部 3）に導入されている場合、NetApp Backup and RecoveryはAzure China（21Vianet）リージョンでもサポートされます。Consoleエージェントは、そのリージョンに基づいて、Azure Chinaの管理、サインイン、およびBlobストレージのエンドポイントを自動的に使用します。別のAzureクラウドにあるConsoleエージェントは、Azure Chinaにバックアップできません。Azure ChinaでのConsoleエージェントの要件の詳細については、<<コンソールエージェントを準備する>>を参照してください。
+
 デフォルトでは、 NetApp Backup and Recovery はコストの最適化のためにローカル冗長性 (LRS) を使用して BLOB コンテナーをプロビジョニングします。異なるゾーン間でデータが確実に複製されるようにしたい場合は、NetApp Backup and Recovery をアクティブ化した後、この設定をゾーン冗長 (ZRS) に変更できます。  Microsoftの指示を参照してください https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["ストレージアカウントの複製方法を変更する"^]。
 
 --
@@ -78,6 +80,8 @@ NOTE: 同じCloud Volumes ONTAPシステム内の異なるオブジェクトス�
 == コンソールエージェントを準備する
 
 コンソール エージェントは、完全なインターネット アクセスまたは制限されたインターネット アクセス (「標準」または「制限」モード) を備えた Azure リージョンにインストールできます。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["詳細については、 NetApp Consoleの展開モードを参照してください。"^] 。
+
+Azure Chinaにバックアップするには、標準モードでAzure ChinaリージョンにConsoleエージェントを導入します（制限モードはサポートされていません）。Consoleエージェントが必要とする他のエンドポイントに加えて、Consoleエージェントから `*.chinacloudapi.cn`（ `login.chinacloudapi.cn`および `management.chinacloudapi.cn`を含む）へのアウトバウンドHTTPS（ポート443）を許可します。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Azure にコンソール エージェントを標準モード (完全なインターネット アクセス) でデプロイする"^]
@@ -278,7 +282,7 @@ Cloud Volumes ONTAP システムからいつでも直接バックアップを有
 +
 バックアップの Azure 保存先が *Systems* ページにシステムとして存在する場合は、 ONTAPクラスターを Azure Blob オブジェクト ストレージにドラッグできます。
 
-** バックアップとリカバリ バーで *ボリューム* を選択します。ボリュームタブから*アクション*を選択しますimage:icon-action.png["アクションアイコン"]アイコンをクリックし、単一ボリューム（オブジェクト ストレージへのレプリケーションまたはバックアップがまだ有効になっていない）の [バックアップのアクティブ化]* を選択します。
+** バックアップとリカバリバーで「ボリューム」を選択します。「ボリューム」タブから「アクション」image:icon-action.png["アクションアイコン"]アイコンを選択し、（レプリケーションやオブジェクトストレージへのバックアップがまだ有効になっていない）単一のボリュームに対して「バックアップを有効にする」を選択します。
 
 
 +
@@ -314,7 +318,7 @@ FlexVolまたはFlexGroupボリュームを保護することを選択できま�
 . 「ボリュームの選択」ページで、保護するボリュームを選択します。
 +
 ** 必要に応じて、行をフィルタリングして、特定のボリューム タイプ、スタイルなどを持つボリュームのみを表示し、選択を容易にします。
-** 最初のボリュームを選択したら、すべてのFlexVolボリュームを選択できます。 (FlexGroupボリュームは一度に 1 つだけ選択できます。)既存のFlexVolボリュームをすべてバックアップするには、まず 1 つのボリュームをチェックし、次にタイトル行のボックスをチェックします。
+** 最初のボリュームを選択したあと、すべてのFlexVolボリュームを選択できます。（FlexGroupボリュームは一度に1つずつしか選択できません。）既存のすべてのFlexVolボリュームをバックアップするには、まず1つのボリュームにチェックを入れてから、タイトル行のチェックボックスにチェックを入れます。
 ** 個々のボリュームをバックアップするには、各ボリュームのボックスをオンにします。
 
 
@@ -342,7 +346,7 @@ NOTE: 選択したボリュームのスナップショットおよびレプリ�
 .手順
 . 「バックアップ戦略の定義」ページで、以下のいずれか、またはすべてを選択してください。デフォルトでは3つすべてが選択されています：
 +
-** *ローカル スナップショット*: オブジェクト ストレージへのレプリケーションまたはバックアップを実行する場合は、ローカル スナップショットを作成する必要があります。
+** *ローカルスナップショット*：オブジェクトストレージへのレプリケーションまたはバックアップを実行する場合は、ローカルスナップショットを作成する必要があります。
 ** *レプリケーション*: 別のONTAPストレージ システムに複製されたボリュームを作成します。
 ** *バックアップ*: ボリュームをオブジェクト ストレージにバックアップします。
 
@@ -410,7 +414,7 @@ TIP: バックアップファイルが改ざんまたは削除されないよう
 
 
 
-** *暗号化キー*: 新しい Azure ストレージ アカウントを作成した場合は、プロバイダーから提供された暗号化キー情報を入力します。データの暗号化を管理するために、既定の Azure 暗号化キーを使用するか、Azure アカウントから独自のカスタマー管理キーを選択するかを選択します。
+** *暗号化キー*：新しい Azure ストレージ アカウントを作成した場合は、プロバイダから提供された暗号化キー情報を入力します。データの暗号化を管理するために、デフォルトの Azure 暗号化キーを使用するか、Azure アカウントから独自の顧客管理キーを選択するかを選択します。
 +
 独自のカスタマー管理キーを使用する場合は、キー コンテナーとキー情報を入力します。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["独自のキーの使い方を学ぶ"^] 。
 
